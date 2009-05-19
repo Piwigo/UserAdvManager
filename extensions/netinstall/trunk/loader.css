@@ -1,0 +1,139 @@
+html, body {
+  min-height: 100%;
+}
+
+*, :focus, :active, input:active, a:active, input:focus, a:focus {
+  outline-color: -moz-use-text-color;
+  outline-style: none;
+  outline-width: 0;
+}
+
+a {
+  border-width: 0;
+  text-decoration: none;
+  color: #FF7700;
+}
+
+body {
+  background: #111111 url(images/bottom-left-bg.jpg) no-repeat fixed left bottom;
+  color: #666666;
+  margin: 0;
+  padding: 0;
+  min-width: 60em;
+  font-family: Univers,Helvetica,Optima,"Bitstream Vera Sans",sans-serif;
+  font-size: 0.8em;
+  text-align: center;
+}
+
+#headbranch {
+  background: transparent url(images/top-left-bg.jpg) no-repeat scroll left top;
+  height: 240px;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  width: 233px;
+  z-index: -1;
+}
+
+#theHeader {
+  background: transparent url(images/piwigo_logo_sombre_214x100.png) no-repeat scroll 245px top;
+  margin: 0;
+  min-height: 105px;
+  padding: 0;
+}
+
+#content {
+  background: #222222 url(images/fillet.png) repeat-x scroll left top;
+  margin: auto;
+  margin-top: 9px;
+  text-align: left;
+  width: 800px;
+  padding: 25px;
+  z-index: 99;
+  color: #666666;
+}
+
+#footer {
+  width: 800px;
+  margin: auto;
+  text-align: right;
+  margin-top: 15px;
+}
+
+h2 {
+  color: #666666;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-align: right;
+  text-transform: none;
+  width: 54%;
+  display: block;
+  font-size: 28px;
+  height: 104px;
+  margin: 0 20px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+h3 {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+select, input {
+  border: 1px solid #666666;
+  background-color: #444444;
+  color: #999999;
+  font-size: 1em;
+  margin: 0;
+}
+
+input[type="submit"] {
+  text-align: center;
+  background-color: #222222;
+  border-color: #FF3363;
+  color: #FF3363;
+}
+
+input[type="submit"]:hover {
+  cursor: pointer;
+  color: #999;
+  border-color: #666;
+}
+
+label {
+  color: #ff3363
+}
+
+.destination {
+  text-align: center;
+  margin-top: 2em;
+  font-weight: bold;
+}
+
+.language {
+  margin-left: 1.5em;
+  margin-bottom: 2em;
+}
+
+.button {
+  text-align: center;
+  margin-top: 2em;
+}
+
+.msg {
+  padding: 3px 35px;
+}
+
+.notice {
+  color: #f70;
+}
+
+.warning {
+  color: #f30;
+}

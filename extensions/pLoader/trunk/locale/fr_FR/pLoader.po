@@ -1,0 +1,335 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Piwigo pLoader\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-02-14 11:36+0100\n"
+"PO-Revision-Date: \n"
+"Last-Translator: ron osman <ron@piwigo.com>\n"
+"Language-Team: Piwigo team <team@piwigo.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: C:/strawberry/perl/site/lib/Uploader/GUI\n"
+"X-Poedit-SearchPath-1: d:/pLoader/res\n"
+
+msgid "Select photos for upload"
+msgstr "Choisir les photos à transférer"
+
+msgid "JPEG files"
+msgstr "Fichiers JPEG"
+
+msgid "Default author :"
+msgstr "Auteur par défaut :"
+
+msgid "Photo caption  prefix :"
+msgstr "Préfixe du titre de la photo :"
+
+msgid "Site thumbnail size :"
+msgstr "Taille des miniature :"
+
+msgid "Site image width :"
+msgstr "Largeur de l'image"
+
+msgid "Site image height :"
+msgstr "Hauteur de l'image"
+
+msgid "Auto rotate image"
+msgstr "Rotation automatique de l'image"
+
+msgid "Upload high (original size) "
+msgstr "Transfert haute définition ( taille originale )"
+
+msgid "Yes"
+msgstr "Oui"
+
+msgid "No"
+msgstr "Non"
+
+msgid "Admin. username :"
+msgstr "Identifiant administrateur :"
+
+msgid "Admin. password :"
+msgstr "Mot de passe administrateur :"
+
+msgid "OK"
+msgstr "Valider"
+
+msgid "Cancel"
+msgstr "Annuler"
+
+msgid "Create date :"
+msgstr "Date de création :"
+
+msgid "Width :"
+msgstr "Largeur :"
+
+msgid "Height :"
+msgstr "Hauteur :"
+
+msgid "Orientation :"
+msgstr "Orientation :"
+
+msgid "Shutter speed :"
+msgstr "Vitesse d'obturation :"
+
+msgid "Aperture :"
+msgstr "Ouverture :"
+
+msgid "Focal length :"
+msgstr "Longueur focale :"
+
+msgid "Model :"
+msgstr "Modèle :"
+
+msgid "Lens :"
+msgstr "Optique :"
+
+msgid "Author :"
+msgstr "Auteur :"
+
+msgid "Comment :"
+msgstr "Commentaire :"
+
+msgid "French"
+msgstr "Français"
+
+msgid "English"
+msgstr "Anglais"
+
+msgid "Russian"
+msgstr "Russe"
+
+msgid "Italian"
+msgstr "Italien"
+
+msgid "German"
+msgstr "Allemand"
+
+msgid "Spanish"
+msgstr "Espagnol"
+
+msgid "Portuguese"
+msgstr "Portugais"
+
+msgid "Dutch"
+msgstr "Hollandais"
+
+msgid "Polish"
+msgstr "Polonais"
+
+msgid "Piwigo categories"
+msgstr "Catégories dans Piwigo"
+
+msgid "Photo properties"
+msgstr "Propriétés de la photo"
+
+msgid "Tools"
+msgstr "Outils"
+
+msgid "Global settings"
+msgstr "Préférences"
+
+msgid "General"
+msgstr "Général"
+
+msgid "Resized"
+msgstr "Réduction"
+
+msgid "Thumbnail"
+msgstr "Miniature"
+
+msgid "Preview"
+msgstr "Prévisualisation"
+
+msgid "Photo selection"
+msgstr "Photo sélectionnées"
+
+msgid "Language choice"
+msgstr "Choix de la langue"
+
+msgid "Choose a language"
+msgstr "Choisir une langue"
+
+msgid "Upload to Piwigo"
+msgstr "Transférer vers Piwigo"
+
+msgid "Remove photo from selection"
+msgstr "Enlever la photo de la sélection"
+
+msgid "Add photo to selection"
+msgstr "Ajouter la photo à la sélection"
+
+msgid "Not connected"
+msgstr "Non connecté"
+
+msgid "Connection to"
+msgstr "La connection à"
+
+msgid "failed"
+msgstr "a échoué"
+
+msgid "Piwigo login"
+msgstr "Connection à Piwigo"
+
+msgid "Piwigo login error"
+msgstr "Erreur de connection à Piwigo"
+
+msgid "Please select a valid target category"
+msgstr "Veuillez sélectionner une autre catégorie"
+
+msgid "Piwigo upload error"
+msgstr "Erreur de transfert vers Piwigo"
+
+msgid "Category name :"
+msgstr "Nom de la catégorie"
+
+msgid "Add new category"
+msgstr "Ajouter une nouvelle catégorie"
+
+msgid "New category"
+msgstr "Nouvelle catégorie"
+
+msgid "Upload cancelled"
+msgstr "Transfert annulé"
+
+msgid "Image upload progress information"
+msgstr "Progression du transfert d'image"
+
+msgid "Cancel upload"
+msgstr "Annuler le transfert"
+
+msgid "Piwigo upload information"
+msgstr "Information sur le transfert vers Piwigo"
+
+msgid "Processing"
+msgstr "Traitement en cours"
+
+msgid "images processed"
+msgstr "images traitées"
+
+msgid "images uploaded"
+msgstr "images transférées"
+
+msgid "images in errors and not uploaded"
+msgstr "images en erreur et non transférées"
+
+msgid "Duration"
+msgstr "Durée"
+
+msgid "Categories"
+msgstr "Catégories"
+
+msgid "categories"
+msgstr "catégories"
+
+msgid "Categorie"
+msgstr "Catégorie"
+
+msgid "categorie"
+msgstr "catégorie"
+
+msgid "Album"
+msgstr "Album"
+
+msgid "Albums"
+msgstr "Albums"
+
+msgid "album"
+msgstr "album"
+
+msgid "albums"
+msgstr "albums"
+
+msgid "Photo caption :"
+msgstr "Titre de la photo :"
+
+msgid "File name :"
+msgstr "Nom du fichier :"
+
+msgid "Default photo caption :"
+msgstr "Titre par défaut :"
+
+msgid "Resize site image :"
+msgstr "Réduire pour le site :"
+
+msgid "Auto rotate :"
+msgstr "Rotation automatique :"
+
+msgid "Upload high (original size) :"
+msgstr "Transférer la photo originale :"
+
+msgid "Site image jpeg quality :"
+msgstr "Qualité jpeg de la photo :"
+
+msgid "Site image filter :"
+msgstr "Filtre de réduction :"
+
+msgid "Site image blur :"
+msgstr "Accentuation/flou :"
+
+msgid "Site image interlace :"
+msgstr "Entrelacement :"
+
+msgid "Site thumbnail jpeg quality :"
+msgstr "Qualité jpeg des miniatures du site :"
+
+msgid "Photo selection thumbnail size :"
+msgstr "Taille des miniatures de la sélection photo :"
+
+msgid "Photo selection thumbnail jpeg quality :"
+msgstr "Qualité jpeg des miniatures de la sélection photo :"
+
+msgid "Use exif preview when available :"
+msgstr "Utiliser la prévisualisation  exif :"
+
+msgid "Custom preview ratio :"
+msgstr "Ratio de prévisualisation :"
+
+msgid "Piwigo url"
+msgstr "Adresse du site Piwigo"
+
+msgid "Connect"
+msgstr "Connecter"
+
+msgid "Work Offline"
+msgstr "Travailler hors connexion"
+
+msgid "Exit"
+msgstr "Sortir"
+
+msgid "empty - work Offline"
+msgstr "rien à afficher - hors connexion"
+
+msgid "None"
+msgstr "Aucun"
+
+msgid "File name"
+msgstr "Nom du fichier"
+
+msgid "File path and name"
+msgstr "Chemin et nom du fichier"
+
+msgid "Prefix"
+msgstr "Préfixe"
+
+msgid "Prefix + rank number"
+msgstr "Préfixe + N° d'ordre"
+
+msgid "Rank number + prefix"
+msgstr "N° d'ordre + préfixe"
+
+msgid "Prefix + create date chrono"
+msgstr "Préfixe + chrono date de création"
+
+msgid "Create date chrono + prefix"
+msgstr "Chrono date de création + préfixe"
+
+msgid "Photo"
+msgstr "Photo"
+
+msgid "Image processing progress information"
+msgstr "Progression du traitement d'image"
+
+msgid "Cancel image processing"
+msgstr "Annuler le traitement d'image"

@@ -1,0 +1,61 @@
+// +-----------------------------------------------------------------------+
+// | Piwigo - a PHP based picture gallery                                  |
+// +-----------------------------------------------------------------------+
+// | Copyright(C) 2008      Piwigo Team                  http://piwigo.org |
+// | Copyright(C) 2003-2008 PhpWebGallery Team    http://phpwebgallery.net |
+// | Copyright(C) 2002-2003 Pierrick LE GALL   http://le-gall.net/pierrick |
+// +-----------------------------------------------------------------------+
+// | This program is free software; you can redistribute it and/or modify  |
+// | it under the terms of the GNU General Public License as published by  |
+// | the Free Software Foundation                                          |
+// |                                                                       |
+// | This program is distributed in the hope that it will be useful, but   |
+// | WITHOUT ANY WARRANTY; without even the implied warranty of            |
+// | MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU      |
+// | General Public License for more details.                              |
+// |                                                                       |
+// | You should have received a copy of the GNU General Public License     |
+// | along with this program; if not, write to the Free Software           |
+// | Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, |
+// | USA.                                                                  |
+// +-----------------------------------------------------------------------+
+
+$lang['Piwigo NetInstall'] = 'Piwigo NetInstall';
+$lang['Welcome to NetInstall!'] = 'Witamy w NetInstall!';
+$lang['Language'] = 'Język';
+$lang['This tool is meant to retrieve the latest Piwigo archive and unzip it in your webspace.'] = 'To narzędzie pozwala pobrać aktualną wersję Piwigo jako plik .zip, a następnie rozpakować ją na Twoim serwerze www.';
+$lang['Right after then, you will be redirect to the Piwigo Setup Wizard.'] = 'Zaraz po tym, zostaniesz przekierowany do Kreatora Instalacji Piwigo.';
+
+$lang['Write access is needed'] = 'Prawa do zapisu są wymagane';
+$lang['It looks like NetInstall wont be able to write in the current directory, and this is required to follow on.'] = 'Wygląda na to, że NetInstall nie będzie mógł zapisywać do bieżącego katalogu, co jest wymagane w celu kontynuowania instalacji.';
+$lang['Please try to change the permissions to allow write access, then reload this page by hitting the Refresh button.'] = 'Spróbuj proszę dodać uprawnienia do zapisu, a następnie załaduj tę stronę z wykorzystaniem przycisku Odśwież (F5).';
+$lang['Refresh'] = 'Odśwież';
+
+$lang['PHP 5 is required'] = 'PHP 5 jest wymagane';
+$lang['It appears your webhost is currently running PHP %s.'] = 'Twój serwer aktualnie używa PHP w wersji %s.';
+$lang['NetInstall may try to switch your configuration to PHP 5 by creating or modifying a .htaccess file.'] = 'NetInstall może spróbować przełączyć Twoją konfigurację do PHP 5 poprzez modyfikację pliku .htaccess.';
+$lang['Note you can change your configuration by yourself and restart NetInstall after that.'] = 'Możesz również zmienić tę konfigurację sam, a następnie uruchomić ponownie NetInstall.';
+$lang['Try to configure PHP 5'] = 'Spróbuj skonfigurować PHP 5';
+
+$lang['Retrieve and unzip Piwigo'] = 'Pobierz i rozpakuj Piwigo';
+$lang['Destination:'] = 'Lokalizacja:';
+
+$lang['Sorry!'] = 'Niestety!';
+$lang['NetInstall was not able to configure PHP 5.'] = 'NetInstall nie mógł skonfigurować Twojego PHP 5.';
+$lang["You may referer to your hosting provider's support and see how you could switch to PHP 5 by yourself."] = "Możesz skontaktować się z działem wsparcia Twojego providera aby dowiedzieć się jak włączyć PHP 5.";
+$lang['Hope to see you back soon.'] = 'Do zobaczenia wkrótce.';
+
+$lang['It seems like a previous Piwigo installation is still sitting in that space.'] = 'Wygląda na to, że poprzednia instalacja Piwigo w dalszym ciągu znajduje się w tej lokalizacji.';
+$lang['You need to rename or remove it before we can go further...'] = 'Musisz zmienić nazwe katalogu z poprzednią wersją lub usunąć przed kontynuacją...';
+$lang['Needed files are not present.'] = 'Brak wymaganych plików.';
+$lang['Invalid zip file.'] = 'Niepoprawny plik zip.';
+$lang['It seems that the zip file was not extracted.'] = 'Wygląda na to, że plik zip nie został rozpakowany.';
+
+$lang['Congratulations!'] = 'Gratulacje!';
+$lang['Everything went fine. You are now ready to start the installation procedure.'] = 'Wszystko przebiegło pomyślnie. Jesteś teraz gotowy aby rozpocząć procedurę instalacji.';
+$lang['Install Piwigo now'] = 'Zainstaluj Piwigo teraz';
+$lang['An error occurred while grabbing the necessary files to go on.'] = 'Wystąpił błąd podczas pobierania plików wymaganych do instalacji.';
+$lang['Something went wrong...'] = 'Któraś z operacji się nie powiodła...';
+$lang['What are you doing here that way ?!'] = 'Co próbujesz zrobi w ten sposób?!';
+
+$lang['This loader was initialy coded for <a href="http://www.dotclear.net" title="Dotclear">Dotclear</a>. Thanks!'] = 'Oryginalnie instalator został przygotowany dla <a href="http://www.dotclear.net" title="Dotclear">Dotclear</a>. Dziekujemy!';
