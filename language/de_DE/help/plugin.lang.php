@@ -12,6 +12,13 @@ $lang['UAM_confirmTitle_d'] = '
 ...
 ';
 $lang['UAM_miscTitle'] = 'Registrierung gefolgt und andere Optionen';
+$lang['UAM_miscTitle_d'] = '
+- Geist Benutzer-Management<br>
+- Gefolgt registrierte Benutzer<br>
+- Nickname obligatorisch für Gäste Kommentare<br>
+...
+';
+$lang['UAM_casenTitle'] = 'Benutzernamen: Groß-und Kleinschreibung';
 $lang['UAM_carexcTitle'] = 'Benutzernamen: Ausschluss von Zeichen';
 $lang['UAM_carexcTitle_d'] = 'Es mag interessant sein, bestimmte Zeichen in Benutzernamen verbieten (Beispiel: verweigern Logins mit &quot;@&quot;). Diese Option erm&ouml;glicht es, Zeichen oder Zeichenfolge, Veranstaltungen auszuschlie&szlig;en.<br>
 NB: Die Option kann auch ausschließen, ganze Wörter.
@@ -27,11 +34,21 @@ $lang['UAM_passwadmTitle'] = 'Die Anwendung für Administratoren';
 $lang['UAM_passwadmTitle_d'] = 'Ein Administrator kann einen Benutzer-Account erstellen, mit oder ohne Anwendung der Regel der Komplexität des Computings.<br><br>
 Hinweis: Wenn der Benutzer erstellte Konto will Passwort zu ändern und Passwörter für die Benutzer Stärkung aktiv ist, wird es vorbehaltlich der Regel-Satz.';
 $lang['UAM_mailexcTitle'] = 'Ausschluss von Mail-Domänen';
+$lang['UAM_mailexcTitle_d'] = 'Standardmäßig akzeptiert Piwigo alle E-Mail-Adressen im Format xxx@yyy.zz. Durch die Aktivierung dieser Option können Sie auf bestimmte Domains im Format ausschließen: @[Domänenname].[Domain Extension].<br><br>
+Beispiele:<br>
+@hotmail.com -> Ausnahme-Adressen *@hotmail.com<br>
+@hotmail -> ohne alle Adressen *@hotmail *';
 $lang['UAM_infomailTitle'] = 'Informationen E-Mail an Benutzer';
 $lang['UAM_infomailTitle_d'] = 'Diese Option ermöglicht die Automatisierung Senden einer E-Mail-Informationen an einen Benutzer bei der Anmeldung oder bei Änderungen sein Passwort oder E-Mail-Adresse in ihrem Profil.<br><br>
 Der Inhalt der Nachricht gesendet wird von einem anpassbaren Teil komponiert, um eine kleine Begrüßung und Einführung fester Bestandteil in denen die Login, Passwort und E-Mail-Adresse des Benutzers.';
 $lang['UAM_infotxtTitle'] = 'Anpassen der Informationen per E-Mail';
+$lang['UAM_infotxtTitle_d'] = 'Geben Sie den einleitenden Text, den Sie in der Informations-E-Mail angezeigt.<br><br>
+Um mehrere Sprachen zu benutzen, können Sie die Extended description Plugin-Tags verwenden, wenn er aktiv ist.<br><br>
+<b style=&quot;color: red;&quot;>Text &Auml;nderung ist nur verf&uuml;gbar, wenn die &quot;Informations-E-Mail&quot; aktiviert ist.</b>';
 $lang['UAM_confirmtxtTitle'] = 'Anpassen der E-Mail-Bestätigung';
+$lang['UAM_confirmtxtTitle_d'] = 'Geben Sie den einleitenden Text, den Sie in der E-Mail-Bestätigung der Anmeldung erscheinen.<br><br>
+Um mehrere Sprachen zu benutzen, können Sie die Extended description Plugin-Tags verwenden, wenn er aktiv ist.<br><br>
+<b style=&quot;color: red;&quot;>Der Text werden modifiziert ist nur verf&uuml;gbar, wenn die &quot;Best&auml;tigung der Anmeldung&quot; aktiviert ist.</b>';
 $lang['UAM_confirmgrpTitle'] = 'Validation Gruppen';
 $lang['UAM_confirmgrpTitle_d'] = '<b style=&quot;color: red;&quot;>WARNUNG: Validierung Gruppen setzt voraus, dass Sie mindestens einen Benutzer Gruppe angelegt haben und definiert ist &quot;by default&quot; im User-Gruppen Piwigo-Management.</b><br><br>
 Die Gruppen sind validiert f&uuml;r den Einsatz in Verbindung mit der &quot;Best&auml;tigung der Anmeldung&quot;';
@@ -39,11 +56,29 @@ $lang['UAM_confirmstatTitle'] = 'Validation Satzung';
 $lang['UAM_confirmstatTitle_d'] = '<b style=&quot;color: red;&quot;>WARNUNG: Die Verwendung des Status Validierung erfordert, dass Sie die &quot;Gast&quot;-Nutzer mit Standard-Einstellung (als User Template) f&uuml;r neu registrierte gehalten haben. Hinweis: Sie k&ouml;nnen einem anderen Benutzer als neue Vorlage f&uuml;r registrierte gesetzt. Bitte beachten Sie die Dokumentation des Piwigo f&uuml;r weitere Details.</b><br><br>
 Die Satzung sind validiert f&uuml;r den Einsatz in Verbindung mit der &quot;Best&auml;tigung der Anmeldung&quot;';
 $lang['UAM_validationlimitTitle'] = 'Anmeldeschluss Validierung beschränkt';
+$lang['UAM_validationlimitTitle_d'] = 'Diese Option ermöglicht es, die Gültigkeit der Schlüssel Validierung E-Mail-Grenze geschickt, um neue Registranten. Besucher, wer x Tage Zeit haben, um sich identifizieren, zu registrieren. Nach Ablauf dieser Frist die Validierung Link läuft.<br><br>
+Diese Option ist in Verbindung mit der &quot;Best&auml;tigung der Anmeldung verwendet&quot;';
 $lang['UAM_remailTitle'] = 'Erinnern Unvalidierte User';
+$lang['UAM_remailTitle_d'] = 'Mit dieser Option k&ouml;nnen Sie eine Erinnerung per E-Mail an registrierte Benutzer zu senden, aber noch nicht best&auml;tigt ihre Eintragung in die Zeit. Es funktioniert also in Verbindung mit der &quot;Best&auml;tigung der Anmeldung&quot;<br><br>
+2 Arten von E-Mails gesendet werden können: Mit oder ohne Regeneration der Validierung Schlüssel. Gegebenenfalls kann der Inhalt von E-Mails angepasst werden.<br><br>
+Wenden Sie sich an die &quot;Tracking Validierungen&quot; aus.';
 $lang['UAM_remailtxt1Title'] = 'Reminder per E-Mail mit den neuen Schlüssel generiert';
+$lang['UAM_remailtxt1Title_d'] = 'Geben Sie den einleitenden Text, den Sie in der E-Mail-Erinnerung angezeigt wird, zusätzlich zu der Prüfschlüssel regeneriert.<br><br>
+Wenn leer, wird die E-Mail-Erinnerung nur den Bestätigungslink. Es wird daher dringend empfohlen, ein wenig erläuternden Text zu nehmen. (NB: Der Text Fertigpen mit der Installation des Plugins ist als Beispiel vorgesehen)<br><br>
+Um mehrere Sprachen zu benutzen, können Sie die Extended description Plugin-Tags verwenden, wenn er aktiv ist.<br><br>
+<b style=&quot;color: red;&quot;>Der Text werden modifiziert ist nur verf&uuml;gbar, wenn &quot;Remind Benutzer validierten&quot; aktiviert ist.</b>';
 $lang['UAM_remailtxt2Title'] = 'Reminder per E-Mail, ohne dass neue Schlüssel generiert';
+$lang['UAM_remailtxt2Title_d'] = 'Geben Sie den einleitenden Text, den Sie in der Erinnerung, ohne eine Bestätigung per E-Mail-Taste erscheinen regeneriert.<br><br>
+Wenn links leer ist, wird die E-Mail-Erinnerung leer sein. Es wird daher dringend empfohlen, ein wenig erläuternden Text zu nehmen. (NB: Der Text Fertigpen mit der Installation des Plugins ist als Beispiel vorgesehen)<br><br>
+Um mehrere Sprachen zu benutzen, können Sie die Extended description Plugin-Tags verwenden, wenn er aktiv ist.<br><br>
+<b style=&quot;color: red;&quot;>Der Text werden modifiziert ist nur verf&uuml;gbar, wenn &quot;Remind Benutzer validierten&quot; aktiviert ist.</b>';
 $lang['UAM_ghosttrackerTitle'] = 'Geist Besucher-Management';
+$lang['UAM_ghosttrackerTitle_d'] = 'Auch bekannt als &quot;Geist Tracker&quot;, wenn diese Funktion aktiviert ist, k&ouml;nnen Sie verwalten Ihre Besucher je nach der H&auml;ufigkeit ihrer Besuche. Wenn die Zeit zwischen 2 besucht, ist erreicht, wird der Besucher in Frage zu &quot;Geist Tracker&quot; Tisch, an dem Sie in der Lage sein wird, die Besucher per E-Mail erinnern.<br><br>
+<b style=&quot;color: red;&quot;>Wenn Sie diese Funktion zum ersten Mal oder haben Sie nach einem langen Zeitraum aus, in dem neue Besucher registriert sind, müssen Sie initialisieren, oder setzen Sie den Geist Tracker reaktiviert.</b>';
 $lang['UAM_gttextTitle'] = 'Geist Tracker Erinnerungs-Nachricht';
+$lang['UAM_gttextTitle_d'] = 'Geben Sie den gewünschten Text in die E-Mail-Erinnerung angezeigt, die Benutzer rechtzeitig, um wieder zur Galerie zu besuchen (Anm.: Der Text Fertigpen mit der Installation des Plugins ist als Beispiel vorgesehen).<br><br>
+Um mehrere Sprachen zu benutzen, können Sie die Extended description Plugin-Tags verwenden, wenn er aktiv ist.<br><br>
+<b style=&quot;color: red;&quot;>Der Text werden modifiziert ist nur verf&uuml;gbar, wenn &quot;Ghost Besucher Management&quot; aktiviert ist.</b>';
 $lang['UAM_lastvisitTitle'] = 'Tracking registrierte Benutzer';
 $lang['UAM_lastvisitTitle_d'] = 'Dies aktiviert einen Tisch in der &quot;Tracking users&quot;-Reiter, die Mitglieder der Galerie aufgef&uuml;hrt sind und zum Zeitpunkt ihres letzten Besuch und verbrachte Zeit (Tage) seit ihrem letzten Besuch. Die &Uuml;berwachung ist rein informativ f&uuml;r den Administrator der Galerie.';
 $lang['UAM_commentTitle'] = 'Nickname obligatorisch für Gäste Kommentare';
@@ -61,6 +96,27 @@ $lang['UAM_adminconfmailTitle_d'] = 'Sie k&ouml;nnen diese Validierung deaktivie
 Bei Aktivierung dieser Option, E-Mail-Best&auml;tigung f&uuml;r die Registrierung wird f&uuml;r jeden Benutzer vom Administrator erstellt wurde gesendet werden.<br><br>
 Durch die Deaktivierung dieser Option (Standard), nur die E-Mail-Informationen gesendet werden (wenn &quot;Informations-E-Mail an Benutzer&quot; aktiviert ist).';
 // --------- End: New or revised $lang ---- from version 2.14.0
+
+
+// --------- Starting below: New or revised $lang ---- from version 2.15.0
+/*TODO*/$lang['UAM_confirmmail_custom1'] = 'Text of the confirmation page - Confirmation accepted';
+/*TODO*/$lang['UAM_confirmmail_custom1_d'] = 'When the option &quot;Confirmation of registration&quot; is active, this field allows you to customize the <b><u>acceptance text</u></b> on the registration confirmation page displayed when user clicks the confirmation link that was received by email.<br>
+After installing the plugin, a standard text is set as an example.<br>
+This field is compatible with the FCK Editor and, for multi-languages, you can use the tags [lang] of the plugin Extended description if it\'s active.<br>
+<b style=&quot;color:red;&quot;>Changing the text is possible ONLY if &quot;Confirmation of registration&quot; is activated.</b>';
+/*TODO*/$lang['UAM_confirmmail_custom2'] = 'Text of the confirmation page - Confirmation rejected';
+/*TODO*/$lang['UAM_confirmmail_custom2_d'] = 'When the option &quot;Confirmation of registration&quot; is active, this field allows you to customize the <b><u>rejectance text</u></b> on the registration confirmation page displayed when user clicks the confirmation link that was received by email.<br>
+After installing the plugin, a standard text is set as an example.<br>
+This field is compatible with the FCK Editor and, for multi-languages, you can use the tags [lang] of the plugin Extended description if it\'s active.<br>
+<b style=&quot;color:red;&quot;>Changing the text is possible ONLY if &quot;Confirmation of registration&quot; is activated.</b>';
+// --------- End: New or revised $lang ---- from version 2.15.0
+
+
+// --------- Starting below: New or revised $lang ---- from version 2.15.2
+$lang['UAM_casenTitle_d'] = 'Standardm&auml;&szlig;ig ist Piwigo Groß-und Kleinschreibung sensitive: Gro&szlig;-und Kleinschreibung ber&uuml;cksichtigt werden verschiedene Buchstaben in den Namen von den Nutzern bei der Registrierung gew&auml;hlt. So, &quot;Foo&quot;, &quot;foo&quot; und &quot;FOO&quot; k&ouml;nnen 3 verschiedene Benutzer.<br><br>
+Die Aktivierung dieser Option erlaubt es, alle Optionen im Fall von &quot;foo&quot; als ein Benutzer zu betrachten. Wenn &quot;foo&quot; bereits vorhanden ist, einen neuen Benutzer erstellen &quot;Foo&quot; werden nicht angenommen.<br><br>
+<b style=&quot;color: red;&quot;>Warnung: Diese Option hat keine Auswirkungen auf den Benutzernamen erstellt vor ihrer Aktivierung.</b>';
+// --------- End: New or revised $lang ---- from version 2.15.2
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.15.4
@@ -119,147 +175,7 @@ In second case, <b><u>there is no validation key send by email!</u></b>. Visitor
 <br><br>
 Diese Option ist in der Regel mit der automatischen Zuordnung der Gruppe und / oder Satzung verwendet. Zum Beispiel, ein Benutzer, der nicht validiert ihre Eintragung in eine bestimmte Gruppe von Nutzern eingestellt werden (mit oder ohne Einschr&auml;nkungen auf der Galerie), w&auml;hrend ein Benutzer, der seine Registrierung best&auml;tigt wird in einem &quot;normalen&quot; Gruppe eingestellt werden.';
 $lang['UAM_RedirTitle'] = 'Umleitung auf &quot;Benutzerdaten&quot; Seite';
-// --------- End: New or revised $lang ---- from version 2.15.4
-
-
-// --------- Starting below: New or revised $lang ---- from version 2.15.6
 $lang['UAM_RedirTitle_d'] = 'Diese Option automatisch umleiten ein registrierter Benutzer zum sein Benutzerdaten Seite nur bei seinem ersten Anschluss an die Galerie.<br><br>
-Bitte beachten Sie: Dieses Feature funktioniert nicht für alle registrierten Nutzer. Diejenigen mit &quot;admin&quot;, &quot;Webmaster&quot; oder &quot;Generic&quot; Status sind ausgeschlossen.';
-// --------- End: New or revised $lang ---- from version 2.15.6
-
-
-// --------- Starting below: New or revised $lang ---- from version 2.16.0
-$lang['UAM_confirmmail_custom1'] = 'Text der Best&auml;tigungs-Seite - Best&auml;tigung akzeptiert';
-$lang['UAM_confirmmail_custom2'] = 'Text der Best&auml;tigungs-Seite - Best&auml;tigung abgelehnt';
-$lang['UAM_miscTitle_d'] = '
-- Automatische oder manuelle Verwaltung von Geist Benutzern<br>
-- Gefolgt registrierte Benutzer<br>
-- Nickname obligatorisch für Gäste Kommentare<br>
-...
-';
-$lang['UAM_ghosttrackerTitle_d'] = 'Auch bekannt als &quot;Geist Tracker&quot;, wenn diese Funktion aktiviert ist, k&ouml;nnen Sie verwalten Ihre Besucher je nach der H&auml;ufigkeit ihrer Besuche. 2 Betriebsarten stehen zur Verfügung:
-- Manuelle Verwaltung: Wenn die Zeit zwischen 2 Besuche erreicht ist, erscheint dem Besucher in der &quot;Ghost Tracker&quot; Table, an dem Sie in der Lage für die Besucher per E-Mail erinnern oder löschen ihn wird.<br><br>
-- Automatisiertes Management: Wenn der Zeitraum zwischen 2 aufeinander folgenden Aufenthalte erreicht ist, wird der Besucher automatisch gelöscht oder verschoben in eine Gruppe warten und / oder Status. In diesem zweiten Fall kann eine Information E-Mail an ihn gesendet werden.<br><br>
-<b style=&quot;color: red;&quot;>Wenn Sie diese Funktion zum ersten Mal oder haben Sie nach einem langen Zeitraum aus, in dem neue Besucher registriert sind, müssen Sie initialisieren, oder setzen Sie den Geist Tracker reaktiviert.</b>';
-$lang['UAM_mailexcTitle_d'] = 'Standardmäßig akzeptiert Piwigo alle E-Mail-Adressen im Format xxx@yyy.zz. Durch die Aktivierung dieser Option können Sie auf bestimmte Domains im Format ausschließen: @[Domänenname].[Domain Extension].<br><br>
-Beispiele:<br>
-@hotmail.com -> Ausnahme-Adressen *@hotmail.com<br>
-@hotmail -> ohne alle Adressen *@hotmail *';
-$lang['UAM_GTAutoTitle'] = 'Automatische Verwaltung von Geist Benutzern';
-$lang['UAM_GTAutoTitle_d'] = 'Diese Option ermöglicht es, Regeln für die automatisierte Verwaltung von Geistern Benutzer anwenden.
-<br><br>Grundprinzip: Ein Benutzer, der die maximale Zeit zwischen den Besuchen <b><u>und</u></b> hat bereits per E-Mail gilt als abgelaufen gemeldet erreicht. Dann können Sie automatisierte Verarbeitung Regeln wie das automatische Löschen von abgelaufenen Konten oder Herabstufung durch Beschränkung des Zugangs zur Galerie (schaltet automatisch auf eine eingeschränkte Gruppe und / oder Status).
-<br><br>Die Ansteuerung dieser Automatisierung wird erreicht, wenn eine Verbindung Nutzer (alle Benutzer!) Auf der Galerie.';
-$lang['UAM_GTAutoDelTitle'] = 'Benutzerdefinierte Meldung auf gelöschtes Konto';
-$lang['UAM_GTAutoGpTitle'] = 'Automatischer Wechsel der Gruppe / Status';
-/*TODO*/$lang['UAM_GTAutoGpTitle_d'] = 'The automatic change of group or status equivalent to a demotion of the accounts involved and working on the same principle as the group or the status of validation (see &quot;Setting confirmations and validations of registration&quot;). Therefore be to define a group and / or status demoting access to the gallery. If this has already been defined with the use of registration confirmation function, you can use the same group / status.<br><br>
-<b style=&quot;color: red;&quot;>Important note :</b> If a ghost user still has not heard from after the time limit and despite the automatic notification by email (if enabled), he\'s automatically deleted from the database.';
-$lang['UAM_GTAutoMailTitle'] = 'Automatisches Versenden einer E-Mail beim Wechsel Gruppe / Status';
-/*TODO*/$lang['UAM_GTAutoMailTitle_d'] = 'When an account is expired (group / status change demoting the visitor), an email information can be sent to clarify the reasons for this change and the means to recover the initial access to the gallery.
-<br>To do this, a link to revalidation of registration is attached to the email (automatic generation of a new validation key).<b style=&quot;color: red;&quot;>If the user has already been notified, his account is automatically destroyed.</b> 
-<br><br>Enter the custom text that also explain the reasons for the demotion, to accompany the validation link. The custom text is not mandatory but strongly recommended. In fact, your visitors will not appreciate receiving an email containing only a single link without further explanation. ;-)
-<br><br>Um mehrere Sprachen zu benutzen, können Sie die Extended description Plugin-Tags verwenden, wenn er aktiv ist.
-<br><br><b style=&quot;color: red;&quot;>Warning: The use of this function is intimately associated with the confirmation of registration by the user (confirmation by mail) and can not be activated without this option.</b>';
-$lang['UAM_AdminValidationMail'] = 'Mitteilung der manuellen Registrierung Validierung';
-// --------- End: New or revised $lang ---- from version 2.16.0
-
-
-// --------- Starting below: New or revised $lang ---- from version 2.20.0
-/*TODO*/$lang['UAM_gttextTitle_d'] = 'Geben Sie den gewünschten Text in die E-Mail-Erinnerung angezeigt, die Benutzer rechtzeitig, um wieder zur Galerie zu besuchen (Anm.: Der Text Fertigpen mit der Installation des Plugins ist als Beispiel vorgesehen).
-<br><br>
-Further customize the content with special inserted tags : Use <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the name of the destination user of the email. Use <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery. Use <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.
-<br><br>
-Um mehrere Sprachen zu benutzen, können Sie die Extended description Plugin-Tags verwenden, wenn er aktiv ist.';
-/*TODO*/$lang['UAM_infotxtTitle_d'] = 'Geben Sie den einleitenden Text, den Sie in der Informations-E-Mail angezeigt.
-<br><br>
-Further customize the content with special inserted tags : Use <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the name of the destination user of the email. Use <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery. Use <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.
-<br><br>
-Um mehrere Sprachen zu benutzen, können Sie die Extended description Plugin-Tags verwenden, wenn er aktiv ist.';
-/*TODO*/$lang['UAM_confirmtxtTitle_d'] = 'Geben Sie den einleitenden Text, den Sie in der E-Mail-Bestätigung der Anmeldung erscheinen.
-<br><br>
-Further customize the content with special inserted tags : Use <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the name of the destination user of the email. Use <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery. Use <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.
-<br><br>
-Um mehrere Sprachen zu benutzen, können Sie die Extended description Plugin-Tags verwenden, wenn er aktiv ist.';
-/*TODO*/$lang['UAM_AdminValidationMail_d'] = 'Wenn ein Administrator oder Webmaster der Galerie manuell gültige Registrierung anhängig ist, ist eine Benachrichtigungs-Email automatisch an den Benutzer gesendet. Geben Sie hier den Text ein, in dieser E-Mail angezeigt.
-<br><br>
-Further customize the content with special inserted tags : Use <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the name of the destination user of the email. Use <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery. Use <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.
-<br><br>
-Um mehrere Sprachen zu benutzen, können Sie die Extended description Plugin-Tags verwenden, wenn er aktiv ist.';
-/*TODO*/$lang['UAM_confirmmail_custom1_d'] = 'Wenn die Option &quot;Bestätigung der Anmeldung&quot; aktiv ist, können Sie in diesem zu <b><u>Akzeptanz Text anpassen</u></b> auf der Anmeldebestätigung Seite angezeigt, wenn Benutzer auf den Bestätigungs-Link, die empfangen wurde per E-Mail.
-<br><br>
-Nach der Installation des Plugin ist ein Standard-Text als Beispiel vorangehen.
-<br><br>
-Further customize the content with special inserted tags : Use <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the name of the destination user of the email. Use <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery. Use <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.
-<br><br>
-Dieses Feld ist kompatibel mit den FCK-Editor und, um mehrere Sprachen zu benutzen, können Sie die Extended description Plugin-Tags verwenden, wenn er aktiv ist.';
-/*TODO*/$lang['UAM_confirmmail_custom2_d'] = 'Wenn die Option &quot;Bestätigung der Anmeldung&quot; aktiv ist, können Sie in diesem zu <b><u>rejectance Text anpassen</u></b> auf der Anmeldebestätigung Seite angezeigt, wenn Benutzer auf den Bestätigungs-Link, die empfangen wurde per E-Mail.
-<br><br>
-Nach der Installation des Plugin ist ein Standard-Text als Beispiel vorangehen.
-<br><br>
-Further customize the content with special inserted tags : Use <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the name of the destination user of the email. Use <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery. Use <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.
-<br><br>
-Dieses Feld ist kompatibel mit den FCK-Editor und, um mehrere Sprachen zu benutzen, können Sie die Extended description Plugin-Tags verwenden, wenn er aktiv ist.';
-/*TODO*/$lang['UAM_remailtxt1Title_d'] = 'Geben Sie den einleitenden Text, den Sie in der E-Mail-Erinnerung angezeigt wird, zusätzlich zu der Prüfschlüssel regeneriert.
-<br><br>
-Wenn leer, wird die E-Mail-Erinnerung nur den Bestätigungslink. Es wird daher dringend empfohlen, ein wenig erläuternden Text zu nehmen. (NB: Der Text Fertigpen mit der Installation des Plugins ist als Beispiel vorgesehen).
-<br><br>
-Further customize the content with special inserted tags : Use <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the name of the destination user of the email. Use <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery. Use <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.
-<br><br>
-Um mehrere Sprachen zu benutzen, können Sie die Extended description Plugin-Tags verwenden, wenn er aktiv ist.';
-/*TODO*/$lang['UAM_remailtxt2Title_d'] = 'Geben Sie den einleitenden Text, den Sie in der Erinnerung, ohne eine Bestätigung per E-Mail-Taste erscheinen regeneriert.
-<br><br>
-Wenn links leer ist, wird die E-Mail-Erinnerung leer sein. Es wird daher dringend empfohlen, ein wenig erläuternden Text zu nehmen. (NB: Der Text Fertigpen mit der Installation des Plugins ist als Beispiel vorgesehen).
-<br><br>
-Further customize the content with special inserted tags : Use <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the name of the destination user of the email. Use <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery. Use <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.
-<br><br>
-Um mehrere Sprachen zu benutzen, können Sie die Extended description Plugin-Tags verwenden, wenn er aktiv ist.';
-/*TODO*/$lang['UAM_GTAutoDelTitle_d'] = 'Dies ist nur gültig, wenn der Benutzer, dessen Konto ist abgelaufen selbst löst die Streichung Mechanismus (selten, aber möglich). Er ist dann der Galerie getrennt und umgeleitet auf eine Seite mit der Löschung seines Accounts und gegebenenfalls die Gründe für die Streichung dieses Absatzes.
-<br><br>
-Further customize the content with special inserted tags : Use <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery. Use <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options. <b style=&quot;color: red;&quot;>[username]</b> is not available here because concerned user has been deleted.
-<br><br>
-Custom Text für die Weiterleitungsseite können in dieses Feld eingegeben werden dass ist kompatibel mit den FCK-Editor und, um mehrere Sprachen zu benutzen, können Sie die Extended description Plugin-Tags verwenden, wenn er aktiv ist.';
-/*TODO*/$lang['UAM_GTAutoMailTitle_d'] = 'When an account is expired (group / status change demoting the visitor), an email information can be sent to clarify the reasons for this change and the means to recover the initial access to the gallery.
-<br>To do this, a link to revalidation of registration is attached to the email (automatic generation of a new validation key).<b style=&quot;color: red;&quot;>If the user has already been notified, his account is automatically destroyed.</b> 
-<br><br>
-Enter the custom text that also explain the reasons for the demotion, to accompany the validation link. The custom text is not mandatory but strongly recommended. In fact, your visitors will not appreciate receiving an email containing only a single link without further explanation. ;-)
-<br><br>
-Further customize the content with special inserted tags : Use <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the name of the destination user of the email. Use <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery. Use <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.
-<br><br>
-Um mehrere Sprachen zu benutzen, können Sie die Extended description Plugin-Tags verwenden, wenn er aktiv ist.
-<br><br>
-<b style=&quot;color: red;&quot;>Warning: The use of this function is intimately associated with the confirmation of registration by the user (confirmation by mail) and can not be activated without this option.</b>';
-/*TODO*/$lang['UAM_CustomPasswRetrTitle'] = 'Customize lost password email content';
-/*TODO*/$lang['UAM_CustomPasswRetrTitle_d'] = 'By default, when a user has lost his password and selects the option of recovery, he receives an email containing only his username and his new password.
-<br><br>
-Here, you can add text of your choice to be inserted <b><u>before</u></b> the standard information.
-<br><br>
-Further customize the content with special inserted tags : Use <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery. Use <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.
-<br><br>
-To use multiple languages, you can use the Extended description plugin\'s tags if it is active.';
-/*TODO*/$lang['UAM_validationlimitTitle_d'] = 'Diese Option ermöglicht es, die Gültigkeit der Schlüssel Validierung E-Mail-Grenze geschickt, um neue Registranten. Besucher, wer x Tage Zeit haben, um sich identifizieren, zu registrieren. Nach Ablauf dieser Frist die Validierung Link läuft.
-<br><br>
-Diese Option ist in Verbindung mit der &quot;Best&auml;tigung der Anmeldung verwendet&quot;
-<br><br>
-If this option and the option &quot;Erinnern Unvalidierte User&quot; are activated, new options will appear below in this section to enable the automation of unvalidated users management.';
-/*TODO*/$lang['UAM_remailTitle_d'] = 'Mit dieser Option k&ouml;nnen Sie eine Erinnerung per E-Mail an registrierte Benutzer zu senden, aber noch nicht best&auml;tigt ihre Eintragung in die Zeit. Es funktioniert also in Verbindung mit der &quot;Best&auml;tigung der Anmeldung&quot;
-<br><br>
-2 Arten von E-Mails gesendet werden können: Mit oder ohne Regeneration der Validierung Schlüssel. Gegebenenfalls kann der Inhalt von E-Mails angepasst werden.
-<br><br>
-Wenden Sie sich an die &quot;Tracking Validierungen&quot; aus.
-<br><br>
-If this option and the option &quot;Anmeldeschluss Validierung beschränkt&quot; are activated, new options will appear below in this section to enable the automation of unvalidated users management.';
-/*TODO*/$lang['UAM_USRAutoTitle'] = 'Automatic management of unvalidated users';
-/*TODO*/$lang['UAM_USRAutoTitle_d'] = 'Automatic handling of unvalidated visitors is triggered each time you connect to the gallery and works as follows:
-<br><br>
-- Automatic deletion of accounts not validated in the allotted time without sending automatic email reminder -> &quot;Deadline for registration validation limited&quot; <b><u>enabled</u></b> and &quot;Remind unvalidated users&quot; <b><u>disabled</u></b>.
-<br><br>
-- Automatically sending a reminder message with a new generation of validation key and automatic deletion of accounts not validated in the time after sending the reminder -> &quot;Deadline for registration validation limited&quot; <b><u>enabled</u></b> et &quot;Remind unvalidated users&quot; <b><u>enabled</u></b>.';
-/*TODO*/$lang['UAM_USRAutoDelTitle'] = 'Custom message on deleted account';
-/*TODO*/$lang['UAM_USRAutoDelTitle_d'] = 'This is only valid when the user whose account has expired itself triggers the deletion mechanism (rare but possible). he\'s then disconnected of the gallery and redirected to a page showing the deletion of his account and, possibly, the reasons for this deletion.
-<br><br>
-Further customize the content with special inserted tags : Use <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery. Use <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options. <b style=&quot;color: red;&quot;>[username]</b> is not available here because concerned user has been deleted.
-<br><br>
-Custom text for the redirect page can be entered in this field that is compatible with the FCK Editor and, for multi-languages, you can use the tags [lang] of the plugin Extended description if it\'s active.';
-/*TODO*/$lang['UAM_USRAutoMailTitle'] = 'Automated email reminder';
-/*TODO*/$lang['UAM_USRAutoMailTitle_d'] = 'When activated, this function will automatically send personalized content in &quot;Reminder email with new key generated&quot; to visitors who match criteria.';
-// --------- End: New or revised $lang ---- from version 2.20.0
+Bitte beachten Sie: Diese Funktion gilt für alle bereits registrierten Nutzern einschließlich derjenigen mit &quot;admin&quot;, &quot;Webmaster&quot; oder &quot;Generic&quot; Status.';
+// --------- End: New or revised $lang ---- from version 2.15.4
 ?>
