@@ -4,6 +4,10 @@ if(!defined('UAM_PATH'))
 {
   define('UAM_PATH' , PHPWG_PLUGINS_PATH.basename(dirname(__FILE__)).'/');
 }
+if (!defined('UAM_ROOT'))
+{
+  define('UAM_ROOT', dirname(__FILE__).'/');
+}
 
 include_once (UAM_PATH.'include/constants.php');
 include_once (UAM_PATH.'include/functions.inc.php');
@@ -23,21 +27,11 @@ Best regards,
 
 The admin of the gallery.','false','false','false','false','false','Sorry [username], your account has been deleted due to a too long time passed since your last visit at [mygallery].','Sorry [username], your account has been deprecated due to a too long time passed since your last visit at [mygallery]. Please, use the following link to revalidate your account.',-1,-1,'Thank you for registering at [mygallery]. Your account has been manually validated by _admin_. You may now log in at _link_to_site_ and make any appropriate changes to your profile. Welcome to _name_of_site_!','false','You have requested a password reset on our gallery. Please, find below your new connection settings.','false','Sorry, your account has been deleted because you have not validated your registration in requested time. Please, try registration with a valid and non blocked email account.','false');
 
-	$query = '
-SELECT param
-  FROM '.CONFIG_TABLE.'
-WHERE param = "UserAdvManager"
-;';
-  $count = pwg_db_num_rows(pwg_query($query));
-  
-  if ($count == 0)
-  {
-    $q = '
+  $q = '
 INSERT INTO '.CONFIG_TABLE.' (param, value, comment)
 VALUES ("UserAdvManager","'.addslashes(serialize($default1)).'","UAM parameters")
   ;';
-    pwg_query($q);
-  }
+  pwg_query($q);
 
 
   $default2 = array('false',5,'Hello [username].
@@ -50,57 +44,17 @@ This is a reminder message because you registered on our gallery [mygallery] but
 
 Note: After this period, your account will be permanently deleted.','You have confirmed that you are human and may now use [mygallery]! Welcome [username]!','Your activation key is incorrect or expired or you have already validated your account, please contact the webmaster to fix this problem.');
 
-	$query = '
-SELECT param
-  FROM '.CONFIG_TABLE.'
-WHERE param = "UserAdvManager_ConfirmMail"
-;';
-  $count = pwg_db_num_rows(pwg_query($query));
-  
-  if ($count == 0)
-  {
-    $q = '
+  $q = '
 INSERT INTO '.CONFIG_TABLE.' (param, value, comment)
 VALUES ("UserAdvManager_ConfirmMail","'.addslashes(serialize($default2)).'","UAM ConfirmMail parameters")
   ;';
-    pwg_query($q);
-  }
-
-	$query = '
-SELECT param
-  FROM '.CONFIG_TABLE.'
-WHERE param = "UserAdvManager_Redir"
-;';
-  $count = pwg_db_num_rows(pwg_query($query));
+  pwg_query($q);
   
-  if ($count == 0)
-  {
-    $q = '
+  $q = '
 INSERT INTO '.CONFIG_TABLE.' (param, value, comment)
 VALUES ("UserAdvManager_Redir","0","UAM Redirections")
   ;';
-    pwg_query($q);
-  }
-
-// Set current plugin version in config table
-  $plugin =  PluginInfos(UAM_PATH);
-  $version = $plugin['version'];
-
-	$query = '
-SELECT param
-  FROM '.CONFIG_TABLE.'
-WHERE param = "UserAdvManager_Redir"
-;';
-  $count = pwg_db_num_rows(pwg_query($query));
-  
-  if ($count == 0)
-  {
-    $q = '
-INSERT INTO '.CONFIG_TABLE.' (param, value, comment)
-VALUES ("UserAdvManager_Version","'.$version.'","UAM version check")
-  ;';
-    pwg_query($q);
-  }
+  pwg_query($q);
 
 
 	$q = "

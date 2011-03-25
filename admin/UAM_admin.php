@@ -560,6 +560,13 @@ SELECT ".$conf['user_fields']['username'].", ".$conf['user_fields']['email']."
       $visible_user_list[] = $local_user;
 		}
 
+    // Avoid jquery accordion menu bug when there is no users to display
+    // Pending because it causes php warnings when no users are listed (when $visible_user_list[] is empty)
+    /*if (empty($visible_user_list))
+    {
+      $visible_user_list[] = null;
+    }*/
+
 		foreach ($visible_user_list as $local_user)
     {
       // dates formating and compare
@@ -1031,6 +1038,13 @@ ORDER BY name ASC
       $visible_user_list[] = $local_user;
 		}
 
+    // Avoid jquery accordeon menu bug when there is no users to display
+    // Pending because it causes php warnings when no users are listed (when $visible_user_list[] is empty)
+    /*if (empty($visible_user_list))
+    {
+      $visible_user_list[] = null;
+    }*/
+
 		foreach ($visible_user_list as $local_user)
     {
       $groups_string = preg_replace(
@@ -1426,6 +1440,12 @@ VALUES ('".$row['id']."','".$dbnow."','false')
     {
       $visible_user_list[] = $local_user;
 		}
+
+    // Avoid jquery accordeon menu bug when there is no users to display
+    if (empty($visible_user_list))
+    {
+      $visible_user_list[] = null;
+    }
     
 		foreach ($visible_user_list as $local_user)
     {

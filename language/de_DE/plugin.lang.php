@@ -175,6 +175,45 @@ $lang['UAM_Err_Userlist_Settings'] = 'Diese Seite ist nur verfügbar, wenn &quot
 
 // --------- Starting below: New or revised $lang ---- from version 2.14.0
 $lang['UAM_AdminConfMail'] = 'Bestätigung der Anmeldung für Administratoren';
+$lang['UAM_Tips1'] = 'Anmeldungen mit E-Mail Validierung und Warnmeldung auf der Piwigo\'s Homepage';
+$lang['UAM_Tips1_txt'] = '
+          <ul>
+            <li>
+            Tore:<br>
+            - Bei seiner Ankunft in der Galerie: Unterrichtung der Besucher, dass er sich registrieren um Zugang private Fotos<br>
+            - Bei der Registrierung: Erzeugen Sie eine E-Mail Validierung mit direkter Verbindung, sie dem neuen Anwender seiner Nicht-Validierung und Integration von ihm mit der Gruppe "Warten"<br>
+            - Bei der Validierung: Switch automatisch zur Gruppe "Warten" der Gruppe "Validiert", die den Zugang zu privaten Gruppen bietet<br><br>
+            <b>Warnung: Im Standard-Betrieb, der "Gast" sieht nur den öffentlichen Kategorien, ohne Angaben Nachricht.</b>
+            </li><br><br>
+            <li>
+Voraussetzung:<br>
+- Eine Galerie mit allen oder einigen privaten Kategorien, sichtbar nur durch registrierte Benutzer<br>
+- Mindestens 2 der folgenden Piwigo Nutzergruppen: "Warten", ohne die Erlaubnis der privaten Gruppen und "Validiert" mit allen Berechtigungen für den privaten Kategorien<br>
+- UAM plugin<br>
+- PWG Stuffs plugin, für das Hinzufügen eines Moduls Art "Personal Block"<br>
+- Optional können Sie das Plugin Extended Description Multi-Sprachen<br>
+            </li><br><br>
+            <li>
+Etappen:<br><br>
+A. In plugin UAM:
+              <ol>
+                <li>Aktivieren Sie Anmeldebestätigung</li>
+                <li>Geben Sie den Text für weitere Erklärung, die angebracht werden, um Anmeldebestätigung mail sendet. Wenn das Plugin Extended Description aktiviert ist, können die Sprach-Tags verwendet werden</li>
+                <li>Wählen Sie das "Warten"-Gruppe unter "Für Anwender, die noch nicht validiert ihrer Eintragung"</li>
+                <li>Wählen Sie das "Validiert"-Gruppe unter "Für Anwender, die ihre Anmeldung bestätigt haben"</li>
+                <li>Speichern Sie das Plugin-Konfiguration</li>
+              </ol>
+<br>
+B. In plugin PWG Stuffs :
+              <ol>
+                <li>Fügen Sie ein neues Modul Typ "Personal-Block: Zeigt einen Block Personal (z. B. eine redaktionelle)"</li>
+                <li>Konfigurieren Sie das Modul unter Angabe der Titel (zB "Anmeldung bis Validierung") und seine Beschreibung, und aktivieren Sie nur "Warten" in der Liste der Gruppen erlaubt</li>
+                <li>Kompletten Inhalt des Moduls mit der Meldung Informationen, die den Benutzern angezeigt werden nicht validiert. Als UAM kann Markup-Sprachen verwendet werden, wenn das Plugin Extended Description aktiviert ist</li>
+                <li>Check "Display das Modul auf der Homepage der Website"</li>
+                <li>Überprüfen Sie die Konfiguration des Moduls</li>
+              </ol>
+            </li>
+          </ul>';
 // --------- End: New or revised $lang ---- from version 2.14.0
 
 
@@ -228,88 +267,5 @@ $lang['UAM_Validation of %s'] = 'Validierung von %s';
 /*TODO*/$lang['UAM_USRAutoMail'] = 'Automated email reminder';
 $lang['UAM_Disable'] = ' Deaktivieren (Standard)';
 $lang['UAM_Enable'] = ' Aktivieren ';
-/*TODO*/$lang['UAM_Tips1'] = 'Information of non-validated registration with UAM and PWG_Stuffs';
-/*TODO*/$lang['UAM_Tips1_txt'] = '
-          <ul>
-            <li>
-            Goals: Inform the visitor that the registration is awaiting approval by displaying a personal block on the home page of the gallery, and this, as registration is not approved.
-            <br><br>
-            <b>Warnung: Im Standard-Betrieb, der "Gast" sieht nur den öffentlichen Kategorien, ohne Angaben Nachricht.</b>
-            </li><br><br>
-            <li>
-Voraussetzung:<br>
-- Eine Galerie mit allen oder einigen privaten Kategorien, sichtbar nur durch registrierte Benutzer<br>
-- Mindestens 2 der folgenden Piwigo Nutzergruppen: "Warten", ohne die Erlaubnis der privaten Gruppen und "Validiert" mit allen Berechtigungen für den privaten Kategorien<br>
-- UAM plugin<br>
-- PWG Stuffs plugin, für das Hinzufügen eines Moduls Art "Personal Block"<br>
-- Optional können Sie das Plugin Extended Description Multi-Sprachen<br>
-            </li><br><br>
-            <li>
-Etappen:<br><br>
-A. In plugin UAM:
-              <ol>
-                <li>Aktivieren Sie Anmeldebestätigung</li>
-                <li>Geben Sie den Text für weitere Erklärung, die angebracht werden, um Anmeldebestätigung mail sendet. Wenn das Plugin Extended Description aktiviert ist, können die Sprach-Tags verwendet werden</li>
-                <li>Wählen Sie das "Warten"-Gruppe unter "Für Anwender, die noch nicht validiert ihrer Eintragung"</li>
-                <li>Wählen Sie das "Validiert"-Gruppe unter "Für Anwender, die ihre Anmeldung bestätigt haben"</li>
-                <li>Speichern Sie das Plugin-Konfiguration</li>
-              </ol>
-<br>
-B. In plugin PWG Stuffs :
-              <ol>
-                <li>Fügen Sie ein neues Modul Typ "Personal-Block: Zeigt einen Block Personal (z. B. eine redaktionelle)"</li>
-                <li>Konfigurieren Sie das Modul unter Angabe der Titel (zB "Anmeldung bis Validierung") und seine Beschreibung, und aktivieren Sie nur "Warten" in der Liste der Gruppen erlaubt</li>
-                <li>Kompletten Inhalt des Moduls mit der Meldung Informationen, die den Benutzern angezeigt werden nicht validiert. Als UAM kann Markup-Sprachen verwendet werden, wenn das Plugin Extended Description aktiviert ist</li>
-                <li>Check "Display das Modul auf der Homepage der Website"</li>
-                <li>Überprüfen Sie die Konfiguration des Moduls</li>
-              </ol>
-            </li>
-          </ul>';
-/*TODO*/$lang['UAM_Tips2'] = 'Information of non-validated registration with UAM and Additional Pages';
-/*TODO*/$lang['UAM_Tips2_txt'] = '
-          <ul>
-            <li>
-            Goals: Inform the visitor that the registration is awaiting validation by posting an additional page replacing the standard index page gallery at each of these connections, and this, as registration is not approved.
-            <br><br>
-            Advantages over the method with PWG_Stuffs: Allow formatting information and displaying the information immediately upon registration of visitors.
-            </li><br><br>
-            <li>
-Voraussetzung:<br>
-- Eine Galerie mit allen oder einigen privaten Kategorien, sichtbar nur durch registrierte Benutzer<br>
-- Mindestens 2 der folgenden Piwigo Nutzergruppen: "Warten", ohne die Erlaubnis der privaten Gruppen und "Validiert" mit allen Berechtigungen für den privaten Kategorien<br>
-- UAM plugin<br>
-- Additional Pages plugin for adding and managing an additional page to replace the default index page of the gallery<br>
-- Optional können Sie das Plugin Extended Description Multi-Sprachen<br>
-            </li><br><br>
-            <li>
-Etappen:<br><br>
-A. In plugin UAM:
-              <ol>
-                <li>Aktivieren Sie Anmeldebestätigung</li>
-                <li>Geben Sie den Text für weitere Erklärung, die angebracht werden, um Anmeldebestätigung mail sendet. Wenn das Plugin Extended Description aktiviert ist, können die Sprach-Tags verwendet werden</li>
-                <li>Wählen Sie das "Warten"-Gruppe unter "Für Anwender, die noch nicht validiert ihrer Eintragung"</li>
-                <li>Wählen Sie das "Validiert"-Gruppe unter "Für Anwender, die ihre Anmeldung bestätigt haben"</li>
-                <li>Speichern Sie das Plugin-Konfiguration</li>
-              </ol>
-<br>
-B. In plugin Additional Pages:<br>
-                <b>NOTE : The management of access rights for groups on Additional Pages must be turned on (see plugin configuration settings).</b>
-                <br>
-              <ol>
-                <li>Add a new page with at least the following parameters:</li>
-                <ul>
-                  <li>Page name: The name you wish to give to the additional page (ie: Registration not validated)</li>
-                  <li>Set as homepage checked</li>
-                  <li>Groups allowed: Check the box corresponding to the group "Waiting" configured in UAM</li>
-                  <li>Content: The text you want to use for visitors.</li>
-                </ul>
-                <br>
-                <li>And that\'s it! Only visitors registered and whose registration has not been validated will see this additional index page.</li>
-              </ol>
-            </li>
-          </ul>';
-/*TODO*/$lang['UAM_No_Ghosts'] = 'No ghosts visitors for the moment';
-/*TODO*/$lang['UAM_No_Userlist'] = 'No visitors to list for the moment';
-/*TODO*/$lang['UAM_No_Usermanager'] = 'No unvalidated registers to list for the moment';
 // --------- End: New or revised $lang ---- from version 2.20.0
 ?>

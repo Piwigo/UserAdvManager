@@ -1,7 +1,7 @@
-{combine_script id='jquery' path='themes/default/js/jquery.min.js'}
-{combine_script id='jquery.cluetip' require='jquery' path='themes/default/js/plugins/jquery.cluetip.packed.js'}
-{combine_script id='jquery.tablesorter' require='jquery' path=$UAM_PATH|@cat:'admin/template/js/jquery.tablesorter.min.js'}
-{combine_script id='jquery.tablesorter.pager' require='jquery' path=$UAM_PATH|@cat:'admin/template/js/jquery.tablesorter.pager.js'}
+{combine_script id="jquery" path=$ROOT_URL|@cat:"themes/default/js/jquery.js"}
+{combine_script id="jquery.cluetip" path=$ROOT_URL|@cat:"themes/default/js/plugins/jquery.cluetip.packed.js"}
+{combine_script id="jquery.tablesorter" path=$UAM_PATH|@cat:"admin/template/js/jquery.tablesorter.js"}
+{combine_script id="jquery.tablesorter.pager" path=$UAM_PATH|@cat:"admin/template/js/jquery.tablesorter.pager.js"}
 
 {html_head}<link rel="stylesheet" type="text/css" href="{$UAM_PATH}admin/template/uam.css">{/html_head}
 
@@ -31,7 +31,6 @@ $(document).ready(function()
 <form method="post" action="" class="general">
   <fieldset>
   	<legend class="cluetip" title="{'UAM_usermanTitle'|translate}|{'UAM_usermanTitle_d'|translate}">{'UAM_UserManager_Title'|@translate}</legend>
-    {if count($users) > 0}
       <table id="sorting" class="table2" width="97%" summary="">
   		  <thead>
     			<tr class="throw">
@@ -104,9 +103,4 @@ $(document).ready(function()
 {/if}
 </p>
   </fieldset>
-		{else}
-		<div>
-			{'UAM_No_Usermanager'|@translate}
-		</div>
-		{/if}
 </form>

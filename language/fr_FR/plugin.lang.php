@@ -145,6 +145,8 @@ $lang['UAM_GhostTracker_ReminderText'] = 'Texte de rappel personnalisé';
 $lang['UAM_LastVisit'] = ' Suivi des utilisateurs inscrits';
 $lang['UAM_No_Comment_Anonymous'] = 'Commentaires : pseudo obligatoire pour les non-inscrits';
 
+$lang['UAM_Tips1'] = 'Inscriptions avec validation par email et message d\'avertissement sur la page d\'accueil de Piwigo';
+
 $lang['UAM_Tab_UserManager'] = 'Suivi des validations';
 
 /* UserManager Tab */
@@ -172,6 +174,44 @@ $lang['UAM_Err_Userlist_Settings'] = 'Cette page n\'est accessible que si le "Su
 
 // --------- Starting below: New or revised $lang ---- from version 2.14.0
 $lang['UAM_AdminConfMail'] = 'Validation d\'inscription pour les admins';
+$lang['UAM_Tips1_txt'] = '
+          <ul>
+            <li>
+            Objectifs:<br>
+            - A son arrivée sur la galerie : Informer le visiteur qu\'il peut s\'inscrire pour accéder aux photos privées<br>
+            - A l\'inscription : Générer un email avec lien direct de validation, informer le nouvel utilisateur de sa non-validation et le rattacher au groupe "Attente"<br>
+            - A la validation : Le passer automatiquement du groupe "Attente" au groupe "Validés", qui lui permet d\'accéder normalement aux catégories privées<br><br>
+            <b>Rappel: En fonctionnement standard, le "Guest" ne voit que les catégories publiques, sans message d\'information.</b>
+            </li><br><br>
+            <li>
+Pré-requis:<br>
+- Une galerie avec tout ou partie des catégories privées, visibles par les seuls utilisateurs inscrits<br>
+- Au moins les 2 groupes d\'utilisateurs Piwigo suivants : "Attente", sans aucune permission sur les catégories privées, et "Validés", avec toutes les permissions sur les catégories privées<br>
+- Le plugin UAM<br>
+- Le plugin PWG Stuffs, pour l\'ajout d\'un module de type "Bloc personnel"<br>
+- En option, le plugin Extended Description, pour le support multi-langues<br>
+            </li><br><br>
+            <li>
+Réalisation:<br><br>
+A. Dans le plugin UAM:<br>
+              <ol>
+                <li>Activer la confirmation d\'inscription</li>
+                <li>Saisir un "texte d\'accueil personnalisé" qui sera joint au mail de confirmation d\'inscription. Si le plugin Extended Description est activé, les balises de langues peuvent être utilisées</li>
+                <li>Sélectionner le groupe "Attente" à la rubrique "Pour les utilisateurs n\'ayant pas validé leur inscription"</li>
+                <li>Sélectionner le groupe "Validés" à la rubrique "Pour les utilisateurs ayant validé leur inscription"</li>
+                <li>Enregistrer la configuration du plugin</li>
+              </ol>
+<br>
+B. Dans le plugin PWG Stuffs:<br>
+              <ol>
+                <li>Ajouter un nouveau module de type "Bloc personnel : Affiche un bloc personnel (un édito par exemple)"</li>
+                <li>Configurer le module, en indiquant son titre (ex : "Inscription en attente de validation") et sa description, et cocher uniquement "Attente" dans la liste des groupes autorisés</li>
+                <li>Compléter le contenu du module avec le texte du message d\'information qui sera affiché aux utilisateurs non validés. Comme dans UAM, les balises de langues peuvent être utilisées si le plugin Extended Description est activé</li>
+                <li>Cocher "Afficher le module sur la page d\'accueil du site"</li>
+                <li>Valider la configuration du module</li>
+              </ol>
+            </li>
+          </ul>';
 // --------- End: New or revised $lang ---- from version 2.14.0
 
 
@@ -229,87 +269,5 @@ $lang['UAM_USRAutoDel'] = 'Message à la suppressions automatiques des comptes';
 $lang['UAM_USRAutoMail'] = 'Message de rappel automatique';
 $lang['UAM_Disable'] = ' Désactiver (valeur par défaut)';
 $lang['UAM_Enable'] = ' Activer ';
-$lang['UAM_Tips1'] = 'Information de non validation d\'inscription avec UAM et PWG_Stuffs';
-$lang['UAM_Tips1_txt'] = '
-          <ul>
-            <li>
-            Objectifs : Informer le visiteur que son inscription est en attente de validation en affichant un bloc personnel sur la page d\'accueil de la galerie; et ce, tant que l\'inscription n\'est pas validée.<br><br>
-            <b>Rappel: En fonctionnement standard, le "Guest" ne voit que les catégories publiques, sans message d\'information.</b>
-            </li><br><br>
-            <li>
-Pré-requis:<br>
-- Une galerie avec tout ou partie des catégories privées, visibles par les seuls utilisateurs inscrits<br>
-- Au moins les 2 groupes d\'utilisateurs Piwigo suivants : "Attente", sans aucune permission sur les catégories privées, et "Validés", avec toutes les permissions sur les catégories privées<br>
-- Le plugin UAM<br>
-- Le plugin PWG Stuffs, pour l\'ajout d\'un module de type "Bloc personnel"<br>
-- En option, le plugin Extended Description, pour le support multi-langues<br>
-            </li><br><br>
-            <li>
-Réalisation:<br><br>
-A. Dans le plugin UAM:<br>
-              <ol>
-                <li>Activer la confirmation d\'inscription</li>
-                <li>Saisir un "texte d\'accueil personnalisé" qui sera joint au mail de confirmation d\'inscription. Si le plugin Extended Description est activé, les balises de langues peuvent être utilisées</li>
-                <li>Sélectionner le groupe "Attente" à la rubrique "Pour les utilisateurs n\'ayant pas validé leur inscription"</li>
-                <li>Sélectionner le groupe "Validés" à la rubrique "Pour les utilisateurs ayant validé leur inscription"</li>
-                <li>Enregistrer la configuration du plugin</li>
-              </ol>
-<br>
-B. Dans le plugin PWG Stuffs:<br>
-              <ol>
-                <li>Ajouter un nouveau module de type "Bloc personnel : Affiche un bloc personnel (un édito par exemple)"</li>
-                <li>Configurer le module, en indiquant son titre (ex : "Inscription en attente de validation") et sa description, et cocher uniquement "Attente" dans la liste des groupes autorisés</li>
-                <li>Compléter le contenu du module avec le texte du message d\'information qui sera affiché aux utilisateurs non validés. Comme dans UAM, les balises de langues peuvent être utilisées si le plugin Extended Description est activé</li>
-                <li>Cocher "Afficher le module sur la page d\'accueil du site"</li>
-                <li>Valider la configuration du module</li>
-              </ol>
-            </li>
-          </ul>';
-$lang['UAM_Tips2'] = 'Information de non validation d\'inscription avec UAM et Additional Pages';
-$lang['UAM_Tips2_txt'] = '
-          <ul>
-            <li>
-            Objectifs : Informer le visiteur que son inscription est en attente de validation en affichant une page additionnelle remplaçant la page d\'index standard de la galerie à chacune de ces connexions; et ce, tant que l\'inscription n\'est pas validée.
-            <br><br>
-            Avantages par rapport à la méthode avec PWG_Stuffs : Permettre une information mise en forme et moins austère et afficher immédiatement l\'information dès l\'inscription des visiteurs.
-            </li><br><br>
-            <li>
-Pré-requis:<br>
-- Une galerie avec tout ou partie des catégories privées, visibles par les seuls utilisateurs inscrits<br>
-- Au moins les 2 groupes d\'utilisateurs Piwigo suivants : "Attente", sans aucune permission sur les catégories privées, et "Validés", avec toutes les permissions sur les catégories privées<br>
-- Le plugin UAM<br>
-- Le plugin Additional Pages, pour l\'ajout et la gestion d\'une page additionnelle remplaçant la page d\'index par défaut de la galerie<br>
-- En option, le plugin Extended Description, pour le support multi-langues<br>
-            </li><br><br>
-            <li>
-Réalisation:<br><br>
-A. Dans le plugin UAM:<br>
-              <ol>
-                <li>Activer la confirmation d\'inscription</li>
-                <li>Saisir un "texte d\'accueil personnalisé" qui sera joint au mail de confirmation d\'inscription. Si le plugin Extended Description est activé, les balises de langues peuvent être utilisées</li>
-                <li>Sélectionner le groupe "Attente" à la rubrique "Pour les utilisateurs n\'ayant pas validé leur inscription"</li>
-                <li>Sélectionner le groupe "Validés" à la rubrique "Pour les utilisateurs ayant validé leur inscription"</li>
-                <li>Enregistrer la configuration du plugin</li>
-              </ol>
-<br>
-B. Dans le plugin Additional Pages:<br>
-                <b>NOTE : La gestion des droits d\'accès aux pages additionelles pour les groupes doit être activée (voir configuration du plugin Additional Pages).</b>
-                <br>
-              <ol>
-                <li>Ajouter une nouvelle page avec au minimum les paramètres suivants :</li>
-                <ul>
-                  <li>Nom de la page : Le nom que vous souhaiter donner à la page additionnelle (ex : Inscription non validée)</li>
-                  <li>Définir comme page d\'accueil coché</li>
-                  <li>Groupes autorisés : Cocher la case correspondante au groupe "Attente" configuré dans UAM</li>
-                  <li>Contenu : Le texte que vous souhaitez faire apparaitre aux visiteurs.</li>
-                </ul>
-                <br>
-                <li>Et c\'est tout ! Seuls les visiteurs inscrits et dont l\'inscription n\'a pas été validée verront cette page d\'index additionnelle.</li>
-              </ol>
-            </li>
-          </ul>';
-$lang['UAM_No_Ghosts'] = 'Pas de visiteurs fantômes pour l\'instant';
-$lang['UAM_No_Userlist'] = 'Pas de suivi de visiteurs pour l\'instant';
-$lang['UAM_No_Usermanager'] = 'Pas de validations d\'inscription pour l\'instant';
 // --------- End: New or revised $lang ---- from version 2.20.0
 ?>

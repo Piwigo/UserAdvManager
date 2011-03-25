@@ -1,5 +1,5 @@
-{combine_script id='jquery' path='themes/default/js/jquery.min.js'}
-{combine_script id='jquery.cluetip' require='jquery' path='themes/default/js/plugins/jquery.cluetip.packed.js'}
+{combine_script id="jquery" path=$ROOT_URL|@cat:"themes/default/js/jquery.js"}
+{combine_script id="jquery.cluetip" path=$ROOT_URL|@cat:"themes/default/js/plugins/jquery.cluetip.packed.js"}
 
 {html_head}<link rel="stylesheet" type="text/css" href="{$UAM_PATH}admin/template/uam.css">{/html_head}
 
@@ -581,19 +581,7 @@ function uam_blockToggleDisplay( headerId, contentId )
         </fieldset>
       </div>
     </fieldset>
-
-    <fieldset>
-      <div id="Tips2_header" class="instructionBlockHeaderCollapsed" onclick="uam_blockToggleDisplay('Tips2_header', 'Tips2')">
-        <span>{'UAM_Tips2'|@translate}</span>
-      </div>
-      <div id="Tips2" class="instructionBlockContent" style="display:none">
-        <fieldset>
-          {'UAM_Tips2_txt'|@translate}
-        </fieldset>
-      </div>
-    </fieldset>
   </div>
-
 </div>
 <fieldset>
   {'UAM_Support_txt'|@translate}

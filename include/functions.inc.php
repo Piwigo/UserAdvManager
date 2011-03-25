@@ -18,7 +18,7 @@ function UAM_admin_menu($menu)
   array_push($menu,
     array(
       'NAME' => $name,
-      'URL' => get_root_url().'admin.php?page=plugin-'.basename(UAM_PATH)
+      'URL'  => get_admin_plugin_menu_link(UAM_PATH.'/admin/UAM_admin.php')
     )
   );
 
@@ -708,9 +708,9 @@ function UAM_lost_password_mail_content($infos)
   
   if (isset($conf_UAM[29]) and $conf_UAM[29] == 'true')
   {
-    // Management of Extension flags ([mygallery], [myurl])
-    //$patterns[] = '#\[username\]#i';
-    //$replacements[] = stripslashes($row['username']);
+    // Management of Extension flags ([username], [mygallery], [myurl])
+    $patterns[] = '#\[username\]#i';
+    $replacements[] = stripslashes($row['username']);
     $patterns[] = '#\[mygallery\]#i';
     $replacements[] = $conf['gallery_title'];
     $patterns[] = '#\[myurl\]#i';

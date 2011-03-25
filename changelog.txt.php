@@ -230,7 +230,6 @@ Plugin Name: UserAdvManager
             Bug 2186 fixed - JQuery accordion menu when no users are listed in UAM tables
             Bug 2188 fixed - Avoid translation flags conflicts
             Bug 2192 fixed - GT Automated tasks improvement and refactory
-            Bug 2203 fixed - [username] special flag is not supported in lost password email customization
 
 */
 ?>

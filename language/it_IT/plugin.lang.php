@@ -146,6 +146,8 @@ $lang['UAM_GhostTracker_ReminderText'] = 'Testo di rilancio personalizzato';
 $lang['UAM_LastVisit'] = ' Tracciamento utenti registrati';
 $lang['UAM_No_Comment_Anonymous'] = 'Commenti : Pseudo obbligatorio per gli ospiti';
 
+$lang['UAM_Tips1'] = 'Iscrizzione con convalida dell\'Email e messaggio di avviso nella homepage di Piwigo';
+
 $lang['UAM_Tab_UserManager'] = 'Tracciamento convalide';
 
 /* UserManager Tab */
@@ -173,6 +175,44 @@ $lang['UAM_Err_Userlist_Settings'] = 'Questa pagina è disponibile solo se "Moni
 
 // --------- Starting below: New or revised $lang ---- from version 2.14.0
 $lang['UAM_AdminConfMail'] = 'Conferma dell\'iscrizione per gli amministratori';
+$lang['UAM_Tips1_txt'] = '
+          <ul>
+            <li>
+            Obiettivi:<br>
+            - Al suo arrivo sulla galleria: informare l\'ospite che si può registrare per accedere alle foto private<br>
+            - Al momento dell\'iscrizione: Generare un\'Email di convalida con il link diretto, informare il nuovo utente della sua "non convalidazione" e integrarlo lo al gruppo "Attesa"<br>
+            - All convalida: Spostarlo automaticamente dal gruppo "Attesa" al gruppo "Convalidati", che permette l\'accesso alle categorie private<br><br>
+            <b>Nota: Nel funzionamento standard, l\'utente "Guest" vede solo le categorie pubbliche, senza messaggio d\'informazione.</b>
+            </li><br><br>
+            <li>
+Prerequisiti:<br>
+- Una galleria con tutte o alcune categorie private, visibili solo agli utenti registrati<br>
+- Almeno i 2 gruppi d\'utenti Piwigo seguenti: "Attesa", senza alcuna autorizzazione sulle categorie private, e "Convalidati" con tutte le autorizzazioni per le categorie private<br>
+- Il plugin NBC_UAM<br>
+- Il plugin PWG Stuffs, per aggiungere un modulo di tipo "Blocco Personal"<br>
+- In opzione, il plugin Extended Description per il supporto multi-lingue<br>
+            </li><br><br>
+            <li>
+Tappe:<br><br>
+A. Nel plugin NBC_UAM:
+              <ol>
+                <li>Attivare la conferma dell\'iscrizione</li>
+                <li>Inserire un testo personalizzato che sarà inviato con l\'Email di conferma dell\'iscrizione. Se il plugin Extended Description è installato ed attivato, i tag di lingua possono essere utilizzati</li>
+                <li>Selezionare il gruppo "Attesa" sotto la voce "Per gli utenti che non hanno convalidato la loro iscrizione"</li>
+                <li>Selezionare il gruppo "Convalidati" sotto la voce "Per gli utenti che hanno convalidato la loro iscrizione"</li>
+                <li>Salvare le impostazzioni</li>
+              </ol>
+<br>
+B. Nel plugin PWG Stuffs :
+              <ol>
+                <li>Aggiungere un nuovo modulo "Blocco Personale : Mostrare il blocco personale (Nota o Editoriale per esempio)"</li>
+                <li>Configurare il modulo, indicandone il titolo (ad esempio, "in attesa di convalida dell\'iscrizione"), la descrizione, ed in fine selezionando solo il gruppo "Attesa" nell\'elenco dei gruppi ammessi</li>
+                <li>Completare il contenuto del modulo con il testo da visualizzare per gli utenti non convalidati. Come NBC_UAM, i tag di lingua possono essere utilizzati se il plugin Extended Description è installato ed attivato</li>
+                <li>Selezzionare "Visualizzare il modulo nella homepage del sito"</li>
+                <li>Salvare le impostazzioni</li>
+              </ol>
+            </li>
+          </ul>';
 // --------- End: New or revised $lang ---- from version 2.14.0
 
 
@@ -227,88 +267,5 @@ $lang['UAM_Validation of %s'] = 'Validazione di %s';
 /*TODO*/$lang['UAM_USRAutoMail'] = 'Automated email reminder';
 $lang['UAM_Disable'] = ' Disattivare (di default)';
 $lang['UAM_Enable'] = ' Attivare ';
-/*TODO*/$lang['UAM_Tips1'] = 'Information of non-validated registration with UAM and PWG_Stuffs';
-/*TODO*/$lang['UAM_Tips1_txt'] = '
-          <ul>
-            <li>
-            Goals: Inform the visitor that the registration is awaiting approval by displaying a personal block on the home page of the gallery, and this, as registration is not approved.
-            <br><br>
-            <b>Nota: Nel funzionamento standard, l\'utente "Guest" vede solo le categorie pubbliche, senza messaggio d\'informazione.</b>
-            </li><br><br>
-            <li>
-Prerequisiti:<br>
-- Una galleria con tutte o alcune categorie private, visibili solo agli utenti registrati<br>
-- Almeno i 2 gruppi d\'utenti Piwigo seguenti: "Attesa", senza alcuna autorizzazione sulle categorie private, e "Convalidati" con tutte le autorizzazioni per le categorie private<br>
-- Il plugin NBC_UAM<br>
-- Il plugin PWG Stuffs, per aggiungere un modulo di tipo "Blocco Personal"<br>
-- In opzione, il plugin Extended Description per il supporto multi-lingue<br>
-            </li><br><br>
-            <li>
-Tappe:<br><br>
-A. Nel plugin NBC_UAM:
-              <ol>
-                <li>Attivare la conferma dell\'iscrizione</li>
-                <li>Inserire un testo personalizzato che sarà inviato con l\'Email di conferma dell\'iscrizione. Se il plugin Extended Description è installato ed attivato, i tag di lingua possono essere utilizzati</li>
-                <li>Selezionare il gruppo "Attesa" sotto la voce "Per gli utenti che non hanno convalidato la loro iscrizione"</li>
-                <li>Selezionare il gruppo "Convalidati" sotto la voce "Per gli utenti che hanno convalidato la loro iscrizione"</li>
-                <li>Salvare le impostazzioni</li>
-              </ol>
-<br>
-B. Nel plugin PWG Stuffs :
-              <ol>
-                <li>Aggiungere un nuovo modulo "Blocco Personale : Mostrare il blocco personale (Nota o Editoriale per esempio)"</li>
-                <li>Configurare il modulo, indicandone il titolo (ad esempio, "in attesa di convalida dell\'iscrizione"), la descrizione, ed in fine selezionando solo il gruppo "Attesa" nell\'elenco dei gruppi ammessi</li>
-                <li>Completare il contenuto del modulo con il testo da visualizzare per gli utenti non convalidati. Come NBC_UAM, i tag di lingua possono essere utilizzati se il plugin Extended Description è installato ed attivato</li>
-                <li>Selezzionare "Visualizzare il modulo nella homepage del sito"</li>
-                <li>Salvare le impostazzioni</li>
-              </ol>
-            </li>
-          </ul>';
-/*TODO*/$lang['UAM_Tips2'] = 'Information of non-validated registration with UAM and Additional Pages';
-/*TODO*/$lang['UAM_Tips2_txt'] = '
-          <ul>
-            <li>
-            Goals: Inform the visitor that the registration is awaiting validation by posting an additional page replacing the standard index page gallery at each of these connections, and this, as registration is not approved.
-            <br><br>
-            Advantages over the method with PWG_Stuffs: Allow formatting information and displaying the information immediately upon registration of visitors.
-            </li><br><br>
-            <li>
-Prerequisiti:<br>
-- Una galleria con tutte o alcune categorie private, visibili solo agli utenti registrati<br>
-- Almeno i 2 gruppi d\'utenti Piwigo seguenti: "Attesa", senza alcuna autorizzazione sulle categorie private, e "Convalidati" con tutte le autorizzazioni per le categorie private<br>
-- Il plugin NBC_UAM<br>
-- Additional Pages plugin for adding and managing an additional page to replace the default index page of the gallery<br>
-- In opzione, il plugin Extended Description per il supporto multi-lingue<br>
-            </li><br><br>
-            <li>
-Tappe:<br><br>
-A. Nel plugin NBC_UAM:
-              <ol>
-                <li>Attivare la conferma dell\'iscrizione</li>
-                <li>Inserire un testo personalizzato che sarà inviato con l\'Email di conferma dell\'iscrizione. Se il plugin Extended Description è installato ed attivato, i tag di lingua possono essere utilizzati</li>
-                <li>Selezionare il gruppo "Attesa" sotto la voce "Per gli utenti che non hanno convalidato la loro iscrizione"</li>
-                <li>Selezionare il gruppo "Convalidati" sotto la voce "Per gli utenti che hanno convalidato la loro iscrizione"</li>
-                <li>Salvare le impostazzioni</li>
-              </ol>
-<br>
-B. Nel plugin Additional Pages:<br>
-                <b>NOTE : The management of access rights for groups on Additional Pages must be turned on (see plugin configuration settings).</b>
-                <br>
-              <ol>
-                <li>Add a new page with at least the following parameters:</li>
-                <ul>
-                  <li>Page name: The name you wish to give to the additional page (ie: Registration not validated)</li>
-                  <li>Set as homepage checked</li>
-                  <li>Groups allowed: Check the box corresponding to the group "Waiting" configured in UAM</li>
-                  <li>Content: The text you want to use for visitors.</li>
-                </ul>
-                <br>
-                <li>And that\'s it! Only visitors registered and whose registration has not been validated will see this additional index page.</li>
-              </ol>
-            </li>
-          </ul>';
-/*TODO*/$lang['UAM_No_Ghosts'] = 'No ghosts visitors for the moment';
-/*TODO*/$lang['UAM_No_Userlist'] = 'No visitors to list for the moment';
-/*TODO*/$lang['UAM_No_Usermanager'] = 'No unvalidated registers to list for the moment';
 // --------- End: New or revised $lang ---- from version 2.20.0
 ?>

@@ -144,6 +144,8 @@ $lang['UAM_GhostTracker_ReminderText'] = 'Ghost Tracker atgadinājuma ziņojuma 
 $lang['UAM_LastVisit'] = ' Reģistrēto lietotāju izsekošana';
 $lang['UAM_No_Comment_Anonymous'] = 'Viesu komentāriem iesauka (Nickname) obligāta';
 
+$lang['UAM_Tips1'] = 'Reģistrēšanās ar e-pasta apstiprināšanu un brīdinājuma ziņojums Piwigo mājas lapā';
+
 $lang['UAM_Tab_UserManager'] = 'Apstiprinājumu izsekošana';
 
 /* UserManager Tab */
@@ -265,88 +267,5 @@ To ensure consistency, the option "Automatically sending an email when changing 
 /* TODO */$lang['UAM_USRAutoMail'] = 'Automated email reminder';
 $lang['UAM_Disable'] = ' Atspējot (pēc noklusējuma)';
 $lang['UAM_Enable'] = ' Iespējot ';
-/*TODO*/$lang['UAM_Tips1'] = 'Information of non-validated registration with UAM and PWG_Stuffs';
-/*TODO*/$lang['UAM_Tips1_txt'] = '
-<ul>
-<li>
-             Goals: Inform the visitor that the registration is awaiting approval by displaying a personal block on the home page of the gallery, and this, as registration is not approved.
-             <br><br>
-<b>Atgādinājums: Pie standartoperācijām "Guest" (viesis) redz tikai publiskās kategorijas bez informatīvā materiāla.</b>
-</li><br><br>
-<li>
-Priekšnoteikumi:<br>
-- Galerija ar visām vai dažām privātajām ketegorijām redzama tikai reģistrētiem lietotājiem<br>
-- Vismaz 2 sekojošas Piwigo lietotāju grupas:gaidīšanas grupa  "Waiting," bez tiesībām darboties ar privātām kategorijām un apstiprināto grupa "Validated" ar visām tiesībām darbam ar privātām kategorijām<br>
-- UAM spraudnis<br>
-- PWG Stuffs spraudnis, moduļa "Personal Block" pievienošanai<br>
-- Pēc izvēles (neobligāts), spraudnis Extended Description (paplašināts apraksts), lai nodrošinātu daudzvalodu atbalstu<br>
-</li><br><br>
-<li>
-Posmi:<br><br>
-A. UAM spraudnī:
-<ol>
-<li>Iespējo reģistrācijas apstiprināšanu</li>
-<li>Ievada papildinformāciju-skaidrojumu, kas tiks pievienots e-pasta reģistrācijas apstiprinājumam. Gadījumā, ja ir aktivēts spraudnis Extended Description (papildus apraksts), var tikt lietotas valodu iezīmes (tagi)</li>
-<li>Izvēlas gaidīšanas grupu "Waiting" sadaļā "Lietotājiem, kas nav apstiprinājuši savu reģistrāciju"</li>
-<li>Izvēlas apstiprināto grupu "Validated" sadaļā "Lietotājiem, kas apstiprinājuši savu reģistrāciju"</li>
-<li>Saglabā spraudņa konfigurāciju</li>
-</ol>
-<br>
-B. PWG Stuffs spraudnī :
-<ol>
-<li>Pievieno jauna tipa moduli "Personal block: Rāda bloķētos darbiniekus (piem. redakcionāli)"</li>
-<li>Konfigurē moduli, norādot nosaukumu (piem."Registration pending validation") un tā aprakstu, pārbaudot grupu "Waiting"  atļauto grupu sarakstā</li>
-<li>Pabeidz moduļa saturu ar informatīvu ziņojumu neapstiprinātajiem lietotājiem.Kā UAM valodas iezīmes var tikt lietotas, ja spraudnī ir iespējota papildus apraksta Extended Description funkcija</li>
-<li>Atzīmē "Rādīt moduli vietnes mājas lapā"</li>
-<li>Pārbauda moduļa konfigurāciju</li>
-</ol>
-</li>
-</ul>';
-/*TODO*/$lang['UAM_Tips2'] = 'Information of non-validated registration with UAM and Additional Pages';
-/*TODO*/$lang['UAM_Tips2_txt'] = '
-          <ul>
-            <li>
-            Goals: Inform the visitor that the registration is awaiting validation by posting an additional page replacing the standard index page gallery at each of these connections, and this, as registration is not approved.
-            <br><br>
-            Advantages over the method with PWG_Stuffs: Allow formatting information and displaying the information immediately upon registration of visitors.
-            </li><br><br>
-            <li>
-Priekšnoteikumi:<br>
-- Galerija ar visām vai dažām privātajām ketegorijām redzama tikai reģistrētiem lietotājiem<br>
-- Vismaz 2 sekojošas Piwigo lietotāju grupas:gaidīšanas grupa  "Waiting," bez tiesībām darboties ar privātām kategorijām un apstiprināto grupa "Validated" ar visām tiesībām darbam ar privātām kategorijām<br>
-- UAM spraudnis<br>
-- Additional Pages plugin for adding and managing an additional page to replace the default index page of the gallery<br>
-- Pēc izvēles (neobligāts), spraudnis Extended Description (paplašināts apraksts), lai nodrošinātu daudzvalodu atbalstu<br>
-            </li><br><br>
-            <li>
-Posmi:<br><br>
-A. UAM spraudnī:
-<ol>
-<li>Iespējo reģistrācijas apstiprināšanu</li>
-<li>Ievada papildinformāciju-skaidrojumu, kas tiks pievienots e-pasta reģistrācijas apstiprinājumam. Gadījumā, ja ir aktivēts spraudnis Extended Description (papildus apraksts), var tikt lietotas valodu iezīmes (tagi)</li>
-<li>Izvēlas gaidīšanas grupu "Waiting" sadaļā "Lietotājiem, kas nav apstiprinājuši savu reģistrāciju"</li>
-<li>Izvēlas apstiprināto grupu "Validated" sadaļā "Lietotājiem, kas apstiprinājuši savu reģistrāciju"</li>
-<li>Saglabā spraudņa konfigurāciju</li>
-</ol>
-<br>
-B. Additional Pages spraudnī :<br>
-                <b>NOTE : The management of access rights for groups on Additional Pages must be turned on (see plugin configuration settings).</b>
-                <br>
-              <ol>
-                <li>Add a new page with at least the following parameters:</li>
-                <ul>
-                  <li>Page name: The name you wish to give to the additional page (ie: Registration not validated)</li>
-                  <li>Set as homepage checked</li>
-                  <li>Groups allowed: Check the box corresponding to the group "Waiting" configured in UAM</li>
-                  <li>Content: The text you want to use for visitors.</li>
-                </ul>
-                <br>
-                <li>And that\'s it! Only visitors registered and whose registration has not been validated will see this additional index page.</li>
-              </ol>
-            </li>
-          </ul>';
-/*TODO*/$lang['UAM_No_Ghosts'] = 'No ghosts visitors for the moment';
-/*TODO*/$lang['UAM_No_Userlist'] = 'No visitors to list for the moment';
-/*TODO*/$lang['UAM_No_Usermanager'] = 'No unvalidated registers to list for the moment';
 // --------- End: New or revised $lang ---- from version 2.20.0
 ?>
