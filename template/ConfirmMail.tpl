@@ -9,13 +9,19 @@
           <img src="{$ROOT_URL}{$themeconf.icon_dir}/home.png" class="button" alt="{'home'|@translate}">
         </a>
     {else}
+      {if isset($GALLERY_URL)}
         <a href="{$GALLERY_URL}" title="{'return to homepage'|@translate}">
           <img src="{$ROOT_URL}{$themeconf.icon_dir}/home.png" class="button" alt="{'home'|@translate}">
         </a>
+      {else}
+        <a href="{$U_HOME}" title="{'return to homepage'|@translate}">
+          <img src="{$ROOT_URL}{$themeconf.icon_dir}/home.png" class="button" alt="{'home'|@translate}">
+        </a>
+      {/if}
     {/if}
       </li>
     </ul>
-    <h2 class="confmail">{'UAM_title_confirm_mail'|@translate}</h2>
+    <h2 class="confmail">{'title_confirm_mail'|@translate}</h2>
   </div>
   <ul>
   {if $STATUS == true}

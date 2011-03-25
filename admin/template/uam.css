@@ -11,11 +11,6 @@
   font-weight:bold;
 }
 
-div.uam_hide
-{
-  display: none;
-}
-
 textarea.uam_textfields
 {
   width: 70%;
@@ -39,7 +34,6 @@ legend.cluetip
   overflow: hidden;
 }
 
-/* Bloc expand-collapse instructions */
 .instructionBlockHeaderCollapsed, .instructionBlockHeaderExpanded
 {
   background-color:#111;
@@ -100,8 +94,4 @@ background-image:url("./icon/asc.png");
 
 .pager{
   text-align:center;
-}
-
-#pager img {
-  margin-bottom: -3px;
 }

@@ -4,6 +4,10 @@ if(!defined('UAM_PATH'))
 {
   define('UAM_PATH' , PHPWG_PLUGINS_PATH.basename(dirname(__FILE__)).'/');
 }
+if (!defined('UAM_ROOT'))
+{
+  define('UAM_ROOT', dirname(__FILE__).'/');
+}
 
 include_once (UAM_PATH.'include/constants.php');
 include_once (UAM_PATH.'include/functions.inc.php');
@@ -13,94 +17,44 @@ function plugin_install()
 {
 	global $conf;
 	
-  $default1 = array('false','false',-1,-1,-1,'false','false','',-1,'','','false','','false',100,'false','false',10,'Hello [username].
+  $default1 = array('false','false',-1,-1,-1,'false','false','',-1,'','','false','','false',100,'false','false',10,'Hello.
 	
-This is a reminder because a very long time passed since your last visit on our gallery [mygallery]. If you do not want anymore to use your access account, please let us know by replying to this email. Your account will be deleted.
+This is a reminder because a very long time passed since your last visit on our gallery. If you do not want anymore to use your access account, please let us know by replying to this email. Your account will be deleted.
 
 On receipt of this message and no new visit within 15 days, we would be obliged to automatically delete your account.
 
 Best regards,
 
-The admin of the gallery.','false','false','false','false','false','Sorry [username], your account has been deleted due to a too long time passed since your last visit at [mygallery].','Sorry [username], your account has been deprecated due to a too long time passed since your last visit at [mygallery]. Please, use the following link to revalidate your account.',-1,-1,'Thank you for registering at [mygallery]. Your account has been manually validated by _admin_. You may now log in at _link_to_site_ and make any appropriate changes to your profile. Welcome to _name_of_site_!','false','You have requested a password reset on our gallery. Please, find below your new connection settings.','false','Sorry, your account has been deleted because you have not validated your registration in requested time. Please, try registration with a valid and non blocked email account.','false');
+The admin of the gallery.','false','false');
 
-	$query = '
-SELECT param
-  FROM '.CONFIG_TABLE.'
-WHERE param = "UserAdvManager"
-;';
-  $count = pwg_db_num_rows(pwg_query($query));
-  
-  if ($count == 0)
-  {
-    $q = '
+  $q = '
 INSERT INTO '.CONFIG_TABLE.' (param, value, comment)
 VALUES ("UserAdvManager","'.addslashes(serialize($default1)).'","UAM parameters")
   ;';
-    pwg_query($q);
-  }
+  pwg_query($q);
 
 
-  $default2 = array('false',5,'Hello [username].
+  $default2 = array('false',5,'Hello.
 		
-This is a reminder message because you registered on our gallery [mygallery] but you do not validate your registration and your validation key has expired. To still allow you to access to our gallery, your validation period has been reset. You have again 5 days to validate your registration.
+This is a reminder message because you registered on our gallery but you do not validate your registration and your validation key has expired. To still allow you to access to our gallery, your validation period has been reset. You have again 5 days to validate your registration.
 
-Note: After this period, your account will be permanently deleted.','false','Hello [username].
+Note: After this period, your account will be permanently deleted.','false','Hello.
 
-This is a reminder message because you registered on our gallery [mygallery] but you do not validate your registration and your validation key will expire. To allow you access to our gallery, you have 2 days to confirm your registration by clicking on the link in the message you should have received when you registered.
+This is a reminder message because you registered on our gallery but you do not validate your registration and your validation key will expire. To allow you access to our gallery, you have 2 days to confirm your registration by clicking on the link in the message you should have received when you registered.
 
-Note: After this period, your account will be permanently deleted.','You have confirmed that you are human and may now use [mygallery]! Welcome [username]!','Your activation key is incorrect or expired or you have already validated your account, please contact the webmaster to fix this problem.');
+Note: After this period, your account will be permanently deleted.','Thank you to have confirmed your email address and your registration on the gallery. Have fun !','Your activation key is incorrect or expired or you have already validated your account, please contact the webmaster to fix this problem.');
 
-	$query = '
-SELECT param
-  FROM '.CONFIG_TABLE.'
-WHERE param = "UserAdvManager_ConfirmMail"
-;';
-  $count = pwg_db_num_rows(pwg_query($query));
-  
-  if ($count == 0)
-  {
-    $q = '
+  $q = '
 INSERT INTO '.CONFIG_TABLE.' (param, value, comment)
 VALUES ("UserAdvManager_ConfirmMail","'.addslashes(serialize($default2)).'","UAM ConfirmMail parameters")
   ;';
-    pwg_query($q);
-  }
-
-	$query = '
-SELECT param
-  FROM '.CONFIG_TABLE.'
-WHERE param = "UserAdvManager_Redir"
-;';
-  $count = pwg_db_num_rows(pwg_query($query));
+  pwg_query($q);
   
-  if ($count == 0)
-  {
-    $q = '
+  $q = '
 INSERT INTO '.CONFIG_TABLE.' (param, value, comment)
 VALUES ("UserAdvManager_Redir","0","UAM Redirections")
   ;';
-    pwg_query($q);
-  }
-
-// Set current plugin version in config table
-  $plugin =  PluginInfos(UAM_PATH);
-  $version = $plugin['version'];
-
-	$query = '
-SELECT param
-  FROM '.CONFIG_TABLE.'
-WHERE param = "UserAdvManager_Redir"
-;';
-  $count = pwg_db_num_rows(pwg_query($query));
-  
-  if ($count == 0)
-  {
-    $q = '
-INSERT INTO '.CONFIG_TABLE.' (param, value, comment)
-VALUES ("UserAdvManager_Version","'.$version.'","UAM version check")
-  ;';
-    pwg_query($q);
-  }
+  pwg_query($q);
 
 
 	$q = "
@@ -113,7 +67,7 @@ CREATE TABLE IF NOT EXISTS ".USER_CONFIRM_MAIL_TABLE." (
   reminder ENUM('true','false') NULL,
 PRIMARY KEY  (id)
   )
-ENGINE=MyISAM;";
+;";
   pwg_query($q);
 
 	$q = "
@@ -123,7 +77,7 @@ CREATE TABLE IF NOT EXISTS ".USER_LASTVISIT_TABLE." (
   reminder ENUM('true','false') NULL,
 PRIMARY KEY (`user_id`)
   )
-ENGINE=MyISAM;";
+;";
   pwg_query($q);
 }
 
@@ -225,39 +179,6 @@ WHERE param = "UserAdvManager_Redir"
     upgrade_2153_2154();
   }
 
-/* Check for upgrade from 2.15 to 2.16 */
-/* *********************************** */
-	$query = '
-SELECT param
-  FROM '.CONFIG_TABLE.'
-WHERE param = "UserAdvManager_Version"
-;';
-  $count = pwg_db_num_rows(pwg_query($query));
-  
-  if ($count == 0)
-  {
-    /* upgrade from branch 2.15 to 2.16 */
-    /* ******************************** */
-    upgrade_215_2160();
-  }
-
-/* Check for upgrade from 2.16 to 2.20 */
-/* *********************************** */
-	$query = '
-SELECT value
-  FROM '.CONFIG_TABLE.'
-WHERE param = "UserAdvManager_Version"
-;';
-
-  $data = pwg_db_fetch_assoc(pwg_query($query));
-  
-  if ($data['value'] != '2.20.0')
-  {
-    /* upgrade from branch 2.16 to 2.20 */
-    /* ******************************** */
-    upgrade_216_220();
-  }
-
 load_conf_from_db('param like \'UserAdvManager\\_%\'');
 }
 
@@ -281,26 +202,6 @@ WHERE param="UserAdvManager"
     $q = '
 DELETE FROM '.CONFIG_TABLE.'
 WHERE param="UserAdvManager_ConfirmMail"
-;';
-
-    pwg_query($q);
-  }
-
-  if (isset($conf['UserAdvManager_Redir']))
-  {
-    $q = '
-DELETE FROM '.CONFIG_TABLE.'
-WHERE param="UserAdvManager_Redir"
-;';
-
-    pwg_query($q);
-  }
-
-  if (isset($conf['UserAdvManager_Version']))
-  {
-    $q = '
-DELETE FROM '.CONFIG_TABLE.'
-WHERE param="UserAdvManager_Version"
 ;';
 
     pwg_query($q);
