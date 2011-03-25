@@ -1,7 +1,7 @@
-{combine_script id='jquery' path='themes/default/js/jquery.min.js'}
-{combine_script id='jquery.cluetip' require='jquery' path='themes/default/js/plugins/jquery.cluetip.packed.js'}
-{combine_script id='jquery.tablesorter' require='jquery' path=$UAM_PATH|@cat:'admin/template/js/jquery.tablesorter.min.js'}
-{combine_script id='jquery.tablesorter.pager' require='jquery' path=$UAM_PATH|@cat:'admin/template/js/jquery.tablesorter.pager.js'}
+﻿{known_script id="jquery" src=$ROOT_URL|@cat:"themes/default/js/jquery.packed.js"}
+{known_script id="jquery.cluetip" src=$ROOT_URL|@cat:"themes/default/js/plugins/jquery.cluetip.packed.js"}
+{known_script id="jquery.tablesorter" src=$UAM_PATH|@cat:"admin/template/js/jquery.tablesorter.js"}
+{known_script id="jquery.tablesorter.pager" src=$UAM_PATH|@cat:"admin/template/js/jquery.tablesorter.pager.js"}
 
 {html_head}<link rel="stylesheet" type="text/css" href="{$UAM_PATH}admin/template/uam.css">{/html_head}
 
@@ -25,13 +25,12 @@ $(document).ready(function()
 </script>
 
 <div class="titrePage">
-  <h2>{'UAM_Title_Tab'|@translate} {$UAM_VERSION}<br>{'UAM_SubTitle3'|@translate}</h2>
+  <h2>{'Title_Tab'|@translate} {$UAM_VERSION}<br>{'SubTitle3'|@translate}</h2>
 </div>
 
 <form method="post" action="" class="general">
   <fieldset>
-  	<legend class="cluetip" title="{'UAM_usermanTitle'|translate}|{'UAM_usermanTitle_d'|translate}">{'UAM_UserManager_Title'|@translate}</legend>
-    {if count($users) > 0}
+  	<legend class="cluetip" title="{'UAM_usermanTitle'|translate}|{'UAM_usermanTitle_d'|translate}">{'UserManager_Title'|@translate}</legend>
       <table id="sorting" class="table2" width="97%" summary="">
   		  <thead>
     			<tr class="throw">
@@ -41,9 +40,9 @@ $(document).ready(function()
       			<th>{'User status'|@translate}&nbsp;&nbsp;</th>
       			<th>{'Email address'|@translate}&nbsp;&nbsp;</th>
       			<th>{'Groups'|@translate}&nbsp;&nbsp;</th>
-      			<th>{'UAM_Registration_Date'|@translate}&nbsp;&nbsp;</th>
+      			<th>{'Registration_Date'|@translate}&nbsp;&nbsp;</th>
           {if $CONFIRM_LOCAL == ""}
-            <th>{'UAM_Reminder'|@translate}&nbsp;&nbsp;</th>
+            <th>{'Reminder'|@translate}&nbsp;&nbsp;</th>
           {/if}
     			</tr>
   			</thead>
@@ -94,19 +93,14 @@ $(document).ready(function()
 
 <p>
 {if $CONFIRM_LOCAL == "local"}
-  <input class="submit" type="submit" value="{'UAM_Delete_selected'|@translate}" name="Del_Selected">
-  <input class="submit" type="submit" value="{'UAM_Force_Validation'|@translate}" name="Force_Validation">
+  <input class="submit" type="submit" value="{'Delete_selected'|@translate}" name="Del_Selected">
+  <input class="submit" type="submit" value="{'Force_Validation'|@translate}" name="Force_Validation">
 {else}
-  <input class="submit" type="submit" value="{'UAM_Delete_selected'|@translate}" name="Del_Selected">
-  <input class="submit" type="submit" value="{'UAM_Mail_without_key'|@translate}" name="Mail_Without_Key">
-  <input class="submit" type="submit" value="{'UAM_Mail_with_key'|@translate}" name="Mail_With_Key">
-  <input class="submit" type="submit" value="{'UAM_Force_Validation'|@translate}" name="Force_Validation">
+  <input class="submit" type="submit" value="{'Delete_selected'|@translate}" name="Del_Selected">
+  <input class="submit" type="submit" value="{'Mail_without_key'|@translate}" name="Mail_Without_Key">
+  <input class="submit" type="submit" value="{'Mail_with_key'|@translate}" name="Mail_With_Key">
+  <input class="submit" type="submit" value="{'Force_Validation'|@translate}" name="Force_Validation">
 {/if}
 </p>
   </fieldset>
-		{else}
-		<div>
-			{'UAM_No_Usermanager'|@translate}
-		</div>
-		{/if}
 </form>
