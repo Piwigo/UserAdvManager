@@ -1,0 +1,4 @@
+admin/UserAdvManager_admin.php
+admin/confirmmail.tpl
+admin/UserAdvManager_admin.tpl
+include/functions_UserAdvManager.inc.php
