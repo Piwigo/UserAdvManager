@@ -1,4 +1,13 @@
-/* UAM instructions */
+label.cluetip
+{
+  font-weight:bold;
+}
+
+legend.cluetip
+{
+  font-weight:bold;
+}
+
 #uam_leftmargin
 {
   margin-left: 2em
@@ -11,27 +20,6 @@
   font-weight:bold;
 }
 
-div.uam_hide
-{
-  display: none;
-}
-
-textarea.uam_textfields
-{
-  width: 70%;
-}
-
-/* jQuery cluetip instructions */
-label.cluetip
-{
-  font-weight:bold;
-}
-
-legend.cluetip
-{
-  font-weight:bold;
-}
-
 .instructionBlock
 {
   border: 1px solid #666;
@@ -39,7 +27,6 @@ legend.cluetip
   overflow: hidden;
 }
 
-/* Bloc expand-collapse instructions */
 .instructionBlockHeaderCollapsed, .instructionBlockHeaderExpanded
 {
   background-color:#111;
@@ -71,37 +58,4 @@ legend.cluetip
 .instructionBlockContent
 {
   padding:0 15px 15px;
-}
-
-/* jQuery tablesorter instructions */
-tr.throw
-{
-cursor:pointer;
-text-align:center;
-}
-
-th.header
-{
-background-image:url("./icon/bg.png");
-background-position:right center;
-background-repeat:no-repeat;
-cursor:pointer;
-}
-
-th.headerSortDown
-{
-background-image:url("./icon/desc.png");
-}
-
-th.headerSortUp
-{
-background-image:url("./icon/asc.png");
-}
-
-.pager{
-  text-align:center;
-}
-
-#pager img {
-  margin-bottom: -3px;
 }
