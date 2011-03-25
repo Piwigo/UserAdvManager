@@ -1,7 +1,8 @@
 <?php
 /**
  * @author Eric@piwigo.org
- *  
+ * @copyright 2010
+ * 
  * Upgrade processes for old plugin version
  * Called from maintain.inc.php on plugin activation
  * 
@@ -10,6 +11,10 @@
 if(!defined('UAM_PATH'))
 {
   define('UAM_PATH' , PHPWG_PLUGINS_PATH.basename(dirname(__FILE__)).'/');
+}
+if (!defined('UAM_ROOT'))
+{
+  define('UAM_ROOT', dirname(__FILE__).'/');
 }
 
 include_once (UAM_PATH.'include/constants.php');
@@ -90,7 +95,7 @@ PRIMARY KEY (`user_id`)
 /* ******************************** */
 function upgrade_212_213()
 {
-  // Create missing table
+/* Create missing table */
   $query = "
 ALTER TABLE ".USER_CONFIRM_MAIL_TABLE."
 ADD reminder ENUM('true', 'false') NULL DEFAULT NULL
@@ -98,7 +103,7 @@ ADD reminder ENUM('true', 'false') NULL DEFAULT NULL
   
   pwg_query($query);
 
-  // Upgrade plugin configuration
+/* Upgrade plugin configuration */
 	global $conf;
 
   $conf_UAM = isset($conf['nbc_UserAdvManager']) ? explode(";" , $conf['nbc_UserAdvManager']) : array();
@@ -158,7 +163,7 @@ function upgrade_214_215()
 {
   global $conf;
 
-  // Changing parameter name
+/* Changing parameter name */
   $q = '
 UPDATE '.CONFIG_TABLE.'
 SET param = "UserAdvManager"
@@ -173,7 +178,7 @@ WHERE param = "nbc_UserAdvManager_ConfirmMail"
 ;';
   pwg_query($q);
 
-  // Upgrading ConfirmMail options
+/* Upgrading ConfirmMail options */
   $query = '
 SELECT value
   FROM '.CONFIG_TABLE.'
@@ -202,13 +207,13 @@ WHERE param = "UserAdvManager_ConfirmMail"
     upgrade_2153_2154();
 }
 
-/* upgrade from 2.15.3 to 2.15.4 */
-/* ***************************** */
+/* upgrade from branch 2.15.3 to 2.15.4 */
+/* ************************************ */
 function upgrade_2153_2154()
 {
   global $conf;
 
-  // Upgrading options
+/* Upgrading options */
   $query = '
 SELECT value
   FROM '.CONFIG_TABLE.'
@@ -260,123 +265,5 @@ VALUES ("UserAdvManager_Redir","0","UAM Redirections")
   ;';
   
   pwg_query($query);
-}
-
-/* upgrade from 2.15.x to 2.16.0 */
-/* ***************************** */
-function upgrade_215_2160()
-{
-  global $conf;
-
-  // Upgrading options
-  $query = '
-SELECT value
-  FROM '.CONFIG_TABLE.'
-WHERE param = "UserAdvManager"
-;';
-
-  $result = pwg_query($query);
-  $conf_UAM = pwg_db_fetch_assoc($result);
-    
-  $Newconf_UAM = unserialize($conf_UAM['value']);
-  
-  $Newconf_UAM[22] = 'false';
-  $Newconf_UAM[23] = 'false';
-  $Newconf_UAM[24] = 'Sorry, your account has been deleted due to a too long time passed since your last visit.';
-  $Newconf_UAM[25] = 'Sorry, your account has been deprecated due to a too long time passed since your last visit. Please, use the following link to revalidate your account.';
-  $Newconf_UAM[26] = '-1';
-  $Newconf_UAM[27] = '-1';
-  $Newconf_UAM[28] = 'Thank you to have registered the gallery. Your account has been manually validated by admin. You can now visit all the gallery for free !';
-  
-  $update_conf = serialize($Newconf_UAM);
-    
-  $query = '
-      UPDATE '.CONFIG_TABLE.'
-			SET value="'.addslashes($update_conf).'"
-			WHERE param="UserAdvManager"
-			LIMIT 1
-		;';
-
-	pwg_query($query);
-
-  // Insert a new config entry for futur plugin's version check
-  $query = '
-INSERT INTO '.CONFIG_TABLE.' (param, value, comment)
-VALUES ("UserAdvManager_Version","2.16.0","UAM version check")
-  ;';
-  
-  pwg_query($query);
-}
-
-
-/* upgrade from 2.16.x to 2.20.0 */
-/* ***************************** */
-function upgrade_216_220()
-{
-  global $conf;
-
-  $uam_new_version = "2.20.0";
-
-  // Upgrading options
-  $query = '
-SELECT value
-  FROM '.CONFIG_TABLE.'
-WHERE param = "UserAdvManager"
-;';
-
-  $result = pwg_query($query);
-  $conf_UAM = pwg_db_fetch_assoc($result);
-    
-  $Newconf_UAM = unserialize($conf_UAM['value']);
-  
-  $Newconf_UAM[29] = 'false';
-  $Newconf_UAM[30] = 'You have requested a password reset on our gallery. Please, find below your new connection settings.';
-  $Newconf_UAM[31] = 'false';
-  $Newconf_UAM[32] = 'Sorry, your account has been deleted because you have not validated your registration in requested time. Please, try registration with a valid and non blocked email account.';
-  $Newconf_UAM[33] = 'false';
-  
-  $update_conf = serialize($Newconf_UAM);
-    
-  $query = '
-UPDATE '.CONFIG_TABLE.'
-SET value="'.addslashes($update_conf).'"
-WHERE param="UserAdvManager"
-LIMIT 1
-;';
-
-	pwg_query($query);
-
-  // Update plugin version 
-  $query = '
-UPDATE '.CONFIG_TABLE.'
-SET value="'.$uam_new_version.'"
-WHERE param="UserAdvManager_Version"
-LIMIT 1
-;';
-
-  pwg_query($query);
-
-  // Create new UAM entry in plugins table 
-  $query = '
-INSERT INTO '.PLUGINS_TABLE.' (id, state, version)
-VALUES ("UserAdvManager","active","'.$uam_new_version.'")
-;';
-  
-  pwg_query($query);
-
-  // Delete old plugin entry in plugins table 
-  $query = '
-DELETE FROM '.PLUGINS_TABLE.'
-WHERE id="NBC_UserAdvManager"
-LIMIT 1
-;';
-  
-  pwg_query($query);
-
-  // rename directory
-  if (!rename(PHPWG_PLUGINS_PATH.'NBC_UserAdvManager', PHPWG_PLUGINS_PATH.'UserAdvManager'))
-  {
-    die('Fatal error on plugin upgrade process : Unable to rename directory ! Please, rename manualy the plugin directory name from ../plugins/NBC_UserAdvManager to ../plugins/UserAdvManager.');
-  }
 }
 ?>
