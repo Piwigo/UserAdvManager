@@ -2,316 +2,195 @@
 
 global $lang,$conf;
 
-$conf_UAM = unserialize($conf['UserAdvManager']);
+$conf_UserAdvManager = isset($conf['UserAdvManager']) ? explode(";" , $conf['UserAdvManager']) : array();
+
+
+/* Global Configuration Tab */
+$lang['Title_Tab1'] = 'UserAdvManager - General Setup';
+$lang['Tab_Global'] = 'General Setup';
+$lang['UserAdvManager_Mail_Info'] = ' Mail information user:';
+$lang['UserAdvManager_Mail_Info_true'] = ' Send an information mail to the user when he registes or updates his profile.';
+$lang['UserAdvManager_Mail_Info_false'] = ' Turns off the sending of mail. (default)';
+$lang['UserAdvManager_MailInfo_Text'] = ' Text used to introduce the email sent to user to allow him to validate his email address<br><b style="color: red;">(!!! </b><b style="text-decoration: underline; color: red;">WARNING !</b> <b style="color: red;">Text modification is available ONLY if Mail information user is enabled. Use the multi language tags from Extended Description plugin if this plugin is activated !!!)</b>';
+$lang['UserAdvManager_No_Casse'] = ' User insensitive';
+$lang['UserAdvManager_No_Casse_true'] = ' Make the user account insensitive at the registration and the identification step';
+$lang['UserAdvManager_No_Casse_false'] = ' Let the user-sensitive. (default)';
+$lang['UserAdvManager_Username_Char'] = ' Limited charset for unsername';
+$lang['UserAdvManager_Username_Char_true'] = ' The following characters will be forbidden for username choice';
+$lang['UserAdvManager_Username_Char_false'] = ' Use the default username charset control. (default)';
+$lang['UserAdvManager_Confirm_Mail'] = 'Email address confirmation:';
+$lang['UserAdvManager_Confirm_Mail_true'] = ' Send an email to user to allow him to validate his email and his registration.';
+$lang['UserAdvManager_Confirm_Mail_false'] = ' Use the default Piwigo registration system (without registration validation). (default)';
+$lang['UserAdvManager_ConfirmMail_Text'] = ' Text used to introduce the email sent to user to allow him to validate his email address<br><b style="color: red;">(!!! </b><b style="text-decoration: underline; color: red;">WARNING !</b> <b style="color: red;">Text modification is available ONLY if Email address confirmation is enabled. Use the multi language tags from Extended Description plugin if this plugin is activated !!!)</b>';
+$lang['UserAdvManager_Confirm_Group_Notice'] = 'WARNING : Using validation groups requires that you have created at least one user group and is defined "by default" in Piwigo\'s user groups management.';
+$lang['UserAdvManager_No_Confirm_Group'] = 'Group to use for the users who haven\'t validated their email address.';
+$lang['UserAdvManager_Validated_Group'] = 'Group to use for the users who have validated their email address.';
+$lang['UserAdvManager_Confirm_Status_Notice'] = 'WARNING : The use of status validation requires that you have kept the "Guest" user with default setting (as user template) for new registered. Note you can set any other user as a template for new registered. Please refer to the Piwigo\'s documentation for more details.';
+$lang['UserAdvManager_No_Confirm_Status'] = 'Status to use for the users who haven\'t validated their email address.';
+$lang['UserAdvManager_Validated_Status'] = 'Status to use for the users who have validated their email address. Let ------- for using default Piwigo values';
+$lang['UserAdvManager_No_Comment_Anonymous'] = 'Nickname are mandatory for comments';
+$lang['UserAdvManager_No_Comment_Anonymous_true'] = ' The author field have to be filled to send a comment.';
+$lang['UserAdvManager_No_Comment_Anonymous_false'] = ' Use the default Piwigo settings on comments sending. (default)';
+$lang['UserAdvManager_MailExclusion'] = 'Email provider exclusion:';
+$lang['UserAdvManager_MailExclusion_true'] = ' Set the email provider exclusion ON (i.e. : @hotmail.* or @msn.*)';
+$lang['UserAdvManager_MailExclusion_false'] = ' Set the email provider exclusion OFF. (default)';
+$lang['UserAdvManager_MailExclusion_List'] = ' If email provider exclusion is set to ON, fill the email domains to exclude below. You have to use the following format :<br>@[domaine_name].[domaine_extension] - Example : @hotmail.com<br>Seperate the different domains with a comma (,)<br>';
+// --------- Starting below: New or revised $lang ---- from version 2.12.0 and 2.12.1
+$lang['UserAdvManager_Title1'] = 'Users registration management';
+$lang['UserAdvManager_Title2'] = 'Registration validation and groups / status management';
+$lang['UserAdvManager_Password_Enforced'] = 'Strengthening passwords - Enabling this option makes the seizure of the password required for visitors registration. Also, the password entered by the visitor will meet with a score of complexity (<b style="color: green;">activate and save settings to display more informations</b>).';
+$lang['UserAdvManager_Password_Enforced_Info'] = '<b style="text-decoration: underline; color: green;">Explanations:</b> <b style="color: green;">A password score is calculated on the basic parameters: length, type of characters used (letters, digits, uppercase, lowercase, special characters). If the password of the user does not score, the score reached is displayed with the minimal score to reach and an indication to increase the value of this score. To give you an idea, a score below 100 is considered "low complexity". Between 100 and 500, the complexity is increased and average. Beyond 500, that\'s Fort Knox! ;-)<br>You can do your passwords complexity tests by using the field below. This will allow you to get an idea of the score to define a custom complexity.</b>';
+$lang['UserAdvManager_PasswordTest'] = 'Passowrd to test : ';
+$lang['UserAdvManager_ScoreTest'] = 'Score : ';
+$lang['PasswordTest'] = 'Score calculation';
+$lang['UserAdvManager_Password_Enforced_true'] = ' Strong password required - Enter the minimum score (floor value) of passwords complexity == ';
+$lang['UserAdvManager_Password_Enforced_false'] = ' Do not strengthen passwords. (default)';
+$lang['UserAdvManager_AdminPassword_Enforced'] = 'Apply also the passwords complexity control when an administrator create a user? Note: If the created user wishes to change his password and strengthening passwords for users is active, he will be subject to the rules set.';
+$lang['UserAdvManager_AdminPassword_Enforced_true'] = 'Enable strengthening passwords for admins.';
+$lang['UserAdvManager_AdminPassword_Enforced_false'] = 'Disable strengthening passwords for admins. (default)';
+$lang['UserAdvManager_GhostTracker'] = 'Ghost Tracker - Allows to manage registered users according their last visit date :';
+$lang['UserAdvManager_GhostTracker_true'] = ' Enable Ghost Tracker.';
+$lang['UserAdvManager_GhostTracker_false'] = ' Disable Ghost Tracker. (Default)';
+$lang['UserAdvManager_GhostTracker_DayLimit'] = ' Type in here the maximum limit, in days, between two visits of a visitor. When this limit is reached, this visitor will appear in the table on "Ghost Tracker" tab.';
+$lang['UserAdvManager_GhostTracker_ReminderText'] = ' Text used in the email reminder sent to encourage visitors to come back to the gallery (NB: The text pre-filled at the plugin installation is given as an example).<br><b style="color: red;">(!!! </b><b style="text-decoration: underline; color: red;">WARNING !</b> <b style="color: red;">Text modification is available ONLY if Ghost Tracker is enabled. Use the multi language tags from Extended Description plugin if this plugin is activated !!!)</b>';
+// --------- End: New or revised $lang ---- from version 2.12.0 and 2.12.1
+// --------- Starting below: New or revised $lang ---- from version 2.12.2
+$lang['UserAdvManager_GhostTracker_Notice'] = 'When the Ghost Tracker feature is enabled, you can manage your visitors depending on the frequency of their visits. <b style="color: red;">IMPORTANT : If you enable this feature for the first time or you have reactivated after a long period off during which new visitors are registered, visit the Ghost Tracker tab and follow the instructions for Ghost Tracker initialization.</b>';
+// --------- End: New or revised $lang ---- from version 2.12.0 and 2.12.1
+
+
+/* ConfirmMail Configuration Tab */
+$lang['ConfirmMail_Title'] = 'Advanced management and settings of register confirmation by mail';
+$lang['Title_Tab2'] = 'UserAdvManager - ConfirmMail Settings';
+$lang['Tab_ConfirmMail'] = 'ConfirmMail Settings';
+$lang['UserAdvManager_ConfirmMail_Info'] = 'Time limitation for validation of registration :<br>If you enable this option, select the desired time (x) )in the field below. Visitors who register will then have x days to validate their registration. After this period the validation link they have received by mail will be expired.<br>';
+$lang['UserAdvManager_ConfirmMail_TimeOut_true'] = 'Enable limiting the registration deadline.';
+$lang['UserAdvManager_ConfirmMail_TimeOut_false'] = 'Disable limiting the registration deadline. (Default)';
+$lang['UserAdvManager_ConfirmMail_TimeOut'] = 'Validation delay :';
+$lang['UserAdvManager_ConfirmMail_Delay_Info'] = 'Enter the number of days before expiry of the registration validation : ';
+$lang['UserAdvManager_ConfirmMail_Remail'] = 'Enable or disable email reminder of unvalidated registers :';
+$lang['UserAdvManager_ConfirmMail_Remail_true'] = 'Enable email reminder';
+$lang['UserAdvManager_ConfirmMail_Remail_false'] = 'Disable email reminder. (Default)';
+$lang['UserAdvManager_ConfirmMail_ReMail_Txt1'] = 'Custom content of the reminder message with regeneration of validation key.<br>If left blank, the reminder email will include only the validation link. It is therefore strongly advised to take a little explanatory text. (NB: The text pre-filled at the plugin installation is given as an example)<br><br><b style="color: red;">(!!! </b><b style="text-decoration: underline; color: red;">WARNING !</b> <b style="color: red;">Text modification is available ONLY if email reminder is enabled. Use the multi language tags from Extended Description plugin if this plugin is activated !!!)</b>';
+$lang['UserAdvManager_ConfirmMail_ReMail_Txt2'] = 'Custom content of the reminder message without regeneration of validation key.<br>If left blank, the reminder email will include only the validation link. It is therefore strongly advised to take a little explanatory text. (NB: The text pre-filled at the plugin installation is given as an example)<br><br><b style="color: red;">(!!! </b><b style="text-decoration: underline; color: red;">WARNING !</b> <b style="color: red;">Text modification is available ONLY if email reminder is enabled. Use the multi language tags from Extended Description plugin if this plugin is activated !!!)</b>';
 
 
 /* UserManager Tab */
-$lang['UAM_Registration_Date'] = 'Registration date';
-
-
-/* Mailing */
-$lang['UAM_infos_mail %s'] = '%s, please find here your information to log in the gallery :';
-$lang['UAM_User: %s'] = 'User : %s';
-$lang['UAM_Password: %s'] = 'Password: %s';
-$lang['UAM_Link: %s'] = 'Please, click on this link to confirm your registration : %s';
-
-
-/* Email confirmation page */
-$lang['UAM_title_confirm_mail'] = 'Validate your registration';
-$lang['UAM_confirm_mail_page_title'] = 'Validate your registration';
-
-
-/* Errors and Warnings */
-$lang['UAM_audit_ok'] = 'Audit OK';
-$lang['UAM_Err_audit_username_char'] = '<b>This account uses one or more forbidden characters :</b> ';
-$lang['UAM_Err_audit_email_forbidden'] = '<b>This account uses a forbidden email provider :</b> ';
-$lang['UAM_Err_audit_advise'] = '<b>you have to perform corrections to comply with new rules that you have activated.<br>Use a database management utility to correct user accounts directly in the table ###_USERS';
-$lang['UAM_Empty Author'] = 'The author field have to be filled to send a comment.';
-$lang['UAM_reg_err_login2'] = 'Username does not have to match the following characters: ';
-$lang['UAM_reg_err_login5'] = 'Your email provider is banned for registration. Banned email providers are: ';
-$lang['UAM_empty_pwd'] = '[empty password]';
-$lang['UAM_no_update_pwd'] = '[profile updated without password changed]';
-$lang['UAM_No_validation_for_Guest'] = 'The "Guest" account is not subject to validation';
-$lang['UAM_No_validation_for_default_user'] = 'The default account is not subject to validation';
-$lang['UAM_No_validation_for_Webmaster'] = 'The "Webmaster" account is not subject to validation';
-$lang['UAM_No_validation_for_your_account'] = 'Your personnal admin account is not subject to validation';
-
-
-/* Processing messages */
-$lang['UAM_%d_Mail_With_Key'] = '%d message with key renewal was sent';
-$lang['UAM_%d_Mails_With_Key'] = '%d messages with key renewal were sent';
-$lang['UAM_%d_Reminder_Sent'] = '%d reminder message was sent';
-$lang['UAM_%d_Reminders_Sent'] = '%d reminder messages were sent';
-$lang['UAM_%d_Validated_User'] = '%d User validated manually';
-$lang['UAM_%d_Validated_Users'] = '%d Users validated manually';
-
-
-/* Action button names */
-$lang['UAM_Delete_selected'] = 'Delete';
-$lang['UAM_Mail_without_key'] = 'Reminder without key';
-$lang['UAM_Mail_with_key'] = 'Reminder with key';
-
-
+$lang['UserManager_Title'] = 'Advanced settings of unvalidated registered users';
+$lang['Title_Tab3'] = 'UserAdvManager - Visitors management';
+$lang['Tab_UserManager'] = 'Visitors management';
+$lang['UserAdvManager_ConfirmMail_User_List'] = 'When limiting the deadline for registration is enabled, you will find below the list of users awaiting validation, <b style="text-decoration: underline;">whether or not</b> they are in time to validate.<br><br>In this view, you can:
+<br><br>
+- Manually delete accounts <b>(manual drain)</b>
+<br>
+- Generate email reminder <b>without</b> generating a new key. Warning: Send an email reminder to targeted visitors. This function does not reset the date of registration of targeted visitors and the timeout is still valid.
+<br>
+- Generate email reminder <b>with</b> generating a new key. Warning : Send an email reminder to targeted visitors. This function also resets the date of registration of targeted visitors which equates to extend the deadline for validation.<br>
+- Submit a registration awaiting validation manually even if the expiry date has passed <b>(forcing validation)</b>.
+<br>';
+$lang['Registration_Date'] = 'Registration date';
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.12.0 and 2.12.1
-/* Global Configuration Tab */
-$lang['UAM_PasswordTest'] = 'Score calculation';
 /* Ghost Tracker Tab */
-$lang['UAM_Tab_GhostTracker'] = 'Ghost Tracker';
-$lang['UAM_Reminder'] = 'Email reminder';
-$lang['UAM_Reminder_Sent_OK'] = 'YES';
-$lang['UAM_Reminder_Sent_NOK'] = 'NO';
+$lang['GhostTracker_Title'] = 'Advanced ghost visitors management';
+$lang['Title_Tab4'] = 'UserAdvManager - Ghost Tracker';
+$lang['Tab_GhostTracker'] = 'Ghost Tracker';
+$lang['LastVisit_Date'] = 'Last visit';
+$lang['Ghost_Reminder'] = 'Email reminder';
+$lang['Reminder_Sent_OK'] = 'YES';
+$lang['Reminder_Sent_NOK'] = 'NO';
+// --------- End: New or revised $lang ---- from version 2.12.0 and 2.12.1
+// --------- Starting below: New or revised $lang ---- from version 2.12.2
+$lang['UserAdvManager_GhostTracker_Init'] = 'If you enable this feature for the first time or you have reactivated after a long period off during which new visitors are registered, you must initialize or reset the Ghost Tracker. This action is done only after activation or reactivation of the option. Please click <u>once</u> the reset button below.';
+$lang['UserAdvManager_GhostTracker_User_List'] = 'When Ghost Tracker is enabled and initialized, you will find below the list of registered visitors who have not returned since x days. "x" is the number of days configured in the General Setup tab. In addition, you will find a column indicating whether an email reminder has been sent to targeted visitors. So, you can see at a glance and treat visitors who have not taken account of the reminder.<br><br>In this view, you can:
+<br><br>
+- Manually delete accounts <b>(manual drain)</b>
+<br>
+- Generate email reminder <b>with resetting the last visit date</b>. This allows to give a wildcard to targeted visitors. If the visitor has already received a reminder, nothing prevents to resent a new mail which will reset again, in fact, the last visit date.
+<br>';
+// --------- End: New or revised $lang ---- from version 2.12.2
+
+
+/* Mailing */
+$lang['infos_mail %s'] = '%s, please find here your information to login the gallery :';
+$lang['User: %s'] = 'User : %s';
+$lang['Password: %s'] = 'Password: %s';
+$lang['Add of %s'] = 'Add of %s';
+$lang['Update of %s'] = 'Update of %s';
+$lang['Link: %s'] = 'Please, click on this link to confirm your regsitration : %s';
+$lang['Reminder_with_key_of_%s'] = '%s, your validation key has been renewed';
+$lang['Reminder_without_key_of_%s'] = '%s, your validation key will expire';
+$lang['Ghost_remainder_of_%s'] = '%s, this is a reminder email';
+
+
+/* Email confirmation page */
+$lang['title_confirm_mail'] = 'Validate your registration';
+$lang['confirm_mail_page_title'] = 'Validate your registration';
+$lang['confirm_mail_ok'] = '<br><br><br>Thank you to have confirmed your email address and your registration on the gallery. Have fun !<br><br><br><br>';
+$lang['confirm_mail_bad'] = '<br><br><br>Your activation key is incorrect or expired or you have already validated your account, please contact the webmaster to fix this problem.<br><br><br><br>';
+
+
 /* Errors and Warnings */
-$lang['UAM_save_config'] ='Configuration saved.';
-$lang['UAM_reg_err_login3'] = 'Security : Password is mandatory !';
-$lang['UAM_reg_err_login4_%s'] = 'Security : A control system calculates a score on the chosen passwords complexity. The complexity of your password is too low (score = %s). Please, choose a new password more secure by following these rules:<br>
+$lang['UserAdvManager_audit_ok'] = 'Audit OK';
+$lang['Err_audit_no_casse'] = '<b>These accounts are identical to the case closely :</b> ';
+$lang['Err_audit_username_char'] = '<b>This account uses one or more forbidden characters :</b> ';
+$lang['Err_audit_email_forbidden'] = '<b>This account uses a forbidden email provider :</b> ';
+$lang['Err_audit_advise'] = '<b>you have to perform corrections to comply with new rules that you have activated.<br>Use a database management utility to correct user accounts directly in the table ### _USERS';
+$lang['UserAdvManager_Empty Author'] = 'The author field have to be filled to send a comment.';
+if ( isset($conf_UserAdvManager[1]) and $conf_UserAdvManager[1] == 'true' )
+	$lang['reg_err_login5'] = 'Username already exist, WARNING name is case insensitive (Shift = Tiny).';
+$lang['reg_err_login6'] = 'Username does not match the following characters: ';
+$lang['reg_err_login7'] = 'Your email provider is banned for registration. Banned email providers are: ';
+$lang['UserAdvManager_empty_pwd'] = '[empty password]';
+$lang['UserAdvManager_no_update_pwd'] = '[profile updated without password changed]';
+$lang['invalid_pwd'] = 'Invalid username or password !';
+$lang['Err_ConfirmMail_Settings'] = 'This page will be available only if "Email address confirmation" is activated in "General Setup" tab.';
+$lang['Err_UserManager_Settings'] = 'This page is available only if "Enable limiting the registration deadline" is active in the "ConfirmMail Settings" tab and an unvalidated users group is set in "General Setup" tab.';
+$lang['No_validation_for_Guest'] = 'The "Guest" account is not subject to validation';
+$lang['No_validation_for_default_user'] = 'The default account is not subject to validation';
+$lang['No_validation_for_Webmaster'] = 'The "Webmaster" account is not subject to validation';
+$lang['No_validation_for_your_account'] = 'You personnal admin account is not subject to validation';
+$lang['Database_Error'] = '<b><u>Warning! Critical integrity error in your database.</u></b><br><br>Please check the integrity of the #_user_confirm_mail table.';
+// --------- Starting below: New or revised $lang ---- from version 2.12.0 and 2.12.1
+$lang['UserAdvManager_save_config'] ='Configuration saved.';
+$lang['reg_err_login3'] = 'Security : Password is mandatory !';
+$lang['reg_err_login4_%s'] = 'Security : A control system calculates a score on the chosen passwords complexity. The complexity of your password is too low (score = %s). Please, choose a new password more secure by following these rules:<br>
 - Use letters and numbers<br>
 - Use lowercase and uppercase<br>
 - Increase its length (number of characters)<br>
 The minimum passwords score required by the administrator is: ';
-$lang['UAM_No_reminder_for_Guest'] = 'The "Guest" account is not subject to receive reminders from GhostTracker';
-$lang['UAM_No_reminder_for_default_user'] = 'The default account is not subject to receive reminders from GhostTracker';
-$lang['UAM_No_reminder_for_Webmaster'] = 'The "Webmaster" account is not subject to receive reminders from GhostTracker';
-$lang['UAM_No_reminder_for_your_account'] = 'You personnal admin account is not subject to receive reminders from GhostTracker';
-/* Action button names */
-$lang['UAM_audit'] = 'Audit settings';
-$lang['UAM_submit'] = 'Save settings';
+$lang['No_reminder_for_Guest'] = 'The "Guest" account is not subject to receive reminders from GhostTracker';
+$lang['No_reminder_for_default_user'] = 'The default account is not subject to receive reminders from GhostTracker';
+$lang['No_reminder_for_Webmaster'] = 'The "Webmaster" account is not subject to receive reminders from GhostTracker';
+$lang['No_reminder_for_your_account'] = 'You personnal admin account is not subject to receive reminders from GhostTracker';
+$lang['Err_GhostTracker_Settings'] = 'This page is available only if "Ghost Tracker" is active in the "General Setup" tab.';
 // --------- End: New or revised $lang ---- from version 2.12.0 and 2.12.1
-
-
 // --------- Starting below: New or revised $lang ---- from version 2.12.2
-/* Errors and Warnings */
-$lang['UAM_GhostTracker_Init_OK'] = 'Ghost Tracker reset done !';
-/* Action button names */
-$lang['UAM_GT_Reset'] = 'Reset Ghost Tracker';
+$lang['GhostTracker_Init_OK'] = 'Ghost Tracker reset done !';
 // --------- End: New or revised $lang ---- from version 2.12.2
 
 
-// --------- Starting below: New or revised $lang ---- from version 2.12.8
-/* Errors and Warnings */
-$lang['UAM_mail_exclusionlist_error'] = 'Warning! You have entered a new line (CR-LF) at the begining of email exclusion list (shown in red below). Although this new line is not visible, it is still present and may cause malfunction of the plugin. Please re-type in your exclusion list in a manner that does not begin with a newline.';
-// --------- End: New or revised $lang ---- from version 2.12.8
+/* Processing messages */
+$lang['%d_Mail_With_Key'] = '%d message with key renewal was sent';
+$lang['%d_Mails_With_Key'] = '%d messages with key renewal were sent';
+$lang['%d_Reminder_Sent'] = '%d reminder message was sent';
+$lang['%d_Reminders_Sent'] = '%d reminder messages were sent';
+$lang['%d_Validated_User'] = '%d User validated manually';
+$lang['%d_Validated_Users'] = '%d Users validated manually';
 
 
-// --------- Starting below: New or revised $lang ---- from version 2.13.0
-/* UserList Tab */
-$lang['UAM_UserList_Title'] = 'Monitoring registered users';
-// --------- End: New or revised $lang ---- from version 2.13.0
-
-
-// --------- Starting below: New or revised $lang ---- from version 2.13.4
-/* Global Configuration Tab */
-$lang['UAM_Title_Tab'] = 'UserAdvManager - Version : ';
-$lang['UAM_SubTitle1'] = 'Plugin configuration';
-$lang['UAM_Tab_Global'] = 'Configuration';
-$lang['UAM_Title1'] = 'Setting restrictions for registrations';
-$lang['UAM_Title2'] = 'Setting confirmations and validations of registration';
-$lang['UAM_Title3'] = 'Setting the followed registrations and other options';
-$lang['UAM_Title4'] = 'Tips and examples of use';
-$lang['UAM_No_Casse'] = 'Usernames: Case sensitivity';
-$lang['UAM_Username_Char'] = 'Usernames: Exclusion of characters';
-$lang['UAM_Username_Char_true'] = ' Banning characters:<br>(Use a comma to separate each character)<br><br>';
-$lang['UAM_Username_Char_false'] = ' Permit all (default)';
-$lang['UAM_Password_Enforced'] = 'Strengthening the security level of passwords';
-$lang['UAM_Password_Enforced_true'] = ' Enable. Minimum Score: ';
-$lang['UAM_AdminPassword_Enforced'] = 'Applying to administrators';
-$lang['UAM_PasswordTest'] = 'Password test: ';
-$lang['UAM_ScoreTest'] = 'Result: ';
-$lang['UAM_MailExclusion'] = 'Email domains exclusion';
-$lang['UAM_MailExclusion_true'] = ' Exclude the following domains:<br>(Use a comma to separate each domain)';
-
-$lang['UAM_Mail_Info'] = 'Information email to user:';
-$lang['UAM_MailInfo_Text'] = ' Customizing the information email:';
-$lang['UAM_Confirm_Mail'] = 'Confirmation of registration:';
-$lang['UAM_ConfirmMail_Text'] = ' Customizing the confirmation email:';
-$lang['UAM_Confirm_grpstat_notice'] = 'Caution: It is advisable to use either the group or the validation statutes and not both simultaneously.';
-$lang['UAM_Confirm_Group'] = 'Validation Groups<br>(leave ------- to not affect group)';
-$lang['UAM_Confirm_Status'] = 'Validation Statutes<br>(leave ------- to keep the Piwigo\'s default)';
-$lang['UAM_No_Confirm_Group'] = 'Group for users who have not validated their registration<br>';
-$lang['UAM_Validated_Group'] = 'Group for users who have validated their registration<br>';
-$lang['UAM_No_Confirm_Status'] = 'Status for users who have not validated their registration<br>';
-$lang['UAM_Validated_Status'] = 'Status for users who have validated their registration<br>';
-$lang['UAM_ValidationLimit_Info'] = 'Deadline for registration validation limited';
-$lang['UAM_ConfirmMail_TimeOut_true'] = ' Enable. Number of days until expiration: ';
-$lang['UAM_ConfirmMail_Remail'] = 'Remind unvalidated users';
-$lang['UAM_ConfirmMail_ReMail_Txt1'] = 'Customizing the reminder message <b><u>with</u></b> new regeneration of key validation.';
-$lang['UAM_ConfirmMail_ReMail_Txt2'] = 'Customizing the reminder message <b><u>without</u></b> regeneration of key validation.';
-
-$lang['UAM_GhostTracker'] = 'Ghost visitors management (Ghost Tracker)';
-$lang['UAM_GhostTracker_true'] = ' Enable. Maximum period in days between two visits: ';
-$lang['UAM_GhostTracker_ReminderText'] = 'Customizing Ghost Tracker\'s reminder message';
-$lang['UAM_LastVisit'] = ' Tracking registered users';
-$lang['UAM_No_Comment_Anonymous'] = 'Nickname mandatory for guests comments';
-
-$lang['UAM_Tab_UserManager'] = 'Tracking validations';
-
-/* UserManager Tab */
-$lang['UAM_SubTitle3'] = 'Tracking validations';
-$lang['UAM_UserManager_Title'] = 'Tracking validations';
-/* Ghost Tracker Tab */
-$lang['UAM_SubTitle4'] = 'Ghost Tracker';
-$lang['UAM_GT_Init'] = 'Initializing Ghost Tracker';
-$lang['UAM_GhostTracker_Title'] = 'Ghost visitors management';
-$lang['UAM_GhostTracker_Init'] = 'If you enable this feature for the first time or you have reactivated after a long period off during which new visitors are registered, you must initialize or reset the Ghost Tracker. This action is done only after activation or reactivation of the option. Please click <u>once</u> the reset button below.';
-/* UserList Tab */
-$lang['UAM_SubTitle5'] = 'Tracking users';
-$lang['UAM_Tab_UserList'] = 'Tracking users';
-/* Mailing */
-$lang['UAM_Add of %s'] = 'Profile created for %s';
-$lang['UAM_Update of %s'] = 'Profile %s updated';
-
-/* Mailing */
-$lang['UAM_Ghost_reminder_of_%s'] = '%s, this is a reminder email';
-$lang['UAM_Reminder_with_key_of_%s'] = '%s, your validation key has been renewed';
-$lang['UAM_Reminder_without_key_of_%s'] = '%s, your validation key will expire';
-/* Errors and Warnings */
-$lang['UAM_Err_GhostTracker_Settings'] = 'This page is available only if "Ghost Tracker" is active in "Setting the registrations followed and other options".';
-$lang['UAM_Err_Userlist_Settings'] = 'This page is available only if "Monitoring registered users" is active in the "Setting the registrations followed and other options".';
-// --------- End: New or revised $lang ---- from version 2.13.4
-
-
-// --------- Starting below: New or revised $lang ---- from version 2.14.0
-$lang['UAM_AdminConfMail'] = 'Confirmation of registration for admins';
-// --------- End: New or revised $lang ---- from version 2.14.0
-
-
-// --------- Starting below: New or revised $lang ---- from version 2.15.0
-$lang['UAM_confirmmail_custom_Txt1'] = 'Text of the confirmation page - Confirmation accepted';
-$lang['UAM_confirmmail_custom_Txt2'] = 'Text of the confirmation page - Confirmation rejected';
-$lang['UAM_LastVisit_Date'] = 'Last visit';
-$lang['UAM_Nb_Days'] = 'Difference in days';
-$lang['UAM_Err_UserManager_Settings'] = 'This page is available only if "Confirmation of registration" is active and if a group of visitors not validated is configured in "Setting confirmations and validations of registration".';
-// --------- End: New or revised $lang ---- from version 2.15.0
-
-
-// --------- Starting below: New or revised $lang ---- from version 2.15.1
-$lang['UAM_Support_txt'] = 'The official support on this plugin is only on these Piwigo forum topic:<br>
-<a href="http://fr.piwigo.org/forum/viewtopic.php?id=12775" onclick="window.open(this.href);return false;">French forum - http://fr.piwigo.org/forum/viewtopic.php?id=12775</a>
-<br>or<br>
-<a href="http://piwigo.org/forum/viewtopic.php?id=15015" onclick="window.open(this.href);return false;">English forum - http://piwigo.org/forum/viewtopic.php?id=15015</a><br><br>
-Also available, the project\'s bugtracker: <a href="http://piwigo.org/bugs/" onclick="window.open(this.href);return false;">http://piwigo.org/bugs/</a>';
-// --------- End: New or revised $lang ---- from version 2.15.1
-
-
-// --------- Starting below: New or revised $lang ---- from version 2.15.4
-$lang['UAM_Force_Validation'] = 'Manual validation';
-$lang['UAM_Confirm_Mail_true'] = ' Enable - Validation by user';
-$lang['UAM_Confirm_Mail_local'] = ' Enable - Validation by admin (no validation key sent)';
-$lang['UAM_RedirToProfile'] = 'Redirect to "Customization" page';
-// --------- End: New or revised $lang ---- from version 2.15.4
-
-
-// --------- Starting below: New or revised $lang ---- from version 2.16.0
-$lang['UAM_Expired_Group'] = '<b>Group</b> for user\'s registration has expired<br>';
-$lang['UAM_Expired_Status'] = '<b>Status</b> for user\'s registration has expired<br>';
-$lang['UAM_GTAuto'] = 'Automatic management of ghosts users';
-$lang['UAM_GTAutoDel'] = 'Automatic deletion of accounts';
-$lang['UAM_GTAutoGp'] = 'Automatic change of group / status';
-$lang['UAM_GTAutoMail'] = 'Automatically sending an email when changing group / status';
-$lang['UAM_Deleted_Account_Redirection_Page'] = 'Access denied - Account destroyed!';
-$lang['UAM_title_redir_page'] = 'Access denied for having an account destroyed!';
-$lang['UAM_Error_GTAutoMail_cannot_be_set_without_ConfirmMail'] = 'Consistency error in the configuration chosen:
-<br><br>
-"Setting the followed registrations and other options > Ghost visitors management (Ghost Tracker) > Automatic management of ghosts users > Automatically sending an email when changing group / status" can not be activated if "Setting confirmations and validations of registration > Confirmation of registration - Validation by user" is not enabled at first.
-<br><br>
-To ensure consistency, the option "Automatically sending an email when changing group / status" was automatically repositioned "disabled".
-<br><br>';
-$lang['UAM_Demotion of %s'] = 'Demotion of %s';
-$lang['UAM_AdminValidationMail_Text'] = 'Notification of manual registration validation';
-$lang['UAM_Validation of %s'] = 'Validation of %s';
-// --------- End: New or revised $lang ---- from version 2.16.0
-
-
-// --------- Starting below: New or revised $lang ---- from version 2.20.0
-$lang['UAM_CustomPasswRetr'] = 'Customize lost password email content';
-$lang['UAM_USRAuto'] = 'Automatic management of unvalidated users';
-$lang['UAM_USRAutoDel'] = 'Custom message on deleted account';
-$lang['UAM_USRAutoMail'] = 'Automated email reminder';
-$lang['UAM_Disable'] = ' Disable (default)';
-$lang['UAM_Enable'] = ' Enable ';
-$lang['UAM_Tips1'] = 'Information of non-validated registration with UAM and PWG_Stuffs';
-$lang['UAM_Tips1_txt'] = '
-          <ul>
-            <li>
-            Goals: Inform the visitor that the registration is awaiting approval by displaying a personal block on the home page of the gallery, and this, as registration is not approved.
-            <br><br>
-            <b>Recall: In standard operation, the "Guest" only sees the public categories, without information message.</b>
-            </li><br><br>
-            <li>
-Prerequisite:<br>
-- A gallery with all or some private categories, visible only by registered users<br>
-- At least 2 following Piwigo\'s users groups: "Waiting," without permission on private categories, and "Validated" with all the permissions on the private categories<br>
-- UAM plugin<br>
-- PWG Stuffs plugin, for adding a module type "Personal Block"<br>
-- Optionally, the plugin Extended Description to support multi-languages<br>
-            </li><br><br>
-            <li>
-Stages:<br><br>
-A. In plugin UAM:
-              <ol>
-                <li>Enable registration confirmation</li>
-                <li>Enter text for additional explanation which will be attached to mail registration confirmation. If the plugin Extended Description is activated, the language tags can be used</li>
-                <li>Select the "Waiting" group under "For users who have not validated their registration"</li>
-                <li>Select the "Validated" group under "For users who have validated their registration"</li>
-                <li>Save the plugin configuration</li>
-              </ol>
-<br>
-B. In plugin PWG Stuffs :
-              <ol>
-                <li>Add a new module type "Personal block: Shows a block staff (eg an editorial)"</li>
-                <li>Configure the module, indicating the title (eg "Registration pending validation") and its description, and only check "Waiting" in the list of groups allowed</li>
-                <li>Complete content of the module with the message information to be displayed to users not validated. As UAM, languages markup may be used if the plugin is enabled Extended Description</li>
-                <li>Check "Display the module on the homepage of the site"</li>
-                <li>Validate the configuration of the module</li>
-              </ol>
-            </li>
-          </ul>';
-$lang['UAM_Tips2'] = 'Information of non-validated registration with UAM and Additional Pages';
-$lang['UAM_Tips2_txt'] = '
-          <ul>
-            <li>
-            Goals: Inform the visitor that the registration is awaiting validation by posting an additional page replacing the standard index page gallery at each of these connections, and this, as registration is not approved.
-            <br><br>
-            Advantages over the method with PWG_Stuffs: Allow formatting information and displaying the information immediately upon registration of visitors.
-            </li><br><br>
-            <li>
-Prerequisite:<br>
-- A gallery with all or some private categories, visible only by registered users<br>
-- At least 2 following Piwigo\'s users groups: "Waiting," without permission on private categories, and "Validated" with all the permissions on the private categories<br>
-- UAM plugin<br>
-- Additional Pages plugin for adding and managing an additional page to replace the default index page of the gallery<br>
-- Optionally, the plugin Extended Description to support multi-languages<br>
-            </li><br><br>
-            <li>
-Stages:<br><br>
-A. In plugin UAM:
-              <ol>
-                <li>Enable registration confirmation</li>
-                <li>Enter text for additional explanation which will be attached to mail registration confirmation. If the plugin Extended Description is activated, the language tags can be used</li>
-                <li>Select the "Waiting" group under "For users who have not validated their registration"</li>
-                <li>Select the "Validated" group under "For users who have validated their registration"</li>
-                <li>Save the plugin configuration</li>
-              </ol>
-<br>
-B. In plugin Additional Pages:<br>
-                <b>NOTE : The management of access rights for groups on Additional Pages must be turned on (see plugin configuration settings).</b>
-                <br>
-              <ol>
-                <li>Add a new page with at least the following parameters:</li>
-                <ul>
-                  <li>Page name: The name you wish to give to the additional page (ie: Registration not validated)</li>
-                  <li>Set as homepage checked</li>
-                  <li>Groups allowed: Check the box corresponding to the group "Waiting" configured in UAM</li>
-                  <li>Content: The text you want to use for visitors.</li>
-                </ul>
-                <br>
-                <li>And that\'s it! Only visitors registered and whose registration has not been validated will see this additional index page.</li>
-              </ol>
-            </li>
-          </ul>';
-$lang['UAM_No_Ghosts'] = 'No ghosts visitors for the moment';
-$lang['UAM_No_Userlist'] = 'No visitors to list for the moment';
-$lang['UAM_No_Usermanager'] = 'No unvalidated registers to list for the moment';
-// --------- End: New or revised $lang ---- from version 2.20.0
+/* Action button names */
+$lang['Delete_selected'] = 'Delete';
+$lang['Mail_without_key'] = 'Reminder without key';
+$lang['Mail_with_key'] = 'Reminder with key';
+$lang['Force_Validation'] = 'Forced validation';
+$lang['Reminder_Email'] = 'Email reminder';
+// --------- Starting below: New or revised $lang ---- from version 2.12.0 and 2.12.1
+$lang['audit'] = 'Audit settings';
+$lang['submit'] = 'Save settings';
+// --------- End: New or revised $lang ---- from version 2.12.0 and 2.12.1
+// --------- Starting below: New or revised $lang ---- from version 2.12.2
+$lang['GT_Reset'] = 'Reset Ghost Tracker.';
+// --------- End: New or revised $lang ---- from version 2.12.2
 ?>
