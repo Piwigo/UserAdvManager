@@ -1,7 +1,5 @@
-{combine_script id='jquery' path='themes/default/js/jquery.min.js'}
-{combine_script id='jquery.cluetip' require='jquery' path='themes/default/js/plugins/jquery.cluetip.packed.js'}
-{combine_script id='jquery.tablesorter' require='jquery' path=$UAM_PATH|@cat:'admin/template/js/jquery.tablesorter.min.js'}
-{combine_script id='jquery.tablesorter.pager' require='jquery' path=$UAM_PATH|@cat:'admin/template/js/jquery.tablesorter.pager.js'}
+﻿{known_script id="jquery" src=$ROOT_URL|@cat:"themes/default/js/jquery.packed.js"}
+{known_script id="jquery.cluetip" src=$ROOT_URL|@cat:"themes/default/js/plugins/jquery.cluetip.packed.js"}
 
 {html_head}<link rel="stylesheet" type="text/css" href="{$UAM_PATH}admin/template/uam.css">{/html_head}
 
@@ -14,55 +12,46 @@ jQuery().ready(function()
     splitTitle: '|'
   {rdelim});
 {rdelim});
-
-$(document).ready(function() 
-    {ldelim}
-      $("#sorting")
-      .tablesorter({ldelim}sortList:[[4,1]], headers: {ldelim} 0: {ldelim} sorter: false {rdelim}{rdelim}{rdelim})
-      .tablesorterPager({ldelim}container: $("#pager"), positionFixed: false, size: 20, totalPages: 0{rdelim});
-    {rdelim});
 </script>
 
 <div class="titrePage">
-  <h2>{'UAM_Title_Tab'|@translate} {$UAM_VERSION}<br>{'UAM_SubTitle4'|@translate}</h2>
+  <h2>{'Title_Tab'|@translate} {$UAM_VERSION}<br>{'SubTitle4'|@translate}</h2>
 </div>
 
 <form method="post" action="" class="general">
   <fieldset>
-  	<legend>{'UAM_GT_Init'|@translate}</legend>
+  	<legend>{'GT_Init'|@translate}</legend>
     <ul>
 		  <li>
         <label>{'UAM_GhostTracker_Init'|@translate}</label><br><br>
       </li>
     </ul>
-    <p><input class="submit" type="submit" value="{'UAM_GT_Reset'|@translate}" name="GhostTracker_Init" ></p>
+    <p><input class="submit" type="submit" value="{'GT_Reset'|@translate}" name="GhostTracker_Init" ></p>
   </fieldset>
   
   <fieldset>
-    <legend class="cluetip" title="{'UAM_gtTitle'|translate}|{'UAM_gtTitle_d'|translate}">{'UAM_GhostTracker_Title'|@translate}</legend>
-    {if count($users) > 0}
-      <table id="sorting" class="table2" width="97%" summary="">
-        <thead>
-          <tr class="throw">
-            <th>&nbsp;</th>
-            <th>{'Username'|@translate}</th>
-            <th>{'Profile'|@translate}</th>
-            <th>{'Email address'|@translate}</th>
-            <th>{'UAM_LastVisit_Date'|@translate}</th>
-            <th>{'UAM_Reminder'|@translate}</th>
-          </tr>
-        </thead>
-        <tbody>
+    <legend class="cluetip" title="{'UAM_gtTitle'|translate}|{'UAM_gtTitle_d'|translate}">{'GhostTracker_Title'|@translate}</legend>
+      {if !empty($navbar) }{include file='navigation_bar.tpl'|@get_extent:'navbar'}{/if}
+        <table class="table2" width="97%" summary="">
+          <thead>
+            <tr class="throw">
+              <td>&nbsp;</td>
+              <td>{'Username'|@translate}</td>
+              <td>{'Email address'|@translate}</td>
+              <td>{'LastVisit_Date'|@translate}</td>
+              <td>{'Reminder'|@translate}</td>
+            </tr>
+          </thead>
+
           {foreach from=$users item=user name=users_loop}
             <tr class="{if $smarty.foreach.users_loop.index is odd}row1{else}row2{/if}">
               <td><input type="checkbox" name="selection[]" value="{$user.ID}" {$user.CHECKED} id="selection-{$user.ID}" ></td>
               <td><label for="selection-{$user.ID}">{$user.USERNAME}</label></td>
-              <td style="text-align:center;"><a href="./admin.php?page=profile&amp;user_id={$user.ID}" title="{'Profile'|@translate}" onclick="window.open(this.href); return false;"><img src="{$UAM_PATH}admin/template/icon/edit_s.png"></a></td>
               <td>{$user.EMAIL}</td>
-{if $user.REMINDER == l10n('UAM_Reminder_Sent_NOK')}
+{if $user.REMINDER == l10n('Reminder_Sent_NOK')}
               <td style="color:orange;text-align:center;">{$user.LASTVISIT}</td>
               <td style="color:orange;text-align:center;">{$user.REMINDER}</td>
-{else $user.REMINDER == l10n('UAM_Reminder_Sent_OK')}
+{else $user.REMINDER == l10n('Reminder_Sent_OK')}
               <td style="color:red;text-align:center;">{$user.LASTVISIT}</td>
               <td style="color:red;text-align:center;">{$user.REMINDER}</td>
 {/if}
@@ -71,24 +60,11 @@ $(document).ready(function()
               {/foreach}    			
             </tr>
           {/foreach}
-        </tbody>
-      </table>
-<div id="pager" class="pager">
-	<form>
-		<img src="{$UAM_PATH}admin/template/icon/first.png" class="first">
-		<img src="{$UAM_PATH}admin/template/icon/prev.png" class="prev">
-		<input type="text" class="pagedisplay">
-		<img src="{$UAM_PATH}admin/template/icon/next.png" class="next">
-		<img src="{$UAM_PATH}admin/template/icon/last.png" class="last">
-		<select class="pagesize">
-			<option  value="10">10</option>
-			<option selected="selected" value="20">20</option>
-			<option value="30">30</option>
-			<option value="40">40</option>
-		</select>
-	</form>
-</div>
+        </table>
+
+        {if !empty($navbar) }{include file='navigation_bar.tpl'|@get_extent:'navbar'}{/if}
         <br>
+          
 <p>
   {'target'|@translate}
   <label><input type="radio" name="target" value="all" > {'all'|@translate}</label>
@@ -96,13 +72,8 @@ $(document).ready(function()
 </p>
 
 <p>
-  <input class="submit" type="submit" value="{'UAM_Delete_selected'|@translate}" name="Del_Selected" >
-  <input class="submit" type="submit" value="{'UAM_Reminder'|@translate}" name="Reminder_Email" >
+  <input class="submit" type="submit" value="{'Delete_selected'|@translate}" name="Del_Selected" >
+  <input class="submit" type="submit" value="{'Reminder'|@translate}" name="Reminder_Email" >
 </p>
   </fieldset>
-		{else}
-		<div>
-			{'UAM_No_Ghosts'|@translate}
-		</div>
-		{/if}
 </form>
