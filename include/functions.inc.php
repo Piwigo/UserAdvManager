@@ -18,7 +18,7 @@ function UAM_admin_menu($menu)
   array_push($menu,
     array(
       'NAME' => $name,
-      'URL' => get_root_url().'admin.php?page=plugin-'.basename(UAM_PATH)
+      'URL'  => get_admin_plugin_menu_link(UAM_PATH.'/admin/UAM_admin.php')
     )
   );
 
