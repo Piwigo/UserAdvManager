@@ -201,36 +201,5 @@ Plugin Name: UserAdvManager
 -- 2.15.8 : Bug 1935 fixed - Fatal error on ConfirmMail page when Extended Description plugin is not used
             Bug 1936 fixed - Bad home link in ConfirmMail page when gallery URL is not set
             small CSS improvement (thx to Gotcha)
-
--- 2.15.9 : Bug 2010 fixed - No confirmation email when information email is not set
-
--- 2.15.10 : Bug 2050 fixed - Compatibility with Captcha
-
-
-***************************************
-***** Plugin history (branch 2.16)*****
-***************************************
--- 2.16.0 : Bug 1585 fixed - UAM version is set in database to improve future upgrades
-            Bug 2011 fixed - Text fields are no longer locked if related option button is not set and saved. Now this fields and unused options are hidden
-            Bug 2046 fixed - Using Piwigo's $conf['insensitive_case_logon'] = true option works again with UAM
-            Bug 2053 fixed - Manual validation by admins wasn't working correctly
-            Bug 2054 fixed - Add of customized email notification to validated users when admins validate them manually 
-            Bug 1430, 1840, 2056 fixed - Automated tasks are available to delete or downgrade ghost users with or without email notification
-            Add of Latvian (lv_LV) translation (Thx to Aivars Baldone)
-
-**************************************************************
-***** Plugin history (branch 2.20 - Piwigo 2.2 compliant)*****
-**************************************************************
--- 2.20.0 : Compliance with Piwigo 2.2
-            Bug 1666 fixed - New feature : Customizing "lost password" email
-            Bug 2045 fixed - New feature : Special tags insertion in text fields. The tags actually available are [username] (insert current user username),[mygallery] (insert current gallery title), [myurl] (insert gallery url if set in Piwigo's configuration options).
-            Bug 2055 fixed - New automated task for unvalidated registers (auto email reminder sent and auto deletion if already reminded).
-            Bug 2072 fixed - Remove sort on "difference in days" in user tracking tab
-            Bug 2140 fixed - English sentence corrections
-            Bug 2186 fixed - JQuery accordion menu when no users are listed in UAM tables
-            Bug 2188 fixed - Avoid translation flags conflicts
-            Bug 2192 fixed - GT Automated tasks improvement and refactory
-            Bug 2203 fixed - [username] special flag is not supported in lost password email customization
-
 */
 ?>

@@ -15,7 +15,7 @@
     {/if}
       </li>
     </ul>
-    <h2 class="confmail">{'UAM_title_confirm_mail'|@translate}</h2>
+    <h2 class="confmail">{'title_confirm_mail'|@translate}</h2>
   </div>
   <ul>
   {if $STATUS == true}

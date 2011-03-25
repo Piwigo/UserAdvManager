@@ -1,7 +1,8 @@
-{combine_script id='jquery' path='themes/default/js/jquery.min.js'}
-{combine_script id='jquery.cluetip' require='jquery' path='themes/default/js/plugins/jquery.cluetip.packed.js'}
-{combine_script id='jquery.tablesorter' require='jquery' path=$UAM_PATH|@cat:'admin/template/js/jquery.tablesorter.min.js'}
-{combine_script id='jquery.tablesorter.pager' require='jquery' path=$UAM_PATH|@cat:'admin/template/js/jquery.tablesorter.pager.js'}
+﻿{known_script id="jquery" src=$ROOT_URL|@cat:"themes/default/js/jquery.packed.js"}
+{known_script id="jquery.cluetip" src=$ROOT_URL|@cat:"themes/default/js/plugins/jquery.cluetip.packed.js"}
+{known_script id="jquery.tablesorter" src=$UAM_PATH|@cat:"admin/template/js/jquery.tablesorter.js"}
+{known_script id="jquery.tablesorter.pager" src=$UAM_PATH|@cat:"admin/template/js/jquery.tablesorter.pager.js"}
+
 
 {html_head}<link rel="stylesheet" type="text/css" href="{$UAM_PATH}admin/template/uam.css">{/html_head}
 
@@ -18,41 +19,29 @@ jQuery().ready(function()
 $(document).ready(function() 
     {ldelim}
       $("#sorting")
-      .tablesorter(
-      {ldelim}
-          sortList:[[3,1]],
-          // pass the headers argument and assing a object 
-          headers:
-          {ldelim} 
-              // assign the fourth column (we start counting zero) 
-              4:
-              {ldelim} 
-                  // disable it by setting the property sorter to false 
-                  sorter: false 
-              {rdelim}
-          {rdelim} 
-      {rdelim})
+      .tablesorter({ldelim}sortList:[[3,1]]{rdelim})
       .tablesorterPager({ldelim}container: $("#pager"), positionFixed: false, size: 20, totalPages: 0{rdelim});
     {rdelim} 
 );
 </script>
 
+
 <div class="titrePage">
-  <h2>{'UAM_Title_Tab'|@translate} {$UAM_VERSION}<br>{'UAM_SubTitle5'|@translate}</h2>
+  <h2>{'Title_Tab'|@translate} {$UAM_VERSION}<br>{'SubTitle5'|@translate}</h2>
 </div>
 
 <form method="post" action="" class="general">
   <fieldset>
-  	<legend class="cluetip" title="{'UAM_userlistTitle'|translate}|{'UAM_userlistTitle_d'|translate}">{'UAM_UserList_Title'|@translate}</legend>
-    {if count($users) > 0}
+  	<legend class="cluetip" title="{'UAM_userlistTitle'|translate}|{'UAM_userlistTitle_d'|translate}">{'UserList_Title'|@translate}</legend>
+
       <table id="sorting" class="table2" width="97%" summary="">
   			<thead>
     			<tr class="throw">
       			<th>{'Username'|@translate}</th>
             <th>{'Profile'|@translate}</th>
       			<th>{'Email address'|@translate}</th>
-            <th>{'UAM_LastVisit_Date'|@translate}</th>
-            <th>{'UAM_Nb_Days'|@translate}</th>
+            <th>{'LastVisit_Date'|@translate}</th>
+            <th>{'Nb_Days'|@translate}</th>
     			</tr>
   			</thead>
         <tbody>
@@ -95,9 +84,4 @@ $(document).ready(function()
 </div>
     	<br>
   </fieldset>
-		{else}
-		<div>
-			{'UAM_No_Userlist'|@translate}
-		</div>
-		{/if}
 </form>
