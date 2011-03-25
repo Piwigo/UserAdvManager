@@ -1,0 +1,21 @@
+label.cluetip
+{
+  font-weight:bold;
+}
+
+legend.cluetip
+{
+  font-weight:bold;
+}
+
+#uam_leftmargin
+{
+  margin-left: 2em
+}
+
+#uam_notice
+{
+  text-align:center;
+  text-decoration: underline;
+  font-weight:bold;
+}
