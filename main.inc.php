@@ -1,9 +1,9 @@
 <?php
 /*
 Plugin Name: UserAdvManager
-Version: 2.20.0-RC3
+Version: 2.16.0
 Description: Renforcer la gestion des utilisateurs - Enforce users management
-Plugin URI: http://piwigo.org/ext/extension_view.php?eid=216
+Plugin URI: http://fr.piwigo.org/ext/extension_view.php?eid=216
 Author: Nicco, Eric
 Author URI: http://gallery-nicco.no-ip.org, http://www.infernoweb.net
 */
@@ -16,6 +16,7 @@ See project bugtracker: http://piwigo.org/bugs/my_view_page.php
 */
 
 if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
+if (!defined('UAM_DIR')) define('UAM_DIR' , basename(dirname(__FILE__)));
 if (!defined('UAM_PATH')) define('UAM_PATH' , PHPWG_PLUGINS_PATH.basename(dirname(__FILE__)).'/');
 
 include_once (UAM_PATH.'include/constants.php');
@@ -47,8 +48,6 @@ if (script_basename() == 'profile')
 // Redirection to profile page
 add_event_handler('login_success', 'UAM_LoginTasks');
 
-// Adding customized text to lost password email
-add_event_handler('render_lost_password_mail_content', 'UAM_lost_password_mail_content');
 
 // *** Important ! This is necessary to make email exclusion work in admin's users management panel ***
 add_event_handler('init', 'UAM_InitPage');

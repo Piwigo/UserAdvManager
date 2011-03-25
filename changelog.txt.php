@@ -218,19 +218,5 @@ Plugin Name: UserAdvManager
             Bug 1430, 1840, 2056 fixed - Automated tasks are available to delete or downgrade ghost users with or without email notification
             Add of Latvian (lv_LV) translation (Thx to Aivars Baldone)
 
-**************************************************************
-***** Plugin history (branch 2.20 - Piwigo 2.2 compliant)*****
-**************************************************************
--- 2.20.0 : Compliance with Piwigo 2.2
-            Bug 1666 fixed - New feature : Customizing "lost password" email
-            Bug 2045 fixed - New feature : Special tags insertion in text fields. The tags actually available are [username] (insert current user username),[mygallery] (insert current gallery title), [myurl] (insert gallery url if set in Piwigo's configuration options).
-            Bug 2055 fixed - New automated task for unvalidated registers (auto email reminder sent and auto deletion if already reminded).
-            Bug 2072 fixed - Remove sort on "difference in days" in user tracking tab
-            Bug 2140 fixed - English sentence corrections
-            Bug 2186 fixed - JQuery accordion menu when no users are listed in UAM tables
-            Bug 2188 fixed - Avoid translation flags conflicts
-            Bug 2192 fixed - GT Automated tasks improvement and refactory
-            Bug 2203 fixed - [username] special flag is not supported in lost password email customization
-
 */
 ?>

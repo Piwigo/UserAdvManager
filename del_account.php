@@ -3,11 +3,12 @@
 define('PHPWG_ROOT_PATH','./../../');
 
 include_once( PHPWG_ROOT_PATH.'include/common.inc.php' );
+include_once( PHPWG_ROOT_PATH.'include/functions_mail.inc.php' );
 
 include_once (UAM_PATH.'include/constants.php');
 include_once (UAM_PATH.'include/functions.inc.php');
 
-$title= l10n('UAM_Deleted_Account_Redirection_Page');
+$title= l10n('Deleted_Account_Redirection_Page');
 $page['body_id'] = 'theAboutPage';
 include(PHPWG_ROOT_PATH.'include/page_header.php');
 
@@ -15,32 +16,23 @@ include(PHPWG_ROOT_PATH.'include/page_header.php');
   '/theme/'.$user['theme'].'/themeconf.inc.php');
 
 
-global $user, $lang, $conf, $errors;
+  global $user, $lang, $conf, $errors;
   
 
-$conf_UAM = unserialize($conf['UserAdvManager']);
-
-if (isset($conf_UAM[32]) and $conf_UAM[32] <> '')
-{
-  // Management of Extension flags ([mygallery], [myurl]) - [username] flag can't be used here
-  $patterns[] = '#\[mygallery\]#i';
-  $replacements[] = $conf['gallery_title'];
-  $patterns[] = '#\[myurl\]#i';
-  $replacements[] = $conf['gallery_url'];
+  $conf_UAM = unserialize($conf['UserAdvManager']);
 
   if (function_exists('get_user_language_desc'))
   {
-    $custom_text = get_user_language_desc(preg_replace($patterns, $replacements, $conf_UAM[32]));
+    $custom_text = get_user_language_desc($conf_UAM[25]);
   }
-  else $custom_text = l10n(preg_replace($patterns, $replacements, $conf_UAM[32]));
-}
+  else $custom_text = l10n($conf_UAM[25]);
     
-$template->assign(
-  array(
-    'GALLERY_URL'          => make_index_url(),
-	'CUSTOM_REDIR_MSG'     => $custom_text,
-  )
-);
+  $template->assign(
+    array(
+      'GALLERY_URL'          => make_index_url(),
+			'CUSTOM_REDIR_MSG'     => $custom_text,
+		)
+  );
 
 if (isset($lang['Theme: '.$user['theme']]))
 {

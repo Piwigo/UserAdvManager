@@ -44,16 +44,16 @@ else
 
 $tabsheet = new tabsheet();
 $tabsheet->add('global',
-               l10n('UAM_Tab_Global'),
+               l10n('Tab_Global'),
                $my_base_url.'&amp;tab=global');
   $tabsheet->add('userlist',
-                 l10n('UAM_Tab_UserList'),
+                 l10n('Tab_UserList'),
                  $my_base_url.'&amp;tab=userlist');
 $tabsheet->add('usermanager',
-               l10n('UAM_Tab_UserManager'),
+               l10n('Tab_UserManager'),
                $my_base_url.'&amp;tab=usermanager');
 $tabsheet->add('ghosttracker',
-               l10n('UAM_Tab_GhostTracker'),
+               l10n('Tab_GhostTracker'),
                $my_base_url.'&amp;tab=ghosttracker');
 $tabsheet->select($page['tab']);
 $tabsheet->assign();
@@ -73,7 +73,7 @@ $toolbar = 'Basic';
 $width = '750px';
 $height = '300px';
 $areas = array();
-array_push( $areas,'UAM_ConfirmMail_Custom_Txt1','UAM_ConfirmMail_Custom_Txt2','UAM_GTAutoDelText','UAM_USRAutoDelText');
+array_push( $areas,'UAM_ConfirmMail_Custom_Txt1','UAM_ConfirmMail_Custom_Txt2','UAM_GTAutoDelText');
 
 if (function_exists('set_fckeditor_instance'))
 {
@@ -104,7 +104,7 @@ switch ($page['tab'])
 // *************************************************************************
   case 'global':
 
-	if (isset($_POST['submit']) and isset($_POST['UAM_Mail_Info']) and isset($_POST['UAM_Username_Char']) and isset($_POST['UAM_Confirm_Mail']) and isset($_POST['UAM_No_Comment_Anonymous']) and isset($_POST['UAM_Password_Enforced']) and isset($_POST['UAM_AdminPassword_Enforced']) and isset($_POST['UAM_GhostUser_Tracker']) and isset($_POST['UAM_Admin_ConfMail']) and isset($_POST['UAM_RedirToProfile']) and isset($_POST['UAM_GTAuto']) and isset($_POST['UAM_GTAutoMail']) and isset($_POST['UAM_CustomPasswRetr']) and isset($_POST['UAM_USRAuto']) and isset($_POST['UAM_USRAutoMail']))
+	if (isset($_POST['submit']) and !is_adviser() and isset($_POST['UAM_Mail_Info']) and isset($_POST['UAM_Username_Char']) and isset($_POST['UAM_Confirm_Mail']) and isset($_POST['UAM_No_Comment_Anonymous']) and isset($_POST['UAM_Password_Enforced']) and isset($_POST['UAM_AdminPassword_Enforced']) and isset($_POST['UAM_GhostUser_Tracker']) and isset($_POST['UAM_Admin_ConfMail']) and isset($_POST['UAM_RedirToProfile']) and isset($_POST['UAM_GTAuto']))
   {
 
     //General configuration settings
@@ -117,17 +117,13 @@ switch ($page['tab'])
     $_POST['UAM_GTAutoDelText'] = str_replace('\"', '"', str_replace("\'", "'", str_replace("\\\\", "\\", $_POST['UAM_GTAutoDelText'])));
 
     $_POST['UAM_GTAutoMailText'] = str_replace('\"', '"', str_replace("\'", "'", str_replace("\\\\", "\\", $_POST['UAM_GTAutoMailText'])));
-
+    
     $_POST['UAM_AdminValidationMail_Text'] = str_replace('\"', '"', str_replace("\'", "'", str_replace("\\\\", "\\", $_POST['UAM_AdminValidationMail_Text'])));
 
-    $_POST['UAM_CustomPasswRetr_Text'] = str_replace('\"', '"', str_replace("\'", "'", str_replace("\\\\", "\\", $_POST['UAM_CustomPasswRetr_Text'])));
-
-    $_POST['UAM_USRAutoDelText'] = str_replace('\"', '"', str_replace("\'", "'", str_replace("\\\\", "\\", $_POST['UAM_GTAutoDelText'])));
-
-    // Check if CR-LF exist at begining and end of mail exclusion list - If yes, removes them
+    //Check if CR-LF exist at begining and end of mail exclusion list - If yes, removes them
     if (preg_match('/^[\s]+/', $_POST['UAM_MailExclusion_List']))
     {
-      array_push($page['errors'], l10n('UAM_mail_exclusionlist_error'));
+      array_push($page['errors'], l10n('mail_exclusionlist_error'));
       $UAM_Exclusionlist_Error = true;
     }
 
@@ -138,7 +134,7 @@ switch ($page['tab'])
     {
       $newvalue = 'false';
       $_POST['UAM_GTAutoMail'] = $newvalue;
-      array_push($page['errors'], l10n('UAM_Error_GTAutoMail_cannot_be_set_without_ConfirmMail'));
+      array_push($page['errors'], l10n('Error_GTAutoMail_cannot_be_set_without_ConfirmMail'));
     }
 
 		$newconf_UAM = array(
@@ -170,12 +166,7 @@ switch ($page['tab'])
       $_POST['UAM_GTAutoMailText'],
       (isset($_POST['UAM_Downgrade_Group'])?$_POST['UAM_Downgrade_Group']:''),
       (isset($_POST['UAM_Downgrade_Status'])?$_POST['UAM_Downgrade_Status']:''),
-      $_POST['UAM_AdminValidationMail_Text'],
-      $_POST['UAM_CustomPasswRetr'],
-      $_POST['UAM_CustomPasswRetr_Text'],
-      $_POST['UAM_USRAuto'],
-      $_POST['UAM_USRAutoDelText'],
-      $_POST['UAM_USRAutoMail']
+      $_POST['UAM_AdminValidationMail_Text']
       );
 
     $conf['UserAdvManager'] = serialize($newconf_UAM);
@@ -223,13 +214,13 @@ switch ($page['tab'])
 
 
   //Testing password enforcement
-  if (isset($_POST['PasswordTest']) and isset($_POST['UAM_Password_Test']) and !empty($_POST['UAM_Password_Test']))
+  if (isset($_POST['PasswordTest']) and !is_adviser() and isset($_POST['UAM_Password_Test']) and !empty($_POST['UAM_Password_Test']))
   {
     $UAM_Password_Test_Score = testpassword($_POST['UAM_Password_Test']);
   }
-  else if (isset($_POST['PasswordTest']) and empty($_POST['UAM_Password_Test']))
+  else if (isset($_POST['PasswordTest']) and !is_adviser() and empty($_POST['UAM_Password_Test']))
   {
-    array_push($page['errors'], l10n('UAM_reg_err_login3'));
+    array_push($page['errors'], l10n('reg_err_login3'));
   }
 
   $conf_UAM = unserialize($conf['UserAdvManager']);
@@ -413,14 +404,6 @@ ORDER BY name ASC
 		'UAM_Downgrade_Group'            => $conf_UAM[26],
 		'UAM_Downgrade_Status'           => $conf_UAM[27],
     'UAM_ADMINVALIDATIONMAIL_TEXT'   => $conf_UAM[28],
-    'UAM_CUSTOMPASSWRETR_TRUE'       => $conf_UAM[29]=='true' ?  'checked="checked"' : '' ,
-    'UAM_CUSTOMPASSWRETR_FALSE'      => $conf_UAM[29]=='false' ?  'checked="checked"' : '' ,
-    'UAM_CUSTOMPASSWRETR_TEXT'       => $conf_UAM[30],
-    'UAM_USRAUTO_TRUE'               => $conf_UAM[31]=='true' ?  'checked="checked"' : '' ,
-    'UAM_USRAUTO_FALSE'              => $conf_UAM[31]=='false' ?  'checked="checked"' : '' ,
-    'UAM_USRAUTODEL_TEXT'            => $conf_UAM[32],
-    'UAM_USRAUTOMAIL_TRUE'           => $conf_UAM[33]=='true' ?  'checked="checked"' : '' ,
-    'UAM_USRAUTOMAIL_FALSE'          => $conf_UAM[33]=='false' ?  'checked="checked"' : '' ,
 		'UAM_PASSWORD_TEST_SCORE'        => $UAM_Password_Test_Score,
     'UAM_ERROR_REPORTS4'             => $UAM_Exclusionlist_Error,
 		'UAM_CONFIRMMAIL_TIMEOUT_TRUE'	 => $conf_UAM_ConfirmMail[0]=='true' ?  'checked="checked"' : '' ,
@@ -452,7 +435,7 @@ SELECT ".$conf['user_fields']['username'].", ".$conf['user_fields']['email']."
 			while($row = pwg_db_fetch_assoc($result))
 			{
 				if (!ValidateUsername(stripslashes($row['username'])))
-					$msg_error1 .= (($msg_error1 <> '') ? '<br>' : '') . l10n('UAM_Err_audit_username_char').stripslashes($row['username']);
+					$msg_error1 .= (($msg_error1 <> '') ? '<br>' : '') . l10n('Err_audit_username_char').stripslashes($row['username']);
 			}
 		}
 
@@ -476,7 +459,7 @@ SELECT ".$conf['user_fields']['username'].", ".$conf['user_fields']['email']."
 					$pattern = '/'.$conf_MailExclusion[$i].'/';
 				  if (preg_match($pattern, $row['mail_address']))
 				  {
-						$msg_error2 .=  (($msg_error2 <> '') ? '<br>' : '') . l10n('UAM_Err_audit_email_forbidden').stripslashes($row['username']).' ('.$row['mail_address'].')';
+						$msg_error2 .=  (($msg_error2 <> '') ? '<br>' : '') . l10n('Err_audit_email_forbidden').stripslashes($row['username']).' ('.$row['mail_address'].')';
 					}
 				}
 			}
@@ -489,7 +472,7 @@ SELECT ".$conf['user_fields']['username'].", ".$conf['user_fields']['email']."
 			$errors[] = $msg_error2.'<br><br>';
 		
 		if ($msg_error1 <> '' or $msg_error2 <> '')
-	  	array_push($page['errors'], l10n('UAM_Err_audit_advise'));
+	  	array_push($page['errors'], l10n('Err_audit_advise'));
 		else
     	array_push($page['infos'], l10n('UAM_audit_ok'));
 	}
@@ -632,7 +615,7 @@ SELECT ".$conf['user_fields']['username'].", ".$conf['user_fields']['email']."
   }
   else
   {
-		array_push($page['errors'], l10n('UAM_Err_Userlist_Settings'));
+		array_push($page['errors'], l10n('Err_Userlist_Settings'));
   }
   break;
 
@@ -794,20 +777,20 @@ SELECT ".$conf['user_fields']['username'].", ".$conf['user_fields']['email']."
 		{
 			if (in_array($conf['guest_id'], $collection))
    		{
-    		array_push($page['errors'], l10n('UAM_No_validation_for_Guest'));
+    		array_push($page['errors'], l10n('No_validation_for_Guest'));
     	}
     	if (($conf['guest_id'] != $conf['default_user_id']) and
     		in_array($conf['default_user_id'], $collection))
     	{
-    		array_push($page['errors'], l10n('UAM_No_validation_for_default_user'));
+    		array_push($page['errors'], l10n('No_validation_for_default_user'));
     	}
    		if (in_array($conf['webmaster_id'], $collection))
     	{
-    		array_push($page['errors'], l10n('UAM_No_validation_for_Webmaster'));
+    		array_push($page['errors'], l10n('No_validation_for_Webmaster'));
     	}
     	if (in_array($user['id'], $collection))
     	{
-    		array_push($page['errors'], l10n('UAM_No_validation_for_your_account'));
+    		array_push($page['errors'], l10n('No_validation_for_your_account'));
     	}
 
     	if (count($page['errors']) == 0)
@@ -827,7 +810,7 @@ WHERE id = '".$user_id."'
       	array_push(
       		$page['infos'],
         	l10n_dec(
-        		'UAM_%d_Mail_With_Key', 'UAM_%d_Mails_With_Key',
+        		'%d_Mail_With_Key', '%d_Mails_With_Key',
         	count($collection)
         	)
       	);
@@ -878,20 +861,20 @@ WHERE id = '".$user_id."'
 		{
 			if (in_array($conf['guest_id'], $collection))
    		{
-    		array_push($page['errors'], l10n('UAM_No_validation_for_Guest'));
+    		array_push($page['errors'], l10n('No_validation_for_Guest'));
     	}
     	if (($conf['guest_id'] != $conf['default_user_id']) and
     		in_array($conf['default_user_id'], $collection))
     	{
-    		array_push($page['errors'], l10n('UAM_No_validation_for_default_user'));
+    		array_push($page['errors'], l10n('No_validation_for_default_user'));
     	}
    		if (in_array($conf['webmaster_id'], $collection))
     	{
-    		array_push($page['errors'], l10n('UAM_No_validation_for_Webmaster'));
+    		array_push($page['errors'], l10n('No_validation_for_Webmaster'));
     	}
     	if (in_array($user['id'], $collection))
     	{
-    		array_push($page['errors'], l10n('UAM_No_validation_for_your_account'));
+    		array_push($page['errors'], l10n('No_validation_for_your_account'));
     	}
 
     	if (count($page['errors']) == 0)
@@ -912,7 +895,7 @@ WHERE id = '".$user_id."'
       	array_push(
       		$page['infos'],
         	l10n_dec(
-        		'UAM_%d_Reminder_Sent', 'UAM_%d_Reminders_Sent',
+        		'%d_Reminder_Sent', '%d_Reminders_Sent',
        		count($collection)
         	)
       	);
@@ -963,20 +946,20 @@ WHERE id = '".$user_id."'
 		{
 			if (in_array($conf['guest_id'], $collection))
    		{
-    		array_push($page['errors'], l10n('UAM_No_validation_for_Guest'));
+    		array_push($page['errors'], l10n('No_validation_for_Guest'));
     	}
     	if (($conf['guest_id'] != $conf['default_user_id']) and
     		in_array($conf['default_user_id'], $collection))
     	{
-    		array_push($page['errors'], l10n('UAM_No_validation_for_default_user'));
+    		array_push($page['errors'], l10n('No_validation_for_default_user'));
     	}
    		if (in_array($conf['webmaster_id'], $collection))
     	{
-    		array_push($page['errors'], l10n('UAM_No_validation_for_Webmaster'));
+    		array_push($page['errors'], l10n('No_validation_for_Webmaster'));
     	}
     	if (in_array($user['id'], $collection))
     	{
-    		array_push($page['errors'], l10n('UAM_No_validation_for_your_account'));
+    		array_push($page['errors'], l10n('No_validation_for_your_account'));
     	}
 
     	if (count($page['errors']) == 0)
@@ -989,7 +972,7 @@ WHERE id = '".$user_id."'
       	array_push(
       		$page['infos'],
         	l10n_dec(
-        		'UAM_%d_Validated_User', 'UAM_%d_Validated_Users',
+        		'%d_Validated_User', '%d_Validated_Users',
        		count($collection)
         	)
       	);
@@ -1017,6 +1000,12 @@ ORDER BY name ASC
     {
       $groups[$row['id']] = $row['name'];
     }
+
+    //Hide radio-button if not allow to assign adviser
+		if ($conf['allow_adviser'])
+    	{
+      	$template->assign('adviser', true);
+    	}
 
 // +-----------------------------------------------------------------------+
 // |                               user list                               |
@@ -1053,11 +1042,11 @@ WHERE user_id = '.$local_user['id'].'
     
       if (isset($row['reminder']) and $row['reminder'] == 'true')
       {
-        $reminder = l10n('UAM_Reminder_Sent_OK');
+        $reminder = l10n('Reminder_Sent_OK');
       }
       else if ((isset($row['reminder']) and $row['reminder'] == 'false') or !isset($row['reminder']))
       {
-        $reminder = l10n('UAM_Reminder_Sent_NOK');
+        $reminder = l10n('Reminder_Sent_NOK');
       }
 
 
@@ -1096,7 +1085,8 @@ WHERE user_id = '.$local_user['id'].'
                                   .($local_user['id'] == $conf['default_user_id']
                                   ? '<BR>['.l10n('is_the_default').']' : ''),
                                   'STATUS' => l10n('user_status_'
-                                  .$local_user['status']),
+                                  .$local_user['status']).(($local_user['adviser'] == 'true')
+                                  ? '<BR>['.l10n('adviser').']' : ''),
 					'EMAIL'            => get_email_address_as_display_text($local_user['email']),
          	'GROUPS'           => $groups_string,
          	'REGISTRATION'     => $local_user['registration_date'],
@@ -1148,7 +1138,7 @@ WHERE user_id = '.$local_user['id'].'
 	}
   else
   {
-		array_push($page['errors'], l10n('UAM_Err_UserManager_Settings'));
+		array_push($page['errors'], l10n('Err_UserManager_Settings'));
   }
   break;
 
@@ -1308,20 +1298,20 @@ WHERE user_id = '.$local_user['id'].'
 		{
 			if (in_array($conf['guest_id'], $collection))
    		{
-    		array_push($page['errors'], l10n('UAM_No_reminder_for_Guest'));
+    		array_push($page['errors'], l10n('No_reminder_for_Guest'));
     	}
     	if (($conf['guest_id'] != $conf['default_user_id']) and
     		in_array($conf['default_user_id'], $collection))
     	{
-    		array_push($page['errors'], l10n('UAM_No_reminder_for_default_user'));
+    		array_push($page['errors'], l10n('No_reminder_for_default_user'));
     	}
    		if (in_array($conf['webmaster_id'], $collection))
     	{
-    		array_push($page['errors'], l10n('UAM_No_reminder_for_Webmaster'));
+    		array_push($page['errors'], l10n('No_reminder_for_Webmaster'));
     	}
     	if (in_array($user['id'], $collection))
     	{
-    		array_push($page['errors'], l10n('UAM_No_reminder_for_your_account'));
+    		array_push($page['errors'], l10n('No_reminder_for_your_account'));
     	}
 
     	if (count($page['errors']) == 0)
@@ -1341,7 +1331,7 @@ WHERE id = '".$user_id."'
       	array_push(
       		$page['infos'],
         	l10n_dec(
-        		'UAM_%d_Reminder_Sent', 'UAM_%d_Reminders_Sent',
+        		'%d_Reminder_Sent', '%d_Reminders_Sent',
        		count($collection)
         	)
       	);
@@ -1350,17 +1340,20 @@ WHERE id = '".$user_id."'
 			}
 		}
     
-    if (isset($_POST['GhostTracker_Init']) and is_admin()) //Reset is only allowed for admins !
+    if (isset($_POST['GhostTracker_Init']))
     {
-      $query1 = '
+      //Reset is only allowed for admins !
+      if (is_admin() and !is_adviser())
+      {
+        $query1 = '
 SELECT *
   FROM '.USER_LASTVISIT_TABLE.';';
 
-      $count = pwg_db_num_rows(pwg_query($query1));
+        $count = pwg_db_num_rows(pwg_query($query1));
 
-      if ($count <> 0)
-      {
-        $query = '
+        if ($count <> 0)
+        {
+          $query = '
 SELECT DISTINCT u.id,
                 ui.status AS status
 FROM '.USERS_TABLE.' AS u
@@ -1373,22 +1366,22 @@ WHERE u.id NOT IN (SELECT user_id FROM '.USER_LASTVISIT_TABLE.')
 ORDER BY u.id ASC
 ;';
 
-        $result = pwg_query($query);
+          $result = pwg_query($query);
           
-        while ($row = pwg_db_fetch_assoc($result))
-        {
-          list($dbnow) = pwg_db_fetch_row(pwg_query('SELECT NOW();'));
+          while ($row = pwg_db_fetch_assoc($result))
+          {
+            list($dbnow) = pwg_db_fetch_row(pwg_query('SELECT NOW();'));
             
-          $query = "
+            $query = "
 INSERT INTO ".USER_LASTVISIT_TABLE." (user_id, lastvisit, reminder)
 VALUES ('".$row['id']."','".$dbnow."','false')
 ;";
-          pwg_query($query);
+            pwg_query($query);
+          }
         }
-      }
-      else if ($count == 0)
-      {
-        $query = '
+        else if ($count == 0)
+        {
+          $query = '
 SELECT DISTINCT u.id,
                 ui.status AS status
 FROM '.USERS_TABLE.' AS u
@@ -1400,22 +1393,29 @@ WHERE status != "webmaster"
 ORDER BY u.id ASC
 ;';
 
-        $result = pwg_query($query);
+          $result = pwg_query($query);
           
-        while($row = pwg_db_fetch_assoc($result))
-        {
-          list($dbnow) = pwg_db_fetch_row(pwg_query('SELECT NOW();'));
+          while($row = pwg_db_fetch_assoc($result))
+          {
+            list($dbnow) = pwg_db_fetch_row(pwg_query('SELECT NOW();'));
             
-          $query = "
+            $query = "
 INSERT INTO ".USER_LASTVISIT_TABLE." (user_id, lastvisit, reminder)
 VALUES ('".$row['id']."','".$dbnow."','false')
 ;";
-          pwg_query($query);
+            pwg_query($query);
+          }
         }
-      }
         
-      array_push($page['infos'], l10n('UAM_GhostTracker_Init_OK'));
+        array_push($page['infos'], l10n('GhostTracker_Init_OK'));
+      }
     }
+
+    //Hide radio-button if not allow to assign adviser
+		if ($conf['allow_adviser'])
+    {
+      $template->assign('adviser', true);
+   	}
 
 // +-----------------------------------------------------------------------+
 // |                               user list                               |
@@ -1426,18 +1426,26 @@ VALUES ('".$row['id']."','".$dbnow."','false')
     {
       $visible_user_list[] = $local_user;
 		}
-    
+
+      //Plugin version inserted
+      $template->assign(
+        array(
+          'UAM_VERSION'  => $version,
+          'UAM_PATH'     => UAM_PATH,
+        )
+      );
+
 		foreach ($visible_user_list as $local_user)
     {
       $reminder = '';
     
       if (isset($local_user['reminder']) and $local_user['reminder'] == 'true')
       {
-        $reminder = l10n('UAM_Reminder_Sent_OK');
+        $reminder = l10n('Reminder_Sent_OK');
       }
       else if (isset($local_user['reminder']) and $local_user['reminder'] == 'false')
       {
-        $reminder = l10n('UAM_Reminder_Sent_NOK');
+        $reminder = l10n('Reminder_Sent_NOK');
       }
     
       if (isset($_POST['pref_submit']) and isset($_POST['selection']) and in_array($local_user['id'], $_POST['selection']))
@@ -1462,14 +1470,6 @@ VALUES ('".$row['id']."','".$dbnow."','false')
 			);
 		}
 
-    //Plugin version inserted
-    $template->assign(
-      array(
-        'UAM_VERSION'  => $version,
-        'UAM_PATH'     => UAM_PATH,
-      )
-    );
-
 // +-----------------------------------------------------------------------+
 // |                             errors display                            |
 // +-----------------------------------------------------------------------+
@@ -1490,7 +1490,7 @@ VALUES ('".$row['id']."','".$dbnow."','false')
 	}
   else
   {
-		array_push($page['errors'], l10n('UAM_Err_GhostTracker_Settings'));
+		array_push($page['errors'], l10n('Err_GhostTracker_Settings'));
   }
 
   break;

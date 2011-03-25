@@ -9,7 +9,7 @@
         </a>
       </li>
     </ul>
-    <h2 class="confmail">{'UAM_title_redir_page'|@translate}</h2>
+    <h2 class="confmail">{'title_redir_page'|@translate}</h2>
   </div>
   <ul>
     <div class="errors">{$CUSTOM_REDIR_MSG}</div>

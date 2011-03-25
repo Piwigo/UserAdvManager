@@ -8,7 +8,7 @@ include_once( PHPWG_ROOT_PATH.'include/functions_mail.inc.php' );
 include_once (UAM_PATH.'include/constants.php');
 include_once (UAM_PATH.'include/functions.inc.php');
 
-$title= l10n('UAM_confirm_mail_page_title');
+$title= l10n('confirm_mail_page_title');
 $page['body_id'] = 'theAboutPage';
 include(PHPWG_ROOT_PATH.'include/page_header.php');
 
@@ -27,13 +27,6 @@ if (isset($_GET['key']) and isset($_GET['userid']))
   
   $conf_UAM_ConfirmMail = unserialize($conf['UserAdvManager_ConfirmMail']);
   $conf_UAM = unserialize($conf['UserAdvManager']);
-
-  $query = '
-SELECT '.USERS_TABLE.'.username
-FROM '.USERS_TABLE.'
-WHERE ('.USERS_TABLE.'.id ='.$userid.')
-;';
-  $result = pwg_db_fetch_assoc(pwg_query($query));
 
   if (VerifyConfirmMail($key))
   {
@@ -63,23 +56,12 @@ WHERE (('.USER_INFOS_TABLE.'.user_id ='.$userid.') AND ('.USER_INFOS_TABLE.'.use
       load_language('plugin.lang', UAM_PATH);
     }
 
-    if (isset($conf_UAM_ConfirmMail[5]) and $conf_UAM_ConfirmMail[5] <> '')
+    if (function_exists('get_user_language_desc'))
     {
-      // Management of Extension flags ([username], [mygallery], [myurl])
-      $patterns[] = '#\[username\]#i';
-      $replacements[] = $result['username'];
-      $patterns[] = '#\[mygallery\]#i';
-      $replacements[] = $conf['gallery_title'];
-      $patterns[] = '#\[myurl\]#i';
-      $replacements[] = $conf['gallery_url'];
-   
-      if (function_exists('get_user_language_desc'))
-      {
-        $custom_text = get_user_language_desc(preg_replace($patterns, $replacements, $conf_UAM_ConfirmMail[5]));
-      }
-      else $custom_text = l10n(preg_replace($patterns, $replacements, $conf_UAM_ConfirmMail[5]));
+      $custom_text = get_user_language_desc($conf_UAM_ConfirmMail[5]);
     }
-    
+    else $custom_text = l10n($conf_UAM_ConfirmMail[5]);
+
     $redirect = true;
     
     $template->assign(
@@ -94,23 +76,11 @@ WHERE (('.USER_INFOS_TABLE.'.user_id ='.$userid.') AND ('.USER_INFOS_TABLE.'.use
   {
     $status = false;
     $redirect = false;
-    
-    if (isset($conf_UAM_ConfirmMail[6]) and $conf_UAM_ConfirmMail[6] <> '')
+    if (function_exists('get_user_language_desc'))
     {
-      // Management of Extension flags ([username], [mygallery], [myurl])
-      $patterns[] = '#\[username\]#i';
-      $replacements[] = $result['username'];
-      $patterns[] = '#\[mygallery\]#i';
-      $replacements[] = $conf['gallery_title'];
-      $patterns[] = '#\[myurl\]#i';
-      $replacements[] = $conf['gallery_url'];
-   
-      if (function_exists('get_user_language_desc'))
-      {
-        $custom_text = get_user_language_desc(preg_replace($patterns, $replacements, $conf_UAM_ConfirmMail[6]));
-      }
-      else $custom_text = l10n(preg_replace($patterns, $replacements, $conf_UAM_ConfirmMail[6]));
+      $custom_text = get_user_language_desc($conf_UAM_ConfirmMail[6]);
     }
+    else $custom_text = l10n($conf_UAM_ConfirmMail[6]);
     
     $template->assign(
 			array(
