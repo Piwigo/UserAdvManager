@@ -240,7 +240,7 @@ Prerequisiti:<br>
 - Una galleria con tutte o alcune categorie private, visibili solo agli utenti registrati<br>
 - Almeno i 2 gruppi d\'utenti Piwigo seguenti: "Attesa", senza alcuna autorizzazione sulle categorie private, e "Convalidati" con tutte le autorizzazioni per le categorie private<br>
 - Il plugin NBC_UAM<br>
-- Il plugin PWG Stuffs, per aggiungere un modulo di tipo "Blocco Personal"<br>
+- Il plugin PWG Stuffs, per l\'aggiunta di un modulo speciale UAM<br>
 - In opzione, il plugin Extended Description per il supporto multi-lingue<br>
             </li><br><br>
             <li>
@@ -248,6 +248,7 @@ Tappe:<br><br>
 A. Nel plugin NBC_UAM:
               <ol>
                 <li>Attivare la conferma dell\'iscrizione</li>
+                <li>Attivare modulo PWG Stuffs</li>
                 <li>Inserire un testo personalizzato che sarà inviato con l\'Email di conferma dell\'iscrizione. Se il plugin Extended Description è installato ed attivato, i tag di lingua possono essere utilizzati</li>
                 <li>Selezionare il gruppo "Attesa" sotto la voce "Per gli utenti che non hanno convalidato la loro iscrizione"</li>
                 <li>Selezionare il gruppo "Convalidati" sotto la voce "Per gli utenti che hanno convalidato la loro iscrizione"</li>
@@ -256,7 +257,8 @@ A. Nel plugin NBC_UAM:
 <br>
 B. Nel plugin PWG Stuffs :
               <ol>
-                <li>Aggiungere un nuovo modulo "Blocco Personale : Mostrare il blocco personale (Nota o Editoriale per esempio)"</li>
+                <li>Vai alla scheda "Aggiungere un nuovo modulo"</li>
+                <li>Scegliere "UAM Module"</li>
                 <li>Configurare il modulo, indicandone il titolo (ad esempio, "in attesa di convalida dell\'iscrizione"), la descrizione, ed in fine selezionando solo il gruppo "Attesa" nell\'elenco dei gruppi ammessi</li>
                 <li>Completare il contenuto del modulo con il testo da visualizzare per gli utenti non convalidati. Come NBC_UAM, i tag di lingua possono essere utilizzati se il plugin Extended Description è installato ed attivato</li>
                 <li>Selezzionare "Visualizzare il modulo nella homepage del sito"</li>
@@ -310,5 +312,8 @@ B. Nel plugin Additional Pages:<br>
 /*TODO*/$lang['UAM_No_Ghosts'] = 'No ghosts visitors for the moment';
 /*TODO*/$lang['UAM_No_Userlist'] = 'No visitors to list for the moment';
 /*TODO*/$lang['UAM_No_Usermanager'] = 'No unvalidated registers to list for the moment';
+$lang['UAM_Stuffs_Title'] = 'UAM Module';
+/*TODO*/$lang['UAM_Stuffs_Desc'] = 'Adds an information block for unvalidated users';
+$lang['UAM_Stuffs'] = 'modulo PWG Stuffs';
 // --------- End: New or revised $lang ---- from version 2.20.0
 ?>

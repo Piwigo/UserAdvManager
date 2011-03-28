@@ -18,10 +18,13 @@ See project bugtracker: http://piwigo.org/bugs/my_view_page.php
 if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
 if (!defined('UAM_PATH')) define('UAM_PATH' , PHPWG_PLUGINS_PATH.basename(dirname(__FILE__)).'/');
 
+global $conf;
+
 include_once (UAM_PATH.'include/constants.php');
 include_once (UAM_PATH.'include/functions.inc.php');
 
 load_language('plugin.lang', UAM_PATH);
+$conf_UAM = unserialize($conf['UserAdvManager']);
 
 
 // Plugin administration panel
@@ -55,4 +58,10 @@ add_event_handler('init', 'UAM_InitPage');
 
 // Comment without author
 add_event_handler('user_comment_check', 'UAM_CheckEmptyCommentAuthor', 50, 2);
+
+// PWG_Stuffs module
+if ((isset($conf_UAM[34]) and $conf_UAM[34] == 'true'))
+{
+  add_event_handler('get_stuffs_modules', 'register_UAM_stuffs_module');
+}
 ?>
