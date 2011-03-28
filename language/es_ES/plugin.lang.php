@@ -281,7 +281,7 @@ Requisito previo:<br>
 - Una galería con todas o algunas categorías privadas, visible sólo por los usuarios registrados<br>
 - Al menos los 2 grupos de usuarios siguientes de Piwigo : "Espera," sin permiso en las categorías de privados, y "Validado" con todos los permisos en las categorías de privados<br>
 - UAM plugin<br>
-- PWG Stuffs plugin, para agregar un tipo de módulo "Personal Block"<br>
+- PWG Stuffs plugin, para agregar un módulo especial UAM<br>
 - Opcionalmente, la Extended Description plugin para soportar múltiples idiomas<br>
             </li><br><br>
             <li>
@@ -289,6 +289,7 @@ Etapas:<br><br>
 A. En el plugin UAM:
               <ol>
                 <li>Activar la confirmación de registro</li>
+                <li>Activar PWG Stuffs módulo</li>
                 <li>Introduzca el texto para la explicación adicional, que se adjunta al correo de confirmación de registro. Si se activa el plugin Extended Description, las etiquetas de idioma se pueden utilizar</li>
                 <li>Seleccione la opción "Espera" del grupo en "Para los usuarios que no han validado su registro"</li>
                 <li>Seleccione la opción "Validado" en grupo "Para los usuarios que han validado su registro"</li>
@@ -297,7 +298,8 @@ A. En el plugin UAM:
 <br>
 B. En plugin PWG Stuffs :
               <ol>
-                <li>Añadir un tipo de módulo nuevo "bloque Personal: Muestra una plantilla de bloque (por ejemplo, un editorial)"</li>
+                <li>Vaya a la pestaña "Agregar un nuevo módulo"</li>
+                <li>Seleccione la opción "Módulo de la UAM"</li>
                 <li>Configurar el módulo, lo que indica el título (por ejemplo, "en espera de la validación de Registro") y su descripción, y solamente "Espera" en la lista de grupos permitido</li>
                 <li>El contenido completo del módulo con la información del mensaje que se mostrará a los usuarios no validados. Como UAM, las balisas de  lenguajes pueden ser utilizadas si el plugin Extended Description está activado</li>
                 <li>Active la casilla "Mostrar el módulo en la página principal del sitio"</li>
@@ -351,5 +353,8 @@ B. En plugin Additional Pages:<br>
 /*TODO*/$lang['UAM_No_Ghosts'] = 'No ghosts visitors for the moment';
 /*TODO*/$lang['UAM_No_Userlist'] = 'No visitors to list for the moment';
 /*TODO*/$lang['UAM_No_Usermanager'] = 'No unvalidated registers to list for the moment';
+$lang['UAM_Stuffs_Title'] = 'Módulo de la UAM';
+/*TODO*/$lang['UAM_Stuffs_Desc'] = 'Adds an information block for unvalidated users';
+$lang['UAM_Stuffs'] = 'PWG Stuffs módulo';
 // --------- End: New or revised $lang ---- from version 2.20.0
 ?>

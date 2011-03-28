@@ -283,5 +283,9 @@ Further customize the content with special inserted tags : Use <b style=&quot;co
 Custom text for the redirect page can be entered in this field that is compatible with the FCK Editor and, for multi-languages, you can use the tags [lang] of the plugin Extended description if it\'s active.';
 /*TODO*/$lang['UAM_USRAutoMailTitle'] = 'Automated email reminder';
 /*TODO*/$lang['UAM_USRAutoMailTitle_d'] = 'When activated, this function will automatically send personalized content in &quot;Reminder email with new key generated&quot; to visitors who match criteria.';
+/*TODO*/$lang['UAM_StuffsTitle'] = 'PWG Stuffs block';
+/*TODO*/$lang['UAM_StuffsTitle_d'] = 'This enables an additional UAM block in PWG Stuffs plugin (if installed) to inform your visitors who did not validate their registration about their condition.
+<br><br>
+Please refer to the <b>Tips and Examples of Use</b> at the bottom of this page for details.';
 // --------- End: New or revised $lang ---- from version 2.20.0
 ?>

@@ -352,6 +352,24 @@ WHERE user_id = '.$user['id'].'
   }
 }
 
+
+/**
+ * Adds a new module settable in PWG_Stuffs - Triggered on get_stuffs_modules in main.inc.php
+ * Useful to inform unvalidated user for their status
+ * 
+ */
+function register_UAM_stuffs_module($modules)
+{
+  array_push($modules, array(
+    'path' => UAM_PATH.'/stuffs_module',
+    'name' => l10n('UAM_Stuffs_Title'),
+    'description' => l10n('UAM_Stuffs_Desc'),
+    )
+  );
+  return $modules;
+}
+
+
 /**
  * Triggered on UAM_LoginTasks()
  * 

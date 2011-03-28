@@ -267,41 +267,43 @@ $lang['UAM_Disable'] = ' Atspējot (pēc noklusējuma)';
 $lang['UAM_Enable'] = ' Iespējot ';
 /*TODO*/$lang['UAM_Tips1'] = 'Information of non-validated registration with UAM and PWG_Stuffs';
 /*TODO*/$lang['UAM_Tips1_txt'] = '
-<ul>
-<li>
-             Goals: Inform the visitor that the registration is awaiting approval by displaying a personal block on the home page of the gallery, and this, as registration is not approved.
-             <br><br>
-<b>Atgādinājums: Pie standartoperācijām "Guest" (viesis) redz tikai publiskās kategorijas bez informatīvā materiāla.</b>
-</li><br><br>
-<li>
-Priekšnoteikumi:<br>
-- Galerija ar visām vai dažām privātajām ketegorijām redzama tikai reģistrētiem lietotājiem<br>
-- Vismaz 2 sekojošas Piwigo lietotāju grupas:gaidīšanas grupa  "Waiting," bez tiesībām darboties ar privātām kategorijām un apstiprināto grupa "Validated" ar visām tiesībām darbam ar privātām kategorijām<br>
-- UAM spraudnis<br>
-- PWG Stuffs spraudnis, moduļa "Personal Block" pievienošanai<br>
-- Pēc izvēles (neobligāts), spraudnis Extended Description (paplašināts apraksts), lai nodrošinātu daudzvalodu atbalstu<br>
-</li><br><br>
-<li>
-Posmi:<br><br>
-A. UAM spraudnī:
-<ol>
-<li>Iespējo reģistrācijas apstiprināšanu</li>
-<li>Ievada papildinformāciju-skaidrojumu, kas tiks pievienots e-pasta reģistrācijas apstiprinājumam. Gadījumā, ja ir aktivēts spraudnis Extended Description (papildus apraksts), var tikt lietotas valodu iezīmes (tagi)</li>
-<li>Izvēlas gaidīšanas grupu "Waiting" sadaļā "Lietotājiem, kas nav apstiprinājuši savu reģistrāciju"</li>
-<li>Izvēlas apstiprināto grupu "Validated" sadaļā "Lietotājiem, kas apstiprinājuši savu reģistrāciju"</li>
-<li>Saglabā spraudņa konfigurāciju</li>
-</ol>
+          <ul>
+            <li>
+            Goals: Inform the visitor that the registration is awaiting approval by displaying a personal block on the home page of the gallery, and this, as registration is not approved.
+            <br><br>
+            <b>Recall: In standard operation, the "Guest" only sees the public categories, without information message.</b>
+            </li><br><br>
+            <li>
+Prerequisite:<br>
+- A gallery with all or some private categories, visible only by registered users<br>
+- At least 2 following Piwigo\'s users groups: "Waiting," without permission on private categories, and "Validated" with all the permissions on the private categories<br>
+- UAM plugin<br>
+- PWG Stuffs plugin, for adding a special UAM module<br>
+- Optionally, the plugin Extended Description to support multi-languages<br>
+            </li><br><br>
+            <li>
+Stages:<br><br>
+A. In plugin UAM:
+              <ol>
+                <li>Enable registration confirmation</li>
+                <li>Enable PWG Stuffs module option</li>
+                <li>Enter text for additional explanation which will be attached to mail registration confirmation. If the plugin Extended Description is activated, the language tags can be used</li>
+                <li>Select the "Waiting" group under "For users who have not validated their registration"</li>
+                <li>Select the "Validated" group under "For users who have validated their registration"</li>
+                <li>Save the plugin configuration</li>
+              </ol>
 <br>
-B. PWG Stuffs spraudnī :
-<ol>
-<li>Pievieno jauna tipa moduli "Personal block: Rāda bloķētos darbiniekus (piem. redakcionāli)"</li>
-<li>Konfigurē moduli, norādot nosaukumu (piem."Registration pending validation") un tā aprakstu, pārbaudot grupu "Waiting"  atļauto grupu sarakstā</li>
-<li>Pabeidz moduļa saturu ar informatīvu ziņojumu neapstiprinātajiem lietotājiem.Kā UAM valodas iezīmes var tikt lietotas, ja spraudnī ir iespējota papildus apraksta Extended Description funkcija</li>
-<li>Atzīmē "Rādīt moduli vietnes mājas lapā"</li>
-<li>Pārbauda moduļa konfigurāciju</li>
-</ol>
-</li>
-</ul>';
+B. In plugin PWG Stuffs :
+              <ol>
+                <li>Go to tab "Add a new module"</li>
+                <li>Choose "UAM Module"</li>
+                <li>Configure the module, indicating the title (eg "Registration pending validation") and its description, and only check "Waiting" in the list of groups allowed</li>
+                <li>Complete content of the module with the message information to be displayed to users not validated. As UAM, languages markup may be used if the plugin is enabled Extended Description</li>
+                <li>Check "Display the module on the homepage of the site"</li>
+                <li>Validate the configuration of the module</li>
+              </ol>
+            </li>
+          </ul>';
 /*TODO*/$lang['UAM_Tips2'] = 'Information of non-validated registration with UAM and Additional Pages';
 /*TODO*/$lang['UAM_Tips2_txt'] = '
           <ul>
@@ -348,5 +350,8 @@ B. Additional Pages spraudnī :<br>
 /*TODO*/$lang['UAM_No_Ghosts'] = 'No ghosts visitors for the moment';
 /*TODO*/$lang['UAM_No_Userlist'] = 'No visitors to list for the moment';
 /*TODO*/$lang['UAM_No_Usermanager'] = 'No unvalidated registers to list for the moment';
+/*TODO*/$lang['UAM_Stuffs_Title'] = 'UAM block';
+/*TODO*/$lang['UAM_Stuffs_Desc'] = 'Adds an information block for unvalidated users';
+/*TODO*/$lang['UAM_Stuffs'] = 'PWG Stuffs block';
 // --------- End: New or revised $lang ---- from version 2.20.0
 ?>

@@ -21,7 +21,7 @@ On receipt of this message and no new visit within 15 days, we would be obliged 
 
 Best regards,
 
-The admin of the gallery.','false','false','false','false','false','Sorry [username], your account has been deleted due to a too long time passed since your last visit at [mygallery].','Sorry [username], your account has been deprecated due to a too long time passed since your last visit at [mygallery]. Please, use the following link to revalidate your account.',-1,-1,'Thank you for registering at [mygallery]. Your account has been manually validated by _admin_. You may now log in at _link_to_site_ and make any appropriate changes to your profile. Welcome to _name_of_site_!','false','You have requested a password reset on our gallery. Please, find below your new connection settings.','false','Sorry, your account has been deleted because you have not validated your registration in requested time. Please, try registration with a valid and non blocked email account.','false');
+The admin of the gallery.','false','false','false','false','false','Sorry [username], your account has been deleted due to a too long time passed since your last visit at [mygallery].','Sorry [username], your account has been deprecated due to a too long time passed since your last visit at [mygallery]. Please, use the following link to revalidate your account.',-1,-1,'Thank you for registering at [mygallery]. Your account has been manually validated by _admin_. You may now log in at _link_to_site_ and make any appropriate changes to your profile. Welcome to _name_of_site_!','false','You have requested a password reset on our gallery. Please, find below your new connection settings.','false','Sorry, your account has been deleted because you have not validated your registration in requested time. Please, try registration with a valid and non blocked email account.','false','false');
 
 	$query = '
 SELECT param
@@ -200,15 +200,9 @@ WHERE param = "nbc_UserAdvManager_ConfirmMail"
       upgrade_213_214();
     }
     
-
-/* Check for upgrade from 2.14 to 2.15 */
-/* *********************************** */
-    //if ($count1 == 1 or $count2 == 1)
-    //{
     /* upgrade from branch 2.14 to 2.15 */
     /* ******************************** */
       upgrade_214_215();
-    //}
   }
 
 /* Old version is > 2.15 */
