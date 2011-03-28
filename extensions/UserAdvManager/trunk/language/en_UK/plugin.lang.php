@@ -243,7 +243,7 @@ Prerequisite:<br>
 - A gallery with all or some private categories, visible only by registered users<br>
 - At least 2 following Piwigo\'s users groups: "Waiting," without permission on private categories, and "Validated" with all the permissions on the private categories<br>
 - UAM plugin<br>
-- PWG Stuffs plugin, for adding a module type "Personal Block"<br>
+- PWG Stuffs plugin, for adding a special UAM module<br>
 - Optionally, the plugin Extended Description to support multi-languages<br>
             </li><br><br>
             <li>
@@ -251,6 +251,7 @@ Stages:<br><br>
 A. In plugin UAM:
               <ol>
                 <li>Enable registration confirmation</li>
+                <li>Enable PWG Stuffs module option</li>
                 <li>Enter text for additional explanation which will be attached to mail registration confirmation. If the plugin Extended Description is activated, the language tags can be used</li>
                 <li>Select the "Waiting" group under "For users who have not validated their registration"</li>
                 <li>Select the "Validated" group under "For users who have validated their registration"</li>
@@ -259,7 +260,8 @@ A. In plugin UAM:
 <br>
 B. In plugin PWG Stuffs :
               <ol>
-                <li>Add a new module type "Personal block: Shows a block staff (eg an editorial)"</li>
+                <li>Go to tab "Add a new module"</li>
+                <li>Choose "UAM Module"</li>
                 <li>Configure the module, indicating the title (eg "Registration pending validation") and its description, and only check "Waiting" in the list of groups allowed</li>
                 <li>Complete content of the module with the message information to be displayed to users not validated. As UAM, languages markup may be used if the plugin is enabled Extended Description</li>
                 <li>Check "Display the module on the homepage of the site"</li>
@@ -313,5 +315,8 @@ B. In plugin Additional Pages:<br>
 $lang['UAM_No_Ghosts'] = 'No ghosts visitors for the moment';
 $lang['UAM_No_Userlist'] = 'No visitors to list for the moment';
 $lang['UAM_No_Usermanager'] = 'No unvalidated registers to list for the moment';
+$lang['UAM_Stuffs_Title'] = 'UAM block';
+$lang['UAM_Stuffs_Desc'] = 'Adds an information block for unvalidated users';
+$lang['UAM_Stuffs'] = 'PWG Stuffs block';
 // --------- End: New or revised $lang ---- from version 2.20.0
 ?>

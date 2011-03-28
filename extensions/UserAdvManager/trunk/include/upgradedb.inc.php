@@ -334,6 +334,7 @@ WHERE param = "UserAdvManager"
   $Newconf_UAM[31] = 'false';
   $Newconf_UAM[32] = 'Sorry, your account has been deleted because you have not validated your registration in requested time. Please, try registration with a valid and non blocked email account.';
   $Newconf_UAM[33] = 'false';
+  $Newconf_UAM[34] = 'false';
   
   $update_conf = serialize($Newconf_UAM);
     
