@@ -222,6 +222,7 @@ Plugin Name: UserAdvManager
 ***** Plugin history (branch 2.20 - Piwigo 2.2 compliant)*****
 **************************************************************
 -- 2.20.0 : Compliance with Piwigo 2.2
+            Bug 1479 fixed - New feature : Add of a dedicated UAM block in PWG Stuffs plugin to inform unvalidated users on their status 
             Bug 1666 fixed - New feature : Customizing "lost password" email
             Bug 2045 fixed - New feature : Special tags insertion in text fields. The tags actually available are [username] (insert current user username),[mygallery] (insert current gallery title), [myurl] (insert gallery url if set in Piwigo's configuration options).
             Bug 2055 fixed - New automated task for unvalidated registers (auto email reminder sent and auto deletion if already reminded).

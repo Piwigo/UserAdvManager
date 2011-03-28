@@ -257,5 +257,9 @@ Un texte pour cette page de redirection est donné à titre d\'exemple, ci-desso
 Personnalisez encore plus le contenu avec les balises d\'insertion spéciales : Utilisez la balise <b style=&quot;color: red;&quot;>[mygallery]</b> pour insérer le titre de votre galerie. Utilisez la balise <b style=&quot;color: red;&quot;>[myurl]</b> pour insérer l\'URL de votre galerie si renseigné dans les options de configuration de Piwigo. La balise <b style=&quot;color: red;&quot;>[username]</b> n\'est pas disponible ici puisque l\'utilisateur en question a été supprimé.';
 $lang['UAM_USRAutoMailTitle'] = 'Message de rappel automatique';
 $lang['UAM_USRAutoMailTitle_d'] = 'Lorsque activée, cette fonction enverra automatiquement le contenu personnalisé dans &quot;Message de rappel avec regénération de clé&quot; aux visiteurs répondant au critère.';
+$lang['UAM_StuffsTitle'] = 'Module PWG Stuffs';
+$lang['UAM_StuffsTitle_d'] = 'Ceci permet d\'activer un module supplémentaire UAM dans le plugin PWG Stuffs (si installé) afin d\'informer sur leur état vos visiteurs n\'ayant pas validé leur inscription.
+<br><br>
+Veuillez vous reporter à la section <b>Astuces et exemples d\'utilisation</b> en bas de cette page pour les détails.';
 // --------- End: New or revised $lang ---- from version 2.20.0
 ?>
