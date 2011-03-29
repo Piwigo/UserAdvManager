@@ -3,7 +3,7 @@
 {combine_script id='jquery.tablesorter' require='jquery' path=$UAM_PATH|@cat:'admin/template/js/jquery.tablesorter.min.js'}
 {combine_script id='jquery.tablesorter.pager' require='jquery' path=$UAM_PATH|@cat:'admin/template/js/jquery.tablesorter.pager.js'}
 
-{html_head}<link rel="stylesheet" type="text/css" href="{$UAM_PATH}admin/template/uam.css">{/html_head}
+{combine_css path= $UAM_PATH|@cat:'admin/template/uam.css'}
 
 <script type="text/javascript">
 jQuery().ready(function()
