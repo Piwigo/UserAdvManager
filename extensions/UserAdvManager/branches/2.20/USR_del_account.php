@@ -38,7 +38,7 @@ if (isset($conf_UAM[32]) and $conf_UAM[32] <> '')
 $template->assign(
   array(
     'GALLERY_URL'          => make_index_url(),
-	'CUSTOM_REDIR_MSG'     => $custom_text,
+    'CUSTOM_REDIR_MSG'     => $custom_text,
   )
 );
 
