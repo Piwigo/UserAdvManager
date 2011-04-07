@@ -27,11 +27,7 @@ label.cluetip
   font-weight:bold;
 }
 
-legend.cluetip
-{
-  font-weight:bold;
-}
-
+/* Bloc expand-collapse instructions */
 .instructionBlock
 {
   border: 1px solid #666;
@@ -39,7 +35,6 @@ legend.cluetip
   overflow: hidden;
 }
 
-/* Bloc expand-collapse instructions */
 .instructionBlockHeaderCollapsed, .instructionBlockHeaderExpanded
 {
   background-color:#111;
