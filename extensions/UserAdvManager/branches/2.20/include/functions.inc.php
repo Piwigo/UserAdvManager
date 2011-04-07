@@ -2,6 +2,7 @@
 include_once (UAM_PATH.'include/constants.php');
 load_language('plugin.lang', UAM_PATH);
 
+
 /**
  * Triggered on get_admin_plugin_menu_links
  * 
@@ -24,6 +25,7 @@ function UAM_admin_menu($menu)
 
   return $menu;
 }
+
 
 /**
  * Triggered on loc_begin_index
@@ -76,6 +78,7 @@ LIMIT 1
     }
   }
 }
+
 
 /**
  * Triggered on register_user
@@ -131,6 +134,7 @@ function UAM_Adduser($register_user)
   }
 }
 
+
 /**
  * Triggered on delete_user
  * 
@@ -145,6 +149,7 @@ function UAM_Deluser($user_id)
   // Cleanup Redirection settings
   DeleteRedir($user_id);
 }
+
 
 /**
  * Triggered on register_user_check
@@ -207,6 +212,7 @@ function UAM_RegistrationCheck($errors, $user)
     return $errors;
   }
 }
+
 
 /**
  * Triggered on loc_begin_profile
@@ -307,6 +313,7 @@ WHERE '.$conf['user_fields']['id'].' = \''.$user['id'].'\'
     }
   }
 }
+
 
 /**
  * Triggered on login_success
@@ -547,6 +554,7 @@ WHERE id = '.$user_id.'
   }
 }
 
+
 /**
  * Triggered on UAM_LoginTasks()
  * 
@@ -768,6 +776,7 @@ function UAM_CheckEmptyCommentAuthor($comment_action, $comm)
   return $comment_action;
 }
 
+
 /**
  * Function called from main.inc.php to send validation email
  *
@@ -915,19 +924,10 @@ if (function_exists('set_fckeditor_instance'))
     'content' => (isset($infos1) ? $infos1_perso.l10n_args($infos1)."\n\n" : "").(isset($infos2) ? $infos2_perso.l10n_args($infos2)."\n\n" : "").get_absolute_root_url(),
   ));
 
-// **********************
-// Email sending debugger
-// This is only to trace 
-// the send of emails for
-// debugging             
-// **********************
-//$content = (isset($infos1) ? $infos1_perso.l10n_args($infos1)."\n\n" : "").(isset($infos2) ? $infos2_perso.l10n_args($infos2)."\n\n" : "").get_absolute_root_url();   
-//MailLog($email,$subject,$content,$language);
-// **********************
-
 // Switching back to default language
 switch_lang_back();
 }
+
 
 /**
  * Function called from UAM_admin.php to resend validation email with or without new validation key
@@ -1033,19 +1033,10 @@ WHERE user_id = '".$user_id."'
     'content' => ($infos1."\n\n").(isset($infos2) ? l10n_args($infos2)."\n\n" : "").get_absolute_root_url(),
   ));
 
-// **********************
-// Email sending debugger
-// This is only to trace 
-// the send of emails for
-// debugging             
-// **********************
-//$content = ($infos1."\n\n").(isset($infos2) ? l10n_args($infos2)."\n\n" : "").get_absolute_root_url();
-//MailLog($email,$subject,$content,$language);
-// **********************
-
 // Switching back to default language
 switch_lang_back();
 }
+
 
 /**
  * Function called from UAM_admin.php to send a reminder mail for ghost users
@@ -1106,19 +1097,10 @@ WHERE user_id = '.$user_id.'
     'content' => $infos1.get_absolute_root_url(),
   ));
 
-// **********************
-// Email sending debugger
-// This is only to trace 
-// the send of emails for
-// debugging             
-// **********************
-//$content = $infos1.get_absolute_root_url();  
-//MailLog($email,$subject,$content,$language);
-// **********************
-
 // Switching back to default language
 switch_lang_back();
 }
+
 
 /**
  * Function called from functions.inc.php to send notification email when user have been downgraded
@@ -1198,19 +1180,10 @@ WHERE user_id = '.$id.'
     'content' => ($custom_txt.l10n_args($infos1)."\n\n".l10n_args($infos2)."\n\n").get_absolute_root_url(),
   ));
 
-// **********************
-// Email sending debugger
-// This is only to trace 
-// the send of emails for
-// debugging             
-// **********************
-//$content = ($custom_txt.l10n_args($infos1)."\n\n".l10n_args($infos2)."\n\n").get_absolute_root_url();   
-//MailLog($email,$subject,$content,$language);
-// **********************
-
 // Switching back to default language
 switch_lang_back();
 }
+
 
 /**
  * Function called from UAM_admin.php to send notification email when user registration have been manually validated by admin
@@ -1290,20 +1263,10 @@ WHERE id = '.$id.'
     'content' => (l10n_args($infos)."\n\n".$custom_txt),
   ));
 
-// **********************
-// Email sending debugger
-// This is only to trace 
-// the send of emails for
-// debugging             
-// **********************
-//$email = $result['mail_address'];
-//$content = (l10n_args($infos)."\n\n".$custom_txt);   
-//MailLog($email,$subject,$content,$language);
-// **********************
-
 // Switching back to default language
 switch_lang_back();
 }
+
 
 /**
  * Function called from functions AddConfirmMail and ResetConfirmMail for validation key generation
@@ -1327,6 +1290,7 @@ WHERE id = '".$id."'
       return $id;
   }
 }
+
 
 /**
  * Function called from functions SendMail2User to process unvalidated users and generate validation key link
@@ -1401,6 +1365,7 @@ VALUES
   }
 }
 
+
 /**
  * Function called from main.inc.php to set group to new users if manual validation is set
  *
@@ -1447,6 +1412,7 @@ VALUES
   }
 }
 
+
 /**
  * Function called from UAM_admin.php to reset validation key
  *
@@ -1482,6 +1448,7 @@ WHERE user_id = '".$user_id."'
     return get_absolute_root_url().UAM_PATH.'ConfirmMail.php?key='.$Confirm_Mail_ID.'&userid='.$user_id;
   }
 }
+
 
 /**
  * Function called from functions.inc.php to reset last visit date after sending a reminder
@@ -1530,6 +1497,7 @@ WHERE user_id = '".$user_id."'
   pwg_query($query);
 }
 
+
 /**
  * Function called from main.inc.php - Triggered on user deletion
  *
@@ -1559,6 +1527,7 @@ WHERE param = 'UserAdvManager_Redir';";
 
   pwg_query($query);
 }
+
 
 /**
  * Function called from ConfirmMail.php to verify validation key used by user according time limit
@@ -1736,6 +1705,7 @@ WHERE user_id = '".$data['user_id']."'
     return false;
 }
 
+
 /**
  * Function called from UAM_admin.php to force users validation by admin
  *
@@ -1841,6 +1811,7 @@ WHERE user_id = '".$id."'
   }
 }
 
+
 /**
  * Function called from main.inc.php - Check if username matches forbidden caracters
  *
@@ -1872,6 +1843,7 @@ function ValidateUsername($login)
     return false;
   }
 }
+
 
 /**
  * Function called from main.inc.php - Check if user's email is in excluded email providers list
@@ -1905,6 +1877,7 @@ function ValidateEmailProvider($email)
     return false;
   }
 }
+
 
 /**
  * Function called from UAM_admin.php - Get unvalidated users according time limit
@@ -2001,6 +1974,7 @@ WHERE user_id IN ('.implode(',', $user_ids).')
 	return $users;
 }
 
+
 /**
  * Function called from functions.inc.php - Get all users who haven't validate their registration in configured time
  * to delete or remail them automatically
@@ -2037,6 +2011,7 @@ ORDER BY ui.registration_date ASC;';
 
 	return $users;
 }
+
 
 /**
  * Function called from UAM_admin.php - Get ghost users
@@ -2165,6 +2140,7 @@ ORDER BY ug.lastvisit DESC
 
 	return $users;
 }
+
 
 /**
  * Function called from UAM_admin.php - to determine who is expired or not and giving a different display color
@@ -2298,6 +2274,7 @@ function testpassword($password) // Le mot de passe passé en paramètre - $pass
   return $finalscore;
 }
 
+
 /**
  * Function called from maintain.inc.php - to check if database upgrade is needed
  * 
@@ -2312,18 +2289,6 @@ function table_exist($table)
   return (bool)($res=pwg_query($query));
 }
 
-// Email sending debugger function
-function MailLog($to, $subject, $content, $language)
-{
-   $fo=fopen (UAM_PATH.'admin/maillog.txt','a') ;
-   fwrite($fo,"======================\n") ;
-   fwrite($fo,'le ' . date('D, d M Y H:i:s') . "\r\n");
-   fwrite($fo,$to . "\n" . $subject . "\r\n") ;
-   fwrite($fo, "\n" . $content . "\r\n") ;
-   fwrite($fo, 'Langue : '."\n" . $language . "\r\n") ;
-   fclose($fo) ;
-   //return mail ($to,$subject) ;
-}
 
 /**
  * Function called from UAM_admin.php and main.inc.php to get the plugin version and name
@@ -2378,6 +2343,11 @@ function PluginInfos($dir)
 }
 
 
+/**
+ * Delete obsolete files on plugin upgrade
+ * Obsolete files are listed in file obsolete.list
+ *
+ */
 function clean_obsolete_files()
 {
   if (file_exists(UAM_PATH.'obsolete.list')
@@ -2395,6 +2365,7 @@ function clean_obsolete_files()
     }
   }
 }
+
 
 /**
  * UAM_check_profile - Thx to LucMorizur
@@ -2427,5 +2398,23 @@ WHERE param = 'UserAdvManager_Redir'
     $v = (in_array($uid, $user_idsOK));
   }
   return $v;
+}
+
+
+/**
+ * Useful for debugging - 4 vars can be set
+ * Output result to log.txt file
+ *
+ */
+function UAMLog($var1, $var2, $var3, $var4)
+{
+   $fo=fopen (UAM_PATH.'log.txt','a') ;
+   fwrite($fo,"======================\n") ;
+   fwrite($fo,'le ' . date('D, d M Y H:i:s') . "\r\n");
+   fwrite($fo,$var1 ."\r\n") ;
+   fwrite($fo,$var2 ."\r\n") ;
+   fwrite($fo,$var3 ."\r\n") ;
+   fwrite($fo,$var4 ."\r\n") ;
+   fclose($fo) ;
 }
 ?>
