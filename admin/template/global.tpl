@@ -1,5 +1,5 @@
 {combine_script id='jquery' path='themes/default/js/jquery.min.js'}
-{combine_script id='jquery.cluetip' require='jquery' path='themes/default/js/plugins/jquery.cluetip.packed.js'}
+{combine_script id='jquery.cluetip' require='jquery' path='themes/default/js/plugins/jquery.cluetip.js'}
 
 {combine_css path= $UAM_PATH|@cat:'admin/template/uam.css'}
 
@@ -34,7 +34,7 @@ function uam_blockToggleDisplay( headerId, contentId )
 {ldelim}
   if (typeof(headerId)=='string')
   {ldelim}
-   if ( headerId.length>  1)
+   if (headerId.length > 1)
        blockToggleDisplay(headerId, contentId) ;
       document.getElementById("nb_para").value =headerId ;
       document.getElementById("nb_para2").value =contentId;

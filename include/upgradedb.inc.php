@@ -19,6 +19,30 @@ include_once (UAM_PATH.'include/functions.inc.php');
 // |       Upgrading database from old plugin versions        |
 // +----------------------------------------------------------+
 
+
+/* *************************************** */
+/* Update plugin version in conf table     */
+/* Used everytime a new version is updated */
+/* even if no database upgrade is needed   */
+/* *************************************** */
+function UAM_version_update()
+{  
+  // Get current plugin version
+  $plugin =  PluginInfos(UAM_PATH);
+  $version = $plugin['version'];
+  
+  // Update plugin version 
+  $query = '
+UPDATE '.CONFIG_TABLE.'
+SET value="'.$version.'"
+WHERE param="UserAdvManager_Version"
+LIMIT 1
+;';
+
+  pwg_query($query);
+}
+
+
 /* upgrade from branch 2.10 to 2.11 */
 /* ******************************** */
 function upgrade_210_211()
@@ -152,6 +176,7 @@ UPDATE '.CONFIG_TABLE.'
   }
 }
 
+
 /* upgrade from branch 2.14 to 2.15 */
 /* ******************************** */
 function upgrade_214_215()
@@ -201,6 +226,7 @@ WHERE param = "UserAdvManager_ConfirmMail"
     
     upgrade_2153_2154();
 }
+
 
 /* upgrade from 2.15.3 to 2.15.4 */
 /* ***************************** */
@@ -262,6 +288,7 @@ VALUES ("UserAdvManager_Redir","0","UAM Redirections")
   pwg_query($query);
 }
 
+
 /* upgrade from 2.15.x to 2.16.0 */
 /* ***************************** */
 function upgrade_215_2160()
@@ -315,8 +342,6 @@ function upgrade_216_220()
 {
   global $conf;
 
-  $uam_new_version = "2.20.0";
-
   // Upgrading options
   $query = '
 SELECT value
@@ -347,17 +372,9 @@ LIMIT 1
 
 	pwg_query($query);
 
-  // Update plugin version 
-  $query = '
-UPDATE '.CONFIG_TABLE.'
-SET value="'.$uam_new_version.'"
-WHERE param="UserAdvManager_Version"
-LIMIT 1
-;';
+  // Create new UAM entry in plugins table
+  $uam_new_version = "2.20.0";
 
-  pwg_query($query);
-
-  // Create new UAM entry in plugins table 
   $query = '
 INSERT INTO '.PLUGINS_TABLE.' (id, state, version)
 VALUES ("UserAdvManager","active","'.$uam_new_version.'")
