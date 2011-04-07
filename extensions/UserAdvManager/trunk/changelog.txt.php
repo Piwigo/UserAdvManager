@@ -233,5 +233,8 @@ Plugin Name: UserAdvManager
             Bug 2192 fixed - GT Automated tasks improvement and refactory
             Bug 2203 fixed - [username] special flag is not supported in lost password email customization
 
+-- 2.20.1 : Bug 2254 fixed - Plugin installation crashes when installing from scratch
+            Bug 2255 fixed - Error in jQuery path
+
 */
 ?>

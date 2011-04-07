@@ -237,22 +237,16 @@ WHERE param = "UserAdvManager_Version"
 
 /* Check for upgrade from 2.16 to 2.20 */
 /* *********************************** */
-	$query = '
-SELECT value
-  FROM '.CONFIG_TABLE.'
-WHERE param = "UserAdvManager_Version"
-;';
-
-  $data = pwg_db_fetch_assoc(pwg_query($query));
-  
-  if ($data['value'] != '2.20.0')
+  if (isset($conf['UserAdvManager_Version']) and $conf['UserAdvManager_Version'] != '2.16.0')
   {
     /* upgrade from branch 2.16 to 2.20 */
     /* ******************************** */
     upgrade_216_220();
   }
 
-load_conf_from_db('param like \'UserAdvManager\\_%\'');
+  UAM_version_update();
+
+  load_conf_from_db('param like \'UserAdvManager\\_%\'');
 }
 
 
