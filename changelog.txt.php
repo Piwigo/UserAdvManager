@@ -236,5 +236,7 @@ Plugin Name: UserAdvManager
 -- 2.20.1 : Bug 2254 fixed - Plugin installation crashes when installing from scratch
             Bug 2255 fixed - Error in jQuery path
 
+-- 2.20.2 : Bug 2256 fixed - Error on upgrade from version 2.20.0 to 2.20.1
+
 */
 ?>
