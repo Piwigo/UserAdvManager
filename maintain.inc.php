@@ -237,7 +237,7 @@ WHERE param = "UserAdvManager_Version"
 
 /* Check for upgrade from 2.16 to 2.20 */
 /* *********************************** */
-  if (isset($conf['UserAdvManager_Version']) and $conf['UserAdvManager_Version'] != '2.16.0')
+  if (isset($conf['UserAdvManager_Version']) and $conf['UserAdvManager_Version'] == '2.16.0')
   {
     /* upgrade from branch 2.16 to 2.20 */
     /* ******************************** */
