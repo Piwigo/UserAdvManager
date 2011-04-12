@@ -238,5 +238,8 @@ Plugin Name: UserAdvManager
 
 -- 2.20.2 : Bug 2256 fixed - Error on upgrade from version 2.20.0 to 2.20.1
 
+-- 2.20.3 : Bug 2257
+            Bug 2258 fixed - New feature to backup UAM configuration and personnal settings
+
 */
 ?>

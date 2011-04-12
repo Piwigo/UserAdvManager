@@ -702,6 +702,28 @@ function uam_blockToggleDisplay( headerId, contentId )
   </p>
 </form>
 
+
+<div id="instructionTips" class="instructionBlock" >
+  <div id="Backup_header" class="instructionBlockHeaderCollapsed" onclick="uam_blockToggleDisplay('Backup_header', 'Backup')">
+    <span class="cluetip" title="{'UAM_DumpTitle'|translate}|{'UAM_DumpTitle_d'|translate}">{'UAM_DumpTxt'|@translate}</span>
+  </div>
+  
+  <div id="Backup" class="instructionBlockContent" style="display:none">
+<fieldset>
+<form method="post" action="" class="general">
+  <p>
+    {'UAM_Dump_Download'|@translate}&nbsp;
+      <input type="checkbox" name="dump_download" value="true" {$UAM_DUMP_DOWNLOAD}>
+  <br><br>
+      <input class="submit" type="submit" value="{'UAM_Save'|@translate}" name="save" {$TAG_INPUT_ENABLED}>
+  </p>
+</form>
+</fieldset>
+  </div>
+
+</div>
+
+
 <div id="instructionTips" class="instructionBlock" >
   <div id="Tips_header" class="instructionBlockHeaderCollapsed" onclick="uam_blockToggleDisplay('Tips_header', 'Tips')">
     <span class="cluetip" title="{'UAM_tipsTitle'|translate}|{'UAM_tipsTitle_d'|translate}">{'UAM_Title4'|@translate}</span>
@@ -732,6 +754,7 @@ function uam_blockToggleDisplay( headerId, contentId )
   </div>
 
 </div>
+
 
 <fieldset>
   {'UAM_Support_txt'|@translate}

@@ -2402,6 +2402,118 @@ WHERE param = 'UserAdvManager_Redir'
 
 
 /**
+ * UAM specific database dump (only for MySql !)
+ * Creates an SQL dump of UAM specific tables and configuration settings
+ * 
+ * @returns  : Boolean to manage appropriate message display
+ * 
+ */
+function uam_dump($download)
+{
+  global $conf;
+  
+  // Initial backup folder creation and file initialisation
+  if (!is_dir(UAM_PATH.'/include/backup'))
+    mkdir(UAM_PATH.'/include/backup');
+
+  $Backup_File = UAM_PATH.'/include/backup/UAM_dbbackup.sql';
+
+  $fp = fopen($Backup_File, 'w');
+
+
+  // Saving UAM specific tables
+  $ListTables = array(USER_CONFIRM_MAIL_TABLE, USER_LASTVISIT_TABLE);
+  $j=0;
+  
+  while($j < count($ListTables))
+  {
+    $sql = 'SHOW CREATE TABLE '.$ListTables[$j];
+    $res = pwg_query($sql);
+
+    if ($res)
+    {
+      $insertions = "-- -------------------------------------------------------\n";
+      $insertions .= "-- Create ".$ListTables[$j]." table\n";
+      $insertions .= "-- ------------------------------------------------------\n\n";
+
+      $insertions .= "DROP TABLE IF EXISTS ".$ListTables[$j].";\n\n";
+
+      $array = mysql_fetch_array($res);
+      $array[1] .= ";\n\n";
+      $insertions .= $array[1];
+
+      $req_table = pwg_query('SELECT * FROM '.$ListTables[$j]) or die(mysql_error());
+      $nb_fields = mysql_num_fields($req_table);
+      while ($line = mysql_fetch_array($req_table))
+      {
+        $insertions .= 'INSERT INTO '.$ListTables[$j].' VALUES (';
+        for ($i=0; $i<$nb_fields; $i++)
+        {
+          $insertions .= '\'' . mysql_real_escape_string($line[$i]) . '\', ';
+        }
+        $insertions = substr($insertions, 0, -2);
+        $insertions .= ");\n";
+      }
+      $insertions .= "\n\n";
+    }
+
+    fwrite($fp, $insertions);    
+    $j++;
+  }
+  
+  // Saving UAM configuration
+  $insertions = "-- -------------------------------------------------------\n";
+  $insertions .= "-- Insert UAM configuration in ".CONFIG_TABLE."\n";
+  $insertions .= "-- ------------------------------------------------------\n\n";
+
+  fwrite($fp, $insertions);
+
+  $pattern = "UserAdvManager%";
+  $req_table = pwg_query('SELECT * FROM '.CONFIG_TABLE.' WHERE param LIKE "'.$pattern.'";') or die(mysql_error());
+  $nb_fields = mysql_num_fields($req_table);
+
+  while ($line = mysql_fetch_array($req_table))
+  {
+    $insertions = 'INSERT INTO '.CONFIG_TABLE.' VALUES (';
+    for ($i=0; $i<$nb_fields; $i++)
+    {
+      $insertions .= '\'' . mysql_real_escape_string($line[$i]) . '\', ';
+    }
+    $insertions = substr($insertions, 0, -2);
+    $insertions .= ");\n";
+
+    fwrite($fp, $insertions);
+  }
+
+  fclose($fp);
+
+  // Download generated dump file
+  if ($download == 'true')
+  {
+    if (@filesize($Backup_File))
+    {
+      $http_headers = array(
+        'Content-Length: '.@filesize($Backup_File),
+        'Content-Type: text/x-sql',
+        'Content-Disposition: attachment; filename="UAM_dbbackup.sql";',
+        'Content-Transfer-Encoding: binary',
+        );
+
+      foreach ($http_headers as $header)
+      {
+        header($header);
+      }
+
+      @readfile($Backup_File);
+      exit();
+    }
+  }
+
+  return true;
+}
+
+
+/**
  * Useful for debugging - 4 vars can be set
  * Output result to log.txt file
  *

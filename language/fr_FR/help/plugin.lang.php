@@ -262,4 +262,16 @@ $lang['UAM_StuffsTitle_d'] = 'Ceci permet d\'activer un module supplémentaire U
 <br><br>
 Veuillez vous reporter à la section <b>Astuces et exemples d\'utilisation</b> en bas de cette page pour les détails.';
 // --------- End: New or revised $lang ---- from version 2.20.0
+
+
+// --------- Starting below: New or revised $lang ---- from version 2.20.3
+$lang['UAM_DumpTitle'] = 'Sauvegarde de votre configuration';
+$lang['UAM_DumpTitle_d'] = 'Ceci vous permet de sauvegarder la configuration complète du plugin dans un fichier afin de pouvoir la restaurer en cas de problème (fausse manipulation ou avant une mise à jour, par exemple). Par défaut, le fichier est stocké dans le dossier ../plugins/UserAdvManager/include/backup/ et se nomme &quot;UAM_dbbackup.sql&quot;.
+<br><br>
+<b style=&quot;color: red;&quot;>Attention : Le fichier est écrasé à chaque action de sauvegarde !</b>
+<br><br>
+Il peut être parfois utile de récupérer le fichier de sauvegarde sur votre ordinateur. Par exemple : Pour une restauration sur une autre base de données, pour externaliser la sauvegarder ou pour conserver plusieurs fichiers. Pour cela, il suffit de cocher la case correspondante au téléchargement du fichier.
+<br><br>
+La restauration à partir de cette interface n\'est pas prise en charge. Utilisez des outils comme PhpMyAdmin.';
+// --------- End: New or revised $lang ---- from version 2.20.3
 ?>

@@ -228,8 +228,6 @@ $lang['UAM_Err_UserManager_Settings'] = 'Esta página está disponible sólo si 
 
 // --------- Starting below: New or revised $lang ---- from version 2.15.1
 $lang['UAM_Support_txt'] = 'El apoyo oficial sobre este plugin se encuentra solo en el foro de Piwigo:<br>
-<a href="http://fr.piwigo.org/forum/viewtopic.php?id=12775" onclick="window.open(this.href);return false;">Foro Francés - http://fr.piwigo.org/forum/viewtopic.php?id=12775</a>
-<br>o<br>
 <a href="http://piwigo.org/forum/viewtopic.php?id=15015" onclick="window.open(this.href);return false;">Foro Inglés - http://piwigo.org/forum/viewtopic.php?id=15015</a><br><br>
 También está disponible, el bugtracker del proyecto: <a href="http://piwigo.org/bugs/" onclick="window.open(this.href);return false;">http://piwigo.org/bugs/</a>';
 // --------- End: New or revised $lang ---- from version 2.15.1
@@ -357,4 +355,13 @@ $lang['UAM_Stuffs_Title'] = 'Módulo de la UAM';
 /*TODO*/$lang['UAM_Stuffs_Desc'] = 'Adds an information block for unvalidated users';
 $lang['UAM_Stuffs'] = 'PWG Stuffs módulo';
 // --------- End: New or revised $lang ---- from version 2.20.0
+
+
+// --------- Starting below: New or revised $lang ---- from version 2.20.3
+/*TODO*/$lang['UAM_DumpTxt'] = 'Backup your configuration';
+/*TODO*/$lang['UAM_Dump_Download'] = 'To download the backup file, please check this box:';
+/*TODO*/$lang['UAM_Save'] = 'Run backup';
+/*TODO*/$lang['UAM_Dump_OK'] = 'Backup file created successfully';
+/*TODO*/$lang['UAM_Dump_NOK'] = 'Error: Unable to create backup file !';
+// --------- End: New or revised $lang ---- from version 2.20.3
 ?>
