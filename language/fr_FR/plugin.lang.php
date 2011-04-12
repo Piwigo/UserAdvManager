@@ -185,10 +185,9 @@ $lang['UAM_Err_UserManager_Settings'] = 'Cette page n\'est accessible que si "Co
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.15.1
-$lang['UAM_Support_txt'] = 'Le support officiel sur ce plugin se fait exclusivement sur ces fils du forum Piwigo:<br>
+$lang['UAM_Support_txt'] = 'Le support officiel sur ce plugin se fait exclusivement sur ce fil du forum FR de Piwigo:<br>
 <a href="http://fr.piwigo.org/forum/viewtopic.php?id=12775" onclick="window.open(this.href);return false;">Forum français - http://fr.piwigo.org/forum/viewtopic.php?id=12775</a>
-<br>ou<br>
-<a href="http://piwigo.org/forum/viewtopic.php?id=15015" onclick="window.open(this.href);return false;">Forum anglais - http://piwigo.org/forum/viewtopic.php?id=15015</a><br><br>
+<br><br>
 Egalement disponible, le bugtracker du projet: <a href="http://piwigo.org/bugs/" onclick="window.open(this.href);return false;">http://piwigo.org/bugs/</a>';
 // --------- End: New or revised $lang ---- from version 2.15.1
 
@@ -317,4 +316,13 @@ $lang['UAM_Stuffs_Title'] = 'Module UAM';
 $lang['UAM_Stuffs_Desc'] = 'Ajoute un module d\'information des utilisateurs non validés';
 $lang['UAM_Stuffs'] = 'Module PWG Stuffs';
 // --------- End: New or revised $lang ---- from version 2.20.0
+
+
+// --------- Starting below: New or revised $lang ---- from version 2.20.3
+$lang['UAM_DumpTxt'] = 'Sauvegarde de votre configuration';
+$lang['UAM_Dump_Download'] = 'Pour télécharger le fichier de sauvegarde, cochez cette case:';
+$lang['UAM_Save'] = 'Exécuter la sauvegarde';
+$lang['UAM_Dump_OK'] = 'Fichier de sauvegarde créé avec succès';
+$lang['UAM_Dump_NOK'] = 'Erreur : Impossible de créer le fichier de sauvegarde !';
+// --------- End: New or revised $lang ---- from version 2.20.3
 ?>

@@ -266,4 +266,16 @@ $lang['UAM_StuffsTitle_d'] = 'This enables an additional UAM block in PWG Stuffs
 <br><br>
 Please refer to the <b>Tips and Examples of Use</b> at the bottom of this page for details.';
 // --------- End: New or revised $lang ---- from version 2.20.0
+
+
+// --------- Starting below: New or revised $lang ---- from version 2.20.3
+$lang['UAM_DumpTitle'] = 'Backup your configuration';
+$lang['UAM_DumpTitle_d'] = 'This allows you to save the entire configuration of the plugin in a file so you can restore it if something goes wrong (wrong manipulation or before an update, for example). By default, the file is stored in this folder ../plugins/UserAdvManager/include/backup/ and is called &quot;UAM_dbbackup.sql&quot;.
+<br><br>
+<b style=&quot;color: red;&quot;>Warning: The file is overwritten each backup action!</b>
+<br><br>
+It can sometimes be useful to retrieve the backup file on your computer. For example: To restore to another database, to outsource or to keep multiple save files. To do this, just check the box to download the file.
+<br><br>
+The recovery from this interface is not supported. Use tools like phpMyAdmin.';
+// --------- End: New or revised $lang ---- from version 2.20.3
 ?>

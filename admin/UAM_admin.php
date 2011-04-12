@@ -33,6 +33,7 @@ $replacement = '.';
 $UAM_Password_Test_Score = 0;
 $UAM_Exclusionlist_Error = false;
 
+$dump_download = '';
 
 // +-----------------------------------------------------------------------+
 // |                            Tabssheet                                  |
@@ -222,6 +223,20 @@ switch ($page['tab'])
 		array_push($page['infos'], l10n('UAM_save_config'));
   }
 
+  // Saving UAM tables and configuration settings
+  if (isset($_POST['save']))
+  {
+    $dump_download = (isset($_POST['dump_download'])) ? 'true' : 'false';
+    
+    if(uam_dump($dump_download) and $dump_download == 'false')
+    {
+      array_push($page['infos'], l10n('UAM_Dump_OK'));
+    }
+    else
+    {
+      array_push($page['errors'], l10n('UAM_Dump_NOK'));
+    }
+  }
 
   //Testing password enforcement
   if (isset($_POST['PasswordTest']) and isset($_POST['UAM_Password_Test']) and !empty($_POST['UAM_Password_Test']))
@@ -371,6 +386,7 @@ ORDER BY name ASC
     'nb_para2'                       => $nb_para2,
     'UAM_VERSION'                    => $version,
     'UAM_PATH'                       => UAM_PATH,
+    'UAM_DUMP_DOWNLOAD'              => $dump_download,
 		'UAM_MAIL_INFO_TRUE'             => $conf_UAM[0]=='true' ?  'checked="checked"' : '' ,
 		'UAM_MAIL_INFO_FALSE'            => $conf_UAM[0]=='false' ?  'checked="checked"' : '' ,
 		'UAM_MAILINFO_TEXT'              => $conf_UAM[9],
