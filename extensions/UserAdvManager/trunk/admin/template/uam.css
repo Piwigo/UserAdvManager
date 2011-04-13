@@ -37,14 +37,14 @@ label.cluetip
 
 .instructionBlockHeaderCollapsed, .instructionBlockHeaderExpanded
 {
-  background-color:#111;
-  background-position:15px center;
-  background-repeat:no-repeat;
-  color:#ff3363;
-  cursor:pointer;
-  font-size:110%;
-  overflow:hidden;
-  padding:8px 41px;
+  background-color: #111;
+  background-position: 15px center;
+  background-repeat: no-repeat;
+  color: #ff3363;
+  cursor: pointer;
+  font-size: 110%;
+  overflow: hidden;
+  padding: 8px 41px;
   text-align: left;
 }
 
@@ -52,20 +52,10 @@ label.cluetip
 {
   border-bottom: none;
 }
- 
-.instructionBlockHeaderCollapsed
-{
-  background-image: url(./icon/expand.gif);
-}
-
-.instructionBlockHeaderExpanded
-{
-  background-image: url(./icon/collapse.gif);
-}
 
 .instructionBlockContent
 {
-  padding:0 15px 15px;
+  padding: 0 15px 15px;
 }
 
 /* jQuery tablesorter instructions */
