@@ -380,6 +380,10 @@ ORDER BY name ASC
   $conf_UAM_ConfirmMail = unserialize($conf['UserAdvManager_ConfirmMail']);
 
   // Template initialization for forms and data
+
+  $themeconf=$template->get_template_vars('themeconf');
+  $UAM_theme=$themeconf['id'];
+
   $template->assign(
     array(
     'nb_para'                        => $nb_para,
@@ -387,6 +391,7 @@ ORDER BY name ASC
     'UAM_VERSION'                    => $version,
     'UAM_PATH'                       => UAM_PATH,
     'UAM_DUMP_DOWNLOAD'              => $dump_download,
+    'UAM_THEME'                      => $UAM_theme,
 		'UAM_MAIL_INFO_TRUE'             => $conf_UAM[0]=='true' ?  'checked="checked"' : '' ,
 		'UAM_MAIL_INFO_FALSE'            => $conf_UAM[0]=='false' ?  'checked="checked"' : '' ,
 		'UAM_MAILINFO_TEXT'              => $conf_UAM[9],

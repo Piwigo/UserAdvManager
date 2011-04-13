@@ -2,6 +2,10 @@
 {combine_script id='jquery.cluetip' require='jquery' path='themes/default/js/plugins/jquery.cluetip.js'}
 
 {combine_css path= $UAM_PATH|@cat:'admin/template/uam.css'}
+{if $UAM_THEME=='clear'}{combine_css path= $UAM_PATH|@cat:'admin/template/themes/clear/theme.css'}{/if}
+{if $UAM_THEME=='roma'}{combine_css path= $UAM_PATH|@cat:'admin/template/themes/roma/theme.css'}{/if}
+{if $UAM_THEME=='default'}{combine_css path= $UAM_PATH|@cat:'admin/template/themes/default/theme.css'}{/if}
+
 
 <script type="text/javascript">
 jQuery().ready(function()
