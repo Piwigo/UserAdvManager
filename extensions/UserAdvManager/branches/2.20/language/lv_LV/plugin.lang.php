@@ -361,4 +361,9 @@ B. Additional Pages spraudnī :<br>
 /*TODO*/$lang['UAM_Dump_OK'] = 'Backup file created successfully';
 /*TODO*/$lang['UAM_Dump_NOK'] = 'Error: Unable to create backup file !';
 // --------- End: New or revised $lang ---- from version 2.20.3
+
+
+// --------- Starting below: New or revised $lang ---- from version 2.20.4
+/*TODO*/$lang['UAM_HidePassw'] = 'Clear password in information email';
+// --------- End: New or revised $lang ---- from version 2.20.4
 ?>

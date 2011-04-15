@@ -184,6 +184,19 @@ function uam_blockToggleDisplay( headerId, contentId )
           <fieldset>
             <ul>
               <li>
+                <label class="cluetip" title="{'UAM_HidePasswTitle'|translate}|{'UAM_HidePasswTitle_d'|translate}">
+                  {'UAM_HidePassw'|@translate}
+                </label>
+              <br><br>
+                <input type="radio" value="false" {$UAM_HIDEPASSW_FALSE} name="UAM_HidePassw">
+                  {'UAM_Disable'|@translate}
+              <br>
+                <input type="radio" value="true" {$UAM_HIDEPASSW_TRUE} name="UAM_HidePassw">
+                  {'UAM_Enable'|@translate}
+              <br><br>
+              </li>
+          
+              <li>
                 <label class="cluetip" title="{'UAM_infotxtTitle'|translate}|{'UAM_infotxtTitle_d'|translate}">
                   {'UAM_MailInfo_Text'|@translate}
                 </label>

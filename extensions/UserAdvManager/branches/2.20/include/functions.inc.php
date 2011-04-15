@@ -857,15 +857,26 @@ WHERE user_id = '.$id.'
 
   if (isset($conf_UAM[0]) and $conf_UAM[0] == 'true')
   {
-    $infos1 = array(
-      get_l10n_args('UAM_infos_mail %s', stripslashes($username)),
-      get_l10n_args('UAM_User: %s', stripslashes($username)),
-      get_l10n_args('UAM_Password: %s', $password),
-      get_l10n_args('Email: %s', $email),
-      get_l10n_args('', ''),
-    );
+    if (isset($conf_UAM[35]) and $conf_UAM[35] == 'false') // Allow display of clear password in email
+    {
+      $infos1 = array(
+        get_l10n_args('UAM_infos_mail %s', stripslashes($username)),
+        get_l10n_args('UAM_User: %s', stripslashes($username)),
+        get_l10n_args('UAM_Password: %s', $password),
+        get_l10n_args('Email: %s', $email),
+        get_l10n_args('', ''),
+      );
+    }
+    else // Do not allow display of clear password in email
+    {
+      $infos1 = array(
+        get_l10n_args('UAM_infos_mail %s', stripslashes($username)),
+        get_l10n_args('UAM_User: %s', stripslashes($username)),
+        get_l10n_args('Email: %s', $email),
+        get_l10n_args('', ''),
+      );
+    }
   }
-
 
   if ( isset($conf_UAM[1]) and $conf_UAM[1] == 'true' and $confirm)
   {
