@@ -326,4 +326,9 @@ $lang['UAM_Save'] = 'Run backup';
 $lang['UAM_Dump_OK'] = 'Backup file created successfully';
 $lang['UAM_Dump_NOK'] = 'Error: Unable to create backup file !';
 // --------- End: New or revised $lang ---- from version 2.20.3
+
+
+// --------- Starting below: New or revised $lang ---- from version 2.20.4
+$lang['UAM_HidePassw'] = 'Password in clear text in the information email';
+// --------- End: New or revised $lang ---- from version 2.20.4
 ?>

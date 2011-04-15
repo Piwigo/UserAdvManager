@@ -274,4 +274,10 @@ Il peut être parfois utile de récupérer le fichier de sauvegarde sur votre or
 <br><br>
 La restauration à partir de cette interface n\'est pas prise en charge. Utilisez des outils comme PhpMyAdmin.';
 // --------- End: New or revised $lang ---- from version 2.20.3
+
+
+// --------- Starting below: New or revised $lang ---- from version 2.20.4
+$lang['UAM_HidePasswTitle'] = 'Mot de passe en clair dans le mail d\'information';
+$lang['UAM_HidePasswTitle_d'] = 'Choisissez ici si vous souhaitez faire afficher le mot de passe choisi par le visiteur dans le mail d\'information. Si vous activez l\'option, le mot de passe apparaitra alors en clair. Si vous la désactivez, le mot de passe n\'apparaitra pas du tout.';
+// --------- End: New or revised $lang ---- from version 2.20.4
 ?>
