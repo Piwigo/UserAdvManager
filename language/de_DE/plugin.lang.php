@@ -324,4 +324,9 @@ $lang['UAM_Save'] = 'Starten der Backup';
 $lang['UAM_Dump_OK'] = 'Backup-Datei erfolgreich erstellt';
 $lang['UAM_Dump_NOK'] = 'Fehler: Backup-Datei kann nicht erstellt werden !';
 // --------- End: New or revised $lang ---- from version 2.20.3
+
+
+// --------- Starting below: New or revised $lang ---- from version 2.20.4
+$lang['UAM_HidePassw'] = 'Passwort im Klartext in der Informations-E-Mail';
+// --------- End: New or revised $lang ---- from version 2.20.4
 ?>

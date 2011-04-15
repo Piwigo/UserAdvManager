@@ -397,4 +397,36 @@ LIMIT 1
     die('Fatal error on plugin upgrade process : Unable to rename directory ! Please, rename manualy the plugin directory name from ../plugins/NBC_UserAdvManager to ../plugins/UserAdvManager.');
   }
 }
+
+/* upgrade from 2.20.3 to 2.20.4 */
+/* ***************************** */
+function upgrade_2203_2204()
+{
+  global $conf;
+
+  // Upgrading options
+  $query = '
+SELECT value
+  FROM '.CONFIG_TABLE.'
+WHERE param = "UserAdvManager"
+;';
+
+  $result = pwg_query($query);
+  $conf_UAM = pwg_db_fetch_assoc($result);
+    
+  $Newconf_UAM = unserialize($conf_UAM['value']);
+  
+  $Newconf_UAM[35] = 'false';
+  
+  $update_conf = serialize($Newconf_UAM);
+    
+  $query = '
+UPDATE '.CONFIG_TABLE.'
+SET value="'.addslashes($update_conf).'"
+WHERE param="UserAdvManager"
+LIMIT 1
+;';
+
+	pwg_query($query);
+}
 ?>

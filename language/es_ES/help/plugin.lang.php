@@ -274,4 +274,10 @@ It can sometimes be useful to retrieve the backup file on your computer. For exa
 <br><br>
 The recovery from this interface is not supported. Use tools like phpMyAdmin.';
 // --------- End: New or revised $lang ---- from version 2.20.3
+
+
+// --------- Starting below: New or revised $lang ---- from version 2.20.4
+$lang['UAM_HidePasswTitle'] = 'Contraseña en texto claro en la información del correo electrónico';
+/*TODO*/$lang['UAM_HidePasswTitle_d'] = 'Choose here if you want to display the password chosen by the visitor in the information email. If you enable the option, the password will then appear in clear text. If you disable the password will not appear at all.';
+// --------- End: New or revised $lang ---- from version 2.20.4
 ?>

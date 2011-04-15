@@ -364,4 +364,9 @@ $lang['UAM_Stuffs'] = 'PWG Stuffs módulo';
 /*TODO*/$lang['UAM_Dump_OK'] = 'Backup file created successfully';
 /*TODO*/$lang['UAM_Dump_NOK'] = 'Error: Unable to create backup file !';
 // --------- End: New or revised $lang ---- from version 2.20.3
+
+
+// --------- Starting below: New or revised $lang ---- from version 2.20.4
+$lang['UAM_HidePassw'] = 'Contraseña en texto claro en la información del correo electrónico';
+// --------- End: New or revised $lang ---- from version 2.20.4
 ?>

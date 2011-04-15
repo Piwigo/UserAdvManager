@@ -325,4 +325,9 @@ $lang['UAM_Save'] = 'Exécuter la sauvegarde';
 $lang['UAM_Dump_OK'] = 'Fichier de sauvegarde créé avec succès';
 $lang['UAM_Dump_NOK'] = 'Erreur : Impossible de créer le fichier de sauvegarde !';
 // --------- End: New or revised $lang ---- from version 2.20.3
+
+
+// --------- Starting below: New or revised $lang ---- from version 2.20.4
+$lang['UAM_HidePassw'] = 'Mot de passe en clair dans le mail d\'information';
+// --------- End: New or revised $lang ---- from version 2.20.4
 ?>
