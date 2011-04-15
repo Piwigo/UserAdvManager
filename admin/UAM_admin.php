@@ -105,7 +105,7 @@ switch ($page['tab'])
 // *************************************************************************
   case 'global':
 
-	if (isset($_POST['submit']) and isset($_POST['UAM_Mail_Info']) and isset($_POST['UAM_Username_Char']) and isset($_POST['UAM_Confirm_Mail']) and isset($_POST['UAM_No_Comment_Anonymous']) and isset($_POST['UAM_Password_Enforced']) and isset($_POST['UAM_AdminPassword_Enforced']) and isset($_POST['UAM_GhostUser_Tracker']) and isset($_POST['UAM_Admin_ConfMail']) and isset($_POST['UAM_RedirToProfile']) and isset($_POST['UAM_GTAuto']) and isset($_POST['UAM_GTAutoMail']) and isset($_POST['UAM_CustomPasswRetr']) and isset($_POST['UAM_USRAuto']) and isset($_POST['UAM_USRAutoMail']) and isset($_POST['UAM_Stuffs']))
+	if (isset($_POST['submit']) and isset($_POST['UAM_Mail_Info']) and isset($_POST['UAM_Username_Char']) and isset($_POST['UAM_Confirm_Mail']) and isset($_POST['UAM_No_Comment_Anonymous']) and isset($_POST['UAM_Password_Enforced']) and isset($_POST['UAM_AdminPassword_Enforced']) and isset($_POST['UAM_GhostUser_Tracker']) and isset($_POST['UAM_Admin_ConfMail']) and isset($_POST['UAM_RedirToProfile']) and isset($_POST['UAM_GTAuto']) and isset($_POST['UAM_GTAutoMail']) and isset($_POST['UAM_CustomPasswRetr']) and isset($_POST['UAM_USRAuto']) and isset($_POST['UAM_USRAutoMail']) and isset($_POST['UAM_Stuffs']) and isset($_POST['UAM_HidePassw']))
   {
 
     //General configuration settings
@@ -177,7 +177,8 @@ switch ($page['tab'])
       $_POST['UAM_USRAuto'],
       $_POST['UAM_USRAutoDelText'],
       $_POST['UAM_USRAutoMail'],
-      $_POST['UAM_Stuffs']
+      $_POST['UAM_Stuffs'],
+      $_POST['UAM_HidePassw']
       );
 
     $conf['UserAdvManager'] = serialize($newconf_UAM);
@@ -445,6 +446,8 @@ ORDER BY name ASC
     'UAM_USRAUTOMAIL_FALSE'          => $conf_UAM[33]=='false' ?  'checked="checked"' : '' ,
     'UAM_STUFFS_TRUE'                => $conf_UAM[34]=='true' ?  'checked="checked"' : '' ,
     'UAM_STUFFS_FALSE'               => $conf_UAM[34]=='false' ?  'checked="checked"' : '' ,
+    'UAM_HIDEPASSW_TRUE'             => $conf_UAM[35]=='true' ?  'checked="checked"' : '' ,
+    'UAM_HIDEPASSW_FALSE'            => $conf_UAM[35]=='false' ?  'checked="checked"' : '' ,
 		'UAM_PASSWORD_TEST_SCORE'        => $UAM_Password_Test_Score,
     'UAM_ERROR_REPORTS4'             => $UAM_Exclusionlist_Error,
 		'UAM_CONFIRMMAIL_TIMEOUT_TRUE'	 => $conf_UAM_ConfirmMail[0]=='true' ?  'checked="checked"' : '' ,

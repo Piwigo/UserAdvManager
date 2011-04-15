@@ -241,5 +241,6 @@ Plugin Name: UserAdvManager
 -- 2.20.3 : Bug 2257 fixed - Improve admin panel display with clear theme
             Bug 2258 fixed - New feature to backup UAM configuration and personnal settings
 
+-- 2.20.4 : Bug 2265 fixed - Add new option to display or not user's password in information email
 */
 ?>

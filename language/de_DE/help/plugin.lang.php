@@ -278,4 +278,10 @@ Es kann manchmal nützlich sein, um die Backup-Datei auf Ihrem Computer abrufen.
 <br><br>
 Die Erholung von dieser Schnittstelle wird nicht unterstützt. Verwenden Sie Tools wie phpMyAdmin.';
 // --------- End: New or revised $lang ---- from version 2.20.3
+
+
+// --------- Starting below: New or revised $lang ---- from version 2.20.4
+$lang['UAM_HidePasswTitle'] = 'Passwort im Klartext in der Informations-E-Mail';
+/*TODO*/$lang['UAM_HidePasswTitle_d'] = 'Choose here if you want to display the password chosen by the visitor in the information email. If you enable the option, the password will then appear in clear text. If you disable the password will not appear at all.';
+// --------- End: New or revised $lang ---- from version 2.20.4
 ?>
