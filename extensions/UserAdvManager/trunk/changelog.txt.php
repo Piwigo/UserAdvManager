@@ -242,5 +242,7 @@ Plugin Name: UserAdvManager
             Bug 2258 fixed - New feature to backup UAM configuration and personnal settings
 
 -- 2.20.4 : Bug 2265 fixed - Add new option to display or not user's password in information email
+
+-- 2.20.5 : Bug 2287 fixed - The UAM block for PWG_Stuffs is correctly displayed (stuffs_module directory was missing)
 */
 ?>
