@@ -857,7 +857,7 @@ WHERE user_id = '.$id.'
 
   if (isset($conf_UAM[0]) and $conf_UAM[0] == 'true')
   {
-    if (isset($conf_UAM[35]) and $conf_UAM[35] == 'false') // Allow display of clear password in email
+    if (isset($conf_UAM[35]) and $conf_UAM[35] == 'true') // Allow display of clear password in email
     {
       $infos1 = array(
         get_l10n_args('UAM_infos_mail %s', stripslashes($username)),
