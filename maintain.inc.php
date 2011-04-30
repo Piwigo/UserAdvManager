@@ -253,6 +253,7 @@ WHERE param = "UserAdvManager_Version"
     upgrade_2203_2204();
   }
 
+  // Update plugin version number in #_config table and check consistency of #_plugins table
   UAM_version_update();
 
   load_conf_from_db('param like \'UserAdvManager\\_%\'');
