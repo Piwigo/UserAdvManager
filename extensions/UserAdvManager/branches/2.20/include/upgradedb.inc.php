@@ -30,8 +30,8 @@ function UAM_version_update()
   // Get current plugin version
   $plugin =  PluginInfos(UAM_PATH);
   $version = $plugin['version'];
-  
-  // Update plugin version 
+
+  // Update plugin version in #_config table
   $query = '
 UPDATE '.CONFIG_TABLE.'
 SET value="'.$version.'"
@@ -40,6 +40,29 @@ LIMIT 1
 ;';
 
   pwg_query($query);
+
+
+// Check #_plugin table consistency
+// Only useful if a previous version upgrade has not worked correctly (rare case)
+  $query = '
+SELECT version
+  FROM '.PLUGINS_TABLE.'
+WHERE id = "UserAdvManager"
+;';
+  
+  $data = pwg_db_fetch_assoc(pwg_query($query));
+  
+  if (empty($data['version']) or $data['version'] <> $version)
+  {
+    $query = '
+UPDATE '.PLUGINS_TABLE.'
+SET version="'.$version.'"
+WHERE id = "UserAdvManager"
+LIMIT 1
+;';
+
+    pwg_query($query);
+  }
 }
 
 

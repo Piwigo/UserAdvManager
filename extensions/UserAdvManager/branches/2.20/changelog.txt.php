@@ -244,5 +244,8 @@ Plugin Name: UserAdvManager
 -- 2.20.4 : Bug 2265 fixed - Add new option to display or not user's password in information email
 
 -- 2.20.5 : Bug 2287 fixed - The UAM block for PWG_Stuffs is correctly displayed (stuffs_module directory was missing)
+
+-- 2.20.6 : Improve database update process
+            Bug 2289 fixed - "Password in clear text in the information email" was working in a reverse logic
 */
 ?>
