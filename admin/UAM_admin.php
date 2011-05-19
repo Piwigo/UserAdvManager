@@ -185,7 +185,7 @@ switch ($page['tab'])
 
 		$query = '
 	  	UPDATE '.CONFIG_TABLE.'
-	  	SET value="'.addslashes($conf['UserAdvManager']).'"
+	  	SET value="'.pwg_db_real_escape_string($conf['UserAdvManager']).'"
 	  	WHERE param="UserAdvManager"
 	  	LIMIT 1
 	  	;';
@@ -214,7 +214,7 @@ switch ($page['tab'])
     
 	  $query = '
       UPDATE '.CONFIG_TABLE.'
-			SET value="'.addslashes($conf['UserAdvManager_ConfirmMail']).'"
+			SET value="'.pwg_db_real_escape_string($conf['UserAdvManager_ConfirmMail']).'"
 			WHERE param="UserAdvManager_ConfirmMail"
 			LIMIT 1
 		;';
