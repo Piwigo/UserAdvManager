@@ -247,5 +247,7 @@ Plugin Name: UserAdvManager
 
 -- 2.20.6 : Improve database update process
             Bug 2289 fixed - "Password in clear text in the information email" was working in a reverse logic
+
+-- 2.20.7 : Use pwg_db_real_escape_string() instead of addslashes()
 */
 ?>
