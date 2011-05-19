@@ -34,7 +34,7 @@ WHERE param = "UserAdvManager"
   {
     $q = '
 INSERT INTO '.CONFIG_TABLE.' (param, value, comment)
-VALUES ("UserAdvManager","'.addslashes(serialize($default1)).'","UAM parameters")
+VALUES ("UserAdvManager","'.pwg_db_real_escape_string(serialize($default1)).'","UAM parameters")
   ;';
     pwg_query($q);
   }
@@ -61,7 +61,7 @@ WHERE param = "UserAdvManager_ConfirmMail"
   {
     $q = '
 INSERT INTO '.CONFIG_TABLE.' (param, value, comment)
-VALUES ("UserAdvManager_ConfirmMail","'.addslashes(serialize($default2)).'","UAM ConfirmMail parameters")
+VALUES ("UserAdvManager_ConfirmMail","'.pwg_db_real_escape_string(serialize($default2)).'","UAM ConfirmMail parameters")
   ;';
     pwg_query($q);
   }

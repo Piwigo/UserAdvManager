@@ -179,7 +179,7 @@ function upgrade_213_214()
 
   $query = '
 UPDATE '.CONFIG_TABLE.'
-  SET value = "'.addslashes(serialize($upgrade_UAM)).'"
+  SET value = "'.pwg_db_real_escape_string(serialize($upgrade_UAM)).'"
   WHERE param = "nbc_UserAdvManager"
 ;';
   pwg_query($query);
@@ -190,7 +190,7 @@ UPDATE '.CONFIG_TABLE.'
 
     $query = '
 UPDATE '.CONFIG_TABLE.'
-  SET value = "'.addslashes(serialize($data)).'"
+  SET value = "'.pwg_db_real_escape_string(serialize($data)).'"
   WHERE param = "nbc_UserAdvManager_ConfirmMail"
 ;';
     pwg_query($query);
@@ -240,7 +240,7 @@ WHERE param = "UserAdvManager_ConfirmMail"
     
   $query = '
       UPDATE '.CONFIG_TABLE.'
-			SET value="'.addslashes($update_conf).'"
+			SET value="'.pwg_db_real_escape_string($update_conf).'"
 			WHERE param="UserAdvManager_ConfirmMail"
 			LIMIT 1
 		;';
@@ -296,7 +296,7 @@ WHERE param = "UserAdvManager"
     
   $query = '
       UPDATE '.CONFIG_TABLE.'
-			SET value="'.addslashes($update_conf).'"
+			SET value="'.pwg_db_real_escape_string($update_conf).'"
 			WHERE param="UserAdvManager"
 			LIMIT 1
 		;';
@@ -342,7 +342,7 @@ WHERE param = "UserAdvManager"
     
   $query = '
       UPDATE '.CONFIG_TABLE.'
-			SET value="'.addslashes($update_conf).'"
+			SET value="'.pwg_db_real_escape_string($update_conf).'"
 			WHERE param="UserAdvManager"
 			LIMIT 1
 		;';
@@ -388,7 +388,7 @@ WHERE param = "UserAdvManager"
     
   $query = '
 UPDATE '.CONFIG_TABLE.'
-SET value="'.addslashes($update_conf).'"
+SET value="'.pwg_db_real_escape_string($update_conf).'"
 WHERE param="UserAdvManager"
 LIMIT 1
 ;';
@@ -445,7 +445,7 @@ WHERE param = "UserAdvManager"
     
   $query = '
 UPDATE '.CONFIG_TABLE.'
-SET value="'.addslashes($update_conf).'"
+SET value="'.pwg_db_real_escape_string($update_conf).'"
 WHERE param="UserAdvManager"
 LIMIT 1
 ;';
