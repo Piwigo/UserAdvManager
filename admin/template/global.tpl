@@ -678,6 +678,31 @@ function uam_blockToggleDisplay( headerId, contentId )
             </li>
 
             <li>
+              <label class="cluetip" title="{'UAM_GroupCommTitle'|translate}|{'UAM_GroupCommTitle_d'|translate}">
+                {'UAM_Group_Comments'|@translate}
+              </label>
+            <br><br>
+              <input type="radio" value="false" {$UAM_GROUPCOMM_FALSE} name="UAM_GroupComm">
+                {'UAM_Disable'|@translate}
+            <br>
+              <input type="radio" value="true" {$UAM_GROUPCOMM_TRUE} name="UAM_GroupComm">
+                {'UAM_Enable'|@translate}
+            <br><br>
+              <ul>
+                <li>
+                  <label>
+                    {'UAM_AllowedComm_Group'|@translate}
+                  </label>
+                <br><br>
+                  <div id="uam_leftmargin">
+                    {html_options name="UAM_AllowComm_Group" options=$AllowComm_Group.group_options selected=$AllowComm_Group.group_selected}
+                  </div>
+                </li>
+              </ul>
+            <br><br>
+            </li>
+
+            <li>
               <label class="cluetip" title="{'UAM_RedirTitle'|translate}|{'UAM_RedirTitle_d'|translate}">
                 {'UAM_RedirToProfile'|@translate}
               </label>

@@ -452,4 +452,37 @@ LIMIT 1
 
 	pwg_query($query);
 }
+
+/* upgrade from 2.20.4 to 2.20.7 */
+/* ***************************** */
+function upgrade_2204_2207()
+{
+  global $conf;
+
+  // Upgrading options
+  $query = '
+SELECT value
+  FROM '.CONFIG_TABLE.'
+WHERE param = "UserAdvManager"
+;';
+
+  $result = pwg_query($query);
+  $conf_UAM = pwg_db_fetch_assoc($result);
+    
+  $Newconf_UAM = unserialize($conf_UAM['value']);
+  
+  $Newconf_UAM[36] = 'false';
+  $Newconf_UAM[37] = '-1';
+  
+  $update_conf = serialize($Newconf_UAM);
+    
+  $query = '
+UPDATE '.CONFIG_TABLE.'
+SET value="'.pwg_db_real_escape_string($update_conf).'"
+WHERE param="UserAdvManager"
+LIMIT 1
+;';
+
+	pwg_query($query);
+}
 ?>
