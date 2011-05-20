@@ -329,4 +329,11 @@ $lang['UAM_Dump_NOK'] = 'Fehler: Backup-Datei kann nicht erstellt werden !';
 // --------- Starting below: New or revised $lang ---- from version 2.20.4
 $lang['UAM_HidePassw'] = 'Passwort im Klartext in der Informations-E-Mail';
 // --------- End: New or revised $lang ---- from version 2.20.4
+
+
+// --------- Starting below: New or revised $lang ---- from version 2.20.7
+$lang['UAM_Group_Comments'] = 'Kommentare zulassen um eine Gruppe von Benutzern';
+$lang['UAM_AllowedComm_Group'] = 'Wählen Sie die Gruppe von Benutzern gestattet Kommentare anzulegen:';
+$lang['UAM_Not_Allowed_Author'] = 'Entschuldigung, Sie sind nicht befugt einen Kommentar abzugeben. Bitte kontaktieren Sie den Administrator der Website.';
+// --------- End: New or revised $lang ---- from version 2.20.7
 ?>

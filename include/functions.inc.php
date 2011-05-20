@@ -751,7 +751,9 @@ function UAM_lost_password_mail_content($infos)
 /**
  * Triggered on user_comment_check
  * 
- * checks if author is mandatory and set on comments post
+ * checks if author is mandatory and set on comments post when comments for all is set
+ * 
+ * cheks if author is in an allowed group to post comment when comments for all is not set
  *
  * @param : comment action, comment
  * 
@@ -761,16 +763,28 @@ function UAM_lost_password_mail_content($infos)
 function UAM_CheckEmptyCommentAuthor($comment_action, $comm)
 {
   load_language('plugin.lang', UAM_PATH);
-  global $infos, $conf, $template;
+  global $infos, $conf, $user;
 
   $conf_UAM = unserialize($conf['UserAdvManager']);
 
-// User creation OR update
-  if (isset($conf_UAM[5]) and $conf_UAM[5] == 'true' and $conf['comments_forall'] == 'true' and $comm['author'] == 'guest')
+// Does not allow empty author name on comments for all
+  if (isset($conf_UAM[5]) and $conf_UAM[5] == 'true' and $comm['author'] == 'guest' and $conf['comments_forall'])
   {
     $comment_action = 'reject';
 
     array_push($infos, l10n('UAM_Empty Author'));
+  }
+
+
+// Do not allow comments if user is not in an allowed group
+  if (isset($conf_UAM[36]) and $conf_UAM[36] == 'true' and !$conf['comments_forall'])
+  {
+    if (!UAM_CheckAuthor($comm['author']))
+    {
+      $comment_action = 'reject';
+
+      array_push($infos, l10n('UAM_Not_Allowed_Author'));
+    }
   }
 
   return $comment_action;
@@ -2521,6 +2535,48 @@ function uam_dump($download)
   }
 
   return true;
+}
+
+
+/**
+ * Called from UAM_CheckEmptyCommentAuthor()
+ * Checks if comment's author name is in the allowed group
+ * 
+ * @author   : author's name
+ * 
+ * @returns  : Boolean (true is user is allowed to post / false if not allowed)
+ * 
+ */
+function UAM_CheckAuthor($author)
+{
+  global $conf;
+  
+	// Get UAM configuration
+  $conf_UAM = unserialize($conf['UserAdvManager']);
+  
+  if (isset($conf_UAM[37]) and $conf_UAM[37] <> -1)
+  {
+    $query = '
+SELECT u.id,
+       u.username,
+       ug.user_id,
+       ug.group_id
+FROM '.USERS_TABLE.' AS u
+  INNER JOIN '.USER_GROUP_TABLE.' AS ug
+    ON u.id = ug.user_id
+WHERE u.username LIKE "'.$author.'"
+  AND ug.group_id = '.$conf_UAM[37].'
+;';
+
+    $count = pwg_db_num_rows(pwg_query($query));
+
+    if (is_null($count) or $count == 0)
+    {
+      return false;
+    }
+    else
+      return true;
+  }
 }
 
 

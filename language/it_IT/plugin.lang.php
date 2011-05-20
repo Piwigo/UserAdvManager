@@ -328,4 +328,11 @@ $lang['UAM_Stuffs'] = 'modulo PWG Stuffs';
 // --------- Starting below: New or revised $lang ---- from version 2.20.4
 $lang['UAM_HidePassw'] = 'Password in chiaro nelle informazioni e-mail';
 // --------- End: New or revised $lang ---- from version 2.20.4
+
+
+// --------- Starting below: New or revised $lang ---- from version 2.20.7
+/*TODO*/$lang['UAM_Group_Comments'] = 'Allow comments to a group of users';
+/*TODO*/$lang['UAM_AllowedComm_Group'] = 'Select the group of users allowed to post comments:';
+/*TODO*/$lang['UAM_Not_Allowed_Author'] = 'Sorry, you are not authorized to post a comment. Please contact the site administrator.';
+// --------- End: New or revised $lang ---- from version 2.20.7
 ?>

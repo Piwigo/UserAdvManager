@@ -330,4 +330,11 @@ $lang['UAM_Dump_NOK'] = 'Erreur : Impossible de créer le fichier de sauvegarde 
 // --------- Starting below: New or revised $lang ---- from version 2.20.4
 $lang['UAM_HidePassw'] = 'Mot de passe en clair dans le mail d\'information';
 // --------- End: New or revised $lang ---- from version 2.20.4
+
+
+// --------- Starting below: New or revised $lang ---- from version 2.20.7
+$lang['UAM_Group_Comments'] = 'Autoriser les commentaires pour un groupe d\'utilisateurs';
+$lang['UAM_AllowedComm_Group'] = 'Sélectionnez le groupe d\'utilisateurs autorisé à poster des commentaires :';
+$lang['UAM_Not_Allowed_Author'] = 'Désolé, vous n\'êtes pas autorisé à poster un commentaire. Veuillez contacter l\'administrateur du site.';
+// --------- End: New or revised $lang ---- from version 2.20.7
 ?>
