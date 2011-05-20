@@ -331,4 +331,11 @@ $lang['UAM_Dump_NOK'] = 'Error: Unable to create backup file !';
 // --------- Starting below: New or revised $lang ---- from version 2.20.4
 $lang['UAM_HidePassw'] = 'Password in clear text in the information email';
 // --------- End: New or revised $lang ---- from version 2.20.4
+
+
+// --------- Starting below: New or revised $lang ---- from version 2.20.7
+$lang['UAM_Group_Comments'] = 'Allow comments to a group of users';
+$lang['UAM_AllowedComm_Group'] = 'Select the group of users allowed to post comments:';
+$lang['UAM_Not_Allowed_Author'] = 'Sorry, you are not authorized to post a comment. Please contact the site administrator.';
+// --------- End: New or revised $lang ---- from version 2.20.7
 ?>

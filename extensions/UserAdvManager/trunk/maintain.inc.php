@@ -235,22 +235,29 @@ WHERE param = "UserAdvManager_Version"
     upgrade_215_2160();
   }
 
-/* Check for upgrade from 2.16 to 2.20 */
-/* *********************************** */
-  if (isset($conf['UserAdvManager_Version']) and strcmp($conf['UserAdvManager_Version'], '2.20.0') < 0)
+/* Check database upgrade since version 2.16.0 */
+  if (isset($conf['UserAdvManager_Version']))
   {
+    if (version_compare($conf['UserAdvManager_Version'], '2.20.0') < 0)
+    {
     /* upgrade from branch 2.16 to 2.20 */
     /* ******************************** */
-    upgrade_216_220();
-  }
-
-/* Check for upgrade from 2.20.3 to 2.20.4 */
-/* *************************************** */
-  if (isset($conf['UserAdvManager_Version']) and strcmp($conf['UserAdvManager_Version'], '2.20.4') < 0)
-  {
-    /* upgrade from branch 2.16 to 2.20 */
-    /* ******************************** */
-    upgrade_2203_2204();
+      upgrade_216_220();
+    }
+    
+    if (version_compare($conf['UserAdvManager_Version'], '2.20.4') < 0)
+    {
+    /* upgrade from version 2.20.3 to 2.20.4 */
+    /* ************************************* */
+      upgrade_2203_2204();
+    }
+    
+    if (version_compare($conf['UserAdvManager_Version'], '2.20.7') < 0)
+    {
+    /* upgrade from version 2.20.4 to 2.20.7 */
+    /* ************************************* */
+      upgrade_2204_2207();
+    }
   }
 
   // Update plugin version number in #_config table and check consistency of #_plugins table

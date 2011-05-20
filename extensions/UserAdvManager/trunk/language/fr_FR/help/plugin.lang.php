@@ -280,4 +280,12 @@ La restauration à partir de cette interface n\'est pas prise en charge. Utilise
 $lang['UAM_HidePasswTitle'] = 'Mot de passe en clair dans le mail d\'information';
 $lang['UAM_HidePasswTitle_d'] = 'Choisissez ici si vous souhaitez faire afficher le mot de passe choisi par le visiteur dans le mail d\'information. Si vous activez l\'option, le mot de passe apparaitra alors en clair. Si vous la désactivez, le mot de passe n\'apparaitra pas du tout.';
 // --------- End: New or revised $lang ---- from version 2.20.4
+
+
+// --------- Starting below: New or revised $lang ---- from version 2.20.7
+$lang['UAM_GroupCommTitle'] = 'Autoriser les commentaires pour un groupe d\'utilisateurs';
+$lang['UAM_GroupCommTitle_d'] = 'Cette option permet de spécifier un groupe d\'utilisateurs qui seront autorisés à poster des commentaires lorsque la galerie est configurée pour ne pas autoriser les commentaires pour tous.
+<br><br>
+Par défaut, lorsque les &quot;commentaires pour tous&quot; sont désactivés, seuls les utilisateurs inscrits peuvent poster des commentaires. Avec cette option, vous pouvez restreindre d\'avantage ce fonctionnement en précisant un groupe d\'utilisateurs. Ainsi, seuls les utilisateurs inscrits et faisant partie de ce groupe pourront poster des commentaires.';
+// --------- End: New or revised $lang ---- from version 2.20.7
 ?>

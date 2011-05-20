@@ -284,4 +284,12 @@ Die Erholung von dieser Schnittstelle wird nicht unterstützt. Verwenden Sie Too
 $lang['UAM_HidePasswTitle'] = 'Passwort im Klartext in der Informations-E-Mail';
 /*TODO*/$lang['UAM_HidePasswTitle_d'] = 'Choose here if you want to display the password chosen by the visitor in the information email. If you enable the option, the password will then appear in clear text. If you disable the password will not appear at all.';
 // --------- End: New or revised $lang ---- from version 2.20.4
+
+
+// --------- Starting below: New or revised $lang ---- from version 2.20.7
+$lang['UAM_GroupCommTitle'] = 'Kommentare zulassen, um eine Gruppe von Benutzern';
+/*TODO*/$lang['UAM_GroupCommTitle_d'] = 'This option lets you specify a group of users who will allowed to post comments when the gallery is configured to not allow comments for all.
+<br><br>
+By default, when &quot;comments for all&quot; option is disabled, only registered users can post comments. With this option, you can restrict this behavior by specifying a user group. Thus, only registered users and members of this group may post comments.';
+// --------- End: New or revised $lang ---- from version 2.20.7
 ?>
