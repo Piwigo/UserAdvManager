@@ -249,5 +249,7 @@ Plugin Name: UserAdvManager
             Bug 2289 fixed - "Password in clear text in the information email" was working in a reverse logic
 
 -- 2.20.7 : Use pwg_db_real_escape_string() instead of addslashes()
+            Database upgrade process simplied (using version_compare() and code refactoring)
+            Bug 2253 fixed - New feature to allow comments on pictures only for specific users (who belong to a group) when "comments for all" is set
 */
 ?>

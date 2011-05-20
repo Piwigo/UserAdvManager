@@ -105,7 +105,7 @@ switch ($page['tab'])
 // *************************************************************************
   case 'global':
 
-	if (isset($_POST['submit']) and isset($_POST['UAM_Mail_Info']) and isset($_POST['UAM_Username_Char']) and isset($_POST['UAM_Confirm_Mail']) and isset($_POST['UAM_No_Comment_Anonymous']) and isset($_POST['UAM_Password_Enforced']) and isset($_POST['UAM_AdminPassword_Enforced']) and isset($_POST['UAM_GhostUser_Tracker']) and isset($_POST['UAM_Admin_ConfMail']) and isset($_POST['UAM_RedirToProfile']) and isset($_POST['UAM_GTAuto']) and isset($_POST['UAM_GTAutoMail']) and isset($_POST['UAM_CustomPasswRetr']) and isset($_POST['UAM_USRAuto']) and isset($_POST['UAM_USRAutoMail']) and isset($_POST['UAM_Stuffs']) and isset($_POST['UAM_HidePassw']))
+	if (isset($_POST['submit']) and isset($_POST['UAM_Mail_Info']) and isset($_POST['UAM_Username_Char']) and isset($_POST['UAM_Confirm_Mail']) and isset($_POST['UAM_No_Comment_Anonymous']) and isset($_POST['UAM_Password_Enforced']) and isset($_POST['UAM_AdminPassword_Enforced']) and isset($_POST['UAM_GhostUser_Tracker']) and isset($_POST['UAM_Admin_ConfMail']) and isset($_POST['UAM_RedirToProfile']) and isset($_POST['UAM_GTAuto']) and isset($_POST['UAM_GTAutoMail']) and isset($_POST['UAM_CustomPasswRetr']) and isset($_POST['UAM_USRAuto']) and isset($_POST['UAM_USRAutoMail']) and isset($_POST['UAM_Stuffs']) and isset($_POST['UAM_HidePassw']) and isset($_POST['UAM_GroupComm']))
   {
 
     //General configuration settings
@@ -178,7 +178,9 @@ switch ($page['tab'])
       $_POST['UAM_USRAutoDelText'],
       $_POST['UAM_USRAutoMail'],
       $_POST['UAM_Stuffs'],
-      $_POST['UAM_HidePassw']
+      $_POST['UAM_HidePassw'],
+      $_POST['UAM_GroupComm'],
+      (isset($_POST['UAM_AllowComm_Group'])?$_POST['UAM_AllowComm_Group']:''),
       );
 
     $conf['UserAdvManager'] = serialize($newconf_UAM);
@@ -256,6 +258,7 @@ switch ($page['tab'])
   $No_Valid = -1;
   $Valid = -1;
   $Downgrade = -1;
+  $AllowComm = -1;
 	
   //Check groups list in database 
   $query = '
@@ -284,6 +287,11 @@ ORDER BY name ASC
 		{
 	  	$Downgrade = $row['id'];
 		}
+    //configuration value for users group allowed to post comments
+    if (isset($conf_UAM[37]) and $conf_UAM[37] == $row['id'])
+		{
+	  	$AllowComm = $row['id'];
+		}
   }
 	
   //Template initialization for unvalidated users group
@@ -308,6 +316,14 @@ ORDER BY name ASC
 		array(
       'group_options'=> $groups,
       'group_selected' => $Downgrade
+			)
+  	);
+  //Template initialization for allowed group for comments
+  $template->assign(
+    'AllowComm_Group',
+		array(
+      'group_options'=> $groups,
+      'group_selected' => $AllowComm
 			)
   	);
 	
@@ -448,6 +464,9 @@ ORDER BY name ASC
     'UAM_STUFFS_FALSE'               => $conf_UAM[34]=='false' ?  'checked="checked"' : '' ,
     'UAM_HIDEPASSW_TRUE'             => $conf_UAM[35]=='true' ?  'checked="checked"' : '' ,
     'UAM_HIDEPASSW_FALSE'            => $conf_UAM[35]=='false' ?  'checked="checked"' : '' ,
+    'UAM_GROUPCOMM_TRUE'             => $conf_UAM[36]=='true' ?  'checked="checked"' : '' ,
+    'UAM_GROUPCOMM_FALSE'            => $conf_UAM[36]=='false' ?  'checked="checked"' : '' ,
+    'UAM_ALLOWCOMM_GROUP'            => $conf_UAM[37],
 		'UAM_PASSWORD_TEST_SCORE'        => $UAM_Password_Test_Score,
     'UAM_ERROR_REPORTS4'             => $UAM_Exclusionlist_Error,
 		'UAM_CONFIRMMAIL_TIMEOUT_TRUE'	 => $conf_UAM_ConfirmMail[0]=='true' ?  'checked="checked"' : '' ,
