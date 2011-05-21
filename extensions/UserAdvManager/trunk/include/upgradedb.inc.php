@@ -109,14 +109,8 @@ On receipt of this message and no new visit within 15 days, we would be obliged 
 Best regards,
 
 The admin of the gallery.';
-		
-		$query = '
-UPDATE '.CONFIG_TABLE.'
-SET value="'.$upgrade_UAM.'"
-WHERE param="nbc_UserAdvManager"
-LIMIT 1
-;';
-		pwg_query($query);
+
+    conf_update_param('nbc_UserAdvManager', pwg_db_real_escape_string($upgrade_UAM));
   }
   
 	$q = "
@@ -154,13 +148,7 @@ ADD reminder ENUM('true', 'false') NULL DEFAULT NULL
   {
     $upgrade_UAM = $conf_UAM[0].';'.$conf_UAM[1].';'.$conf_UAM[2].';'.$conf_UAM[3].';'.$conf_UAM[4].';'.$conf_UAM[5].';'.$conf_UAM[6].';'.$conf_UAM[7].';'.$conf_UAM[8].';'.$conf_UAM[9].';'.$conf_UAM[10].';'.$conf_UAM[11].';'.$conf_UAM[12].';'.$conf_UAM[13].';'.$conf_UAM[14].';'.$conf_UAM[15].';'.$conf_UAM[16].';'.$conf_UAM[17].';'.$conf_UAM[18].';'.$conf_UAM[19].';false';
 		
-		$query = '
-UPDATE '.CONFIG_TABLE.'
-SET value="'.$upgrade_UAM.'"
-WHERE param="nbc_UserAdvManager"
-LIMIT 1
-;';
-		pwg_query($query);
+		conf_update_param('nbc_UserAdvManager', pwg_db_real_escape_string($upgrade_UAM));
     
     upgrade_213_214();
   }
@@ -188,12 +176,7 @@ UPDATE '.CONFIG_TABLE.'
   {
     $data = explode(';', $conf['nbc_UserAdvManager_ConfirmMail']);
 
-    $query = '
-UPDATE '.CONFIG_TABLE.'
-  SET value = "'.pwg_db_real_escape_string(serialize($data)).'"
-  WHERE param = "nbc_UserAdvManager_ConfirmMail"
-;';
-    pwg_query($query);
+    conf_update_param('nbc_UserAdvManager_ConfirmMail', pwg_db_real_escape_string(serialize($data)));
     
     upgrade_214_215();
   }
@@ -237,17 +220,10 @@ WHERE param = "UserAdvManager_ConfirmMail"
   $conf_ConfirmMail[6] ='Your activation key is incorrect or expired or you have already validated your account, please contact the webmaster to fix this problem.';
   
   $update_conf = serialize($conf_ConfirmMail);
+  
+  conf_update_param('UserAdvManager_ConfirmMail', pwg_db_real_escape_string($update_conf));
     
-  $query = '
-      UPDATE '.CONFIG_TABLE.'
-			SET value="'.pwg_db_real_escape_string($update_conf).'"
-			WHERE param="UserAdvManager_ConfirmMail"
-			LIMIT 1
-		;';
-
-		pwg_query($query);
-    
-    upgrade_2153_2154();
+  upgrade_2153_2154();
 }
 
 
@@ -293,15 +269,8 @@ WHERE param = "UserAdvManager"
   $Newconf_UAM[21] = 'false';
   
   $update_conf = serialize($Newconf_UAM);
-    
-  $query = '
-      UPDATE '.CONFIG_TABLE.'
-			SET value="'.pwg_db_real_escape_string($update_conf).'"
-			WHERE param="UserAdvManager"
-			LIMIT 1
-		;';
-
-	pwg_query($query);
+  
+  conf_update_param('UserAdvManager', pwg_db_real_escape_string($update_conf));
 
   $query = '
 INSERT INTO '.CONFIG_TABLE.' (param, value, comment)
@@ -339,15 +308,8 @@ WHERE param = "UserAdvManager"
   $Newconf_UAM[28] = 'Thank you to have registered the gallery. Your account has been manually validated by admin. You can now visit all the gallery for free !';
   
   $update_conf = serialize($Newconf_UAM);
-    
-  $query = '
-      UPDATE '.CONFIG_TABLE.'
-			SET value="'.pwg_db_real_escape_string($update_conf).'"
-			WHERE param="UserAdvManager"
-			LIMIT 1
-		;';
-
-	pwg_query($query);
+  
+  conf_update_param('UserAdvManager', pwg_db_real_escape_string($update_conf));
 
   // Insert a new config entry for futur plugin's version check
   $query = '
@@ -385,15 +347,8 @@ WHERE param = "UserAdvManager"
   $Newconf_UAM[34] = 'false';
   
   $update_conf = serialize($Newconf_UAM);
-    
-  $query = '
-UPDATE '.CONFIG_TABLE.'
-SET value="'.pwg_db_real_escape_string($update_conf).'"
-WHERE param="UserAdvManager"
-LIMIT 1
-;';
-
-	pwg_query($query);
+  
+  conf_update_param('UserAdvManager', pwg_db_real_escape_string($update_conf));
 
   // Create new UAM entry in plugins table
   $uam_new_version = "2.20.0";
@@ -442,15 +397,8 @@ WHERE param = "UserAdvManager"
   $Newconf_UAM[35] = 'false';
   
   $update_conf = serialize($Newconf_UAM);
-    
-  $query = '
-UPDATE '.CONFIG_TABLE.'
-SET value="'.pwg_db_real_escape_string($update_conf).'"
-WHERE param="UserAdvManager"
-LIMIT 1
-;';
-
-	pwg_query($query);
+  
+  conf_update_param('UserAdvManager', pwg_db_real_escape_string($update_conf));
 }
 
 /* upgrade from 2.20.4 to 2.20.7 */
@@ -475,14 +423,7 @@ WHERE param = "UserAdvManager"
   $Newconf_UAM[37] = '-1';
   
   $update_conf = serialize($Newconf_UAM);
-    
-  $query = '
-UPDATE '.CONFIG_TABLE.'
-SET value="'.pwg_db_real_escape_string($update_conf).'"
-WHERE param="UserAdvManager"
-LIMIT 1
-;';
 
-	pwg_query($query);
+  conf_update_param('UserAdvManager', pwg_db_real_escape_string($update_conf));
 }
 ?>
