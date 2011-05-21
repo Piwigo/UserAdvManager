@@ -185,14 +185,7 @@ switch ($page['tab'])
 
     $conf['UserAdvManager'] = serialize($newconf_UAM);
 
-		$query = '
-	  	UPDATE '.CONFIG_TABLE.'
-	  	SET value="'.pwg_db_real_escape_string($conf['UserAdvManager']).'"
-	  	WHERE param="UserAdvManager"
-	  	LIMIT 1
-	  	;';
-		
-		pwg_query($query);
+    conf_update_param('UserAdvManager', pwg_db_real_escape_string($conf['UserAdvManager']));
 
     //Email confirmation settings
     $_POST['UAM_ConfirmMail_ReMail_Txt1'] = str_replace('\"', '"', str_replace("\'", "'", str_replace("\\\\", "\\", $_POST['UAM_ConfirmMail_ReMail_Txt1'])));
@@ -213,15 +206,8 @@ switch ($page['tab'])
       $_POST['UAM_ConfirmMail_Custom_Txt2']);
 
     $conf['UserAdvManager_ConfirmMail'] = serialize($newconf_UAM_ConfirmMail);
-    
-	  $query = '
-      UPDATE '.CONFIG_TABLE.'
-			SET value="'.pwg_db_real_escape_string($conf['UserAdvManager_ConfirmMail']).'"
-			WHERE param="UserAdvManager_ConfirmMail"
-			LIMIT 1
-		;';
 
-		pwg_query($query);
+    conf_update_param('UserAdvManager_ConfirmMail', pwg_db_real_escape_string($conf['UserAdvManager_ConfirmMail']));
 
 		array_push($page['infos'], l10n('UAM_save_config'));
   }
