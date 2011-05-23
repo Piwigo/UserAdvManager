@@ -251,5 +251,7 @@ Plugin Name: UserAdvManager
 -- 2.20.7 : Use pwg_db_real_escape_string() instead of addslashes()
             Database upgrade process simplied (using version_compare() and code refactoring)
             Bug 2253 fixed - New feature to allow comments on pictures only for specific users (who belong to a group) when "comments for all" is disabled
+
+-- 2.20.8 : Remove all options related to comments because they are processed in new "Comments Access Manager" plugin.
 */
 ?>

@@ -26,7 +26,6 @@ $lang['UAM_audit_ok'] = 'Audit OK';
 $lang['UAM_Err_audit_username_char'] = '<b>Ce compte contient un ou des caractères interdits :</b> ';
 $lang['UAM_Err_audit_email_forbidden'] = '<b>Ce compte contient des domaines de messagerie interdit :</b> ';
 $lang['UAM_Err_audit_advise'] = '<b>Vous avez des corrections a faire pour respecter les nouvelles règles que vous avez activées.<br>Utilisez un utilitaire de gestion de base de données pour corriger les comptes utilisateurs directement dans la table ###_USERS si nécessaire.</b><br><br>';
-$lang['UAM_Empty Author'] = 'Le champs auteur doit être rempli pour enregistrer un commentaire.';
 $lang['UAM_reg_err_login2'] = 'le nom utilisateur ne doit pas contenir les caractère suivants : ';
 $lang['UAM_reg_err_login5'] = 'L\'adresse email est issue d\'un prestataire interdit. Les prestataires d\'adresses email interdits à l\'inscription sont : ';
 $lang['UAM_empty_pwd'] = '[mot de passe vide]';
@@ -143,7 +142,6 @@ $lang['UAM_GhostTracker'] = 'Gestion des visiteurs fantômes (Ghost Tracker)';
 $lang['UAM_GhostTracker_true'] = ' Activer. Nombre de jours maximum entre deux visites: ';
 $lang['UAM_GhostTracker_ReminderText'] = 'Texte de rappel personnalisé';
 $lang['UAM_LastVisit'] = ' Suivi des utilisateurs inscrits';
-$lang['UAM_No_Comment_Anonymous'] = 'Commentaires : pseudo obligatoire pour les non-inscrits';
 
 $lang['UAM_Tab_UserManager'] = 'Suivi des validations';
 
@@ -330,11 +328,4 @@ $lang['UAM_Dump_NOK'] = 'Erreur : Impossible de créer le fichier de sauvegarde 
 // --------- Starting below: New or revised $lang ---- from version 2.20.4
 $lang['UAM_HidePassw'] = 'Mot de passe en clair dans le mail d\'information';
 // --------- End: New or revised $lang ---- from version 2.20.4
-
-
-// --------- Starting below: New or revised $lang ---- from version 2.20.7
-$lang['UAM_Group_Comments'] = 'Autoriser les commentaires pour un groupe d\'utilisateurs';
-$lang['UAM_AllowedComm_Group'] = 'Sélectionnez le groupe d\'utilisateurs autorisé à poster des commentaires :';
-$lang['UAM_Not_Allowed_Author'] = 'Désolé, vous n\'êtes pas autorisé à poster un commentaire. Veuillez contacter l\'administrateur du site.';
-// --------- End: New or revised $lang ---- from version 2.20.7
 ?>

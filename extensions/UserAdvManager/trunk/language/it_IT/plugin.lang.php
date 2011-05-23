@@ -26,7 +26,6 @@ $lang['UAM_audit_ok'] = 'Audit OK';
 $lang['UAM_Err_audit_username_char'] = '<b>Questo conto utente utilizza uno o più caratteri vietati:</b> ';
 $lang['UAM_Err_audit_email_forbidden'] = '<b>Questo conto utente usa un dominio d\'Email proibito:</b> ';
 $lang['UAM_Err_audit_advise'] = '<b>Dovete eseguire delle correzioni per rispettare le nuove impostazzioni che avete attivato.<br> Utilizzare un programma per la gestione della base dati per correggere i conti utente direttamente nella tabella ###_USERS';
-$lang['UAM_Empty Author'] = 'Il campo autore deve essere riempito per potere inviare un commento.';
 $lang['UAM_reg_err_login2'] = 'Nome utente non deve contenere in caratteri seguenti: ';
 $lang['UAM_reg_err_login5'] = 'Il tuo provider di posta usa dominio d\'Email proibito. I domini preibiti sono i seguenti: ';
 $lang['UAM_empty_pwd'] = '[password vuota]';
@@ -144,7 +143,6 @@ $lang['UAM_GhostTracker'] = 'Gestione degli ospiti fantasmi (GhostTracker)';
 $lang['UAM_GhostTracker_true'] = ' Attivare. Durata massima di giorni tra due visite: ';
 $lang['UAM_GhostTracker_ReminderText'] = 'Testo di rilancio personalizzato';
 $lang['UAM_LastVisit'] = ' Tracciamento utenti registrati';
-$lang['UAM_No_Comment_Anonymous'] = 'Commenti : Pseudo obbligatorio per gli ospiti';
 
 $lang['UAM_Tab_UserManager'] = 'Tracciamento convalide';
 
@@ -328,11 +326,4 @@ $lang['UAM_Stuffs'] = 'modulo PWG Stuffs';
 // --------- Starting below: New or revised $lang ---- from version 2.20.4
 $lang['UAM_HidePassw'] = 'Password in chiaro nelle informazioni e-mail';
 // --------- End: New or revised $lang ---- from version 2.20.4
-
-
-// --------- Starting below: New or revised $lang ---- from version 2.20.7
-/*TODO*/$lang['UAM_Group_Comments'] = 'Allow comments to a group of users';
-/*TODO*/$lang['UAM_AllowedComm_Group'] = 'Select the group of users allowed to post comments:';
-/*TODO*/$lang['UAM_Not_Allowed_Author'] = 'Sorry, you are not authorized to post a comment. Please contact the site administrator.';
-// --------- End: New or revised $lang ---- from version 2.20.7
 ?>

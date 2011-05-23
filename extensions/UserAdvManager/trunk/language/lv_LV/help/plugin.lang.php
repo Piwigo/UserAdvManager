@@ -52,8 +52,6 @@ $lang['UAM_ghosttrackerTitle_d'] = 'Arī saukts par &quot;Ghost Tracker&quot; (s
 $lang['UAM_gttextTitle'] = 'Ghost Tracker atgādinājuma ziņojums';
 $lang['UAM_lastvisitTitle'] = 'Reģistrēto lietotāju izsekošana (Tracking)';
 $lang['UAM_lastvisitTitle_d'] = 'Šis aktivē tabulu &quot;Tracking users&quot; iezīmē (tabā), kurā reģistrēti galeriju apmeklējušie lietotāji, viņu pēdējā apmeklējuma datums, kā arī galerijā pavadītais laiks (dienās) kopš pēdējā apmeklējuma. Monitoringam ir tīri informatīvs raksturs galerijas administratora vajadzībām.';
-$lang['UAM_commentTitle'] = 'Viesa komentāriem obligāts Nickname (segvārds)';
-$lang['UAM_commentTitle_d'] = 'Ja &quot;Comments for All&quot; (komentāri visiem) ir aktīvs (pilnvaras neriģestrētiem lietotājiem pievienot komentārus), šī opcija dod iespēju piespiest nereģistrētos apmeklētājus lietot segvārdu, lai akceptētu savu komentāru.';
 $lang['UAM_tipsTitle'] = 'Padomi un Piemēri';
 $lang['UAM_tipsTitle_d'] = 'Padomi un dažādi izmantošanas piemēri';
 $lang['UAM_userlistTitle'] = 'Lietotāju izsekošana';
@@ -306,12 +304,4 @@ The recovery from this interface is not supported. Use tools like phpMyAdmin.';
 /*TODO*/$lang['UAM_HidePasswTitle'] = 'Password in clear text in the information email';
 /*TODO*/$lang['UAM_HidePasswTitle_d'] = 'Choose here if you want to display the password chosen by the visitor in the information email. If you enable the option, the password will then appear in clear text. If you disable the password will not appear at all.';
 // --------- End: New or revised $lang ---- from version 2.20.4
-
-
-// --------- Starting below: New or revised $lang ---- from version 2.20.7
-/*TODO*/$lang['UAM_GroupCommTitle'] = 'Allow comments to a group of users';
-/*TODO*/$lang['UAM_GroupCommTitle_d'] = 'This option lets you specify a group of users who will allowed to post comments when the gallery is configured to not allow comments for all.
-<br><br>
-By default, when &quot;comments for all&quot; option is disabled, only registered users can post comments. With this option, you can restrict this behavior by specifying a user group. Thus, only registered users and members of this group may post comments.';
-// --------- End: New or revised $lang ---- from version 2.20.7
 ?>

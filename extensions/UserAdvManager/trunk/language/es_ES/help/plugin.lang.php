@@ -46,8 +46,6 @@ $lang['UAM_ghosttrackerTitle'] = 'Gestión de usuarios fantasmas';
 $lang['UAM_gttextTitle'] = 'Mensaje recordatorio de Ghost Tracker';
 $lang['UAM_lastvisitTitle'] = 'Seguimiento de usuarios registrados';
 $lang['UAM_lastvisitTitle_d'] = 'Esto activa una tabla de &quot;Seguimiento de los usuarios&quot; ficha de matriculaci&oacute;n de los usuarios que aparecen en la galer&iacute;a y la fecha de su &uacute;ltima visita y el tiempo (en d&iacute;as) desde su &uacute;ltima visita. El seguimiento es meramente informativo para el administrador de la galer&iacute;a.';
-$lang['UAM_commentTitle'] = 'Nickname obligatorio para los comentarios de los huéspedes';
-$lang['UAM_commentTitle_d'] = 'Si &quot;Comentarios para Todos&quot; est&aacute; activo (a los visitantes no registrados para enviar comentarios), esta opci&oacute;n permite forzar el visitante no registrado para ingresar un apodo para que se acepta el comentario.';
 $lang['UAM_tipsTitle'] = 'Consejos y ejemplos';
 $lang['UAM_tipsTitle_d'] = 'Consejos y diversos ejemplos de uso de';
 $lang['UAM_userlistTitle'] = 'Seguimiento de los usuarios';
@@ -280,12 +278,4 @@ The recovery from this interface is not supported. Use tools like phpMyAdmin.';
 $lang['UAM_HidePasswTitle'] = 'Contraseña en texto claro en la información del correo electrónico';
 /*TODO*/$lang['UAM_HidePasswTitle_d'] = 'Choose here if you want to display the password chosen by the visitor in the information email. If you enable the option, the password will then appear in clear text. If you disable the password will not appear at all.';
 // --------- End: New or revised $lang ---- from version 2.20.4
-
-
-// --------- Starting below: New or revised $lang ---- from version 2.20.7
-/*TODO*/$lang['UAM_GroupCommTitle'] = 'Allow comments to a group of users';
-/*TODO*/$lang['UAM_GroupCommTitle_d'] = 'This option lets you specify a group of users who will allowed to post comments when the gallery is configured to not allow comments for all.
-<br><br>
-By default, when &quot;comments for all&quot; option is disabled, only registered users can post comments. With this option, you can restrict this behavior by specifying a user group. Thus, only registered users and members of this group may post comments.';
-// --------- End: New or revised $lang ---- from version 2.20.7
 ?>
