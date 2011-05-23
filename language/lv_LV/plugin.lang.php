@@ -26,7 +26,6 @@ $lang['UAM_audit_ok'] = 'Pārbaude OK';
 $lang['UAM_Err_audit_username_char'] = '<b>Šinī kontā izmantotas neatļautas rakstzīmes :</b> ';
 $lang['UAM_Err_audit_email_forbidden'] = '<b>Šinī kontā izmanots neatļauts e-pasta pakalpojuma sniedzējs :</b> ';
 $lang['UAM_Err_audit_advise'] = '<b>Jums ir jāveic korekcijas, lai panāktu atbilstību jaunajiem nosacījumiem, ko esat aktivizējuši.<br> Izmantojiet datu bāzes pārvaldības rīku, lai koriģētu lietotāja kontus tieši tabulā ###_USERS';
-$lang['UAM_Empty Author'] = 'Lai nosūtītu komentāru, ir jābūt aizpildītam autora laukam.';
 $lang['UAM_reg_err_login2'] = 'Lietotājvārdam nav jāsakrīt ar sekojošām rakstzīmēm: ';
 $lang['UAM_reg_err_login5'] = 'Jūsu e-pasta pakalpojumu sniedzējam aizliegta reģistrācija. Aizniegtie e-pasta pakalpojumu sniedzēji ir: ';
 $lang['UAM_empty_pwd'] = '[tukša parole]';
@@ -142,7 +141,6 @@ $lang['UAM_GhostTracker'] = 'Ghost (slēpto) apmeklētāju pārvaldība (Ghost T
 $lang['UAM_GhostTracker_true'] = ' Iespējot. Maksimālais periods dienās starp divām vizītēm: ';
 $lang['UAM_GhostTracker_ReminderText'] = 'Ghost Tracker atgadinājuma ziņojuma pielāgošana';
 $lang['UAM_LastVisit'] = ' Reģistrēto lietotāju izsekošana';
-$lang['UAM_No_Comment_Anonymous'] = 'Viesu komentāriem iesauka (Nickname) obligāta';
 
 $lang['UAM_Tab_UserManager'] = 'Apstiprinājumu izsekošana';
 
@@ -366,11 +364,4 @@ B. Additional Pages spraudnī :<br>
 // --------- Starting below: New or revised $lang ---- from version 2.20.4
 /*TODO*/$lang['UAM_HidePassw'] = 'Clear password in information email';
 // --------- End: New or revised $lang ---- from version 2.20.4
-
-
-// --------- Starting below: New or revised $lang ---- from version 2.20.7
-/*TODO*/$lang['UAM_Group_Comments'] = 'Allow comments to a group of users';
-/*TODO*/$lang['UAM_AllowedComm_Group'] = 'Select the group of users allowed to post comments:';
-/*TODO*/$lang['UAM_Not_Allowed_Author'] = 'Sorry, you are not authorized to post a comment. Please contact the site administrator.';
-// --------- End: New or revised $lang ---- from version 2.20.7
 ?>

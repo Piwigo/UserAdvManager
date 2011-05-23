@@ -46,8 +46,6 @@ The groups are validated for use in conjunction with the &quot;Confirmation of r
 /* TODO */$lang['UAM_gttextTitle'] = 'Ghost Tracker\'s reminder message';
 /* TODO */$lang['UAM_lastvisitTitle'] = 'Tracking registered users';
 /* TODO */$lang['UAM_lastvisitTitle_d'] = 'This activates a table in the &quot;Tracking users&quot; tab which are registered users listed on the gallery and the date of their last visit and time spent (in days) since their last visit. Monitoring is purely informative for the administrator of the gallery.';
-/* TODO */$lang['UAM_commentTitle'] = 'Nickname mandatory for guests comments';
-/* TODO */$lang['UAM_commentTitle_d'] = 'If &quot;Comments for All&quot; is active (authority to unregistered visitors to post comments), this option allows to force the non-registered visitor to enter a nickname that the comment is accepted.';
 /* TODO */$lang['UAM_tipsTitle'] = 'Tips and Examples';
 /* TODO */$lang['UAM_tipsTitle_d'] = 'Tips and various examples of use';
 /* TODO */$lang['UAM_userlistTitle'] = 'Tracking users';
@@ -271,12 +269,4 @@ The recovery from this interface is not supported. Use tools like phpMyAdmin.';
 $lang['UAM_HidePasswTitle'] = 'Password in chiaro nelle informazioni e-mail';
 /*TODO*/$lang['UAM_HidePasswTitle_d'] = 'Choose here if you want to display the password chosen by the visitor in the information email. If you enable the option, the password will then appear in clear text. If you disable the password will not appear at all.';
 // --------- End: New or revised $lang ---- from version 2.20.4
-
-
-// --------- Starting below: New or revised $lang ---- from version 2.20.7
-/*TODO*/$lang['UAM_GroupCommTitle'] = 'Allow comments to a group of users';
-/*TODO*/$lang['UAM_GroupCommTitle_d'] = 'This option lets you specify a group of users who will allowed to post comments when the gallery is configured to not allow comments for all.
-<br><br>
-By default, when &quot;comments for all&quot; option is disabled, only registered users can post comments. With this option, you can restrict this behavior by specifying a user group. Thus, only registered users and members of this group may post comments.';
-// --------- End: New or revised $lang ---- from version 2.20.7
 ?>

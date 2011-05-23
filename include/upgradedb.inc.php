@@ -426,4 +426,69 @@ WHERE param = "UserAdvManager"
 
   conf_update_param('UserAdvManager', pwg_db_real_escape_string($update_conf));
 }
+
+/* upgrade from 2.20.7 to 2.20.8 */
+/* ***************************** */
+function upgrade_2207_2208()
+{
+  global $conf;
+
+  // Upgrading options
+  $query = '
+SELECT value
+  FROM '.CONFIG_TABLE.'
+WHERE param = "UserAdvManager"
+;';
+
+  $result = pwg_query($query);
+  $conf_UAM = pwg_db_fetch_assoc($result);
+    
+  $Newconf_UAM = unserialize($conf_UAM['value']);
+
+  // Refactoring all configuration options
+  $Newconf_UAM[0] = $Newconf_UAM[0];
+  $Newconf_UAM[1] = $Newconf_UAM[1];
+  $Newconf_UAM[2] = $Newconf_UAM[2];
+  $Newconf_UAM[3] = $Newconf_UAM[3];
+  $Newconf_UAM[4] = $Newconf_UAM[4];
+  $Newconf_UAM[5] = $Newconf_UAM[6]; //remove osolete anonymus comments option
+  $Newconf_UAM[6] = $Newconf_UAM[7];
+  $Newconf_UAM[7] = $Newconf_UAM[8];
+  $Newconf_UAM[8] = $Newconf_UAM[9];
+  $Newconf_UAM[9] = $Newconf_UAM[10];
+  $Newconf_UAM[10] = $Newconf_UAM[11];
+  $Newconf_UAM[11] = $Newconf_UAM[12];
+  $Newconf_UAM[12] = $Newconf_UAM[13];
+  $Newconf_UAM[13] = $Newconf_UAM[14];
+  $Newconf_UAM[14] = $Newconf_UAM[15];
+  $Newconf_UAM[15] = $Newconf_UAM[16];
+  $Newconf_UAM[16] = $Newconf_UAM[17];
+  $Newconf_UAM[17] = $Newconf_UAM[18];
+  $Newconf_UAM[18] = $Newconf_UAM[19];
+  $Newconf_UAM[19] = $Newconf_UAM[20];
+  $Newconf_UAM[20] = $Newconf_UAM[21];
+  $Newconf_UAM[21] = $Newconf_UAM[22];
+  $Newconf_UAM[22] = $Newconf_UAM[23];
+  $Newconf_UAM[23] = $Newconf_UAM[24];
+  $Newconf_UAM[24] = $Newconf_UAM[25];
+  $Newconf_UAM[25] = $Newconf_UAM[26];
+  $Newconf_UAM[26] = $Newconf_UAM[27];
+  $Newconf_UAM[27] = $Newconf_UAM[28];
+  $Newconf_UAM[28] = $Newconf_UAM[29];
+  $Newconf_UAM[29] = $Newconf_UAM[30];
+  $Newconf_UAM[30] = $Newconf_UAM[31];
+  $Newconf_UAM[31] = $Newconf_UAM[32];
+  $Newconf_UAM[32] = $Newconf_UAM[33];
+  $Newconf_UAM[33] = $Newconf_UAM[34];
+  $Newconf_UAM[34] = $Newconf_UAM[35];
+  
+  // unset obsolete conf
+  unset ($Newconf_UAM[35]);
+  unset ($Newconf_UAM[36]);
+  unset ($Newconf_UAM[37]);
+  
+  $update_conf = serialize($Newconf_UAM);
+
+  conf_update_param('UserAdvManager', pwg_db_real_escape_string($update_conf));
+}
 ?>

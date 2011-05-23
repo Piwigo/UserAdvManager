@@ -26,7 +26,6 @@ $lang['UAM_audit_ok'] = 'Audit OK';
 $lang['UAM_Err_audit_username_char'] = '<b>This account uses one or more forbidden characters :</b> ';
 $lang['UAM_Err_audit_email_forbidden'] = '<b>This account uses a forbidden email provider :</b> ';
 $lang['UAM_Err_audit_advise'] = '<b>you have to perform corrections to comply with new rules that you have activated.<br>Use a database management utility to correct user accounts directly in the table ###_USERS';
-$lang['UAM_Empty Author'] = 'The author field have to be filled to send a comment.';
 $lang['UAM_reg_err_login2'] = 'Username does not have to match the following characters: ';
 $lang['UAM_reg_err_login5'] = 'Your email provider is banned for registration. Banned email providers are: ';
 $lang['UAM_empty_pwd'] = '[empty password]';
@@ -142,7 +141,6 @@ $lang['UAM_GhostTracker'] = 'Ghost visitors management (Ghost Tracker)';
 $lang['UAM_GhostTracker_true'] = ' Enable. Maximum period in days between two visits: ';
 $lang['UAM_GhostTracker_ReminderText'] = 'Customizing Ghost Tracker\'s reminder message';
 $lang['UAM_LastVisit'] = ' Tracking registered users';
-$lang['UAM_No_Comment_Anonymous'] = 'Nickname mandatory for guests comments';
 
 $lang['UAM_Tab_UserManager'] = 'Tracking validations';
 
@@ -331,11 +329,4 @@ $lang['UAM_Dump_NOK'] = 'Error: Unable to create backup file !';
 // --------- Starting below: New or revised $lang ---- from version 2.20.4
 $lang['UAM_HidePassw'] = 'Password in clear text in the information email';
 // --------- End: New or revised $lang ---- from version 2.20.4
-
-
-// --------- Starting below: New or revised $lang ---- from version 2.20.7
-$lang['UAM_Group_Comments'] = 'Allow comments to a group of users';
-$lang['UAM_AllowedComm_Group'] = 'Select the group of users allowed to post comments:';
-$lang['UAM_Not_Allowed_Author'] = 'Sorry, you are not authorized to post a comment. Please contact the site administrator.';
-// --------- End: New or revised $lang ---- from version 2.20.7
 ?>
