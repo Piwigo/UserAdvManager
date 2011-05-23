@@ -20,7 +20,7 @@ global $user, $lang, $conf, $errors;
 
 $conf_UAM = unserialize($conf['UserAdvManager']);
 
-if (isset($conf_UAM[24]) and $conf_UAM[24] <> '')
+if (isset($conf_UAM[23]) and $conf_UAM[23] <> '')
 {
   // Management of Extension flags ([mygallery], [myurl]) - [username] flag can't be used here
   $patterns[] = '#\[mygallery\]#i';
@@ -30,9 +30,9 @@ if (isset($conf_UAM[24]) and $conf_UAM[24] <> '')
 
   if (function_exists('get_user_language_desc'))
   {
-    $custom_text = get_user_language_desc(preg_replace($patterns, $replacements, $conf_UAM[24]));
+    $custom_text = get_user_language_desc(preg_replace($patterns, $replacements, $conf_UAM[23]));
   }
-  else $custom_text = l10n(preg_replace($patterns, $replacements, $conf_UAM[24]));
+  else $custom_text = l10n(preg_replace($patterns, $replacements, $conf_UAM[23]));
 }
     
 $template->assign(

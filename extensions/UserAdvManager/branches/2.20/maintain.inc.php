@@ -13,7 +13,7 @@ function plugin_install()
 {
 	global $conf;
 	
-  $default1 = array('false','false',-1,-1,-1,'false','false','',-1,'','','false','','false',100,'false','false',10,'Hello [username].
+  $default1 = array('false','false',-1,-1,-1,'false','',-1,'','','false','','false',100,'false','false',10,'Hello [username].
 	
 This is a reminder because a very long time passed since your last visit on our gallery [mygallery]. If you do not want anymore to use your access account, please let us know by replying to this email. Your account will be deleted.
 
@@ -257,6 +257,13 @@ WHERE param = "UserAdvManager_Version"
     /* upgrade from version 2.20.4 to 2.20.7 */
     /* ************************************* */
       upgrade_2204_2207();
+    }
+
+    if (version_compare($conf['UserAdvManager_Version'], '2.20.8') < 0)
+    {
+    /* upgrade from version 2.20.7 to 2.20.8 */
+    /* ************************************* */
+      upgrade_2207_2208();
     }
   }
 

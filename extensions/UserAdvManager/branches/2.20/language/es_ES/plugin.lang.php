@@ -27,7 +27,6 @@ $lang['UAM_audit_ok'] = 'Auditoría OK';
 $lang['UAM_Err_audit_username_char'] = '<b>Esta cuenta utiliza uno o más caracteres prohibidos:</b> ';
 $lang['UAM_Err_audit_email_forbidden'] = '<b>Esta cuenta utiliza un proveedor de correo electrónico  prohibido:</b> ';
 $lang['UAM_Err_audit_advise'] = '<b>Usted tiene que realizar correcciones para cumplir con las nuevas normas que ha activado.<br>Use una herramienta de gestión de base de datos para corregir las cuentas de usuario directamente en la tabla ###_USERS';
-$lang['UAM_Empty Author'] = 'El campo de autor tienen que ser llenados para enviar un comentario.';
 $lang['UAM_reg_err_login2'] = 'El nombre de usuario no puede coincidir con los siguientes caracteres: ';
 $lang['UAM_reg_err_login5'] = 'Su proveedor de correo electrónico está prohibido para el registro. Proveedores de correo electrónico en veda son: ';
 $lang['UAM_empty_pwd'] = '[contraseña vacía]';
@@ -144,7 +143,6 @@ $lang['UAM_GhostTracker'] = 'Gestión de Espíritu visitantes (Tracker Ghost)';
 $lang['UAM_GhostTracker_true'] = ' Activar. Período máximo de días entre dos visitas: ';
 $lang['UAM_GhostTracker_ReminderText'] = 'Personalización del mensaje recordatorio de Ghost Tracker';
 $lang['UAM_LastVisit'] = ' Seguimiento de usuarios registrados';
-$lang['UAM_No_Comment_Anonymous'] = 'Nickname obligatorio para los comentarios de los huéspedes';
 
 $lang['UAM_Tab_UserManager'] = 'Seguimiento de las validaciones';
 
@@ -369,11 +367,4 @@ $lang['UAM_Stuffs'] = 'PWG Stuffs módulo';
 // --------- Starting below: New or revised $lang ---- from version 2.20.4
 $lang['UAM_HidePassw'] = 'Contraseña en texto claro en la información del correo electrónico';
 // --------- End: New or revised $lang ---- from version 2.20.4
-
-
-// --------- Starting below: New or revised $lang ---- from version 2.20.7
-/*TODO*/$lang['UAM_Group_Comments'] = 'Allow comments to a group of users';
-/*TODO*/$lang['UAM_AllowedComm_Group'] = 'Select the group of users allowed to post comments:';
-/*TODO*/$lang['UAM_Not_Allowed_Author'] = 'Sorry, you are not authorized to post a comment. Please contact the site administrator.';
-// --------- End: New or revised $lang ---- from version 2.20.7
 ?>

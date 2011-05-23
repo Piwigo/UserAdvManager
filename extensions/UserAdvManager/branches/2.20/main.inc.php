@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: UserAdvManager
-Version: 2.20.7
+Version: 2.20.8
 Description: Renforcer la gestion des utilisateurs - Enforce users management
 Plugin URI: http://piwigo.org/ext/extension_view.php?eid=216
 Author: Nicco, Eric
@@ -56,11 +56,8 @@ add_event_handler('render_lost_password_mail_content', 'UAM_lost_password_mail_c
 // *** Important ! This is necessary to make email exclusion work in admin's users management panel ***
 add_event_handler('init', 'UAM_InitPage');
 
-// Comment without author
-add_event_handler('user_comment_check', 'UAM_CheckEmptyCommentAuthor', 50, 2);
-
 // PWG_Stuffs module
-if ((isset($conf_UAM[34]) and $conf_UAM[34] == 'true'))
+if ((isset($conf_UAM[33]) and $conf_UAM[33] == 'true'))
 {
   add_event_handler('get_stuffs_modules', 'register_UAM_stuffs_module');
 }
