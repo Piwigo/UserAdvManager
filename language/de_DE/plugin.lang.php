@@ -27,7 +27,6 @@ $lang['UAM_audit_ok'] = 'Audit OK';
 $lang['UAM_Err_audit_username_char'] = '<b>Dieses Konto verwendet eine oder mehrere der verbotenen Zeichen:</b> ';
 $lang['UAM_Err_audit_email_forbidden'] = '<b>Dieses Konto verwendet eine E-Mail-Anbieter sind untersagt:</b> ';
 $lang['UAM_Err_audit_advise'] = '<b>Sie müssen Korrekturen an mit neuen Regeln die Sie aktiviert haben, nachzukommen durchzuführen.<br>Verwenden Sie ein Datenbank-Management-Dienstprogramm, um Benutzer-Accounts direkt in der Tabelle richtig ###_USERS';
-$lang['UAM_Empty Author'] = 'Der Autor Feld müssen ausgefüllt werden um einen Kommentar zu schicken.';
 $lang['UAM_reg_err_login2'] = 'Benutzername muss nicht die folgenden Zeichen übereinstimmen: ';
 $lang['UAM_reg_err_login5'] = 'Ihre E-Mail-Anbieter für die Registrierung ist verboten. Gebannten E-Mail-Anbieter sind: ';
 $lang['UAM_empty_pwd'] = '[leeren Passwort]';
@@ -143,7 +142,6 @@ $lang['UAM_GhostTracker'] = 'Geist Besucher-Management (Geist Tracker)';
 $lang['UAM_GhostTracker_true'] = ' Aktivieren. Maximale Zeit in Tagen zwischen zwei Besuche: ';
 $lang['UAM_GhostTracker_ReminderText'] = 'Anpassen der Geist Tracker Erinnerungs-Nachricht';
 $lang['UAM_LastVisit'] = ' Tracking registrierte Benutzer';
-$lang['UAM_No_Comment_Anonymous'] = 'Nickname obligatorisch für Gäste Kommentare';
 
 $lang['UAM_Tab_UserManager'] = 'Tracking Validierungen';
 
@@ -329,11 +327,4 @@ $lang['UAM_Dump_NOK'] = 'Fehler: Backup-Datei kann nicht erstellt werden !';
 // --------- Starting below: New or revised $lang ---- from version 2.20.4
 $lang['UAM_HidePassw'] = 'Passwort im Klartext in der Informations-E-Mail';
 // --------- End: New or revised $lang ---- from version 2.20.4
-
-
-// --------- Starting below: New or revised $lang ---- from version 2.20.7
-$lang['UAM_Group_Comments'] = 'Kommentare zulassen um eine Gruppe von Benutzern';
-$lang['UAM_AllowedComm_Group'] = 'Wählen Sie die Gruppe von Benutzern gestattet Kommentare anzulegen:';
-$lang['UAM_Not_Allowed_Author'] = 'Entschuldigung, Sie sind nicht befugt einen Kommentar abzugeben. Bitte kontaktieren Sie den Administrator der Website.';
-// --------- End: New or revised $lang ---- from version 2.20.7
 ?>
