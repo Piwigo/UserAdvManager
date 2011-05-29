@@ -89,7 +89,7 @@ VALUES ("UserAdvManager_Redir","0","UAM Redirections")
 	$query = '
 SELECT param
   FROM '.CONFIG_TABLE.'
-WHERE param = "UserAdvManager_Redir"
+WHERE param = "UserAdvManager_Version"
 ;';
   $count = pwg_db_num_rows(pwg_query($query));
   

@@ -253,5 +253,7 @@ Plugin Name: UserAdvManager
             Bug 2253 fixed - New feature to allow comments on pictures only for specific users (who belong to a group) when "comments for all" is disabled
 
 -- 2.20.8 : Remove all options related to comments because they are processed in new "Comments Access Manager" plugin.
+
+-- 2.20.9 : Bug fixed on installation from scratch (unable to save config)
 */
 ?>
