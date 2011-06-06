@@ -255,5 +255,7 @@ Plugin Name: UserAdvManager
 -- 2.20.8 : Remove all options related to comments because they are processed in new "Comments Access Manager" plugin.
 
 -- 2.20.9 : Bug fixed on installation from scratch (unable to save config)
+
+-- 2.20.10 : Bug 2324 fixed - New feature : Add [days] flag to insert maximum numbers of days between two visits set in plugin's GhostTracker in GhostTracker reminder email.
 */
 ?>

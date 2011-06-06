@@ -1054,13 +1054,15 @@ WHERE user_id = '.$user_id.'
 
   if (isset($conf_UAM[17]) and $conf_UAM[17] <> '' and isset($conf_UAM[15]) and $conf_UAM[15] == 'true')
   {
-    // Management of Extension flags ([username], [mygallery], [myurl])
+    // Management of Extension flags ([username], [mygallery], [myurl], [days])
     $patterns[] = '#\[username\]#i';
     $replacements[] = $username;
     $patterns[] = '#\[mygallery\]#i';
     $replacements[] = $conf['gallery_title'];
     $patterns[] = '#\[myurl\]#i';
     $replacements[] = $conf['gallery_url'];
+    $patterns[] = '#\[days\]#i';
+    $replacements[] = $conf_UAM[16];
 
     if (function_exists('get_user_language_desc'))
     {
