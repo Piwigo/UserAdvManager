@@ -183,11 +183,6 @@ $lang['UAM_AdminValidationMail'] = 'Paziņojums par manuālās reģistrācijas a
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.20.0
-/* TODO */$lang['UAM_gttextTitle_d'] = 'Ievadiet tekstu , ko jūs gribat atspoguļot e-pasta atgādinājumā, lai atgādinātu lietotājam apmeklēt jūsu galeriju. (NB: Spraudni instalējot, aizpildītais teksts ir piedāvāts kā paraugs).
-<br><br>
-Further customize the content with special inserted tags : Use <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the name of the destination user of the email. Use <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery. Use <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.
-<br><br>
-Lai izmantotu vairākas valodas, jūs varat lietot Paplašinātā apraksta spraudņa tagus (gadījumā, ja tas ir aktīvs).';
 /* TODO */$lang['UAM_infotxtTitle_d'] = 'Ievadiet teksta, ko jūs gribat atspoguļot informācijas e-vēstulē, ievaddaļu.
 <br><br>
 Further customize the content with special inserted tags : Use <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the name of the destination user of the email. Use <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery. Use <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.
@@ -304,4 +299,13 @@ The recovery from this interface is not supported. Use tools like phpMyAdmin.';
 /*TODO*/$lang['UAM_HidePasswTitle'] = 'Password in clear text in the information email';
 /*TODO*/$lang['UAM_HidePasswTitle_d'] = 'Choose here if you want to display the password chosen by the visitor in the information email. If you enable the option, the password will then appear in clear text. If you disable the password will not appear at all.';
 // --------- End: New or revised $lang ---- from version 2.20.4
+
+
+// --------- Starting below: New or revised $lang ---- from version 2.20.10
+/* TODO */$lang['UAM_gttextTitle_d'] = 'Ievadiet tekstu , ko jūs gribat atspoguļot e-pasta atgādinājumā, lai atgādinātu lietotājam apmeklēt jūsu galeriju. (NB: Spraudni instalējot, aizpildītais teksts ir piedāvāts kā paraugs).
+<br><br>
+Further customize the content with special inserted tags : Use <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the name of the destination user of the email. Use <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery. Use <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options. Use <b style=&quot;color: red;&quot;>[days]</b> to insert the maximum numbers of days between two visits.
+<br><br>
+Lai izmantotu vairākas valodas, jūs varat lietot Paplašinātā apraksta spraudņa tagus (gadījumā, ja tas ir aktīvs).';
+// --------- End: New or revised $lang ---- from version 2.20.10
 ?>
