@@ -158,11 +158,6 @@ $lang['UAM_AdminValidationMail'] = 'Notification de validation d\'inscription ma
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.20.0
-$lang['UAM_gttextTitle_d'] = 'Saisissez ici le texte qui apparaîtra dans l\'email de rappel pour inciter l\'utilisateur à revenir visiter votre galerie (NB: Le texte pré-renseigné à l\'installation du plugin est donné à titre d\'exemple).
-<br><br>
-Personnalisez encore plus le contenu avec les balises d\'insertion spéciales : Utilisez la balise <b style=&quot;color: red;&quot;>[username]</b> pour insérer automatiquement le nom de l\'utilisateur destinataire de l\'email. Utilisez la balise <b style=&quot;color: red;&quot;>[mygallery]</b> pour insérer le titre de votre galerie. Utilisez la balise <b style=&quot;color: red;&quot;>[myurl]</b> pour insérer l\'URL de votre galerie si renseigné dans les options de configuration de Piwigo.
-<br><br>
-Pour une utilisation multi-langues, vous pouvez utiliser les balises [lang] du plugin Extended Description si celui-ci est actif.';
 $lang['UAM_infotxtTitle_d'] = 'Saisissez ici le texte d\'introduction personnalisé qui apparaîtra dans l\'email d\'information.
 <br><br>
 Personnalisez encore plus le contenu avec les balises d\'insertion spéciales : Utilisez la balise <b style=&quot;color: red;&quot;>[username]</b> pour insérer automatiquement le nom de l\'utilisateur destinataire de l\'email. Utilisez la balise <b style=&quot;color: red;&quot;>[mygallery]</b> pour insérer le titre de votre galerie. Utilisez la balise <b style=&quot;color: red;&quot;>[myurl]</b> pour insérer l\'URL de votre galerie si renseigné dans les options de configuration de Piwigo.
@@ -278,4 +273,13 @@ La restauration à partir de cette interface n\'est pas prise en charge. Utilise
 $lang['UAM_HidePasswTitle'] = 'Mot de passe en clair dans le mail d\'information';
 $lang['UAM_HidePasswTitle_d'] = 'Choisissez ici si vous souhaitez faire afficher le mot de passe choisi par le visiteur dans le mail d\'information. Si vous activez l\'option, le mot de passe apparaitra alors en clair. Si vous la désactivez, le mot de passe n\'apparaitra pas du tout.';
 // --------- End: New or revised $lang ---- from version 2.20.4
+
+
+// --------- Starting below: New or revised $lang ---- from version 2.20.10
+$lang['UAM_gttextTitle_d'] = 'Saisissez ici le texte qui apparaîtra dans l\'email de rappel pour inciter l\'utilisateur à revenir visiter votre galerie (NB: Le texte pré-renseigné à l\'installation du plugin est donné à titre d\'exemple).
+<br><br>
+Personnalisez encore plus le contenu avec les balises d\'insertion spéciales : Utilisez la balise <b style=&quot;color: red;&quot;>[username]</b> pour insérer automatiquement le nom de l\'utilisateur destinataire de l\'email. Utilisez la balise <b style=&quot;color: red;&quot;>[mygallery]</b> pour insérer le titre de votre galerie. Utilisez la balise <b style=&quot;color: red;&quot;>[myurl]</b> pour insérer l\'URL de votre galerie si renseigné dans les options de configuration de Piwigo. Utilisez la balise <b style=&quot;color: red;&quot;>[days]</b> pour insérer automatiquement le nombre de jour maximum entre deux visites.
+<br><br>
+Pour une utilisation multi-langues, vous pouvez utiliser les balises [lang] du plugin Extended Description si celui-ci est actif.';
+// --------- End: New or revised $lang ---- from version 2.20.10
 ?>
