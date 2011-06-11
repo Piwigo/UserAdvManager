@@ -364,4 +364,9 @@ B. Additional Pages spraudnī :<br>
 // --------- Starting below: New or revised $lang ---- from version 2.20.4
 /*TODO*/$lang['UAM_HidePassw'] = 'Clear password in information email';
 // --------- End: New or revised $lang ---- from version 2.20.4
+
+
+// --------- Starting below: New or revised $lang ---- from version 2.20.11
+/*TODO*/$lang['UAM_Error_Using_illegal_flag'] = 'Syntax error ! The [Kdays] AutoText flag is used as the "Reģistrācijas apstiprināšanas limita robežlīnija" option was not activated. Please activate the option or correct the text field(s) colored in red.';
+// --------- End: New or revised $lang ---- from version 2.20.11
 ?>

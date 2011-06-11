@@ -329,4 +329,9 @@ $lang['UAM_Dump_NOK'] = 'Error: Unable to create backup file !';
 // --------- Starting below: New or revised $lang ---- from version 2.20.4
 $lang['UAM_HidePassw'] = 'Password in clear text in the information email';
 // --------- End: New or revised $lang ---- from version 2.20.4
+
+
+// --------- Starting below: New or revised $lang ---- from version 2.20.11
+$lang['UAM_Error_Using_illegal_flag'] = 'Syntax error ! The [Kdays] AutoText flag is used as the "Deadline for registration validation limited" option was not activated. Please activate the option or correct the text field(s) colored in red.';
+// --------- End: New or revised $lang ---- from version 2.20.11
 ?>

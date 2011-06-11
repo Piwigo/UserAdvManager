@@ -134,7 +134,7 @@ function uam_blockToggleDisplay( headerId, contentId )
           <br><br>
           </li>
 
-          {if $UAM_ERROR_REPORTS4}     
+          {if $UAM_ERROR_REPORTS1}     
             <div id="uam_leftmargin">
               <textarea class="uam_textfields" name="UAM_MailExclusion_List" id="UAM_MailExclusion_List" rows="3" style="color: red" {$TAG_INPUT_ENABLED}>{$UAM_MAILEXCLUSION_LIST}</textarea>
             </div>
@@ -282,7 +282,11 @@ function uam_blockToggleDisplay( headerId, contentId )
                 {'UAM_ConfirmMail_Text'|@translate}
               </label>
             <br><br>
+            {if $UAM_ERROR_REPORTS2}
+                <textarea class="uam_textfields" name="UAM_ConfirmMail_Text" id="UAM_ConfirmMail_Text" rows="10" style="color: red" {$TAG_INPUT_ENABLED}>{$UAM_CONFIRMMAIL_TEXT}</textarea>
+            {else}
                 <textarea class="uam_textfields" name="UAM_ConfirmMail_Text" id="UAM_ConfirmMail_Text" rows="10" {$TAG_INPUT_ENABLED}>{$UAM_CONFIRMMAIL_TEXT}</textarea>
+            {/if}
             <br><br>
             </li>
 <!--
@@ -426,7 +430,11 @@ function uam_blockToggleDisplay( headerId, contentId )
                     {'UAM_ConfirmMail_ReMail_Txt1'|@translate}
                   </label>
                 <br><br>
+                {if $UAM_ERROR_REPORTS3}
+                    <textarea class="uam_textfields" name="UAM_ConfirmMail_ReMail_Txt1" id="UAM_ConfirmMail_ReMail_Txt1" rows="10" style="color: red" {$TAG_INPUT_ENABLED}>{$UAM_CONFIRMMAIL_REMAIL_TXT1}</textarea>
+                {else}
                     <textarea class="uam_textfields" name="UAM_ConfirmMail_ReMail_Txt1" id="UAM_ConfirmMail_ReMail_Txt1" rows="10" {$TAG_INPUT_ENABLED}>{$UAM_CONFIRMMAIL_REMAIL_TXT1}</textarea>
+                {/if}
                 <br><br>
                 </li>
 <!--
@@ -442,7 +450,11 @@ function uam_blockToggleDisplay( headerId, contentId )
                     {'UAM_ConfirmMail_ReMail_Txt2'|@translate}
                   </label>
                 <br><br>
+                {if $UAM_ERROR_REPORTS4}
+                    <textarea class="uam_textfields" name="UAM_ConfirmMail_ReMail_Txt2" id="UAM_ConfirmMail_ReMail_Txt2" rows="10" style="color: red" {$TAG_INPUT_ENABLED}>{$UAM_CONFIRMMAIL_REMAIL_TXT2}</textarea>
+                {else}
                     <textarea class="uam_textfields" name="UAM_ConfirmMail_ReMail_Txt2" id="UAM_ConfirmMail_ReMail_Txt2" rows="10" {$TAG_INPUT_ENABLED}>{$UAM_CONFIRMMAIL_REMAIL_TXT2}</textarea>
+                {/if}
                 <br>
                 </li>
 <!--
