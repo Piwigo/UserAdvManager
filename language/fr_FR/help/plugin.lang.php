@@ -158,72 +158,7 @@ $lang['UAM_AdminValidationMail'] = 'Notification de validation d\'inscription ma
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.20.0
-$lang['UAM_infotxtTitle_d'] = 'Saisissez ici le texte d\'introduction personnalisé qui apparaîtra dans l\'email d\'information.
-<br><br>
-Personnalisez encore plus le contenu avec les balises d\'insertion spéciales : Utilisez la balise <b style=&quot;color: red;&quot;>[username]</b> pour insérer automatiquement le nom de l\'utilisateur destinataire de l\'email. Utilisez la balise <b style=&quot;color: red;&quot;>[mygallery]</b> pour insérer le titre de votre galerie. Utilisez la balise <b style=&quot;color: red;&quot;>[myurl]</b> pour insérer l\'URL de votre galerie si renseigné dans les options de configuration de Piwigo.
-<br><br>
-Pour une utilisation multi-langues, vous pouvez utiliser les balises [lang] du plugin Extended Description si celui-ci est actif.';
-$lang['UAM_confirmtxtTitle_d'] = 'Saisissez ici le texte d\'introduction qui apparaîtra dans l\'email de confirmation d\'inscription.
-<br><br>
-Personnalisez encore plus le contenu avec les balises d\'insertion spéciales : Utilisez la balise <b style=&quot;color: red;&quot;>[username]</b> pour insérer automatiquement le nom de l\'utilisateur destinataire de l\'email. Utilisez la balise <b style=&quot;color: red;&quot;>[mygallery]</b> pour insérer le titre de votre galerie. Utilisez la balise <b style=&quot;color: red;&quot;>[myurl]</b> pour insérer l\'URL de votre galerie si renseigné dans les options de configuration de Piwigo.
-<br><br>
-Pour une utilisation multi-langues, vous pouvez utiliser les balises [lang] du plugin Extended Description si celui-ci est actif.';
-$lang['UAM_AdminValidationMail_d'] = 'Lorsqu\'un administrateur ou un webmestre de la galerie valide manuellement une inscription en attente, un email de notification est automatiquement envoyé à l\'utilisateur concerné. Saisissez ici le texte qui apparaîtra dans cet email.
-<br><br>
-Personnalisez encore plus le contenu avec les balises d\'insertion spéciales : Utilisez la balise <b style=&quot;color: red;&quot;>[username]</b> pour insérer automatiquement le nom de l\'utilisateur destinataire de l\'email. Utilisez la balise <b style=&quot;color: red;&quot;>[mygallery]</b> pour insérer le titre de votre galerie. Utilisez la balise <b style=&quot;color: red;&quot;>[myurl]</b> pour insérer l\'URL de votre galerie si renseigné dans les options de configuration de Piwigo.
-<br><br>
-Pour une utilisation multi-langues, vous pouvez utiliser les balises [lang] du plugin Extended Description si celui-ci est actif.';
-$lang['UAM_confirmmail_custom1_d'] = 'Lorsque l\'option &quot;Confirmation d\'inscription&quot; est active, ce champ permet de personnaliser <b><u>le texte d\'acceptation</u></b> de la confirmation d\'inscription sur la page affichée lorsqu\'un utilisateur clique sur le lien de confirmation qu\'il a reçu par email.
-<br><br>
-A l\'installation du plugin, un texte standard est donnée en exemple.
-<br><br>
-Personnalisez encore plus le contenu avec les balises d\'insertion spéciales : Utilisez la balise <b style=&quot;color: red;&quot;>[username]</b> pour insérer automatiquement le nom de l\'utilisateur. Utilisez la balise <b style=&quot;color: red;&quot;>[mygallery]</b> pour insérer le titre de votre galerie. Utilisez la balise <b style=&quot;color: red;&quot;>[myurl]</b> pour insérer l\'URL de votre galerie si renseigné dans les options de configuration de Piwigo.
-<br><br>
-Ce champ est compatible avec l\'extension FCK Editor et, pour une utilisation multi-langues, vous pouvez utiliser les balises [lang] du plugin Extended Description si celui-ci est actif.';
-$lang['UAM_confirmmail_custom2_d'] = 'Lorsque l\'option &quot;Confirmation d\'inscription&quot; est active, ce champ permet de personnaliser <b><u>le texte de rejet</u></b> de la confirmation d\'inscription sur la page affichée lorsqu\'un utilisateur clique sur le lien de confirmation qu\'il a reçu par email.
-<br><br>
-A l\'installation du plugin, un texte standard est donnée en exemple.
-<br><br>
-Personnalisez encore plus le contenu avec les balises d\'insertion spéciales : Utilisez la balise <b style=&quot;color: red;&quot;>[username]</b> pour insérer automatiquement le nom de l\'utilisateur. Utilisez la balise <b style=&quot;color: red;&quot;>[mygallery]</b> pour insérer le titre de votre galerie. Utilisez la balise <b style=&quot;color: red;&quot;>[myurl]</b> pour insérer l\'URL de votre galerie si renseigné dans les options de configuration de Piwigo.
-<br><br>
-Ce champ est compatible avec l\'extension FCK Editor et, pour une utilisation multi-langues, vous pouvez utiliser les balises [lang] du plugin Extended Description si celui-ci est actif.';
-$lang['UAM_remailtxt1Title_d'] = 'Saisissez ici le texte d\'introduction qui apparaîtra dans l\'email de rappel, accompagné d\'une nouvelle clef de validation.
-<br><br>
-Il est vivement conseillé de saisir un texte explicatif; à défaut, le mail de rappel ne comportera que le lien de validation. (NB : Le texte pré-renseigné à l\'installation du plugin n\'est donné qu\'à titre d\'exemple).
-<br><br>
-Personnalisez encore plus le contenu avec les balises d\'insertion spéciales : Utilisez la balise <b style=&quot;color: red;&quot;>[username]</b> pour insérer automatiquement le nom de l\'utilisateur destinataire de l\'email. Utilisez la balise <b style=&quot;color: red;&quot;>[mygallery]</b> pour insérer le titre de votre galerie. Utilisez la balise <b style=&quot;color: red;&quot;>[myurl]</b> pour insérer l\'URL de votre galerie si renseigné dans les options de configuration de Piwigo.
-<br><br>
-Pour une utilisation multi-langues, vous pouvez utiliser les balises [lang] du plugin Extended Description si celui-ci est actif.';
-$lang['UAM_remailtxt2Title_d'] = 'Saisissez ici le texte d\'introduction qui apparaîtra dans l\'email de rappel, sans nouvelle clef de validation.
-<br><br>
-Il est vivement conseillé de saisir un texte explicatif, afin que l\'email ne soit pas vide. (NB : Le texte pré-renseigné à l\'installation du plugin n\'est donné qu\'à titre d\'exemple).
-<br><br>
-Personnalisez encore plus le contenu avec les balises d\'insertion spéciales : Utilisez la balise <b style=&quot;color: red;&quot;>[username]</b> pour insérer automatiquement le nom de l\'utilisateur destinataire de l\'email. Utilisez la balise <b style=&quot;color: red;&quot;>[mygallery]</b> pour insérer le titre de votre galerie. Utilisez la balise <b style=&quot;color: red;&quot;>[myurl]</b> pour insérer l\'URL de votre galerie si renseigné dans les options de configuration de Piwigo.
-<br><br>
-Pour une utilisation multi-langues, vous pouvez utiliser les balises [lang] du plugin Extended Description si celui-ci est actif.';
-$lang['UAM_GTAutoDelTitle_d'] = 'Ceci n\'est valable que lorsque l\'utilisateur dont le compte a expiré déclenche lui même le mécanisme de suppression (cas rare mais possible). Il est alors déconnecté de force de la galerie et redirigé vers une page indiquant la suppression de son compte et, éventuellement, les raisons de cette suppression.
-<br><br>
-Personnalisez encore plus le contenu avec les balises d\'insertion spéciales : Utilisez la balise <b style=&quot;color: red;&quot;>[mygallery]</b> pour insérer le titre de votre galerie. Utilisez la balise <b style=&quot;color: red;&quot;>[myurl]</b> pour insérer l\'URL de votre galerie si renseigné dans les options de configuration de Piwigo. La balise <b style=&quot;color: red;&quot;>[username]</b> n\'est pas disponible ici puisque l\'utilisateur en question a été supprimé.
-<br><br>
-Un texte personnalisé pour cette page de redirection peut être saisi dans le champ ci-dessous qui est compatible avec l\'extension FCK Editor. Pour une utilisation multi-langues, vous pouvez utiliser les balises [lang] du plugin Extended Description si celui-ci est actif.';
-$lang['UAM_GTAutoMailTitle_d'] = 'Lorsqu\'un compte est expiré (changement de groupe / statut rétrogradant le visiteur), un email d\'information peut être envoyé pour préciser les raisons de ce changement et le moyen de recouvrer l\'accès initial à la galerie.
-<br>Pour ce faire, un lien de revalidation de l\'inscription est joint à l\'email (génération automatique d\'une nouvelle clé de validation).<b style=&quot;color: red;&quot;>Si l\'utilisateur a déjà été notifié, son compte est automatiquement détruit.</b> 
-<br><br>
-Saisissez aussi le texte personnalisé qui expliquera les raisons de la rétrogradation et qui accompagnera le lien de validation. Le texte personnalisé n\'est pas obligatoire mais vivement conseillé. En effet, vos visiteurs inscrits n\'apprécieront que moyennement de recevoir un email ne contenant qu\'un simple lien sans plus d\'explications. ;-)
-<br><br>
-Personnalisez encore plus le contenu avec les balises d\'insertion spéciales : Utilisez la balise <b style=&quot;color: red;&quot;>[username]</b> pour insérer automatiquement le nom de l\'utilisateur destinataire de l\'email. Utilisez la balise <b style=&quot;color: red;&quot;>[mygallery]</b> pour insérer le titre de votre galerie. Utilisez la balise <b style=&quot;color: red;&quot;>[myurl]</b> pour insérer l\'URL de votre galerie si renseigné dans les options de configuration de Piwigo.
-<br><br>
-Pour une utilisation multi-langues, vous pouvez utiliser les balises [lang] du plugin Extended Description si celui-ci est actif.
-<br><br>
-<b style=&quot;color: red;&quot;>Attention : L\'emploi de cette fonction est intimement lié à l\'option de confirmation d\'inscription par l\'utilisateur (confirmation par mail) et ne peut pas être activée sans cette option.</b>';
 $lang['UAM_CustomPasswRetrTitle'] = 'Personnaliser le contenu du mail sur mot de passe perdu';
-$lang['UAM_CustomPasswRetrTitle_d'] = 'Par défaut, lorsqu\'un utilisateur a perdu son mot de passe et qu\'il sélectionne l\'option de récupération, il reçoit un email ne contenant que son nom d\'utilisateur et son nouveau mot de passe.
-<br><br>
-Vous pouvez ici ajouter un texte de votre choix qui sera inséré <b><u>avant</u></b> ces informations standards.
-<br><br>
-Personnalisez encore plus le contenu avec les balises d\'insertion spéciales : Utilisez la balise <b style=&quot;color: red;&quot;>[mygallery]</b> pour insérer le titre de votre galerie. Utilisez la balise <b style=&quot;color: red;&quot;>[myurl]</b> pour insérer l\'URL de votre galerie si renseigné dans les options de configuration de Piwigo.
-<br><br>
-Pour une utilisation multi-langues, vous pouvez utiliser les balises [lang] du plugin Extended Description si celui-ci est actif.';
 $lang['UAM_validationlimitTitle_d'] = 'Cette option permet de limiter le nombre de jours pendant lequel un nouvel utilisateur peut valider son inscription. Une fois ce délai expiré, le lien de validation sera invalide, et ne pourra plus être employé.
 <br><br>
 Cette option n\'est utilisable qu\'une fois l\'option &quot;Confirmation d\'inscription&quot; activée.
@@ -243,11 +178,6 @@ $lang['UAM_USRAutoTitle_d'] = 'La gestion automatique des visiteurs non validés
 <br><br>
 - Envoi automatique d\'un message de rappel avec génération d\'une nouvelle clé de validation puis suppression automatique des comptes non validés dans le temps imparti après l\'envoi de la relance -> &quot;Limitation du délai de validation d\'inscription&quot; <b><u>est actif</u></b> et &quot;Mail de rappel aux inscrits non validés&quot; <b><u>est actif</u></b>.';
 $lang['UAM_USRAutoDelTitle'] = 'Message à la suppressions automatiques des comptes';
-$lang['UAM_USRAutoDelTitle_d'] = 'Ceci n\'est valable que lorsque l\'utilisateur dont le compte est à supprimer déclenche lui même le mécanisme de suppression (cas rare mais possible). Il est alors déconnecté de force de la galerie et redirigé vers une page indiquant la suppression de son compte et, éventuellement, les raisons de cette suppression.
-<br><br>
-Un texte pour cette page de redirection est donné à titre d\'exemple, ci-dessous, et peut être personnalisé. Ce champ est compatible avec le plugin FCK Editor. Pour une utilisation multi-langues, vous pouvez utiliser les balises [lang] du plugin Extended Description si celui-ci est actif.
-<br><br>
-Personnalisez encore plus le contenu avec les balises d\'insertion spéciales : Utilisez la balise <b style=&quot;color: red;&quot;>[mygallery]</b> pour insérer le titre de votre galerie. Utilisez la balise <b style=&quot;color: red;&quot;>[myurl]</b> pour insérer l\'URL de votre galerie si renseigné dans les options de configuration de Piwigo. La balise <b style=&quot;color: red;&quot;>[username]</b> n\'est pas disponible ici puisque l\'utilisateur en question a été supprimé.';
 $lang['UAM_USRAutoMailTitle'] = 'Message de rappel automatique';
 $lang['UAM_USRAutoMailTitle_d'] = 'Lorsque activée, cette fonction enverra automatiquement le contenu personnalisé dans &quot;Message de rappel avec regénération de clé&quot; aux visiteurs répondant au critère.';
 $lang['UAM_StuffsTitle'] = 'Module PWG Stuffs';
@@ -275,11 +205,120 @@ $lang['UAM_HidePasswTitle_d'] = 'Choisissez ici si vous souhaitez faire afficher
 // --------- End: New or revised $lang ---- from version 2.20.4
 
 
-// --------- Starting below: New or revised $lang ---- from version 2.20.10
+// --------- Starting below: New or revised $lang ---- from version 2.20.11
 $lang['UAM_gttextTitle_d'] = 'Saisissez ici le texte qui apparaîtra dans l\'email de rappel pour inciter l\'utilisateur à revenir visiter votre galerie (NB: Le texte pré-renseigné à l\'installation du plugin est donné à titre d\'exemple).
 <br><br>
-Personnalisez encore plus le contenu avec les balises d\'insertion spéciales : Utilisez la balise <b style=&quot;color: red;&quot;>[username]</b> pour insérer automatiquement le nom de l\'utilisateur destinataire de l\'email. Utilisez la balise <b style=&quot;color: red;&quot;>[mygallery]</b> pour insérer le titre de votre galerie. Utilisez la balise <b style=&quot;color: red;&quot;>[myurl]</b> pour insérer l\'URL de votre galerie si renseigné dans les options de configuration de Piwigo. Utilisez la balise <b style=&quot;color: red;&quot;>[days]</b> pour insérer automatiquement le nombre de jour maximum entre deux visites.
+Personnalisez encore plus le contenu avec les balises d\'insertion spéciales :<br>
+- <b style=&quot;color: red;&quot;>[username]</b> pour insérer automatiquement le nom de l\'utilisateur destinataire de l\'email.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> pour insérer le titre de votre galerie.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> pour insérer l\'URL de votre galerie si renseigné dans les options de configuration de Piwigo.<br>
+- <b style=&quot;color: red;&quot;>[days]</b> pour insérer automatiquement le nombre de jour maximum entre deux visites.
 <br><br>
 Pour une utilisation multi-langues, vous pouvez utiliser les balises [lang] du plugin Extended Description si celui-ci est actif.';
-// --------- End: New or revised $lang ---- from version 2.20.10
+$lang['UAM_confirmtxtTitle_d'] = 'Saisissez ici le texte d\'introduction qui apparaîtra dans l\'email de confirmation d\'inscription.
+<br><br>
+Personnalisez encore plus le contenu avec les balises d\'insertion spéciales :<br>
+- <b style=&quot;color: red;&quot;>[username]</b> pour insérer automatiquement le nom de l\'utilisateur destinataire de l\'email.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> pour insérer le titre de votre galerie.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> pour insérer l\'URL de votre galerie si renseigné dans les options de configuration de Piwigo.<br>
+- <b style=&quot;color: red;&quot;>[Kdays]</b> pour insérer le nombre de jour de validité de la clé d\'inscription (l\'option &quot;Limitation du délai de validation d\'inscription&quot; doit être activée).
+<br><br>
+Pour une utilisation multi-langues, vous pouvez utiliser les balises [lang] du plugin Extended Description si celui-ci est actif.';
+$lang['UAM_remailtxt1Title_d'] = 'Saisissez ici le texte d\'introduction qui apparaîtra dans l\'email de rappel, accompagné d\'une nouvelle clef de validation.
+<br><br>
+Il est vivement conseillé de saisir un texte explicatif; à défaut, le mail de rappel ne comportera que le lien de validation. (NB : Le texte pré-renseigné à l\'installation du plugin n\'est donné qu\'à titre d\'exemple).
+<br><br>
+Personnalisez encore plus le contenu avec les balises d\'insertion spéciales :<br>
+- <b style=&quot;color: red;&quot;>[username]</b> pour insérer automatiquement le nom de l\'utilisateur destinataire de l\'email.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> pour insérer le titre de votre galerie.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> pour insérer l\'URL de votre galerie si renseigné dans les options de configuration de Piwigo.<br>
+- <b style=&quot;color: red;&quot;>[Kdays]</b> pour insérer le nombre de jour de validité de la clé d\'inscription (l\'option &quot;Limitation du délai de validation d\'inscription&quot; doit être activée).
+<br><br>
+Pour une utilisation multi-langues, vous pouvez utiliser les balises [lang] du plugin Extended Description si celui-ci est actif.';
+$lang['UAM_remailtxt2Title_d'] = 'Saisissez ici le texte d\'introduction qui apparaîtra dans l\'email de rappel, sans nouvelle clef de validation.
+<br><br>
+Il est vivement conseillé de saisir un texte explicatif, afin que l\'email ne soit pas vide. (NB : Le texte pré-renseigné à l\'installation du plugin n\'est donné qu\'à titre d\'exemple).
+<br><br>
+Personnalisez encore plus le contenu avec les balises d\'insertion spéciales :<br>
+- <b style=&quot;color: red;&quot;>[username]</b> pour insérer automatiquement le nom de l\'utilisateur destinataire de l\'email.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> pour insérer le titre de votre galerie.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> pour insérer l\'URL de votre galerie si renseigné dans les options de configuration de Piwigo.<br>
+- <b style=&quot;color: red;&quot;>[Kdays]</b> pour insérer le nombre de jour de validité de la clé d\'inscription (l\'option &quot;Limitation du délai de validation d\'inscription&quot; doit être activée).
+<br><br>
+Pour une utilisation multi-langues, vous pouvez utiliser les balises [lang] du plugin Extended Description si celui-ci est actif.';
+$lang['UAM_infotxtTitle_d'] = 'Saisissez ici le texte d\'introduction personnalisé qui apparaîtra dans l\'email d\'information.
+<br><br>
+Personnalisez encore plus le contenu avec les balises d\'insertion spéciales :<br>
+- <b style=&quot;color: red;&quot;>[username]</b> pour insérer automatiquement le nom de l\'utilisateur destinataire de l\'email.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> pour insérer le titre de votre galerie.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> pour insérer l\'URL de votre galerie si renseigné dans les options de configuration de Piwigo.
+<br><br>
+Pour une utilisation multi-langues, vous pouvez utiliser les balises [lang] du plugin Extended Description si celui-ci est actif.';
+$lang['UAM_AdminValidationMail_d'] = 'Lorsqu\'un administrateur ou un webmestre de la galerie valide manuellement une inscription en attente, un email de notification est automatiquement envoyé à l\'utilisateur concerné. Saisissez ici le texte qui apparaîtra dans cet email.
+<br><br>
+Personnalisez encore plus le contenu avec les balises d\'insertion spéciales :<br>
+- <b style=&quot;color: red;&quot;>[username]</b> pour insérer automatiquement le nom de l\'utilisateur destinataire de l\'email.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> pour insérer le titre de votre galerie.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> pour insérer l\'URL de votre galerie si renseigné dans les options de configuration de Piwigo.
+<br><br>
+Pour une utilisation multi-langues, vous pouvez utiliser les balises [lang] du plugin Extended Description si celui-ci est actif.';
+$lang['UAM_confirmmail_custom1_d'] = 'Lorsque l\'option &quot;Confirmation d\'inscription&quot; est active, ce champ permet de personnaliser <b><u>le texte d\'acceptation</u></b> de la confirmation d\'inscription sur la page affichée lorsqu\'un utilisateur clique sur le lien de confirmation qu\'il a reçu par email.
+<br><br>
+A l\'installation du plugin, un texte standard est donnée en exemple.
+<br><br>
+Personnalisez encore plus le contenu avec les balises d\'insertion spéciales :<br>
+- <b style=&quot;color: red;&quot;>[username]</b> pour insérer automatiquement le nom de l\'utilisateur.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> pour insérer le titre de votre galerie.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> pour insérer l\'URL de votre galerie si renseigné dans les options de configuration de Piwigo.
+<br><br>
+Ce champ est compatible avec l\'extension FCK Editor et, pour une utilisation multi-langues, vous pouvez utiliser les balises [lang] du plugin Extended Description si celui-ci est actif.';
+$lang['UAM_confirmmail_custom2_d'] = 'Lorsque l\'option &quot;Confirmation d\'inscription&quot; est active, ce champ permet de personnaliser <b><u>le texte de rejet</u></b> de la confirmation d\'inscription sur la page affichée lorsqu\'un utilisateur clique sur le lien de confirmation qu\'il a reçu par email.
+<br><br>
+A l\'installation du plugin, un texte standard est donnée en exemple.
+<br><br>
+Personnalisez encore plus le contenu avec les balises d\'insertion spéciales :<br>
+- <b style=&quot;color: red;&quot;>[username]</b> pour insérer automatiquement le nom de l\'utilisateur.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> pour insérer le titre de votre galerie.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> pour insérer l\'URL de votre galerie si renseigné dans les options de configuration de Piwigo.
+<br><br>
+Ce champ est compatible avec l\'extension FCK Editor et, pour une utilisation multi-langues, vous pouvez utiliser les balises [lang] du plugin Extended Description si celui-ci est actif.';
+$lang['UAM_GTAutoDelTitle_d'] = 'Ceci n\'est valable que lorsque l\'utilisateur dont le compte a expiré déclenche lui même le mécanisme de suppression (cas rare mais possible). Il est alors déconnecté de force de la galerie et redirigé vers une page indiquant la suppression de son compte et, éventuellement, les raisons de cette suppression.
+<br><br>
+Personnalisez encore plus le contenu avec les balises d\'insertion spéciales :<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> pour insérer le titre de votre galerie.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> pour insérer l\'URL de votre galerie si renseigné dans les options de configuration de Piwigo.<br>
+<b style=&quot;color: red;&quot;>[username]</b> n\'est pas disponible ici puisque l\'utilisateur en question a été supprimé.
+<br><br>
+Un texte personnalisé pour cette page de redirection peut être saisi dans le champ ci-dessous qui est compatible avec l\'extension FCK Editor. Pour une utilisation multi-langues, vous pouvez utiliser les balises [lang] du plugin Extended Description si celui-ci est actif.';
+$lang['UAM_GTAutoMailTitle_d'] = 'Lorsqu\'un compte est expiré (changement de groupe / statut rétrogradant le visiteur), un email d\'information peut être envoyé pour préciser les raisons de ce changement et le moyen de recouvrer l\'accès initial à la galerie.
+<br>Pour ce faire, un lien de revalidation de l\'inscription est joint à l\'email (génération automatique d\'une nouvelle clé de validation).<b style=&quot;color: red;&quot;>Si l\'utilisateur a déjà été notifié, son compte est automatiquement détruit.</b> 
+<br><br>
+Saisissez aussi le texte personnalisé qui expliquera les raisons de la rétrogradation et qui accompagnera le lien de validation. Le texte personnalisé n\'est pas obligatoire mais vivement conseillé. En effet, vos visiteurs inscrits n\'apprécieront que moyennement de recevoir un email ne contenant qu\'un simple lien sans plus d\'explications. ;-)
+<br><br>
+Personnalisez encore plus le contenu avec les balises d\'insertion spéciales :<br>
+- <b style=&quot;color: red;&quot;>[username]</b> pour insérer automatiquement le nom de l\'utilisateur destinataire de l\'email.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> pour insérer le titre de votre galerie.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> pour insérer l\'URL de votre galerie si renseigné dans les options de configuration de Piwigo.
+<br><br>
+Pour une utilisation multi-langues, vous pouvez utiliser les balises [lang] du plugin Extended Description si celui-ci est actif.
+<br><br>
+<b style=&quot;color: red;&quot;>Attention : L\'emploi de cette fonction est intimement lié à l\'option de confirmation d\'inscription par l\'utilisateur (confirmation par mail) et ne peut pas être activée sans cette option.</b>';
+$lang['UAM_CustomPasswRetrTitle_d'] = 'Par défaut, lorsqu\'un utilisateur a perdu son mot de passe et qu\'il sélectionne l\'option de récupération, il reçoit un email ne contenant que son nom d\'utilisateur et son nouveau mot de passe.
+<br><br>
+Vous pouvez ici ajouter un texte de votre choix qui sera inséré <b><u>avant</u></b> ces informations standards.
+<br><br>
+Personnalisez encore plus le contenu avec les balises d\'insertion spéciales :<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> pour insérer le titre de votre galerie.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> pour insérer l\'URL de votre galerie si renseigné dans les options de configuration de Piwigo.
+<br><br>
+Pour une utilisation multi-langues, vous pouvez utiliser les balises [lang] du plugin Extended Description si celui-ci est actif.';
+$lang['UAM_USRAutoDelTitle_d'] = 'Ceci n\'est valable que lorsque l\'utilisateur dont le compte est à supprimer déclenche lui même le mécanisme de suppression (cas rare mais possible). Il est alors déconnecté de force de la galerie et redirigé vers une page indiquant la suppression de son compte et, éventuellement, les raisons de cette suppression.
+<br><br>
+Un texte pour cette page de redirection est donné à titre d\'exemple, ci-dessous, et peut être personnalisé. Ce champ est compatible avec le plugin FCK Editor. Pour une utilisation multi-langues, vous pouvez utiliser les balises [lang] du plugin Extended Description si celui-ci est actif.
+<br><br>
+Personnalisez encore plus le contenu avec les balises d\'insertion spéciales :<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> pour insérer le titre de votre galerie.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> pour insérer l\'URL de votre galerie si renseigné dans les options de configuration de Piwigo.<br>
+La balise <b style=&quot;color: red;&quot;>[username]</b> n\'est pas disponible ici puisque l\'utilisateur en question a été supprimé.';
+// --------- End: New or revised $lang ---- from version 2.20.11
 ?>
