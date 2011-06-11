@@ -158,11 +158,6 @@ $lang['UAM_AdminValidationMail'] = 'Notificación de la validación manual de re
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.20.0
-/*TODO*/$lang['UAM_gttextTitle_d'] = 'Introduzca el texto que desea que aparezca en el recordatorio por correo electrónico para pedir al usuario volver a visitar su galería (Nota: El texto pre-llenado con la instalación del plugin se presenta como un ejemplo).
-<br><br>
-Further customize the content with special inserted tags : Use <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the name of the destination user of the email. Use <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery. Use <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.
-<br><br>
-Para utilizar varios idiomas, puede utilizar las etiquetas para el plugin Extended description si está activo.';
 /*TODO*/$lang['UAM_infotxtTitle_d'] = 'Introduzca el texto de introducción que desea ver en el correo electrónico de la información.
 <br><br>
 Further customize the content with special inserted tags : Use <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the name of the destination user of the email. Use <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery. Use <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.
@@ -278,4 +273,13 @@ The recovery from this interface is not supported. Use tools like phpMyAdmin.';
 $lang['UAM_HidePasswTitle'] = 'Contraseña en texto claro en la información del correo electrónico';
 /*TODO*/$lang['UAM_HidePasswTitle_d'] = 'Choose here if you want to display the password chosen by the visitor in the information email. If you enable the option, the password will then appear in clear text. If you disable the password will not appear at all.';
 // --------- End: New or revised $lang ---- from version 2.20.4
+
+
+// --------- Starting below: New or revised $lang ---- from version 2.20.10
+/*TODO*/$lang['UAM_gttextTitle_d'] = 'Introduzca el texto que desea que aparezca en el recordatorio por correo electrónico para pedir al usuario volver a visitar su galería (Nota: El texto pre-llenado con la instalación del plugin se presenta como un ejemplo).
+<br><br>
+Further customize the content with special inserted tags : Use <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the name of the destination user of the email. Use <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery. Use <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options. Use <b style=&quot;color: red;&quot;>[days]</b> to insert the maximum numbers of days between two visits.
+<br><br>
+Para utilizar varios idiomas, puede utilizar las etiquetas para el plugin Extended description si está activo.';
+// --------- End: New or revised $lang ---- from version 2.20.10
 ?>
