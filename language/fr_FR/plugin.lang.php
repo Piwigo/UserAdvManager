@@ -328,4 +328,8 @@ $lang['UAM_Dump_NOK'] = 'Erreur : Impossible de créer le fichier de sauvegarde 
 // --------- Starting below: New or revised $lang ---- from version 2.20.4
 $lang['UAM_HidePassw'] = 'Mot de passe en clair dans le mail d\'information';
 // --------- End: New or revised $lang ---- from version 2.20.4
+
+// --------- Starting below: New or revised $lang ---- from version 2.20.11
+$lang['UAM_Error_Using_illegal_flag'] = 'Erreur de syntaxe ! Le drapeau d\'insertion automatique [Kdays] est utilisé alors que l\'option "Limitation du délai de validation d\'inscription" n\'a pas été activée. Veuillez activer l\'option ou corriger le(s) champ(s) marqué(s) en rouge.';
+// --------- End: New or revised $lang ---- from version 2.20.11
 ?>
