@@ -162,72 +162,7 @@ $lang['UAM_AdminValidationMail'] = 'Notification of manual registration validati
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.20.0
-$lang['UAM_infotxtTitle_d'] = 'Enter the introductory text that you want to appear in the information email.
-<br><br>
-Further customize the content with special inserted tags : Use <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the name of the destination user of the email. Use <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery. Use <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.
-<br><br>
-To use multiple languages, you can use the Extended description plugin\'s tags if it is active.';
-$lang['UAM_confirmtxtTitle_d'] = 'Enter the introductory text that you want to appear in the email confirmation of registration.
-<br><br>
-Further customize the content with special inserted tags : Use <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the name of the destination user of the email. Use <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery. Use <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.
-<br><br>
-To use multiple languages, you can use the Extended description plugin\'s tags if it is active.';
-$lang['UAM_AdminValidationMail_d'] = 'When an administrator or Webmaster of the gallery manually valid registration pending, a notification email is automatically sent to the user. Enter here the text that appears in this email.
-<br><br>
-Further customize the content with special inserted tags : Use <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the name of the destination user of the email. Use <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery. Use <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.
-<br><br>
-To use multiple languages, you can use the Extended description plugin\'s tags if it is active.';
-$lang['UAM_confirmmail_custom1_d'] = 'When the option &quot;Confirmation of registration&quot; is active, this field allows you to customize the <b><u>acceptance text</u></b> on the registration confirmation page displayed when user clicks the confirmation link that was received by email.
-<br><br>
-After installing the plugin, a standard text is set as an example.
-<br><br>
-Further customize the content with special inserted tags : Use <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the related user name. Use <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery. Use <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.
-<br><br>
-This field is compatible with the FCK Editor and, for multi-languages, you can use the tags [lang] of the plugin Extended description if it\'s active.';
-$lang['UAM_confirmmail_custom2_d'] = 'When the option &quot;Confirmation of registration&quot; is active, this field allows you to customize the <b><u>rejectance text</u></b> on the registration confirmation page displayed when user clicks the confirmation link that was received by email.
-<br><br>
-After installing the plugin, a standard text is set as an example.
-<br><br>
-Further customize the content with special inserted tags : Use <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the related user name. Use <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery. Use <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.
-<br><br>
-This field is compatible with the FCK Editor and, for multi-languages, you can use the tags [lang] of the plugin Extended description if it\'s active.';
-$lang['UAM_remailtxt1Title_d'] = 'Enter the introductory text that you want to appear in the reminder email, in addition to the validation key regenerated.
-<br><br>
-If left blank, the mail reminder will include only the validation link. It is therefore strongly advised to take a little explanatory text. (NB: The text pre-filled with the installation of the plugin is provided as an example).
-<br><br>
-Further customize the content with special inserted tags : Use <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the name of the destination user of the email. Use <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery. Use <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.
-<br><br>
-To use multiple languages, you can use the Extended description plugin\'s tags if it is active.';
-$lang['UAM_remailtxt2Title_d'] = 'Enter the introductory text that you want to appear in the reminder email without a validation key regenerated.
-<br><br>
-If left blank, the mail reminder will be empty. It is therefore strongly advised to take a little explanatory text. (NB: The text pre-filled with the installation of the plugin is provided as an example).
-<br><br>
-Further customize the content with special inserted tags : Use <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the name of the destination user of the email. Use <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery. Use <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.
-<br><br>
-To use multiple languages, you can use the Extended description plugin\'s tags if it is active.';
-$lang['UAM_GTAutoDelTitle_d'] = 'This is only valid when the user whose account has expired itself triggers the deletion mechanism (rare but possible). he\'s then disconnected of the gallery and redirected to a page showing the deletion of his account and, possibly, the reasons for this deletion.
-<br><br>
-Further customize the content with special inserted tags : Use <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery. Use <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options. <b style=&quot;color: red;&quot;>[username]</b> is not available here because concerned user has been deleted.
-<br><br>
-Custom text for the redirect page can be entered in this field that is compatible with the FCK Editor and, for multi-languages, you can use the tags [lang] of the plugin Extended description if it\'s active.';
-$lang['UAM_GTAutoMailTitle_d'] = 'When an account is expired (group / status change demoting the visitor), an email information can be sent to clarify the reasons for this change and the means to recover the initial access to the gallery.
-<br>To do this, a link to revalidation of registration is attached to the email (automatic generation of a new validation key).<b style=&quot;color: red;&quot;>If the user has already been notified, his account is automatically destroyed.</b> 
-<br><br>
-Enter the custom text that also explain the reasons for the demotion, to accompany the validation link. The custom text is not mandatory but strongly recommended. In fact, your visitors will not appreciate receiving an email containing only a single link without further explanation. ;-)
-<br><br>
-Further customize the content with special inserted tags : Use <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the name of the destination user of the email. Use <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery. Use <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.
-<br><br>
-To use multiple languages, you can use the Extended description plugin\'s tags if it is active.
-<br><br>
-<b style=&quot;color: red;&quot;>Warning: The use of this function is intimately associated with the confirmation of registration by the user (confirmation by mail) and can not be activated without this option.</b>';
 $lang['UAM_CustomPasswRetrTitle'] = 'Customize lost password email content';
-$lang['UAM_CustomPasswRetrTitle_d'] = 'By default, when a user has lost his password and selects the option of recovery, he receives an email containing only his username and his new password.
-<br><br>
-Here, you can add text of your choice to be inserted <b><u>before</u></b> the standard information.
-<br><br>
-Further customize the content with special inserted tags : Use <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery. Use <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.
-<br><br>
-To use multiple languages, you can use the Extended description plugin\'s tags if it is active.';
 $lang['UAM_validationlimitTitle_d'] = 'This option allows to limit the validity of key validation email sent to new registrants. Visitors who register will have x days of time to validate their registration. After this period the validation link will expire.
 <br><br>
 This option is used in conjunction with the &quot;Confirmation of registration&quot;
@@ -247,11 +182,6 @@ $lang['UAM_USRAutoTitle_d'] = 'Automatic handling of unvalidated visitors is tri
 <br><br>
 - Automatically sending a reminder message with a new generation of validation key and automatic deletion of accounts not validated in the time after sending the reminder -> &quot;Deadline for registration validation limited&quot; <b><u>enabled</u></b> et &quot;Remind unvalidated users&quot; <b><u>enabled</u></b>.';
 $lang['UAM_USRAutoDelTitle'] = 'Custom message on deleted account';
-$lang['UAM_USRAutoDelTitle_d'] = 'This is only valid when the user whose account has expired itself triggers the deletion mechanism (rare but possible). he\'s then disconnected of the gallery and redirected to a page showing the deletion of his account and, possibly, the reasons for this deletion.
-<br><br>
-Further customize the content with special inserted tags : Use <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery. Use <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options. <b style=&quot;color: red;&quot;>[username]</b> is not available here because concerned user has been deleted.
-<br><br>
-Custom text for the redirect page can be entered in this field that is compatible with the FCK Editor and, for multi-languages, you can use the tags [lang] of the plugin Extended description if it\'s active.';
 $lang['UAM_USRAutoMailTitle'] = 'Automated email reminder';
 $lang['UAM_USRAutoMailTitle_d'] = 'When activated, this function will automatically send personalized content in &quot;Reminder email with new key generated&quot; to visitors who match criteria.';
 $lang['UAM_StuffsTitle'] = 'PWG Stuffs block';
@@ -279,11 +209,120 @@ $lang['UAM_HidePasswTitle_d'] = 'Choose here if you want to display the password
 // --------- End: New or revised $lang ---- from version 2.20.4
 
 
-// --------- Starting below: New or revised $lang ---- from version 2.20.10
+// --------- Starting below: New or revised $lang ---- from version 2.20.11
 $lang['UAM_gttextTitle_d'] = 'Enter the text you want to appear in the email reminder to prompt the user to return to visit your gallery (NB: The text pre-filled with the installation of the plugin is provided as an example).
 <br><br>
-Further customize the content with special inserted tags : Use <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the name of the destination user of the email. Use <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery. Use <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options. Use <b style=&quot;color: red;&quot;>[days]</b> to insert the maximum numbers of days between two visits.
+Further customize the content with special inserted tags:<br>
+- <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the name of the destination user of the email.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.<br>
+- <b style=&quot;color: red;&quot;>[days]</b> to insert the maximum numbers of days between two visits.
 <br><br>
 To use multiple languages, you can use the Extended description plugin\'s tags if it is active.';
-// --------- End: New or revised $lang ---- from version 2.20.10
+$lang['UAM_confirmtxtTitle_d'] = 'Enter the introductory text that you want to appear in the email confirmation of registration.
+<br><br>
+Further customize the content with special inserted tags:<br>
+- <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the name of the destination user of the email.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.<br>
+- <b style=&quot;color: red;&quot;>[Kdays]</b> to insert the number of days limit to validate a registration (&quot;Deadline for registration validation limited;&quot; have to be enabled).
+<br><br>
+To use multiple languages, you can use the Extended description plugin\'s tags if it is active.';
+$lang['UAM_remailtxt1Title_d'] = 'Enter the introductory text that you want to appear in the reminder email, in addition to the validation key regenerated.
+<br><br>
+If left blank, the mail reminder will include only the validation link. It is therefore strongly advised to take a little explanatory text. (NB: The text pre-filled with the installation of the plugin is provided as an example).
+<br><br>
+Further customize the content with special inserted tags:<br>
+- <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the name of the destination user of the email.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.<br>
+- <b style=&quot;color: red;&quot;>[Kdays]</b> to insert the number of days limit to validate a registration (&quot;Deadline for registration validation limited;&quot; have to be enabled).
+<br><br>
+To use multiple languages, you can use the Extended description plugin\'s tags if it is active.';
+$lang['UAM_remailtxt2Title_d'] = 'Enter the introductory text that you want to appear in the reminder email without a validation key regenerated.
+<br><br>
+If left blank, the mail reminder will be empty. It is therefore strongly advised to take a little explanatory text. (NB: The text pre-filled with the installation of the plugin is provided as an example).
+<br><br>
+Further customize the content with special inserted tags:<br>
+- <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the name of the destination user of the email.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.<br>
+- <b style=&quot;color: red;&quot;>[Kdays]</b> to insert the number of days limit to validate a registration (&quot;Deadline for registration validation limited; have to be enabled).
+<br><br>
+To use multiple languages, you can use the Extended description plugin\'s tags if it is active.';
+$lang['UAM_infotxtTitle_d'] = 'Enter the introductory text that you want to appear in the information email.
+<br><br>
+Further customize the content with special inserted tags:<br>
+- <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the name of the destination user of the email.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.
+<br><br>
+To use multiple languages, you can use the Extended description plugin\'s tags if it is active.';
+$lang['UAM_AdminValidationMail_d'] = 'When an administrator or Webmaster of the gallery manually valid registration pending, a notification email is automatically sent to the user. Enter here the text that appears in this email.
+<br><br>
+Further customize the content with special inserted tags:<br>
+- <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the name of the destination user of the email.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.
+<br><br>
+To use multiple languages, you can use the Extended description plugin\'s tags if it is active.';
+$lang['UAM_confirmmail_custom1_d'] = 'When the option &quot;Confirmation of registration&quot; is active, this field allows you to customize the <b><u>acceptance text</u></b> on the registration confirmation page displayed when user clicks the confirmation link that was received by email.
+<br><br>
+After installing the plugin, a standard text is set as an example.
+<br><br>
+Further customize the content with special inserted tags:<br>
+- <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the related user name.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.
+<br><br>
+This field is compatible with the FCK Editor and, for multi-languages, you can use the tags [lang] of the plugin Extended description if it\'s active.';
+$lang['UAM_confirmmail_custom2_d'] = 'When the option &quot;Confirmation of registration&quot; is active, this field allows you to customize the <b><u>rejectance text</u></b> on the registration confirmation page displayed when user clicks the confirmation link that was received by email.
+<br><br>
+After installing the plugin, a standard text is set as an example.
+<br><br>
+Further customize the content with special inserted tags:<br>
+- <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the related user name.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.
+<br><br>
+This field is compatible with the FCK Editor and, for multi-languages, you can use the tags [lang] of the plugin Extended description if it\'s active.';
+$lang['UAM_GTAutoDelTitle_d'] = 'This is only valid when the user whose account has expired itself triggers the deletion mechanism (rare but possible). he\'s then disconnected of the gallery and redirected to a page showing the deletion of his account and, possibly, the reasons for this deletion.
+<br><br>
+Further customize the content with special inserted tags:<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.<br>
+<b style=&quot;color: red;&quot;>[username]</b> is not available here because concerned user has been deleted.
+<br><br>
+Custom text for the redirect page can be entered in this field that is compatible with the FCK Editor and, for multi-languages, you can use the tags [lang] of the plugin Extended description if it\'s active.';
+$lang['UAM_GTAutoMailTitle_d'] = 'When an account is expired (group / status change demoting the visitor), an email information can be sent to clarify the reasons for this change and the means to recover the initial access to the gallery.
+<br>To do this, a link to revalidation of registration is attached to the email (automatic generation of a new validation key).<b style=&quot;color: red;&quot;>If the user has already been notified, his account is automatically destroyed.</b> 
+<br><br>
+Enter the custom text that also explain the reasons for the demotion, to accompany the validation link. The custom text is not mandatory but strongly recommended. In fact, your visitors will not appreciate receiving an email containing only a single link without further explanation. ;-)
+<br><br>
+Further customize the content with special inserted tags:<br>
+- <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the name of the destination user of the email.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.
+<br><br>
+To use multiple languages, you can use the Extended description plugin\'s tags if it is active.
+<br><br>
+<b style=&quot;color: red;&quot;>Warning: The use of this function is intimately associated with the confirmation of registration by the user (confirmation by mail) and can not be activated without this option.</b>';
+$lang['UAM_CustomPasswRetrTitle_d'] = 'By default, when a user has lost his password and selects the option of recovery, he receives an email containing only his username and his new password.
+<br><br>
+Here, you can add text of your choice to be inserted <b><u>before</u></b> the standard information.
+<br><br>
+Further customize the content with special inserted tags:<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.
+<br><br>
+To use multiple languages, you can use the Extended description plugin\'s tags if it is active.';
+$lang['UAM_USRAutoDelTitle_d'] = 'This is only valid when the user whose account has expired itself triggers the deletion mechanism (rare but possible). he\'s then disconnected of the gallery and redirected to a page showing the deletion of his account and, possibly, the reasons for this deletion.
+<br><br>
+Further customize the content with special inserted tags:<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.<br>
+<b style=&quot;color: red;&quot;>[username]</b> is not available here because concerned user has been deleted.
+<br><br>
+Custom text for the redirect page can be entered in this field that is compatible with the FCK Editor and, for multi-languages, you can use the tags [lang] of the plugin Extended description if it\'s active.';
+// --------- End: New or revised $lang ---- from version 2.20.11
 ?>

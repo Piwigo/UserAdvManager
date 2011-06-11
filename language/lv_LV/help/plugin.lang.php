@@ -183,74 +183,7 @@ $lang['UAM_AdminValidationMail'] = 'Paziņojums par manuālās reģistrācijas a
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.20.0
-/* TODO */$lang['UAM_infotxtTitle_d'] = 'Ievadiet teksta, ko jūs gribat atspoguļot informācijas e-vēstulē, ievaddaļu.
-<br><br>
-Further customize the content with special inserted tags : Use <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the name of the destination user of the email. Use <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery. Use <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.
-<br><br>
-Lai izmantotu vairākas valodas, jūs varat lietot Paplašinātā apraksta spraudņa tagus (gadījumā, ja tas ir aktīvs).';
-/* TODO */$lang['UAM_confirmtxtTitle_d'] = 'Ievadiet teksta, ko jūs gribat atspoguļot informācijas e-vēstulē, ievaddaļu.
-<br><br>
-Further customize the content with special inserted tags : Use <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the name of the destination user of the email. Use <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery. Use <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.
-<br><br>
-Lai izmantotu vairākas valodas, jūs varat lietot Paplašinātā apraksta spraudņa tagus (gadījumā, ja tas ir aktīvs).';
-/* TODO */$lang['UAM_AdminValidationMail_d'] = 'Gadījumā, kad administrators vai galerijas Webmāsters manuāli aiztur reģistrācijas procesu, lietotājam automātiski tiek nosūtīts e-pasta paziņojums. Ievadiet šeit tekstu, ko gribat, lai tas parādītos šajā e-pasta ziņojumā.
-<br><br>
-Further customize the content with special inserted tags : Use <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the name of the destination user of the email. Use <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery. Use <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.
-<br><br>
-Ja ir aktivēts paplašinātā apraksta Extended description spraudnis, varat izmantot tā iezīmes (valodu tagus), lai lietotu vairākas pieejamās valodas.';
-/* TODO */$lang['UAM_confirmmail_custom1_d'] = 'Tad, kas opcija &quot;Confirmation of registration&quot; ir aktīva, šis lauks ļauj jums pielāgot apstiprinājuma tekstu <b><u>acceptance text</u></b> reģistrācijas apstiprināšanas lapā, kas parādās, kad lietotājs uzklikšķina uz apstiprināšanas saites, ko viņš saņēmis ar e-pastu.
-<br><br>
-Pēc spraudņa uzinstalēšanas, kā piemērs tiek piedāvāts standarta teksta variants.
-<br><br>
-Further customize the content with special inserted tags : Use <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the name of the destination user of the email. Use <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery. Use <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.
-<br><br>
-Šis lauks ir savietojams ar FCK Redaktoru un, multi-valodu režīmā, varat lietot Paplašināta apraksta (Extended description), gadījumā, ja tas ir aktīvs) [lang] iezīmes- tagus.';
-/* TODO */$lang['UAM_confirmmail_custom2_d'] = 'Tad, kad opcija &quot;Confirmation of registration&quot; ir aktīva, šis lauks ļauj jums pielāgot noraidījuma tekstu <b><u>rejectance text</u></b> > reģistrācijas apstiprināšanas lapā, kas parādās, kad lietotājs uzklikšķina uz apstiprināšanas saites, ko viņš saņēmis ar e-pastu.
-<br><br>
-Pēc spraudņa uzinstalēšanas, kā piemērs tiek piedāvāts standarta teksta variants.
-<br><br>
-Further customize the content with special inserted tags : Use <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the name of the destination user of the email. Use <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery. Use <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.
-<br><br>
-Šis lauks ir savietojams ar FCK Redaktoru un, multi-valodu režīmā, varat lietot Paplašināta apraksta (Extended description), gadījumā, ja tas ir aktīvs) [lang] iezīmes- tagus.';
-/* TODO */$lang['UAM_remailtxt1Title_d'] = 'Ievadiet teksta, ko jūs gribat atspoguļot informācijas e-vēstulē, ievaddaļu, kā pielikumu reģenerētajai validācijas atslēgai.
-<br><br>
-Ja ir atstāts tukšs lauks, e-pasta atgādinātājs ietver sevī tikai validācijas saiti.
-Tādēļ ir ieteicams ietvert mazu skaidrojošu tekstu. (NB: Spraudni instalējot, aizpildītais teksts ir piedāvāts kā paraugs).
-<br><br>
-Further customize the content with special inserted tags : Use <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the name of the destination user of the email. Use <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery. Use <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.
-<br><br>
-Lai izmantotu vairākas valodas, jūs varat lietot Paplašinātā apraksta spraudņa tagus (gadījumā, ja tas ir aktīvs).';
-/* TODO */$lang['UAM_remailtxt2Title_d'] = 'Ievadiet teksta, ko jūs gribat atspoguļot informācijas e-vēstulē, ievaddaļu bez validācijas atslēgas.
-<br><br>
-Ja ir atstāts tukšs lauks, e-pasta atgādinātājvēstule būs tukša. Tādēļ ir ieteicams ietvert mazu skaidrojošu tekstu.(NB: Spraudni instalējot, aizpildītais teksts ir piedāvāts kā paraugs).
-<br><br>
-Further customize the content with special inserted tags : Use <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the name of the destination user of the email. Use <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery. Use <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.
-<br><br>
-Lai izmantotu vairākas valodas, jūs varat lietot Paplašinātā apraksta spraudņa tagus (gadījumā, ja tas ir aktīvs).';
-/* TODO */$lang['UAM_GTAutoDelTitle_d'] = 'Šis variants ir iespējams tikai tad, ja lietotājs, kura konta derīguma termiņš ir beidzies, pats ieslēdz dzēšanas mehānismu (rets, bet iespējams gadījums). Tad viņš tiek atslēgts no galerijas un novirzīts uz lapu, kas atspoguļo viņa konta dzēšanas faktu un iespējamo šīs dzēšanas iemeslu.
-<br><br>
-Further customize the content with special inserted tags : Use <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery. Use <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options. <b style=&quot;color: red;&quot;>[username]</b> is not available here because concerned user has been deleted.
-<br><br>
-Pāradresācijas lapai paredzēto pielāgoto tekstu var ievadīt šajā laukā, savietojams ar FCK Redaktora standartu, lai izmantotu multi-valodu režīmu, lietojiet spraudņa paplašinātais apraksts Extended description iezīmes [lang], tikai gadījumā, ja spraudnis aktīvs.';
-/* TODO */$lang['UAM_GTAutoMailTitle_d'] = 'Kad konta derīguma termiņš izbeidzas (grupas/statusa maiņa, apmeklētāja funkcionāla pazemināšana), var tikt izsūtīts informatīvs e-pasta ziņojums, kas izskaidro notikušā iemeslus, kā arī paskaidro iespējas, kā no jauna atjaunot piekļuvi galerijai.
-<br>Lai to paveiktu, e-pastam ir pievienota reģistrācijas revalidācijas saite (jaunas validācijas automātiska uzģenerēšana).<b
-style=&quot;color: red;&quot;>Ja lietotājs jau ir bijis brīdināts, viņa konts automātiski tiek iznīcināts.</b>
-<br><br>
-Lai papildinātu validācijas apstiprināšanas saiti, var pievienot konta funkcionalitātes pazemināšanas paskaidrojošu tekstu. Šis paskaidrojuma teksts nav obligāts, bet stingri iesakāms. Patiesībā, jūsu apmeklētāji nebūs sevišķi apmierināti, saņemot tikai aktivācijas saiti bez nekādiem paskaidrojumiem. ;-)
-<br><br>
-Further customize the content with special inserted tags : Use <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the name of the destination user of the email. Use <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery. Use <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.
-<br><br>
- Ja ir aktivēts paplašinātā apraksta Extended description spraudnis, varat izmantot tā iezīmes (valodu tagus), lai lietotu vairākas pieejamās valodas.
-<br><br>
-<b style=&quot;color: red;&quot;>Brīdinājums: Šīs funkcijas izmantošana ir cieši saistīta ar lietotāja reģistrācijas apstiprināšanu (apstiprināšana ar e-pastu) un nevar tikt aktivēta bez šīs opcijas.</b>';
 /* TODO */$lang['UAM_CustomPasswRetrTitle'] = 'Customize lost password email content';
-/* TODO */$lang['UAM_CustomPasswRetrTitle_d'] = 'By default, when a user has lost his password and selects the option of recovery, he receives an email containing only his username and his new password.
-<br><br>
-Here, you can add text of your choice to be inserted <b><u>before</u></b> the standard information.
-<br><br>
-Further customize the content with special inserted tags : Use <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery. Use <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.
-<br><br>
-To use multiple languages, you can use the Extended description plugin\'s tags if it is active.';
 /* TODO */$lang['UAM_validationlimitTitle_d'] = 'Šī opcija ļauj ierobežot jaunajiem reģistrantiem nosūtīto atslēgas validācijas e-pastu validitāti. Lietotājiem, kuri reģistrējas ir x dienas laika, lai apstiprinātu savu reģistrāciju. Pēc šī laika beigsies validācijas saite derīgums.
 <br><br>
 Šī opcija tiek lietota sasaistē ar &quot;Confirmation of registration&quot;
@@ -269,11 +202,6 @@ If this option and the option &quot;Reģistrācijas validācijas termiņa ierobe
 <br><br>
 - Automatically sending a reminder message with a new generation of validation key and automatic deletion of accounts not validated in the time after sending the reminder -> &quot;Deadline for registration validation limited&quot; <b><u>enabled</u></b> et &quot;Remind unvalidated users&quot; <b><u>enabled</u></b>.';
 /*TODO*/$lang['UAM_USRAutoDelTitle'] = 'Custom message on deleted account';
-/*TODO*/$lang['UAM_USRAutoDelTitle_d'] = 'This is only valid when the user whose account has expired itself triggers the deletion mechanism (rare but possible). he\'s then disconnected of the gallery and redirected to a page showing the deletion of his account and, possibly, the reasons for this deletion.
-<br><br>
-Further customize the content with special inserted tags : Use <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery. Use <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options. <b style=&quot;color: red;&quot;>[username]</b> is not available here because concerned user has been deleted.
-<br><br>
-Custom text for the redirect page can be entered in this field that is compatible with the FCK Editor and, for multi-languages, you can use the tags [lang] of the plugin Extended description if it\'s active.';
 /*TODO*/$lang['UAM_USRAutoMailTitle'] = 'Automated email reminder';
 /*TODO*/$lang['UAM_USRAutoMailTitle_d'] = 'When activated, this function will automatically send personalized content in &quot;Reminder email with new key generated&quot; to visitors who match criteria.';
 /*TODO*/$lang['UAM_StuffsTitle'] = 'PWG Stuffs block';
@@ -301,11 +229,122 @@ The recovery from this interface is not supported. Use tools like phpMyAdmin.';
 // --------- End: New or revised $lang ---- from version 2.20.4
 
 
-// --------- Starting below: New or revised $lang ---- from version 2.20.10
+// --------- Starting below: New or revised $lang ---- from version 2.20.11
 /* TODO */$lang['UAM_gttextTitle_d'] = 'Ievadiet tekstu , ko jūs gribat atspoguļot e-pasta atgādinājumā, lai atgādinātu lietotājam apmeklēt jūsu galeriju. (NB: Spraudni instalējot, aizpildītais teksts ir piedāvāts kā paraugs).
 <br><br>
-Further customize the content with special inserted tags : Use <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the name of the destination user of the email. Use <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery. Use <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options. Use <b style=&quot;color: red;&quot;>[days]</b> to insert the maximum numbers of days between two visits.
+Further customize the content with special inserted tags:<br>
+- <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the name of the destination user of the email.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.<br>
+- <b style=&quot;color: red;&quot;>[days]</b> to insert the maximum numbers of days between two visits.
 <br><br>
 Lai izmantotu vairākas valodas, jūs varat lietot Paplašinātā apraksta spraudņa tagus (gadījumā, ja tas ir aktīvs).';
-// --------- End: New or revised $lang ---- from version 2.20.10
+/* TODO */$lang['UAM_confirmtxtTitle_d'] = 'Ievadiet teksta, ko jūs gribat atspoguļot informācijas e-vēstulē, ievaddaļu.
+<br><br>
+Further customize the content with special inserted tags:<br>
+- <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the name of the destination user of the email.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.<br>
+- <b style=&quot;color: red;&quot;>[Kdays]</b> to insert the number of days limit to validate a registration (&quot;Reģistrācijas apstiprināšanas limita robežlīnija;&quot; have to be enabled).
+<br><br>
+Lai izmantotu vairākas valodas, jūs varat lietot Paplašinātā apraksta spraudņa tagus (gadījumā, ja tas ir aktīvs).';
+/* TODO */$lang['UAM_remailtxt1Title_d'] = 'Ievadiet teksta, ko jūs gribat atspoguļot informācijas e-vēstulē, ievaddaļu, kā pielikumu reģenerētajai validācijas atslēgai.
+<br><br>
+Ja ir atstāts tukšs lauks, e-pasta atgādinātājs ietver sevī tikai validācijas saiti.
+Tādēļ ir ieteicams ietvert mazu skaidrojošu tekstu. (NB: Spraudni instalējot, aizpildītais teksts ir piedāvāts kā paraugs).
+<br><br>
+Further customize the content with special inserted tags:<br>
+- <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the name of the destination user of the email.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.<br>
+- <b style=&quot;color: red;&quot;>[Kdays]</b> to insert the number of days limit to validate a registration (&quot;Reģistrācijas apstiprināšanas limita robežlīnija;&quot; have to be enabled).
+<br><br>
+Lai izmantotu vairākas valodas, jūs varat lietot Paplašinātā apraksta spraudņa tagus (gadījumā, ja tas ir aktīvs).';
+/* TODO */$lang['UAM_remailtxt2Title_d'] = 'Ievadiet teksta, ko jūs gribat atspoguļot informācijas e-vēstulē, ievaddaļu bez validācijas atslēgas.
+<br><br>
+Ja ir atstāts tukšs lauks, e-pasta atgādinātājvēstule būs tukša. Tādēļ ir ieteicams ietvert mazu skaidrojošu tekstu.(NB: Spraudni instalējot, aizpildītais teksts ir piedāvāts kā paraugs).
+<br><br>
+Further customize the content with special inserted tags:<br>
+- <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the name of the destination user of the email.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.<br>
+- <b style=&quot;color: red;&quot;>[Kdays]</b> to insert the number of days limit to validate a registration (&quot;Reģistrācijas apstiprināšanas limita robežlīnija;&quot; have to be enabled).
+<br><br>
+Lai izmantotu vairākas valodas, jūs varat lietot Paplašinātā apraksta spraudņa tagus (gadījumā, ja tas ir aktīvs).';
+/* TODO */$lang['UAM_infotxtTitle_d'] = 'Ievadiet teksta, ko jūs gribat atspoguļot informācijas e-vēstulē, ievaddaļu.
+<br><br>
+Further customize the content with special inserted tags:<br>
+- <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the name of the destination user of the email.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.
+<br><br>
+Lai izmantotu vairākas valodas, jūs varat lietot Paplašinātā apraksta spraudņa tagus (gadījumā, ja tas ir aktīvs).';
+/* TODO */$lang['UAM_AdminValidationMail_d'] = 'Gadījumā, kad administrators vai galerijas Webmāsters manuāli aiztur reģistrācijas procesu, lietotājam automātiski tiek nosūtīts e-pasta paziņojums. Ievadiet šeit tekstu, ko gribat, lai tas parādītos šajā e-pasta ziņojumā.
+<br><br>
+Further customize the content with special inserted tags:<br>
+- <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the name of the destination user of the email.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.
+<br><br>
+Ja ir aktivēts paplašinātā apraksta Extended description spraudnis, varat izmantot tā iezīmes (valodu tagus), lai lietotu vairākas pieejamās valodas.';
+/* TODO */$lang['UAM_confirmmail_custom1_d'] = 'Tad, kas opcija &quot;Confirmation of registration&quot; ir aktīva, šis lauks ļauj jums pielāgot apstiprinājuma tekstu <b><u>acceptance text</u></b> reģistrācijas apstiprināšanas lapā, kas parādās, kad lietotājs uzklikšķina uz apstiprināšanas saites, ko viņš saņēmis ar e-pastu.
+<br><br>
+Pēc spraudņa uzinstalēšanas, kā piemērs tiek piedāvāts standarta teksta variants.
+<br><br>
+Further customize the content with special inserted tags:<br>
+- <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the name of the destination user of the email.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.
+<br><br>
+Šis lauks ir savietojams ar FCK Redaktoru un, multi-valodu režīmā, varat lietot Paplašināta apraksta (Extended description), gadījumā, ja tas ir aktīvs) [lang] iezīmes- tagus.';
+/* TODO */$lang['UAM_confirmmail_custom2_d'] = 'Tad, kad opcija &quot;Confirmation of registration&quot; ir aktīva, šis lauks ļauj jums pielāgot noraidījuma tekstu <b><u>rejectance text</u></b> > reģistrācijas apstiprināšanas lapā, kas parādās, kad lietotājs uzklikšķina uz apstiprināšanas saites, ko viņš saņēmis ar e-pastu.
+<br><br>
+Pēc spraudņa uzinstalēšanas, kā piemērs tiek piedāvāts standarta teksta variants.
+<br><br>
+Further customize the content with special inserted tags:<br>
+- <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the name of the destination user of the email.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.
+<br><br>
+Šis lauks ir savietojams ar FCK Redaktoru un, multi-valodu režīmā, varat lietot Paplašināta apraksta (Extended description), gadījumā, ja tas ir aktīvs) [lang] iezīmes- tagus.';
+/* TODO */$lang['UAM_GTAutoDelTitle_d'] = 'Šis variants ir iespējams tikai tad, ja lietotājs, kura konta derīguma termiņš ir beidzies, pats ieslēdz dzēšanas mehānismu (rets, bet iespējams gadījums). Tad viņš tiek atslēgts no galerijas un novirzīts uz lapu, kas atspoguļo viņa konta dzēšanas faktu un iespējamo šīs dzēšanas iemeslu.
+<br><br>
+Further customize the content with special inserted tags:<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.<br>
+<b style=&quot;color: red;&quot;>[username]</b> is not available here because concerned user has been deleted.
+<br><br>
+Pāradresācijas lapai paredzēto pielāgoto tekstu var ievadīt šajā laukā, savietojams ar FCK Redaktora standartu, lai izmantotu multi-valodu režīmu, lietojiet spraudņa paplašinātais apraksts Extended description iezīmes [lang], tikai gadījumā, ja spraudnis aktīvs.';
+/* TODO */$lang['UAM_GTAutoMailTitle_d'] = 'Kad konta derīguma termiņš izbeidzas (grupas/statusa maiņa, apmeklētāja funkcionāla pazemināšana), var tikt izsūtīts informatīvs e-pasta ziņojums, kas izskaidro notikušā iemeslus, kā arī paskaidro iespējas, kā no jauna atjaunot piekļuvi galerijai.
+<br>Lai to paveiktu, e-pastam ir pievienota reģistrācijas revalidācijas saite (jaunas validācijas automātiska uzģenerēšana).<b
+style=&quot;color: red;&quot;>Ja lietotājs jau ir bijis brīdināts, viņa konts automātiski tiek iznīcināts.</b>
+<br><br>
+Lai papildinātu validācijas apstiprināšanas saiti, var pievienot konta funkcionalitātes pazemināšanas paskaidrojošu tekstu. Šis paskaidrojuma teksts nav obligāts, bet stingri iesakāms. Patiesībā, jūsu apmeklētāji nebūs sevišķi apmierināti, saņemot tikai aktivācijas saiti bez nekādiem paskaidrojumiem. ;-)
+<br><br>
+Further customize the content with special inserted tags:<br>
+- <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the name of the destination user of the email.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.
+<br><br>
+ Ja ir aktivēts paplašinātā apraksta Extended description spraudnis, varat izmantot tā iezīmes (valodu tagus), lai lietotu vairākas pieejamās valodas.
+<br><br>
+<b style=&quot;color: red;&quot;>Brīdinājums: Šīs funkcijas izmantošana ir cieši saistīta ar lietotāja reģistrācijas apstiprināšanu (apstiprināšana ar e-pastu) un nevar tikt aktivēta bez šīs opcijas.</b>';
+/* TODO */$lang['UAM_CustomPasswRetrTitle_d'] = 'By default, when a user has lost his password and selects the option of recovery, he receives an email containing only his username and his new password.
+<br><br>
+Here, you can add text of your choice to be inserted <b><u>before</u></b> the standard information.
+<br><br>
+Further customize the content with special inserted tags:<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.
+<br><br>
+To use multiple languages, you can use the Extended description plugin\'s tags if it is active.';
+/*TODO*/$lang['UAM_USRAutoDelTitle_d'] = 'This is only valid when the user whose account has expired itself triggers the deletion mechanism (rare but possible). he\'s then disconnected of the gallery and redirected to a page showing the deletion of his account and, possibly, the reasons for this deletion.
+<br><br>
+Further customize the content with special inserted tags:<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.<br>
+<b style=&quot;color: red;&quot;>[username]</b> is not available here because concerned user has been deleted.
+<br><br>
+Custom text for the redirect page can be entered in this field that is compatible with the FCK Editor and, for multi-languages, you can use the tags [lang] of the plugin Extended description if it\'s active.';
+// --------- End: New or revised $lang ---- from version 2.20.11
 ?>
