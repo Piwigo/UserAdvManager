@@ -859,13 +859,19 @@ WHERE user_id = '.$id.'
 
     if (isset($conf_UAM[9]) and $conf_UAM[9] <> '')
     {
-      // Management of Extension flags ([username], [mygallery], [myurl])
+      // Management of Extension flags ([username], [mygallery], [myurl], [Kdays])
       $patterns[] = '#\[username\]#i';
       $replacements[] = $username;
       $patterns[] = '#\[mygallery\]#i';
       $replacements[] = $conf['gallery_title'];
       $patterns[] = '#\[myurl\]#i';
       $replacements[] = $conf['gallery_url'];
+      
+      if (isset($conf_UAM_ConfirmMail[0]) and $conf_UAM_ConfirmMail[0] == 'true') // [Kdays] replacement only if related option is active
+      {
+        $patterns[] = '#\[Kdays\]#i';
+        $replacements[] = $conf_UAM_ConfirmMail[1];
+      }
       
       if (function_exists('get_user_language_desc'))
       {
@@ -948,13 +954,19 @@ WHERE user_id = '.$user_id.'
       
       if (isset($conf_UAM_ConfirmMail[2]) and $conf_UAM_ConfirmMail[2] <> '' and isset($conf_UAM_ConfirmMail[3]) and $conf_UAM_ConfirmMail[3] == 'true' and $confirm)
       {
-        // Management of Extension flags ([username], [mygallery], [myurl])
+        // Management of Extension flags ([username], [mygallery], [myurl], [Kdays])
         $patterns[] = '#\[username\]#i';
         $replacements[] = $username;
         $patterns[] = '#\[mygallery\]#i';
         $replacements[] = $conf['gallery_title'];
         $patterns[] = '#\[myurl\]#i';
         $replacements[] = $conf['gallery_url'];
+
+        if (isset($conf_UAM_ConfirmMail[0]) and $conf_UAM_ConfirmMail[0] == 'true') // [Kdays] replacement only if related option is active
+        {
+          $patterns[] = '#\[Kdays\]#i';
+          $replacements[] = $conf_UAM_ConfirmMail[1];
+        }
 
         if (function_exists('get_user_language_desc'))
         {
@@ -984,13 +996,19 @@ WHERE user_id = '".$user_id."'
       
       if (isset($conf_UAM_ConfirmMail[4]) and $conf_UAM_ConfirmMail[4] <> '' and isset($conf_UAM_ConfirmMail[3]) and $conf_UAM_ConfirmMail[3] == 'true' and !$confirm)
       {
-        // Management of Extension flags ([username], [mygallery], [myurl])
+        // Management of Extension flags ([username], [mygallery], [myurl], [Kdays])
         $patterns[] = '#\[username\]#i';
         $replacements[] = $username;
         $patterns[] = '#\[mygallery\]#i';
         $replacements[] = $conf['gallery_title'];
         $patterns[] = '#\[myurl\]#i';
         $replacements[] = $conf['gallery_url'];
+
+        if (isset($conf_UAM_ConfirmMail[0]) and $conf_UAM_ConfirmMail[0] == 'true') // [Kdays] replacement only if related option is active
+        {
+          $patterns[] = '#\[Kdays\]#i';
+          $replacements[] = $conf_UAM_ConfirmMail[1];
+        }
         
         if (function_exists('get_user_language_desc'))
         {
