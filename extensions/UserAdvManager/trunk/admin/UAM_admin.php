@@ -32,6 +32,9 @@ $replacement = '.';
 
 $UAM_Password_Test_Score = 0;
 $UAM_Exclusionlist_Error = false;
+$UAM_Illegal_Flag_Error1 = false;
+$UAM_Illegal_Flag_Error2 = false;
+$UAM_Illegal_Flag_Error3 = false;
 
 $dump_download = '';
 
@@ -110,7 +113,7 @@ switch ($page['tab'])
 
     //General configuration settings
 		$_POST['UAM_MailInfo_Text'] = str_replace('\"', '"', str_replace("\'", "'", str_replace("\\\\", "\\", $_POST['UAM_MailInfo_Text'])));
-    
+
 		$_POST['UAM_ConfirmMail_Text'] = str_replace('\"', '"', str_replace("\'", "'", str_replace("\\\\", "\\", $_POST['UAM_ConfirmMail_Text'])));
 
     $_POST['UAM_GhostTracker_ReminderText'] = str_replace('\"', '"', str_replace("\'", "'", str_replace("\\\\", "\\", $_POST['UAM_GhostTracker_ReminderText'])));
@@ -134,12 +137,20 @@ switch ($page['tab'])
 
     // Consistency check between ConfirmMail and AutoMail - We cannot use GTAutoMail if ConfirmMail is disabled
     $conf_UAM = unserialize($conf['UserAdvManager']);
+    $conf_UAM_ConfirmMail = unserialize($conf['UserAdvManager_ConfirmMail']);
     
     if (((isset($conf_UAM['1']) and ($conf_UAM['1'] == 'false' or $conf_UAM['1'] == 'local')) or ($_POST['UAM_Confirm_Mail'] == 'false' or $_POST['UAM_Confirm_Mail'] == 'local')) and $_POST['UAM_GTAutoMail'] == 'true')
     {
       $newvalue = 'false';
       $_POST['UAM_GTAutoMail'] = $newvalue;
       array_push($page['errors'], l10n('UAM_Error_GTAutoMail_cannot_be_set_without_ConfirmMail'));
+    }
+
+    // Check if [Kdays] flag is used in a legal way (ConfirmMail Time out have to be set)
+    if (isset($conf_UAM_ConfirmMail[0]) and $conf_UAM_ConfirmMail[0] == 'false' and preg_match('#\[Kdays\]#i',$_POST['UAM_ConfirmMail_Text']) != 0)
+    {
+      $UAM_Illegal_Flag_Error1 = true;
+      array_push($page['errors'], l10n('UAM_Error_Using_illegal_Kdays'));
     }
 
 		$newconf_UAM = array(
@@ -192,6 +203,18 @@ switch ($page['tab'])
     $_POST['UAM_ConfirmMail_Custom_Txt1'] = str_replace('\"', '"', str_replace("\'", "'", str_replace("\\\\", "\\", $_POST['UAM_ConfirmMail_Custom_Txt1'])));
     
     $_POST['UAM_ConfirmMail_Custom_Txt2'] = str_replace('\"', '"', str_replace("\'", "'", str_replace("\\\\", "\\", $_POST['UAM_ConfirmMail_Custom_Txt2'])));
+
+    // Check if [Kdays] flag is used in a legal way (ConfirmMail Time out have to be set)
+    if (isset($conf_UAM_ConfirmMail[0]) and $conf_UAM_ConfirmMail[0] == 'false' and preg_match('#\[Kdays\]#i',$_POST['UAM_ConfirmMail_ReMail_Txt1']) == 1)
+    {
+      $UAM_Illegal_Flag_Error2 = true;
+      array_push($page['errors'], l10n('UAM_Error_Using_illegal_flag'));
+    }
+    elseif (isset($conf_UAM_ConfirmMail[0]) and $conf_UAM_ConfirmMail[0] == 'false' and preg_match('#\[Kdays\]#i',$_POST['UAM_ConfirmMail_ReMail_Txt2']) == 1)
+    {
+      $UAM_Illegal_Flag_Error3 = true;
+      array_push($page['errors'], l10n('UAM_Error_Using_illegal_flag'));
+    }
     
 	  $newconf_UAM_ConfirmMail = array (
       $_POST['UAM_ConfirmMail_TimeOut'],
@@ -432,7 +455,10 @@ ORDER BY name ASC
     'UAM_HIDEPASSW_TRUE'             => $conf_UAM[34]=='true' ?  'checked="checked"' : '' ,
     'UAM_HIDEPASSW_FALSE'            => $conf_UAM[34]=='false' ?  'checked="checked"' : '' ,
 		'UAM_PASSWORD_TEST_SCORE'        => $UAM_Password_Test_Score,
-    'UAM_ERROR_REPORTS4'             => $UAM_Exclusionlist_Error,
+    'UAM_ERROR_REPORTS1'             => $UAM_Exclusionlist_Error,
+    'UAM_ERROR_REPORTS2'             => $UAM_Illegal_Flag_Error1,
+    'UAM_ERROR_REPORTS3'             => $UAM_Illegal_Flag_Error2,
+    'UAM_ERROR_REPORTS4'             => $UAM_Illegal_Flag_Error3,
 		'UAM_CONFIRMMAIL_TIMEOUT_TRUE'	 => $conf_UAM_ConfirmMail[0]=='true' ?  'checked="checked"' : '' ,
 		'UAM_CONFIRMMAIL_TIMEOUT_FALSE'  => $conf_UAM_ConfirmMail[0]=='false' ?  'checked="checked"' : '' ,
 		'UAM_CONFIRMMAIL_DELAY'					 => $conf_UAM_ConfirmMail[1],
