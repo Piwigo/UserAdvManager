@@ -25,9 +25,9 @@ $lang['UAM_confirm_mail_page_title'] = 'Conferma l\'iscrizzione';
 $lang['UAM_audit_ok'] = 'Audit OK';
 $lang['UAM_Err_audit_username_char'] = '<b>Questo conto utente utilizza uno o più caratteri vietati :</b> ';
 $lang['UAM_Err_audit_email_forbidden'] = '<b>Questo conto utente usa un dominio d\'Email proibito :</b> ';
-$lang['UAM_Err_audit_advise'] = '<b>Dovete eseguire delle correzioni per rispettare le nuove impostazzioni che avete attivato.<br> Utilizzare un programma per la gestione della base dati per correggere i conti utente direttamente nella tabella ###_USERS';
+$lang['UAM_Err_audit_advise'] = '<b>Dovete eseguire delle correzioni per rispettare le nuove impostazzioni che avete attivato.<br> Usare un programma per la gestione della base dati per correggere i conti utente direttamente nella tabella ###_USERS';
 $lang['UAM_reg_err_login2'] = 'Il nome utente non deve contenere i caratteri seguenti : ';
-$lang['UAM_reg_err_login5'] = 'Il tuo provider di posta usa dominio d\'email proibito. I domini preibiti sono i seguenti : ';
+$lang['UAM_reg_err_login5'] = 'Il vostro provider di posta usa dominio d\'email proibito. I domini preibiti sono i seguenti : ';
 $lang['UAM_empty_pwd'] = '[password vuota]';
 $lang['UAM_no_update_pwd'] = '[profilo aggiornato senza modifica della password]';
 $lang['UAM_No_validation_for_Guest'] = 'Il conto "Guest" non è soggetto a convalida';
@@ -65,7 +65,7 @@ $lang['UAM_Reminder_Sent_NOK'] = 'NO';
 $lang['UAM_save_config'] ='Configurazione salvata';
 $lang['UAM_reg_err_login3'] = 'Sicurezza : La password è obbligatoria!';
 $lang['UAM_reg_err_login4_%s'] = 'Sicurezza : un sistema di controllo calcola un punteggio basandosi sulla complessità della password scelta. La complessità della password è troppo bassa (punteggio = %s). Si prega di scegliere una nuova password più sicura seguendo queste regole : <br>
-- Utilizzare delle lettere e dei numeri<br>
+- Usare delle lettere e dei numeri<br>
 - Usare delle maiuscole e delle minuscole<br>
 - Aumentare la lunghezza (numero di caratteri)<br>
 Il punteggio minimo richiesto dall\'amministratore per la password è di : ';
@@ -95,7 +95,7 @@ $lang['UAM_mail_exclusionlist_error'] = 'Attenzione! Avete inserito una nuova ri
 
 // --------- Starting below: New or revised $lang ---- from version 2.13.0
 /* UserList Tab */
-$lang['UAM_UserList_Title'] = 'Monitoraggio degli utenti registrati';
+$lang['UAM_UserList_Title'] = 'Monitoraggio degli utenti iscritti';
 $lang['UAM_Tab_UserList'] = 'Monitoraggio degli utenti';
 // --------- End: New or revised $lang ---- from version 2.13.0
 
@@ -105,9 +105,9 @@ $lang['UAM_Tab_UserList'] = 'Monitoraggio degli utenti';
 $lang['UAM_Title_Tab'] = 'UserAdvManager - Versione : ';
 $lang['UAM_SubTitle1'] = 'Configurazione del plugin';
 $lang['UAM_Tab_Global'] = 'Configurazione';
-$lang['UAM_Title1'] = 'Impostare le restrizioni per le registrazioni';
+$lang['UAM_Title1'] = 'Impostare le restrizioni per le iscrizzioni';
 $lang['UAM_Title2'] = 'Impostare le conferme e validazioni per l\'iscrizione';
-$lang['UAM_Title3'] = 'Impostare le registrazioni seguite e altre opzioni';
+$lang['UAM_Title3'] = 'Impostare le iscrizioni monitorate ed altre opzioni';
 $lang['UAM_Title4'] = 'Suggerimenti ed esempi d\'utilizzo';
 $lang['UAM_No_Casse'] = 'Nome utente : Sensibile alle maiusc/minusc';
 $lang['UAM_Username_Char'] = 'Nome utente : Esclusione di certi caratteri';
@@ -119,7 +119,7 @@ $lang['UAM_AdminPassword_Enforced'] = 'Applicare agli amministratori';
 $lang['UAM_PasswordTest'] = 'Password di prova : ';
 $lang['UAM_ScoreTest'] = 'Risultato : ';
 $lang['UAM_MailExclusion'] = 'Esclusione dei domini d\'email';
-$lang['UAM_MailExclusion_true'] = ' Escludi i seguenti domini : <br>(utilizzare una virgola per separare ogni dominio)';
+$lang['UAM_MailExclusion_true'] = ' Escludi i seguenti domini : <br>(usare una virgola per separare ogni dominio)';
 
 $lang['UAM_Mail_Info'] = 'Email d\'informazione per l\'utente :';
 $lang['UAM_MailInfo_Text'] = ' Personalizzare il testo dell\'email :';
@@ -127,7 +127,7 @@ $lang['UAM_Confirm_Mail'] = 'Conferma dell\'iscrizione :';
 $lang['UAM_ConfirmMail_Text'] = ' Personalizzare il testo dell\'email di conferma :';
 $lang['UAM_Confirm_Group'] = 'Gruppi di convalida<br>(------- per non assegnare nessun gruppo)';
 $lang['UAM_Confirm_Status'] = 'Convalida Statuti<br>(invia ------- per mantenere il valore di default di Piwigo)';
-$lang['UAM_Confirm_grpstat_notice'] = 'ATTENZIONE : Si consiglia di utilizzare o il gruppo o lo statuto di convalida ma non entrambi simultaneamente';
+$lang['UAM_Confirm_grpstat_notice'] = 'ATTENZIONE : Si consiglia di usare o il gruppo o lo statuto di convalida ma non entrambi simultaneamente';
 $lang['UAM_No_Confirm_Group'] = 'Gruppo per gli utenti che non hanno convalidato la loro iscrizione<br>';
 $lang['UAM_Validated_Group'] = 'Gruppo per gli utenti che hanno convalidato la loro iscrizione<br>';
 $lang['UAM_No_Confirm_Status'] = 'Stato per gli utenti che non hanno convalidato la loro iscrizione<br>';
@@ -141,18 +141,18 @@ $lang['UAM_ConfirmMail_ReMail_Txt2'] = 'Personalizzare l\'email di rilancio <b><
 $lang['UAM_GhostTracker'] = 'Gestione dei visitatori fantasmi (GhostTracker)';
 $lang['UAM_GhostTracker_true'] = ' Attivare. Durata massima di giorni tra due visite : ';
 $lang['UAM_GhostTracker_ReminderText'] = 'Testo di rilancio personalizzato';
-$lang['UAM_LastVisit'] = ' Tracciamento utenti registrati';
+$lang['UAM_LastVisit'] = ' Monitoraggio degli utenti iscritti';
 
-$lang['UAM_Tab_UserManager'] = 'Tracciamento convalide';
+$lang['UAM_Tab_UserManager'] = 'Monitoraggio delle convalide';
 
 /* UserManager Tab */
-$lang['UAM_SubTitle3'] = 'Tracciamento convalide';
-$lang['UAM_UserManager_Title'] = 'Tracciamento convalide';
+$lang['UAM_SubTitle3'] = 'Monitoraggio delle convalide';
+$lang['UAM_UserManager_Title'] = 'Monitoraggio delle convalide';
 /* Ghost Tracker Tab */
 $lang['UAM_SubTitle4'] = 'GhostTracker';
 $lang['UAM_GT_Init'] = 'Inizializzazione del GhostTracker';
 $lang['UAM_GhostTracker_Title'] = 'Gestione degli visitatori fantasmi';
-$lang['UAM_GhostTracker_Init'] = 'Se si attiva questa funzione per la prima volta o se viene riattivata dopo un lungo periodo durante il quale dei nuovi visitatori si sono registrati, è necessario inizializzare o azzerare il Tracker Ghost. Questa azione è da effettuarsi solo dopo l\'attivazione o la riattivazione dell\'opzione; Cliccare dunque <u>una sola volta</u> sull\'pulsante di reset sottostante';
+$lang['UAM_GhostTracker_Init'] = 'Se si attiva questa funzione per la prima volta o se viene riattivata dopo un lungo periodo durante il quale dei nuovi visitatori si sono iscritti, è necessario inizializzare o azzerare il Tracker Ghost. Questa azione è da effettuarsi solo dopo l\'attivazione o la riattivazione dell\'opzione; Cliccare dunque <u>una sola volta</u> sull\'pulsante di reset sottostante';
 /* UserList Tab */
 $lang['UAM_SubTitle5'] = 'Informazioni sugli utenti';
 /* Mailing */
@@ -163,8 +163,8 @@ $lang['UAM_Ghost_reminder_of_%s'] = '%s, questa è un\'email di rilancio';
 $lang['UAM_Reminder_with_key_of_%s'] = '%s, la vostra chiave di convalida è scaduta';
 $lang['UAM_Reminder_without_key_of_%s'] = '%s, la chiave di convalida sta per scadere';
 /* Errors and Warnings */
-$lang['UAM_Err_GhostTracker_Settings'] = 'Questa pagina è disponibile solo se "GhostTracker" è attivo in "Impostare le registrazioni seguite e altre opzioni"';
-$lang['UAM_Err_Userlist_Settings'] = 'Questa pagina è disponibile solo se "Monitoraggio degli utenti registrati" è attivo nella sezione "Impostare le registrazioni seguite e altre opzioni"';
+$lang['UAM_Err_GhostTracker_Settings'] = 'Questa pagina è disponibile solo se "GhostTracker" è attivo in "Impostare le iscrizioni monitorate e altre opzioni"';
+$lang['UAM_Err_Userlist_Settings'] = 'Questa pagina è disponibile solo se "Monitoraggio degli utenti iscritti" è attivo nella sezione "Impostare le iscrizioni monitorate e altre opzioni"';
 // --------- End: New or revised $lang ---- from version 2.13.4
 
 
@@ -199,8 +199,8 @@ $lang['UAM_RedirToProfile'] = 'Ridirezione verso la pagina di personalizzazione'
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.16.0
-$lang['UAM_Expired_Group'] = '<b>Gruppo</b> per gli utenti per i quali la registrazione sara scaduta<br>';
-$lang['UAM_Expired_Status'] = '<b>Statuto</b> per gli utenti per i quali la registrazione sara scaduta<br>';
+$lang['UAM_Expired_Group'] = '<b>Gruppo</b> per gli utenti per i quali l\'iscrizione sarà scaduta<br>';
+$lang['UAM_Expired_Status'] = '<b>Statuto</b> per gli utenti per i quali l\'iscrizione sarà scaduta<br>';
 $lang['UAM_GTAuto'] = 'Gestione automatica degli utenti fantasmi';
 $lang['UAM_GTAutoDel'] = 'Cancellazione automatica dei conti';
 $lang['UAM_GTAutoGp'] = 'Cambiamento automatico del gruppo / statuto';
@@ -221,116 +221,115 @@ $lang['UAM_Validation of %s'] = 'Validazione di %s';
 
 // --------- Starting below: New or revised $lang ---- from version 2.20.0
 $lang['UAM_CustomPasswRetr'] = 'Personalizzare il contenuto della email per password persa';
-/*TODO*/$lang['UAM_USRAuto'] = 'Automatic management of unvalidated users';
-/*TODO*/$lang['UAM_USRAutoDel'] = 'Custom message on deleted account';
-/*TODO*/$lang['UAM_USRAutoMail'] = 'Automated email reminder';
+$lang['UAM_USRAuto'] = 'Gestione automatica dei visitatori non convalidati';
+$lang['UAM_USRAutoDel'] = 'Messaggio al momento della cancellazione automatica degli account';
+$lang['UAM_USRAutoMail'] = 'Promemoria automatico';
 $lang['UAM_Disable'] = ' Disattivare (di default)';
 $lang['UAM_Enable'] = ' Attivare ';
-/*TODO*/$lang['UAM_Tips1'] = 'Information of non-validated registration with UAM and PWG_Stuffs';
-/*TODO*/$lang['UAM_Tips1_txt'] = '
+$lang['UAM_Tips1'] = 'Messaggio d\informazione per non validazione d\'iscrizzione con UAM e PWG_Stuffs';
+$lang['UAM_Tips1_txt'] = '
           <ul>
             <li>
-            Goals: Inform the visitor that the registration is awaiting approval by displaying a personal block on the home page of the gallery, and this, as registration is not approved.<br><br>
-            <b>Nota : Nel funzionamento standard, l\'utente "Guest" vede solo le categorie pubbliche, senza messaggio d\'informazione.</b>
+            Obiettivo : Informare il visitatore che la sua iscrizione è in attesa di convalidazione e ciò visualizzando un messagio in un blocco personale sulla homepage della galleria, e questo, finché l\'iscrizione non viene convalidata.<br><br>
+            <b>Nota : Di default, l\'Utente "Guest" vede solo gli album pubblichi, senza nessun messaggio d\'informazione.</b>
             </li><br><br>
             <li>
 Prerequisiti :<br>
-- Una galleria con tutte o alcune categorie private, visibili solo agli utenti registrati<br>
-- Almeno i 2 gruppi d\'utenti Piwigo seguenti : "Attesa", senza alcuna autorizzazione sulle categorie private, e "Convalidati" con tutte le autorizzazioni per le categorie private<br>
-- Il plugin NBC_UAM<br>
+- Una galleria con tutte o alcuni album privati, visibili solo agli utenti iscritti<br>
+- Almeno i 2 gruppi d\'utenti Piwigo seguenti : "Attesa", senza alcuna autorizzazione sugli album privati, e "Convalidati" con tutte le autorizzazioni per gli album privati<br>
+- Il plugin UAM<br>
 - Il plugin PWG Stuffs, per l\'aggiunta di un modulo speciale UAM<br>
 - In opzione, il plugin Extended Description per il supporto multi-lingue<br>
             </li><br><br>
             <li>
 Tappe :<br><br>
-A. Nel plugin NBC_UAM :
+A. Nel plugin UAM :
               <ol>
                 <li>Attivare la conferma dell\'iscrizione</li>
-                <li>Attivare modulo PWG Stuffs</li>
-                <li>Inserire un testo personalizzato che sarà inviato con l\'Email di conferma dell\'iscrizione. Se il plugin Extended Description è installato ed attivato, i tag di lingua possono essere utilizzati</li>
+                <li>Attivare l\'opzione "Modulo PWG Stuffs"</li>
+                <li>Inserire un "testo personalizzato" che sarà inviato con l\'email di conferma dell\'iscrizione. Se il plugin Extended Description è attivato, i tag di lingua possono essere utilizzati</li>
                 <li>Selezionare il gruppo "Attesa" sotto la voce "Per gli utenti che non hanno convalidato la loro iscrizione"</li>
                 <li>Selezionare il gruppo "Convalidati" sotto la voce "Per gli utenti che hanno convalidato la loro iscrizione"</li>
                 <li>Salvare le impostazzioni</li>
               </ol>
 <br>
-B. Nel plugin PWG Stuffs :
+B. Nel plugin PWG Stuffs :<br>
               <ol>
-                <li>Vai alla scheda "Aggiungere un nuovo modulo"</li>
-                <li>Scegliere "UAM Module"</li>
-                <li>Configurare il modulo, indicandone il titolo (ad esempio, "in attesa di convalida dell\'iscrizione"), la descrizione, ed in fine selezionando solo il gruppo "Attesa" nell\'elenco dei gruppi ammessi</li>
-                <li>Completare il contenuto del modulo con il testo da visualizzare per gli utenti non convalidati. Come NBC_UAM, i tag di lingua possono essere utilizzati se il plugin Extended Description è installato ed attivato</li>
+                <li>Andare alla scheda "Aggiungere un nuovo modulo"</li>
+                <li>Scegliere "Modulo UAM"</li>
+                <li>Configurare il modulo, indicandone il titolo (ad esempio, "Iscrizione in attesa di convalida"), la descrizione, ed in fine selezionando solo il gruppo "Attesa" nell\'elenco dei gruppi ammessi</li>
+                <li>Completare il contenuto del modulo con il testo del messaggio d\'informazione che verra visualizzato agli utenti non convalidati. Come per UAM, i tag di lingua possono essere utilizzati se il plugin Extended Description è attivato</li>
                 <li>Selezzionare "Visualizzare il modulo nella homepage del sito"</li>
                 <li>Salvare le impostazzioni</li>
               </ol>
             </li>
           </ul>';
-/*TODO*/$lang['UAM_Tips2'] = 'Information of non-validated registration with UAM and Additional Pages';
-/*TODO*/$lang['UAM_Tips2_txt'] = '
+$lang['UAM_Tips2'] = 'Messaggio d\informazione per non validazione d\'iscrizzione con UAM e Additional Pages';
+$lang['UAM_Tips2_txt'] = '
           <ul>
             <li>
-            Goals: Inform the visitor that the registration is awaiting validation by posting an additional page replacing the standard index page gallery at each of these connections, and this, as registration is not approved.
+            Obiettivi : Informare il visitatore che l\'iscrizione è in attesa di convalida visualizzando una pagina aggiuntiva che sostituisce la pagina indice standard della galleria, e questo, finché l\'iscrizione non viene convalidata.
             <br><br>
-            Advantages over the method with PWG_Stuffs: Allow formatting information and displaying the information immediately upon registration of visitors.
+            Vantaggi rispetto al metodo con PWG_Stuffs : Consente una formattazione e visualizzazione delle informazioni immediatamente dopo l\'iscrizione dei visitatori.
             </li><br><br>
             <li>
 Prerequisiti :<br>
-- Una galleria con tutte o alcune categorie private, visibili solo agli utenti registrati<br>
-- Almeno i 2 gruppi d\'utenti Piwigo seguenti : "Attesa", senza alcuna autorizzazione sulle categorie private, e "Convalidati" con tutte le autorizzazioni per le categorie private<br>
-- Il plugin NBC_UAM<br>
-- Additional Pages plugin for adding and managing an additional page to replace the default index page of the gallery<br>
+- Una galleria con tutte o alcuni album privati, visibili solo agli utenti iscritti<br>
+- Almeno 2 gruppi d\'utenti Piwigo seguenti : "Attesa", senza alcuna autorizzazione sugli album privati, e "Convalidati" con tutte le autorizzazioni per gli album privati<br>
+- Il plugin UAM<br>
+- Il plugin Additional Pages per l\'aggiunta e la gestione di una pagina aggiuntiva che rimpiazza la pagina indice di default della galleria<br>
 - In opzione, il plugin Extended Description per il supporto multi-lingue<br>
             </li><br><br>
             <li>
 Tappe :<br><br>
-A. Nel plugin NBC_UAM :
+A. Nel plugin UAM :
               <ol>
                 <li>Attivare la conferma dell\'iscrizione</li>
-                <li>Inserire un testo personalizzato che sarà inviato con l\'Email di conferma dell\'iscrizione. Se il plugin Extended Description è installato ed attivato, i tag di lingua possono essere utilizzati</li>
+                <li>Inserire un testo personalizzato che sarà inviato con l\'email di conferma dell\'iscrizione. Se il plugin Extended Description è attivato, i tag di lingua possono essere utilizzati</li>
                 <li>Selezionare il gruppo "Attesa" sotto la voce "Per gli utenti che non hanno convalidato la loro iscrizione"</li>
                 <li>Selezionare il gruppo "Convalidati" sotto la voce "Per gli utenti che hanno convalidato la loro iscrizione"</li>
                 <li>Salvare le impostazzioni</li>
               </ol>
 <br>
 B. Nel plugin Additional Pages :<br>
-                <b>NOTE : The management of access rights for groups on Additional Pages must be turned on (see plugin configuration settings).</b>
+                <b>NOTA : La gestione dei diritti di accesso sulle pagine aggiuntive deve essere attivata (vedi le impostazioni di configurazione del plugin Additional Pages).</b>
                 <br>
               <ol>
-                <li>Add a new page with at least the following parameters :</li>
+                <li>Aggiungere una nuova pagina con almeno i seguenti parametri:</li>
                 <ul>
-                  <li>Page name : The name you wish to give to the additional page (ie: Registration not validated)</li>
-                  <li>Set as homepage checked</li>
-                  <li>Groups allowed: Check the box corresponding to the group "Waiting" configured in UAM</li>
-                  <li>Content: The text you want to use for visitors.</li>
+                  <li>Nome della pagina : Il nome che si vuole dare alla pagina aggiuntiva (ad esempio: Iscrizione non convalidata)</li>
+                  <li>Impostare come homepage selezionato</li>
+                  <li>Gruppi autorizzati : Selezionare la casella corrispondente al gruppo di "Attesa" configurato in UAM </li>
+                  <li>Contenuto : Il testo che si desidera visualizzare ai visitatori</li>
                 </ul>
                 <br>
-                <li>And that\'s it! Only visitors registered and whose registration has not been validated will see this additional index page.</li>
+                <li>Questo è tutto! Solo i visitatori iscritti e la cui incrizione non è stata convalidata vedranno questa pagina indice aggiuntiva.</li>
               </ol>
             </li>
           </ul>';
-/*TODO*/$lang['UAM_No_Ghosts'] = 'No ghosts visitors for the moment';
-/*TODO*/$lang['UAM_No_Userlist'] = 'No visitors to list for the moment';
-/*TODO*/$lang['UAM_No_Usermanager'] = 'No unvalidated registers to list for the moment';
+$lang['UAM_No_Ghosts'] = 'Per il momento, nessun visitatore fantasma';
+$lang['UAM_No_Userlist'] = 'Per il momento, nessun monitoraggio dei visitatori';
+$lang['UAM_No_Usermanager'] = 'Per il momento, nessuna validazione d\'iscrizione';
 $lang['UAM_Stuffs_Title'] = 'Modulo UAM';
-/*TODO*/$lang['UAM_Stuffs_Desc'] = 'Adds an information block for unvalidated users';
-$lang['UAM_Stuffs'] = 'modulo PWG Stuffs';
+$lang['UAM_Stuffs_Desc'] = 'Aggiunge un modulo d\'informazione degli utenti non convalidati';
+$lang['UAM_Stuffs'] = 'Modulo PWG Stuffs';
 // --------- End: New or revised $lang ---- from version 2.20.0
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.20.3
-/*TODO*/$lang['UAM_DumpTxt'] = 'Backup your configuration';
-/*TODO*/$lang['UAM_Dump_Download'] = 'To download the backup file, please check this box:';
-/*TODO*/$lang['UAM_Save'] = 'Run backup';
-/*TODO*/$lang['UAM_Dump_OK'] = 'Backup file created successfully';
-/*TODO*/$lang['UAM_Dump_NOK'] = 'Error: Unable to create backup file !';
+$lang['UAM_DumpTxt'] = 'Backup della vostra configurazione';
+$lang['UAM_Dump_Download'] = 'Selezionare per scaricare il file di backup :';
+$lang['UAM_Save'] = 'Eseguire il backup';
+$lang['UAM_Dump_OK'] = 'File di Backup creato';
+$lang['UAM_Dump_NOK'] = 'Errore : Impossibile creare il file di backup!';
 // --------- End: New or revised $lang ---- from version 2.20.3
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.20.4
-$lang['UAM_HidePassw'] = 'Password in chiaro nelle email d\'informazione';
+$lang['UAM_HidePassw'] = 'Password in chiaro nella email d\'informazione';
 // --------- End: New or revised $lang ---- from version 2.20.4
 
-
 // --------- Starting below: New or revised $lang ---- from version 2.20.11
-/*TODO*/$lang['UAM_Error_Using_illegal_flag'] = 'Syntax error ! The [Kdays] AutoText flag is used as the "Termine per la validazione dell\'iscrizione limitato" option was not activated. Please activate the option or correct the text field(s) colored in red.';
+$lang['UAM_Error_Using_illegal_flag'] = 'Errore di sintassi! La bandierina d\'inserzione automatica [Kdays] è usata senza che l\'opzione "Termine per la validazione dell\'iscrizione" è stata attivata. Siete pregati di attivare l\'opzione o correggere il(i) campo(i) di colore rosso.';
 // --------- End: New or revised $lang ---- from version 2.20.11
 ?>
