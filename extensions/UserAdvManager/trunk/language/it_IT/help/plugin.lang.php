@@ -4,21 +4,21 @@ global $lang;
 $lang['UAM_restricTitle'] = 'Restrizioni per le iscrizzioni';
 $lang['UAM_confirmTitle'] = 'Confirmazzione e validazione delle iscrizzioni';
 $lang['UAM_confirmTitle_d'] = '
-- Generazzione di un\'Email d\'informazione<br>
-- Generazzione di un\'Email di conferma d\'iscrizzione<br>
-- Inserimento in automatico dei gruppi / statuti<br>
+- Generazzione di un\'email d\'informazione<br>
+- Generazzione di un\'email di conferma d\'iscrizzione<br>
+- Inserimento in automatico dei gruppi o dei statuti<br>
 - Limitazzione del termine di convalida dell\'iscrizzione<br>
-- Generazzione di un\'Email di rilancio per gli utenti non convalidati<br>
+- Generazzione di un\'email di rilancio per gli utenti non convalidati<br>
 ...
 ';
-$lang['UAM_miscTitle'] = 'Monitoraggio degli utenti registrati e altre opzioni';
-$lang['UAM_carexcTitle'] = 'Pseudo: Esclusione di caratteri';
+$lang['UAM_miscTitle'] = 'Monitoraggio degli utenti iscritti ed altre opzioni';
+$lang['UAM_carexcTitle'] = 'Pseudo : Esclusione di caratteri';
 $lang['UAM_carexcTitle_d'] = 'Può essere interessante vietare certi caratteri per i pseudo (ad esempio: negare login contenente &quot;@&quot;). Questa opzione permette di escludere i caratteri o sequenza di caratteri, eventi.<br>
 NB: L\'opzione può anche escludere parole intere.
 <br><br>
 <b style=&quot;color: red;&quot;>Attenzione: questa opzione non ha alcun effetto sui pseudo creati prima della sua attivazione.</b>';
 $lang['UAM_passwTitle'] = 'Rafforzare il livello di sicurezza delle password';
-$lang['UAM_passwTitle_d'] = 'L\'attivazione di questa opzione rende obbligatorio l\'inserimento di una password al momento della registrazione, e richiede la password scelta dal visitatore di incontrare un livello minimo di complessità. Se la soglia non viene raggiunta, il punteggio conseguito e il punteggio minimo da raggiungere sono visualizzate, insieme con raccomandazioni per aumentare il valore di questa partitura.<br><br>
+$lang['UAM_passwTitle_d'] = 'L\'attivazione di questa opzione rende obbligatorio l\'inserimento di una password al momento dell\'iscrizione, e richiede la password scelta dal visitatore di incontrare un livello minimo di complessità. Se la soglia non viene raggiunta, il punteggio conseguito e il punteggio minimo da raggiungere sono visualizzate, insieme con raccomandazioni per aumentare il valore di questa partitura.<br><br>
 Non vi è prova in campo per misurare la complessità di una password, e può permettersi di avere un\'idea del punteggio per definire personalizzati complessi.<br><br>
 Nota: Il punteggio di una password è calcolato sulla base di diversi parametri: la lunghezza, il tipo di caratteri utilizzati (lettere, numeri, lettere maiuscole, minuscole, caratteri speciali). Un punteggio inferiore a 100 è considerata bassa, da 100 a 500, la complessità è nella media, oltre 500, la sicurezza è eccellente.';
 $lang['UAM_passwtestTitle'] = 'Prova la complessità di una password';
@@ -28,7 +28,7 @@ $lang['UAM_passwadmTitle_d'] = 'Un amministratore può creare un\'pseudo con o s
 Nota: Se l\'account utente creato vuole cambiare la password e il rafforzamento password per gli utenti è attivo, sarà soggetta alla regola.';
 $lang['UAM_mailexcTitle'] = 'L\'esclusione Email domini';
 $lang['UAM_infomailTitle'] = 'E-mail informazioni per l\'utente';
-$lang['UAM_infomailTitle_d'] = 'Questa opzione consente di automatizzare l\'invio di una e-mail le informazioni a un utente al momento della registrazione o quando cambia la sua password o indirizzo e-mail nel loro profilo.<br><br>
+$lang['UAM_infomailTitle_d'] = 'Questa opzione consente di automatizzare l\'invio di una e-mail le informazioni a un utente al momento dell\'iscrizione o quando cambia la sua password o indirizzo e-mail nel loro profilo.<br><br>
 Il contenuto del messaggio inviato è composto da una parte personalizzabile di introdurre una piccola nota di benvenuto e una parte fissa che indica il login, password e indirizzo di posta elettronica dell\'utente.';
 $lang['UAM_infotxtTitle'] = 'Personalizzazione e-mail informazioni';
 /* TODO */$lang['UAM_confirmtxtTitle'] = 'Customizing the confirmation email';
@@ -54,9 +54,9 @@ The groups are validated for use in conjunction with the &quot;Confirmation of r
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.14.0
-$lang['UAM_adminconfmailTitle'] = 'Conferma della registrazione per gli amministratori';
+$lang['UAM_adminconfmailTitle'] = 'Conferma dell\'iscrizione per gli amministratori';
 $lang['UAM_adminconfmailTitle_d'] = '&Egrave; possibile disattivare la convalida solo per gli account utente creato dall\'amministratore Piwigo tramite l\'interfaccia di gestione di utenti.<br><br>
-Attivando questa opzione, la convalida e-mail di registrazione verr&agrave; inviato ad ogni utente creato da admin.<br><br>
+Attivando questa opzione, la convalida email d\iscrizione verr&agrave; inviato ad ogni utente creato da admin.<br><br>
 Disabilitando questa opzione ((predefinito)), solo le informazioni e-mail viene inviata (se &quot;E-mail informazioni per l\'utente&quot; &egrave; abilitato).';
 // --------- End: New or revised $lang ---- from version 2.14.0
 
