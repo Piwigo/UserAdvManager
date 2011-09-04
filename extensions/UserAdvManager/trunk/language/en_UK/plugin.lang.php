@@ -106,7 +106,7 @@ $lang['UAM_SubTitle1'] = 'Plugin configuration';
 $lang['UAM_Tab_Global'] = 'Configuration';
 $lang['UAM_Title1'] = 'Setting restrictions for registrations';
 $lang['UAM_Title2'] = 'Setting confirmations and validations of registration';
-$lang['UAM_Title3'] = 'Setting the followed registrations and other options';
+$lang['UAM_Title3'] = 'Setting the registered users monitoring and other options';
 $lang['UAM_Title4'] = 'Tips and examples of use';
 $lang['UAM_No_Casse'] = 'Usernames: Case sensitivity';
 $lang['UAM_Username_Char'] = 'Usernames: Exclusion of characters';
@@ -209,7 +209,7 @@ $lang['UAM_Deleted_Account_Redirection_Page'] = 'Access denied - Account destroy
 $lang['UAM_title_redir_page'] = 'Access denied for having an account destroyed!';
 $lang['UAM_Error_GTAutoMail_cannot_be_set_without_ConfirmMail'] = 'Consistency error in the configuration chosen:
 <br><br>
-"Setting the followed registrations and other options > Ghost visitors management (Ghost Tracker) > Automatic management of ghosts users > Automatically sending an email when changing group / status" can not be activated if "Setting confirmations and validations of registration > Confirmation of registration - Validation by user" is not enabled at first.
+"Setting the registered users monitoring and other options > Ghost visitors management (Ghost Tracker) > Automatic management of ghosts users > Automatically sending an email when changing group / status" can not be activated if "Setting confirmations and validations of registration > Confirmation of registration - Validation by user" is not enabled at first.
 <br><br>
 To ensure consistency, the option "Automatically sending an email when changing group / status" was automatically repositioned "disabled".
 <br><br>';

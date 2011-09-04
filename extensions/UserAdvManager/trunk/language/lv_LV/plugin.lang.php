@@ -246,7 +246,7 @@ $lang['UAM_RedirToProfile'] = 'Novirzīt uz "Customization" (pielāgošanas) lap
 /* TODO */$lang['UAM_Deleted_Account_Redirection_Page'] = 'Access denied - Account destroyed!';
 /* TODO */$lang['UAM_title_redir_page'] = 'Access denied for having an account destroyed!';
 /* TODO */$lang['UAM_Error_GTAutoMail_cannot_be_set_without_ConfirmMail'] = 'Consistency error in the configuration chosen:<br><br>
-"Setting the followed registrations and other options > Ghost visitors management (Ghost Tracker) > Automatic management of ghosts users > Automatically sending an email when changing group / status" can not be activated if "Setting confirmations and validations of registration > Confirmation of registration - Validation by user" is not enabled at first.<br><br>
+"Setting the registered users monitoring and other options > Ghost visitors management (Ghost Tracker) > Automatic management of ghosts users > Automatically sending an email when changing group / status" can not be activated if "Setting confirmations and validations of registration > Confirmation of registration - Validation by user" is not enabled at first.<br><br>
 To ensure consistency, the option "Automatically sending an email when changing group / status" was automatically repositioned "disabled".<br><br>';
 /* TODO */$lang['UAM_Demotion of %s'] = 'Demotion of %s';
 /* TODO */$lang['UAM_AdminValidationMail_Text'] = 'Notification of manual registration validation';
