@@ -207,7 +207,7 @@ $lang['UAM_GTAutoGp'] = 'Automatic change of group / status';
 $lang['UAM_GTAutoMail'] = 'Automatically sending an email when changing group / status';
 $lang['UAM_Deleted_Account_Redirection_Page'] = 'Access denied - Account destroyed!';
 $lang['UAM_title_redir_page'] = 'Access denied for having an account destroyed!';
-$lang['UAM_Error_GTAutoMail_cannot_be_set_without_ConfirmMail'] = 'Consistency error in the configuration chosen:
+$lang['UAM_Error_GTAutoMail_cannot_be_set_without_ConfirmMail'] = 'Consistency error in the chosen configuration:
 <br><br>
 "Setting the registered users monitoring and other options > Ghost visitors management (Ghost Tracker) > Automatic management of ghosts users > Automatically sending an email when changing group / status" can not be activated if "Setting confirmations and validations of registration > Confirmation of registration - Validation by user" is not enabled at first.
 <br><br>
