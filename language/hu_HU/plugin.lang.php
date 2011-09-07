@@ -316,7 +316,7 @@ B. In plugin Additional Pages:<br>
                 <li>And that\'s it! Only visitors registered and whose registration has not been validated will see this additional index page.</li>
               </ol>
             </li>
-          </ul>';
+          </ul>
             Advantages over the method with PWG_Stuffs: Allow formatting information and displaying the information immediately upon registration of visitors.
             </li><br><br>
             <li>
