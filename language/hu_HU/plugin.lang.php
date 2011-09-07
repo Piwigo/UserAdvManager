@@ -262,7 +262,7 @@ B. In plugin PWG Stuffs :
                 <li>Validate the configuration of the module</li>
               </ol>
             </li>
-          </ul>';
+          </ul>
 <br>
 B. In plugin PWG Stuffs :
               <ol>
