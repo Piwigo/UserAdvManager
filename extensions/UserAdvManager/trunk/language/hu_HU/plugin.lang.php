@@ -110,7 +110,7 @@ $lang['UAM_Title3'] = 'Regisztrált felhasználók követése és más paraméte
 $lang['UAM_Title4'] = 'Felhasználási ötletek és példák ';
 $lang['UAM_No_Casse'] = 'Felhasználónév: kis-és nagybetűkre érzékeny';
 $lang['UAM_Username_Char'] = 'Felhasználónév: Kizárandó karakterek';
-$lang['UAM_Username_Char_true'] = ' Kizárandó karakterek:<br>(vesszővel elválasztval)<br><br>';
+$lang['UAM_Username_Char_true'] = ' Kizárandó karakterek:<br>(vesszővel elválasztva)<br><br>';
 $lang['UAM_Username_Char_false'] = ' Mind engedélyezve (alapértelmezett)';
 $lang['UAM_Password_Enforced'] = 'A jelszó biztonságosságának növelése';
 $lang['UAM_Password_Enforced_true'] = ' Érvényesít. Minimális érték: ';
@@ -131,10 +131,10 @@ $lang['UAM_No_Confirm_Group'] = 'A regisztrációjukat meg nem erősített felha
 $lang['UAM_Validated_Group'] = 'A regisztrációjukat megerősített felhasználók csoportja<br>';
 $lang['UAM_No_Confirm_Status'] = 'A regisztrációjukat meg nem erősített felhasználók állapota<br>';
 $lang['UAM_Validated_Status'] = 'A regisztrációjukat megerősített felhasználók állapota<br>';
-$lang['UAM_ValidationLimit_Info'] = 'A regisztáció megerősítésének határideje korlátozott';
+$lang['UAM_ValidationLimit_Info'] = 'A regisztráció megerősítésének határideje korlátozott';
 $lang['UAM_ConfirmMail_TimeOut_true'] = ' Bekapcsol. Napok száma a lejáratig: ';
 $lang['UAM_ConfirmMail_Remail'] = 'Emlékeztető a regisztrációjukat meg nem erősített felhasználóknak ';
-$lang['UAM_ConfirmMail_ReMail_Txt1'] = '?????? Az emlékzetető üzenet testreszabása <b><u>with</u></b> new regeneration of key validation.';
+$lang['UAM_ConfirmMail_ReMail_Txt1'] = '?????? Az emlékezetető üzenet testreszabása <b><u>with</u></b> new regeneration of key validation.';
 $lang['UAM_ConfirmMail_ReMail_Txt2'] = 'Customizing the reminder message <b><u>without</u></b> regeneration of key validation.';
 
 $lang['UAM_GhostTracker'] = 'Ghost visitors management (Ghost Tracker)';
@@ -275,6 +275,17 @@ B. In plugin PWG Stuffs :
               </ol>
             </li>
           </ul>';
+B. In plugin PWG Stuffs :
+              <ol>
+                <li>Go to tab "Add a new module"</li>
+                <li>Choose "UAM Module"</li>
+                <li>Configure the module, indicating the title (eg "Registration pending validation") and its description, and only check "Waiting" in the list of groups allowed</li>
+                <li>Complete content of the module with the message information to be displayed to users not validated. As UAM, languages markup may be used if the plugin is enabled Extended Description</li>
+                <li>Check "Display the module on the homepage of the site"</li>
+                <li>Validate the configuration of the module</li>
+              </ol>
+            </li>
+          </ul>';
 $lang['UAM_Tips2'] = 'Information of non-validated registration with UAM and Additional Pages';
 $lang['UAM_Tips2_txt'] = '          <ul>
             <li>
@@ -306,6 +317,54 @@ B. In plugin Additional Pages:<br>
                 <br>
               <ol>
                 <li>Add a new page with at least the following parameters:</li>
+                <ul>
+                  <li>Page name: The name you wish to give to the additional page (ie: Registration not validated)</li>
+                  <li>Set as homepage checked</li>
+                  <li>Groups allowed: Check the box corresponding to the group "Waiting" configured in UAM</li>
+                  <li>Content: The text you want to use for visitors.</li>
+                </ul>
+                <br>
+                <li>And that\'s it! Only visitors registered and whose registration has not been validated will see this additional index page.</li>
+              </ol>
+            </li>
+          </ul>
+            Advantages over the method with PWG_Stuffs: Allow formatting information and displaying the information immediately upon registration of visitors.
+            </li><br><br>
+            <li>
+Prerequisite:<br>
+- A gallery with all or some private categories, visible only by registered users<br>
+- At least 2 following Piwigo\'s users groups: "Waiting," without permission on private categories, and "Validated" with all the permissions on the private categories<br>
+- UAM plugin<br>
+- Additional Pages plugin for adding and managing an additional page to replace the default index page of the gallery<br>
+- Optionally, the plugin Extended Description to support multi-languages<br>
+            </li><br><br>
+            <li>
+Stages:<br><br>
+A. In plugin UAM:
+              <ol>
+                <li>Enable registration confirmation</li>
+                <li>Enter text for additional explanation which will be attached to mail registration confirmation. If the plugin Extended Description is activated, the language tags can be used</li>
+                <li>Select the "Waiting" group under "For users who have not validated their registration"</li>
+                <li>Select the "Validated" group under "For users who have validated their registration"</li>
+                <li>Save the plugin configuration</li>
+              </ol>
+<br>
+B. In plugin Additional Pages:<br>
+                <b>NOTE : The management of access rights for groups on Additional Pages must be turned on (see plugin configuration settings).</b>
+                <br>
+              <ol>
+                <li>Add a new page with at least the following parameters:</li>
+                <ul>
+                  <li>Page name: The name you wish to give to the additional page (ie: Registration not validated)</li>
+                  <li>Set as homepage checked</li>
+                  <li>Groups allowed: Check the box corresponding to the group "Waiting" configured in UAM</li>
+                  <li>Content: The text you want to use for visitors.</li>
+                </ul>
+                <br>
+                <li>And that\'s it! Only visitors registered and whose registration has not been validated will see this additional index page.</li>
+              </ol>
+            </li>
+          </ul>';
                 <ul>
                   <li>Page name: The name you wish to give to the additional page (ie: Registration not validated)</li>
                   <li>Set as homepage checked</li>
