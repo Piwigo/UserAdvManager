@@ -262,29 +262,6 @@ B. In plugin PWG Stuffs :
                 <li>Validate the configuration of the module</li>
               </ol>
             </li>
-          </ul>
-<br>
-B. In plugin PWG Stuffs :
-              <ol>
-                <li>Go to tab "Add a new module"</li>
-                <li>Choose "UAM Module"</li>
-                <li>Configure the module, indicating the title (eg "Registration pending validation") and its description, and only check "Waiting" in the list of groups allowed</li>
-                <li>Complete content of the module with the message information to be displayed to users not validated. As UAM, languages markup may be used if the plugin is enabled Extended Description</li>
-                <li>Check "Display the module on the homepage of the site"</li>
-                <li>Validate the configuration of the module</li>
-              </ol>
-            </li>
-          </ul>';
-B. In plugin PWG Stuffs :
-              <ol>
-                <li>Go to tab "Add a new module"</li>
-                <li>Choose "UAM Module"</li>
-                <li>Configure the module, indicating the title (eg "Registration pending validation") and its description, and only check "Waiting" in the list of groups allowed</li>
-                <li>Complete content of the module with the message information to be displayed to users not validated. As UAM, languages markup may be used if the plugin is enabled Extended Description</li>
-                <li>Check "Display the module on the homepage of the site"</li>
-                <li>Validate the configuration of the module</li>
-              </ol>
-            </li>
           </ul>';
 $lang['UAM_Tips2'] = 'Information of non-validated registration with UAM and Additional Pages';
 $lang['UAM_Tips2_txt'] = '          <ul>
@@ -354,17 +331,6 @@ B. In plugin Additional Pages:<br>
                 <br>
               <ol>
                 <li>Add a new page with at least the following parameters:</li>
-                <ul>
-                  <li>Page name: The name you wish to give to the additional page (ie: Registration not validated)</li>
-                  <li>Set as homepage checked</li>
-                  <li>Groups allowed: Check the box corresponding to the group "Waiting" configured in UAM</li>
-                  <li>Content: The text you want to use for visitors.</li>
-                </ul>
-                <br>
-                <li>And that\'s it! Only visitors registered and whose registration has not been validated will see this additional index page.</li>
-              </ol>
-            </li>
-          </ul>';
                 <ul>
                   <li>Page name: The name you wish to give to the additional page (ie: Registration not validated)</li>
                   <li>Set as homepage checked</li>
