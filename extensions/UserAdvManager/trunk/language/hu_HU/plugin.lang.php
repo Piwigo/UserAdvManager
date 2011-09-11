@@ -55,7 +55,7 @@ $lang['UAM_Mail_with_key'] = 'Emlékeztető kulccsal';
 
 // --------- Starting below: New or revised $lang ---- from version 2.12.0 and 2.12.1
 /* Global Configuration Tab */
-$lang['UAM_PasswordTest'] = 'Jelszó teszt: ';
+$lang['UAM_PasswordTest'] = 'Jelszó vizsgálat: ';
 /* Ghost Tracker Tab */
 $lang['UAM_Tab_GhostTracker'] = 'Szellem követő';
 $lang['UAM_Reminder'] = 'E-mail emlékeztető';
@@ -134,97 +134,97 @@ $lang['UAM_Validated_Status'] = 'A regisztrációjukat megerősített felhaszná
 $lang['UAM_ValidationLimit_Info'] = 'A regisztráció megerősítésének határideje korlátozott';
 $lang['UAM_ConfirmMail_TimeOut_true'] = ' Bekapcsol. Napok száma a lejáratig: ';
 $lang['UAM_ConfirmMail_Remail'] = 'Emlékeztető a regisztrációjukat meg nem erősített felhasználóknak ';
-$lang['UAM_ConfirmMail_ReMail_Txt1'] = '?????? Az emlékezetető üzenet testreszabása <b><u>with</u></b> new regeneration of key validation.';
-$lang['UAM_ConfirmMail_ReMail_Txt2'] = 'Customizing the reminder message <b><u>without</u></b> regeneration of key validation.';
+$lang['UAM_ConfirmMail_ReMail_Txt1'] = 'Az emlékezetető üzenet testreszabása új érvényesítő kulcs <b><u>generálásával</u></b> ';
+$lang['UAM_ConfirmMail_ReMail_Txt2'] = 'Az emlékezetető üzenet testreszabása új érvényesítő kulcs <b><u>generálása nélkül</u></b> ';
 
-$lang['UAM_GhostTracker'] = 'Ghost visitors management (Ghost Tracker)';
-$lang['UAM_GhostTracker_true'] = ' Enable. Maximum period in days between two visits: ';
-$lang['UAM_GhostTracker_ReminderText'] = 'Customizing Ghost Tracker\'s reminder message';
-$lang['UAM_LastVisit'] = ' Tracking registered users';
+$lang['UAM_GhostTracker'] = 'Szellem-látogatók kezelése (Szellem-követő)';
+$lang['UAM_GhostTracker_true'] = ' Bekapcsol. Maximális napok száma két látogatás között: ';
+$lang['UAM_GhostTracker_ReminderText'] = 'A Szellem-Követő emlékeztető üzenetének testretszabása.';
+$lang['UAM_LastVisit'] = ' Regisztrált felhasználók követése';
 
-$lang['UAM_Tab_UserManager'] = 'Tracking validations';
+$lang['UAM_Tab_UserManager'] = 'Érvényesítés követése';
 
 /* UserManager Tab */
-$lang['UAM_SubTitle3'] = 'Tracking validations';
-$lang['UAM_UserManager_Title'] = 'Tracking validations';
+$lang['UAM_SubTitle3'] = 'Érvényesítés követése';
+$lang['UAM_UserManager_Title'] = 'Érvényesítés követése';
 /* Ghost Tracker Tab */
-$lang['UAM_SubTitle4'] = 'Ghost Tracker';
-$lang['UAM_GT_Init'] = 'Initializing Ghost Tracker';
-$lang['UAM_GhostTracker_Title'] = 'Ghost visitors management';
-$lang['UAM_GhostTracker_Init'] = 'If you enable this feature for the first time or you have reactivated after a long period off during which new visitors are registered, you must initialize or reset the Ghost Tracker. This action is done only after activation or reactivation of the option. Please click <u>once</u> the reset button below.';
+$lang['UAM_SubTitle4'] = 'Szellem-Követő';
+$lang['UAM_GT_Init'] = 'Szellem-Követő inicializálása';
+$lang['UAM_GhostTracker_Title'] = 'Szellem-látogatók kezelése';
+$lang['UAM_GhostTracker_Init'] = 'Ha ezt a funkciót most először kapcsolod be, vagy hosszú idő után (ami alatt új felhasználók regisztráltak) újra aktiválod, akkor a Szellem-Követőt inicializálnod vagy visszaállítanod kell. Ezt csak az opció bekapcsolása vagy újraindítása esetén kell megtenni.Kérlek, klikkelj <u>egyszer</u> az alábbi visszaállítás gombra.';
 /* UserList Tab */
-$lang['UAM_SubTitle5'] = 'Tracking users';
-$lang['UAM_Tab_UserList'] = 'Tracking users';
+$lang['UAM_SubTitle5'] = 'Felhasználó-követés';
+$lang['UAM_Tab_UserList'] = 'Felhasználó-követés';
 /* Mailing */
-$lang['UAM_Add of %s'] = 'Profile created for %s';
-$lang['UAM_Update of %s'] = 'Profile %s updated';
+$lang['UAM_Add of %s'] = 'Profil elkészítve %s számára';
+$lang['UAM_Update of %s'] = '%s profilja frissítve';
 
 /* Mailing */
-$lang['UAM_Ghost_reminder_of_%s'] = '%s, this is a reminder email';
-$lang['UAM_Reminder_with_key_of_%s'] = '%s, your validation key has been renewed';
-$lang['UAM_Reminder_without_key_of_%s'] = '%s, your validation key will expire';
+$lang['UAM_Ghost_reminder_of_%s'] = '%s, ez egy emlékeztető e-mail';
+$lang['UAM_Reminder_with_key_of_%s'] = '%s, az érvényesítő kulcsod frissítve';
+$lang['UAM_Reminder_without_key_of_%s'] = '%s, az érvényesítő kulcsod le fog járni';
 /* Errors and Warnings */
-$lang['UAM_Err_GhostTracker_Settings'] = 'This page is available only if "Ghost Tracker" is active in "Setting the registrations followed and other options".';
-$lang['UAM_Err_Userlist_Settings'] = 'This page is available only if "Monitoring registered users" is active in the "Setting the registrations followed and other options".';
+$lang['UAM_Err_GhostTracker_Settings'] = 'Ez az oldal csak akkor él, ha a Szellem-Követő be van kapcsolva a "Feliratkozottak követése és egyéb opciók beállítása" alatt.';
+$lang['UAM_Err_Userlist_Settings'] = 'Ez az oldal csak akkor él, ha a "Regisztrált felhasználók követése" be van kapcsolva "Feliratkozottak követése és egyéb opciók beállítása" alatt.';
 // --------- End: New or revised $lang ---- from version 2.13.4
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.14.0
-$lang['UAM_AdminConfMail'] = 'Confirmation of registration for admins';
+$lang['UAM_AdminConfMail'] = 'Adminisztrátorok regisztrációjának megerősítése';
 // --------- End: New or revised $lang ---- from version 2.14.0
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.15.0
-$lang['UAM_confirmmail_custom_Txt1'] = 'Text of the confirmation page - Confirmation accepted';
-$lang['UAM_confirmmail_custom_Txt2'] = 'Text of the confirmation page - Confirmation rejected';
-$lang['UAM_LastVisit_Date'] = 'Last visit';
-$lang['UAM_Nb_Days'] = 'Difference in days';
-$lang['UAM_Err_UserManager_Settings'] = 'This page is available only if "Confirmation of registration" is active and if a group of visitors not validated is configured in "Setting confirmations and validations of registration".';
+$lang['UAM_confirmmail_custom_Txt1'] = 'A megerősítő oldal szövege - Megerősítés sikeres';
+$lang['UAM_confirmmail_custom_Txt2'] = 'A megerősítő oldal szövege - Megerősítés sikertlen';
+$lang['UAM_LastVisit_Date'] = 'Utolsó látogatás';
+$lang['UAM_Nb_Days'] = 'Különbség napokban';
+$lang['UAM_Err_UserManager_Settings'] = 'Ez az oldal csak akkor él, ha a  "Regisztráció megerősítése" be van kapcsolva és a nem-érvényesített látogatók csoportja is be van állítva a "Regisztráció megerősítése és érvényesítése" alatt.';
 // --------- End: New or revised $lang ---- from version 2.15.0
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.15.1
-$lang['UAM_Support_txt'] = 'The official support on this plugin is only on these Piwigo forum topic:<br>
+$lang['UAM_Support_txt'] = 'E plugin hivatalos támogatása csak az alábbi Piwigo forum témánál:<br>
 <a href="http://piwigo.org/forum/viewtopic.php?id=15015" onclick="window.open(this.href);return false;">English forum - http://piwigo.org/forum/viewtopic.php?id=15015</a><br><br>
-Also available, the project\'s bugtracker: <a href="http://piwigo.org/bugs/" onclick="window.open(this.href);return false;">http://piwigo.org/bugs/</a>';
+Szintén elérhető a projekt hibakövetőben: <a href="http://piwigo.org/bugs/" onclick="window.open(this.href);return false;">http://piwigo.org/bugs/</a>';
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.15.4
-$lang['UAM_Force_Validation'] = 'Manual validation';
-$lang['UAM_Confirm_Mail_true'] = ' Enable - Validation by user';
-$lang['UAM_Confirm_Mail_local'] = ' Enable - Validation by admin (no validation key sent)';
-$lang['UAM_RedirToProfile'] = 'Redirect to "Customization" page';
+$lang['UAM_Force_Validation'] = 'Kézi érvényesítés';
+$lang['UAM_Confirm_Mail_true'] = ' Bekapcsol - Érvényesítés a felhasználó által';
+$lang['UAM_Confirm_Mail_local'] = ' Bekapcsol - Érvényesítés az admin által (nincs érvényesítő kulcs küldés)';
+$lang['UAM_RedirToProfile'] = 'Átirányítás a "Testreszabás" oldalra';
 // --------- End: New or revised $lang ---- from version 2.15.4
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.16.0
-$lang['UAM_Expired_Group'] = '<b>Group</b> for user\'s registration has expired<br>';
-$lang['UAM_Expired_Status'] = '<b>Status</b> for user\'s registration has expired<br>';
-$lang['UAM_GTAuto'] = 'Automatic management of ghosts users';
-$lang['UAM_GTAutoDel'] = 'Automatic deletion of accounts';
-$lang['UAM_GTAutoGp'] = 'Automatic change of group / status';
-$lang['UAM_GTAutoMail'] = 'Automatically sending an email when changing group / status';
-$lang['UAM_Deleted_Account_Redirection_Page'] = 'Access denied - Account destroyed!';
-$lang['UAM_title_redir_page'] = 'Access denied for having an account destroyed!';
-$lang['UAM_Error_GTAutoMail_cannot_be_set_without_ConfirmMail'] = 'Consistency error in the configuration chosen:
+$lang['UAM_Expired_Group'] = 'Lejárt regisztrációjú felhasználók <b>csoportja</b> <br>';
+$lang['UAM_Expired_Status'] = 'Lejárt regisztrációjú felhasználók <b>csoportja</b> <br>';
+$lang['UAM_GTAuto'] = 'Szellem-felhasználók automatikus követése';
+$lang['UAM_GTAutoDel'] = 'Azonosítók automatikus törlése';
+$lang['UAM_GTAutoGp'] = 'Csoport / állapot automatikus változása';
+$lang['UAM_GTAutoMail'] = 'E-mail automatikus küldése csoport / állapot változásakor';
+$lang['UAM_Deleted_Account_Redirection_Page'] = 'Hozzáférés megtagadva - Azonosító megsemmisítve!';
+$lang['UAM_title_redir_page'] = 'Hozzáférés megtagadva azonosító megsemmisítése miatt!';
+$lang['UAM_Error_GTAutoMail_cannot_be_set_without_ConfirmMail'] = 'Következetlenség a választott konfigurációban:
 <br><br>
-"Setting the followed registrations and other options > Ghost visitors management (Ghost Tracker) > Automatic management of ghosts users > Automatically sending an email when changing group / status" can not be activated if "Setting confirmations and validations of registration > Confirmation of registration - Validation by user" is not enabled at first.
+"Feliratkozottak követése és egyéb opciók beállítása > Szellem-látogatók kezelése (Szellem-Követő) > Szellem-felhasználók automatikus kezelése > E-mail automatikus küldése csoport / állapot változáskor" nem bekapcsolható, ha a "Regisztráció megerősítés és érvényesítés beállítás" > CRegisztráció megerősítése - Érvényesítés a felhasználó által" nincs előtte bekapcsolva.
 <br><br>
-To ensure consistency, the option "Automatically sending an email when changing group / status" was automatically repositioned "disabled".
+A következetesség biztosítása érdekében, az "E-mail automatikus küldése csoport / állapot változáskor" lehetőséget automatikusan "kikapcsoltra" állítottuk vissza.
 <br><br>';
-$lang['UAM_Demotion of %s'] = 'Demotion of %s';
-$lang['UAM_AdminValidationMail_Text'] = 'Notification of manual registration validation';
-$lang['UAM_Validation of %s'] = 'Validation of %s';
+$lang['UAM_Demotion of %s'] = 'Lefokozás of %s';
+$lang['UAM_AdminValidationMail_Text'] = 'Értesítés kézi regisztráció-érvényesítésről';
+$lang['UAM_Validation of %s'] = '%s érvényesítése';
 // --------- End: New or revised $lang ---- from version 2.16.0
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.20.0
-$lang['UAM_CustomPasswRetr'] = 'Customize lost password email content';
-$lang['UAM_USRAuto'] = 'Automatic management of unvalidated users';
-$lang['UAM_USRAutoDel'] = 'Custom message on deleted account';
-$lang['UAM_USRAutoMail'] = 'Automated email reminder';
-$lang['UAM_Disable'] = ' Disable (default)';
-$lang['UAM_Enable'] = ' Enable ';
+$lang['UAM_CustomPasswRetr'] = 'Elveszett jelszó e-mail tartalmának beállítása';
+$lang['UAM_USRAuto'] = 'Érvénytelen felhaszálók automatikus kezelése';
+$lang['UAM_USRAutoDel'] = 'Törölt azonosító egyedi üzenet';
+$lang['UAM_USRAutoMail'] = 'Automatikus e-mail emlékeztető';
+$lang['UAM_Disable'] = ' Kikapcsolt (alapértelmezett)';
+$lang['UAM_Enable'] = ' Bekapcsolt ';
 $lang['UAM_Tips1'] = 'Information of non-validated registration with UAM and PWG_Stuffs';
 $lang['UAM_Tips1_txt'] = '          <ul>
             <li>
@@ -252,6 +252,17 @@ A. In plugin UAM:
                 <li>Save the plugin configuration</li>
               </ol>
 <br>
+B. In plugin PWG Stuffs :
+              <ol>
+                <li>Go to tab "Add a new module"</li>
+                <li>Choose "UAM Module"</li>
+                <li>Configure the module, indicating the title (eg "Registration pending validation") and its description, and only check "Waiting" in the list of groups allowed</li>
+                <li>Complete content of the module with the message information to be displayed to users not validated. As UAM, languages markup may be used if the plugin is enabled Extended Description</li>
+                <li>Check "Display the module on the homepage of the site"</li>
+                <li>Validate the configuration of the module</li>
+              </ol>
+            </li>
+          </ul>';
 B. In plugin PWG Stuffs :
               <ol>
                 <li>Go to tab "Add a new module"</li>
@@ -343,6 +354,42 @@ B. In plugin Additional Pages:<br>
             </li>
           </ul>
             Advantages over the method with PWG_Stuffs: Allow formatting information and displaying the information immediately upon registration of visitors.
+            </li><br><br>
+            <li>
+Prerequisite:<br>
+- A gallery with all or some private categories, visible only by registered users<br>
+- At least 2 following Piwigo\'s users groups: "Waiting," without permission on private categories, and "Validated" with all the permissions on the private categories<br>
+- UAM plugin<br>
+- Additional Pages plugin for adding and managing an additional page to replace the default index page of the gallery<br>
+- Optionally, the plugin Extended Description to support multi-languages<br>
+            </li><br><br>
+            <li>
+Stages:<br><br>
+A. In plugin UAM:
+              <ol>
+                <li>Enable registration confirmation</li>
+                <li>Enter text for additional explanation which will be attached to mail registration confirmation. If the plugin Extended Description is activated, the language tags can be used</li>
+                <li>Select the "Waiting" group under "For users who have not validated their registration"</li>
+                <li>Select the "Validated" group under "For users who have validated their registration"</li>
+                <li>Save the plugin configuration</li>
+              </ol>
+<br>
+B. In plugin Additional Pages:<br>
+                <b>NOTE : The management of access rights for groups on Additional Pages must be turned on (see plugin configuration settings).</b>
+                <br>
+              <ol>
+                <li>Add a new page with at least the following parameters:</li>
+                <ul>
+                  <li>Page name: The name you wish to give to the additional page (ie: Registration not validated)</li>
+                  <li>Set as homepage checked</li>
+                  <li>Groups allowed: Check the box corresponding to the group "Waiting" configured in UAM</li>
+                  <li>Content: The text you want to use for visitors.</li>
+                </ul>
+                <br>
+                <li>And that\'s it! Only visitors registered and whose registration has not been validated will see this additional index page.</li>
+              </ol>
+            </li>
+          </ul>';
             </li><br><br>
             <li>
 Prerequisite:<br>
