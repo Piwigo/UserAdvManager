@@ -263,17 +263,6 @@ B. In plugin PWG Stuffs :
               </ol>
             </li>
           </ul>';
-B. In plugin PWG Stuffs :
-              <ol>
-                <li>Go to tab "Add a new module"</li>
-                <li>Choose "UAM Module"</li>
-                <li>Configure the module, indicating the title (eg "Registration pending validation") and its description, and only check "Waiting" in the list of groups allowed</li>
-                <li>Complete content of the module with the message information to be displayed to users not validated. As UAM, languages markup may be used if the plugin is enabled Extended Description</li>
-                <li>Check "Display the module on the homepage of the site"</li>
-                <li>Validate the configuration of the module</li>
-              </ol>
-            </li>
-          </ul>';
 $lang['UAM_Tips2'] = 'Information of non-validated registration with UAM and Additional Pages';
 $lang['UAM_Tips2_txt'] = '          <ul>
             <li>
@@ -389,7 +378,7 @@ B. In plugin Additional Pages:<br>
                 <li>And that\'s it! Only visitors registered and whose registration has not been validated will see this additional index page.</li>
               </ol>
             </li>
-          </ul>';
+          </ul>
             </li><br><br>
             <li>
 Prerequisite:<br>
@@ -401,31 +390,7 @@ Prerequisite:<br>
             </li><br><br>
             <li>
 Stages:<br><br>
-A. In plugin UAM:
-              <ol>
-                <li>Enable registration confirmation</li>
-                <li>Enter text for additional explanation which will be attached to mail registration confirmation. If the plugin Extended Description is activated, the language tags can be used</li>
-                <li>Select the "Waiting" group under "For users who have not validated their registration"</li>
-                <li>Select the "Validated" group under "For users who have validated their registration"</li>
-                <li>Save the plugin configuration</li>
-              </ol>
-<br>
-B. In plugin Additional Pages:<br>
-                <b>NOTE : The management of access rights for groups on Additional Pages must be turned on (see plugin configuration settings).</b>
-                <br>
-              <ol>
-                <li>Add a new page with at least the following parameters:</li>
-                <ul>
-                  <li>Page name: The name you wish to give to the additional page (ie: Registration not validated)</li>
-                  <li>Set as homepage checked</li>
-                  <li>Groups allowed: Check the box corresponding to the group "Waiting" configured in UAM</li>
-                  <li>Content: The text you want to use for visitors.</li>
-                </ul>
-                <br>
-                <li>And that\'s it! Only visitors registered and whose registration has not been validated will see this additional index page.</li>
-              </ol>
-            </li>
-          </ul>';
+';
 $lang['UAM_No_Ghosts'] = 'No ghosts visitors for the moment';
 $lang['UAM_No_Userlist'] = 'No visitors to list for the moment';
 $lang['UAM_No_Usermanager'] = 'No unvalidated registers to list for the moment';
