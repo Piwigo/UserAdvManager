@@ -228,30 +228,41 @@ $lang['UAM_Enable'] = ' Bekapcsolt ';
 $lang['UAM_Tips1'] = 'Information of non-validated registration with UAM and PWG_Stuffs';
 $lang['UAM_Tips1_txt'] = '          <ul>
             <li>
-            Goals: Inform the visitor that the registration is awaiting approval by displaying a personal block on the home page of the gallery, and this, as registration is not approved.
+            Cél: Tájékoztatni a látogatót, hogy a regisztráció engedélyezésre vár, úgy hogy a Galéria nyitó oldalára egy személyes üzenetet küldünk, mindaddig, amíg a jóváhagyás meg nem történik. 
             <br><br>
-            <b>Recall: In standard operation, the "Guest" only sees the public categories, without information message.</b>
+            <b>Emlékeztető: Normál működéskor a "Guest" (Vendég) csak a nyilvános kategóriákat látja, az info üzenet nélkül.</b>
             </li><br><br>
             <li>
-Prerequisite:<br>
-- A gallery with all or some private categories, visible only by registered users<br>
-- At least 2 following Piwigo\'s users groups: "Waiting," without permission on private categories, and "Validated" with all the permissions on the private categories<br>
-- UAM plugin<br>
-- PWG Stuffs plugin, for adding a special UAM module<br>
-- Optionally, the plugin Extended Description to support multi-languages<br>
+Előfeltételek:<br>
+- Egy galéria, ahol néhány vagy az összes kategória privát, azaz, csak regisztrált felhasználok láthatják<br>
+- Legalább két ilyen Piwigo felasználói csoport: "Várakozó," a privát kategóriákra szóló engedély nélkül, és "Elfogadott" a privát kategóriákra szóló valamennyi engedéllyel.<br>
+- az UAM plugin<br>
+- a PWG Stuffs plugin, speciális UAM modul hozzáadásához<br>
+- Esetlegesene az Extended Description plugin több nyelv támogatásához<br>
             </li><br><br>
             <li>
-Stages:<br><br>
-A. In plugin UAM:
+Megvalósítás:<br><br>
+A. Az UAM pluginben:
               <ol>
-                <li>Enable registration confirmation</li>
-                <li>Enable PWG Stuffs module option</li>
-                <li>Enter text for additional explanation which will be attached to mail registration confirmation. If the plugin Extended Description is activated, the language tags can be used</li>
-                <li>Select the "Waiting" group under "For users who have not validated their registration"</li>
-                <li>Select the "Validated" group under "For users who have validated their registration"</li>
-                <li>Save the plugin configuration</li>
+                <li>A regisztráció-megerősítés bekapcsolása</li>
+                <li>A PWG Stuffs module opció bekapcsolása</li>
+                <li>Addj meg további magyarázó szöveget, ami a regisztrácjó megerősítő e-mail-hez lasz csatolva. Ha az Extended Description plugin be van kapcsolva, akkor a nylevi cimkéket lehet használni</li>
+                <li>Válaszd ki a "Várakozó" csoportot az "Olyan felhasználóknak, akik nem érvényesítették a regisztrációjukat" alatt</li>
+                <li>Válaszd ki az "Elfogadott" csoporot az "Olyan felhasználóknak, akik érvényesítették a regisztrációjukat" alatt</li>
+                <li>Mentsd el a plugin veállításait</li>
               </ol>
 <br>
+B. A PWG Stuffs pluginban :
+              <ol>
+                <li>Menj az "Új modul hozzáadása" fülre</li>
+                <li>Válaszd az "UAM Modul"-t</li>
+                <li>Konfiguráld a modult, add meg a címét (pl. "Engedélyezésre váró regisztráció") és a leírását, és csak a "Várakozó"-t jelöld be a megengedett csoportok listájában</li>
+                <li>Egészítsd ki a modul tartalmát a nem-érvényesített eflhasználóknak szánt üzenettel. Mint UAM, nyelvi elemek használhatóak, ha az Extended Description plugin be van kapcsolva</li>
+                <li>Kapcsold be a "Jelenítsd meg a modult a honlap nyitó oldalán"</li>
+                <li>Érvényesítsd a modul beállításait</li>
+              </ol>
+            </li>
+          </ul>';
 B. In plugin PWG Stuffs :
               <ol>
                 <li>Go to tab "Add a new module"</li>
@@ -266,95 +277,22 @@ B. In plugin PWG Stuffs :
 $lang['UAM_Tips2'] = 'Information of non-validated registration with UAM and Additional Pages';
 $lang['UAM_Tips2_txt'] = '          <ul>
             <li>
-            Goals: Inform the visitor that the registration is awaiting validation by posting an additional page replacing the standard index page gallery at each of these connections, and this, as registration is not approved.
+            Cél: Tájékoztatni a látogatót, hogy a regisztráció engedélyezésre vár, úgy hogy új oldal helyettesíti a Galéria normál index oldalát valamennyi csatlakozásnál, mindaddig, amíg a jóváhagyás meg nem történik. 
             <br><br>
-            Advantages over the method with PWG_Stuffs: Allow formatting information and displaying the information immediately upon registration of visitors.
+            Az PWG_Stuffs módszerhez képesti előnyök: Lehetőség van az információ formázására és az üzenet azonnal megjelenik, ahogy a látogatók regisztrálnak. 
             </li><br><br>
             <li>
-Prerequisite:<br>
-- A gallery with all or some private categories, visible only by registered users<br>
-- At least 2 following Piwigo\'s users groups: "Waiting," without permission on private categories, and "Validated" with all the permissions on the private categories<br>
-- UAM plugin<br>
-- Additional Pages plugin for adding and managing an additional page to replace the default index page of the gallery<br>
-- Optionally, the plugin Extended Description to support multi-languages<br>
-            </li><br><br>
-            <li>
-Stages:<br><br>
-A. In plugin UAM:
-              <ol>
-                <li>Enable registration confirmation</li>
-                <li>Enter text for additional explanation which will be attached to mail registration confirmation. If the plugin Extended Description is activated, the language tags can be used</li>
-                <li>Select the "Waiting" group under "For users who have not validated their registration"</li>
-                <li>Select the "Validated" group under "For users who have validated their registration"</li>
-                <li>Save the plugin configuration</li>
-              </ol>
+Előfeltételek:<br>
+- Egy galéria, ahol néhány vagy az összes kategória privát, azaz, csak regisztrált felhasználok láthatják<br>
+- Legalább két ilyen Piwigo felasználói csoport: "Várakozó," a privát kategóriákra szóló engedély nélkül, és "Elfogadott" a privát kategóriákra szóló valamennyi engedéllyel.<br>
+- az UAM plugin<br>
+- az Additional Pages (További oldalak) plugin, egy további oldal hozzáadásához és kezeléséhez, amelyik felváltja a Galéria normál index oldalát<br>
+- Esetlegesene az Extended Description plugin több nyelv támogatásához
 <br>
-B. In plugin Additional Pages:<br>
-                <b>NOTE : The management of access rights for groups on Additional Pages must be turned on (see plugin configuration settings).</b>
-                <br>
-              <ol>
-                <li>Add a new page with at least the following parameters:</li>
-                <ul>
-                  <li>Page name: The name you wish to give to the additional page (ie: Registration not validated)</li>
-                  <li>Set as homepage checked</li>
-                  <li>Groups allowed: Check the box corresponding to the group "Waiting" configured in UAM</li>
-                  <li>Content: The text you want to use for visitors.</li>
-                </ul>
-                <br>
-                <li>And that\'s it! Only visitors registered and whose registration has not been validated will see this additional index page.</li>
-              </ol>
-            </li>
-          </ul>
-            Advantages over the method with PWG_Stuffs: Allow formatting information and displaying the information immediately upon registration of visitors.
-            </li><br><br>
-            <li>
-Prerequisite:<br>
-- A gallery with all or some private categories, visible only by registered users<br>
-- At least 2 following Piwigo\'s users groups: "Waiting," without permission on private categories, and "Validated" with all the permissions on the private categories<br>
-- UAM plugin<br>
-- Additional Pages plugin for adding and managing an additional page to replace the default index page of the gallery<br>
-- Optionally, the plugin Extended Description to support multi-languages<br>
-            </li><br><br>
-            <li>
-Stages:<br><br>
-A. In plugin UAM:
-              <ol>
-                <li>Enable registration confirmation</li>
-                <li>Enter text for additional explanation which will be attached to mail registration confirmation. If the plugin Extended Description is activated, the language tags can be used</li>
-                <li>Select the "Waiting" group under "For users who have not validated their registration"</li>
-                <li>Select the "Validated" group under "For users who have validated their registration"</li>
-                <li>Save the plugin configuration</li>
-              </ol>
 <br>
-B. In plugin Additional Pages:<br>
-                <b>NOTE : The management of access rights for groups on Additional Pages must be turned on (see plugin configuration settings).</b>
-                <br>
-              <ol>
-                <li>Add a new page with at least the following parameters:</li>
-                <ul>
-                  <li>Page name: The name you wish to give to the additional page (ie: Registration not validated)</li>
-                  <li>Set as homepage checked</li>
-                  <li>Groups allowed: Check the box corresponding to the group "Waiting" configured in UAM</li>
-                  <li>Content: The text you want to use for visitors.</li>
-                </ul>
-                <br>
-                <li>And that\'s it! Only visitors registered and whose registration has not been validated will see this additional index page.</li>
-              </ol>
-            </li>
-          </ul>
-            Advantages over the method with PWG_Stuffs: Allow formatting information and displaying the information immediately upon registration of visitors.
             </li><br><br>
             <li>
-Prerequisite:<br>
-- A gallery with all or some private categories, visible only by registered users<br>
-- At least 2 following Piwigo\'s users groups: "Waiting," without permission on private categories, and "Validated" with all the permissions on the private categories<br>
-- UAM plugin<br>
-- Additional Pages plugin for adding and managing an additional page to replace the default index page of the gallery<br>
-- Optionally, the plugin Extended Description to support multi-languages<br>
-            </li><br><br>
-            <li>
-Stages:<br><br>
-A. In plugin UAM:
+';
               <ol>
                 <li>Enable registration confirmation</li>
                 <li>Enter text for additional explanation which will be attached to mail registration confirmation. If the plugin Extended Description is activated, the language tags can be used</li>
@@ -391,30 +329,30 @@ Prerequisite:<br>
             <li>
 Stages:<br><br>
 ';
-$lang['UAM_No_Ghosts'] = 'No ghosts visitors for the moment';
-$lang['UAM_No_Userlist'] = 'No visitors to list for the moment';
-$lang['UAM_No_Usermanager'] = 'No unvalidated registers to list for the moment';
-$lang['UAM_Stuffs_Title'] = 'UAM block';
-$lang['UAM_Stuffs_Desc'] = 'Adds an information block for unvalidated users';
-$lang['UAM_Stuffs'] = 'PWG Stuffs block';
+$lang['UAM_No_Ghosts'] = 'Jelenleg nincs Szellem-Látogató';
+$lang['UAM_No_Userlist'] = 'Jelenleg nincs listázandó látogató';
+$lang['UAM_No_Usermanager'] = 'Jelenleg nincs érvénytelenített regisztráció';
+$lang['UAM_Stuffs_Title'] = 'UAM blok';
+$lang['UAM_Stuffs_Desc'] = 'Információs blok hozzáadása nem-érvényesített felhasználók részére';
+$lang['UAM_Stuffs'] = 'PWG Stuffs blok';
 // --------- End: New or revised $lang ---- from version 2.20.0
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.20.3
-$lang['UAM_DumpTxt'] = 'Backup your configuration';
-$lang['UAM_Dump_Download'] = 'To download the backup file, please check this box:';
-$lang['UAM_Save'] = 'Run backup';
-$lang['UAM_Dump_OK'] = 'Backup file created successfully';
-$lang['UAM_Dump_NOK'] = 'Error: Unable to create backup file !';
+$lang['UAM_DumpTxt'] = 'készíts backup-ot a beállításaidról';
+$lang['UAM_Dump_Download'] = 'A backup file letöltéséhez, jelöld be ezt:';
+$lang['UAM_Save'] = 'Backup futtatása';
+$lang['UAM_Dump_OK'] = 'Backup file sikeresen elkészítve';
+$lang['UAM_Dump_NOK'] = 'Hiba: Sikertelen backup file készítés!';
 // --------- End: New or revised $lang ---- from version 2.20.3
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.20.4
-$lang['UAM_HidePassw'] = 'Password in clear text in the information email';
+$lang['UAM_HidePassw'] = 'Az olvasható jelszó az info e-mail-ben';
 // --------- End: New or revised $lang ---- from version 2.20.4
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.20.11
-$lang['UAM_Error_Using_illegal_flag'] = 'Syntax error ! The [Kdays] AutoText flag is used as the "Deadline for registration validation limited" option was not activated. Please activate the option or correct the text field(s) colored in red.';
+$lang['UAM_Error_Using_illegal_flag'] = 'Szintaktikai hiba! Az [Kdays] AutoText flag van használatban, mert a "Regisztráció érvényesítésének határideje korlátozott" beállítás nincs bekapcsolva. Kérlek, kapcsoldbe ezt a beállítást, vagy javítsd ki a piros szöveg mezőt vagy mezőket.';
 // --------- End: New or revised $lang ---- from version 2.20.11
 ?>
