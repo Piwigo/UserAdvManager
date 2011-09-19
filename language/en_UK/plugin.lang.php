@@ -106,7 +106,6 @@ $lang['UAM_SubTitle1'] = 'Plugin configuration';
 $lang['UAM_Tab_Global'] = 'Configuration';
 $lang['UAM_Title1'] = 'Setting restrictions for registrations';
 $lang['UAM_Title2'] = 'Setting confirmations and validations of registration';
-$lang['UAM_Title3'] = 'Setting the registered users monitoring and other options';
 $lang['UAM_Title4'] = 'Tips and examples of use';
 $lang['UAM_No_Casse'] = 'Usernames: Case sensitivity';
 $lang['UAM_Username_Char'] = 'Usernames: Exclusion of characters';
@@ -124,9 +123,6 @@ $lang['UAM_Mail_Info'] = 'Information email to user:';
 $lang['UAM_MailInfo_Text'] = ' Customizing the information email:';
 $lang['UAM_Confirm_Mail'] = 'Confirmation of registration:';
 $lang['UAM_ConfirmMail_Text'] = ' Customizing the confirmation email:';
-$lang['UAM_Confirm_grpstat_notice'] = 'Caution: It is advisable to use either the group or the validation statutes and not both simultaneously.';
-$lang['UAM_Confirm_Group'] = 'Validation Groups<br>(leave ------- to not affect group)';
-$lang['UAM_Confirm_Status'] = 'Validation Statutes<br>(leave ------- to keep the Piwigo\'s default)';
 $lang['UAM_No_Confirm_Group'] = 'Group for users who have not validated their registration<br>';
 $lang['UAM_Validated_Group'] = 'Group for users who have validated their registration<br>';
 $lang['UAM_No_Confirm_Status'] = 'Status for users who have not validated their registration<br>';
@@ -203,7 +199,6 @@ $lang['UAM_Expired_Group'] = '<b>Group</b> for user\'s registration has expired<
 $lang['UAM_Expired_Status'] = '<b>Status</b> for user\'s registration has expired<br>';
 $lang['UAM_GTAuto'] = 'Automatic management of ghosts users';
 $lang['UAM_GTAutoDel'] = 'Automatic deletion of accounts';
-$lang['UAM_GTAutoGp'] = 'Automatic change of group / status';
 $lang['UAM_GTAutoMail'] = 'Automatically sending an email when changing group / status';
 $lang['UAM_Deleted_Account_Redirection_Page'] = 'Access denied - Account destroyed!';
 $lang['UAM_title_redir_page'] = 'Access denied for having an account destroyed!';
@@ -334,4 +329,19 @@ $lang['UAM_HidePassw'] = 'Password in clear text in the information email';
 // --------- Starting below: New or revised $lang ---- from version 2.20.11
 $lang['UAM_Error_Using_illegal_flag'] = 'Syntax error ! The [Kdays] AutoText flag is used as the "Deadline for registration validation limited" option was not activated. Please activate the option or correct the text field(s) colored in red.';
 // --------- End: New or revised $lang ---- from version 2.20.11
+
+
+// --------- Starting below: New or revised $lang ---- from version 2.30.0
+$lang['UAM_Confirm_grpstat_notice'] = 'Caution: It is advisable to use either the group or the validation statutes and not both simultaneously. The privacy level can be used in conjunction with a group or status assignment.';
+$lang['UAM_Confirm_Group'] = 'Groups<br>(leave ------- to not affect group)';
+$lang['UAM_Confirm_Status'] = 'Statutes<br>(leave ------- to keep the Piwigo\'s default)';
+$lang['UAM_Confirm_Level'] = 'Privacy level<br>(leave ------- to keep the Piwigo\'s default)';
+$lang['UAM_No_Valid_Level'] = 'Privacy level for users who have not validated their registration<br>';
+$lang['UAM_Valid_Level'] = 'Privacy level for users who have validated their registration<br>';
+$lang['UAM_GTAutoGp'] = 'Automatic change of group / status / privacy level';
+$lang['UAM_Expired_Level'] = '<b>Privacy level</b> for user\'s registration has expired<br>';
+$lang['UAM_MiscOptions'] = 'Other miscellaneous options';
+$lang['UAM_Title3'] = 'Ghost users management';
+$lang['UAM_Title5'] = 'Other miscellaneous options';
+// --------- End: New or revised $lang ---- from version 2.30.0
 ?>

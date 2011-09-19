@@ -259,5 +259,8 @@ Plugin Name: UserAdvManager
 -- 2.20.10 : Bug 2324 fixed - New feature : Add [days] autotext flag to insert maximum numbers of days between two visits set in plugin's GhostTracker in GhostTracker reminder email.
 
 -- 2.20.11 : Bug 2336 fixed - New feature : Add [Kdays] autotext flag to insert the number of days until expiration.
+
+-- 2.30.0RC1 : Piwigo 2.3.0 compliant
+            Bug 2415 fixed - New feature : Set automatically privacy level for users who have validated or not their registration. Automated task available.
 */
 ?>

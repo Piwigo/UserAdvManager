@@ -3,15 +3,6 @@ global $lang;
 
 $lang['UAM_restricTitle'] = 'Restriction des inscriptions';
 $lang['UAM_confirmTitle'] = 'Confirmation et validation des inscriptions';
-$lang['UAM_confirmTitle_d'] = '
-- Génération d\'email d\'information<br>
-- Génération d\'email de confirmation d\'inscription<br>
-- Affectation automatique de groupe ou statut<br>
-- Limitation du délai de validation<br>
-- Génération d\'email de rappel<br>
-...
-';
-$lang['UAM_miscTitle'] = 'Suivi des inscrits et fonctions diverses';
 $lang['UAM_carexcTitle'] = 'Noms d\'utilisateurs : Exclusion de certains caractères';
 $lang['UAM_carexcTitle_d'] = 'Il peut être intéressant d\'interdire certains caractères dans les noms d\'utilisateurs (exemple : refuser les logins contenant un &quot;@&quot;). Cette option permet d\'exclure les caractères, ou suite de caractères, indésirables.<br>NB: l\'option permet également d\'exclure des mots complets.
 <br><br>
@@ -31,12 +22,6 @@ $lang['UAM_infomailTitle_d'] = 'Cette option permet d\'automatiser l\'envoi d\'u
 Le message envoyé comprend une partie fixe (login, mot de passe et adresse email de l\'utilisateur) et une partie personnalisable par un texte d\'accueil.';
 $lang['UAM_infotxtTitle'] = 'Personnalisation de l\'email d\'information';
 $lang['UAM_confirmtxtTitle'] = 'Personnalisation de l\'email de confirmation';
-$lang['UAM_confirmgrpTitle'] = 'Groupes de validation';
-$lang['UAM_confirmgrpTitle_d'] = '<b style=&quot;color: red;&quot;>ATTENTION : L\'utilisation des groupes de validation nécessite que vous ayez créé au moins un groupe d\'utilisateurs et qu\'il soit défini &quot;par défaut&quot; dans la gestion des groupes d\'utilisateurs de Piwigo.</b><br><br>
-Les groupes de validation sont à utiliser conjointement avec l\'option &quot;Confirmation d\'inscription&quot;';
-$lang['UAM_confirmstatTitle'] = 'Statuts de validation';
-$lang['UAM_confirmstatTitle_d'] = '<b style=&quot;color: red;&quot;>ATTENTION : L\'utilisation des statuts de validation nécessite que vous ayez conservé l\'utilisateur &quot;Guest&quot; pour le paramétrage par défaut (modèle) pour les nouveaux inscrits. A noter : Vous pouvez définir n\'importe quel autre utilisateur comme modèle pour les nouveaux inscrits. Reportez-vous à la documentation de Piwigo pour plus de détails.</b><br><br>
-Les statuts de validation sont à utiliser conjointement avec l\'option &quot;Confirmation d\'inscription&quot;';
 $lang['UAM_validationlimitTitle'] = 'Limitation du délai de validation d\'inscription';
 $lang['UAM_remailTitle'] = 'Mail de rappel aux inscrits non validés';
 $lang['UAM_remailtxt1Title'] = 'Message de rappel avec regénération de clé';
@@ -134,12 +119,6 @@ $lang['UAM_ghosttrackerTitle_d'] = 'L\'activation de cette fonction permet la ge
 - Gestion manuelle : Lorsque le délai entre 2 visites successives est atteint, le visiteur apparaît dans le tableau de l\'onglet &quot;Ghost Tracker&quot; d\'où il est possible de le relancer manuellement par email ou le supprimer.<br><br>
 - Gestion automatisée : Lorsque le délai entre 2 visites successives est atteint, le visiteur est automatiquement soit supprimé, soit basculé dans un groupe et/ou statut d\'attente. Dans ce deuxième cas, un email d\'information peut lui être envoyé.<br><br><br>
 <b style=&quot;color: red;&quot;>IMPORTANT : A première activation de cette fonction, ou à sa réactivation après une longue période pendant laquelle de nouveaux visiteurs se sont inscrits, il convient d\'initialiser le Ghost Tracker (voir les instructions correspondantes sur l\'onglet &quot;Ghost Tracker&quot;).</b>';
-$lang['UAM_miscTitle_d'] = '
-- Gestion automatique ou manuelle des visiteurs fantômes<br>
-- Suivi des visiteurs inscrits<br>
-- Pseudo obligatoire sur commentaire pour les visiteurs<br>
-...
-';
 $lang['UAM_mailexcTitle_d'] = 'Par défaut, Piwigo accepte toutes les adresses de messagerie au format xxx@yyy.zz. L\'activation de cette option permet d\'exclure certains domaines selon le format : @[nom_du_domaine].[extension_du_domaine].<br><br>
 Exemples :<br>
 @hotmail.com -> exclusion des adresses *@hotmail.com<br>
@@ -149,10 +128,6 @@ $lang['UAM_GTAutoTitle_d'] = 'Cette option permet d\'appliquer des règles de ge
 <br><br>Principe de base : Un utilisateur ayant atteind la limite maximale entre deux visites <b><u>et</u></b> ayant déjà été notifié par email est considéré comme expiré. On peut alors appliquer des règles de traitement automatisées telles que la suppression automatique des comptes expirés ou leur rétrogradation en restreignant l\'accès à la galerie (bascule automatique dans un groupe et/ou un statut à accès restreint).
 <br><br>Le déclenchement de ces automatismes se réalise lors de la connexion des utilisateurs (n\'importe quel utilisateur !)à la galerie.';
 $lang['UAM_GTAutoDelTitle'] = 'Message personnalisé de suppression de compte';
-$lang['UAM_GTAutoGpTitle'] = 'Changement automatique de groupe / statut';
-$lang['UAM_GTAutoGpTitle_d'] = 'Le changement automatique de groupe ou de statut équivaut à une rétrogradation des comptes concernés et fonctionne sur le même principe que le groupe ou le statut de validation (voir &quot;Paramétrage des confirmations et validations d\'inscriptions&quot;). Il conviendra donc de définir un groupe et/ou un statut rétrogradant l\'accès à la galerie. Si cela a déjà été défini avec l\'utilisation de la fonction Confirmation d\'inscription, on peut utiliser ces mêmes groupe / statut.<br><br>
-<b style=&quot;color: red;&quot;>Point important :</b> Si un utilisateur fantôme n\'a toujours pas donné signe de vie après le délai imparti et malgré la notification automatique par mail (si activée), il est automatiquement supprimé de la base de données.';
-$lang['UAM_GTAutoMailTitle'] = 'Email automatique sur changement de groupe / statut';
 $lang['UAM_AdminValidationMail'] = 'Notification de validation d\'inscription manuelle';
 // --------- End: New or revised $lang ---- from version 2.16.0
 
@@ -290,19 +265,6 @@ Personnalisez encore plus le contenu avec les balises d\'insertion spéciales :<
 <b style=&quot;color: red;&quot;>[username]</b> n\'est pas disponible ici puisque l\'utilisateur en question a été supprimé.
 <br><br>
 Un texte personnalisé pour cette page de redirection peut être saisi dans le champ ci-dessous qui est compatible avec l\'extension FCK Editor. Pour une utilisation multi-langues, vous pouvez utiliser les balises [lang] du plugin Extended Description si celui-ci est actif.';
-$lang['UAM_GTAutoMailTitle_d'] = 'Lorsqu\'un compte est expiré (changement de groupe / statut rétrogradant le visiteur), un email d\'information peut être envoyé pour préciser les raisons de ce changement et le moyen de recouvrer l\'accès initial à la galerie.
-<br>Pour ce faire, un lien de revalidation de l\'inscription est joint à l\'email (génération automatique d\'une nouvelle clé de validation).<b style=&quot;color: red;&quot;>Si l\'utilisateur a déjà été notifié, son compte est automatiquement détruit.</b> 
-<br><br>
-Saisissez aussi le texte personnalisé qui expliquera les raisons de la rétrogradation et qui accompagnera le lien de validation. Le texte personnalisé n\'est pas obligatoire mais vivement conseillé. En effet, vos visiteurs inscrits n\'apprécieront que moyennement de recevoir un email ne contenant qu\'un simple lien sans plus d\'explications. ;-)
-<br><br>
-Personnalisez encore plus le contenu avec les balises d\'insertion spéciales :<br>
-- <b style=&quot;color: red;&quot;>[username]</b> pour insérer automatiquement le nom de l\'utilisateur destinataire de l\'email.<br>
-- <b style=&quot;color: red;&quot;>[mygallery]</b> pour insérer le titre de votre galerie.<br>
-- <b style=&quot;color: red;&quot;>[myurl]</b> pour insérer l\'URL de votre galerie si renseigné dans les options de configuration de Piwigo.
-<br><br>
-Pour une utilisation multi-langues, vous pouvez utiliser les balises [lang] du plugin Extended Description si celui-ci est actif.
-<br><br>
-<b style=&quot;color: red;&quot;>Attention : L\'emploi de cette fonction est intimement lié à l\'option de confirmation d\'inscription par l\'utilisateur (confirmation par mail) et ne peut pas être activée sans cette option.</b>';
 $lang['UAM_CustomPasswRetrTitle_d'] = 'Par défaut, lorsqu\'un utilisateur a perdu son mot de passe et qu\'il sélectionne l\'option de récupération, il reçoit un email ne contenant que son nom d\'utilisateur et son nouveau mot de passe.
 <br><br>
 Vous pouvez ici ajouter un texte de votre choix qui sera inséré <b><u>avant</u></b> ces informations standards.
@@ -321,4 +283,54 @@ Personnalisez encore plus le contenu avec les balises d\'insertion spéciales :<
 - <b style=&quot;color: red;&quot;>[myurl]</b> pour insérer l\'URL de votre galerie si renseigné dans les options de configuration de Piwigo.<br>
 La balise <b style=&quot;color: red;&quot;>[username]</b> n\'est pas disponible ici puisque l\'utilisateur en question a été supprimé.';
 // --------- End: New or revised $lang ---- from version 2.20.11
+
+
+// --------- Starting below: New or revised $lang ---- from version 2.30.0
+$lang['UAM_confirmTitle_d'] = '
+- Génération d\'email d\'information<br>
+- Génération d\'email de confirmation d\'inscription<br>
+- Affectation automatique de groupe, de statut ou de niveau de confidentialité<br>
+- Limitation du délai de validation<br>
+- Génération d\'email de rappel<br>
+...
+';
+$lang['UAM_confirmgrpTitle'] = 'Groupes';
+$lang['UAM_confirmstatTitle'] = 'Statuts';
+$lang['UAM_confirmgrpTitle_d'] = '<b style=&quot;color: red;&quot;>ATTENTION : L\'utilisation des groupes à la validation nécessite que vous ayez créé au moins un groupe d\'utilisateurs et qu\'il soit défini &quot;par défaut&quot; dans la gestion des groupes d\'utilisateurs de Piwigo.</b><br><br>
+Les groupes à la validation sont à utiliser conjointement avec l\'option &quot;Confirmation d\'inscription&quot;';
+$lang['UAM_confirmstatTitle_d'] = '<b style=&quot;color: red;&quot;>ATTENTION : L\'utilisation des statuts à la validation nécessite que vous ayez conservé l\'utilisateur &quot;Guest&quot; pour le paramétrage par défaut (modèle) pour les nouveaux inscrits. A noter : Vous pouvez définir n\'importe quel autre utilisateur comme modèle pour les nouveaux inscrits. Reportez-vous à la documentation de Piwigo pour plus de détails.</b><br><br>
+Les statuts à la validation sont à utiliser conjointement avec l\'option &quot;Confirmation d\'inscription&quot;';
+$lang['UAM_confirmlevelTitle'] = 'Niveau de confidentialité';
+$lang['UAM_confirmlevelTitle_d'] = '<b style=&quot;color: red;&quot;>ATTENTION : L\'utilisation des niveaux de confidentialité à la validation nécessite que vous ayez affecté un niveau de confidentialité aux photos que vous voulez restreindre. Reportez vous à la documentation de Piwigo pour plus de détails.</b><br><br>
+Les niveaux de confidentialité à la validation sont à utiliser conjointement avec l\'option &quot;Confirmation d\'inscription&quot;';
+$lang['UAM_GTAutoGpTitle'] = 'Changement automatique de groupe / statut / niveau de confidentialité';
+$lang['UAM_GTAutoGpTitle_d'] = 'Le changement automatique de groupe, de statut ou de niveau de confidentialité équivaut à une rétrogradation des comptes concernés et fonctionne sur le même principe que le groupe, le statut ou le niveau de confidentialité à la validation (voir &quot;Paramétrage des confirmations et validations d\'inscriptions&quot;). Il conviendra donc de définir un groupe ou un statut et/ou un niveau de confidentialité rétrogradant l\'accès à la galerie. Si cela a déjà été défini avec l\'utilisation de la fonction Confirmation d\'inscription, on peut utiliser ces mêmes groupes / statuts / niveaux.<br><br>
+<b style=&quot;color: red;&quot;>Point important :</b> Si un utilisateur fantôme n\'a toujours pas donné signe de vie après le délai imparti et malgré la notification automatique par mail (si activée), il est automatiquement supprimé de la base de données.';
+$lang['UAM_GTAutoMailTitle'] = 'Email automatique sur changement de groupe / statut / Niveau de confidentialité';
+$lang['UAM_GTAutoMailTitle_d'] = 'Lorsqu\'un compte est expiré (changement de groupe, de statut ou de niveau de confidentialité rétrogradant le visiteur), un email d\'information peut être envoyé pour préciser les raisons de ce changement et le moyen de recouvrer l\'accès initial à la galerie.
+<br>Pour ce faire, un lien de revalidation de l\'inscription est joint à l\'email (génération automatique d\'une nouvelle clé de validation).<b style=&quot;color: red;&quot;>Si l\'utilisateur a déjà été notifié, son compte est automatiquement détruit.</b> 
+<br><br>
+Saisissez aussi le texte personnalisé qui expliquera les raisons de la rétrogradation et qui accompagnera le lien de validation. Le texte personnalisé n\'est pas obligatoire mais vivement conseillé. En effet, vos visiteurs inscrits n\'apprécieront que moyennement de recevoir un email ne contenant qu\'un simple lien sans plus d\'explications. ;-)
+<br><br>
+Personnalisez encore plus le contenu avec les balises d\'insertion spéciales :<br>
+- <b style=&quot;color: red;&quot;>[username]</b> pour insérer automatiquement le nom de l\'utilisateur destinataire de l\'email.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> pour insérer le titre de votre galerie.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> pour insérer l\'URL de votre galerie si renseigné dans les options de configuration de Piwigo.
+<br><br>
+Pour une utilisation multi-langues, vous pouvez utiliser les balises [lang] du plugin Extended Description si celui-ci est actif.
+<br><br>
+<b style=&quot;color: red;&quot;>Attention : L\'emploi de cette fonction est intimement lié à l\'option de confirmation d\'inscription par l\'utilisateur (confirmation par mail) et ne peut pas être activée sans cette option.</b>';
+$lang['UAM_GT_MainTitle'] = 'Gestion des utilisateurs fantômes';
+$lang['UAM_GT_MainTitle_d'] = '
+- Gestion automatique ou manuelle des visiteurs fantômes<br>
+- Mailing<br>
+...
+';
+$lang['UAM_miscTitle'] = 'Autres options diverses';
+$lang['UAM_miscTitle_d'] = '
+- Suivi des visiteurs inscrits<br>
+- Pseudo obligatoire sur commentaire pour les visiteurs<br>
+...
+';
+// --------- End: New or revised $lang ---- from version 2.30.0
 ?>

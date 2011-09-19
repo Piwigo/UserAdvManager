@@ -491,4 +491,32 @@ WHERE param = "UserAdvManager"
 
   conf_update_param('UserAdvManager', pwg_db_real_escape_string($update_conf));
 }
+
+
+/* upgrade from 2.20.8 to 2.30.0 */
+/* ***************************** */
+function upgrade_2208_2300()
+{
+  global $conf;
+
+  // Upgrading options
+  $query = '
+SELECT value
+  FROM '.CONFIG_TABLE.'
+WHERE param = "UserAdvManager"
+;';
+
+  $result = pwg_query($query);
+  $conf_UAM = pwg_db_fetch_assoc($result);
+    
+  $Newconf_UAM = unserialize($conf_UAM['value']);
+  
+  $Newconf_UAM[35] = '-1';
+  $Newconf_UAM[36] = '-1';
+  $Newconf_UAM[37] = '-1';
+
+  $update_conf = serialize($Newconf_UAM);
+
+  conf_update_param('UserAdvManager', pwg_db_real_escape_string($update_conf));
+}
 ?>

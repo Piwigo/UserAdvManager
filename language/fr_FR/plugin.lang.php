@@ -107,7 +107,6 @@ $lang['UAM_SubTitle1'] = 'Configuration du plugin';
 $lang['UAM_Tab_Global'] = 'Configuration';
 $lang['UAM_Title1'] = 'Paramétrage des restrictions d\'inscriptions';
 $lang['UAM_Title2'] = 'Paramétrage des confirmations et validations d\'inscriptions';
-$lang['UAM_Title3'] = 'Paramétrage des suivis des inscrits et autres options';
 $lang['UAM_Title4'] = 'Astuces et exemples d\'utilisation';
 $lang['UAM_No_Casse'] = 'Noms d\'utilisateurs : Sensibilité à la casse';
 $lang['UAM_Username_Char'] = 'Noms d\'utilisateurs : Exclusion de certains caractères';
@@ -125,9 +124,6 @@ $lang['UAM_Mail_Info'] = 'Email d\'information à l\'utilisateur:';
 $lang['UAM_MailInfo_Text'] = ' Texte d\'accueil personnalisé:';
 $lang['UAM_Confirm_Mail'] = 'Confirmation d\'inscription:';
 $lang['UAM_ConfirmMail_Text'] = ' Texte d\'accueil personnalisé:';
-$lang['UAM_Confirm_Group'] = 'Groupes de validation<br>(------- pour ne pas affecter de groupe)';
-$lang['UAM_Confirm_Status'] = 'Statuts de validation<br>(------- pour conserver la valeur par défaut de Piwigo)';
-$lang['UAM_Confirm_grpstat_notice'] = 'Attention : Il est conseillé d\'utiliser soit les groupes, soit les statuts de validation et pas les deux simultanément.';
 $lang['UAM_No_Confirm_Group'] = 'Pour les utilisateurs n\'ayant pas validé leur inscription<br>';
 $lang['UAM_Validated_Group'] = 'Pour les utilisateurs ayant validé leur inscription<br>';
 $lang['UAM_No_Confirm_Status'] = 'Pour les utilisateurs n\'ayant pas validé leur inscription<br>';
@@ -203,7 +199,6 @@ $lang['UAM_Expired_Group'] = '<b>Groupe</b> pour les utilisateurs dont l\'inscri
 $lang['UAM_Expired_Status'] = '<b>Statut</b> pour les utilisateurs dont l\'inscription aura expirée<br>';
 $lang['UAM_GTAuto'] = 'Gestion automatique des utilisateurs fantomes';
 $lang['UAM_GTAutoDel'] = 'Suppressions automatiques des comptes';
-$lang['UAM_GTAutoGp'] = 'Changement automatique de groupe / statut';
 $lang['UAM_GTAutoMail'] = 'Email automatique sur changement de groupe / statut';
 $lang['UAM_Deleted_Account_Redirection_Page'] = 'Accès refusé - Compte détruit !';
 $lang['UAM_title_redir_page'] = 'Accès refusé pour cause de compte détruit !';
@@ -332,4 +327,18 @@ $lang['UAM_HidePassw'] = 'Mot de passe en clair dans le mail d\'information';
 // --------- Starting below: New or revised $lang ---- from version 2.20.11
 $lang['UAM_Error_Using_illegal_flag'] = 'Erreur de syntaxe ! Le drapeau d\'insertion automatique [Kdays] est utilisé alors que l\'option "Limitation du délai de validation d\'inscription" n\'a pas été activée. Veuillez activer l\'option ou corriger le(s) champ(s) marqué(s) en rouge.';
 // --------- End: New or revised $lang ---- from version 2.20.11
+
+// --------- Starting below: New or revised $lang ---- from version 2.30.0
+$lang['UAM_Confirm_grpstat_notice'] = 'Attention : Il est conseillé d\'affecter soit les groupes, soit les statuts et pas les deux simultanément. Le niveau de confidentialité peut être utilisé conjointement avec une affectation de groupe ou de statut.';
+$lang['UAM_Confirm_Group'] = 'Groupes<br>(------- pour ne pas affecter de groupe)';
+$lang['UAM_Confirm_Status'] = 'Statuts<br>(------- pour conserver la valeur par défaut de Piwigo)';
+$lang['UAM_Confirm_Level'] = 'Niveau de confidentialité<br>(------- pour conserver la valeur par défaut de Piwigo)';
+$lang['UAM_No_Valid_Level'] = 'Pour les utilisateurs n\'ayant pas validé leur inscription<br>';
+$lang['UAM_Valid_Level'] = 'Pour les utilisateurs ayant validé leur inscription.<br>';
+$lang['UAM_GTAutoGp'] = 'Changement automatique de groupe / statut / niveau de confidentialité';
+$lang['UAM_Expired_Level'] = '<b>Niveau de confidentialité</b> pour les utilisateurs dont l\'inscription aura expirée<br>';
+$lang['UAM_MiscOptions'] = 'Autres options';
+$lang['UAM_Title3'] = 'Gestion des utilisateurs fantômes';
+$lang['UAM_Title5'] = 'Autres options diverses';
+// --------- End: New or revised $lang ---- from version 2.30.0
 ?>
