@@ -99,12 +99,12 @@ function UAM_Adduser($register_user)
       // This is to send an information email and set user to "waiting" group or status until admin validation
       $passwd = (isset($_POST['password'])) ? $_POST['password'] : '';
       SendMail2User(1, $register_user['id'], $register_user['username'], $passwd, $register_user['email'], false);
-      setgroup($register_user['id']);// Set to "waiting" group or status until admin validation
+      SetPermission($register_user['id']);// Set to "waiting" group or status until admin validation
     }
     elseif ((isset($conf_UAM[0]) and $conf_UAM[0] == 'false') and (isset($conf_UAM[1]) and $conf_UAM[1] == 'local'))
     {
       // This is to set user to "waiting" group or status until admin validation
-      setgroup($register_user['id']);// Set to "waiting" group or status until admin validation
+      SetPermission($register_user['id']);// Set to "waiting" group or status until admin validation
     }
     elseif ((isset($conf_UAM[0]) and $conf_UAM[0] == 'true') and (isset($conf_UAM[1]) and $conf_UAM[1] == 'false'))
     {
@@ -295,7 +295,7 @@ WHERE '.$conf['user_fields']['id'].' = \''.$user['id'].'\'
         // This is to set the user to "waiting" group or status until admin validation
         if ($_POST['mail_address'] != $current_email and (isset($conf_UAM[1]) and $conf_UAM[1] == 'local'))
         
-          setgroup($register_user['id']);// Set to "waiting" group or status until admin validation
+          SetPermission($register_user['id']);// Set to "waiting" group or status until admin validation
           $confirm_mail_need = false;
       }
         
@@ -406,8 +406,8 @@ function UAM_GT_ScheduledTasks()
     array_push($collection, $listed_user['id']);
   }
 
-  // Ghost accounts auto group or status downgrade with or without information email sending and autodeletion if user already reminded
-  if ((isset($conf_UAM[21]) and $conf_UAM[21] == 'true') and ((isset($conf_UAM[25]) and $conf_UAM[25] <> -1) or (isset($conf_UAM[26]) and $conf_UAM[26] <> -1)))
+  // Ghost accounts auto group, status or privacy level downgrade with or without information email sending and autodeletion if user already reminded
+  if ((isset($conf_UAM[21]) and $conf_UAM[21] == 'true') and ((isset($conf_UAM[25]) and $conf_UAM[25] <> -1) or (isset($conf_UAM[26]) and $conf_UAM[26] <> -1) or (isset($conf_UAM[37]) and $conf_UAM[37] <> -1)))
   {
     if (count($collection) > 0)
   	{
@@ -509,6 +509,17 @@ INSERT INTO ".USER_GROUP_TABLE."
   (user_id, group_id)
 VALUES
   ('".$user_id."', '".$conf_UAM[25]."')
+;";
+              pwg_query($query);
+            }
+
+            // Change user privacy level
+            if ($conf_UAM[37] <> -1)
+            {
+              $query = "
+UPDATE ".USER_INFOS_TABLE."
+SET level = '".$conf_UAM[37]."'
+WHERE user_id = '".$user_id."'
 ;";
               pwg_query($query);
             }
@@ -1362,6 +1373,17 @@ VALUES
 ;";
       pwg_query($query);
     }
+
+    // Set user unvalidated privacy level
+    if (!is_admin() and $conf_UAM[35] <> -1)
+    {
+      $query = "
+UPDATE ".USER_INFOS_TABLE."
+SET level = '".$conf_UAM[35]."'
+WHERE user_id = '".$user_id."'
+;";
+      pwg_query($query);
+    }
     
     return get_absolute_root_url().UAM_PATH.'ConfirmMail.php?key='.$Confirm_Mail_ID.'&userid='.$user_id;
   }
@@ -1369,18 +1391,19 @@ VALUES
 
 
 /**
- * Function called from main.inc.php to set group to new users if manual validation is set
+ * Function called from UAM_Adduser() to set group/status/level to new users if manual validation is set
  *
  * @param : User id
  * 
  * 
  */
-function setgroup($user_id)
+function SetPermission($user_id)
 {
   global $conf;
   
   $conf_UAM = unserialize($conf['UserAdvManager']);
 
+// Groups cleanup
   $query = "
 DELETE FROM ".USER_GROUP_TABLE."
 WHERE user_id = '".$user_id."'
@@ -1392,7 +1415,7 @@ WHERE user_id = '".$user_id."'
 ;";
   pwg_query($query);
 
-  if (!is_admin() and $conf_UAM[7] <> -1)
+  if (!is_admin() and $conf_UAM[7] <> -1) // Set status
   {
     $query = "
 UPDATE ".USER_INFOS_TABLE."
@@ -1402,13 +1425,24 @@ WHERE user_id = '".$user_id."'
     pwg_query($query);
   }
 
-  if (!is_admin() and $conf_UAM[2] <> -1)
+  if (!is_admin() and $conf_UAM[2] <> -1) // Set group
   {
     $query = "
 INSERT INTO ".USER_GROUP_TABLE."
   (user_id, group_id)
 VALUES
   ('".$user_id."', '".$conf_UAM[2]."')
+;";
+    pwg_query($query);
+  }
+
+  if (!is_admin() and $conf_UAM[2] <> -1) // Set privacy level
+  {
+    $query = "
+INSERT INTO ".USER_INFOS_TABLE."
+  (user_id, level)
+VALUES
+  ('".$user_id."', '".$conf_UAM[level]."')
 ;";
     pwg_query($query);
   }
@@ -1599,10 +1633,20 @@ WHERE user_id = '".$data['user_id']."'
 					{
 						list($dbnow) = pwg_db_fetch_row(pwg_query('SELECT NOW();'));
 
+            // Update ConfirmMail table 
 						$query = '
 UPDATE '.USER_CONFIRM_MAIL_TABLE.'
 SET date_check="'.$dbnow.'", reminder="false"
 WHERE id = "'.$id.'"
+;';
+						pwg_query($query);
+
+            // Update LastVisit table - Force reminder field to false
+            // Usefull when a user has been automatically downgraded and revalidate its registration  
+						$query = '
+UPDATE '.USER_LASTVISIT_TABLE.'
+SET reminder="false"
+WHERE user_id = "'.$data['user_id'].'"
 ;';
 						pwg_query($query);
       
@@ -1636,6 +1680,17 @@ WHERE user_id = '".$data['user_id']."'
 ;";
 							pwg_query($query);
 						}
+
+						if (($conf_UAM[36] <> -1 or isset($data['level']))) // Change user's privacy level
+						{
+							$query = "
+UPDATE ".USER_INFOS_TABLE."
+SET level = '".(isset($data['level']) ? $data['level'] : $conf_UAM[36])."'
+WHERE user_id = '".$data['user_id']."'
+;";
+							pwg_query($query);
+						}
+
 						// Refresh user's category cache
 						invalidate_user_cache();
   
@@ -1651,14 +1706,24 @@ WHERE user_id = '".$data['user_id']."'
 				{
 					list($dbnow) = pwg_db_fetch_row(pwg_query('SELECT NOW();'));
 
+          // Update ConfirmMail table 
 					$query = '
 UPDATE '.USER_CONFIRM_MAIL_TABLE.'
 SET date_check="'.$dbnow.'"
 WHERE id = "'.$id.'"
 ;';
 					pwg_query($query);
+
+          // Update LastVisit table - Force reminder field to false
+          // Usefull when a user has been automatically downgraded and revalidate its registration  
+					$query = '
+UPDATE '.USER_LASTVISIT_TABLE.'
+SET reminder="false"
+WHERE user_id = "'.$data['user_id'].'"
+;';
+          pwg_query($query);
       
-					if ($conf_UAM[2] <> -1)
+					if ($conf_UAM[2] <> -1) // Delete user from unvalidated users group
 					{
 						$query = "
 DELETE FROM ".USER_GROUP_TABLE."
@@ -1686,7 +1751,7 @@ VALUES
 						pwg_query($query);
 					}
 
-					if (($conf_UAM[4] <> -1 or isset($data['status'])))
+					if (($conf_UAM[4] <> -1 or isset($data['status']))) // Change user's status
 					{
 						$query = "
 UPDATE ".USER_INFOS_TABLE."
@@ -1695,6 +1760,17 @@ WHERE user_id = '".$data['user_id']."'
 ;";
 						pwg_query($query);
 					}
+
+					if (($conf_UAM[36] <> -1 or isset($data['level']))) // Change user's privacy level
+					{
+						$query = "
+UPDATE ".USER_INFOS_TABLE."
+SET level = '".(isset($data['level']) ? $data['level'] : $conf_UAM[36])."'
+WHERE user_id = '".$data['user_id']."'
+;";
+						pwg_query($query);
+					}
+
 					// Refresh user's category cache
 					invalidate_user_cache();
   
@@ -1741,7 +1817,7 @@ WHERE user_id = '".$id."'
 			pwg_query($query);
 		}
   
-		if ($conf_UAM[3] <> -1)
+		if ($conf_UAM[3] <> -1) // Change user's group
 		{
 			$query = "
 DELETE FROM ".USER_GROUP_TABLE."
@@ -1759,11 +1835,21 @@ VALUES
 			pwg_query($query);
     }
 
-		if ($conf_UAM[4] <> -1)
+		if ($conf_UAM[4] <> -1) // Change user's status
 		{
 			$query = "
 UPDATE ".USER_INFOS_TABLE."
 SET status = '".$conf_UAM[4]."'
+WHERE user_id = '".$id."'
+;";
+			pwg_query($query);
+		}
+
+		if ($conf_UAM[36] <> -1) // Change user's privacy level
+		{
+			$query = "
+UPDATE ".USER_INFOS_TABLE."
+SET level = '".$conf_UAM[36]."'
 WHERE user_id = '".$id."'
 ;";
 			pwg_query($query);
@@ -1773,7 +1859,7 @@ WHERE user_id = '".$id."'
   {
     list($dbnow) = pwg_db_fetch_row(pwg_query('SELECT NOW();'));
 
-    if ($conf_UAM[2] <> -1)
+    if ($conf_UAM[2] <> -1) // Delete user's from waiting group
     {
 		  $query = "
 DELETE FROM ".USER_GROUP_TABLE."
@@ -1783,7 +1869,7 @@ WHERE user_id = '".$id."'
 		  pwg_query($query);
     }
 
-    if ($conf_UAM[3] <> -1)
+    if ($conf_UAM[3] <> -1) // Change user's group
     {
       $query = "
 DELETE FROM ".USER_GROUP_TABLE."
@@ -1801,11 +1887,21 @@ VALUES
 		  pwg_query($query);
     }
 
-    if ($conf_UAM[4] <> -1)
+    if ($conf_UAM[4] <> -1) // Change user's status
     {
 		  $query = "
 UPDATE ".USER_INFOS_TABLE."
 SET status = '".$conf_UAM[4]."'
+WHERE user_id = '".$id."'
+;";
+      pwg_query($query);
+    }
+
+    if ($conf_UAM[36] <> -1) // Change user's privacy level
+    {
+		  $query = "
+UPDATE ".USER_INFOS_TABLE."
+SET level = '".$conf_UAM[36]."'
 WHERE user_id = '".$id."'
 ;";
       pwg_query($query);

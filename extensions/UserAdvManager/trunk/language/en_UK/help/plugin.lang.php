@@ -3,15 +3,6 @@ global $lang;
 
 $lang['UAM_restricTitle'] = 'Restrictions for registrations';
 $lang['UAM_confirmTitle'] = 'Confirmations and validations of registration';
-$lang['UAM_confirmTitle_d'] = '
-- Information email generation<br>
-- Register validation email generation<br>
-- Groups or status auto joining<br>
-- Deadline for registration validation<br>
-- Reminder email generation<br>
-...
-';
-$lang['UAM_miscTitle'] = 'Registration followed and other options';
 $lang['UAM_carexcTitle'] = 'Usernames: Exclusion of characters';
 $lang['UAM_carexcTitle_d'] = 'It may be interesting to prohibit certain characters in usernames (example: refuse login names containing &quot;@&quot;). This option allows to exclude characters or sequence of characters, events.<br>
 NB: The option can also exclude whole words.
@@ -32,12 +23,6 @@ $lang['UAM_infomailTitle_d'] = 'This option allows to automate sending an inform
 The content of the message sent is composed of a customizable part to introduce a little welcome note and a fixed part indicating the login name, password and email address of the user.';
 $lang['UAM_infotxtTitle'] = 'Customizing the information email';
 $lang['UAM_confirmtxtTitle'] = 'Customizing the confirmation email';
-$lang['UAM_confirmgrpTitle'] = 'Validation Groups';
-$lang['UAM_confirmgrpTitle_d'] = '<b style=&quot;color: red;&quot;>WARNING : Using validation groups requires that you have created at least one users group and is defined &quot;by default&quot; in Piwigo\'s user groups management.</b><br><br>
-The groups are validated for use in conjunction with the &quot;Confirmation of registration&quot;';
-$lang['UAM_confirmstatTitle'] = 'Validation Statutes';
-$lang['UAM_confirmstatTitle_d'] = '<b style=&quot;color: red;&quot;>WARNING : The use of status validation requires that you have kept the &quot;Guest&quot; user with default setting (as user template) for new registered. Note you can set any other user as a template for new registered. Please refer to the Piwigo\'s documentation for more details.</b><br><br>
-The Statutes are validated for use in conjunction with the &quot;Confirmation of registration&quot;';
 $lang['UAM_validationlimitTitle'] = 'Deadline for registration validation limited';
 $lang['UAM_remailTitle'] = 'Remind unvalidated users';
 $lang['UAM_remailtxt1Title'] = 'Reminder email with new key generated';
@@ -138,12 +123,6 @@ $lang['UAM_ghosttrackerTitle_d'] = 'Also called &quot;Ghost Tracker&quot;, when 
 - Manual management : When the time between 2 visits is reached,, the visitor appears in the &quot;Ghost Tracker&quot; table where you will be able to remind visitors via email or delete him.<br><br>
 - Automated management : When the period between 2 successive visits is reached, the visitor is automatically deleted or moved into a wait group and/or status. In this second case, an information email can be sent to him.<br><br>
 <b style=&quot;color: red;&quot;>Important note : If you enable this feature for the first time or you have reactivated after a long period off during which new visitors are registered, you must initialize or reset the Ghost Tracker (see corresponding instructions on &quot;Ghost Tracker&quot; tab).</b>';
-$lang['UAM_miscTitle_d'] = '
-- Automatic or manual management of ghosts users<br>
-- Followed registered users<br>
-- Nickname mandatory for guests comments<br>
-...
-';
 $lang['UAM_mailexcTitle_d'] = 'By default, Piwigo accepts all email addresses in the format xxx@yyy.zz. Enabling this option allows you to exclude certain domains in the format: @ [domain_name].[domain_extension].<br><br>
 Examples :<br>
 @hotmail.com -> excluding addresses *@hotmail.com<br>
@@ -153,10 +132,6 @@ $lang['UAM_GTAutoTitle_d'] = 'This option allows to apply rules for automated ma
 <br><br>Basic Principle: A user who reaches the maximum time between visits <b><u>and</u></b> has already been notified by email is considered as expired. Then you can apply automated processing rules such as automatic deletion of expired accounts or demotion by restricting access to the gallery (switch automatically to a restricted group and/or status).
 <br><br>The triggering of these automation is achieved when connecting users (any user!) to the gallery.';
 $lang['UAM_GTAutoDelTitle'] = 'Custom message on deleted account';
-$lang['UAM_GTAutoGpTitle'] = 'Automatic change of group / status';
-$lang['UAM_GTAutoGpTitle_d'] = 'The automatic change of group or status equivalent to a demotion of the accounts involved and working on the same principle as the group or the status of validation (see &quot;Setting confirmations and validations of registration&quot;). Therefore be to define a group and / or status demoting access to the gallery. If this has already been defined with the use of registration confirmation function, you can use the same group / status.<br><br>
-<b style=&quot;color: red;&quot;>Important note :</b> If a ghost user still has not heard from after the time limit and despite the automatic notification by email (if enabled), he\'s automatically deleted from the database.';
-$lang['UAM_GTAutoMailTitle'] = 'Automatically sending an email when changing group / status';
 $lang['UAM_AdminValidationMail'] = 'Notification of manual registration validation';
 // --------- End: New or revised $lang ---- from version 2.16.0
 
@@ -294,19 +269,6 @@ Further customize the content with special inserted tags:<br>
 <b style=&quot;color: red;&quot;>[username]</b> is not available here because concerned user has been deleted.
 <br><br>
 Custom text for the redirect page can be entered in this field that is compatible with the FCK Editor and, for multi-languages, you can use the tags [lang] of the plugin Extended description if it\'s active.';
-$lang['UAM_GTAutoMailTitle_d'] = 'When an account is expired (group / status change demoting the visitor), an email information can be sent to clarify the reasons for this change and the means to recover the initial access to the gallery.
-<br>To do this, a link to revalidation of registration is attached to the email (automatic generation of a new validation key).<b style=&quot;color: red;&quot;>If the user has already been notified, his account is automatically destroyed.</b> 
-<br><br>
-Enter the custom text that also explain the reasons for the demotion, to accompany the validation link. The custom text is not mandatory but strongly recommended. In fact, your visitors will not appreciate receiving an email containing only a single link without further explanation. ;-)
-<br><br>
-Further customize the content with special inserted tags:<br>
-- <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the name of the destination user of the email.<br>
-- <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery.<br>
-- <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.
-<br><br>
-To use multiple languages, you can use the Extended description plugin\'s tags if it is active.
-<br><br>
-<b style=&quot;color: red;&quot;>Warning: The use of this function is intimately associated with the confirmation of registration by the user (confirmation by mail) and can not be activated without this option.</b>';
 $lang['UAM_CustomPasswRetrTitle_d'] = 'By default, when a user has lost his password and selects the option of recovery, he receives an email containing only his username and his new password.
 <br><br>
 Here, you can add text of your choice to be inserted <b><u>before</u></b> the standard information.
@@ -325,4 +287,54 @@ Further customize the content with special inserted tags:<br>
 <br><br>
 Custom text for the redirect page can be entered in this field that is compatible with the FCK Editor and, for multi-languages, you can use the tags [lang] of the plugin Extended description if it\'s active.';
 // --------- End: New or revised $lang ---- from version 2.20.11
+
+
+// --------- Starting below: New or revised $lang ---- from version 2.30.0
+$lang['UAM_confirmTitle_d'] = '
+- Information email generation<br>
+- Register validation email generation<br>
+- Groups, status or privacy level auto joining<br>
+- Deadline for registration validation<br>
+- Reminder email generation<br>
+...
+';
+$lang['UAM_confirmgrpTitle'] = 'Groups';
+$lang['UAM_confirmstatTitle'] = 'Statutes';
+$lang['UAM_confirmgrpTitle_d'] = '<b style=&quot;color: red;&quot;>WARNING : Using groups on validation requires that you have created at least one users group and is defined &quot;by default&quot; in Piwigo\'s user groups management.</b><br><br>
+The groups are validated for use in conjunction with the &quot;Confirmation of registration&quot;';
+$lang['UAM_confirmstatTitle_d'] = '<b style=&quot;color: red;&quot;>WARNING : The use of statuses on validation requires that you have kept the &quot;Guest&quot; user with default setting (as user template) for new registered. Note you can set any other user as a template for new registered. Please refer to the Piwigo\'s documentation for more details.</b><br><br>
+The Statutes are validated for use in conjunction with the &quot;Confirmation of registration&quot;';
+$lang['UAM_confirmlevelTitle'] = 'Privacy level';
+$lang['UAM_confirmlevelTitle_d'] = '<b style=&quot;color: red;&quot;>WARNING : The use of privacy level requires that you have used them with your pictures. Please refer to the Piwigo\'s documentation for more details.</b><br><br>
+The privacy level is validated for use in conjunction with the &quot;Confirmation of registration&quot;';
+$lang['UAM_GTAutoGpTitle'] = 'Automatic change of group / status / privacy level';
+$lang['UAM_GTAutoGpTitle_d'] = 'The automatic change of group, status or privacy level is like a demotion of the accounts involved and working on the same principle as the group, status or privacy level of validation (see &quot;Setting confirmations and validations of registration&quot;). Therefore be to define a group, status and / or level demoting access to the gallery. If this has already been defined with the use of registration confirmation function, you can use the same group / status / level.<br><br>
+<b style=&quot;color: red;&quot;>Important note :</b> If a ghost user still has not heard from after the time limit and despite the automatic notification by email (if enabled), he\'s automatically deleted from the database.';
+$lang['UAM_GTAutoMailTitle'] = 'Automatically sending an email when changing group / status / privacy level';
+$lang['UAM_GTAutoMailTitle_d'] = 'When an account is expired (group / status / privacy level change demoting the visitor), an email information can be sent to clarify the reasons for this change and the means to recover the initial access to the gallery.
+<br>To do this, a link to revalidation of registration is attached to the email (automatic generation of a new validation key).<b style=&quot;color: red;&quot;>If the user has already been notified, his account is automatically destroyed.</b> 
+<br><br>
+Enter the custom text that also explain the reasons for the demotion, to accompany the validation link. The custom text is not mandatory but strongly recommended. In fact, your visitors will not appreciate receiving an email containing only a single link without further explanation. ;-)
+<br><br>
+Further customize the content with special inserted tags:<br>
+- <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the name of the destination user of the email.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.
+<br><br>
+To use multiple languages, you can use the Extended description plugin\'s tags if it is active.
+<br><br>
+<b style=&quot;color: red;&quot;>Warning: The use of this function is intimately associated with the confirmation of registration by the user (confirmation by mail) and can not be activated without this option.</b>';
+$lang['UAM_GT_MainTitle'] = 'Ghost users management';
+$lang['UAM_GT_MainTitle_d'] = '
+- Automatic or manuel management of ghost users<br>
+- E-mailing<br>
+...
+';
+$lang['UAM_miscTitle'] = 'Other miscellaneous options';
+$lang['UAM_miscTitle_d'] = '
+- Registered users monitoring<br>
+- Nickname mandatory for guests comments<br>
+...
+';
+// --------- End: New or revised $lang ---- from version 2.30.0
 ?>

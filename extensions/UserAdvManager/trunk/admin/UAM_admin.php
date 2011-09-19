@@ -189,6 +189,9 @@ switch ($page['tab'])
       $_POST['UAM_USRAutoMail'],
       $_POST['UAM_Stuffs'],
       $_POST['UAM_HidePassw'],
+      (isset($_POST['UAM_No_Valid_Level'])?$_POST['UAM_No_Valid_Level']:''),
+      (isset($_POST['UAM_Valid_Level'])?$_POST['UAM_Valid_Level']:''),
+      (isset($_POST['UAM_Downgrade_Level'])?$_POST['UAM_Downgrade_Level']:''),
       );
 
     $conf['UserAdvManager'] = serialize($newconf_UAM);
@@ -382,6 +385,67 @@ ORDER BY name ASC
 	    );
 	}
 
+
+  //Level setting for unvalidated, validated users and downgrade status
+  $level_options[-1] = '------------';
+  $No_Valid_Level = -1;
+  $Valid_Level = -1;
+  $Downgrade_Level = -1;
+
+  // Get unvalidated privacy levels values
+  foreach ($conf['available_permission_levels'] as $level)
+  {
+    $level_options[$level] = l10n(sprintf('Level %d', $level));
+	  if (isset($conf_UAM[35]) and $conf_UAM[35] == $level)
+	  {
+	    $No_Valid_Level = $level;
+	  }
+      //Template initialization for unvalidated users level
+      $template->assign(
+        'No_Valid_Level',
+        array(
+					'Level_options' => $level_options,
+		  		'Level_selected' => $No_Valid_Level
+					)
+	  		);
+  }
+
+  // Get validated privacy levels values
+  foreach ($conf['available_permission_levels'] as $level)
+  {
+    $level_options[$level] = l10n(sprintf('Level %d', $level));
+	  if (isset($conf_UAM[36]) and $conf_UAM[36] == $level)
+	  {
+	    $Valid_Level = $level;
+	  }
+      //Template initialization for unvalidated users level
+      $template->assign(
+        'Valid_Level',
+        array(
+					'Level_options' => $level_options,
+		  		'Level_selected' => $Valid_Level
+					)
+	  		);
+  }
+
+  // Get downgrade privacy levels values
+  foreach ($conf['available_permission_levels'] as $level)
+  {
+    $level_options[$level] = l10n(sprintf('Level %d', $level));
+	  if (isset($conf_UAM[37]) and $conf_UAM[37] == $level)
+	  {
+	    $Downgrade_Level = $level;
+	  }
+      //Template initialization for unvalidated users level
+      $template->assign(
+        'Downgrade_Level',
+        array(
+					'Level_options' => $level_options,
+		  		'Level_selected' => $Downgrade_Level
+					)
+	  		);
+  }
+
   //Save last opened paragraph in configuration tab
   $nb_para=(isset($_POST["nb_para"])) ? $_POST["nb_para"]:"";
   $nb_para2=(isset($_POST["nb_para2"])) ? $_POST["nb_para2"]:"";
@@ -454,6 +518,9 @@ ORDER BY name ASC
     'UAM_STUFFS_FALSE'               => $conf_UAM[33]=='false' ?  'checked="checked"' : '' ,
     'UAM_HIDEPASSW_TRUE'             => $conf_UAM[34]=='true' ?  'checked="checked"' : '' ,
     'UAM_HIDEPASSW_FALSE'            => $conf_UAM[34]=='false' ?  'checked="checked"' : '' ,
+		'UAM_NO_VALID_LEVEL'             => $conf_UAM[35],
+		'UAM_VALID_LEVEL'                => $conf_UAM[36],
+    'UAM_DOWNGRADE_LEVEL'            => $conf_UAM[37],
 		'UAM_PASSWORD_TEST_SCORE'        => $UAM_Password_Test_Score,
     'UAM_ERROR_REPORTS1'             => $UAM_Exclusionlist_Error,
     'UAM_ERROR_REPORTS2'             => $UAM_Illegal_Flag_Error1,

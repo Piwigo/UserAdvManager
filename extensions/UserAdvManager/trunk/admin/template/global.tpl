@@ -392,6 +392,37 @@ function uam_blockToggleDisplay( headerId, contentId )
                 <br><br>
                 </li>
               </ul>
+
+              <li>
+                <label class="cluetip" title="{'UAM_confirmlevelTitle'|translate}|{'UAM_confirmlevelTitle_d'|translate}">
+                  {'UAM_Confirm_Level'|@translate}
+                </label>
+              <br><br>
+              </li>
+              
+              <ul>
+                <li>
+                  <label>
+                    {'UAM_No_Valid_Level'|@translate}
+                  </label>
+                <br>
+                  <div id="uam_leftmargin">
+                    {html_options name="UAM_No_Valid_Level" options=$No_Valid_Level.Level_options selected=$No_Valid_Level.Level_selected}
+                  </div>
+                <br><br>
+                </li>
+
+                <li>
+                  <label>
+                    {'UAM_Valid_Level'|@translate}
+                  </label>
+                <br>
+                  <div id="uam_leftmargin">
+                    {html_options name="UAM_Valid_Level" options=$Valid_Level.Level_options selected=$Valid_Level.Level_selected}
+                  </div>
+                <br><br>
+                </li>
+              </ul>
             </ul>
             </fieldset>
 
@@ -535,7 +566,7 @@ function uam_blockToggleDisplay( headerId, contentId )
   <div id="instructionConfig3" class="instructionBlock" >
 
     <div id="config3_header" class="instructionBlockHeaderCollapsed" onclick="uam_blockToggleDisplay('config3_header', 'Config3')">
-      <span class="cluetip" title="{'UAM_miscTitle'|translate}|{'UAM_miscTitle_d'|translate}">{'UAM_Title3'|@translate}</span>
+      <span class="cluetip" title="{'UAM_GT_MainTitle'|translate}|{'UAM_GT_MainTitle_d'|translate}">{'UAM_Title3'|@translate}</span>
     </div>
   
     <div id="Config3" class="instructionBlockContent" style="display:none">
@@ -632,6 +663,17 @@ function uam_blockToggleDisplay( headerId, contentId )
                         </div>
                       <br><br>
                       </li>
+
+                      <li>
+                        <label>
+                          {'UAM_Expired_Level'|@translate}
+                        </label>
+                      <br>
+                        <div id="uam_leftmargin">
+                          {html_options name="UAM_Downgrade_Level" options=$Downgrade_Level.Level_options selected=$Downgrade_Level.Level_selected}
+                        </div>
+                      <br><br>
+                      </li>
                     </ul>
 
                     <ul>
@@ -659,8 +701,22 @@ function uam_blockToggleDisplay( headerId, contentId )
           </fieldset>
         </ul>
       </fieldset>
+    </div>
+  </div>
 
+  <div id="instructionConfig5" class="instructionBlock" >
+
+    <div id="config5_header" class="instructionBlockHeaderCollapsed" onclick="uam_blockToggleDisplay('config5_header', 'Config5')">
+      <span class="cluetip" title="{'UAM_miscTitle'|translate}|{'UAM_miscTitle_d'|translate}">{'UAM_Title5'|@translate}</span>
+    </div>
+  
+    <div id="Config5" class="instructionBlockContent" style="display:none">
       <fieldset>
+        <ul>
+          <li>
+            <label><b>{'UAM_MiscOptions'|@translate}</b></label>
+          </li>
+        </ul>
         <fieldset>
           <ul>
             <li>
