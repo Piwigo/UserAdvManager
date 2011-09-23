@@ -262,7 +262,7 @@ B. A PWG Stuffs pluginban :
                 <li>Érvényesítsd a modul beállításait</li>
               </ol>
             </li>
-          </ul>';
+          </ul>
 B. In plugin PWG Stuffs :
               <ol>
                 <li>Go to tab "Add a new module"</li>
@@ -292,7 +292,6 @@ Előfeltételek:<br>
 <br>
             </li><br><br>
             <li>
-';
               <ol>
                 <li>Enable registration confirmation</li>
                 <li>Enter text for additional explanation which will be attached to mail registration confirmation. If the plugin Extended Description is activated, the language tags can be used</li>
