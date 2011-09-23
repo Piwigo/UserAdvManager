@@ -17,7 +17,7 @@ include_once(PHPWG_ROOT_PATH.'admin/include/tabsheet.class.php');
 include_once (PHPWG_ROOT_PATH.'/include/constants.php');
 
 load_language('plugin.lang', UAM_PATH);
-load_language('help/plugin.lang', UAM_PATH);
+load_language('help.lang', UAM_PATH);
 
 
 // +-----------------------------------------------------------------------+
@@ -153,6 +153,7 @@ switch ($page['tab'])
       array_push($page['errors'], l10n('UAM_Error_Using_illegal_Kdays'));
     }
 
+    // Save global UAM configuration
 		$newconf_UAM = array(
       $_POST['UAM_Mail_Info'],
       $_POST['UAM_Confirm_Mail'],
@@ -218,7 +219,8 @@ switch ($page['tab'])
       $UAM_Illegal_Flag_Error3 = true;
       array_push($page['errors'], l10n('UAM_Error_Using_illegal_flag'));
     }
-    
+
+    // Save ConfirmMail settings
 	  $newconf_UAM_ConfirmMail = array (
       $_POST['UAM_ConfirmMail_TimeOut'],
       $_POST['UAM_ConfirmMail_Delay'],
@@ -268,7 +270,7 @@ switch ($page['tab'])
   $Valid = -1;
   $Downgrade = -1;
 	
-  //Check groups list in database 
+  //Get groups list in database 
   $query = '
 SELECT id, name
 FROM '.GROUPS_TABLE.'
@@ -386,7 +388,7 @@ ORDER BY name ASC
 	}
 
 
-  //Level setting for unvalidated, validated users and downgrade status
+  //Level setting for unvalidated, validated users and downgrade level
   $level_options[-1] = '------------';
   $No_Valid_Level = -1;
   $Valid_Level = -1;
