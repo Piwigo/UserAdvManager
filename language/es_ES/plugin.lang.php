@@ -256,120 +256,13 @@ $lang['UAM_AdminValidationMail_Text'] = 'Notificación de la validación manual 
 $lang['UAM_Validation of %s'] = 'Validación de %s';
 // --------- End: New or revised $lang ---- from version 2.16.0
 
-
-// --------- Starting below: New or revised $lang ---- from version 2.20.0
-/*TODO*/$lang['UAM_CustomPasswRetr'] = 'Customize lost password email content';
-/*TODO*/$lang['UAM_USRAuto'] = 'Automatic management of unvalidated users';
-/*TODO*/$lang['UAM_USRAutoDel'] = 'Custom message on deleted account';
-/*TODO*/$lang['UAM_USRAutoMail'] = 'Automated email reminder';
 $lang['UAM_Disable'] = ' Desactivar (por defecto)';
 $lang['UAM_Enable'] = ' Activar ';
-/*TODO*/$lang['UAM_Tips1'] = 'Information of non-validated registration with UAM and PWG_Stuffs';
-/*TODO*/$lang['UAM_Tips1_txt'] = '
-          <ul>
-            <li>
-            Goals: Inform the visitor that the registration is awaiting approval by displaying a personal block on the home page of the gallery, and this, as registration is not approved.
-            <br><br>
-            <b>Recuerde: En funcionamiento normal, el "Invitado" sólo ve las categorías de público, sin mensaje de información.</b>
-            </li><br><br>
-            <li>
-Requisito previo:<br>
-- Una galería con todas o algunas categorías privadas, visible sólo por los usuarios registrados<br>
-- Al menos los 2 grupos de usuarios siguientes de Piwigo : "Espera," sin permiso en las categorías de privados, y "Validado" con todos los permisos en las categorías de privados<br>
-- UAM plugin<br>
-- PWG Stuffs plugin, para agregar un módulo especial UAM<br>
-- Opcionalmente, la Extended Description plugin para soportar múltiples idiomas<br>
-            </li><br><br>
-            <li>
-Etapas:<br><br>
-A. En el plugin UAM:
-              <ol>
-                <li>Activar la confirmación de registro</li>
-                <li>Activar PWG Stuffs módulo</li>
-                <li>Introduzca el texto para la explicación adicional, que se adjunta al correo de confirmación de registro. Si se activa el plugin Extended Description, las etiquetas de idioma se pueden utilizar</li>
-                <li>Seleccione la opción "Espera" del grupo en "Para los usuarios que no han validado su registro"</li>
-                <li>Seleccione la opción "Validado" en grupo "Para los usuarios que han validado su registro"</li>
-                <li>Guardar la configuración del plug-in</li>
-              </ol>
-<br>
-B. En plugin PWG Stuffs :
-              <ol>
-                <li>Vaya a la pestaña "Agregar un nuevo módulo"</li>
-                <li>Seleccione la opción "Módulo de la UAM"</li>
-                <li>Configurar el módulo, lo que indica el título (por ejemplo, "en espera de la validación de Registro") y su descripción, y solamente "Espera" en la lista de grupos permitido</li>
-                <li>El contenido completo del módulo con la información del mensaje que se mostrará a los usuarios no validados. Como UAM, las balisas de  lenguajes pueden ser utilizadas si el plugin Extended Description está activado</li>
-                <li>Active la casilla "Mostrar el módulo en la página principal del sitio"</li>
-                <li>Validar la configuración del módulo</li>
-              </ol>
-            </li>
-          </ul>';
-/*TODO*/$lang['UAM_Tips2'] = 'Information of non-validated registration with UAM and Additional Pages';
-/*TODO*/$lang['UAM_Tips2_txt'] = '
-          <ul>
-            <li>
-            Goals: Inform the visitor that the registration is awaiting validation by posting an additional page replacing the standard index page gallery at each of these connections, and this, as registration is not approved.
-            <br><br>
-            Advantages over the method with PWG_Stuffs: Allow formatting information and displaying the information immediately upon registration of visitors.
-            </li><br><br>
-            <li>
-Requisito previo:<br>
-- Una galería con todas o algunas categorías privadas, visible sólo por los usuarios registrados<br>
-- Al menos los 2 grupos de usuarios siguientes de Piwigo : "Espera," sin permiso en las categorías de privados, y "Validado" con todos los permisos en las categorías de privados<br>
-- UAM plugin<br>
-- Additional Pages plugin for adding and managing an additional page to replace the default index page of the gallery<br>
-- Opcionalmente, la Extended Description plugin para soportar múltiples idiomas<br>
-            </li><br><br>
-            <li>
-Etapas:<br><br>
-A. En el plugin UAM:
-              <ol>
-                <li>Activar la confirmación de registro</li>
-                <li>Introduzca el texto para la explicación adicional, que se adjunta al correo de confirmación de registro. Si se activa el plugin Extended Description, las etiquetas de idioma se pueden utilizar</li>
-                <li>Seleccione la opción "Espera" del grupo en "Para los usuarios que no han validado su registro"</li>
-                <li>Seleccione la opción "Validado" en grupo "Para los usuarios que han validado su registro"</li>
-                <li>Guardar la configuración del plug-in</li>
-              </ol>
-<br>
-B. En plugin Additional Pages:<br>
-                <b>NOTE : The management of access rights for groups on Additional Pages must be turned on (see plugin configuration settings).</b>
-                <br>
-              <ol>
-                <li>Add a new page with at least the following parameters:</li>
-                <ul>
-                  <li>Page name: The name you wish to give to the additional page (ie: Registration not validated)</li>
-                  <li>Set as homepage checked</li>
-                  <li>Groups allowed: Check the box corresponding to the group "Waiting" configured in UAM</li>
-                  <li>Content: The text you want to use for visitors.</li>
-                </ul>
-                <br>
-                <li>And that\'s it! Only visitors registered and whose registration has not been validated will see this additional index page.</li>
-              </ol>
-            </li>
-          </ul>';
-/*TODO*/$lang['UAM_No_Ghosts'] = 'No ghosts visitors for the moment';
-/*TODO*/$lang['UAM_No_Userlist'] = 'No visitors to list for the moment';
-/*TODO*/$lang['UAM_No_Usermanager'] = 'No unvalidated registers to list for the moment';
 $lang['UAM_Stuffs_Title'] = 'Módulo de la UAM';
-/*TODO*/$lang['UAM_Stuffs_Desc'] = 'Adds an information block for unvalidated users';
 $lang['UAM_Stuffs'] = 'PWG Stuffs módulo';
-// --------- End: New or revised $lang ---- from version 2.20.0
-
-
-// --------- Starting below: New or revised $lang ---- from version 2.20.3
-/*TODO*/$lang['UAM_DumpTxt'] = 'Backup your configuration';
-/*TODO*/$lang['UAM_Dump_Download'] = 'To download the backup file, please check this box:';
-/*TODO*/$lang['UAM_Save'] = 'Run backup';
-/*TODO*/$lang['UAM_Dump_OK'] = 'Backup file created successfully';
-/*TODO*/$lang['UAM_Dump_NOK'] = 'Error: Unable to create backup file !';
-// --------- End: New or revised $lang ---- from version 2.20.3
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.20.4
 $lang['UAM_HidePassw'] = 'Contraseña en texto claro en la información del correo electrónico';
 // --------- End: New or revised $lang ---- from version 2.20.4
-
-
-// --------- Starting below: New or revised $lang ---- from version 2.20.11
-/*TODO*/$lang['UAM_Error_Using_illegal_flag'] = 'Syntax error ! The [Kdays] AutoText flag is used as the "Plazo para la validación de registro limitado" option was not activated. Please activate the option or correct the text field(s) colored in red.';
-// --------- End: New or revised $lang ---- from version 2.20.11
 ?>
