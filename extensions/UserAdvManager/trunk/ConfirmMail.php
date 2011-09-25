@@ -43,9 +43,9 @@ WHERE ('.USERS_TABLE.'.id ='.$userid.')
 
 /* We have to get the user's language in database */
     $query = '
-SELECT '.USER_INFOS_TABLE.'.language
-FROM '.USER_INFOS_TABLE.','.USER_CONFIRM_MAIL_TABLE.'
-WHERE (('.USER_INFOS_TABLE.'.user_id ='.$userid.') AND ('.USER_INFOS_TABLE.'.user_id = '.USER_CONFIRM_MAIL_TABLE.'.user_id))
+SELECT language
+FROM '.USER_INFOS_TABLE.'
+WHERE '.USER_INFOS_TABLE.'.user_id ='.$userid.'
 ;';
     $data = pwg_db_fetch_assoc(pwg_query($query));
 

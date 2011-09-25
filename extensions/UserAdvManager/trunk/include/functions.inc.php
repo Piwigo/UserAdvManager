@@ -1600,7 +1600,7 @@ WHERE id = '".$id."'
 ;";
     $data = pwg_db_fetch_assoc(pwg_query($query));
 
-    if (!empty($data) and isset($data['user_id']))
+    if (!empty($data) and isset($data['user_id']) and is_null($data['date_check']))
     {
       $query = "
 SELECT registration_date
@@ -1778,6 +1778,10 @@ WHERE user_id = '".$data['user_id']."'
 				}
 			}
 		}
+    else if (!empty($data) and !is_null($data['date_check']))
+    {
+      return false;
+    }
 	}
   else
     return false;
