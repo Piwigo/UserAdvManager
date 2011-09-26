@@ -222,7 +222,8 @@ function UAM_Profile_Init()
   global $conf, $user, $template;
 
   $conf_UAM = unserialize($conf['UserAdvManager']);
-    
+
+  // Update first redirection parameter
   if ((isset($conf_UAM[20]) and $conf_UAM[20] == 'true'))
   {
     $user_idsOK = array();
@@ -239,6 +240,16 @@ WHERE param = 'UserAdvManager_Redir';";
     }
   }
 
+  // Special message display for password reset
+  if ((isset($conf_UAM[38]) and $conf_UAM[38] == 'true'))
+  {
+    if (UAM_check_pwgreset($user['id']))
+    {
+      $template->append('errors', l10n('UAM_Password_Reset_Msg'));
+    }
+  }
+
+  // Controls on profile page submission
   if (isset($_POST['validate']) and !is_admin())
   {
     // Email without forbidden domains
@@ -248,6 +259,22 @@ WHERE param = 'UserAdvManager_Redir';";
       {
         $template->append('errors', l10n('UAM_reg_err_login5')."'".$conf_UAM[11]."'");
         unset($_POST['validate']);
+      }
+    }
+
+    // Password reset control
+    if (isset($conf_UAM[38]) and $conf_UAM[38] == 'true' and UAM_check_pwgreset($user['id']))
+    {
+      // if password not changed then pwdreset filed = true else pwdreset field = false
+      if (!empty($_POST['use_new_pwd']))
+      {
+        $query = '
+UPDATE '.USERS_TABLE.'
+SET UAM_pwdreset = "false"
+WHERE id = '.$user['id'].'
+LIMIT 1
+;';
+        pwg_query($query);
       }
     }
 
@@ -340,9 +367,9 @@ function UAM_LoginTasks()
     UAM_USR_ScheduledTasks();
   }
 
+  // Performing redirection to profile page on first login
   if ((isset($conf_UAM[20]) and $conf_UAM[20] == 'true'))
-  {
-    // Performing redirection  
+  {  
     $query ='
 SELECT user_id, status
 FROM '.USER_INFOS_TABLE.'
@@ -350,11 +377,30 @@ WHERE user_id = '.$user['id'].'
 ;';
     $data = pwg_db_fetch_assoc(pwg_query($query));
 
-    if ($data['status'] <> "admin" and $data['status'] <> "webmaster" and $data['status'] <> "generic")
+    if ($data['status'] <> "admin" and $data['status'] <> "webmaster" and $data['status'] <> "generic") // Exclusion of specific accounts
     {
       $user_idsOK = array();
       if (!UAM_check_profile($user['id'], $user_idsOK))
         redirect(PHPWG_ROOT_PATH.'profile.php');
+    }
+  }
+
+  // Performing redirection to profile page for password reset
+  if ((isset($conf_UAM[38]) and $conf_UAM[38] == 'true'))
+  {
+    $query ='
+SELECT user_id, status
+FROM '.USER_INFOS_TABLE.'
+WHERE user_id = '.$user['id'].'
+;';
+    $data = pwg_db_fetch_assoc(pwg_query($query));
+
+    if ($data['status'] <> "admin" and $data['status'] <> "webmaster" and $data['status'] <> "generic") // Exclusion of specific accounts
+    {
+      if (UAM_check_pwgreset($user['id']))
+      {
+        redirect(PHPWG_ROOT_PATH.'profile.php');
+      }
     }
   }
 }
@@ -2464,6 +2510,10 @@ function clean_obsolete_files()
       {
         @unlink($path);
       }
+      elseif (is_dir($path))
+      {
+        @rmdir($path);
+      }
     }
   }
 }
@@ -2488,11 +2538,11 @@ function UAM_check_profile($uid, &$user_idsOK)
   $t = array();
   $v = false;
   
-  $query = "
+  $query = '
 SELECT value
-FROM ".CONFIG_TABLE."
-WHERE param = 'UserAdvManager_Redir'
-;";
+FROM '.CONFIG_TABLE.'
+WHERE param = "UserAdvManager_Redir"
+;';
   
   if ($v = (($t = pwg_db_fetch_row(pwg_query($query))) !== false))
   {
@@ -2504,13 +2554,106 @@ WHERE param = 'UserAdvManager_Redir'
 
 
 /**
+ * UAM_check_pwdreset
+ * checks if a user id is registered as having already
+ * changed their password.
+ * 
+ * @uid        : the user id
+ * 
+ * @returns    : true or false whether the users has already changed his password
+ * 
+ */
+function UAM_check_pwgreset($uid)
+{
+  $query = '
+SELECT UAM_pwdreset
+FROM '.USERS_TABLE.'
+WHERE id='.$uid.'
+;';
+
+  $result = pwg_db_fetch_assoc(pwg_query($query));
+  
+  if($result['UAM_pwdreset'] == 'true')
+  {
+    return true;
+  }
+  else return false; 
+}
+
+/**
+ * UAM_Set_PwdReset
+ * Action in user_list to set a password reset for a user
+ */
+function UAM_Set_PwdReset($uid)
+{
+  $query ='
+UPDATE '.USERS_TABLE.'
+SET UAM_pwdreset = "true"
+WHERE id = '.$uid.'
+LIMIT 1
+;';
+
+  pwg_query($query);
+}
+
+
+/**
+ * UAM_loc_visible_user_list
+ * Adds a new feature in user_list to allow password reset for selected users by admin
+ * 
+ */
+function UAM_loc_visible_user_list($visible_user_list)
+{
+  global $template;
+  
+  $template->append('plugin_user_list_column_titles', l10n('UAM_PwdReset'));
+  
+  $user_ids = array();
+  
+  foreach ($visible_user_list as $i => $user)
+  {
+    $user_ids[$i] = $user['id'];
+  }
+  
+  $user_nums = array_flip($user_ids);
+
+  // Query to get informations in database
+  if (!empty($user_ids))
+  {
+    $query = '
+SELECT DISTINCT id, UAM_pwdreset
+  FROM '.USERS_TABLE.'
+  WHERE id IN ('.implode(',', $user_ids).')
+;';
+    $result = pwg_query($query);
+    
+    while ($row = mysql_fetch_array($result))
+    {
+      if ($row['UAM_pwdreset'] == 'false')
+      {
+        $pwdreset = l10n('UAM_PwdReset_Done');
+      }
+      else if ($row['UAM_pwdreset'] == 'true')
+      {
+        $pwdreset = l10n('UAM_PwdReset_Todo');
+      }
+      else $pwdreset = l10n('UAM_PwdReset_NA');
+      
+		  $visible_user_list[$user_nums[$row['id']]]['plugin_columns'][] = $pwdreset; // Shows users password state in user_list
+    }
+  }
+  return $visible_user_list;
+}
+
+
+/**
  * UAM specific database dump (only for MySql !)
  * Creates an SQL dump of UAM specific tables and configuration settings
  * 
  * @returns  : Boolean to manage appropriate message display
  * 
  */
-function uam_dump($download)
+function UAM_dump($download)
 {
   global $conf;
   

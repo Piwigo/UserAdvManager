@@ -336,5 +336,12 @@ $lang['UAM_miscTitle_d'] = '
 - Nickname mandatory for guests comments<br>
 ...
 ';
+$lang['UAM_PwdResetTitle'] = 'Password renewal';
+$lang['UAM_PwdResetTitle_d'] = 'Enabling this option will add a new feature in the Piwigo\'s user management panel (Users> Manage) that can apply to renew the password for selected users. In addition, a new column is added to show the status of passwords for each of them with the following values:<br>
+- Password to be renewed: A password renewal request has been planned.<br>
+- Password renewed: The password has been renewed after a request.<br>
+- Original Password: The original password chosen at account creation and has never been required for a renewal.<br>
+The webmaster, administrators and guest accounts are excluded from this function.<br>
+These users will be automatically redirected to their customization page at each of their connections until they changed their password and an explicit message will be displayed on this page.';
 // --------- End: New or revised $lang ---- from version 2.30.0
 ?>

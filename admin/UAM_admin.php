@@ -108,7 +108,7 @@ switch ($page['tab'])
 // *************************************************************************
   case 'global':
 
-	if (isset($_POST['submit']) and isset($_POST['UAM_Mail_Info']) and isset($_POST['UAM_Username_Char']) and isset($_POST['UAM_Confirm_Mail']) and isset($_POST['UAM_Password_Enforced']) and isset($_POST['UAM_AdminPassword_Enforced']) and isset($_POST['UAM_GhostUser_Tracker']) and isset($_POST['UAM_Admin_ConfMail']) and isset($_POST['UAM_RedirToProfile']) and isset($_POST['UAM_GTAuto']) and isset($_POST['UAM_GTAutoMail']) and isset($_POST['UAM_CustomPasswRetr']) and isset($_POST['UAM_USRAuto']) and isset($_POST['UAM_USRAutoMail']) and isset($_POST['UAM_Stuffs']) and isset($_POST['UAM_HidePassw']))
+	if (isset($_POST['submit']) and isset($_POST['UAM_Mail_Info']) and isset($_POST['UAM_Username_Char']) and isset($_POST['UAM_Confirm_Mail']) and isset($_POST['UAM_Password_Enforced']) and isset($_POST['UAM_AdminPassword_Enforced']) and isset($_POST['UAM_GhostUser_Tracker']) and isset($_POST['UAM_Admin_ConfMail']) and isset($_POST['UAM_RedirToProfile']) and isset($_POST['UAM_GTAuto']) and isset($_POST['UAM_GTAutoMail']) and isset($_POST['UAM_CustomPasswRetr']) and isset($_POST['UAM_USRAuto']) and isset($_POST['UAM_USRAutoMail']) and isset($_POST['UAM_Stuffs']) and isset($_POST['UAM_HidePassw']) and isset($_POST['UAM_PwdReset']))
   {
 
     //General configuration settings
@@ -193,6 +193,7 @@ switch ($page['tab'])
       (isset($_POST['UAM_No_Valid_Level'])?$_POST['UAM_No_Valid_Level']:''),
       (isset($_POST['UAM_Valid_Level'])?$_POST['UAM_Valid_Level']:''),
       (isset($_POST['UAM_Downgrade_Level'])?$_POST['UAM_Downgrade_Level']:''),
+      $_POST['UAM_PwdReset'],
       );
 
     $conf['UserAdvManager'] = serialize($newconf_UAM);
@@ -242,7 +243,7 @@ switch ($page['tab'])
   {
     $dump_download = (isset($_POST['dump_download'])) ? 'true' : 'false';
     
-    if(uam_dump($dump_download) and $dump_download == 'false')
+    if(UAM_dump($dump_download) and $dump_download == 'false')
     {
       array_push($page['infos'], l10n('UAM_Dump_OK'));
     }
@@ -523,6 +524,8 @@ ORDER BY name ASC
 		'UAM_NO_VALID_LEVEL'             => $conf_UAM[35],
 		'UAM_VALID_LEVEL'                => $conf_UAM[36],
     'UAM_DOWNGRADE_LEVEL'            => $conf_UAM[37],
+    'UAM_PWDRESET_TRUE'              => $conf_UAM[38]=='true' ?  'checked="checked"' : '' ,
+    'UAM_PWDRESET_FALSE'             => $conf_UAM[38]=='false' ?  'checked="checked"' : '' ,
 		'UAM_PASSWORD_TEST_SCORE'        => $UAM_Password_Test_Score,
     'UAM_ERROR_REPORTS1'             => $UAM_Exclusionlist_Error,
     'UAM_ERROR_REPORTS2'             => $UAM_Illegal_Flag_Error1,

@@ -340,5 +340,18 @@ $lang['UAM_Expired_Level'] = '<b>Niveau de confidentialité</b> pour les utilisa
 $lang['UAM_MiscOptions'] = 'Autres options';
 $lang['UAM_Title3'] = 'Gestion des utilisateurs fantômes';
 $lang['UAM_Title5'] = 'Autres options diverses';
+$lang['UAM_Password_Reset_Msg'] = 'Veuillez modifier votre mot de passe !';
+$lang['UAM_PwdReset'] = 'Renouvellement du mot de passe';
+$lang['UAM_Password reset selected users'] = 'Demander le renouvellement du mot de passe pour les utilisateurs sélectionnés';
+$lang['UAM_Guest cannot be pwdreset'] = 'Le renouvellement de mot de passe ne peut pas être demandé pour les invités !';
+$lang['UAM_Default user cannot be pwgreset'] = 'Le renouvellement de mot de passe ne peut pas être demandé pour l\'utilisateur par défaut !';
+$lang['UAM_Webmaster cannot be pwdreset'] = 'Le renouvellement de mot de passe ne peut pas être demandé pour le webmaster !';
+$lang['UAM_You cannot pwdreset your account'] = 'Le renouvellement de mot de passe ne peut pas être demandé pour votre propre compte utilisateur !';
+$lang['UAM_You need to confirm pwdreset'] = 'Vous devez confirmer la demande de renouvellement de mot de passe (case à cocher) !';
+$lang['UAM_PwdReset_Todo'] = 'Mot de passe à changer';
+$lang['UAM_PwdReset_Done'] = 'Mot de passe modifié';
+$lang['UAM_PwdReset_NA'] = 'Mot de passe original';
+$lang['UAM %d user pwdreseted'] = 'Renouvellement de mot de passe demandé pour %d utilisateur';
+$lang['UAM %d users pwdreseted'] = 'Renouvellement de mot de passe demandé pour %d utilisateurs';
 // --------- End: New or revised $lang ---- from version 2.30.0
 ?>
