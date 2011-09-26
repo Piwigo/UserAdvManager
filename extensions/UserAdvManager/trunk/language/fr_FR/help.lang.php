@@ -332,5 +332,12 @@ $lang['UAM_miscTitle_d'] = '
 - Pseudo obligatoire sur commentaire pour les visiteurs<br>
 ...
 ';
+$lang['UAM_PwdResetTitle'] = 'Renouvellement du mot de passe';
+$lang['UAM_PwdResetTitle_d'] = 'L\'activation de cette option ajoutera une nouvelle fonction dans le panneau de gestion de utilisateurs (Utilisateurs > Gérer) de Piwigo qui permet de demander le renouvellement du mot de passe pour les utilisateurs sélectionnés. De plus, une nouvelle colonne s\'ajoutera pour présenter le statut des mots de passe pour chacun d\'eux avec les valeurs suivantes :<br>
+- Mot de passe à changer : Une demande de changement de mot de passe a été programmée.<br>
+- Mot de passe modifié : Le mot de passe a été changé suite à une demande.<br>
+- Mot de passe original : Le mot de passe est celui choisi à la création du compte et n\'a jamais fait l\'objet d\'une demande de changement.<br>
+Le compte du webmaster, des administrateurs et de l\'invité (Guest) sont exclus de cette fonction.<br><br>
+Ces utilisateurs seront alors systématiquement redirigés vers leur page de personnalisation à chacune de leurs connexions tant qu\'ils n\'auront pas modifié leur mot de passe. Un message explicite sera affiché sur cette page.';
 // --------- End: New or revised $lang ---- from version 2.30.0
 ?>

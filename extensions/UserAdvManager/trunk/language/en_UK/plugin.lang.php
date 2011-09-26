@@ -343,5 +343,18 @@ $lang['UAM_Expired_Level'] = '<b>Privacy level</b> for user\'s registration has 
 $lang['UAM_MiscOptions'] = 'Other miscellaneous options';
 $lang['UAM_Title3'] = 'Ghost users management';
 $lang['UAM_Title5'] = 'Other miscellaneous options';
+$lang['UAM_Password_Reset_Msg'] = 'Please, change your password!';
+$lang['UAM_PwdReset'] = 'Password renewal';
+$lang['UAM_Password reset selected users'] = 'Request password renewal for selected users';
+$lang['UAM_Guest cannot be pwdreset'] = 'Password renewal can\'t be set for guests account!';
+$lang['UAM_Default user cannot be pwgreset'] = 'Password renewal can\'t be set for default user account!';
+$lang['UAM_Webmaster cannot be pwdreset'] = 'Password renewal can\'t be set for the webmaster account!';
+$lang['UAM_You cannot pwdreset your account'] = 'Password renewal can\'t be set for your own account!';
+$lang['UAM_You need to confirm pwdreset'] = 'You must confirm password renewal (check box)!';
+$lang['UAM_PwdReset_Todo'] = 'Password to be renewed';
+$lang['UAM_PwdReset_Done'] = 'Password renewed';
+$lang['UAM_PwdReset_NA'] = 'Original password';
+$lang['UAM %d user pwdreseted'] = 'Password renewal required for %d user';
+$lang['UAM %d users pwdreseted'] = 'Password renewal required for %d users';
 // --------- End: New or revised $lang ---- from version 2.30.0
 ?>

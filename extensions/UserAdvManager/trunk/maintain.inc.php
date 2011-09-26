@@ -21,7 +21,7 @@ On receipt of this message and no new visit within 15 days, we would be obliged 
 
 Best regards,
 
-The admin of the gallery.','false','false','false','false','false','Sorry [username], your account has been deleted due to a too long time passed since your last visit at [mygallery].','Sorry [username], your account has been deprecated due to a too long time passed since your last visit at [mygallery]. Please, use the following link to revalidate your account.',-1,-1,'Thank you for registering at [mygallery]. Your account has been manually validated by _admin_. You may now log in at _link_to_site_ and make any appropriate changes to your profile. Welcome to _name_of_site_!','false','You have requested a password reset on our gallery. Please, find below your new connection settings.','false','Sorry, your account has been deleted because you have not validated your registration in requested time. Please, try registration with a valid and non blocked email account.','false','false','false',-1,-1,-1);
+The admin of the gallery.','false','false','false','false','false','Sorry [username], your account has been deleted due to a too long time passed since your last visit at [mygallery].','Sorry [username], your account has been deprecated due to a too long time passed since your last visit at [mygallery]. Please, use the following link to revalidate your account.',-1,-1,'Thank you for registering at [mygallery]. Your account has been manually validated by _admin_. You may now log in at _link_to_site_ and make any appropriate changes to your profile. Welcome to _name_of_site_!','false','You have requested a password reset on our gallery. Please, find below your new connection settings.','false','Sorry, your account has been deleted because you have not validated your registration in requested time. Please, try registration with a valid and non blocked email account.','false','false','false',-1,-1,-1,'false');
 
 	$query = '
 SELECT param
@@ -125,6 +125,23 @@ PRIMARY KEY (`user_id`)
   )
 ENGINE=MyISAM;";
   pwg_query($q);
+
+  // Piwigo's native tables modifications for password reset function - Add pwdreset column
+  $query = '
+SHOW COLUMNS FROM '.USERS_TABLE.'
+LIKE "UAM_pwdreset"
+;';
+  
+  $result = pwg_query($query);
+
+  if(!pwg_db_fetch_row($result))
+  {
+    $q = '
+ALTER TABLE '.USERS_TABLE.'
+ADD UAM_pwdreset enum("true","false") 
+;';
+    pwg_query($q);
+  }
 }
 
 
@@ -325,10 +342,20 @@ WHERE param="UserAdvManager_Version"
     pwg_query($q);
   }
 
-  $q = 'DROP TABLE '.USER_CONFIRM_MAIL_TABLE.';';
+  $q = '
+DROP TABLE '.USER_CONFIRM_MAIL_TABLE.'
+;';
   pwg_query( $q );
 
-  $q = 'DROP TABLE '.USER_LASTVISIT_TABLE.';';
+  $q = '
+DROP TABLE '.USER_LASTVISIT_TABLE.'
+;';
   pwg_query( $q );
+
+  $q = '
+ALTER TABLE '.USERS_TABLE.'
+DROP UAM_pwdreset 
+;';
+  pwg_query($q);
 }
 ?>

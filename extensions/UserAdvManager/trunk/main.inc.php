@@ -61,4 +61,135 @@ if ((isset($conf_UAM[33]) and $conf_UAM[33] == 'true'))
 {
   add_event_handler('get_stuffs_modules', 'register_UAM_stuffs_module');
 }
+
+// Add new feature in user_list - Password Reset
+if ((isset($conf_UAM[38]) and $conf_UAM[38] == 'true'))
+{
+  // add new column on user_list
+  add_event_handler('loc_visible_user_list', 'UAM_loc_visible_user_list');
+
+  //add prefilter on user_list
+  add_event_handler('loc_begin_admin', 'UAM_PwdReset_Action',60);
+  
+  function UAM_PwdReset_Action()
+  {
+    global $conf, $user, $template, $lang, $errors;
+
+    $page['errors'] = array();
+    $page['infos'] = array();
+    $page['filtered_users'] = array();
+
+    if (isset($_POST['pwdreset']))
+    {
+      $collection = array();
+
+      switch ($_POST['target'])
+      {
+        case 'all' :
+        {
+          foreach($page['filtered_users'] as $local_user)
+          {
+            array_push($collection, $local_user['id']);
+          }
+          break;
+        }
+        case 'selection' :
+        {
+          if (isset($_POST['selection']))
+          {
+            $collection = $_POST['selection'];
+          }
+          break;
+        }
+      }
+
+      if (count($collection) == 0)
+      {
+        array_push($page['errors'], l10n('Select at least one user'));
+      }
+    }
+
+    if (isset($_POST['pwdreset']) and count($collection) > 0)
+    {
+      if (in_array($conf['guest_id'], $collection))
+      {
+        array_push($page['errors'], l10n('UAM_Guest cannot be pwdreset'));
+        $template->append('errors', l10n('UAM_Guest cannot be pwdreset'));
+      }
+      if (($conf['guest_id'] != $conf['default_user_id']) and
+        in_array($conf['default_user_id'], $collection))
+      {
+        array_push($page['errors'], l10n('UAM_Default user cannot be pwgreset'));
+        $template->append('errors', l10n('UAM_Default user cannot be pwgreset'));
+      }
+      if (in_array($conf['webmaster_id'], $collection))
+      {
+        array_push($page['errors'], l10n('UAM_Webmaster cannot be pwdreset'));
+        $template->append('errors', l10n('UAM_Webmaster cannot be pwdreset'));
+      }
+      if (in_array($user['id'], $collection))
+      {
+        array_push($page['errors'], l10n('UAM_You cannot pwdreset your account'));
+        $template->append('errors', l10n('UAM_You cannot pwdreset your account'));
+      }
+
+      if (count($page['errors']) == 0)
+      {  
+        if (isset($_POST['confirm_pwdreset']) and 1 == $_POST['confirm_pwdreset'])
+        {
+          foreach ($collection as $user_id)
+          {
+            UAM_Set_PwdReset($user_id);
+          }
+          array_push(
+            $page['infos'],
+            l10n_dec(
+              'UAM %d user pwdreseted', 'UAM %d users pwdreseted',
+              count($collection)
+              )
+            );
+          $template->append('infos', l10n_dec(
+              'UAM %d user pwdreseted', 'UAM %d users pwdreseted',
+              count($collection)));
+          foreach ($page['filtered_users'] as $filter_key => $filter_user)
+          {
+            if (in_array($filter_user['id'], $collection))
+            {
+              unset($page['filtered_users'][$filter_key]);
+            }
+          }
+        }
+        else
+        {
+          array_push($page['errors'], l10n('UAM_You need to confirm pwdreset'));
+          $template->append('errors', l10n('UAM_You need to confirm pwdreset'));
+        }
+      }
+    }  
+    $template->set_prefilter('user_list', 'UAM_PwdReset_Prefilter');
+  }
+
+  function UAM_PwdReset_Prefilter($content, &$smarty)
+  {
+    $search = '
+<fieldset>
+  <legend>{\'Deletions\'|@translate}</legend>
+  <label><input type="checkbox" name="confirm_deletion" value="1"> {\'confirm\'|@translate}</label>
+  <input class="submit" type="submit" value="{\'Delete selected users\'|@translate}" name="delete">
+</fieldset>
+';
+ 
+    $addon = '
+<fieldset>
+  <legend>{\'UAM_PwdReset\'|@translate}</legend>
+  <label><input type="checkbox" name="confirm_pwdreset" value="1"> {\'confirm\'|@translate}</label>
+  <input class="submit" type="submit" value="{\'UAM_Password reset selected users\'|@translate}" name="pwdreset">
+</fieldset>
+';
+
+    $replacement = $addon.$search;
+
+    return str_replace($search, $replacement, $content);
+  }
+}
 ?>

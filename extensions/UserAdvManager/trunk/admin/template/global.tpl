@@ -744,6 +744,19 @@ function uam_blockToggleDisplay( headerId, contentId )
                 {'UAM_Enable'|@translate}
             <br><br>
             </li>
+
+            <li>
+              <label class="cluetip" title="{'UAM_PwdResetTitle'|translate}|{'UAM_PwdResetTitle_d'|translate}">
+                {'UAM_PwdReset'|@translate}
+              </label>
+            <br><br>
+              <input type="radio" value="false" {$UAM_PWDRESET_FALSE} name="UAM_PwdReset">
+                {'UAM_Disable'|@translate}
+            <br>
+              <input type="radio" value="true" {$UAM_PWDRESET_TRUE} name="UAM_PwdReset">
+                {'UAM_Enable'|@translate}
+            <br><br>
+            </li>
           </ul>
         </fieldset>
 

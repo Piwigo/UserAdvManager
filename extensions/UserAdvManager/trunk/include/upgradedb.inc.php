@@ -514,9 +514,17 @@ WHERE param = "UserAdvManager"
   $Newconf_UAM[35] = '-1';
   $Newconf_UAM[36] = '-1';
   $Newconf_UAM[37] = '-1';
+  $Newconf_UAM[38] = 'false';
 
   $update_conf = serialize($Newconf_UAM);
 
   conf_update_param('UserAdvManager', pwg_db_real_escape_string($update_conf));
+
+  // Piwigo's native tables modifications for password reset function - Add pwdreset column
+  $q = '
+ALTER TABLE '.USERS_TABLE.'
+ADD UAM_pwdreset enum("true","false") 
+;';
+  pwg_query($q);
 }
 ?>
