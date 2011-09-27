@@ -12,7 +12,12 @@ include_once (UAM_PATH.'include/functions.inc.php');
 function plugin_install()
 {
 	global $conf;
-	
+
+/* ****************************************************************** */
+/* **************** BEGIN - Data preparation in vars **************** */
+/* ****************************************************************** */
+
+  // Default global parameters for UserAdvManager conf
   $default1 = array('false','false',-1,-1,-1,'false','',-1,'','','false','','false',100,'false','false',10,'Hello [username].
 	
 This is a reminder because a very long time passed since your last visit on our gallery [mygallery]. If you do not want anymore to use your access account, please let us know by replying to this email. Your account will be deleted.
@@ -23,6 +28,31 @@ Best regards,
 
 The admin of the gallery.','false','false','false','false','false','Sorry [username], your account has been deleted due to a too long time passed since your last visit at [mygallery].','Sorry [username], your account has been deprecated due to a too long time passed since your last visit at [mygallery]. Please, use the following link to revalidate your account.',-1,-1,'Thank you for registering at [mygallery]. Your account has been manually validated by _admin_. You may now log in at _link_to_site_ and make any appropriate changes to your profile. Welcome to _name_of_site_!','false','You have requested a password reset on our gallery. Please, find below your new connection settings.','false','Sorry, your account has been deleted because you have not validated your registration in requested time. Please, try registration with a valid and non blocked email account.','false','false','false',-1,-1,-1,'false');
 
+  // Default specific parameters for UserAdvManager ConfirmMail conf
+  $default2 = array('false',5,'Hello [username].
+		
+This is a reminder message because you registered on our gallery [mygallery] but you do not validate your registration and your validation key has expired. To still allow you to access to our gallery, your validation period has been reset. You have again 5 days to validate your registration.
+
+Note: After this period, your account will be permanently deleted.','false','Hello [username].
+
+This is a reminder message because you registered on our gallery [mygallery] but you do not validate your registration and your validation key will expire. To allow you access to our gallery, you have 2 days to confirm your registration by clicking on the link in the message you should have received when you registered.
+
+Note: After this period, your account will be permanently deleted.','You have confirmed that you are human and may now use [mygallery]! Welcome [username]!','Your activation key is incorrect or expired or you have already validated your account, please contact the webmaster to fix this problem.');
+
+  // Set current plugin version in config table
+  $plugin =  PluginInfos(UAM_PATH);
+  $version = $plugin['version'];
+
+/* **************************************************************** */
+/* **************** END - Data preparation in vars **************** */
+/* **************************************************************** */
+
+
+/* ***************************************************************************** */
+/* **************** BEGIN - Database actions and initialization **************** */
+/* ***************************************************************************** */
+
+  // Create UserAdvManager conf if not already exists
 	$query = '
 SELECT param
   FROM '.CONFIG_TABLE.'
@@ -39,17 +69,7 @@ VALUES ("UserAdvManager","'.pwg_db_real_escape_string(serialize($default1)).'","
     pwg_query($q);
   }
 
-
-  $default2 = array('false',5,'Hello [username].
-		
-This is a reminder message because you registered on our gallery [mygallery] but you do not validate your registration and your validation key has expired. To still allow you to access to our gallery, your validation period has been reset. You have again 5 days to validate your registration.
-
-Note: After this period, your account will be permanently deleted.','false','Hello [username].
-
-This is a reminder message because you registered on our gallery [mygallery] but you do not validate your registration and your validation key will expire. To allow you access to our gallery, you have 2 days to confirm your registration by clicking on the link in the message you should have received when you registered.
-
-Note: After this period, your account will be permanently deleted.','You have confirmed that you are human and may now use [mygallery]! Welcome [username]!','Your activation key is incorrect or expired or you have already validated your account, please contact the webmaster to fix this problem.');
-
+  // Create UserAdvManager_ConfirmMail conf if not already exists
 	$query = '
 SELECT param
   FROM '.CONFIG_TABLE.'
@@ -66,6 +86,7 @@ VALUES ("UserAdvManager_ConfirmMail","'.pwg_db_real_escape_string(serialize($def
     pwg_query($q);
   }
 
+  // Create UserAdvManager_Redir conf if not already exists
 	$query = '
 SELECT param
   FROM '.CONFIG_TABLE.'
@@ -82,10 +103,7 @@ VALUES ("UserAdvManager_Redir","0","UAM Redirections")
     pwg_query($q);
   }
 
-// Set current plugin version in config table
-  $plugin =  PluginInfos(UAM_PATH);
-  $version = $plugin['version'];
-
+  // Create UserAdvManager_Version conf if not already exists
 	$query = '
 SELECT param
   FROM '.CONFIG_TABLE.'
@@ -102,7 +120,7 @@ VALUES ("UserAdvManager_Version","'.$version.'","UAM version check")
     pwg_query($q);
   }
 
-
+  // Create USER_CONFIRM_MAIL_TABLE
 	$q = "
 CREATE TABLE IF NOT EXISTS ".USER_CONFIRM_MAIL_TABLE." (
   id varchar(50) NOT NULL default '',
@@ -116,6 +134,7 @@ PRIMARY KEY  (id)
 ENGINE=MyISAM;";
   pwg_query($q);
 
+  // Create USER_LASTVISIT_TABLE
 	$q = "
 CREATE TABLE IF NOT EXISTS ".USER_LASTVISIT_TABLE." (
   user_id SMALLINT(5) NOT NULL DEFAULT '0',
@@ -126,7 +145,7 @@ PRIMARY KEY (`user_id`)
 ENGINE=MyISAM;";
   pwg_query($q);
 
-  // Piwigo's native tables modifications for password reset function - Add pwdreset column
+  // Piwigo's native tables modifications for password reset function - Add pwdreset column if not already exists
   $query = '
 SHOW COLUMNS FROM '.USERS_TABLE.'
 LIKE "UAM_pwdreset"
@@ -142,6 +161,10 @@ ADD UAM_pwdreset enum("true","false")
 ;';
     pwg_query($q);
   }
+
+/* *************************************************************************** */
+/* **************** END - Database actions and initialization **************** */
+/* *************************************************************************** */
 }
 
 
