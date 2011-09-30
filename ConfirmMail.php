@@ -41,7 +41,8 @@ WHERE ('.USERS_TABLE.'.id ='.$userid.')
     
     log_user($userid, false);
 
-/* We have to get the user's language in database */
+// We have to get the user's language in database
+// ----------------------------------------------
     $query = '
 SELECT language
 FROM '.USER_INFOS_TABLE.'
@@ -49,16 +50,19 @@ WHERE '.USER_INFOS_TABLE.'.user_id ='.$userid.'
 ;';
     $data = pwg_db_fetch_assoc(pwg_query($query));
 
-/* Check if user is already registered (profile changing) - If not (new registration), language is set to current gallery language */
+// Check if user is already registered (profile changing) - If not (new registration), language is set to current gallery language
+// -------------------------------------------------------------------------------------------------------------------------------
     if (empty($data))
     {
-/* And switch gallery to this language before using personalized and multilangual contents */
+// And switch gallery to this language before using personalized and multilangual contents
+// ---------------------------------------------------------------------------------------
       $language = pwg_get_session_var('lang_switch', $user['language']);
       switch_lang_to($language);
     }
     else
     {
-/* And switch gallery to this language before using personalized and multilangual contents */
+// And switch gallery to this language before using personalized and multilangual contents
+// ---------------------------------------------------------------------------------------
       switch_lang_to($data['language']);
       load_language('plugin.lang', UAM_PATH);
     }
@@ -66,6 +70,7 @@ WHERE '.USER_INFOS_TABLE.'.user_id ='.$userid.'
     if (isset($conf_UAM_ConfirmMail[5]) and $conf_UAM_ConfirmMail[5] <> '')
     {
       // Management of Extension flags ([username], [mygallery], [myurl])
+      // ----------------------------------------------------------------
       $patterns[] = '#\[username\]#i';
       $replacements[] = $result['username'];
       $patterns[] = '#\[mygallery\]#i';
@@ -98,6 +103,7 @@ WHERE '.USER_INFOS_TABLE.'.user_id ='.$userid.'
     if (isset($conf_UAM_ConfirmMail[6]) and $conf_UAM_ConfirmMail[6] <> '')
     {
       // Management of Extension flags ([username], [mygallery], [myurl])
+      // ----------------------------------------------------------------
       $patterns[] = '#\[username\]#i';
       $replacements[] = $result['username'];
       $patterns[] = '#\[mygallery\]#i';

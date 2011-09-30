@@ -330,7 +330,7 @@ $lang['UAM_GT_MainTitle_d'] = '
 - E-mailing<br>
 ...
 ';
-$lang['UAM_miscTitle'] = 'Other miscellaneous options';
+$lang['UAM_miscTitle'] = 'Miscellaneous options';
 $lang['UAM_miscTitle_d'] = '
 - Registered users monitoring<br>
 - Nickname mandatory for guests comments<br>

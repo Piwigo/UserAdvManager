@@ -342,7 +342,7 @@ $lang['UAM_GTAutoGp'] = 'Automatic change of group / status / privacy level';
 $lang['UAM_Expired_Level'] = '<b>Privacy level</b> for user\'s registration has expired<br>';
 $lang['UAM_MiscOptions'] = 'Other miscellaneous options';
 $lang['UAM_Title3'] = 'Ghost users management';
-$lang['UAM_Title5'] = 'Other miscellaneous options';
+$lang['UAM_Title5'] = 'Miscellaneous options';
 $lang['UAM_Password_Reset_Msg'] = 'Please, change your password!';
 $lang['UAM_PwdReset'] = 'Password renewal';
 $lang['UAM_Password reset selected users'] = 'Request password renewal for selected users';
@@ -356,5 +356,40 @@ $lang['UAM_PwdReset_Done'] = 'Password renewed';
 $lang['UAM_PwdReset_NA'] = 'Original password';
 $lang['UAM %d user pwdreseted'] = 'Password renewal required for %d user';
 $lang['UAM %d users pwdreseted'] = 'Password renewal required for %d users';
+$lang['UAM_Error_Using_illegal_Kdays'] = 'Using the [Kdays] tag is allowed only if the deadline for registration validation limited is active. Refer to the text field in red to correct the problem.';
+$lang['UAM_Default_InfoMail_Txt'] = 'Hello [username]! Thank you to have register on [mygallery].
+
+Please, find find below your connexion information.';
+$lang['UAM_Default_ConfirmMail_Txt'] = 'Hello [username]! Thank you to have register on [mygallery].
+
+To complete the procedure and be able to browse through the pictures, thank you kindly confirm your registration by clicking on the link in this message.';
+$lang['UAM_Default_GhstReminder_Txt'] = 'Hello [username].
+	
+This is a reminder because a very long time passed since your last visit on our gallery [mygallery]. If you do not want anymore to use your access account, please let us know by replying to this email. Your account will be deleted.
+
+On receipt of this message and no new visit within [days] days, we would be obliged to automatically delete your account.
+
+Best regards,
+
+The admin of the gallery [mygallery] - [myurl]';
+$lang['UAM_Default_GhstDeletion_Txt'] = 'Sorry [username], your account has been deleted due to a too long time passed since your last visit at [mygallery]. Please register again.';
+$lang['UAM_Default_GhstDemotion_Txt'] = 'Sorry [username], your account has been deprecated due to a too long time passed since your last visit at [mygallery]. Please, use the following link to revalidate your account:';
+$lang['UAM_Default_AdminValidation_Txt'] = 'Hello [username]! Thank you for registering and welcome to [mygallery].
+
+Your account has been manually validated by the webmaster of [mygallery]. You may now log in at [myurl] and make any appropriate changes to your profile.';
+$lang['UAM_Default_PwdRequest_Txt'] = 'You have requested a password reset on our gallery. Please, find below your new connection settings.';
+$lang['UAM_Default_ValidationTimeout_Txt'] = 'Sorry, your account has been deleted because you have not validated your registration in requested time ([Kdays] days). Please, retry registration with a valid and non blocked email account.';
+$lang['UAM_Default_CfmMail_Remail_Txt1'] = 'Hello [username].
+		
+This is a reminder message because you registered on our gallery [mygallery] but you do not validate your registration and your validation key has expired. To still allow you to access to our gallery, your validation period has been reset. You have again x days to validate your registration.
+
+Note: After this period, your account will be permanently deleted.';
+$lang['UAM_Default_CfmMail_Remail_Txt2'] = 'Hello [username].
+
+This is a reminder message because you registered on our gallery [mygallery] but you do not validate your registration and your validation key will expire. To allow you access to our gallery, you have x days to confirm your registration by clicking on the link in the message you should have received when you registered.
+
+Note: After this period, your account will be permanently deleted.';
+$lang['UAM_Default_CfmMail_Custom_Txt1'] = 'Welcome [username]! You have confirmed that you are human and may now use [mygallery]!';
+$lang['UAM_Default_CfmMail_Custom_Txt2'] = 'Your activation key is incorrect or expired or you have already validated your account, please contact the webmaster to fix this problem.';
 // --------- End: New or revised $lang ---- from version 2.30.0
 ?>

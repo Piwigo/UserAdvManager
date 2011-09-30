@@ -265,6 +265,7 @@ Plugin Name: UserAdvManager
             Bug 2415 fixed - New feature : Set automatically privacy level for users who have validated or not their registration. Automated task available.
             Bug 2437 fixed - New feature : Request password renewal for selected users in Piwigo's users management panel.
             Bug 2445 fixed - Duplicate key MySql error when a user tries to validate his registration twice.
+            Bug 2447 fixed - Only for installation from scratch, all text fields pre-filled and given as examples are translated into the language of the webmaster (if the language is supported by the plugin). The default language remains English in case of any failure.
             Help files remaned and relocated in the language root directory (no more "help" subdirectory) for compliance with the new online translation tool.
 */
 ?>

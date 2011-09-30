@@ -28,18 +28,23 @@ $conf_UAM = unserialize($conf['UserAdvManager']);
 
 
 // Plugin administration panel
+// ---------------------------
 add_event_handler('get_admin_plugin_menu_links', 'UAM_admin_menu');
 
-/* Lastvisit table feed for Ghost Tracker */
+// Lastvisit table feed for Ghost Tracker
+// --------------------------------------
 add_event_handler('loc_begin_index', 'UAM_GhostTracker');
 
 // User creation
+// -------------
 add_event_handler('register_user', 'UAM_Adduser');
 
 // User deletion
+// -------------
 add_event_handler('delete_user', 'UAM_Deluser');
 
 // Check users registration
+// ------------------------
 add_event_handler('register_user_check', 'UAM_RegistrationCheck', EVENT_HANDLER_PRIORITY_NEUTRAL, 2);
 
 if (script_basename() == 'profile')
@@ -48,29 +53,40 @@ if (script_basename() == 'profile')
 }
 
 // Redirection to profile page
+// ---------------------------
 add_event_handler('login_success', 'UAM_LoginTasks');
 
 // Adding customized text to lost password email
+// ---------------------------------------------
 add_event_handler('render_lost_password_mail_content', 'UAM_lost_password_mail_content');
 
 // *** Important ! This is necessary to make email exclusion work in admin's users management panel ***
+// ----------------------------------------------------------------------------------------------------
 add_event_handler('init', 'UAM_InitPage');
 
 // PWG_Stuffs module
+// -----------------
 if ((isset($conf_UAM[33]) and $conf_UAM[33] == 'true'))
 {
   add_event_handler('get_stuffs_modules', 'register_UAM_stuffs_module');
 }
 
 // Add new feature in user_list - Password Reset
+// ---------------------------------------------
 if ((isset($conf_UAM[38]) and $conf_UAM[38] == 'true'))
 {
-  // add new column on user_list
+  // Add new column on user_list
+  // ---------------------------
   add_event_handler('loc_visible_user_list', 'UAM_loc_visible_user_list');
 
-  //add prefilter on user_list
+  // Add prefilter on user_list
+  // --------------------------
   add_event_handler('loc_begin_admin', 'UAM_PwdReset_Action',60);
-  
+
+  /**
+   * UAM_PwdReset_Action - Triggered on UAM_PwdReset_Action
+   * Handle passord reset action in user_list.php
+   */
   function UAM_PwdReset_Action()
   {
     global $conf, $user, $template, $lang, $errors;
@@ -169,6 +185,10 @@ if ((isset($conf_UAM[38]) and $conf_UAM[38] == 'true'))
     $template->set_prefilter('user_list', 'UAM_PwdReset_Prefilter');
   }
 
+  /**
+   * UAM_PwdReset_Prefilter
+   * Adds action field for password reset in user_list.tpl
+   */
   function UAM_PwdReset_Prefilter($content, &$smarty)
   {
     $search = '
