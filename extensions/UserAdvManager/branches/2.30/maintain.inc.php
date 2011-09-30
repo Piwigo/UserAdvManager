@@ -8,6 +8,8 @@ if(!defined('UAM_PATH'))
 include_once (UAM_PATH.'include/constants.php');
 include_once (UAM_PATH.'include/functions.inc.php');
 
+load_language('plugin.lang', UAM_PATH);
+
 
 function plugin_install()
 {
@@ -17,29 +19,63 @@ function plugin_install()
 /* **************** BEGIN - Data preparation in vars **************** */
 /* ****************************************************************** */
 
+  $defaultUAM = array();
+  $defaultConfirmMail = array();
+
   // Default global parameters for UserAdvManager conf
-  $default1 = array('false','false',-1,-1,-1,'false','',-1,'','','false','','false',100,'false','false',10,'Hello [username].
-	
-This is a reminder because a very long time passed since your last visit on our gallery [mygallery]. If you do not want anymore to use your access account, please let us know by replying to this email. Your account will be deleted.
-
-On receipt of this message and no new visit within 15 days, we would be obliged to automatically delete your account.
-
-Best regards,
-
-The admin of the gallery.','false','false','false','false','false','Sorry [username], your account has been deleted due to a too long time passed since your last visit at [mygallery].','Sorry [username], your account has been deprecated due to a too long time passed since your last visit at [mygallery]. Please, use the following link to revalidate your account.',-1,-1,'Thank you for registering at [mygallery]. Your account has been manually validated by _admin_. You may now log in at _link_to_site_ and make any appropriate changes to your profile. Welcome to _name_of_site_!','false','You have requested a password reset on our gallery. Please, find below your new connection settings.','false','Sorry, your account has been deleted because you have not validated your registration in requested time. Please, try registration with a valid and non blocked email account.','false','false','false',-1,-1,-1,'false');
-
+  // -------------------------------------------------
+  $defaultUAM[0] = 'false';                                   // UAM_MAIL_INFO_TRUE/FALSE
+  $defaultUAM[1] = 'false';                                   // UAM_CONFIRM_MAIL_TRUE/FALSE
+  $defaultUAM[2] = '-1';                                      // UAM_No_Confirm_Group
+  $defaultUAM[3] = '-1';                                      // UAM_Validated_Group
+  $defaultUAM[4] = '-1';                                      // UAM_Validated_Status
+  $defaultUAM[5] = 'false';                                   // UAM_USERNAME_CHAR_TRUE
+  $defaultUAM[6] = '';                                        // UAM_USERNAME_CHAR_LIST
+  $defaultUAM[7] = '-1';                                      // UAM_No_Confirm_Status
+  $defaultUAM[8] = l10n('UAM_Default_InfoMail_Txt');          // UAM_MAILINFO_TEXT
+  $defaultUAM[9] = l10n('UAM_Default_ConfirmMail_Txt');       // UAM_CONFIRMMAIL_TEXT
+  $defaultUAM[10] = 'false';                                  // UAM_MAILEXCLUSION_TRUE/FALSE
+  $defaultUAM[11] = '';                                       // UAM_MAILEXCLUSION_LIST
+  $defaultUAM[12] = 'false';                                  // UAM_PASSWORDENF_TRUE/FALSE
+  $defaultUAM[13] = '100';                                    // UAM_PASSWORD_SCORE
+  $defaultUAM[14] = 'false';                                  // UAM_ADMINPASSWENF_TRUE/FALSE
+  $defaultUAM[15] = 'false';                                  // UAM_GHOSTRACKER_TRUE/FALSE
+  $defaultUAM[16] = '10';                                     // UAM_GHOSTRACKER_DAYLIMIT
+  $defaultUAM[17] = l10n('UAM_Default_GhstReminder_Txt');     // UAM_GHOSTRACKER_REMINDERTEXT
+  $defaultUAM[18] = 'false';                                  // UAM_ADDLASTVISIT_TRUE/FALSE
+  $defaultUAM[19] = 'false';                                  // UAM_ADMINCONFMAIL_TRUE/FALSE
+  $defaultUAM[20] = 'false';                                  // UAM_REDIRTOPROFILE_TRUE/FALSE
+  $defaultUAM[21] = 'false';                                  // UAM_GTAUTO_TRUE/FALSE
+  $defaultUAM[22] = 'false';                                  // UAM_GTAUTOMAIL_TRUE/FALSE
+  $defaultUAM[23] = l10n('UAM_Default_GhstDeletion_Txt');     // UAM_GTAUTODEL_TEXT
+  $defaultUAM[24] = l10n('UAM_Default_GhstDemotion_Txt');     // UAM_GTAUTOMAILTEXT
+  $defaultUAM[25] = '-1';                                     // UAM_Downgrade_Group
+  $defaultUAM[26] = '-1';                                     // UAM_Downgrade_Status
+  $defaultUAM[27] = l10n('UAM_Default_AdminValidation_Txt');  // UAM_ADMINVALIDATIONMAIL_TEXT
+  $defaultUAM[28] = 'false';                                  // UAM_CUSTOMPASSWRETR_TRUE/FALSE
+  $defaultUAM[29] = l10n('UAM_Default_PwdRequest_Txt');       // UAM_CUSTOMPASSWRETR_TEXT
+  $defaultUAM[30] = 'false';                                  // UAM_USRAUTO_TRUE/FALSE
+  $defaultUAM[31] = l10n('UAM_Default_ValidationTimeout_Txt');// UAM_USRAUTODEL_TEXT
+  $defaultUAM[32] = 'false';                                  // UAM_USRAUTOMAIL_TRUE/FALSE
+  $defaultUAM[33] = 'false';                                  // UAM_STUFFS_TRUE/FALSE
+  $defaultUAM[34] = 'false';                                  // UAM_HIDEPASSW_TRUE/FALSE
+  $defaultUAM[35] = '-1';                                     // UAM_NO_VALID_LEVEL
+  $defaultUAM[36] = '-1';                                     // UAM_VALID_LEVEL
+  $defaultUAM[37] = '-1';                                     // UAM_DOWNGRADE_LEVEL
+  $defaultUAM[38] = 'false';                                  // UAM_PWDRESET_TRUE/FALSE
+  
   // Default specific parameters for UserAdvManager ConfirmMail conf
-  $default2 = array('false',5,'Hello [username].
-		
-This is a reminder message because you registered on our gallery [mygallery] but you do not validate your registration and your validation key has expired. To still allow you to access to our gallery, your validation period has been reset. You have again 5 days to validate your registration.
-
-Note: After this period, your account will be permanently deleted.','false','Hello [username].
-
-This is a reminder message because you registered on our gallery [mygallery] but you do not validate your registration and your validation key will expire. To allow you access to our gallery, you have 2 days to confirm your registration by clicking on the link in the message you should have received when you registered.
-
-Note: After this period, your account will be permanently deleted.','You have confirmed that you are human and may now use [mygallery]! Welcome [username]!','Your activation key is incorrect or expired or you have already validated your account, please contact the webmaster to fix this problem.');
-
+  // ---------------------------------------------------------------
+  $defaultConfirmMail[0] = 'false';                                 // UAM_CONFIRMMAIL_TIMEOUT_TRUE/FALSE
+  $defaultConfirmMail[1] = '5';                                     // UAM_CONFIRMMAIL_DELAY
+  $defaultConfirmMail[2] = l10n('UAM_Default_CfmMail_Remail_Txt1'); // UAM_CONFIRMMAIL_REMAIL_TXT1
+  $defaultConfirmMail[3] = 'false';                                 // UAM_CONFIRMMAIL_REMAIL_TRUE/FALSE
+  $defaultConfirmMail[4] = l10n('UAM_Default_CfmMail_Remail_Txt2'); // UAM_CONFIRMMAIL_REMAIL_TXT2
+  $defaultConfirmMail[5] = l10n('UAM_Default_CfmMail_Custom_Txt1'); // UAM_CONFIRMMAIL_CUSTOM_TXT1
+  $defaultConfirmMail[6] = l10n('UAM_Default_CfmMail_Custom_Txt2'); // UAM_CONFIRMMAIL_CUSTOM_TXT2
+  
   // Set current plugin version in config table
+  // ------------------------------------------
   $plugin =  PluginInfos(UAM_PATH);
   $version = $plugin['version'];
 
@@ -53,6 +89,7 @@ Note: After this period, your account will be permanently deleted.','You have co
 /* ***************************************************************************** */
 
   // Create UserAdvManager conf if not already exists
+  // ------------------------------------------------
 	$query = '
 SELECT param
   FROM '.CONFIG_TABLE.'
@@ -64,12 +101,13 @@ WHERE param = "UserAdvManager"
   {
     $q = '
 INSERT INTO '.CONFIG_TABLE.' (param, value, comment)
-VALUES ("UserAdvManager","'.pwg_db_real_escape_string(serialize($default1)).'","UAM parameters")
+VALUES ("UserAdvManager","'.pwg_db_real_escape_string(serialize($defaultUAM)).'","UAM parameters")
   ;';
     pwg_query($q);
   }
 
   // Create UserAdvManager_ConfirmMail conf if not already exists
+  // ------------------------------------------------------------
 	$query = '
 SELECT param
   FROM '.CONFIG_TABLE.'
@@ -81,12 +119,13 @@ WHERE param = "UserAdvManager_ConfirmMail"
   {
     $q = '
 INSERT INTO '.CONFIG_TABLE.' (param, value, comment)
-VALUES ("UserAdvManager_ConfirmMail","'.pwg_db_real_escape_string(serialize($default2)).'","UAM ConfirmMail parameters")
+VALUES ("UserAdvManager_ConfirmMail","'.pwg_db_real_escape_string(serialize($defaultConfirmMail)).'","UAM ConfirmMail parameters")
   ;';
     pwg_query($q);
   }
 
   // Create UserAdvManager_Redir conf if not already exists
+  // ------------------------------------------------------
 	$query = '
 SELECT param
   FROM '.CONFIG_TABLE.'
@@ -104,6 +143,7 @@ VALUES ("UserAdvManager_Redir","0","UAM Redirections")
   }
 
   // Create UserAdvManager_Version conf if not already exists
+  // --------------------------------------------------------
 	$query = '
 SELECT param
   FROM '.CONFIG_TABLE.'
@@ -121,6 +161,7 @@ VALUES ("UserAdvManager_Version","'.$version.'","UAM version check")
   }
 
   // Create USER_CONFIRM_MAIL_TABLE
+  // ------------------------------
 	$q = "
 CREATE TABLE IF NOT EXISTS ".USER_CONFIRM_MAIL_TABLE." (
   id varchar(50) NOT NULL default '',
@@ -135,6 +176,7 @@ ENGINE=MyISAM;";
   pwg_query($q);
 
   // Create USER_LASTVISIT_TABLE
+  // ---------------------------
 	$q = "
 CREATE TABLE IF NOT EXISTS ".USER_LASTVISIT_TABLE." (
   user_id SMALLINT(5) NOT NULL DEFAULT '0',
@@ -146,6 +188,7 @@ ENGINE=MyISAM;";
   pwg_query($q);
 
   // Piwigo's native tables modifications for password reset function - Add pwdreset column if not already exists
+  // ------------------------------------------------------------------------------------------------------------
   $query = '
 SHOW COLUMNS FROM '.USERS_TABLE.'
 LIKE "UAM_pwdreset"
@@ -276,6 +319,7 @@ WHERE param = "UserAdvManager_Version"
   }
 
 /* Check database upgrade since version 2.16.0 */
+/* ******************************************* */
   if (isset($conf['UserAdvManager_Version']))
   {
     if (version_compare($conf['UserAdvManager_Version'], '2.20.0') < 0)
@@ -315,6 +359,7 @@ WHERE param = "UserAdvManager_Version"
   }
 
   // Update plugin version number in #_config table and check consistency of #_plugins table
+  // ---------------------------------------------------------------------------------------
   UAM_version_update();
 
   load_conf_from_db('param like \'UserAdvManager\\_%\'');

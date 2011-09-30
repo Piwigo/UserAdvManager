@@ -111,10 +111,11 @@ switch ($page['tab'])
 	if (isset($_POST['submit']) and isset($_POST['UAM_Mail_Info']) and isset($_POST['UAM_Username_Char']) and isset($_POST['UAM_Confirm_Mail']) and isset($_POST['UAM_Password_Enforced']) and isset($_POST['UAM_AdminPassword_Enforced']) and isset($_POST['UAM_GhostUser_Tracker']) and isset($_POST['UAM_Admin_ConfMail']) and isset($_POST['UAM_RedirToProfile']) and isset($_POST['UAM_GTAuto']) and isset($_POST['UAM_GTAutoMail']) and isset($_POST['UAM_CustomPasswRetr']) and isset($_POST['UAM_USRAuto']) and isset($_POST['UAM_USRAutoMail']) and isset($_POST['UAM_Stuffs']) and isset($_POST['UAM_HidePassw']) and isset($_POST['UAM_PwdReset']))
   {
 
-    //General configuration settings
+    // Render free text fields
+    // -----------------------
 		$_POST['UAM_MailInfo_Text'] = str_replace('\"', '"', str_replace("\'", "'", str_replace("\\\\", "\\", $_POST['UAM_MailInfo_Text'])));
 
-		$_POST['UAM_ConfirmMail_Text'] = str_replace('\"', '"', str_replace("\'", "'", str_replace("\\\\", "\\", $_POST['UAM_ConfirmMail_Text'])));
+    $_POST['UAM_ConfirmMail_Text'] = str_replace('\"', '"', str_replace("\'", "'", str_replace("\\\\", "\\", $_POST['UAM_ConfirmMail_Text'])));
 
     $_POST['UAM_GhostTracker_ReminderText'] = str_replace('\"', '"', str_replace("\'", "'", str_replace("\\\\", "\\", $_POST['UAM_GhostTracker_ReminderText'])));
     
@@ -129,6 +130,7 @@ switch ($page['tab'])
     $_POST['UAM_USRAutoDelText'] = str_replace('\"', '"', str_replace("\'", "'", str_replace("\\\\", "\\", $_POST['UAM_GTAutoDelText'])));
 
     // Check if CR-LF exist at begining and end of mail exclusion list - If yes, removes them
+    // --------------------------------------------------------------------------------------
     if (preg_match('/^[\s]+/', $_POST['UAM_MailExclusion_List']))
     {
       array_push($page['errors'], l10n('UAM_mail_exclusionlist_error'));
@@ -136,6 +138,7 @@ switch ($page['tab'])
     }
 
     // Consistency check between ConfirmMail and AutoMail - We cannot use GTAutoMail if ConfirmMail is disabled
+    // ---------------------------------------------------------------------------------------------------------
     $conf_UAM = unserialize($conf['UserAdvManager']);
     $conf_UAM_ConfirmMail = unserialize($conf['UserAdvManager_ConfirmMail']);
     
@@ -147,6 +150,7 @@ switch ($page['tab'])
     }
 
     // Check if [Kdays] flag is used in a legal way (ConfirmMail Time out have to be set)
+    // ----------------------------------------------------------------------------------
     if (isset($conf_UAM_ConfirmMail[0]) and $conf_UAM_ConfirmMail[0] == 'false' and preg_match('#\[Kdays\]#i',$_POST['UAM_ConfirmMail_Text']) != 0)
     {
       $UAM_Illegal_Flag_Error1 = true;
@@ -154,6 +158,7 @@ switch ($page['tab'])
     }
 
     // Save global UAM configuration
+    // -----------------------------
 		$newconf_UAM = array(
       $_POST['UAM_Mail_Info'],
       $_POST['UAM_Confirm_Mail'],
@@ -200,7 +205,8 @@ switch ($page['tab'])
 
     conf_update_param('UserAdvManager', pwg_db_real_escape_string($conf['UserAdvManager']));
 
-    //Email confirmation settings
+    // Email confirmation settings
+    // --------------------------
     $_POST['UAM_ConfirmMail_ReMail_Txt1'] = str_replace('\"', '"', str_replace("\'", "'", str_replace("\\\\", "\\", $_POST['UAM_ConfirmMail_ReMail_Txt1'])));
 
     $_POST['UAM_ConfirmMail_ReMail_Txt2'] = str_replace('\"', '"', str_replace("\'", "'", str_replace("\\\\", "\\", $_POST['UAM_ConfirmMail_ReMail_Txt2'])));
@@ -210,6 +216,7 @@ switch ($page['tab'])
     $_POST['UAM_ConfirmMail_Custom_Txt2'] = str_replace('\"', '"', str_replace("\'", "'", str_replace("\\\\", "\\", $_POST['UAM_ConfirmMail_Custom_Txt2'])));
 
     // Check if [Kdays] flag is used in a legal way (ConfirmMail Time out have to be set)
+    // ----------------------------------------------------------------------------------
     if (isset($conf_UAM_ConfirmMail[0]) and $conf_UAM_ConfirmMail[0] == 'false' and preg_match('#\[Kdays\]#i',$_POST['UAM_ConfirmMail_ReMail_Txt1']) == 1)
     {
       $UAM_Illegal_Flag_Error2 = true;
@@ -222,6 +229,7 @@ switch ($page['tab'])
     }
 
     // Save ConfirmMail settings
+    // -------------------------
 	  $newconf_UAM_ConfirmMail = array (
       $_POST['UAM_ConfirmMail_TimeOut'],
       $_POST['UAM_ConfirmMail_Delay'],
@@ -239,6 +247,7 @@ switch ($page['tab'])
   }
 
   // Saving UAM tables and configuration settings
+  // --------------------------------------------
   if (isset($_POST['save']))
   {
     $dump_download = (isset($_POST['dump_download'])) ? 'true' : 'false';
@@ -253,7 +262,8 @@ switch ($page['tab'])
     }
   }
 
-  //Testing password enforcement
+  // Testing password enforcement
+  // ----------------------------
   if (isset($_POST['PasswordTest']) and isset($_POST['UAM_Password_Test']) and !empty($_POST['UAM_Password_Test']))
   {
     $UAM_Password_Test_Score = testpassword($_POST['UAM_Password_Test']);
@@ -265,13 +275,15 @@ switch ($page['tab'])
 
   $conf_UAM = unserialize($conf['UserAdvManager']);
 
-  //Group setting for unvalidated, validated users and downgrade group
+  // Group setting for unvalidated, validated users and downgrade group
+  // ------------------------------------------------------------------
   $groups[-1] = '---------';
   $No_Valid = -1;
   $Valid = -1;
   $Downgrade = -1;
 	
-  //Get groups list in database 
+  // Get groups list in database
+  // ---------------------------
   $query = '
 SELECT id, name
 FROM '.GROUPS_TABLE.'
@@ -300,7 +312,8 @@ ORDER BY name ASC
 		}
   }
 	
-  //Template initialization for unvalidated users group
+  // Template initialization for unvalidated users group
+  // ---------------------------------------------------
   $template->assign(
     'No_Confirm_Group',
    	array(
@@ -308,7 +321,9 @@ ORDER BY name ASC
 	  	'group_selected' => $No_Valid
 			)
  		);
-  //Template initialization for validated users group
+
+  // Template initialization for validated users group
+  // -------------------------------------------------
   $template->assign(
     'Validated_Group',
 		array(
@@ -316,7 +331,9 @@ ORDER BY name ASC
       'group_selected' => $Valid
 			)
   	);
-  //Template initialization for downgrade group
+
+  // Template initialization for downgrade group
+  // -------------------------------------------
   $template->assign(
     'Downgrade_Group',
 		array(
@@ -325,13 +342,15 @@ ORDER BY name ASC
 			)
   	);
 	
-  //Status setting for unvalidated, validated users and downgrade status
+  // Status setting for unvalidated, validated users and downgrade status
+  // --------------------------------------------------------------------
   $status_options[-1] = '------------';
   $No_Valid_Status = -1;
   $Valid_Status = -1;
   $Downgrade_Status = -1;
 	
-  //Get unvalidate status values
+  // Get unvalidate status values
+  // ----------------------------
   foreach (get_enums(USER_INFOS_TABLE, 'status') as $status)
   {
 	  $status_options[$status] = l10n('user_status_'.$status);
@@ -340,17 +359,19 @@ ORDER BY name ASC
 	    $No_Valid_Status = $status;
 	  }
 	  
-      //Template initialization for unvalidated users status
-      $template->assign(
-        'No_Confirm_Status',
-        array(
-					'Status_options' => $status_options,
-		  		'Status_selected' => $No_Valid_Status
-					)
-	  		);
+    // Template initialization for unvalidated users status
+    // ----------------------------------------------------
+    $template->assign(
+      'No_Confirm_Status',
+      array(
+        'Status_options' => $status_options,
+        'Status_selected' => $No_Valid_Status
+			)
+	  );
   }
   
-  //Get validate status values
+  // Get validate status values
+  // --------------------------
   foreach (get_enums(USER_INFOS_TABLE, 'status') as $status)
   {
 	  $status_options[$status] = l10n('user_status_'.$status);
@@ -359,17 +380,19 @@ ORDER BY name ASC
 		  $Valid_Status = $status;
 		}
 		
-      //Template initialization for validated users status
-      $template->assign(
-	    'Confirm_Status',
-	    array(
-		    'Status_options' => $status_options,
-		    'Status_selected' => $Valid_Status
-		    )
-	    );
+    // Template initialization for validated users status
+    // --------------------------------------------------
+    $template->assign(
+	  'Confirm_Status',
+	  array(
+		  'Status_options' => $status_options,
+		  'Status_selected' => $Valid_Status
+		  )
+	  );
 	}
 
-  //Get downgrade status values
+  // Get downgrade status values
+  // ---------------------------
   foreach (get_enums(USER_INFOS_TABLE, 'status') as $status)
   {
 	  $status_options[$status] = l10n('user_status_'.$status);
@@ -378,24 +401,27 @@ ORDER BY name ASC
 		  $Downgrade_Status = $status;
 		}
 		
-      //Template initialization for validated users status
-      $template->assign(
-	    'Downgrade_Status',
-	    array(
-		    'Status_options' => $status_options,
-		    'Status_selected' => $Downgrade_Status
-		    )
-	    );
+    // Template initialization for validated users status
+    // --------------------------------------------------
+    $template->assign(
+	  'Downgrade_Status',
+	  array(
+		  'Status_options' => $status_options,
+		  'Status_selected' => $Downgrade_Status
+		  )
+	  );
 	}
 
 
-  //Level setting for unvalidated, validated users and downgrade level
+  // Level setting for unvalidated, validated users and downgrade level
+  // ------------------------------------------------------------------
   $level_options[-1] = '------------';
   $No_Valid_Level = -1;
   $Valid_Level = -1;
   $Downgrade_Level = -1;
 
   // Get unvalidated privacy levels values
+  // -------------------------------------
   foreach ($conf['available_permission_levels'] as $level)
   {
     $level_options[$level] = l10n(sprintf('Level %d', $level));
@@ -403,17 +429,20 @@ ORDER BY name ASC
 	  {
 	    $No_Valid_Level = $level;
 	  }
-      //Template initialization for unvalidated users level
-      $template->assign(
-        'No_Valid_Level',
-        array(
-					'Level_options' => $level_options,
-		  		'Level_selected' => $No_Valid_Level
-					)
-	  		);
+
+    // Template initialization for unvalidated users level
+    // ---------------------------------------------------
+    $template->assign(
+      'No_Valid_Level',
+      array(
+        'Level_options' => $level_options,
+        'Level_selected' => $No_Valid_Level
+			)
+	  );
   }
 
   // Get validated privacy levels values
+  // -----------------------------------
   foreach ($conf['available_permission_levels'] as $level)
   {
     $level_options[$level] = l10n(sprintf('Level %d', $level));
@@ -421,17 +450,20 @@ ORDER BY name ASC
 	  {
 	    $Valid_Level = $level;
 	  }
-      //Template initialization for unvalidated users level
-      $template->assign(
-        'Valid_Level',
-        array(
-					'Level_options' => $level_options,
-		  		'Level_selected' => $Valid_Level
-					)
-	  		);
+
+    // Template initialization for unvalidated users level
+    // ---------------------------------------------------
+    $template->assign(
+      'Valid_Level',
+      array(
+        'Level_options' => $level_options,
+        'Level_selected' => $Valid_Level
+			)
+	  );
   }
 
   // Get downgrade privacy levels values
+  // -----------------------------------
   foreach ($conf['available_permission_levels'] as $level)
   {
     $level_options[$level] = l10n(sprintf('Level %d', $level));
@@ -439,24 +471,28 @@ ORDER BY name ASC
 	  {
 	    $Downgrade_Level = $level;
 	  }
-      //Template initialization for unvalidated users level
-      $template->assign(
-        'Downgrade_Level',
-        array(
-					'Level_options' => $level_options,
-		  		'Level_selected' => $Downgrade_Level
-					)
-	  		);
+
+    // Template initialization for unvalidated users level
+    // ---------------------------------------------------
+    $template->assign(
+      'Downgrade_Level',
+      array(
+        'Level_options' => $level_options,
+        'Level_selected' => $Downgrade_Level
+			)
+	  );
   }
 
-  //Save last opened paragraph in configuration tab
+  // Save last opened paragraph in configuration tab
+  // -----------------------------------------------
   $nb_para=(isset($_POST["nb_para"])) ? $_POST["nb_para"]:"";
   $nb_para2=(isset($_POST["nb_para2"])) ? $_POST["nb_para2"]:"";
 
   $conf_UAM_ConfirmMail = unserialize($conf['UserAdvManager_ConfirmMail']);
 
+  // ------------------------------------------
   // Template initialization for forms and data
-
+  // ------------------------------------------
   $themeconf=$template->get_template_vars('themeconf');
   $UAM_theme=$themeconf['id'];
 
@@ -547,7 +583,8 @@ ORDER BY name ASC
 	{
 		$msg_error1 = '';
 		
-    //Username without forbidden keys
+    // Username without forbidden keys
+    // -------------------------------
     if ( isset($conf_UAM[5]) and $conf_UAM[5] == 'true' )
 	  {
 			$query = "
@@ -560,13 +597,14 @@ SELECT ".$conf['user_fields']['username'].", ".$conf['user_fields']['email']."
 			while($row = pwg_db_fetch_assoc($result))
 			{
 				if (!ValidateUsername(stripslashes($row['username'])))
-					$msg_error1 .= (($msg_error1 <> '') ? '<br>' : '') . l10n('UAM_Err_audit_username_char').stripslashes($row['username']);
+					$msg_error1 .= (($msg_error1 <> '') ? '<br>' : '').l10n('UAM_Err_audit_username_char').stripslashes($row['username']);
 			}
 		}
 
 		$msg_error2 = '';
 		
-    //Email without forbidden domain
+    // Email without forbidden domain
+    // ------------------------------
     if ( isset($conf_UAM[10]) and $conf_UAM[10] == 'true' )
 	  {
 			$query = "
@@ -584,7 +622,7 @@ SELECT ".$conf['user_fields']['username'].", ".$conf['user_fields']['email']."
 					$pattern = '/'.$conf_MailExclusion[$i].'/';
 				  if (preg_match($pattern, $row['mail_address']))
 				  {
-						$msg_error2 .=  (($msg_error2 <> '') ? '<br>' : '') . l10n('UAM_Err_audit_email_forbidden').stripslashes($row['username']).' ('.$row['mail_address'].')';
+						$msg_error2 .=  (($msg_error2 <> '') ? '<br>' : '').l10n('UAM_Err_audit_email_forbidden').stripslashes($row['username']).' ('.$row['mail_address'].')';
 					}
 				}
 			}
@@ -671,6 +709,7 @@ SELECT ".$conf['user_fields']['username'].", ".$conf['user_fields']['email']."
 		foreach ($visible_user_list as $local_user)
     {
       // dates formating and compare
+      // ---------------------------
       $today = date("d-m-Y"); // Get today's date
       list($day, $month, $year) = explode('-', $today); // explode date of today						 
       $daytimestamp = mktime(0, 0, 0, $month, $day, $year);// Generate UNIX timestamp
@@ -701,6 +740,8 @@ SELECT ".$conf['user_fields']['username'].", ".$conf['user_fields']['email']."
       }
       else $display = '';
 
+      // Template initialization
+      // -----------------------
    		$template->append(
      		'users',
        	array(
@@ -713,7 +754,8 @@ SELECT ".$conf['user_fields']['username'].", ".$conf['user_fields']['email']."
 				)
 			);
 		}
-    //Plugin version inserted
+    // Plugin version inserted
+    // -----------------------
     $template->assign(
       array(
         'UAM_VERSION'  => $version,
@@ -1190,7 +1232,9 @@ WHERE user_id = '.$local_user['id'].'
       		? l10n('is_high_enabled') : l10n('is_high_disabled');
 
 			$expiration = expiration($local_user['id']);
-      
+
+      // Template initialization
+      // -----------------------
    		$template->append(
      		'users',
        	array(
@@ -1216,6 +1260,7 @@ WHERE user_id = '.$local_user['id'].'
 
     // Check if validation of register is made by admin or visitor 
     // If visitor, $Confirm_Local is used to mask useless buttons
+    // -----------------------------------------------------------
     $Confirm_Local = "";
     
     if ($conf_UAM[1] == 'local')
@@ -1227,7 +1272,8 @@ WHERE user_id = '.$local_user['id'].'
       $Confirm_Local = "";
     } 
     
-    //Plugin version inserted
+    // Plugin version inserted
+    // -----------------------
     $template->assign(
       array(
         'CONFIRM_LOCAL'=> $Confirm_Local,
@@ -1557,6 +1603,8 @@ VALUES ('".$row['id']."','".$dbnow."','false')
     		$checked = '';
     	}
 
+      // Template initialization
+      // -----------------------
       $template->append(
      	  'users',
        	array(
@@ -1570,7 +1618,8 @@ VALUES ('".$row['id']."','".$dbnow."','false')
 			);
 		}
 
-    //Plugin version inserted
+    // Plugin version inserted
+    // -----------------------
     $template->assign(
       array(
         'UAM_VERSION'  => $version,

@@ -4,12 +4,14 @@ if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
 
 if (!isset($datas)) $datas = '';
 
-// Enregistrement de la configuration
+// set configuration
+// -----------------
 if (isset($_POST['submit']) and !is_adviser()) {
   $datas = stripslashes($_POST['personal_content']);
 }
 
-// Parametrage du template
+// Template init
+// -------------
 $template->assign('cat_style', array());
 $template->assign(array('PERSONAL_CONTENT' => $datas));
 
