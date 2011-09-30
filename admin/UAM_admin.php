@@ -262,6 +262,30 @@ switch ($page['tab'])
     }
   }
 
+  // Restoring UAM tables and configuration settings
+  // -----------------------------------------------
+  if (isset($_POST['restore']))
+  {
+    $Backup_File = UAM_PATH.'/include/backup/UAM_dbbackup.sql';
+
+    if (file_exists($Backup_File))
+    {
+      $restore = UAM_Restore_backup_file();
+      if(empty($restore))
+      {
+        array_push($page['infos'], l10n('UAM_Restoration_OK'));
+      }
+      else
+      {
+        array_push($page['errors'], l10n('UAM_Restoration_NOK'));
+      }
+    }
+    else
+    {
+      array_push($page['errors'], l10n('UAM_No_Backup_File'));
+    }
+  }
+
   // Testing password enforcement
   // ----------------------------
   if (isset($_POST['PasswordTest']) and isset($_POST['UAM_Password_Test']) and !empty($_POST['UAM_Password_Test']))
