@@ -339,7 +339,7 @@ $lang['UAM_GTAutoGp'] = 'Changement automatique de groupe / statut / niveau de c
 $lang['UAM_Expired_Level'] = '<b>Niveau de confidentialité</b> pour les utilisateurs dont l\'inscription aura expirée<br>';
 $lang['UAM_MiscOptions'] = 'Autres options';
 $lang['UAM_Title3'] = 'Gestion des utilisateurs fantômes';
-$lang['UAM_Title5'] = 'Autres options diverses';
+$lang['UAM_Title5'] = 'Autres options';
 $lang['UAM_Password_Reset_Msg'] = 'Veuillez modifier votre mot de passe !';
 $lang['UAM_PwdReset'] = 'Renouvellement du mot de passe';
 $lang['UAM_Password reset selected users'] = 'Demander le renouvellement du mot de passe pour les utilisateurs sélectionnés';
@@ -353,5 +353,40 @@ $lang['UAM_PwdReset_Done'] = 'Mot de passe modifié';
 $lang['UAM_PwdReset_NA'] = 'Mot de passe original';
 $lang['UAM %d user pwdreseted'] = 'Renouvellement de mot de passe demandé pour %d utilisateur';
 $lang['UAM %d users pwdreseted'] = 'Renouvellement de mot de passe demandé pour %d utilisateurs';
+$lang['UAM_Error_Using_illegal_Kdays'] = 'L\'utilisation de la balise [Kdays] n\'est autorisée que si la limitation du délai de validation d\'inscription est active. Reportez vous au champ de texte en rouge pour corriger le problème.';
+$lang['UAM_Default_InfoMail_Txt'] = 'Bonjour [username] et merci de vous être inscrit sur la galerie [mygallery].
+
+Vous trouverez ci-dessous vos informations de connexion sur la galerie.';
+$lang['UAM_Default_ConfirmMail_Txt'] = 'Bonjour [username] et merci de vous être inscrit sur la galerie [mygallery].
+
+Pour terminer la procédure et pouvoir parcourir l\'ensemble des photos, merci de bien vouloir valider votre inscription en cliquant sur le lien dans ce message.';
+$lang['UAM_Default_GhstReminder_Txt'] = 'Bonjour [username].
+	
+Ceci est un message de rappel car cela fait longtemps que vous n\'êtes pas revenu visiter la galerie [mygallery]. Si vous ne souhaitez plus utiliser votre compte d\'accès, merci de bien vouloir nous le faire savoir en répondant à ce message. Votre compte sera alors immédiatement détruit.
+
+A la réception de ce présent message et sans nouvelle visite de votre part sous [days] jours, nous serions dans l\'obligation de supprimer automatiquement votre compte.
+
+Cordialement,
+
+L\'administrateur de la galerie [mygallery] - [myurl]';
+$lang['UAM_Default_GhstDeletion_Txt'] = 'Désolé [username], votre compte a été supprimé automatiquement pour cause de délai dépassé depuis votre dernière visite à [mygallery]. Veuillez vous réinscrire.';
+$lang['UAM_Default_GhstDemotion_Txt'] = 'Désolé [username], votre compte a été rétrogradé pour cause de dépassement de délai depuis votre dernière visite à [mygallery]. Veuillez revalider votre inscription en cliquant sur le lien suivant :';
+$lang['UAM_Default_AdminValidation_Txt'] = 'Bonjour [username] et merci de vous être inscrit sur la galerie [mygallery].
+
+Votre inscription a été validée manuellement par l\'administrateur de [mygallery]. Vous pouvez maintenant vous connecter à [myurl] et modifier vos informations de profil.';
+$lang['UAM_Default_PwdRequest_Txt'] = 'Vous avez demandé le renouvellement de votre mot de passe. Veuillez trouver ci-dessous vos nouvelles informations de connexion.';
+$lang['UAM_Default_ValidationTimeout_Txt'] = 'Désolé, votre accès a été supprimé car vous n\'avez pas validé votre inscription dans le temps imparti ([Kdays] jours). Merci de vous réinscrire en prenant garde d\'utiliser une adresse de messagerie valide et accessible.';
+$lang['UAM_Default_CfmMail_Remail_Txt1'] = 'Bonjour [username].
+		
+Ceci est un message de rappel car vous n\'avez pas validé votre inscription sur [mygallery] et votre clé de validation a expiré. Pour vous permettre d\'accéder à notre galerie, votre période de validation a été réinitialisée. Vous avez donc un nouveau délai de x jours pour valider votre inscription.
+
+Note: A l\'issue de cette période sans validation, votre compte sera définitivement supprimé.';
+$lang['UAM_Default_CfmMail_Remail_Txt2'] = 'Bonjour [username].
+
+Ceci est un message de rappel car vous vous êtes inscrit sur notre galerie [mygallery] mais vous n\'avez pas encore validé cette inscription et le délai va bientôt expirer. Un délai supplémentaire de x jours vous est accordé. Veuillez cliquer sur le lien de confirmation que vous avez reçu lors de votre inscription.
+
+Note: A l\'issue de cette période sans validation, votre compte sera définitivement supprimé.';
+$lang['UAM_Default_CfmMail_Custom_Txt1'] = 'Bienvenue [username]! Vous avez confirmé que vous étiez bien un humain et non une machine. Vous pouvez maintenant profiter pleinement de [mygallery]!';
+$lang['UAM_Default_CfmMail_Custom_Txt2'] = 'Votre clé d\'activation est incorrecte ou expirée ou vous avez déjà validé votre inscription. Merci de contacter le webmestre de la galerie pour résoudre le problème.';
 // --------- End: New or revised $lang ---- from version 2.30.0
 ?>

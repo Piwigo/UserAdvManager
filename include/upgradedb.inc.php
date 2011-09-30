@@ -28,10 +28,12 @@ include_once (UAM_PATH.'include/functions.inc.php');
 function UAM_version_update()
 {  
   // Get current plugin version
+  // --------------------------
   $plugin =  PluginInfos(UAM_PATH);
   $version = $plugin['version'];
 
   // Update plugin version in #_config table
+  // ---------------------------------------
   $query = '
 UPDATE '.CONFIG_TABLE.'
 SET value="'.$version.'"
@@ -44,6 +46,7 @@ LIMIT 1
 
 // Check #_plugin table consistency
 // Only useful if a previous version upgrade has not worked correctly (rare case)
+// ------------------------------------------------------------------------------
   $query = '
 SELECT version
   FROM '.PLUGINS_TABLE.'
@@ -132,6 +135,7 @@ PRIMARY KEY (`user_id`)
 function upgrade_212_213()
 {
   // Create missing table
+  // --------------------
   $query = "
 ALTER TABLE ".USER_CONFIRM_MAIL_TABLE."
 ADD reminder ENUM('true', 'false') NULL DEFAULT NULL
@@ -140,6 +144,7 @@ ADD reminder ENUM('true', 'false') NULL DEFAULT NULL
   pwg_query($query);
 
   // Upgrade plugin configuration
+  // ----------------------------
 	global $conf;
 
   $conf_UAM = isset($conf['nbc_UserAdvManager']) ? explode(";" , $conf['nbc_UserAdvManager']) : array();
@@ -190,6 +195,7 @@ function upgrade_214_215()
   global $conf;
 
   // Changing parameter name
+  // -----------------------
   $q = '
 UPDATE '.CONFIG_TABLE.'
 SET param = "UserAdvManager"
@@ -205,6 +211,7 @@ WHERE param = "nbc_UserAdvManager_ConfirmMail"
   pwg_query($q);
 
   // Upgrading ConfirmMail options
+  // -----------------------------
   $query = '
 SELECT value
   FROM '.CONFIG_TABLE.'
@@ -234,6 +241,7 @@ function upgrade_2153_2154()
   global $conf;
 
   // Upgrading options
+  // -----------------
   $query = '
 SELECT value
   FROM '.CONFIG_TABLE.'
@@ -288,6 +296,7 @@ function upgrade_215_2160()
   global $conf;
 
   // Upgrading options
+  // -----------------
   $query = '
 SELECT value
   FROM '.CONFIG_TABLE.'
@@ -312,6 +321,7 @@ WHERE param = "UserAdvManager"
   conf_update_param('UserAdvManager', pwg_db_real_escape_string($update_conf));
 
   // Insert a new config entry for futur plugin's version check
+  // ----------------------------------------------------------
   $query = '
 INSERT INTO '.CONFIG_TABLE.' (param, value, comment)
 VALUES ("UserAdvManager_Version","2.16.0","UAM version check")
@@ -328,6 +338,7 @@ function upgrade_216_220()
   global $conf;
 
   // Upgrading options
+  // -----------------
   $query = '
 SELECT value
   FROM '.CONFIG_TABLE.'
@@ -351,6 +362,7 @@ WHERE param = "UserAdvManager"
   conf_update_param('UserAdvManager', pwg_db_real_escape_string($update_conf));
 
   // Create new UAM entry in plugins table
+  // -------------------------------------
   $uam_new_version = "2.20.0";
 
   $query = '
@@ -360,7 +372,8 @@ VALUES ("UserAdvManager","active","'.$uam_new_version.'")
   
   pwg_query($query);
 
-  // Delete old plugin entry in plugins table 
+  // Delete old plugin entry in plugins table
+  // ----------------------------------------
   $query = '
 DELETE FROM '.PLUGINS_TABLE.'
 WHERE id="NBC_UserAdvManager"
@@ -369,7 +382,8 @@ LIMIT 1
   
   pwg_query($query);
 
-  // rename directory
+  // Rename directory
+  // ----------------
   if (!rename(PHPWG_PLUGINS_PATH.'NBC_UserAdvManager', PHPWG_PLUGINS_PATH.'UserAdvManager'))
   {
     die('Fatal error on plugin upgrade process : Unable to rename directory ! Please, rename manualy the plugin directory name from ../plugins/NBC_UserAdvManager to ../plugins/UserAdvManager.');
@@ -383,6 +397,7 @@ function upgrade_2203_2204()
   global $conf;
 
   // Upgrading options
+  // -----------------
   $query = '
 SELECT value
   FROM '.CONFIG_TABLE.'
@@ -408,6 +423,7 @@ function upgrade_2204_2207()
   global $conf;
 
   // Upgrading options
+  // -----------------
   $query = '
 SELECT value
   FROM '.CONFIG_TABLE.'
@@ -434,6 +450,7 @@ function upgrade_2207_2208()
   global $conf;
 
   // Upgrading options
+  // -----------------
   $query = '
 SELECT value
   FROM '.CONFIG_TABLE.'
@@ -446,6 +463,7 @@ WHERE param = "UserAdvManager"
   $Newconf_UAM = unserialize($conf_UAM['value']);
 
   // Refactoring all configuration options
+  // -------------------------------------
   $Newconf_UAM[0] = $Newconf_UAM[0];
   $Newconf_UAM[1] = $Newconf_UAM[1];
   $Newconf_UAM[2] = $Newconf_UAM[2];
@@ -483,6 +501,7 @@ WHERE param = "UserAdvManager"
   $Newconf_UAM[34] = $Newconf_UAM[35];
   
   // unset obsolete conf
+  // -------------------
   unset ($Newconf_UAM[35]);
   unset ($Newconf_UAM[36]);
   unset ($Newconf_UAM[37]);
@@ -500,6 +519,7 @@ function upgrade_2208_2300()
   global $conf;
 
   // Upgrading options
+  // -----------------
   $query = '
 SELECT value
   FROM '.CONFIG_TABLE.'
@@ -521,6 +541,7 @@ WHERE param = "UserAdvManager"
   conf_update_param('UserAdvManager', pwg_db_real_escape_string($update_conf));
 
   // Piwigo's native tables modifications for password reset function - Add pwdreset column
+  // --------------------------------------------------------------------------------------
   $query = '
 SHOW COLUMNS FROM '.USERS_TABLE.'
 LIKE "UAM_pwdreset"

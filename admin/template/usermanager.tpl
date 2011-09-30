@@ -116,7 +116,7 @@ $(document).ready(function()
 jQuery(document).ready(function() {ldelim}
   jQuery('#theAdminPage #the_page').addClass('{$themeconf.name}');
 	jQuery(".infos").fadeOut(800).fadeIn(1200).fadeOut(400).fadeIn(800).fadeOut(400);
-	jQuery(".errors").fadeOut(200).fadeIn(200).fadeOut(300).fadeIn(300).fadeOut(400).fadeIn(400); 
+	//jQuery(".errors").fadeOut(200).fadeIn(200).fadeOut(300).fadeIn(300).fadeOut(400).fadeIn(400); 
 });
 </script>
 {/html_head}
