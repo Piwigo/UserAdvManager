@@ -2839,7 +2839,7 @@ function UAM_dump($download)
         $insertions .= 'INSERT INTO '.$ListTables[$j].' VALUES (';
         for ($i=0; $i<$nb_fields; $i++)
         {
-          $insertions .= '\'' . mysql_real_escape_string($line[$i]) . '\', ';
+          $insertions .= '\'' . pwg_db_real_escape_string($line[$i]) . '\', ';
         }
         $insertions = substr($insertions, 0, -2);
         $insertions .= ");\n";
@@ -2868,7 +2868,7 @@ function UAM_dump($download)
     $insertions = 'INSERT INTO '.CONFIG_TABLE.' VALUES (';
     for ($i=0; $i<$nb_fields; $i++)
     {
-      $insertions .= '\'' . mysql_real_escape_string($line[$i]) . '\', ';
+      $insertions .= '\'' . pwg_db_real_escape_string($line[$i]) . '\', ';
     }
     $insertions = substr($insertions, 0, -2);
     $insertions .= ");\n";
@@ -2903,6 +2903,112 @@ function UAM_dump($download)
 
   return true;
 }
+
+
+/**
+ * UAM_Restore_backup_file
+ * Restore backup database file
+ * 
+ * @returns : Boolean
+ */
+function UAM_Restore_backup_file() 
+{
+  global $prefixeTable, $dblayer, $conf;
+  
+  define('DEFAULT_PREFIX_TABLE', 'piwigo_');
+  
+  $Backup_File = UAM_PATH.'/include/backup/UAM_dbbackup.sql';
+
+  // Cleanup database before restoring
+  // ---------------------------------
+
+  // Delete UserAdvManager global config in #_config table
+  $q = '
+DELETE FROM '.CONFIG_TABLE.'
+WHERE param="UserAdvManager"
+;';
+
+  pwg_query($q);
+
+  // Delete UserAdvManager_ConfirmMail global config in #_config table
+  $q = '
+DELETE FROM '.CONFIG_TABLE.'
+WHERE param="UserAdvManager_ConfirmMail"
+;';
+
+  pwg_query($q);
+
+  // Delete UserAdvManager_Redir config in #_config table
+  $q = '
+DELETE FROM '.CONFIG_TABLE.'
+WHERE param="UserAdvManager_Redir"
+;';
+
+  pwg_query($q);
+
+  // Delete UserAdvManager_Version config in #_config table
+  $q = '
+DELETE FROM '.CONFIG_TABLE.'
+WHERE param="UserAdvManager_Version"
+;';
+
+  pwg_query($q);
+
+  // Restore sql backup file - DROP TABLE queries are executed
+  // ---------------------------------------------------------
+  UAM_execute_sqlfile(
+    $Backup_File,
+    DEFAULT_PREFIX_TABLE,
+    $prefixeTable,
+    $dblayer
+  );
+}
+
+
+/**
+ * loads an sql file and executes all queries / Based on Piwigo's original install file
+ *
+ * Before executing a query, $replaced is... replaced by $replacing. This is
+ * useful when the SQL file contains generic words.
+ *
+ * @param string filepath
+ * @param string replaced
+ * @param string replacing
+ * @return void
+ */
+function UAM_execute_sqlfile($filepath, $replaced, $replacing, $dblayer)
+{
+  $sql_lines = file($filepath);
+  $query = '';
+  foreach ($sql_lines as $sql_line)
+  {
+    $sql_line = trim($sql_line);
+    if (preg_match('/(^--|^$)/', $sql_line))
+    {
+      continue;
+    }
+    
+    $query.= ' '.$sql_line;
+    
+    // if we reached the end of query, we execute it and reinitialize the
+    // variable "query"
+    if (preg_match('/;$/', $sql_line))
+    {
+      $query = trim($query);
+      $query = str_replace($replaced, $replacing, $query);
+      if ('mysql' == $dblayer)
+      {
+        if (preg_match('/^(CREATE TABLE .*)[\s]*;[\s]*/im', $query, $matches))
+        {
+          $query = $matches[1].' DEFAULT CHARACTER SET utf8'.';';
+        }
+      }
+      pwg_query($query);
+      $query = '';
+    }
+  }
+}
+
 
 
 /**
