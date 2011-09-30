@@ -260,7 +260,7 @@ Plugin Name: UserAdvManager
 
 -- 2.20.11 : Bug 2336 fixed - New feature : Add [Kdays] autotext flag to insert the number of days until expiration.
 
--- 2.30.0RC1 :
+-- 2.30.0 :
             Piwigo 2.3.0 compliant
             Bug 2415 fixed - New feature : Set automatically privacy level for users who have validated or not their registration. Automated task available.
             Bug 2437 fixed - New feature : Request password renewal for selected users in Piwigo's users management panel.
