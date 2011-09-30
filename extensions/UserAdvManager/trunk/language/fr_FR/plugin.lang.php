@@ -312,7 +312,6 @@ $lang['UAM_Stuffs'] = 'Module PWG Stuffs';
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.20.3
-$lang['UAM_DumpTxt'] = 'Sauvegarde de votre configuration';
 $lang['UAM_Dump_Download'] = 'Pour télécharger le fichier de sauvegarde, cochez cette case:';
 $lang['UAM_Save'] = 'Exécuter la sauvegarde';
 $lang['UAM_Dump_OK'] = 'Fichier de sauvegarde créé avec succès';
@@ -388,5 +387,11 @@ Ceci est un message de rappel car vous vous êtes inscrit sur notre galerie [myg
 Note: A l\'issue de cette période sans validation, votre compte sera définitivement supprimé.';
 $lang['UAM_Default_CfmMail_Custom_Txt1'] = 'Bienvenue [username]! Vous avez confirmé que vous étiez bien un humain et non une machine. Vous pouvez maintenant profiter pleinement de [mygallery]!';
 $lang['UAM_Default_CfmMail_Custom_Txt2'] = 'Votre clé d\'activation est incorrecte ou expirée ou vous avez déjà validé votre inscription. Merci de contacter le webmestre de la galerie pour résoudre le problème.';
+$lang['UAM_DumpTxt'] = 'Sauvegarde et restauration de votre configuration';
+$lang['UAM_Restore'] = 'Pour restaurer le fichier de sauvegarde de votre configuration. Attention ! Seul le fichier sauvegardé sur le serveur est pris en compte.';
+$lang['UAM_Restore_File'] = 'Restauration de la configuration';
+$lang['UAM_No_Backup_File'] = 'Pas de fichier de sauvegarde présent !';
+$lang['UAM_Restoration_NOK'] = 'Une erreur est survenue lors de la restauration de la configuration. Veuillez vérifier la validité de votre fichier de sauvegarde.';
+$lang['UAM_Restoration_OK'] = 'La restauration de votre configuration s\'est terminée avec succès ! Veuillez recharger la page d\'administration de UAM pour voir les paramètres restaurés.';
 // --------- End: New or revised $lang ---- from version 2.30.0
 ?>

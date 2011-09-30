@@ -166,18 +166,6 @@ Please refer to the <b>Tips and Examples of Use</b> at the bottom of this page f
 // --------- End: New or revised $lang ---- from version 2.20.0
 
 
-// --------- Starting below: New or revised $lang ---- from version 2.20.3
-$lang['UAM_DumpTitle'] = 'Backup your configuration';
-$lang['UAM_DumpTitle_d'] = 'This allows you to save the entire configuration of the plugin in a file so you can restore it if something goes wrong (wrong manipulation or before an update, for example). By default, the file is stored in this folder ../plugins/UserAdvManager/include/backup/ and is called &quot;UAM_dbbackup.sql&quot;.
-<br><br>
-<b style=&quot;color: red;&quot;>Warning: The file is overwritten each backup action!</b>
-<br><br>
-It can sometimes be useful to retrieve the backup file on your computer. For example: To restore to another database, to outsource or to keep multiple save files. To do this, just check the box to download the file.
-<br><br>
-The recovery from this interface is not supported. Use tools like phpMyAdmin.';
-// --------- End: New or revised $lang ---- from version 2.20.3
-
-
 // --------- Starting below: New or revised $lang ---- from version 2.20.4
 $lang['UAM_HidePasswTitle'] = 'Password in clear text in the information email';
 $lang['UAM_HidePasswTitle_d'] = 'Choose here if you want to display the password chosen by the visitor in the information email. If you enable the option, the password will then appear in clear text. If you disable the password will not appear at all.';
@@ -343,5 +331,15 @@ $lang['UAM_PwdResetTitle_d'] = 'Enabling this option will add a new feature in t
 - Original Password: The original password chosen at account creation and has never been required for a renewal.<br>
 The webmaster, administrators and guest accounts are excluded from this function.<br>
 These users will be automatically redirected to their customization page at each of their connections until they changed their password and an explicit message will be displayed on this page.';
+$lang['UAM_DumpTitle'] = 'Backup and restore your configuration';
+$lang['UAM_DumpTitle_d'] = 'This allows you to save the entire configuration of the plugin in a file so you can restore it if something goes wrong (wrong manipulation or before an update, for example). By default, the file is stored in this folder ../plugins/UserAdvManager/include/backup/ and is called &quot;UAM_dbbackup.sql&quot;.
+<br><br>
+<b style=&quot;color: red;&quot;>Warning: The file is overwritten each backup action!</b>
+<br><br>
+It can sometimes be useful to retrieve the backup file on your computer. For example: To restore to another database, to outsource or to keep multiple save files. To do this, just check the box to download the file.
+<br><br>
+The recovery from this interface is available only for the local backup file (../plugins/UserAdvManager/include/backup/UAM_dbbackup.sql). Downloaded backup file can\'t be restored by this way. To do this, please use your dedicated database management tool (like PhpMyAdmin for MySql database).
+<br><br>
+<b style=&quot;color: red;&quot;>Warning: After the restore, it is necessary to reload the administration page of the plugin to see the restored settings!</b>';
 // --------- End: New or revised $lang ---- from version 2.30.0
 ?>

@@ -804,6 +804,14 @@ function uam_blockToggleDisplay( headerId, contentId )
   </p>
 </form>
 </fieldset>
+<fieldset>
+<form method="post" action="" class="general">
+  <p>
+    {'UAM_Restore'|@translate}<br><br>
+      <input class="submit" type="submit" value="{'UAM_Restore_File'|@translate}" name="restore" {$TAG_INPUT_ENABLED}>
+  </p>
+</form>
+</fieldset>
   </div>
 
 </div>
