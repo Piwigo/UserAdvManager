@@ -313,7 +313,6 @@ $lang['UAM_Stuffs'] = 'PWG Stuffs block';
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.20.3
-$lang['UAM_DumpTxt'] = 'Backup your configuration';
 $lang['UAM_Dump_Download'] = 'To download the backup file, please check this box:';
 $lang['UAM_Save'] = 'Run backup';
 $lang['UAM_Dump_OK'] = 'Backup file created successfully';
@@ -391,5 +390,9 @@ This is a reminder message because you registered on our gallery [mygallery] but
 Note: After this period, your account will be permanently deleted.';
 $lang['UAM_Default_CfmMail_Custom_Txt1'] = 'Welcome [username]! You have confirmed that you are human and may now use [mygallery]!';
 $lang['UAM_Default_CfmMail_Custom_Txt2'] = 'Your activation key is incorrect or expired or you have already validated your account, please contact the webmaster to fix this problem.';
+$lang['UAM_DumpTxt'] = 'Backup and restore your configuration';
+$lang['UAM_No_Backup_File'] = 'No backup file available!';
+$lang['UAM_Restoration_NOK'] = 'An error occurred while restoring the configuration. Please check the validity of your backup file.';
+$lang['UAM_Restoration_OK'] = 'Restoring your configuration completed successfully! Please reload UAM\'s administration page to view the restored settings.';
 // --------- End: New or revised $lang ---- from version 2.30.0
 ?>

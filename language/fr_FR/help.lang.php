@@ -162,18 +162,6 @@ Veuillez vous reporter à la section <b>Astuces et exemples d\'utilisation</b> e
 // --------- End: New or revised $lang ---- from version 2.20.0
 
 
-// --------- Starting below: New or revised $lang ---- from version 2.20.3
-$lang['UAM_DumpTitle'] = 'Sauvegarde de votre configuration';
-$lang['UAM_DumpTitle_d'] = 'Ceci vous permet de sauvegarder la configuration complète du plugin dans un fichier afin de pouvoir la restaurer en cas de problème (fausse manipulation ou avant une mise à jour, par exemple). Par défaut, le fichier est stocké dans le dossier ../plugins/UserAdvManager/include/backup/ et se nomme &quot;UAM_dbbackup.sql&quot;.
-<br><br>
-<b style=&quot;color: red;&quot;>Attention : Le fichier est écrasé à chaque action de sauvegarde !</b>
-<br><br>
-Il peut être parfois utile de récupérer le fichier de sauvegarde sur votre ordinateur. Par exemple : Pour une restauration sur une autre base de données, pour externaliser la sauvegarder ou pour conserver plusieurs fichiers. Pour cela, il suffit de cocher la case correspondante au téléchargement du fichier.
-<br><br>
-La restauration à partir de cette interface n\'est pas prise en charge. Utilisez des outils comme PhpMyAdmin.';
-// --------- End: New or revised $lang ---- from version 2.20.3
-
-
 // --------- Starting below: New or revised $lang ---- from version 2.20.4
 $lang['UAM_HidePasswTitle'] = 'Mot de passe en clair dans le mail d\'information';
 $lang['UAM_HidePasswTitle_d'] = 'Choisissez ici si vous souhaitez faire afficher le mot de passe choisi par le visiteur dans le mail d\'information. Si vous activez l\'option, le mot de passe apparaitra alors en clair. Si vous la désactivez, le mot de passe n\'apparaitra pas du tout.';
@@ -339,5 +327,15 @@ $lang['UAM_PwdResetTitle_d'] = 'L\'activation de cette option ajoutera une nouve
 - Mot de passe original : Le mot de passe est celui choisi à la création du compte et n\'a jamais fait l\'objet d\'une demande de changement.<br>
 Le compte du webmaster, des administrateurs et de l\'invité (Guest) sont exclus de cette fonction.<br><br>
 Ces utilisateurs seront alors systématiquement redirigés vers leur page de personnalisation à chacune de leurs connexions tant qu\'ils n\'auront pas modifié leur mot de passe. Un message explicite sera affiché sur cette page.';
+$lang['UAM_DumpTitle'] = 'Sauvegarde et restauration de votre configuration';
+$lang['UAM_DumpTitle_d'] = 'Ceci vous permet de sauvegarder la configuration complète du plugin dans un fichier afin de pouvoir la restaurer en cas de problème (fausse manipulation ou avant une mise à jour, par exemple). Par défaut, le fichier est stocké dans le dossier ../plugins/UserAdvManager/include/backup/ et se nomme &quot;UAM_dbbackup.sql&quot;.
+<br><br>
+<b style=&quot;color: red;&quot;>Attention : Le fichier est écrasé à chaque action de sauvegarde !</b>
+<br><br>
+Il peut être parfois utile de récupérer le fichier de sauvegarde sur votre ordinateur. Par exemple : Pour une restauration sur une autre base de données, pour externaliser la sauvegarder ou pour conserver plusieurs fichiers. Pour cela, il suffit de cocher la case correspondante au téléchargement du fichier.
+<br><br>
+La restauration à partir de cette interface ne prend en charge que la sauvegarde effectuée localement (../plugins/UserAdvManager/include/backup/UAM_dbbackup.sql). Il n\'est pas possible, ici, de réinjecter un fichier de sauvegarde téléchargé. Pour cela, veuillez utiliser l\'outil de gestion de votre base de données (pour MySql, on trouvera généralement PhpMyAdmin).
+<br><br>
+<b style=&quot;color: red;&quot;>Attention : Après la restauration, il est nécessaire de recharger la page d\'administration du plugin pour voir les paramètres restaurés !</b>';
 // --------- End: New or revised $lang ---- from version 2.30.0
 ?>
