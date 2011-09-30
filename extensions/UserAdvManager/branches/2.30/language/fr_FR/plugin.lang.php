@@ -388,7 +388,9 @@ Note: A l\'issue de cette période sans validation, votre compte sera définitiv
 $lang['UAM_Default_CfmMail_Custom_Txt1'] = 'Bienvenue [username]! Vous avez confirmé que vous étiez bien un humain et non une machine. Vous pouvez maintenant profiter pleinement de [mygallery]!';
 $lang['UAM_Default_CfmMail_Custom_Txt2'] = 'Votre clé d\'activation est incorrecte ou expirée ou vous avez déjà validé votre inscription. Merci de contacter le webmestre de la galerie pour résoudre le problème.';
 $lang['UAM_DumpTxt'] = 'Sauvegarde et restauration de votre configuration';
-$lang['UAM_Restore'] = 'Pour restaurer le fichier de sauvegarde de votre configuration. Attention ! Seul le fichier sauvegardé sur le serveur est pris en compte.';
+$lang['UAM_Restore'] = 'Pour restaurer le fichier de sauvegarde de votre configuration. Seul le fichier sauvegardé sur le serveur est pris en compte.
+<br><br>
+<b style="color: red;">Attention à la version de la sauvegarde !<br>Une sauvegarde réalisée depuis une version du plugin ne pourra être restaurée que sur une version identique.</b>';
 $lang['UAM_Restore_File'] = 'Restauration de la configuration';
 $lang['UAM_No_Backup_File'] = 'Pas de fichier de sauvegarde présent !';
 $lang['UAM_Restoration_NOK'] = 'Une erreur est survenue lors de la restauration de la configuration. Veuillez vérifier la validité de votre fichier de sauvegarde.';

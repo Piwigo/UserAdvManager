@@ -391,6 +391,10 @@ Note: After this period, your account will be permanently deleted.';
 $lang['UAM_Default_CfmMail_Custom_Txt1'] = 'Welcome [username]! You have confirmed that you are human and may now use [mygallery]!';
 $lang['UAM_Default_CfmMail_Custom_Txt2'] = 'Your activation key is incorrect or expired or you have already validated your account, please contact the webmaster to fix this problem.';
 $lang['UAM_DumpTxt'] = 'Backup and restore your configuration';
+$lang['UAM_Restore'] = 'To restore the backup file of your configuration. Only the saved file on the server is taken into account.
+<br><br>
+<b style="color: red;">Beware of the backup version!<br>A backup made from one version of the plugin can only be restored on the same version.</b>';
+$lang['UAM_Restore_File'] = 'Restore Configuration';
 $lang['UAM_No_Backup_File'] = 'No backup file available!';
 $lang['UAM_Restoration_NOK'] = 'An error occurred while restoring the configuration. Please check the validity of your backup file.';
 $lang['UAM_Restoration_OK'] = 'Restoring your configuration completed successfully! Please reload UAM\'s administration page to view the restored settings.';
