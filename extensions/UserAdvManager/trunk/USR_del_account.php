@@ -23,6 +23,7 @@ $conf_UAM = unserialize($conf['UserAdvManager']);
 if (isset($conf_UAM[31]) and $conf_UAM[31] <> '')
 {
   // Management of Extension flags ([mygallery], [myurl]) - [username] flag can't be used here
+  // -----------------------------------------------------------------------------------------
   $patterns[] = '#\[mygallery\]#i';
   $replacements[] = $conf['gallery_title'];
   $patterns[] = '#\[myurl\]#i';

@@ -326,7 +326,7 @@ $lang['UAM_GT_MainTitle_d'] = '
 - Mailing<br>
 ...
 ';
-$lang['UAM_miscTitle'] = 'Autres options diverses';
+$lang['UAM_miscTitle'] = 'Autres options';
 $lang['UAM_miscTitle_d'] = '
 - Suivi des visiteurs inscrits<br>
 - Pseudo obligatoire sur commentaire pour les visiteurs<br>
