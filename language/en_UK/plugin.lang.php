@@ -75,7 +75,6 @@ $lang['UAM_No_reminder_for_Webmaster'] = 'The "Webmaster" account is not subject
 $lang['UAM_No_reminder_for_your_account'] = 'You personnal admin account is not subject to receive reminders from GhostTracker';
 /* Action button names */
 $lang['UAM_audit'] = 'Audit settings';
-$lang['UAM_submit'] = 'Save settings';
 // --------- End: New or revised $lang ---- from version 2.12.0 and 2.12.1
 
 
@@ -399,4 +398,12 @@ $lang['UAM_No_Backup_File'] = 'No backup file available!';
 $lang['UAM_Restoration_NOK'] = 'An error occurred while restoring the configuration. Please check the validity of your backup file.';
 $lang['UAM_Restoration_OK'] = 'Restoring your configuration completed successfully! Please reload UAM\'s administration page to view the restored settings.';
 // --------- End: New or revised $lang ---- from version 2.30.0
+
+
+// --------- Starting below: New or revised $lang ---- from version 2.30.1
+$lang['UAM_submit'] = 'Submit settings';
+$lang['UAM_Generic cannot be pwdreset'] = 'Password renewal can\'t be set for generic accounts!';
+$lang['UAM_Admins cannot be pwdreset'] = 'Password renewal can\'t be set for admins account!';
+$lang['UAM_Bad_version_backup'] = 'The version of the backup file does not match the version of the plugin! The restoration was not performed.';
+// --------- End: New or revised $lang ---- from version 2.30.1
 ?>
