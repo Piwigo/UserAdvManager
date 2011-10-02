@@ -268,17 +268,23 @@ switch ($page['tab'])
   {
     $Backup_File = UAM_PATH.'/include/backup/UAM_dbbackup.sql';
 
-    if (file_exists($Backup_File))
+    if (file_exists($Backup_File) and $file = file($Backup_File, FILE_IGNORE_NEW_LINES) and !empty($file))
     {
-      $restore = UAM_Restore_backup_file();
-      if(empty($restore))
+      // Check backup file version
+      // -------------------------
+      if ($file[0] == "-- ".$version." --")
       {
-        array_push($page['infos'], l10n('UAM_Restoration_OK'));
+        $restore = UAM_Restore_backup_file();
+        if(empty($restore))
+        {
+          array_push($page['infos'], l10n('UAM_Restoration_OK'));
+        }
+        else
+        {
+          array_push($page['errors'], l10n('UAM_Restoration_NOK'));
+        }
       }
-      else
-      {
-        array_push($page['errors'], l10n('UAM_Restoration_NOK'));
-      }
+      else array_push($page['errors'], l10n('UAM_Bad_version_backup'));
     }
     else
     {

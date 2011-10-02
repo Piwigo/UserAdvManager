@@ -329,7 +329,7 @@ $lang['UAM_PwdResetTitle_d'] = 'Enabling this option will add a new feature in t
 - Password to be renewed: A password renewal request has been planned.<br>
 - Password renewed: The password has been renewed after a request.<br>
 - Original Password: The original password chosen at account creation and has never been required for a renewal.<br>
-The webmaster, administrators and guest accounts are excluded from this function.<br>
+Webmaster, generic and guest accounts are excluded from this function.<br>
 These users will be automatically redirected to their customization page at each of their connections until they changed their password and an explicit message will be displayed on this page.';
 $lang['UAM_DumpTitle'] = 'Backup and restore your configuration';
 $lang['UAM_DumpTitle_d'] = 'This allows you to save the entire configuration of the plugin in a file so you can restore it if something goes wrong (wrong manipulation or before an update, for example). By default, the file is stored in this folder ../plugins/UserAdvManager/include/backup/ and is called &quot;UAM_dbbackup.sql&quot;.

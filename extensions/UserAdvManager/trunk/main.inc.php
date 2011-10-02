@@ -130,27 +130,71 @@ if ((isset($conf_UAM[38]) and $conf_UAM[38] == 'true'))
       if (in_array($conf['guest_id'], $collection))
       {
         array_push($page['errors'], l10n('UAM_Guest cannot be pwdreset'));
-        $template->append('errors', l10n('UAM_Guest cannot be pwdreset'));
+        $errors = l10n('UAM_Guest cannot be pwdreset');
       }
       if (($conf['guest_id'] != $conf['default_user_id']) and
         in_array($conf['default_user_id'], $collection))
       {
         array_push($page['errors'], l10n('UAM_Default user cannot be pwgreset'));
-        $template->append('errors', l10n('UAM_Default user cannot be pwgreset'));
+        $errors = l10n('UAM_Default user cannot be pwgreset');
       }
       if (in_array($conf['webmaster_id'], $collection))
       {
         array_push($page['errors'], l10n('UAM_Webmaster cannot be pwdreset'));
-        $template->append('errors', l10n('UAM_Webmaster cannot be pwdreset'));
+        $errors = l10n('UAM_Webmaster cannot be pwdreset');
       }
       if (in_array($user['id'], $collection))
       {
         array_push($page['errors'], l10n('UAM_You cannot pwdreset your account'));
-        $template->append('errors', l10n('UAM_You cannot pwdreset your account'));
+        $errors = l10n('UAM_You cannot pwdreset your account');
       }
 
+      // Generic accounts exclusion (including Adult_Content generic users)
+      // ------------------------------------------------------------------
+      $query ='
+SELECT u.id
+FROM '.USERS_TABLE.' AS u
+INNER JOIN '.USER_INFOS_TABLE.' AS ui
+  ON u.id = ui.user_id
+WHERE ui.status = "generic"
+;';
+
+	    $result = pwg_query($query);
+
+      while ($row = pwg_db_fetch_assoc($result))
+      {
+        if (in_array($row['id'], $collection))
+        {
+          array_push($page['errors'], l10n('UAM_Generic cannot be pwdreset'));
+          $errors = l10n('UAM_Generic cannot be pwdreset');
+        }
+      }
+
+      // Admins accounts exclusion
+      // --------------------------
+      $query ='
+SELECT u.id
+FROM '.USERS_TABLE.' AS u
+INNER JOIN '.USER_INFOS_TABLE.' AS ui
+  ON u.id = ui.user_id
+WHERE ui.status = "admin"
+;';
+
+	    $result = pwg_query($query);
+
+      while ($row = pwg_db_fetch_assoc($result))
+      {
+        if (in_array($row['id'], $collection))
+        {
+          array_push($page['errors'], l10n('UAM_Admins cannot be pwdreset'));
+          $errors = l10n('UAM_Admins cannot be pwdreset');
+        }
+      }
+
+      $template->append('errors', $errors);
+
       if (count($page['errors']) == 0)
-      {  
+      {
         if (isset($_POST['confirm_pwdreset']) and 1 == $_POST['confirm_pwdreset'])
         {
           foreach ($collection as $user_id)
@@ -181,7 +225,21 @@ if ((isset($conf_UAM[38]) and $conf_UAM[38] == 'true'))
           $template->append('errors', l10n('UAM_You need to confirm pwdreset'));
         }
       }
-    }  
+    }
+
+$page['order_by_items'] = array(
+  'id' => l10n('registration date'),
+  'username' => l10n('Username'),
+  'level' => l10n('Privacy level'),
+  'Language' => l10n('Language'),
+  'UAM_pwdreset' => l10n('UAM_PwdReset'),
+  );
+
+// Filter order options
+$template->assign('order_options', $page['order_by_items']);
+$template->assign('order_selected',
+    isset($_GET['order_by']) ? $_GET['order_by'] : '');
+
     $template->set_prefilter('user_list', 'UAM_PwdReset_Prefilter');
   }
 
