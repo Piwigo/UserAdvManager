@@ -260,13 +260,18 @@ Plugin Name: UserAdvManager
 
 -- 2.20.11 : Bug 2336 fixed - New feature : Add [Kdays] autotext flag to insert the number of days until expiration.
 
--- 2.30.0 :
-            Piwigo 2.3.0 compliant
+**************************************************************
+***** Plugin history (branch 2.30 - Piwigo 2.3 compliant)*****
+**************************************************************
+-- 2.30.0 : Piwigo 2.3.0 compliant
             Bug 2415 fixed - New feature : Set automatically privacy level for users who have validated or not their registration. Automated task available.
             Bug 2437 fixed - New feature : Request password renewal for selected users in Piwigo's users management panel.
             Bug 2445 fixed - Duplicate key MySql error when a user tries to validate his registration twice.
             Bug 2447 fixed - Only for installation from scratch, all text fields pre-filled and given as examples are translated into the language of the webmaster (if the language is supported by the plugin). The default language remains English in case of any failure.
             Bug 2450 fixed - New feature : Backup file restoration.
             Help files remaned and relocated in the language root directory (no more "help" subdirectory) for compliance with the new online translation tool.
+
+-- 2.30.1 : Bug 2455 fixed - Exclusion of specific users (généric and admins users) for password reset function.
+            Bug 2451 fixed - Unable to handle Sql errors but control of backup file validity have been enforced.
 */
 ?>

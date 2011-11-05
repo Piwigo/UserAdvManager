@@ -325,7 +325,7 @@ $lang['UAM_PwdResetTitle_d'] = 'L\'activation de cette option ajoutera une nouve
 - Mot de passe à changer : Une demande de changement de mot de passe a été programmée.<br>
 - Mot de passe modifié : Le mot de passe a été changé suite à une demande.<br>
 - Mot de passe original : Le mot de passe est celui choisi à la création du compte et n\'a jamais fait l\'objet d\'une demande de changement.<br>
-Le compte du webmaster, des administrateurs et de l\'invité (Guest) sont exclus de cette fonction.<br><br>
+Le compte webmaster, génériques et invités (Guest) sont exclus de cette fonction.<br><br>
 Ces utilisateurs seront alors systématiquement redirigés vers leur page de personnalisation à chacune de leurs connexions tant qu\'ils n\'auront pas modifié leur mot de passe. Un message explicite sera affiché sur cette page.';
 $lang['UAM_DumpTitle'] = 'Sauvegarde et restauration de votre configuration';
 $lang['UAM_DumpTitle_d'] = 'Ceci vous permet de sauvegarder la configuration complète du plugin dans un fichier afin de pouvoir la restaurer en cas de problème (fausse manipulation ou avant une mise à jour, par exemple). Par défaut, le fichier est stocké dans le dossier ../plugins/UserAdvManager/include/backup/ et se nomme &quot;UAM_dbbackup.sql&quot;.

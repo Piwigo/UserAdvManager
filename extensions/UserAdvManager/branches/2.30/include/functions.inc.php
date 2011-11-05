@@ -398,7 +398,7 @@ function UAM_LoginTasks()
   // Performing redirection to profile page on first login
   // -----------------------------------------------------
   if ((isset($conf_UAM[20]) and $conf_UAM[20] == 'true'))
-  {  
+  {
     $query ='
 SELECT user_id, status
 FROM '.USER_INFOS_TABLE.'
@@ -425,7 +425,7 @@ WHERE user_id = '.$user['id'].'
 ;';
     $data = pwg_db_fetch_assoc(pwg_query($query));
 
-    if ($data['status'] <> "admin" and $data['status'] <> "webmaster" and $data['status'] <> "generic") // Exclusion of specific accounts
+    if ($data['status'] <> "webmaster" and $data['status'] <> "generic") // Exclusion of specific accounts
     {
       if (UAM_check_pwgreset($user['id']))
       {
@@ -2799,7 +2799,10 @@ SELECT DISTINCT id, UAM_pwdreset
 function UAM_dump($download)
 {
   global $conf;
-  
+
+  $plugin =  PluginInfos(UAM_PATH);
+  $version = $plugin['version'];
+
   // Initial backup folder creation and file initialisation
   // ------------------------------------------------------
   if (!is_dir(UAM_PATH.'/include/backup'))
@@ -2809,6 +2812,9 @@ function UAM_dump($download)
 
   $fp = fopen($Backup_File, 'w');
 
+  // Writing plugin version
+  $insertions = "-- ".$version." --\n\n";
+  fwrite($fp, $insertions);
 
   // Saving UAM specific tables
   // --------------------------

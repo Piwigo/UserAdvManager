@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: UserAdvManager
-Version: 2.30.0
+Version: 2.30.1
 Description: Renforcer la gestion des utilisateurs - Enforce users management
 Plugin URI: http://piwigo.org/ext/extension_view.php?eid=216
 Author: Nicco, Eric
@@ -149,8 +149,52 @@ if ((isset($conf_UAM[38]) and $conf_UAM[38] == 'true'))
         $template->append('errors', l10n('UAM_You cannot pwdreset your account'));
       }
 
+      // Generic accounts exclusion (including Adult_Content generic users)
+      // ------------------------------------------------------------------
+      $query ='
+SELECT u.id
+FROM '.USERS_TABLE.' AS u
+INNER JOIN '.USER_INFOS_TABLE.' AS ui
+  ON u.id = ui.user_id
+WHERE ui.status = "generic"
+;';
+
+	    $result = pwg_query($query);
+
+      while ($row = pwg_db_fetch_assoc($result))
+      {
+        if (in_array($row['id'], $collection))
+        {
+          array_push($page['errors'], l10n('UAM_Generic cannot be pwdreset'));
+          $errors = l10n('UAM_Generic cannot be pwdreset');
+        }
+      }
+
+      // Admins accounts exclusion
+      // --------------------------
+      $query ='
+SELECT u.id
+FROM '.USERS_TABLE.' AS u
+INNER JOIN '.USER_INFOS_TABLE.' AS ui
+  ON u.id = ui.user_id
+WHERE ui.status = "admin"
+;';
+
+	    $result = pwg_query($query);
+
+      while ($row = pwg_db_fetch_assoc($result))
+      {
+        if (in_array($row['id'], $collection))
+        {
+          array_push($page['errors'], l10n('UAM_Admins cannot be pwdreset'));
+          $errors = l10n('UAM_Admins cannot be pwdreset');
+        }
+      }
+
+      $template->append('errors', $errors);
+
       if (count($page['errors']) == 0)
-      {  
+      {
         if (isset($_POST['confirm_pwdreset']) and 1 == $_POST['confirm_pwdreset'])
         {
           foreach ($collection as $user_id)
@@ -181,7 +225,7 @@ if ((isset($conf_UAM[38]) and $conf_UAM[38] == 'true'))
           $template->append('errors', l10n('UAM_You need to confirm pwdreset'));
         }
       }
-    }  
+    }
     $template->set_prefilter('user_list', 'UAM_PwdReset_Prefilter');
   }
 
