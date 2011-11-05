@@ -85,7 +85,7 @@ if ((isset($conf_UAM[38]) and $conf_UAM[38] == 'true'))
 
   /**
    * UAM_PwdReset_Action - Triggered on UAM_PwdReset_Action
-   * Handle password reset action in user_list.php
+   * Handle passord reset action in user_list.php
    */
   function UAM_PwdReset_Action()
   {
