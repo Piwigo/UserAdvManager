@@ -75,7 +75,6 @@ $lang['UAM_No_reminder_for_Webmaster'] = 'Le compte du Webmaster n\'est pas soum
 $lang['UAM_No_reminder_for_your_account'] = 'Votre compte d\'admin n\'est pas soumis à recevoir des rappels du GhostTracker';
 /* Action button names */
 $lang['UAM_audit'] = 'Auditer les paramètres';
-$lang['UAM_submit'] = 'Sauvegarder les paramètres';
 // --------- End: New or revised $lang ---- from version 2.12.0 and 2.12.1
 
 
@@ -396,4 +395,12 @@ $lang['UAM_No_Backup_File'] = 'Pas de fichier de sauvegarde présent !';
 $lang['UAM_Restoration_NOK'] = 'Une erreur est survenue lors de la restauration de la configuration. Veuillez vérifier la validité de votre fichier de sauvegarde.';
 $lang['UAM_Restoration_OK'] = 'La restauration de votre configuration s\'est terminée avec succès ! Veuillez recharger la page d\'administration de UAM pour voir les paramètres restaurés.';
 // --------- End: New or revised $lang ---- from version 2.30.0
+
+
+// --------- Starting below: New or revised $lang ---- from version 2.30.1
+$lang['UAM_submit'] = 'Enregistrer les paramètres';
+$lang['UAM_Generic cannot be pwdreset'] = 'Le renouvellement de mot de passe ne peut pas être demandé pour un compte générique !';
+$lang['UAM_Admins cannot be pwdreset'] = 'Le renouvellement de mot de passe ne peut pas être demandé pour un compte d\'administrateur !';
+$lang['UAM_Bad_version_backup'] = 'La version du fichier de sauvegarde ne correspond pas à la version du plugin ! La restauration n\'a pas été réalisée.';
+// --------- End: New or revised $lang ---- from version 2.30.1
 ?>
