@@ -328,6 +328,45 @@ function uam_blockToggleDisplay( headerId, contentId )
           </fieldset>
 
           <fieldset>
+          <div class="uam_new">
+            <ul>
+              <p class="new_in_version">{'UAM_NewFeature'|@translate}</p>
+         	    <li>
+                <label class="cluetip" title="{'UAM_RejectConnexion'|translate}|{'UAM_RejectConnexion_d'|translate}">
+                  {'UAM_RejectConnexion'|@translate}
+                </label>
+            <br><br>
+                <input type="radio" value="false" {$UAM_REJECTCONNECT_FALSE} name="UAM_RejectConnexion">
+                  {'UAM_Disable'|@translate}
+            <br>
+                <input type="radio" value="true" {$UAM_REJECTCONNECT_TRUE} name="UAM_RejectConnexion">
+                  {'UAM_Enable'|@translate}
+            <br><br>
+              </li>
+            {if $UAM_REJECTLOGIN_FALSE}
+              <div class="uam_hide">
+            {/if}
+              <li>
+                <label class="cluetip" title="{'UAM_RejectConnexion_Custom_Txt'|translate}|{'UAM_RejectConnexion_Custom_Txt_d'|translate}">
+                  {'UAM_RejectConnexion_Custom_Txt'|@translate}
+                </label>
+            <br><br>
+                <textarea class="uam_textfields" name="UAM_CustomRejectConnexion_Text" id="UAM_CustomRejectConnexion_Text" rows="10" {$TAG_INPUT_ENABLED}>{$UAM_REJECTCONNECT_TEXT}</textarea>
+            <br><br>
+              </li>
+            {if 'FCK_PATH'|@defined}
+              <div style="text-align:right;">
+                <a href="#" onClick="toogleEditor('UAM_CustomRejectConnexion_Text'); return false;">FCK Editor On/Off</a>
+              </div>
+            {/if}
+            {if $UAM_REJECTLOGIN_FALSE}
+              </div>
+            {/if}
+            </ul>
+          </div>
+
+          <br>
+
           <ul>
             <div id="uam_notice">{'UAM_Confirm_grpstat_notice'|@translate}</div>
               <br>

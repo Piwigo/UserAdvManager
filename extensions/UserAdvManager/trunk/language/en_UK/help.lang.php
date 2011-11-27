@@ -342,4 +342,13 @@ The recovery from this interface is available only for the local backup file (..
 <br><br>
 <b style=&quot;color: red;&quot;>Warning: After the restore, it is necessary to reload the administration page of the plugin to see the restored settings!</b>';
 // --------- End: New or revised $lang ---- from version 2.30.0
+
+
+// --------- Starting below: New or revised $lang ---- from version 2.30.2
+$lang['UAM_RejectConnexion_d'] = 'If activated, new registered users who have not validate their registration won\'t be able to connect to the gallery. They will be redirected to a special page to inform them of this state.<br><br>
+<b style=&quot;color: red;&quot;>Warning - This feature works only in conjunction with validation groups! See below to set the groups as required.</b>';
+$lang['UAM_RejectConnexion_Custom_Txt_d'] = 'Customize here your explanation text for inform unvalidated users that they won\'t be able to connect the gallery until they have validate their registration.
+<br><br>
+This field is compatible with the FCK Editor and, for multi-languages, you can use the [lang] tags of the Extended description plugin if it\'s active.';
+// --------- End: New or revised $lang ---- from version 2.30.2
 ?>
