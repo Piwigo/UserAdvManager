@@ -406,4 +406,12 @@ $lang['UAM_Generic cannot be pwdreset'] = 'Password renewal can\'t be set for ge
 $lang['UAM_Admins cannot be pwdreset'] = 'Password renewal can\'t be set for admins account!';
 $lang['UAM_Bad_version_backup'] = 'The version of the backup file does not match the version of the plugin! The restoration was not performed.';
 // --------- End: New or revised $lang ---- from version 2.30.1
+
+// --------- Starting below: New or revised $lang ---- from version 2.30.2
+$lang['UAM_NewFeature'] = 'New feature !';
+$lang['UAM_RejectConnexion'] = 'Reject user\'s connexion until registration is validated';
+$lang['UAM_RejectConnexion_Custom_Txt'] = 'Customize rejection text';
+$lang['UAM_Default_RejectConnexion_Txt'] = 'Sorry, you don\'t have validate your registration yet, so you can\'t connect the gallery now. Please check your email box. You should find an email sent by the gallery, containing a link to perform your validation. If not, please contact the webmaster.';
+$lang['UAM_Reject_Page_Title'] = 'Connexion not allowed !';
+// --------- End: New or revised $lang ---- from version 2.30.2
 ?>

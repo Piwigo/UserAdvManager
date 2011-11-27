@@ -16,6 +16,20 @@ div.uam_hide
   display: none;
 }
 
+div.uam_new
+{
+  background-color: #8EBF44;
+}
+
+p.new_in_version
+{
+  text-align: center;
+  text-transform: capitalize;
+  text-decoration: underline;
+  font-weight: bold;
+  color: yellow;
+}
+
 textarea.uam_textfields
 {
   width: 70%;

@@ -403,4 +403,13 @@ $lang['UAM_Generic cannot be pwdreset'] = 'Le renouvellement de mot de passe ne 
 $lang['UAM_Admins cannot be pwdreset'] = 'Le renouvellement de mot de passe ne peut pas être demandé pour un compte d\'administrateur !';
 $lang['UAM_Bad_version_backup'] = 'La version du fichier de sauvegarde ne correspond pas à la version du plugin ! La restauration n\'a pas été réalisée.';
 // --------- End: New or revised $lang ---- from version 2.30.1
+
+
+// --------- Starting below: New or revised $lang ---- from version 2.30.2
+$lang['UAM_NewFeature'] = 'Nouvelle option !';
+$lang['UAM_RejectConnexion'] = 'Rejeter les connexions des utilisateurs non validés';
+$lang['UAM_RejectConnexion_Custom_Txt'] = 'Personnaliser le texte de la page de rejet de la connexion';
+$lang['UAM_Default_RejectConnexion_Txt'] = 'Désolé, vous n\'avez pas encore validé votre inscription et vous ne pouvez pas vous connecter maintenant. Merci de vérifier votre boite aux lettres. Vous devriez y trouver un message comportant un lien pour valider votre inscription. Si ce n\'est pas le cas, merci de contacter l\'administrateur de la galerie.';
+$lang['UAM_Reject_Page_Title'] = 'Connexion refusée !';
+// --------- End: New or revised $lang ---- from version 2.30.2
 ?>

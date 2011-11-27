@@ -338,4 +338,13 @@ La restauration à partir de cette interface ne prend en charge que la sauvegard
 <br><br>
 <b style=&quot;color: red;&quot;>Attention : Après la restauration, il est nécessaire de recharger la page d\'administration du plugin pour voir les paramètres restaurés !</b>';
 // --------- End: New or revised $lang ---- from version 2.30.0
+
+
+// --------- Starting below: New or revised $lang ---- from version 2.30.2
+$lang['UAM_RejectConnexion_d'] = 'Si activée, les nouveaux inscrits qui n\'ont pas validé leur inscription ne pourront pas se connecter à la galerie. Ils seront redirigés vers une page spéciale pour les informer de cet état.<br><br>
+<b style=&quot;color: red;&quot;>Attention - Cette option fonctionne uniquement avec les groupes de validation ! Référez-vous ci-dessous pour affecter les paramètres de groupes requis.</b>';
+$lang['UAM_RejectConnexion_Custom_Txt_d'] = 'Personnalisez ici votre message d\'explication informant les utilisateurs non validés qu\'ils ne pourront pas se connecter à la galerie tant qu\'ils n\'auront pas validé leur inscription.
+<br><br>
+Ce champ est compatible avec l\'extension FCK Editor et, pour une utilisation multi-langues, vous pouvez utiliser les balises [lang] du plugin Extended Description si celui-ci est actif.';
+// --------- End: New or revised $lang ---- from version 2.30.2
 ?>
