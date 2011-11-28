@@ -63,6 +63,8 @@ function plugin_install()
   $defaultUAM[36] = '-1';                                     // UAM_VALID_LEVEL
   $defaultUAM[37] = '-1';                                     // UAM_DOWNGRADE_LEVEL
   $defaultUAM[38] = 'false';                                  // UAM_PWDRESET_TRUE/FALSE
+  $defaultUAM[39] = 'false';                                  // UAM_REJECTCONNECT_TRUE/FALSE
+  $defaultUAM[40] = l10n('UAM_Default_RejectConnexion_Txt');  // UAM_REJECTCONNECT_TEXT
   
   // Default specific parameters for UserAdvManager ConfirmMail conf
   // ---------------------------------------------------------------
@@ -355,6 +357,13 @@ WHERE param = "UserAdvManager_Version"
     /* upgrade from version 2.20.8 to 2.30.0 */
     /* ************************************* */
       upgrade_2208_2300();
+    }
+
+    if (version_compare($conf['UserAdvManager_Version'], '2.30.2') < 0)
+    {
+    /* upgrade from version 2.30.x to 2.30.2 */
+    /* ************************************* */
+      upgrade_2300_2302();
     }
   }
 

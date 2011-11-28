@@ -77,7 +77,7 @@ $toolbar = 'Basic';
 $width = '750px';
 $height = '300px';
 $areas = array();
-array_push( $areas,'UAM_ConfirmMail_Custom_Txt1','UAM_ConfirmMail_Custom_Txt2','UAM_GTAutoDelText','UAM_USRAutoDelText');
+array_push( $areas,'UAM_ConfirmMail_Custom_Txt1','UAM_ConfirmMail_Custom_Txt2','UAM_GTAutoDelText','UAM_USRAutoDelText','UAM_CustomRejectConnexion_Text');
 
 if (function_exists('set_fckeditor_instance'))
 {
@@ -108,7 +108,7 @@ switch ($page['tab'])
 // *************************************************************************
   case 'global':
 
-	if (isset($_POST['submit']) and isset($_POST['UAM_Mail_Info']) and isset($_POST['UAM_Username_Char']) and isset($_POST['UAM_Confirm_Mail']) and isset($_POST['UAM_Password_Enforced']) and isset($_POST['UAM_AdminPassword_Enforced']) and isset($_POST['UAM_GhostUser_Tracker']) and isset($_POST['UAM_Admin_ConfMail']) and isset($_POST['UAM_RedirToProfile']) and isset($_POST['UAM_GTAuto']) and isset($_POST['UAM_GTAutoMail']) and isset($_POST['UAM_CustomPasswRetr']) and isset($_POST['UAM_USRAuto']) and isset($_POST['UAM_USRAutoMail']) and isset($_POST['UAM_Stuffs']) and isset($_POST['UAM_HidePassw']) and isset($_POST['UAM_PwdReset']))
+	if (isset($_POST['submit']) and isset($_POST['UAM_Mail_Info']) and isset($_POST['UAM_Username_Char']) and isset($_POST['UAM_Confirm_Mail']) and isset($_POST['UAM_Password_Enforced']) and isset($_POST['UAM_AdminPassword_Enforced']) and isset($_POST['UAM_GhostUser_Tracker']) and isset($_POST['UAM_Admin_ConfMail']) and isset($_POST['UAM_RedirToProfile']) and isset($_POST['UAM_GTAuto']) and isset($_POST['UAM_GTAutoMail']) and isset($_POST['UAM_CustomPasswRetr']) and isset($_POST['UAM_USRAuto']) and isset($_POST['UAM_USRAutoMail']) and isset($_POST['UAM_Stuffs']) and isset($_POST['UAM_HidePassw']) and isset($_POST['UAM_PwdReset']) and isset($_POST['UAM_RejectConnexion']))
   {
 
     // Render free text fields
@@ -128,6 +128,8 @@ switch ($page['tab'])
     $_POST['UAM_CustomPasswRetr_Text'] = str_replace('\"', '"', str_replace("\'", "'", str_replace("\\\\", "\\", $_POST['UAM_CustomPasswRetr_Text'])));
 
     $_POST['UAM_USRAutoDelText'] = str_replace('\"', '"', str_replace("\'", "'", str_replace("\\\\", "\\", $_POST['UAM_GTAutoDelText'])));
+
+    $_POST['UAM_CustomRejectConnexion_Text'] = str_replace('\"', '"', str_replace("\'", "'", str_replace("\\\\", "\\", $_POST['UAM_CustomRejectConnexion_Text'])));
 
     // Check if CR-LF exist at begining and end of mail exclusion list - If yes, removes them
     // --------------------------------------------------------------------------------------
@@ -199,6 +201,8 @@ switch ($page['tab'])
       (isset($_POST['UAM_Valid_Level'])?$_POST['UAM_Valid_Level']:''),
       (isset($_POST['UAM_Downgrade_Level'])?$_POST['UAM_Downgrade_Level']:''),
       $_POST['UAM_PwdReset'],
+      $_POST['UAM_RejectConnexion'],
+      $_POST['UAM_CustomRejectConnexion_Text'],
       );
 
     $conf['UserAdvManager'] = serialize($newconf_UAM);
@@ -592,6 +596,9 @@ ORDER BY name ASC
     'UAM_DOWNGRADE_LEVEL'            => $conf_UAM[37],
     'UAM_PWDRESET_TRUE'              => $conf_UAM[38]=='true' ?  'checked="checked"' : '' ,
     'UAM_PWDRESET_FALSE'             => $conf_UAM[38]=='false' ?  'checked="checked"' : '' ,
+    'UAM_REJECTCONNECT_TRUE'         => $conf_UAM[39]=='true' ?  'checked="checked"' : '' ,
+    'UAM_REJECTCONNECT_FALSE'        => $conf_UAM[39]=='false' ?  'checked="checked"' : '' ,
+    'UAM_REJECTCONNECT_TEXT'         => $conf_UAM[40],
 		'UAM_PASSWORD_TEST_SCORE'        => $UAM_Password_Test_Score,
     'UAM_ERROR_REPORTS1'             => $UAM_Exclusionlist_Error,
     'UAM_ERROR_REPORTS2'             => $UAM_Illegal_Flag_Error1,

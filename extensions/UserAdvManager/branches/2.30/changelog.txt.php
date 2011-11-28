@@ -273,5 +273,7 @@ Plugin Name: UserAdvManager
 
 -- 2.30.1 : Bug 2455 fixed - Exclusion of specific users (généric and admins users) for password reset function.
             Bug 2451 fixed - Unable to handle Sql errors but control of backup file validity have been enforced.
+
+-- 2.30.2 : Bug 2456 fixed - New feature : Avoid user connexion to the gallery until there has been no validation of registration. Users are redirected to a customizable content page.
 */
 ?>
