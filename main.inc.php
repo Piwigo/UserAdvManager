@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: UserAdvManager
-Version: 2.30.1
+Version: 2.30.2
 Description: Renforcer la gestion des utilisateurs - Enforce users management
 Plugin URI: http://piwigo.org/ext/extension_view.php?eid=216
 Author: Nicco, Eric
@@ -85,7 +85,7 @@ if ((isset($conf_UAM[38]) and $conf_UAM[38] == 'true'))
 
   /**
    * UAM_PwdReset_Action - Triggered on UAM_PwdReset_Action
-   * Handle passord reset action in user_list.php
+   * Handle password reset action in user_list.php
    */
   function UAM_PwdReset_Action()
   {

@@ -193,7 +193,6 @@ Szintén elérhető a projekt hibakövetőben: <a href="http://piwigo.org/bugs/"
 $lang['UAM_Force_Validation'] = 'Kézi érvényesítés';
 $lang['UAM_Confirm_Mail_true'] = ' Bekapcsol - Érvényesítés a felhasználó által';
 $lang['UAM_Confirm_Mail_local'] = ' Bekapcsol - Érvényesítés az admin által (nincs érvényesítő kulcs küldés)';
-$lang['UAM_RedirToProfile'] = 'Átirányítás a "Testreszabás" oldalra';
 // --------- End: New or revised $lang ---- from version 2.15.4
 
 
@@ -202,8 +201,6 @@ $lang['UAM_Expired_Group'] = 'Lejárt regisztrációjú felhasználók <b>csopor
 $lang['UAM_Expired_Status'] = 'Lejárt regisztrációjú felhasználók <b>csoportja</b> <br>';
 $lang['UAM_GTAuto'] = 'Szellem-felhasználók automatikus követése';
 $lang['UAM_GTAutoDel'] = 'Azonosítók automatikus törlése';
-$lang['UAM_GTAutoGp'] = 'Csoport / állapot automatikus változása';
-$lang['UAM_GTAutoMail'] = 'E-mail automatikus küldése csoport / állapot változásakor';
 $lang['UAM_Deleted_Account_Redirection_Page'] = 'Hozzáférés megtagadva - Azonosító megsemmisítve!';
 $lang['UAM_title_redir_page'] = 'Hozzáférés megtagadva azonosító megsemmisítése miatt!';
 $lang['UAM_Error_GTAutoMail_cannot_be_set_without_ConfirmMail'] = 'Következetlenség a választott konfigurációban:
@@ -354,4 +351,16 @@ $lang['UAM_HidePassw'] = 'Az olvasható jelszó az info e-mail-ben';
 // --------- Starting below: New or revised $lang ---- from version 2.20.11
 $lang['UAM_Error_Using_illegal_flag'] = 'Szintaktikai hiba! Az [Kdays] AutoText flag van használatban, mert a "Regisztráció érvényesítésének határideje korlátozott" beállítás nincs bekapcsolva. Kérlek, kapcsoldbe ezt a beállítást, vagy javítsd ki a piros szöveg mezőt vagy mezőket.';
 // --------- End: New or revised $lang ---- from version 2.20.11
+
+
+// --------- Starting below: New or revised $lang ---- from version 2.30.2
+$lang['UAM_RedirToProfile'] = 'Átirányítás a Testreszabás oldalra';
+/*TODO*/$lang['UAM_GTAutoGp'] = 'Automatic change of group / status / privacy level';
+/*TODO*/$lang['UAM_GTAutoMail'] = 'Automatically sending an email when changing group / status / privacy level';
+/*TODO*/$lang['UAM_NewFeature'] = 'New feature !';
+/*TODO*/$lang['UAM_RejectConnexion'] = 'Reject user\'s connexion until registration is validated';
+/*TODO*/$lang['UAM_RejectConnexion_Custom_Txt'] = 'Customize rejection text';
+/*TODO*/$lang['UAM_Default_RejectConnexion_Txt'] = 'Sorry, you don\'t have validate your registration yet, so you can\'t connect the gallery now. Please check your email box. You should find an email sent by the gallery, containing a link to perform your validation. If not, please contact the webmaster.';
+/*TODO*/$lang['UAM_Reject_Page_Title'] = 'Connexion not allowed !';
+// --------- End: New or revised $lang ---- from version 2.30.2
 ?>

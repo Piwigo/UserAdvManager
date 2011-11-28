@@ -379,6 +379,8 @@ function UAM_LoginTasks()
 {
   global $conf, $user;
   
+  include_once(PHPWG_ROOT_PATH.'admin/include/functions.php');
+  
   $conf_UAM = unserialize($conf['UserAdvManager']);
   
   // Performing GhostTracker scheduled tasks
@@ -395,43 +397,55 @@ function UAM_LoginTasks()
     UAM_USR_ScheduledTasks();
   }
 
-  // Performing redirection to profile page on first login
-  // -----------------------------------------------------
-  if ((isset($conf_UAM[20]) and $conf_UAM[20] == 'true'))
+  // Avoid login into public galleries until registration confirmation is done
+  if ((isset($conf_UAM[39]) and $conf_UAM[39] == 'false') or ((isset($conf_UAM[39]) and $conf_UAM[39] == 'true') and UAM_UsrReg_Verif($user['id'])))
   {
-    $query ='
+    // Performing redirection to profile page on first login
+    // -----------------------------------------------------
+    if ((isset($conf_UAM[20]) and $conf_UAM[20] == 'true'))
+    {
+      $query ='
 SELECT user_id, status
 FROM '.USER_INFOS_TABLE.'
 WHERE user_id = '.$user['id'].'
 ;';
-    $data = pwg_db_fetch_assoc(pwg_query($query));
+      $data = pwg_db_fetch_assoc(pwg_query($query));
 
-    if ($data['status'] <> "admin" and $data['status'] <> "webmaster" and $data['status'] <> "generic") // Exclusion of specific accounts
-    {
-      $user_idsOK = array();
-      if (!UAM_check_profile($user['id'], $user_idsOK))
-        redirect(PHPWG_ROOT_PATH.'profile.php');
-    }
-  }
-
-  // Performing redirection to profile page for password reset
-  // ---------------------------------------------------------
-  if ((isset($conf_UAM[38]) and $conf_UAM[38] == 'true'))
-  {
-    $query ='
-SELECT user_id, status
-FROM '.USER_INFOS_TABLE.'
-WHERE user_id = '.$user['id'].'
-;';
-    $data = pwg_db_fetch_assoc(pwg_query($query));
-
-    if ($data['status'] <> "webmaster" and $data['status'] <> "generic") // Exclusion of specific accounts
-    {
-      if (UAM_check_pwgreset($user['id']))
+      if ($data['status'] <> "admin" and $data['status'] <> "webmaster" and $data['status'] <> "generic") // Exclusion of specific accounts
       {
-        redirect(PHPWG_ROOT_PATH.'profile.php');
+        $user_idsOK = array();
+        if (!UAM_check_profile($user['id'], $user_idsOK))
+          redirect(PHPWG_ROOT_PATH.'profile.php');
       }
     }
+
+    // Performing redirection to profile page for password reset
+    // ---------------------------------------------------------
+    if ((isset($conf_UAM[38]) and $conf_UAM[38] == 'true'))
+    {
+      $query ='
+SELECT user_id, status
+FROM '.USER_INFOS_TABLE.'
+WHERE user_id = '.$user['id'].'
+;';
+      $data = pwg_db_fetch_assoc(pwg_query($query));
+
+      if ($data['status'] <> "webmaster" and $data['status'] <> "generic") // Exclusion of specific accounts
+      {
+        if (UAM_check_pwgreset($user['id']))
+        {
+          redirect(PHPWG_ROOT_PATH.'profile.php');
+        }
+      }
+    }
+  }
+  elseif ((isset($conf_UAM[39]) and $conf_UAM[39] == 'true') and !UAM_UsrReg_Verif($user['id']))
+  {
+    // Logged-in user cleanup, session destruction and redirected to custom page
+    // -------------------------------------------------------------------------
+    invalidate_user_cache();
+    logout_user();
+    redirect(UAM_PATH.'rejected.php');
   }
 }
 
@@ -2072,7 +2086,7 @@ WHERE user_id = '".$id."'
 
 
 /**
- * Function called from main.inc.php - Check if username matches forbidden caracters
+ * Function called from functions.inc.php - Check if username matches forbidden caracters
  *
  * @param : User login
  * 
@@ -2565,106 +2579,9 @@ function testpassword($password) // Le mot de passe passé en paramètre - $pass
 
 
 /**
- * Function called from maintain.inc.php - to check if database upgrade is needed
- * 
- * @param : table name
- * 
- * @return : boolean
- * 
- */
-function table_exist($table)
-{
-  $query = 'DESC '.$table.';';
-  return (bool)($res=pwg_query($query));
-}
-
-
-/**
- * Function called from UAM_admin.php and main.inc.php to get the plugin version and name
- *
- * @param : plugin directory
- * 
- * @return : plugin's version and name
- * 
- */
-function PluginInfos($dir)
-{
-  $path = $dir;
-
-  $plg_data = implode( '', file($path.'main.inc.php') );
-  if ( preg_match("|Plugin Name: (.*)|", $plg_data, $val) )
-  {
-    $plugin['name'] = trim( $val[1] );
-  }
-  if (preg_match("|Version: (.*)|", $plg_data, $val))
-  {
-    $plugin['version'] = trim($val[1]);
-  }
-  if ( preg_match("|Plugin URI: (.*)|", $plg_data, $val) )
-  {
-    $plugin['uri'] = trim($val[1]);
-  }
-  if ($desc = load_language('description.txt', $path.'/', array('return' => true)))
-  {
-    $plugin['description'] = trim($desc);
-  }
-  elseif ( preg_match("|Description: (.*)|", $plg_data, $val) )
-  {
-    $plugin['description'] = trim($val[1]);
-  }
-  if ( preg_match("|Author: (.*)|", $plg_data, $val) )
-  {
-    $plugin['author'] = trim($val[1]);
-  }
-  if ( preg_match("|Author URI: (.*)|", $plg_data, $val) )
-  {
-    $plugin['author uri'] = trim($val[1]);
-  }
-  if (!empty($plugin['uri']) and strpos($plugin['uri'] , 'extension_view.php?eid='))
-  {
-    list( , $extension) = explode('extension_view.php?eid=', $plugin['uri']);
-    if (is_numeric($extension)) $plugin['extension'] = $extension;
-  }
-// IMPORTANT SECURITY !
-// --------------------
-  $plugin = array_map('htmlspecialchars', $plugin);
-
-  return $plugin ;
-}
-
-
-/**
- * Delete obsolete files on plugin upgrade
- * Obsolete files are listed in file obsolete.list
- *
- */
-function clean_obsolete_files()
-{
-  if (file_exists(UAM_PATH.'obsolete.list')
-    and $old_files = file(UAM_PATH.'obsolete.list', FILE_IGNORE_NEW_LINES)
-    and !empty($old_files))
-  {
-    array_push($old_files, 'obsolete.list');
-    foreach($old_files as $old_file)
-    {
-      $path = UAM_PATH.$old_file;
-      if (is_file($path))
-      {
-        @unlink($path);
-      }
-      elseif (is_dir($path))
-      {
-        @rmdir($path);
-      }
-    }
-  }
-}
-
-
-/**
  * UAM_check_profile - Thx to LucMorizur
  * checks if a user id is registered as having already
- * visited his profile.php page.
+ * visited his profile page.
  * 
  * @uid        : the user id
  * 
@@ -2698,7 +2615,7 @@ WHERE param = "UserAdvManager_Redir"
 /**
  * UAM_check_pwdreset
  * checks if a user id is registered as having already
- * changed their password.
+ * changed his password.
  * 
  * @uid        : the user id
  * 
@@ -2721,6 +2638,41 @@ WHERE id='.$uid.'
   }
   else return false; 
 }
+
+
+/**
+ * UAM_UsrReg_Verif
+ * Check if the user who logged-in have validate his registration
+ * 
+ * @returns : True if validation is OK else False
+ */
+function UAM_UsrReg_Verif($user_id)
+{
+  global $conf;
+
+	// Get UAM configuration
+  // ---------------------
+  $conf_UAM = unserialize($conf['UserAdvManager']);
+
+  $query = '
+SELECT group_id
+  FROM '.USER_GROUP_TABLE.'
+WHERE user_id = '.$user_id.'
+  AND group_id = '.$conf_UAM[2].'
+;';
+
+  $count = pwg_db_num_rows(pwg_query($query));
+  
+  if ($count == 0)
+  {
+    return true; // User is not in a "Waiting" group
+  }
+  else
+  {
+    return false; // User is still in a "Waiting" group
+  }
+}
+
 
 /**
  * UAM_Set_PwdReset
@@ -3015,6 +2967,102 @@ function UAM_execute_sqlfile($filepath, $replaced, $replacing, $dblayer)
   }
 }
 
+
+/**
+ * Delete obsolete files on plugin upgrade
+ * Obsolete files are listed in file obsolete.list
+ *
+ */
+function clean_obsolete_files()
+{
+  if (file_exists(UAM_PATH.'obsolete.list')
+    and $old_files = file(UAM_PATH.'obsolete.list', FILE_IGNORE_NEW_LINES)
+    and !empty($old_files))
+  {
+    array_push($old_files, 'obsolete.list');
+    foreach($old_files as $old_file)
+    {
+      $path = UAM_PATH.$old_file;
+      if (is_file($path))
+      {
+        @unlink($path);
+      }
+      elseif (is_dir($path))
+      {
+        @rmdir($path);
+      }
+    }
+  }
+}
+
+
+/**
+ * Function called from maintain.inc.php - to check if database upgrade is needed
+ * 
+ * @param : table name
+ * 
+ * @return : boolean
+ * 
+ */
+function table_exist($table)
+{
+  $query = 'DESC '.$table.';';
+  return (bool)($res=pwg_query($query));
+}
+
+
+/**
+ * Function called from UAM_admin.php and main.inc.php to get the plugin version and name
+ *
+ * @param : plugin directory
+ * 
+ * @return : plugin's version and name
+ * 
+ */
+function PluginInfos($dir)
+{
+  $path = $dir;
+
+  $plg_data = implode( '', file($path.'main.inc.php') );
+  if ( preg_match("|Plugin Name: (.*)|", $plg_data, $val) )
+  {
+    $plugin['name'] = trim( $val[1] );
+  }
+  if (preg_match("|Version: (.*)|", $plg_data, $val))
+  {
+    $plugin['version'] = trim($val[1]);
+  }
+  if ( preg_match("|Plugin URI: (.*)|", $plg_data, $val) )
+  {
+    $plugin['uri'] = trim($val[1]);
+  }
+  if ($desc = load_language('description.txt', $path.'/', array('return' => true)))
+  {
+    $plugin['description'] = trim($desc);
+  }
+  elseif ( preg_match("|Description: (.*)|", $plg_data, $val) )
+  {
+    $plugin['description'] = trim($val[1]);
+  }
+  if ( preg_match("|Author: (.*)|", $plg_data, $val) )
+  {
+    $plugin['author'] = trim($val[1]);
+  }
+  if ( preg_match("|Author URI: (.*)|", $plg_data, $val) )
+  {
+    $plugin['author uri'] = trim($val[1]);
+  }
+  if (!empty($plugin['uri']) and strpos($plugin['uri'] , 'extension_view.php?eid='))
+  {
+    list( , $extension) = explode('extension_view.php?eid=', $plugin['uri']);
+    if (is_numeric($extension)) $plugin['extension'] = $extension;
+  }
+// IMPORTANT SECURITY !
+// --------------------
+  $plugin = array_map('htmlspecialchars', $plugin);
+
+  return $plugin ;
+}
 
 
 /**

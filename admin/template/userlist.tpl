@@ -43,7 +43,7 @@ $(document).ready(function()
 
 <form method="post" action="" class="general">
   <fieldset>
-  	<legend class="cluetip" title="{'UAM_userlistTitle'|translate}|{'UAM_userlistTitle_d'|translate}">{'UAM_UserList_Title'|@translate}</legend>
+  	<legend class="cluetip" title="{'UAM_UserList_Title'|translate}|{'UAM_userlistTitle_d'|translate}">{'UAM_UserList_Title'|@translate}</legend>
     {if count($users) > 0}
       <table id="sorting" class="table2" width="97%" summary="">
   			<thead>

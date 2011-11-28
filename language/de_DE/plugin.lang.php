@@ -196,7 +196,6 @@ Ebenfalls erhältlich, das Projekt Bugtracker: <a href="http://piwigo.org/bugs/"
 $lang['UAM_Force_Validation'] = 'Handbuch Validierung';
 $lang['UAM_Confirm_Mail_true'] = ' Aktivieren - Validation von Benutzer';
 $lang['UAM_Confirm_Mail_local'] = ' Aktivieren - Validation von admin (keine Validierung Key gesendet)';
-$lang['UAM_RedirToProfile'] = 'Umleitung auf "Benutzerdaten" Seite';
 // --------- End: New or revised $lang ---- from version 2.15.4
 
 
@@ -205,8 +204,6 @@ $lang['UAM_Expired_Group'] = '<b>Gruppe</b> für Benutzer-Registrierung abgelauf
 $lang['UAM_Expired_Status'] = '<b>Status</b> für Benutzer-Registrierung abgelaufen<br>';
 $lang['UAM_GTAuto'] = 'Automatische Verwaltung von Geist Benutzern';
 $lang['UAM_GTAutoDel'] = 'Automatisches Löschen von Konten';
-$lang['UAM_GTAutoGp'] = 'Automatischer Wechsel der Gruppe / Status';
-$lang['UAM_GTAutoMail'] = 'Automatisches Versenden einer E-Mail beim Wechsel Gruppe / Status';
 $lang['UAM_Deleted_Account_Redirection_Page'] = 'Zugriff verweigert - Account zerstört!';
 $lang['UAM_title_redir_page'] = 'Zugriff verweigert sich für ein Konto zerstört!';
 $lang['UAM_Error_GTAutoMail_cannot_be_set_without_ConfirmMail'] = 'Konsistenz-Fehler in der Konfiguration gewählt:<br><br>
@@ -332,4 +329,16 @@ $lang['UAM_HidePassw'] = 'Passwort im Klartext in der Informations-E-Mail';
 // --------- Starting below: New or revised $lang ---- from version 2.20.11
 /*TODO*/$lang['UAM_Error_Using_illegal_flag'] = 'Syntax error ! The [Kdays] AutoText flag is used as the "Anmeldeschluss Validierung beschränkt" option was not activated. Please activate the option or correct the text field(s) colored in red.';
 // --------- End: New or revised $lang ---- from version 2.20.11
+
+
+// --------- Starting below: New or revised $lang ---- from version 2.30.2
+$lang['UAM_RedirToProfile'] = 'Umleitung auf Benutzerdaten Seite';
+$lang['UAM_GTAutoGp'] = 'Automatischer Wechsel der Gruppe / Status / Vertraulichkeit Grad';
+$lang['UAM_GTAutoMail'] = 'Automatisches Versenden einer E-Mail beim Wechsel Gruppe / Status / Vertraulichkeit Grad';
+/*TODO*/$lang['UAM_NewFeature'] = 'New feature !';
+/*TODO*/$lang['UAM_RejectConnexion'] = 'Reject user\'s connexion until registration is validated';
+/*TODO*/$lang['UAM_RejectConnexion_Custom_Txt'] = 'Customize rejection text';
+/*TODO*/$lang['UAM_Default_RejectConnexion_Txt'] = 'Sorry, you don\'t have validate your registration yet, so you can\'t connect the gallery now. Please check your email box. You should find an email sent by the gallery, containing a link to perform your validation. If not, please contact the webmaster.';
+/*TODO*/$lang['UAM_Reject_Page_Title'] = 'Connexion not allowed !';
+// --------- End: New or revised $lang ---- from version 2.30.2
 ?>

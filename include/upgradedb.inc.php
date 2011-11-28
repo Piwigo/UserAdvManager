@@ -558,4 +558,34 @@ ADD UAM_pwdreset enum("true","false")
     pwg_query($q);
   }
 }
+
+
+/* upgrade from 2.30.x to 2.30.2 */
+/* ***************************** */
+function upgrade_2300_2302()
+{
+  global $conf;
+  
+  load_language('plugin.lang', UAM_PATH);
+
+  // Upgrading options
+  // -----------------
+  $query = '
+SELECT value
+  FROM '.CONFIG_TABLE.'
+WHERE param = "UserAdvManager"
+;';
+
+  $result = pwg_query($query);
+  $conf_UAM = pwg_db_fetch_assoc($result);
+    
+  $Newconf_UAM = unserialize($conf_UAM['value']);
+  
+  $Newconf_UAM[39] = 'false';
+  $Newconf_UAM[40] = l10n('UAM_Default_RejectConnexion_Txt');
+
+  $update_conf = serialize($Newconf_UAM);
+
+  conf_update_param('UserAdvManager', pwg_db_real_escape_string($update_conf));
+}
 ?>
