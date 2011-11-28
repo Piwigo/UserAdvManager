@@ -64,7 +64,7 @@ function uam_blockToggleDisplay( headerId, contentId )
   <div id="instructionConfig1" class="instructionBlock" >
 
     <div id="config1_header" class="instructionBlockHeaderCollapsed" onclick="uam_blockToggleDisplay('config1_header', 'Config1')">
-      <span class="cluetip" title="{'UAM_restricTitle'|translate}|{'UAM_restricTitle_d'|translate}">
+      <span class="cluetip" title="{'UAM_Title1'|translate}|{'UAM_restricTitle_d'|translate}">
         {'UAM_Title1'|@translate}
       </span>
     </div>
@@ -73,7 +73,7 @@ function uam_blockToggleDisplay( headerId, contentId )
       <fieldset>
         <ul>
           <li>
-            <label class="cluetip" title="{'UAM_carexcTitle'|translate}|{'UAM_carexcTitle_d'|translate}">
+            <label class="cluetip" title="{'UAM_Username_Char'|translate}|{'UAM_carexcTitle_d'|translate}">
               {'UAM_Username_Char'|@translate}
             </label>
           <br><br>
@@ -88,7 +88,7 @@ function uam_blockToggleDisplay( headerId, contentId )
           </li>
       
           <li>
-            <label class="cluetip" title="{'UAM_passwTitle'|translate}|{'UAM_passwTitle_d'|translate}">
+            <label class="cluetip" title="{'UAM_Password_Enforced'|translate}|{'UAM_passwTitle_d'|translate}">
               {'UAM_Password_Enforced'|@translate}
             </label>
           <br><br>
@@ -108,7 +108,7 @@ function uam_blockToggleDisplay( headerId, contentId )
 
           <ul>
             <li>
-              <label class="cluetip" title="{'UAM_passwadmTitle'|translate}|{'UAM_passwadmTitle_d'|translate}">
+              <label class="cluetip" title="{'UAM_AdminPassword_Enforced'|translate}|{'UAM_passwadmTitle_d'|translate}">
                 {'UAM_AdminPassword_Enforced'|@translate}
               </label>
             <br><br>
@@ -122,7 +122,7 @@ function uam_blockToggleDisplay( headerId, contentId )
           </ul>
       
           <li>
-            <label class="cluetip" title="{'UAM_mailexcTitle'|translate}|{'UAM_mailexcTitle_d'|translate}">
+            <label class="cluetip" title="{'UAM_MailExclusion'|translate}|{'UAM_mailexcTitle_d'|translate}">
               {'UAM_MailExclusion'|@translate}
             </label>
           <br><br>
@@ -156,7 +156,7 @@ function uam_blockToggleDisplay( headerId, contentId )
   <div id="instructionConfig2" class="instructionBlock" >
 
     <div id="config2_header" class="instructionBlockHeaderCollapsed" onclick="uam_blockToggleDisplay('config2_header', 'Config2')">
-      <span class="cluetip" title="{'UAM_confirmTitle'|translate}|{'UAM_confirmTitle_d'|translate}">
+      <span class="cluetip" title="{'UAM_Title2'|translate}|{'UAM_confirmTitle_d'|translate}">
         {'UAM_Title2'|@translate}
       </span>
     </div>
@@ -165,7 +165,7 @@ function uam_blockToggleDisplay( headerId, contentId )
       <fieldset>
         <ul>
           <li>
-            <label class="cluetip" title="{'UAM_infomailTitle'|translate}|{'UAM_infomailTitle_d'|translate}">
+            <label class="cluetip" title="{'UAM_Mail_Info'|translate}|{'UAM_infomailTitle_d'|translate}">
               {'UAM_Mail_Info'|@translate}
             </label>
           <br><br>
@@ -184,7 +184,7 @@ function uam_blockToggleDisplay( headerId, contentId )
           <fieldset>
             <ul>
               <li>
-                <label class="cluetip" title="{'UAM_HidePasswTitle'|translate}|{'UAM_HidePasswTitle_d'|translate}">
+                <label class="cluetip" title="{'UAM_HidePassw'|translate}|{'UAM_HidePasswTitle_d'|translate}">
                   {'UAM_HidePassw'|@translate}
                 </label>
               <br><br>
@@ -197,7 +197,7 @@ function uam_blockToggleDisplay( headerId, contentId )
               </li>
           
               <li>
-                <label class="cluetip" title="{'UAM_infotxtTitle'|translate}|{'UAM_infotxtTitle_d'|translate}">
+                <label class="cluetip" title="{'UAM_MailInfo_Text'|translate}|{'UAM_infotxtTitle_d'|translate}">
                   {'UAM_MailInfo_Text'|@translate}
                 </label>
               <br><br>
@@ -219,7 +219,7 @@ function uam_blockToggleDisplay( headerId, contentId )
         {/if}
 
         	<li>
-            <label class="cluetip" title="{'UAM_confirmmailTitle'|translate}|{'UAM_confirmmailTitle_d'|translate}">
+            <label class="cluetip" title="{'UAM_Confirm_Mail'|translate}|{'UAM_confirmmailTitle_d'|translate}">
               {'UAM_Confirm_Mail'|@translate}
             </label>
           <br><br>
@@ -241,7 +241,7 @@ function uam_blockToggleDisplay( headerId, contentId )
           <fieldset>
           <ul>
          	  <li>
-              <label class="cluetip" title="{'UAM_StuffsTitle'|translate}|{'UAM_StuffsTitle_d'|translate}">
+              <label class="cluetip" title="{'UAM_Stuffs'|translate}|{'UAM_StuffsTitle_d'|translate}">
                 {'UAM_Stuffs'|@translate}
               </label>
             <br><br>
@@ -254,7 +254,7 @@ function uam_blockToggleDisplay( headerId, contentId )
             </li>
 
             <li>
-              <label class="cluetip" title="{'UAM_AdminValidationMail'|translate}|{'UAM_AdminValidationMail_d'|translate}">
+              <label class="cluetip" title="{'UAM_AdminValidationMail_Text'|translate}|{'UAM_AdminValidationMail_d'|translate}">
                 {'UAM_AdminValidationMail_Text'|@translate}
               </label>
             <br><br>
@@ -265,7 +265,7 @@ function uam_blockToggleDisplay( headerId, contentId )
 
           <ul>
          	  <li>
-              <label class="cluetip" title="{'UAM_adminconfmailTitle'|translate}|{'UAM_adminconfmailTitle_d'|translate}">
+              <label class="cluetip" title="{'UAM_AdminConfMail'|translate}|{'UAM_adminconfmailTitle_d'|translate}">
                 {'UAM_AdminConfMail'|@translate}
               </label>
             <br><br>
@@ -278,7 +278,7 @@ function uam_blockToggleDisplay( headerId, contentId )
             </li>
             
             <li>
-              <label class="cluetip" title="{'UAM_confirmtxtTitle'|translate}|{'UAM_confirmtxtTitle_d'|translate}">
+              <label class="cluetip" title="{'UAM_ConfirmMail_Text'|translate}|{'UAM_confirmtxtTitle_d'|translate}">
                 {'UAM_ConfirmMail_Text'|@translate}
               </label>
             <br><br>
@@ -298,7 +298,7 @@ function uam_blockToggleDisplay( headerId, contentId )
 -->
 
             <li>
-              <label class="cluetip" title="{'UAM_confirmmail_custom1'|translate}|{'UAM_confirmmail_custom1_d'|translate}">
+              <label class="cluetip" title="{'UAM_confirmmail_custom_Txt1'|translate}|{'UAM_confirmmail_custom1_d'|translate}">
                 {'UAM_confirmmail_custom_Txt1'|@translate}
               </label>
             <br><br>
@@ -312,7 +312,7 @@ function uam_blockToggleDisplay( headerId, contentId )
             {/if}
 
             <li>
-              <label class="cluetip" title="{'UAM_confirmmail_custom2'|translate}|{'UAM_confirmmail_custom2_d'|translate}">
+              <label class="cluetip" title="{'UAM_confirmmail_custom_Txt2'|translate}|{'UAM_confirmmail_custom2_d'|translate}">
                 {'UAM_confirmmail_custom_Txt2'|@translate}
               </label>
             <br><br>
@@ -468,7 +468,7 @@ function uam_blockToggleDisplay( headerId, contentId )
             <fieldset>
             <ul>
               <li>
-                <label class="cluetip" title="{'UAM_validationlimitTitle'|translate}|{'UAM_validationlimitTitle_d'|translate}">
+                <label class="cluetip" title="{'UAM_ValidationLimit_Info'|translate}|{'UAM_validationlimitTitle_d'|translate}">
                   {'UAM_ValidationLimit_Info'|@translate}
                 </label>
               <br><br>
@@ -482,7 +482,7 @@ function uam_blockToggleDisplay( headerId, contentId )
               </li>
 
               <li>
-                <label class="cluetip" title="{'UAM_remailTitle'|translate}|{'UAM_remailTitle_d'|translate}">
+                <label class="cluetip" title="{'UAM_ConfirmMail_Remail'|translate}|{'UAM_remailTitle_d'|translate}">
                   {'UAM_ConfirmMail_Remail'|@translate}
                 </label>
               <br><br>
@@ -545,7 +545,7 @@ function uam_blockToggleDisplay( headerId, contentId )
           <fieldset>
           <ul>
             <li>
-              <label class="cluetip" title="{'UAM_USRAutoTitle'|translate}|{'UAM_USRAutoTitle_d'|translate}">
+              <label class="cluetip" title="{'UAM_USRAuto'|translate}|{'UAM_USRAutoTitle_d'|translate}">
                 {'UAM_USRAuto'|@translate}
               </label>
             <br><br>
@@ -559,7 +559,7 @@ function uam_blockToggleDisplay( headerId, contentId )
 
             <ul>
               <li>
-                <label class="cluetip" title="{'UAM_USRAutoDelTitle'|translate}|{'UAM_USRAutoDelTitle_d'|translate}">
+                <label class="cluetip" title="{'UAM_USRAutoDel'|translate}|{'UAM_USRAutoDelTitle_d'|translate}">
                   {'UAM_USRAutoDel'|@translate}
                 </label>
               <br><br>
@@ -573,7 +573,7 @@ function uam_blockToggleDisplay( headerId, contentId )
               </li>
 
               <li>
-                <label class="cluetip" title="{'UAM_USRAutoMailTitle'|translate}|{'UAM_USRAutoMailTitle_d'|translate}">
+                <label class="cluetip" title="{'UAM_USRAutoMail'|translate}|{'UAM_USRAutoMailTitle_d'|translate}">
                   {'UAM_USRAutoMail'|@translate}
                 </label>
               <br><br>
@@ -605,14 +605,14 @@ function uam_blockToggleDisplay( headerId, contentId )
   <div id="instructionConfig3" class="instructionBlock" >
 
     <div id="config3_header" class="instructionBlockHeaderCollapsed" onclick="uam_blockToggleDisplay('config3_header', 'Config3')">
-      <span class="cluetip" title="{'UAM_GT_MainTitle'|translate}|{'UAM_GT_MainTitle_d'|translate}">{'UAM_Title3'|@translate}</span>
+      <span class="cluetip" title="{'UAM_Title3'|translate}|{'UAM_GT_MainTitle_d'|translate}">{'UAM_Title3'|@translate}</span>
     </div>
   
     <div id="Config3" class="instructionBlockContent" style="display:none">
       <fieldset>
         <ul>
           <li>
-            <label class="cluetip" title="{'UAM_ghosttrackerTitle'|translate}|{'UAM_ghosttrackerTitle_d'|translate}">
+            <label class="cluetip" title="{'UAM_GhostTracker'|translate}|{'UAM_ghosttrackerTitle_d'|translate}">
               {'UAM_GhostTracker'|@translate}
             </label>
           <br><br>
@@ -628,7 +628,7 @@ function uam_blockToggleDisplay( headerId, contentId )
           <fieldset>          
           <ul>
             <li>
-              <label class="cluetip" title="{'UAM_gttextTitle'|translate}|{'UAM_gttextTitle_d'|translate}">
+              <label class="cluetip" title="{'UAM_GhostTracker_ReminderText'|translate}|{'UAM_gttextTitle_d'|translate}">
                 {'UAM_GhostTracker_ReminderText'|@translate}
               </label>
             <br><br>
@@ -644,7 +644,7 @@ function uam_blockToggleDisplay( headerId, contentId )
 -->
 
             <li>
-              <label class="cluetip" title="{'UAM_GTAutoTitle'|translate}|{'UAM_GTAutoTitle_d'|translate}">
+              <label class="cluetip" title="{'UAM_GTAuto'|translate}|{'UAM_GTAutoTitle_d'|translate}">
                 {'UAM_GTAuto'|@translate}
               </label>
             <br><br>
@@ -676,7 +676,7 @@ function uam_blockToggleDisplay( headerId, contentId )
                   </li>
 
                   <li>
-                    <label class="cluetip" title="{'UAM_GTAutoGpTitle'|translate}|{'UAM_GTAutoGpTitle_d'|translate}">
+                    <label class="cluetip" title="{'UAM_GTAutoGp'|translate}|{'UAM_GTAutoGpTitle_d'|translate}">
                       {'UAM_GTAutoGp'|@translate}
                     </label>
                   <br><br>
@@ -717,7 +717,7 @@ function uam_blockToggleDisplay( headerId, contentId )
 
                     <ul>
                       <li>
-                        <label class="cluetip" title="{'UAM_GTAutoMailTitle'|translate}|{'UAM_GTAutoMailTitle_d'|translate}">
+                        <label class="cluetip" title="{'UAM_GTAutoMail'|translate}|{'UAM_GTAutoMailTitle_d'|translate}">
                           {'UAM_GTAutoMail'|@translate}
                         </label>
                       <br><br>
@@ -746,7 +746,7 @@ function uam_blockToggleDisplay( headerId, contentId )
   <div id="instructionConfig5" class="instructionBlock" >
 
     <div id="config5_header" class="instructionBlockHeaderCollapsed" onclick="uam_blockToggleDisplay('config5_header', 'Config5')">
-      <span class="cluetip" title="{'UAM_miscTitle'|translate}|{'UAM_miscTitle_d'|translate}">{'UAM_Title5'|@translate}</span>
+      <span class="cluetip" title="{'UAM_Title5'|translate}|{'UAM_miscTitle_d'|translate}">{'UAM_Title5'|@translate}</span>
     </div>
   
     <div id="Config5" class="instructionBlockContent" style="display:none">
@@ -759,7 +759,7 @@ function uam_blockToggleDisplay( headerId, contentId )
         <fieldset>
           <ul>
             <li>
-              <label class="cluetip" title="{'UAM_lastvisitTitle'|translate}|{'UAM_lastvisitTitle_d'|translate}">
+              <label class="cluetip" title="{'UAM_LastVisit'|translate}|{'UAM_lastvisitTitle_d'|translate}">
                 {'UAM_LastVisit'|@translate}
               </label>
             <br><br>
@@ -772,7 +772,7 @@ function uam_blockToggleDisplay( headerId, contentId )
             </li>
 
             <li>
-              <label class="cluetip" title="{'UAM_RedirTitle'|translate}|{'UAM_RedirTitle_d'|translate}">
+              <label class="cluetip" title="{'UAM_RedirToProfile'|translate}|{'UAM_RedirTitle_d'|translate}">
                 {'UAM_RedirToProfile'|@translate}
               </label>
             <br><br>
@@ -785,7 +785,7 @@ function uam_blockToggleDisplay( headerId, contentId )
             </li>
 
             <li>
-              <label class="cluetip" title="{'UAM_PwdResetTitle'|translate}|{'UAM_PwdResetTitle_d'|translate}">
+              <label class="cluetip" title="{'UAM_PwdReset'|translate}|{'UAM_PwdResetTitle_d'|translate}">
                 {'UAM_PwdReset'|@translate}
               </label>
             <br><br>
@@ -802,7 +802,7 @@ function uam_blockToggleDisplay( headerId, contentId )
         <fieldset>
           <ul>
             <li>
-              <label class="cluetip" title="{'UAM_CustomPasswRetrTitle'|translate}|{'UAM_CustomPasswRetrTitle_d'|translate}">
+              <label class="cluetip" title="{'UAM_CustomPasswRetr'|translate}|{'UAM_CustomPasswRetrTitle_d'|translate}">
                 {'UAM_CustomPasswRetr'|@translate}
               </label>
             <br><br>
@@ -829,7 +829,7 @@ function uam_blockToggleDisplay( headerId, contentId )
 
 <div id="instructionTips" class="instructionBlock" >
   <div id="Backup_header" class="instructionBlockHeaderCollapsed" onclick="uam_blockToggleDisplay('Backup_header', 'Backup')">
-    <span class="cluetip" title="{'UAM_DumpTitle'|translate}|{'UAM_DumpTitle_d'|translate}">{'UAM_DumpTxt'|@translate}</span>
+    <span class="cluetip" title="{'UAM_DumpTxt'|translate}|{'UAM_DumpTitle_d'|translate}">{'UAM_DumpTxt'|@translate}</span>
   </div>
   
   <div id="Backup" class="instructionBlockContent" style="display:none">
@@ -858,7 +858,7 @@ function uam_blockToggleDisplay( headerId, contentId )
 
 <div id="instructionTips" class="instructionBlock" >
   <div id="Tips_header" class="instructionBlockHeaderCollapsed" onclick="uam_blockToggleDisplay('Tips_header', 'Tips')">
-    <span class="cluetip" title="{'UAM_tipsTitle'|translate}|{'UAM_tipsTitle_d'|translate}">{'UAM_Title4'|@translate}</span>
+    <span class="cluetip" title="{'UAM_Title4'|translate}|{'UAM_tipsTitle_d'|translate}">{'UAM_Title4'|@translate}</span>
   </div>
   
   <div id="Tips" class="instructionBlockContent" style="display:none">

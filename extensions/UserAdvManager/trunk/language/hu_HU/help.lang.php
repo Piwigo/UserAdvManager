@@ -1,8 +1,6 @@
 <?php
 global $lang;
 
-$lang['UAM_restricTitle'] = 'Restrictions for registrations';
-$lang['UAM_confirmTitle'] = 'Confirmations and validations of registration';
 $lang['UAM_confirmTitle_d'] = '
 - Information email generation<br>
 - Register validation email generation<br>
@@ -11,60 +9,36 @@ $lang['UAM_confirmTitle_d'] = '
 - Reminder email generation<br>
 ...
 ';
-$lang['UAM_miscTitle'] = 'Registration followed and other options';
-$lang['UAM_carexcTitle'] = 'Usernames: Exclusion of characters';
 $lang['UAM_carexcTitle_d'] = 'It may be interesting to prohibit certain characters in usernames (example: refuse login names containing &quot;@&quot;). This option allows to exclude characters or sequence of characters, events.<br>
 NB: The option can also exclude whole words.
 <br><br>
 <b style=&quot;color: red;&quot;>Warning: This option has no effect on the user names created prior to its activation.</b>';
-$lang['UAM_passwTitle'] = 'Strengthening the security level of passwords';
 $lang['UAM_passwTitle_d'] = 'Enabling this option makes mandatory the seizure of a password upon registration, and requires the password chosen by the visitor to meet a minimum level of complexity. If the threshold is not reached, the score achieved and the minimum score to be achieved are displayed, along with recommendations to increase the value of this score.<br><br>
 There is field test to measure the complexity of a password, and can afford to get an idea of the score to define complex custom.<br><br>
 Note: The score of a password is calculated based on several parameters: length, type of characters used (letters, digits, uppercase, lowercase, special characters). A score below 100 is considered low, from 100 to 500, the complexity is average; beyond 500, the security is excellent.';
 $lang['UAM_passwtestTitle'] = 'Testing the complexity of a password';
 $lang['UAM_passwtestTitle_d'] = 'Enter the password to test and then click on &quot;Score calculation&quot; to see the result.';
-$lang['UAM_passwadmTitle'] = 'Applying to administrators';
 $lang['UAM_passwadmTitle_d'] = 'An administrator can create a user account with or without application of the rule of computing complexity.<br><br>
 Note: If the user account created wants to change password and strengthening passwords for users is active, it will be subject to the rule set.';
-$lang['UAM_mailexcTitle'] = 'Exclusion of mail domains';
-$lang['UAM_infomailTitle'] = 'Information email to user';
 $lang['UAM_infomailTitle_d'] = 'This option allows to automate sending an information email to a user when registering or when changes his password or email address in their profile.<br><br>
 The content of the message sent is composed of a customizable part to introduce a little welcome note and a fixed part indicating the login name, password and email address of the user.';
-$lang['UAM_infotxtTitle'] = 'Customizing the information email';
-$lang['UAM_confirmtxtTitle'] = 'Customizing the confirmation email';
 $lang['UAM_confirmgrpTitle'] = 'Validation Groups';
 $lang['UAM_confirmgrpTitle_d'] = '<b style=&quot;color: red;&quot;>WARNING : Using validation groups requires that you have created at least one users group and is defined &quot;by default&quot; in Piwigo\'s user groups management.</b><br><br>
 The groups are validated for use in conjunction with the &quot;Confirmation of registration&quot;';
 $lang['UAM_confirmstatTitle'] = 'Validation Statutes';
 $lang['UAM_confirmstatTitle_d'] = '<b style=&quot;color: red;&quot;>WARNING : The use of status validation requires that you have kept the &quot;Guest&quot; user with default setting (as user template) for new registered. Note you can set any other user as a template for new registered. Please refer to the Piwigo\'s documentation for more details.</b><br><br>
 The Statutes are validated for use in conjunction with the &quot;Confirmation of registration&quot;';
-$lang['UAM_validationlimitTitle'] = 'Deadline for registration validation limited';
-$lang['UAM_remailTitle'] = 'Remind unvalidated users';
 $lang['UAM_remailtxt1Title'] = 'Reminder email with new key generated';
 $lang['UAM_remailtxt2Title'] = 'Reminder email without new key generated';
-$lang['UAM_ghosttrackerTitle'] = 'Ghost visitors management';
-$lang['UAM_gttextTitle'] = 'Ghost Tracker\'s reminder message';
-$lang['UAM_lastvisitTitle'] = 'Tracking registered users';
 $lang['UAM_lastvisitTitle_d'] = 'This activates a table in the &quot;Tracking users&quot; tab which are registered users listed on the gallery and the date of their last visit and time spent (in days) since their last visit. Monitoring is purely informative for the administrator of the gallery.';
-$lang['UAM_tipsTitle'] = 'Tips and Examples';
 $lang['UAM_tipsTitle_d'] = 'Tips and various examples of use';
-$lang['UAM_userlistTitle'] = 'Tracking users';
-$lang['UAM_usermanTitle'] = 'Tracking validations';
-$lang['UAM_gtTitle'] = 'Ghost visitors management';
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.14.0
-$lang['UAM_adminconfmailTitle'] = 'Confirmation of registration for admins';
 $lang['UAM_adminconfmailTitle_d'] = 'You can disable this validation only for user accounts created by the administrator via Piwigo\'s users management interface.<br><br>
 By activating this option, email validation for registration will be sent to each user created by admin.<br><br>
 By disabling this option (default), only the email information is sent (if &quot;Information email to user&quot; is enabled).';
 // --------- End: New or revised $lang ---- from version 2.14.0
-
-
-// --------- Starting below: New or revised $lang ---- from version 2.15.0
-$lang['UAM_confirmmail_custom1'] = 'Text of the confirmation page - Confirmation accepted';
-$lang['UAM_confirmmail_custom2'] = 'Text of the confirmation page - Confirmation rejected';
-// --------- End: New or revised $lang ---- from version 2.15.0
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.15.4
@@ -113,7 +87,6 @@ $lang['UAM_gtTitle_d'] = 'When Ghost Tracker is enabled and initialized, you wil
 - Generate email reminder <b>with resetting the last visit date</b>. This allows to give a wildcard to targeted visitors. If the visitor has already received a reminder, nothing prevents to resent a new mail which will reset again, in fact, the last visit date.
 <br><br>
 <b>Table Sorting Function</b>: You can sort the data displayed by clicking on the column headers. Hold the SHIFT key to sort up to 4 simultaneous columns.';
-$lang['UAM_confirmmailTitle'] = 'Confirmation of registration';
 $lang['UAM_confirmmailTitle_d'] = 'This option allows a user to either confirm registration by clicking on a link received in an email sent upon registration or the administrator to manually activate the registration.<br><br>
 In first case, the e-mail is composed of a customizable part to introduce a little welcome note and a fixed part containing the activation link that is generated from a random key that can possibly regenerate through the &quot;Tracking validations&quot; tab.<br><br>
 Dans le premier cas, le message envoyé comprend une partie fixe, avec le lien d\'activation généré à partir d\'une clef aléatoire (cette clé peut éventuellement être régénérée via l\'onglet &quot;Suivi des validations&quot;), et une partie personnalisable par un texte d\'accueil.
@@ -123,7 +96,6 @@ In second case, <b><u>there is no validation key send by email!</u></b>. Visitor
 <b style=&quot;color: red;&quot;>NB: Options &quot;Deadline for registration validation limited&quot; and &quot;Remind unvalidated users  &quot; have to be set to off when admin\'s manual validation is enabled.</b>
 <br><br>
 This option is generally used with the automatic assignment of group and/or statutes. For example, a user who has not validated their registration will be set in a specific group of users (with or without restrictions on the gallery) while a user who validated his registration shall be set in a &quot;normal&quot; group.';
-$lang['UAM_RedirTitle'] = 'Redirect to &quot;Customization&quot; page';
 // --------- End: New or revised $lang ---- from version 2.15.4
 
 
@@ -148,7 +120,6 @@ $lang['UAM_mailexcTitle_d'] = 'By default, Piwigo accepts all email addresses in
 Examples :<br>
 @hotmail.com -> excluding addresses *@hotmail.com<br>
 @hotmail -> excluding all addresses *@hotmail*';
-$lang['UAM_GTAutoTitle'] = 'Automatic management of ghosts users';
 $lang['UAM_GTAutoTitle_d'] = 'This option allows to apply rules for automated management of ghosts users.
 <br><br>Basic Principle: A user who reaches the maximum time between visits <b><u>and</u></b> has already been notified by email is considered as expired. Then you can apply automated processing rules such as automatic deletion of expired accounts or demotion by restricting access to the gallery (switch automatically to a restricted group and/or status).
 <br><br>The triggering of these automation is achieved when connecting users (any user!) to the gallery.';
@@ -156,13 +127,10 @@ $lang['UAM_GTAutoDelTitle'] = 'Custom message on deleted account';
 $lang['UAM_GTAutoGpTitle'] = 'Automatic change of group / status';
 $lang['UAM_GTAutoGpTitle_d'] = 'The automatic change of group or status equivalent to a demotion of the accounts involved and working on the same principle as the group or the status of validation (see &quot;Setting confirmations and validations of registration&quot;). Therefore be to define a group and / or status demoting access to the gallery. If this has already been defined with the use of registration confirmation function, you can use the same group / status.<br><br>
 <b style=&quot;color: red;&quot;>Important note :</b> If a ghost user still has not heard from after the time limit and despite the automatic notification by email (if enabled), he\'s automatically deleted from the database.';
-$lang['UAM_GTAutoMailTitle'] = 'Automatically sending an email when changing group / status';
-$lang['UAM_AdminValidationMail'] = 'Notification of manual registration validation';
 // --------- End: New or revised $lang ---- from version 2.16.0
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.20.0
-$lang['UAM_CustomPasswRetrTitle'] = 'Customize lost password email content';
 $lang['UAM_validationlimitTitle_d'] = 'This option allows to limit the validity of key validation email sent to new registrants. Visitors who register will have x days of time to validate their registration. After this period the validation link will expire.
 <br><br>
 This option is used in conjunction with the &quot;Confirmation of registration&quot;
@@ -175,16 +143,12 @@ $lang['UAM_remailTitle_d'] = 'This option allows you to send a reminder email to
 Refer to the &quot;Tracking validations&quot; tab.
 <br><br>
 If this option and the option &quot;Deadline for registration validation limited&quot; are activated, new options will appear below in this section to enable the automation of unvalidated users management.';
-$lang['UAM_USRAutoTitle'] = 'Automatic management of unvalidated users';
 $lang['UAM_USRAutoTitle_d'] = 'Automatic handling of unvalidated visitors is triggered each time you connect to the gallery and works as follows:
 <br><br>
 - Automatic deletion of accounts not validated in the allotted time without sending automatic email reminder -> &quot;Deadline for registration validation limited&quot; <b><u>enabled</u></b> and &quot;Remind unvalidated users&quot; <b><u>disabled</u></b>.
 <br><br>
 - Automatically sending a reminder message with a new generation of validation key and automatic deletion of accounts not validated in the time after sending the reminder -> &quot;Deadline for registration validation limited&quot; <b><u>enabled</u></b> et &quot;Remind unvalidated users&quot; <b><u>enabled</u></b>.';
-$lang['UAM_USRAutoDelTitle'] = 'Custom message on deleted account';
-$lang['UAM_USRAutoMailTitle'] = 'Automated email reminder';
 $lang['UAM_USRAutoMailTitle_d'] = 'When activated, this function will automatically send personalized content in &quot;Reminder email with new key generated&quot; to visitors who match criteria.';
-$lang['UAM_StuffsTitle'] = 'PWG Stuffs block';
 $lang['UAM_StuffsTitle_d'] = 'This enables an additional UAM block in PWG Stuffs plugin (if installed) to inform your visitors who did not validate their registration about their condition.
 <br><br>
 Please refer to the <b>Tips and Examples of Use</b> at the bottom of this page for details.';
@@ -192,7 +156,6 @@ Please refer to the <b>Tips and Examples of Use</b> at the bottom of this page f
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.20.3
-$lang['UAM_DumpTitle'] = 'Backup your configuration';
 $lang['UAM_DumpTitle_d'] = 'This allows you to save the entire configuration of the plugin in a file so you can restore it if something goes wrong (wrong manipulation or before an update, for example). By default, the file is stored in this folder ../plugins/UserAdvManager/include/backup/ and is called &quot;UAM_dbbackup.sql&quot;.
 <br><br>
 <b style=&quot;color: red;&quot;>Warning: The file is overwritten each backup action!</b>
@@ -204,7 +167,6 @@ The recovery from this interface is not supported. Use tools like phpMyAdmin.';
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.20.4
-$lang['UAM_HidePasswTitle'] = 'Password in clear text in the information email';
 $lang['UAM_HidePasswTitle_d'] = 'Choose here if you want to display the password chosen by the visitor in the information email. If you enable the option, the password will then appear in clear text. If you disable the password will not appear at all.';
 // --------- End: New or revised $lang ---- from version 2.20.4
 

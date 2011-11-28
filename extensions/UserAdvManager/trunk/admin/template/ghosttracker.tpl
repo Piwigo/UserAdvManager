@@ -39,7 +39,7 @@ $(document).ready(function()
   </fieldset>
   
   <fieldset>
-    <legend class="cluetip" title="{'UAM_gtTitle'|translate}|{'UAM_gtTitle_d'|translate}">{'UAM_GhostTracker_Title'|@translate}</legend>
+    <legend class="cluetip" title="{'UAM_GhostTracker_Title'|translate}|{'UAM_gtTitle_d'|translate}">{'UAM_GhostTracker_Title'|@translate}</legend>
     {if count($users) > 0}
       <table id="sorting" class="table2" width="97%" summary="">
         <thead>

@@ -235,7 +235,6 @@ También está disponible, el bugtracker del proyecto: <a href="http://piwigo.or
 $lang['UAM_Force_Validation'] = 'Validación manual';
 $lang['UAM_Confirm_Mail_true'] = ' Activar - La validación por el usuario';
 $lang['UAM_Confirm_Mail_local'] = ' Activar - La validación por el administrador (sin clave de validación enviado)';
-$lang['UAM_RedirToProfile'] = 'Redirigir a la página de "personalización"';
 // --------- End: New or revised $lang ---- from version 2.15.4
 
 
@@ -244,8 +243,6 @@ $lang['UAM_Expired_Group'] = '<b>Grupo</b> para el registro de usuario ha caduca
 $lang['UAM_Expired_Status'] = '<b>Estado </b> para el registro de usuario ha caducado<br>';
 $lang['UAM_GTAuto'] = 'Gestión automática de los Espíritus usuarios';
 $lang['UAM_GTAutoDel'] = 'Borrado automático de las cuentas';
-$lang['UAM_GTAutoGp'] = 'Cambio automático de grupo / estado';
-$lang['UAM_GTAutoMail'] = 'Automáticamente el envío de un correo electrónico cuando se cambia de grupo / estado';
 $lang['UAM_Deleted_Account_Redirection_Page'] = 'Acceso denegado - Cuenta destruido!';
 $lang['UAM_title_redir_page'] = 'Acceso denegado por haber destruido una cuenta!';
 $lang['UAM_Error_GTAutoMail_cannot_be_set_without_ConfirmMail'] = 'Error de coherencia en la configuración elegida:<br><br>
@@ -265,4 +262,16 @@ $lang['UAM_Stuffs'] = 'PWG Stuffs módulo';
 // --------- Starting below: New or revised $lang ---- from version 2.20.4
 $lang['UAM_HidePassw'] = 'Contraseña en texto claro en la información del correo electrónico';
 // --------- End: New or revised $lang ---- from version 2.20.4
+
+
+// --------- Starting below: New or revised $lang ---- from version 2.30.2
+$lang['UAM_RedirToProfile'] = 'Redirigir a la página de personalización';
+$lang['UAM_GTAutoGp'] = 'Cambio automático de grupo / estado / nivel de confidencialidad';
+$lang['UAM_GTAutoMail'] = 'Automáticamente el envío de un correo electrónico cuando se cambia de grupo / estado / nivel de confidencialidad';
+/*TODO*/$lang['UAM_NewFeature'] = 'New feature !';
+/*TODO*/$lang['UAM_RejectConnexion'] = 'Reject user\'s connexion until registration is validated';
+/*TODO*/$lang['UAM_RejectConnexion_Custom_Txt'] = 'Customize rejection text';
+/*TODO*/$lang['UAM_Default_RejectConnexion_Txt'] = 'Sorry, you don\'t have validate your registration yet, so you can\'t connect the gallery now. Please check your email box. You should find an email sent by the gallery, containing a link to perform your validation. If not, please contact the webmaster.';
+/*TODO*/$lang['UAM_Reject_Page_Title'] = 'Connexion not allowed !';
+// --------- End: New or revised $lang ---- from version 2.30.2
 ?>

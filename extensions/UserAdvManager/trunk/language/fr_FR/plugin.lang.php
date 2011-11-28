@@ -189,7 +189,6 @@ Egalement disponible, le bugtracker du projet: <a href="http://piwigo.org/bugs/"
 $lang['UAM_Force_Validation'] = 'Validation manuelle';
 $lang['UAM_Confirm_Mail_true'] = ' Activer - Validation par le visiteur';
 $lang['UAM_Confirm_Mail_local'] = ' Activer - Validation par l\'administrateur (pas d\'envoi de clé de validation)';
-$lang['UAM_RedirToProfile'] = 'Redirection vers la page "Personnalisation"';
 // --------- End: New or revised $lang ---- from version 2.15.4
 
 
@@ -198,7 +197,6 @@ $lang['UAM_Expired_Group'] = '<b>Groupe</b> pour les utilisateurs dont l\'inscri
 $lang['UAM_Expired_Status'] = '<b>Statut</b> pour les utilisateurs dont l\'inscription aura expirée<br>';
 $lang['UAM_GTAuto'] = 'Gestion automatique des utilisateurs fantomes';
 $lang['UAM_GTAutoDel'] = 'Suppressions automatiques des comptes';
-$lang['UAM_GTAutoMail'] = 'Email automatique sur changement de groupe / statut';
 $lang['UAM_Deleted_Account_Redirection_Page'] = 'Accès refusé - Compte détruit !';
 $lang['UAM_title_redir_page'] = 'Accès refusé pour cause de compte détruit !';
 $lang['UAM_Error_GTAutoMail_cannot_be_set_without_ConfirmMail'] = 'Erreur de cohérence dans la configuration choisie :
@@ -406,6 +404,8 @@ $lang['UAM_Bad_version_backup'] = 'La version du fichier de sauvegarde ne corres
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.30.2
+$lang['UAM_RedirToProfile'] = 'Redirection vers la page de personnalisation';
+$lang['UAM_GTAutoMail'] = 'Email automatique sur changement de groupe / statut / Niveau de confidentialité';
 $lang['UAM_NewFeature'] = 'Nouvelle option !';
 $lang['UAM_RejectConnexion'] = 'Rejeter les connexions des utilisateurs non validés';
 $lang['UAM_RejectConnexion_Custom_Txt'] = 'Personnaliser le texte de la page de rejet de la connexion';

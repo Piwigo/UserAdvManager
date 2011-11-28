@@ -194,7 +194,6 @@ Disponibile anche, il bugtracker del progetto : <a href="http://piwigo.org/bugs/
 $lang['UAM_Force_Validation'] = 'Validazione manuale';
 $lang['UAM_Confirm_Mail_true'] = ' Attivare - Validazione dal utente';
 $lang['UAM_Confirm_Mail_local'] = ' Attivare - Validazione dal amministratore (nessuna chiave di validazione inviata)';
-$lang['UAM_RedirToProfile'] = 'Ridirezione verso la pagina di personalizzazione';
 // --------- End: New or revised $lang ---- from version 2.15.4
 
 
@@ -203,8 +202,6 @@ $lang['UAM_Expired_Group'] = '<b>Gruppo</b> per gli utenti per i quali l\'iscriz
 $lang['UAM_Expired_Status'] = '<b>Statuto</b> per gli utenti per i quali l\'iscrizione sarà scaduta<br>';
 $lang['UAM_GTAuto'] = 'Gestione automatica degli utenti fantasmi';
 $lang['UAM_GTAutoDel'] = 'Cancellazione automatica dei conti';
-$lang['UAM_GTAutoGp'] = 'Cambiamento automatico del gruppo / statuto';
-$lang['UAM_GTAutoMail'] = 'Emailing di rilancio automatico per cambiamento gruppo / statuto';
 $lang['UAM_Deleted_Account_Redirection_Page'] = 'Accesso negato - Account cancellato!';
 $lang['UAM_title_redir_page'] = 'Accesso negato per causa di account cancellato!';
 $lang['UAM_Error_GTAutoMail_cannot_be_set_without_ConfirmMail'] = 'Errore di coerenza nella configurazione prescelta :
@@ -332,4 +329,16 @@ $lang['UAM_HidePassw'] = 'Password in chiaro nella email d\'informazione';
 // --------- Starting below: New or revised $lang ---- from version 2.20.11
 $lang['UAM_Error_Using_illegal_flag'] = 'Errore di sintassi! La bandierina d\'inserzione automatica [Kdays] è usata senza che l\'opzione "Termine per la validazione dell\'iscrizione" è stata attivata. Siete pregati di attivare l\'opzione o correggere il(i) campo(i) di colore rosso.';
 // --------- End: New or revised $lang ---- from version 2.20.11
+
+
+// --------- Starting below: New or revised $lang ---- from version 2.30.2
+$lang['UAM_RedirToProfile'] = 'Ridirezione verso la pagina di personalizzazione';
+$lang['UAM_GTAutoGp'] = 'Cambiamento automatico del gruppo / statuto / livello di riservatezza';
+$lang['UAM_GTAutoMail'] = 'Emailing di rilancio automatico per cambiamento gruppo / statuto / livello di riservatezza';
+/*TODO*/$lang['UAM_NewFeature'] = 'New feature !';
+/*TODO*/$lang['UAM_RejectConnexion'] = 'Reject user\'s connexion until registration is validated';
+/*TODO*/$lang['UAM_RejectConnexion_Custom_Txt'] = 'Customize rejection text';
+/*TODO*/$lang['UAM_Default_RejectConnexion_Txt'] = 'Sorry, you don\'t have validate your registration yet, so you can\'t connect the gallery now. Please check your email box. You should find an email sent by the gallery, containing a link to perform your validation. If not, please contact the webmaster.';
+/*TODO*/$lang['UAM_Reject_Page_Title'] = 'Connexion not allowed !';
+// --------- End: New or revised $lang ---- from version 2.30.2
 ?>
