@@ -103,8 +103,6 @@ $lang['UAM_UserList_Title'] = 'Monitoring registered users';
 $lang['UAM_Title_Tab'] = 'UserAdvManager - Version : ';
 $lang['UAM_SubTitle1'] = 'Plugin configuration';
 $lang['UAM_Tab_Global'] = 'Configuration';
-$lang['UAM_Title1'] = 'Setting restrictions for registrations';
-$lang['UAM_Title2'] = 'Setting confirmations and validations of registration';
 $lang['UAM_Title4'] = 'Tips and examples of use';
 $lang['UAM_No_Casse'] = 'Usernames: Case sensitivity';
 $lang['UAM_Username_Char'] = 'Usernames: Exclusion of characters';
@@ -189,7 +187,6 @@ Also available, the project\'s bugtracker: <a href="http://piwigo.org/bugs/" onc
 $lang['UAM_Force_Validation'] = 'Manual validation';
 $lang['UAM_Confirm_Mail_true'] = ' Enable - Validation by user';
 $lang['UAM_Confirm_Mail_local'] = ' Enable - Validation by admin (no validation key sent)';
-$lang['UAM_RedirToProfile'] = 'Redirect to "Customization" page';
 // --------- End: New or revised $lang ---- from version 2.15.4
 
 
@@ -198,7 +195,6 @@ $lang['UAM_Expired_Group'] = '<b>Group</b> for user\'s registration has expired<
 $lang['UAM_Expired_Status'] = '<b>Status</b> for user\'s registration has expired<br>';
 $lang['UAM_GTAuto'] = 'Automatic management of ghosts users';
 $lang['UAM_GTAutoDel'] = 'Automatic deletion of accounts';
-$lang['UAM_GTAutoMail'] = 'Automatically sending an email when changing group / status';
 $lang['UAM_Deleted_Account_Redirection_Page'] = 'Access denied - Account destroyed!';
 $lang['UAM_title_redir_page'] = 'Access denied for having an account destroyed!';
 $lang['UAM_Error_GTAutoMail_cannot_be_set_without_ConfirmMail'] = 'Consistency error in the chosen configuration:
@@ -408,6 +404,10 @@ $lang['UAM_Bad_version_backup'] = 'The version of the backup file does not match
 // --------- End: New or revised $lang ---- from version 2.30.1
 
 // --------- Starting below: New or revised $lang ---- from version 2.30.2
+$lang['UAM_RedirToProfile'] = 'Redirect to Customization page';
+$lang['UAM_Title1'] = 'Restrictions for registrations';
+$lang['UAM_Title2'] = 'Confirmations and validations of registration';
+$lang['UAM_GTAutoMail'] = 'Automatically sending an email when changing group / status / privacy level';
 $lang['UAM_NewFeature'] = 'New feature !';
 $lang['UAM_RejectConnexion'] = 'Reject user\'s connexion until registration is validated';
 $lang['UAM_RejectConnexion_Custom_Txt'] = 'Customize rejection text';

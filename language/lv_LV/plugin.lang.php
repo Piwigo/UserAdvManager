@@ -232,7 +232,6 @@ Vēl pieejasms projekta bugtracker: <a href="http://piwigo.org/bugs/" onclick="w
 $lang['UAM_Force_Validation'] = 'Manuālā apstiprināšana';
 $lang['UAM_Confirm_Mail_true'] = ' Iespējot – Apstiprinājis lietotājs';
 $lang['UAM_Confirm_Mail_local'] = ' Iespējot – Apstiprinājis administrators (netika nosūtīta apstiprināšanas atslēga)';
-$lang['UAM_RedirToProfile'] = 'Novirzīt uz "Customization" (pielāgošanas) lapu';
 // --------- End: New or revised $lang ---- from version 2.15.4
 
 
@@ -241,8 +240,6 @@ $lang['UAM_RedirToProfile'] = 'Novirzīt uz "Customization" (pielāgošanas) lap
 /* TODO */$lang['UAM_Expired_Status'] = '<b>Status</b> for user\'s registration has expired<br>';
 /* TODO */$lang['UAM_GTAuto'] = 'Automatic management of ghosts users';
 /* TODO */$lang['UAM_GTAutoDel'] = 'Automatic deletion of accounts';
-/* TODO */$lang['UAM_GTAutoGp'] = 'Automatic change of group / status';
-/* TODO */$lang['UAM_GTAutoMail'] = 'Automatically sending an email when changing group / status';
 /* TODO */$lang['UAM_Deleted_Account_Redirection_Page'] = 'Access denied - Account destroyed!';
 /* TODO */$lang['UAM_title_redir_page'] = 'Access denied for having an account destroyed!';
 /* TODO */$lang['UAM_Error_GTAutoMail_cannot_be_set_without_ConfirmMail'] = 'Consistency error in the chosen configuration:<br><br>
@@ -369,4 +366,16 @@ B. Additional Pages spraudnī :<br>
 // --------- Starting below: New or revised $lang ---- from version 2.20.11
 /*TODO*/$lang['UAM_Error_Using_illegal_flag'] = 'Syntax error ! The [Kdays] AutoText flag is used as the "Reģistrācijas apstiprināšanas limita robežlīnija" option was not activated. Please activate the option or correct the text field(s) colored in red.';
 // --------- End: New or revised $lang ---- from version 2.20.11
+
+
+// --------- Starting below: New or revised $lang ---- from version 2.30.2
+$lang['UAM_RedirToProfile'] = 'Novirzīt uz pielāgošanas lapu';
+/*TODO*/$lang['UAM_GTAutoGp'] = 'Automatic change of group / status / privacy level';
+/*TODO*/$lang['UAM_GTAutoMail'] = 'Automatically sending an email when changing group / status / privacy level';
+/*TODO*/$lang['UAM_NewFeature'] = 'New feature !';
+/*TODO*/$lang['UAM_RejectConnexion'] = 'Reject user\'s connexion until registration is validated';
+/*TODO*/$lang['UAM_RejectConnexion_Custom_Txt'] = 'Customize rejection text';
+/*TODO*/$lang['UAM_Default_RejectConnexion_Txt'] = 'Sorry, you don\'t have validate your registration yet, so you can\'t connect the gallery now. Please check your email box. You should find an email sent by the gallery, containing a link to perform your validation. If not, please contact the webmaster.';
+/*TODO*/$lang['UAM_Reject_Page_Title'] = 'Connexion not allowed !';
+// --------- End: New or revised $lang ---- from version 2.30.2
 ?>

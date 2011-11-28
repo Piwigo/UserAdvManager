@@ -1,54 +1,29 @@
 <?php
 global $lang;
 
-$lang['UAM_restricTitle'] = 'Restriction des inscriptions';
-$lang['UAM_confirmTitle'] = 'Confirmation et validation des inscriptions';
-$lang['UAM_carexcTitle'] = 'Noms d\'utilisateurs : Exclusion de certains caractères';
 $lang['UAM_carexcTitle_d'] = 'Il peut être intéressant d\'interdire certains caractères dans les noms d\'utilisateurs (exemple : refuser les logins contenant un &quot;@&quot;). Cette option permet d\'exclure les caractères, ou suite de caractères, indésirables.<br>NB: l\'option permet également d\'exclure des mots complets.
 <br><br>
 <b style=&quot;color: red;&quot;>Attention : Cette option est sans effet sur les noms d\'utilisateurs créés préalablement à son activation.</b>';
-$lang['UAM_passwTitle'] = 'Renforcement de la sécurité des mots de passe';
 $lang['UAM_passwTitle_d'] = 'L\'activation de cette option rend obligatoire la saisie d\'un mot de passe  à l\'inscription, et oblige le mot de passe choisi par le visiteur à répondre à un niveau minimum de complexité. Si ce seuil n\'est pas atteint, le score réalisé et le score minimum à atteindre sont affichés, ainsi que des recommandations pour augmenter la valeur de ce score.<br><br>
 Un champ de test permet de mesurer la complexité d\'un mot de passe, et peut permettre de se faire une idée du score à définir pour une complexité personnalisée.<br><br>
 NB: Le score d\'un mot de passe est calculé en fonction de plusieurs paramètres : longueur, types de caractères utilisés (lettres, chiffres, majuscules, minuscules, caractères spéciaux). Un score inférieur à 100 est considéré comme faible; de 100 à 500, la complexité est dans la moyenne; au-delà de 500, la sécurité est excellente.';
 $lang['UAM_passwtestTitle'] = 'Tester la complexité d\'un mot de passe';
 $lang['UAM_passwtestTitle_d'] = 'Saisir le mot de passe à tester puis cliquer sur le bouton &quot;Calcul du score&quot; pour afficher le résultat.';
-$lang['UAM_passwadmTitle'] = 'Renforcement des mots de passe pour les admins';
 $lang['UAM_passwadmTitle_d'] = 'Un administrateur peut créer un compte d\'utilisateur avec ou sans application de la règle de calcul de complexité.<br><br>
 A noter : Si l\'utilisateur du compte ainsi créé désire changer de mot de passe et que le renforcement des mots de passe pour les utilisateurs est actif, il sera soumis à la règle configurée.';
-$lang['UAM_mailexcTitle'] = 'Exclusion des domaines de messagerie';
-$lang['UAM_infomailTitle'] = 'Email d\'information';
 $lang['UAM_infomailTitle_d'] = 'Cette option permet d\'automatiser l\'envoi d\'un email d\'information à un utilisateur lorsqu\'il s\'inscrit ou modifie son mot de passe ou son adresse de messagerie dans son profil.<br><br>
 Le message envoyé comprend une partie fixe (login, mot de passe et adresse email de l\'utilisateur) et une partie personnalisable par un texte d\'accueil.';
-$lang['UAM_infotxtTitle'] = 'Personnalisation de l\'email d\'information';
-$lang['UAM_confirmtxtTitle'] = 'Personnalisation de l\'email de confirmation';
-$lang['UAM_validationlimitTitle'] = 'Limitation du délai de validation d\'inscription';
-$lang['UAM_remailTitle'] = 'Mail de rappel aux inscrits non validés';
 $lang['UAM_remailtxt1Title'] = 'Message de rappel avec regénération de clé';
 $lang['UAM_remailtxt2Title'] = 'Message de rappel sans regénération de clé';
-$lang['UAM_ghosttrackerTitle'] = 'Gestion des visiteurs fantômes (aussi appelée Ghost Tracker)';
-$lang['UAM_gttextTitle'] = 'Message de rappel Ghost Tracker';
-$lang['UAM_lastvisitTitle'] = 'Suivi des utilisateurs inscrits';
 $lang['UAM_lastvisitTitle_d'] = 'Cette option active, dans l\'onglet &quot;Suivi des utilisateurs&quot;, un tableau recensant les utilisateurs inscrits, la date de leur dernière visite et le nombre de jours écoulés depuis leur dernière visite. Il s\'agit d\'un suivi purement informatif pour l\'administrateur de la galerie.';
-$lang['UAM_tipsTitle'] = 'Astuces et exemples';
 $lang['UAM_tipsTitle_d'] = 'Astuces et exemples divers d\'utilisation';
-$lang['UAM_userlistTitle'] = 'Suivi des utilisateurs inscrits';
-$lang['UAM_usermanTitle'] = 'Suivi des validations';
-$lang['UAM_gtTitle'] = 'Gestion des visiteurs fantômes';
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.14.0
-$lang['UAM_adminconfmailTitle'] = 'Validation d\'inscription pour les admins';
 $lang['UAM_adminconfmailTitle_d'] = 'On peut ici désactiver la validation des inscriptions uniquement pour les comptes d\'utilisateurs créés par l\'administrateur via l\'interface de gestion des utilisateurs de Piwigo.<br><br>
 En activant cette option, l\'email de validation d\'inscription sera envoyé à chaque utilisateur créé par l\'admin.<br><br>
 En désactivant cette option (mode par défaut), seul l\'email d\'information est envoyé (si la fonction &quot;Email d\'information &agrave; l\'utilisateur&quot; est activée).';
 // --------- End: New or revised $lang ---- from version 2.14.0
-
-
-// --------- Starting below: New or revised $lang ---- from version 2.15.0
-$lang['UAM_confirmmail_custom1'] = 'Texte de la page de confirmation - Confirmation acceptée';
-$lang['UAM_confirmmail_custom2'] = 'Texte de la page de confirmation - Confirmation rejetée';
-// --------- End: New or revised $lang ---- from version 2.15.0
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.15.4
@@ -93,7 +68,6 @@ $lang['UAM_gtTitle_d'] = 'Lorsque la gestion des visiteurs fantômes est activé
 - Générer l\'email de rappel <b>avec réinitialisation de la date de dernière visite</b>. Ce qui permet de donner un &quot;joker&quot; au visiteur ciblé. Si le visiteur a déjà bénéficié d\'un mail de rappel, rien n\'empêche de renvoyer un nouveau mail qui réinitialisera, de fait, la date de dernière visite.
 <br><br>
 <b>Fonction de tri du tableau</b>: Vous pouvez trier les données affichées en cliquant sur les entêtes de colonnes. L\'utilisation de la touche MAJ ou SHIFT permet de trier sur 1 à 4 colonnes simultanées maximum.';
-$lang['UAM_confirmmailTitle'] = 'Confirmation d\'inscription';
 $lang['UAM_confirmmailTitle_d'] = 'Cette option permet soit à un utilisateur de valider son inscription en cliquant sur un lien reçu dans un email envoyé dès son enregistrement sur la galerie, soit à l\'administrateur d\'activer manuellement les inscriptions.<br><br>
 Dans le premier cas, le message envoyé comprend une partie fixe, avec le lien d\'activation généré à partir d\'une clef aléatoire (cette clé peut éventuellement être régénérée via l\'onglet &quot;Suivi des validations&quot;), et une partie personnalisable par un texte d\'accueil.
 <br><br>
@@ -102,9 +76,6 @@ Dans le second cas, <b><u>il n\'y a pas d\'envoi de clé de validation par email
 <b style=&quot;color: red;&quot;>NB: Les options &quot;Limitation du délai de validation d\'inscription&quot; et &quot;Mail de rappel aux inscrits non validés&quot; doivent être désactivées lorsque la validation manuelle est active.</b>
 <br><br>
 Cette option est généralement utilisée avec  l\'attribution automatique de groupe et/ou de statut. Selon qu\'il a validé ou non son inscription, il est en effet possible d\'affecter à l\'utilisateur un groupe différent, avec plus ou moins de restrictions d\'accès à la galerie.';
-$lang['UAM_RedirTitle'] = 'Redirection vers la page &quot;Personnalisation&quot;';
-$lang['UAM_RedirTitle_d'] = 'Cette option permet de rediriger automatiquement un utilisateur inscrit vers sa page de personnalisation uniquement lors de sa première connexion à la galerie.<br><br>
-A savoir: Cette fonction s\'applique également à tous les utilisateurs déjà inscrits, y compris ceux disposant du status &quot;admin&quot;, &quot;webmaster&quot; ou &quot;generique&quot;.';
 // --------- End: New or revised $lang ---- from version 2.15.4
 
 
@@ -123,17 +94,14 @@ $lang['UAM_mailexcTitle_d'] = 'Par défaut, Piwigo accepte toutes les adresses d
 Exemples :<br>
 @hotmail.com -> exclusion des adresses *@hotmail.com<br>
 @hotmail -> exclusion de toutes les adresses *@hotmail*';
-$lang['UAM_GTAutoTitle'] = 'Gestion automatique des utilisateurs fantomes';
 $lang['UAM_GTAutoTitle_d'] = 'Cette option permet d\'appliquer des règles de gestion automatisée des visiteurs fantômes.
 <br><br>Principe de base : Un utilisateur ayant atteind la limite maximale entre deux visites <b><u>et</u></b> ayant déjà été notifié par email est considéré comme expiré. On peut alors appliquer des règles de traitement automatisées telles que la suppression automatique des comptes expirés ou leur rétrogradation en restreignant l\'accès à la galerie (bascule automatique dans un groupe et/ou un statut à accès restreint).
 <br><br>Le déclenchement de ces automatismes se réalise lors de la connexion des utilisateurs (n\'importe quel utilisateur !)à la galerie.';
 $lang['UAM_GTAutoDelTitle'] = 'Message personnalisé de suppression de compte';
-$lang['UAM_AdminValidationMail'] = 'Notification de validation d\'inscription manuelle';
 // --------- End: New or revised $lang ---- from version 2.16.0
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.20.0
-$lang['UAM_CustomPasswRetrTitle'] = 'Personnaliser le contenu du mail sur mot de passe perdu';
 $lang['UAM_validationlimitTitle_d'] = 'Cette option permet de limiter le nombre de jours pendant lequel un nouvel utilisateur peut valider son inscription. Une fois ce délai expiré, le lien de validation sera invalide, et ne pourra plus être employé.
 <br><br>
 Cette option n\'est utilisable qu\'une fois l\'option &quot;Confirmation d\'inscription&quot; activée.
@@ -146,16 +114,12 @@ $lang['UAM_remailTitle_d'] = 'Cette option permet d\'envoyer un email de rappel 
 Reportez-vous à l\'onglet &quot;Suivi des validations&quot;.
 <br><br>
 Si cette option et l\'option &quot;Limitation du délai de validation d\'inscription&quot; sont activées, de nouvelles options apparaitront plus bas dans cette section pour permettre l\'automatisation de la gestion des visiteurs non validés.';
-$lang['UAM_USRAutoTitle'] = 'Gestion automatique des visiteurs non validés';
 $lang['UAM_USRAutoTitle_d'] = 'La gestion automatique des visiteurs non validés est déclenchée à chaque connexion à la galerie et fonctionne ainsi :
 <br><br>
 - Suppression automatique des comptes non validés dans le temps imparti sans envoi automatique de mail de relance -> &quot;Limitation du délai de validation d\'inscription&quot; <b><u>est actif</u></b> et &quot;Mail de rappel aux inscrits non validés&quot; <b><u>est inactif</u></b>.
 <br><br>
 - Envoi automatique d\'un message de rappel avec génération d\'une nouvelle clé de validation puis suppression automatique des comptes non validés dans le temps imparti après l\'envoi de la relance -> &quot;Limitation du délai de validation d\'inscription&quot; <b><u>est actif</u></b> et &quot;Mail de rappel aux inscrits non validés&quot; <b><u>est actif</u></b>.';
-$lang['UAM_USRAutoDelTitle'] = 'Message à la suppressions automatiques des comptes';
-$lang['UAM_USRAutoMailTitle'] = 'Message de rappel automatique';
 $lang['UAM_USRAutoMailTitle_d'] = 'Lorsque activée, cette fonction enverra automatiquement le contenu personnalisé dans &quot;Message de rappel avec regénération de clé&quot; aux visiteurs répondant au critère.';
-$lang['UAM_StuffsTitle'] = 'Module PWG Stuffs';
 $lang['UAM_StuffsTitle_d'] = 'Ceci permet d\'activer un module supplémentaire UAM dans le plugin PWG Stuffs (si installé) afin d\'informer sur leur état vos visiteurs n\'ayant pas validé leur inscription.
 <br><br>
 Veuillez vous reporter à la section <b>Astuces et exemples d\'utilisation</b> en bas de cette page pour les détails.';
@@ -163,7 +127,6 @@ Veuillez vous reporter à la section <b>Astuces et exemples d\'utilisation</b> e
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.20.4
-$lang['UAM_HidePasswTitle'] = 'Mot de passe en clair dans le mail d\'information';
 $lang['UAM_HidePasswTitle_d'] = 'Choisissez ici si vous souhaitez faire afficher le mot de passe choisi par le visiteur dans le mail d\'information. Si vous activez l\'option, le mot de passe apparaitra alors en clair. Si vous la désactivez, le mot de passe n\'apparaitra pas du tout.';
 // --------- End: New or revised $lang ---- from version 2.20.4
 
@@ -291,10 +254,8 @@ Les statuts à la validation sont à utiliser conjointement avec l\'option &quot
 $lang['UAM_confirmlevelTitle'] = 'Niveau de confidentialité';
 $lang['UAM_confirmlevelTitle_d'] = '<b style=&quot;color: red;&quot;>ATTENTION : L\'utilisation des niveaux de confidentialité à la validation nécessite que vous ayez affecté un niveau de confidentialité aux photos que vous voulez restreindre. Reportez vous à la documentation de Piwigo pour plus de détails.</b><br><br>
 Les niveaux de confidentialité à la validation sont à utiliser conjointement avec l\'option &quot;Confirmation d\'inscription&quot;';
-$lang['UAM_GTAutoGpTitle'] = 'Changement automatique de groupe / statut / niveau de confidentialité';
 $lang['UAM_GTAutoGpTitle_d'] = 'Le changement automatique de groupe, de statut ou de niveau de confidentialité équivaut à une rétrogradation des comptes concernés et fonctionne sur le même principe que le groupe, le statut ou le niveau de confidentialité à la validation (voir &quot;Paramétrage des confirmations et validations d\'inscriptions&quot;). Il conviendra donc de définir un groupe ou un statut et/ou un niveau de confidentialité rétrogradant l\'accès à la galerie. Si cela a déjà été défini avec l\'utilisation de la fonction Confirmation d\'inscription, on peut utiliser ces mêmes groupes / statuts / niveaux.<br><br>
 <b style=&quot;color: red;&quot;>Point important :</b> Si un utilisateur fantôme n\'a toujours pas donné signe de vie après le délai imparti et malgré la notification automatique par mail (si activée), il est automatiquement supprimé de la base de données.';
-$lang['UAM_GTAutoMailTitle'] = 'Email automatique sur changement de groupe / statut / Niveau de confidentialité';
 $lang['UAM_GTAutoMailTitle_d'] = 'Lorsqu\'un compte est expiré (changement de groupe, de statut ou de niveau de confidentialité rétrogradant le visiteur), un email d\'information peut être envoyé pour préciser les raisons de ce changement et le moyen de recouvrer l\'accès initial à la galerie.
 <br>Pour ce faire, un lien de revalidation de l\'inscription est joint à l\'email (génération automatique d\'une nouvelle clé de validation).<b style=&quot;color: red;&quot;>Si l\'utilisateur a déjà été notifié, son compte est automatiquement détruit.</b> 
 <br><br>
@@ -308,26 +269,22 @@ Personnalisez encore plus le contenu avec les balises d\'insertion spéciales :<
 Pour une utilisation multi-langues, vous pouvez utiliser les balises [lang] du plugin Extended Description si celui-ci est actif.
 <br><br>
 <b style=&quot;color: red;&quot;>Attention : L\'emploi de cette fonction est intimement lié à l\'option de confirmation d\'inscription par l\'utilisateur (confirmation par mail) et ne peut pas être activée sans cette option.</b>';
-$lang['UAM_GT_MainTitle'] = 'Gestion des utilisateurs fantômes';
 $lang['UAM_GT_MainTitle_d'] = '
 - Gestion automatique ou manuelle des visiteurs fantômes<br>
 - Mailing<br>
 ...
 ';
-$lang['UAM_miscTitle'] = 'Autres options';
 $lang['UAM_miscTitle_d'] = '
 - Suivi des visiteurs inscrits<br>
 - Pseudo obligatoire sur commentaire pour les visiteurs<br>
 ...
 ';
-$lang['UAM_PwdResetTitle'] = 'Renouvellement du mot de passe';
 $lang['UAM_PwdResetTitle_d'] = 'L\'activation de cette option ajoutera une nouvelle fonction dans le panneau de gestion de utilisateurs (Utilisateurs > Gérer) de Piwigo qui permet de demander le renouvellement du mot de passe pour les utilisateurs sélectionnés. De plus, une nouvelle colonne s\'ajoutera pour présenter le statut des mots de passe pour chacun d\'eux avec les valeurs suivantes :<br>
 - Mot de passe à changer : Une demande de changement de mot de passe a été programmée.<br>
 - Mot de passe modifié : Le mot de passe a été changé suite à une demande.<br>
 - Mot de passe original : Le mot de passe est celui choisi à la création du compte et n\'a jamais fait l\'objet d\'une demande de changement.<br>
 Le compte webmaster, génériques et invités (Guest) sont exclus de cette fonction.<br><br>
 Ces utilisateurs seront alors systématiquement redirigés vers leur page de personnalisation à chacune de leurs connexions tant qu\'ils n\'auront pas modifié leur mot de passe. Un message explicite sera affiché sur cette page.';
-$lang['UAM_DumpTitle'] = 'Sauvegarde et restauration de votre configuration';
 $lang['UAM_DumpTitle_d'] = 'Ceci vous permet de sauvegarder la configuration complète du plugin dans un fichier afin de pouvoir la restaurer en cas de problème (fausse manipulation ou avant une mise à jour, par exemple). Par défaut, le fichier est stocké dans le dossier ../plugins/UserAdvManager/include/backup/ et se nomme &quot;UAM_dbbackup.sql&quot;.
 <br><br>
 <b style=&quot;color: red;&quot;>Attention : Le fichier est écrasé à chaque action de sauvegarde !</b>
