@@ -30,10 +30,10 @@ $lang['UAM_reg_err_login2'] = 'le nom utilisateur ne doit pas contenir les carac
 $lang['UAM_reg_err_login5'] = 'L\'adresse email est issue d\'un prestataire interdit. Les prestataires d\'adresses email interdits à l\'inscription sont : ';
 $lang['UAM_empty_pwd'] = '[mot de passe vide]';
 $lang['UAM_no_update_pwd'] = '[mise à jour du profil sans changement du mot de passe]';
-$lang['UAM_No_validation_for_Guest'] = 'Le compte Guest n\'est pas soumis à validation';
-$lang['UAM_No_validation_for_default_user'] = 'Le compte par défaut n\'est pas soumis à validation';
-$lang['UAM_No_validation_for_Webmaster'] = 'Le compte du Webmaster n\'est pas soumis à validation';
-$lang['UAM_No_validation_for_your_account'] = 'Votre compte d\'admin n\'est pas soumis à validation';
+$lang['UAM_No_validation_for_Guest'] = 'Le compte Guest n\'est pas soumis à confirmation';
+$lang['UAM_No_validation_for_default_user'] = 'Le compte par défaut n\'est pas soumis à confirmation';
+$lang['UAM_No_validation_for_Webmaster'] = 'Le compte du Webmaster n\'est pas soumis à confirmation';
+$lang['UAM_No_validation_for_your_account'] = 'Votre compte d\'admin n\'est pas soumis à confirmation';
 
 
 /* Processing messages */
@@ -105,7 +105,7 @@ $lang['UAM_Title_Tab'] = 'UserAdvManager - Version: ';
 $lang['UAM_SubTitle1'] = 'Configuration du plugin';
 $lang['UAM_Tab_Global'] = 'Configuration';
 $lang['UAM_Title1'] = 'Paramétrage des restrictions d\'inscriptions';
-$lang['UAM_Title2'] = 'Paramétrage des confirmations et validations d\'inscriptions';
+$lang['UAM_Title2'] = 'Paramétrage des confirmations d\'inscriptions';
 $lang['UAM_Title4'] = 'Astuces et exemples d\'utilisation';
 $lang['UAM_No_Casse'] = 'Noms d\'utilisateurs : Sensibilité à la casse';
 $lang['UAM_Username_Char'] = 'Noms d\'utilisateurs : Exclusion de certains caractères';
@@ -127,22 +127,22 @@ $lang['UAM_No_Confirm_Group'] = 'Pour les utilisateurs n\'ayant pas validé leur
 $lang['UAM_Validated_Group'] = 'Pour les utilisateurs ayant validé leur inscription<br>';
 $lang['UAM_No_Confirm_Status'] = 'Pour les utilisateurs n\'ayant pas validé leur inscription<br>';
 $lang['UAM_Validated_Status'] = 'Pour les utilisateurs ayant validé leur inscription.<br>';
-$lang['UAM_ValidationLimit_Info'] = 'Limitation du délai de validation d\'inscription';
+$lang['UAM_ValidationLimit_Info'] = 'Limitation du délai de confirmation d\'inscription';
 $lang['UAM_ConfirmMail_TimeOut_true'] = ' Activer. Nombre de jours de délai: ';
 $lang['UAM_ConfirmMail_Remail'] = 'Mail de rappel aux inscrits non validés';
-$lang['UAM_ConfirmMail_ReMail_Txt1'] = 'Texte du message de rappel <b><u>avec</u></b> génération d\'une nouvelle clé de validation.';
-$lang['UAM_ConfirmMail_ReMail_Txt2'] = 'Texte du message de rappel <b><u>sans</u></b> génération d\'une nouvelle clé de validation.';
+$lang['UAM_ConfirmMail_ReMail_Txt1'] = 'Texte du message de rappel <b><u>avec</u></b> génération d\'une nouvelle clé de confirmation.';
+$lang['UAM_ConfirmMail_ReMail_Txt2'] = 'Texte du message de rappel <b><u>sans</u></b> génération d\'une nouvelle clé de confirmation.';
 
 $lang['UAM_GhostTracker'] = 'Gestion des visiteurs fantômes (Ghost Tracker)';
 $lang['UAM_GhostTracker_true'] = ' Activer. Nombre de jours maximum entre deux visites: ';
 $lang['UAM_GhostTracker_ReminderText'] = 'Texte de rappel personnalisé';
 $lang['UAM_LastVisit'] = ' Suivi des utilisateurs inscrits';
 
-$lang['UAM_Tab_UserManager'] = 'Suivi des validations';
+$lang['UAM_Tab_UserManager'] = 'Suivi des confirmations';
 
 /* UserManager Tab */
-$lang['UAM_SubTitle3'] = 'Suivi des validations';
-$lang['UAM_UserManager_Title'] = 'Suivi des validations';
+$lang['UAM_SubTitle3'] = 'Suivi des confirmations';
+$lang['UAM_UserManager_Title'] = 'Suivi des confirmations';
 /* Ghost Tracker Tab */
 $lang['UAM_SubTitle4'] = 'Ghost Tracker';
 $lang['UAM_GT_Init'] = 'Initialisation du Ghost Tracker';
@@ -155,8 +155,8 @@ $lang['UAM_Add of %s'] = 'Profil créé pour %s';
 $lang['UAM_Update of %s'] = 'Mise à jour du profil de %s';
 /* Mailing */
 $lang['UAM_Ghost_reminder_of_%s'] = '%s, ceci est un email de rappel.';
-$lang['UAM_Reminder_with_key_of_%s'] = '%s, votre clef de validation a expiré';
-$lang['UAM_Reminder_without_key_of_%s'] = '%s, votre clef de validation va expirer';
+$lang['UAM_Reminder_with_key_of_%s'] = '%s, votre clef de confirmation a expiré';
+$lang['UAM_Reminder_without_key_of_%s'] = '%s, votre clef de confirmation va expirer';
 /* Errors and Warnings */
 $lang['UAM_Err_GhostTracker_Settings'] = 'Cette page n\'est accessible que si "Gestion des visiteurs fantômes" est actif dans "Paramétrage des suivis des inscrits et autres options".';
 $lang['UAM_Err_Userlist_Settings'] = 'Cette page n\'est accessible que si le "Suivi des utilisateurs inscrits" est actif dans "Paramétrage des suivis des inscrits et autres options".';
@@ -164,7 +164,7 @@ $lang['UAM_Err_Userlist_Settings'] = 'Cette page n\'est accessible que si le "Su
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.14.0
-$lang['UAM_AdminConfMail'] = 'Validation d\'inscription pour les admins';
+$lang['UAM_AdminConfMail'] = 'Confirmation d\'inscription pour les admins';
 // --------- End: New or revised $lang ---- from version 2.14.0
 
 
@@ -173,7 +173,7 @@ $lang['UAM_confirmmail_custom_Txt1'] = 'Texte de la page de confirmation - Confi
 $lang['UAM_confirmmail_custom_Txt2'] = 'Texte de la page de confirmation - Confirmation rejetée';
 $lang['UAM_LastVisit_Date'] = 'Dernière visite le';
 $lang['UAM_Nb_Days'] = 'Ecart en jours';
-$lang['UAM_Err_UserManager_Settings'] = 'Cette page n\'est accessible que si "Confirmation d\'inscription" est actif et si un groupe de visiteurs non validés est configuré dans le "Paramétrage des confirmations et validations d\'inscriptions".';
+$lang['UAM_Err_UserManager_Settings'] = 'Cette page n\'est accessible que si "Confirmation d\'inscription" est actif et si un groupe de visiteurs non validés est configuré dans le "Paramétrage des confirmations d\'inscriptions".';
 // --------- End: New or revised $lang ---- from version 2.15.0
 
 
@@ -186,9 +186,9 @@ Egalement disponible, le bugtracker du projet: <a href="http://piwigo.org/bugs/"
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.15.4
-$lang['UAM_Force_Validation'] = 'Validation manuelle';
-$lang['UAM_Confirm_Mail_true'] = ' Activer - Validation par le visiteur';
-$lang['UAM_Confirm_Mail_local'] = ' Activer - Validation par l\'administrateur (pas d\'envoi de clé de validation)';
+$lang['UAM_Force_Validation'] = 'Confirmation manuelle';
+$lang['UAM_Confirm_Mail_true'] = ' Activer - Confirmation par le visiteur';
+$lang['UAM_Confirm_Mail_local'] = ' Activer - Confirmation par l\'administrateur (pas d\'envoi de clé de confirmation)';
 // --------- End: New or revised $lang ---- from version 2.15.4
 
 
@@ -201,13 +201,13 @@ $lang['UAM_Deleted_Account_Redirection_Page'] = 'Accès refusé - Compte détrui
 $lang['UAM_title_redir_page'] = 'Accès refusé pour cause de compte détruit !';
 $lang['UAM_Error_GTAutoMail_cannot_be_set_without_ConfirmMail'] = 'Erreur de cohérence dans la configuration choisie :
 <br><br>
-"Paramétrage des suivis des inscrits et autres options > Gestion des visiteurs fantômes (Ghost Tracker) > Gestion automatique des utilisateurs fantomes > Email automatique sur changement de groupe / statut" ne peut pas être activé si "Paramétrage des confirmations et validations d\'inscriptions > Confirmation d\'inscription - Validation par le visiteur" n\'est pas activé au préalable.
+"Paramétrage des suivis des inscrits et autres options > Gestion des visiteurs fantômes (Ghost Tracker) > Gestion automatique des utilisateurs fantomes > Email automatique sur changement de groupe / statut" ne peut pas être activé si "Paramétrage des confirmations d\'inscriptions > Confirmation d\'inscription - Confirmation par le visiteur" n\'est pas activé au préalable.
 <br><br>
 Pour garantir la cohérence, l\'option "Email automatique sur changement de groupe / statut" a été automatiquement repositionnée en "désactivé".
 <br><br>';
 $lang['UAM_Demotion of %s'] = 'Rétrogradation de %s';
-$lang['UAM_AdminValidationMail_Text'] = 'Notification de validation d\'inscription manuelle';
-$lang['UAM_Validation of %s'] = 'Validation de %s';
+$lang['UAM_AdminValidationMail_Text'] = 'Notification de confirmation d\'inscription manuelle';
+$lang['UAM_Validation of %s'] = 'Confirmation de %s';
 // --------- End: New or revised $lang ---- from version 2.16.0
 
 
@@ -218,11 +218,11 @@ $lang['UAM_USRAutoDel'] = 'Message à la suppressions automatiques des comptes';
 $lang['UAM_USRAutoMail'] = 'Message de rappel automatique';
 $lang['UAM_Disable'] = ' Désactiver (valeur par défaut)';
 $lang['UAM_Enable'] = ' Activer ';
-$lang['UAM_Tips1'] = 'Information de non validation d\'inscription avec UAM et PWG_Stuffs';
+$lang['UAM_Tips1'] = 'Information de non confirmation d\'inscription avec UAM et PWG_Stuffs';
 $lang['UAM_Tips1_txt'] = '
           <ul>
             <li>
-            Objectifs : Informer le visiteur que son inscription est en attente de validation en affichant un bloc personnel sur la page d\'accueil de la galerie; et ce, tant que l\'inscription n\'est pas validée.<br><br>
+            Objectifs : Informer le visiteur que son inscription est en attente de confirmation en affichant un bloc personnel sur la page d\'accueil de la galerie; et ce, tant que l\'inscription n\'est pas validée.<br><br>
             <b>Rappel: En fonctionnement standard, le "Guest" ne voit que les catégories publiques, sans message d\'information.</b>
             </li><br><br>
             <li>
@@ -249,18 +249,18 @@ B. Dans le plugin PWG Stuffs:<br>
               <ol>
                 <li>Aller dans l\'onglet "Ajouter un nouveau bloc"</li>
                 <li> Sélectionner "Module UAM"</li>
-                <li>Configurer le module, en indiquant son titre (ex : "Inscription en attente de validation") et sa description, et cocher uniquement "Attente" dans la liste des groupes autorisés</li>
+                <li>Configurer le module, en indiquant son titre (ex : "Inscription en attente de confirmation") et sa description, et cocher uniquement "Attente" dans la liste des groupes autorisés</li>
                 <li>Compléter le contenu du module avec le texte du message d\'information qui sera affiché aux utilisateurs non validés. Comme dans UAM, les balises de langues peuvent être utilisées si le plugin Extended Description est activé</li>
                 <li>Cocher "Afficher le module sur la page d\'accueil du site"</li>
                 <li>Valider la configuration du module</li>
               </ol>
             </li>
           </ul>';
-$lang['UAM_Tips2'] = 'Information de non validation d\'inscription avec UAM et Additional Pages';
+$lang['UAM_Tips2'] = 'Information de non confirmation d\'inscription avec UAM et Additional Pages';
 $lang['UAM_Tips2_txt'] = '
           <ul>
             <li>
-            Objectifs : Informer le visiteur que son inscription est en attente de validation en affichant une page additionnelle remplaçant la page d\'index standard de la galerie à chacune de ces connexions; et ce, tant que l\'inscription n\'est pas validée.
+            Objectifs : Informer le visiteur que son inscription est en attente de confirmation en affichant une page additionnelle remplaçant la page d\'index standard de la galerie à chacune de ces connexions; et ce, tant que l\'inscription n\'est pas validée.
             <br><br>
             Avantages par rapport à la méthode avec PWG_Stuffs : Permettre une information mise en forme et moins austère et afficher immédiatement l\'information dès l\'inscription des visiteurs.
             </li><br><br>
@@ -301,7 +301,7 @@ B. Dans le plugin Additional Pages:<br>
           </ul>';
 $lang['UAM_No_Ghosts'] = 'Pas de visiteurs fantômes pour l\'instant';
 $lang['UAM_No_Userlist'] = 'Pas de suivi de visiteurs pour l\'instant';
-$lang['UAM_No_Usermanager'] = 'Pas de validations d\'inscription pour l\'instant';
+$lang['UAM_No_Usermanager'] = 'Pas de confirmations d\'inscription pour l\'instant';
 $lang['UAM_Stuffs_Title'] = 'Module UAM';
 $lang['UAM_Stuffs_Desc'] = 'Ajoute un module d\'information des utilisateurs non validés';
 $lang['UAM_Stuffs'] = 'Module PWG Stuffs';
@@ -321,7 +321,7 @@ $lang['UAM_HidePassw'] = 'Mot de passe en clair dans le mail d\'information';
 // --------- End: New or revised $lang ---- from version 2.20.4
 
 // --------- Starting below: New or revised $lang ---- from version 2.20.11
-$lang['UAM_Error_Using_illegal_flag'] = 'Erreur de syntaxe ! Le drapeau d\'insertion automatique [Kdays] est utilisé alors que l\'option "Limitation du délai de validation d\'inscription" n\'a pas été activée. Veuillez activer l\'option ou corriger le(s) champ(s) marqué(s) en rouge.';
+$lang['UAM_Error_Using_illegal_flag'] = 'Erreur de syntaxe ! Le drapeau d\'insertion automatique [Kdays] est utilisé alors que l\'option "Limitation du délai de confirmation d\'inscription" n\'a pas été activée. Veuillez activer l\'option ou corriger le(s) champ(s) marqué(s) en rouge.';
 // --------- End: New or revised $lang ---- from version 2.20.11
 
 // --------- Starting below: New or revised $lang ---- from version 2.30.0
@@ -349,7 +349,7 @@ $lang['UAM_PwdReset_Done'] = 'Mot de passe modifié';
 $lang['UAM_PwdReset_NA'] = 'Mot de passe original';
 $lang['UAM %d user pwdreseted'] = 'Renouvellement de mot de passe demandé pour %d utilisateur';
 $lang['UAM %d users pwdreseted'] = 'Renouvellement de mot de passe demandé pour %d utilisateurs';
-$lang['UAM_Error_Using_illegal_Kdays'] = 'L\'utilisation de la balise [Kdays] n\'est autorisée que si la limitation du délai de validation d\'inscription est active. Reportez vous au champ de texte en rouge pour corriger le problème.';
+$lang['UAM_Error_Using_illegal_Kdays'] = 'L\'utilisation de la balise [Kdays] n\'est autorisée que si la limitation du délai de confirmation d\'inscription est active. Reportez vous au champ de texte en rouge pour corriger le problème.';
 $lang['UAM_Default_InfoMail_Txt'] = 'Bonjour [username] et merci de vous être inscrit sur la galerie [mygallery].
 
 Vous trouverez ci-dessous vos informations de connexion sur la galerie.';
@@ -374,14 +374,14 @@ $lang['UAM_Default_PwdRequest_Txt'] = 'Vous avez demandé le renouvellement de v
 $lang['UAM_Default_ValidationTimeout_Txt'] = 'Désolé, votre accès a été supprimé car vous n\'avez pas validé votre inscription dans le temps imparti ([Kdays] jours). Merci de vous réinscrire en prenant garde d\'utiliser une adresse de messagerie valide et accessible.';
 $lang['UAM_Default_CfmMail_Remail_Txt1'] = 'Bonjour [username].
 		
-Ceci est un message de rappel car vous n\'avez pas validé votre inscription sur [mygallery] et votre clé de validation a expiré. Pour vous permettre d\'accéder à notre galerie, votre période de validation a été réinitialisée. Vous avez donc un nouveau délai de x jours pour valider votre inscription.
+Ceci est un message de rappel car vous n\'avez pas validé votre inscription sur [mygallery] et votre clé de confirmation a expiré. Pour vous permettre d\'accéder à notre galerie, votre période de confirmation a été réinitialisée. Vous avez donc un nouveau délai de x jours pour valider votre inscription.
 
-Note: A l\'issue de cette période sans validation, votre compte sera définitivement supprimé.';
+Note: A l\'issue de cette période sans confirmation, votre compte sera définitivement supprimé.';
 $lang['UAM_Default_CfmMail_Remail_Txt2'] = 'Bonjour [username].
 
 Ceci est un message de rappel car vous vous êtes inscrit sur notre galerie [mygallery] mais vous n\'avez pas encore validé cette inscription et le délai va bientôt expirer. Un délai supplémentaire de x jours vous est accordé. Veuillez cliquer sur le lien de confirmation que vous avez reçu lors de votre inscription.
 
-Note: A l\'issue de cette période sans validation, votre compte sera définitivement supprimé.';
+Note: A l\'issue de cette période sans confirmation, votre compte sera définitivement supprimé.';
 $lang['UAM_Default_CfmMail_Custom_Txt1'] = 'Bienvenue [username]! Vous avez confirmé que vous étiez bien un humain et non une machine. Vous pouvez maintenant profiter pleinement de [mygallery]!';
 $lang['UAM_Default_CfmMail_Custom_Txt2'] = 'Votre clé d\'activation est incorrecte ou expirée ou vous avez déjà validé votre inscription. Merci de contacter le webmestre de la galerie pour résoudre le problème.';
 $lang['UAM_DumpTxt'] = 'Sauvegarde et restauration de votre configuration';
@@ -412,4 +412,9 @@ $lang['UAM_RejectConnexion_Custom_Txt'] = 'Personnaliser le texte de la page de 
 $lang['UAM_Default_RejectConnexion_Txt'] = 'Désolé, vous n\'avez pas encore validé votre inscription et vous ne pouvez pas vous connecter maintenant. Merci de vérifier votre boite aux lettres. Vous devriez y trouver un message comportant un lien pour valider votre inscription. Si ce n\'est pas le cas, merci de contacter l\'administrateur de la galerie.';
 $lang['UAM_Reject_Page_Title'] = 'Connexion refusée !';
 // --------- End: New or revised $lang ---- from version 2.30.2
+
+
+// --------- Starting below: New or revised $lang ---- from version 2.30.3
+$lang['UAM_MailExclusion_No'] = 'Exclusion des domaines de messagerie - Inaccessible car les emails ne sont pas obligatoires pour les inscriptions !';
+// --------- End: New or revised $lang ---- from version 2.30.3
 ?>

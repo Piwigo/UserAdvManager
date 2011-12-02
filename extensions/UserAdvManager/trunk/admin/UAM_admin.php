@@ -35,6 +35,7 @@ $UAM_Exclusionlist_Error = false;
 $UAM_Illegal_Flag_Error1 = false;
 $UAM_Illegal_Flag_Error2 = false;
 $UAM_Illegal_Flag_Error3 = false;
+$UAM_Email_Mandatory_Check = false;
 
 $dump_download = '';
 
@@ -517,6 +518,13 @@ ORDER BY name ASC
 	  );
   }
 
+  // Check if emails are mandatory for registrations (needed for email exclusion option)
+  // -----------------------------------------------------------------------------------
+  if (!$conf['obligatory_user_mail_address'])
+  {
+    $UAM_Email_Mandatory_Check = true;
+  }
+
   // Save last opened paragraph in configuration tab
   // -----------------------------------------------
   $nb_para=(isset($_POST["nb_para"])) ? $_POST["nb_para"]:"";
@@ -604,6 +612,7 @@ ORDER BY name ASC
     'UAM_ERROR_REPORTS2'             => $UAM_Illegal_Flag_Error1,
     'UAM_ERROR_REPORTS3'             => $UAM_Illegal_Flag_Error2,
     'UAM_ERROR_REPORTS4'             => $UAM_Illegal_Flag_Error3,
+    'UAM_EMAIL_MANDATORY'            => $UAM_Email_Mandatory_Check,
 		'UAM_CONFIRMMAIL_TIMEOUT_TRUE'	 => $conf_UAM_ConfirmMail[0]=='true' ?  'checked="checked"' : '' ,
 		'UAM_CONFIRMMAIL_TIMEOUT_FALSE'  => $conf_UAM_ConfirmMail[0]=='false' ?  'checked="checked"' : '' ,
 		'UAM_CONFIRMMAIL_DELAY'					 => $conf_UAM_ConfirmMail[1],
