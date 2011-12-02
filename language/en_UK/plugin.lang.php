@@ -30,10 +30,10 @@ $lang['UAM_reg_err_login2'] = 'Username does not have to match the following cha
 $lang['UAM_reg_err_login5'] = 'Your email provider is banned for registration. Banned email providers are: ';
 $lang['UAM_empty_pwd'] = '[empty password]';
 $lang['UAM_no_update_pwd'] = '[profile updated without password changed]';
-$lang['UAM_No_validation_for_Guest'] = 'The "Guest" account is not subject to validation';
-$lang['UAM_No_validation_for_default_user'] = 'The default account is not subject to validation';
-$lang['UAM_No_validation_for_Webmaster'] = 'The "Webmaster" account is not subject to validation';
-$lang['UAM_No_validation_for_your_account'] = 'Your personnal admin account is not subject to validation';
+$lang['UAM_No_validation_for_Guest'] = 'The "Guest" account is not subject to confirmation';
+$lang['UAM_No_validation_for_default_user'] = 'The default account is not subject to confirmation';
+$lang['UAM_No_validation_for_Webmaster'] = 'The "Webmaster" account is not subject to confirmation';
+$lang['UAM_No_validation_for_your_account'] = 'Your personnal admin account is not subject to confirmation';
 
 
 /* Processing messages */
@@ -124,22 +124,22 @@ $lang['UAM_No_Confirm_Group'] = 'Group for users who have not validated their re
 $lang['UAM_Validated_Group'] = 'Group for users who have validated their registration<br>';
 $lang['UAM_No_Confirm_Status'] = 'Status for users who have not validated their registration<br>';
 $lang['UAM_Validated_Status'] = 'Status for users who have validated their registration<br>';
-$lang['UAM_ValidationLimit_Info'] = 'Deadline for registration validation limited';
+$lang['UAM_ValidationLimit_Info'] = 'Deadline for registration confirmation limited';
 $lang['UAM_ConfirmMail_TimeOut_true'] = ' Enable. Number of days until expiration: ';
 $lang['UAM_ConfirmMail_Remail'] = 'Remind unvalidated users';
-$lang['UAM_ConfirmMail_ReMail_Txt1'] = 'Customizing the reminder message <b><u>with</u></b> new regeneration of key validation.';
-$lang['UAM_ConfirmMail_ReMail_Txt2'] = 'Customizing the reminder message <b><u>without</u></b> regeneration of key validation.';
+$lang['UAM_ConfirmMail_ReMail_Txt1'] = 'Customizing the reminder message <b><u>with</u></b> new regeneration of confirmation key.';
+$lang['UAM_ConfirmMail_ReMail_Txt2'] = 'Customizing the reminder message <b><u>without</u></b> regeneration of confirmation key.';
 
 $lang['UAM_GhostTracker'] = 'Ghost visitors management (Ghost Tracker)';
 $lang['UAM_GhostTracker_true'] = ' Enable. Maximum period in days between two visits: ';
 $lang['UAM_GhostTracker_ReminderText'] = 'Customizing Ghost Tracker\'s reminder message';
 $lang['UAM_LastVisit'] = ' Tracking registered users';
 
-$lang['UAM_Tab_UserManager'] = 'Tracking validations';
+$lang['UAM_Tab_UserManager'] = 'Tracking confirmations';
 
 /* UserManager Tab */
-$lang['UAM_SubTitle3'] = 'Tracking validations';
-$lang['UAM_UserManager_Title'] = 'Tracking validations';
+$lang['UAM_SubTitle3'] = 'Tracking confirmations';
+$lang['UAM_UserManager_Title'] = 'Tracking confirmations';
 /* Ghost Tracker Tab */
 $lang['UAM_SubTitle4'] = 'Ghost Tracker';
 $lang['UAM_GT_Init'] = 'Initializing Ghost Tracker';
@@ -154,8 +154,8 @@ $lang['UAM_Update of %s'] = 'Profile %s updated';
 
 /* Mailing */
 $lang['UAM_Ghost_reminder_of_%s'] = '%s, this is a reminder email';
-$lang['UAM_Reminder_with_key_of_%s'] = '%s, your validation key has been renewed';
-$lang['UAM_Reminder_without_key_of_%s'] = '%s, your validation key will expire';
+$lang['UAM_Reminder_with_key_of_%s'] = '%s, your confirmation key has been renewed';
+$lang['UAM_Reminder_without_key_of_%s'] = '%s, your confirmation key will expire';
 /* Errors and Warnings */
 $lang['UAM_Err_GhostTracker_Settings'] = 'This page is available only if "Ghost Tracker" is active in "Setting the registrations followed and other options".';
 $lang['UAM_Err_Userlist_Settings'] = 'This page is available only if "Monitoring registered users" is active in the "Setting the registrations followed and other options".';
@@ -172,7 +172,7 @@ $lang['UAM_confirmmail_custom_Txt1'] = 'Text of the confirmation page - Confirma
 $lang['UAM_confirmmail_custom_Txt2'] = 'Text of the confirmation page - Confirmation rejected';
 $lang['UAM_LastVisit_Date'] = 'Last visit';
 $lang['UAM_Nb_Days'] = 'Difference in days';
-$lang['UAM_Err_UserManager_Settings'] = 'This page is available only if "Confirmation of registration" is active and if a group of visitors not validated is configured in "Setting confirmations and validations of registration".';
+$lang['UAM_Err_UserManager_Settings'] = 'This page is available only if "Confirmation of registration" is active and if a group of visitors not validated is configured in "Setting confirmations of registration".';
 // --------- End: New or revised $lang ---- from version 2.15.0
 
 
@@ -184,9 +184,9 @@ Also available, the project\'s bugtracker: <a href="http://piwigo.org/bugs/" onc
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.15.4
-$lang['UAM_Force_Validation'] = 'Manual validation';
-$lang['UAM_Confirm_Mail_true'] = ' Enable - Validation by user';
-$lang['UAM_Confirm_Mail_local'] = ' Enable - Validation by admin (no validation key sent)';
+$lang['UAM_Force_Validation'] = 'Manual confirmation';
+$lang['UAM_Confirm_Mail_true'] = ' Enable - Confirmation by user';
+$lang['UAM_Confirm_Mail_local'] = ' Enable - Confirmation by admin (no confirmation key sent)';
 // --------- End: New or revised $lang ---- from version 2.15.4
 
 
@@ -199,13 +199,13 @@ $lang['UAM_Deleted_Account_Redirection_Page'] = 'Access denied - Account destroy
 $lang['UAM_title_redir_page'] = 'Access denied for having an account destroyed!';
 $lang['UAM_Error_GTAutoMail_cannot_be_set_without_ConfirmMail'] = 'Consistency error in the chosen configuration:
 <br><br>
-"Setting the registered users monitoring and other options > Ghost visitors management (Ghost Tracker) > Automatic management of ghosts users > Automatically sending an email when changing group / status" can not be activated if "Setting confirmations and validations of registration > Confirmation of registration - Validation by user" is not enabled at first.
+"Setting the registered users monitoring and other options > Ghost visitors management (Ghost Tracker) > Automatic management of ghosts users > Automatically sending an email when changing group / status" can not be activated if "Setting confirmations of registration > Confirmation of registration - Confirmation by user" is not enabled at first.
 <br><br>
 To ensure consistency, the option "Automatically sending an email when changing group / status" was automatically repositioned "disabled".
 <br><br>';
 $lang['UAM_Demotion of %s'] = 'Demotion of %s';
-$lang['UAM_AdminValidationMail_Text'] = 'Notification of manual registration validation';
-$lang['UAM_Validation of %s'] = 'Validation of %s';
+$lang['UAM_AdminValidationMail_Text'] = 'Notification of manual confirmation of registration';
+$lang['UAM_Validation of %s'] = 'Confirmation of %s';
 // --------- End: New or revised $lang ---- from version 2.16.0
 
 
@@ -248,7 +248,7 @@ B. In plugin PWG Stuffs :
               <ol>
                 <li>Go to tab "Add a new module"</li>
                 <li>Choose "UAM Module"</li>
-                <li>Configure the module, indicating the title (eg "Registration pending validation") and its description, and only check "Waiting" in the list of groups allowed</li>
+                <li>Configure the module, indicating the title (eg "Registration pending confirmation") and its description, and only check "Waiting" in the list of groups allowed</li>
                 <li>Complete content of the module with the message information to be displayed to users not validated. As UAM, languages markup may be used if the plugin is enabled Extended Description</li>
                 <li>Check "Display the module on the homepage of the site"</li>
                 <li>Validate the configuration of the module</li>
@@ -259,7 +259,7 @@ $lang['UAM_Tips2'] = 'Information of non-validated registration with UAM and Add
 $lang['UAM_Tips2_txt'] = '
           <ul>
             <li>
-            Goals: Inform the visitor that the registration is awaiting validation by posting an additional page replacing the standard index page gallery at each of these connections, and this, as registration is not approved.
+            Goals: Inform the visitor that the registration is awaiting confirmation by posting an additional page replacing the standard index page gallery at each of these connections, and this, as registration is not approved.
             <br><br>
             Advantages over the method with PWG_Stuffs: Allow formatting information and displaying the information immediately upon registration of visitors.
             </li><br><br>
@@ -321,12 +321,12 @@ $lang['UAM_HidePassw'] = 'Password in clear text in the information email';
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.20.11
-$lang['UAM_Error_Using_illegal_flag'] = 'Syntax error ! The [Kdays] AutoText flag is used as the "Deadline for registration validation limited" option was not activated. Please activate the option or correct the text field(s) colored in red.';
+$lang['UAM_Error_Using_illegal_flag'] = 'Syntax error ! The [Kdays] AutoText flag is used as the "Deadline for registration confirmation limited" option was not activated. Please activate the option or correct the text field(s) colored in red.';
 // --------- End: New or revised $lang ---- from version 2.20.11
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.30.0
-$lang['UAM_Confirm_grpstat_notice'] = 'Caution: It is advisable to use either the group or the validation statutes and not both simultaneously. The privacy level can be used in conjunction with a group or status assignment.';
+$lang['UAM_Confirm_grpstat_notice'] = 'Caution: It is advisable to use either the group or the confirmation statutes and not both simultaneously. The privacy level can be used in conjunction with a group or status assignment.';
 $lang['UAM_Confirm_Group'] = 'Groups<br>(leave ------- to not affect group)';
 $lang['UAM_Confirm_Status'] = 'Statutes<br>(leave ------- to keep the Piwigo\'s default)';
 $lang['UAM_Confirm_Level'] = 'Privacy level<br>(leave ------- to keep the Piwigo\'s default)';
@@ -350,7 +350,7 @@ $lang['UAM_PwdReset_Done'] = 'Password renewed';
 $lang['UAM_PwdReset_NA'] = 'Original password';
 $lang['UAM %d user pwdreseted'] = 'Password renewal required for %d user';
 $lang['UAM %d users pwdreseted'] = 'Password renewal required for %d users';
-$lang['UAM_Error_Using_illegal_Kdays'] = 'Using the [Kdays] tag is allowed only if the deadline for registration validation limited is active. Refer to the text field in red to correct the problem.';
+$lang['UAM_Error_Using_illegal_Kdays'] = 'Using the [Kdays] tag is allowed only if the deadline for registration confirmation limited is active. Refer to the text field in red to correct the problem.';
 $lang['UAM_Default_InfoMail_Txt'] = 'Hello [username]! Thank you to have register on [mygallery].
 
 Please, find find below your connexion information.';
@@ -375,12 +375,12 @@ $lang['UAM_Default_PwdRequest_Txt'] = 'You have requested a password reset on ou
 $lang['UAM_Default_ValidationTimeout_Txt'] = 'Sorry, your account has been deleted because you have not validated your registration in requested time ([Kdays] days). Please, retry registration with a valid and non blocked email account.';
 $lang['UAM_Default_CfmMail_Remail_Txt1'] = 'Hello [username].
 		
-This is a reminder message because you registered on our gallery [mygallery] but you do not validate your registration and your validation key has expired. To still allow you to access to our gallery, your validation period has been reset. You have again x days to validate your registration.
+This is a reminder message because you registered on our gallery [mygallery] but you do not validate your registration and your confirmation key has expired. To still allow you to access to our gallery, your confirmation period has been reset. You have again x days to validate your registration.
 
 Note: After this period, your account will be permanently deleted.';
 $lang['UAM_Default_CfmMail_Remail_Txt2'] = 'Hello [username].
 
-This is a reminder message because you registered on our gallery [mygallery] but you do not validate your registration and your validation key will expire. To allow you access to our gallery, you have x days to confirm your registration by clicking on the link in the message you should have received when you registered.
+This is a reminder message because you registered on our gallery [mygallery] but you do not validate your registration and your confirmation key will expire. To allow you access to our gallery, you have x days to confirm your registration by clicking on the link in the message you should have received when you registered.
 
 Note: After this period, your account will be permanently deleted.';
 $lang['UAM_Default_CfmMail_Custom_Txt1'] = 'Welcome [username]! You have confirmed that you are human and may now use [mygallery]!';
@@ -406,12 +406,17 @@ $lang['UAM_Bad_version_backup'] = 'The version of the backup file does not match
 // --------- Starting below: New or revised $lang ---- from version 2.30.2
 $lang['UAM_RedirToProfile'] = 'Redirect to Customization page';
 $lang['UAM_Title1'] = 'Restrictions for registrations';
-$lang['UAM_Title2'] = 'Confirmations and validations of registration';
+$lang['UAM_Title2'] = 'Confirmations of registration';
 $lang['UAM_GTAutoMail'] = 'Automatically sending an email when changing group / status / privacy level';
 $lang['UAM_NewFeature'] = 'New feature !';
 $lang['UAM_RejectConnexion'] = 'Reject user\'s connexion until registration is validated';
 $lang['UAM_RejectConnexion_Custom_Txt'] = 'Customize rejection text';
-$lang['UAM_Default_RejectConnexion_Txt'] = 'Sorry, you don\'t have validate your registration yet, so you can\'t connect the gallery now. Please check your email box. You should find an email sent by the gallery, containing a link to perform your validation. If not, please contact the webmaster.';
+$lang['UAM_Default_RejectConnexion_Txt'] = 'Sorry, you don\'t have validate your registration yet, so you can\'t connect the gallery now. Please check your email box. You should find an email sent by the gallery, containing a link to perform your confirmation. If not, please contact the webmaster.';
 $lang['UAM_Reject_Page_Title'] = 'Connexion not allowed !';
 // --------- End: New or revised $lang ---- from version 2.30.2
+
+
+// --------- Starting below: New or revised $lang ---- from version 2.30.3
+$lang['UAM_MailExclusion_No'] = 'Email domains exclusion - Not available because emails are not mandatory for registrations !';
+// --------- End: New or revised $lang ---- from version 2.30.3
 ?>
