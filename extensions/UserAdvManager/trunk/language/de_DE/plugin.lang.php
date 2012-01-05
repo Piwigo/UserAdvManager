@@ -326,19 +326,9 @@ $lang['UAM_HidePassw'] = 'Passwort im Klartext in der Informations-E-Mail';
 // --------- End: New or revised $lang ---- from version 2.20.4
 
 
-// --------- Starting below: New or revised $lang ---- from version 2.20.11
-/*TODO*/$lang['UAM_Error_Using_illegal_flag'] = 'Syntax error ! The [Kdays] AutoText flag is used as the "Anmeldeschluss Validierung beschränkt" option was not activated. Please activate the option or correct the text field(s) colored in red.';
-// --------- End: New or revised $lang ---- from version 2.20.11
-
-
 // --------- Starting below: New or revised $lang ---- from version 2.30.2
 $lang['UAM_RedirToProfile'] = 'Umleitung auf Benutzerdaten Seite';
 $lang['UAM_GTAutoGp'] = 'Automatischer Wechsel der Gruppe / Status / Vertraulichkeit Grad';
 $lang['UAM_GTAutoMail'] = 'Automatisches Versenden einer E-Mail beim Wechsel Gruppe / Status / Vertraulichkeit Grad';
-/*TODO*/$lang['UAM_NewFeature'] = 'New feature !';
-/*TODO*/$lang['UAM_RejectConnexion'] = 'Reject user\'s connexion until registration is validated';
-/*TODO*/$lang['UAM_RejectConnexion_Custom_Txt'] = 'Customize rejection text';
-/*TODO*/$lang['UAM_Default_RejectConnexion_Txt'] = 'Sorry, you don\'t have validate your registration yet, so you can\'t connect the gallery now. Please check your email box. You should find an email sent by the gallery, containing a link to perform your validation. If not, please contact the webmaster.';
-/*TODO*/$lang['UAM_Reject_Page_Title'] = 'Connexion not allowed !';
 // --------- End: New or revised $lang ---- from version 2.30.2
 ?>
