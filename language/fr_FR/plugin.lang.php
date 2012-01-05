@@ -41,8 +41,6 @@ $lang['UAM_%d_Mail_With_Key'] = '%d message avec renouvellement de clé a été 
 $lang['UAM_%d_Mails_With_Key'] = '%d messages avec renouvellement de clé ont été envoyés';
 $lang['UAM_%d_Reminder_Sent'] = '%d message de rappel a été envoyé';
 $lang['UAM_%d_Reminders_Sent'] = '%d messages de rappel ont été envoyés';
-$lang['UAM_%d_Validated_User'] = '%d Utilisateur validé manuellement';
-$lang['UAM_%d_Validated_Users'] = '%d Utilisateurs validés manuellement';
 
 
 /* Action button names */
@@ -123,13 +121,8 @@ $lang['UAM_Mail_Info'] = 'Email d\'information à l\'utilisateur:';
 $lang['UAM_MailInfo_Text'] = ' Texte d\'accueil personnalisé:';
 $lang['UAM_Confirm_Mail'] = 'Confirmation d\'inscription:';
 $lang['UAM_ConfirmMail_Text'] = ' Texte d\'accueil personnalisé:';
-$lang['UAM_No_Confirm_Group'] = 'Pour les utilisateurs n\'ayant pas validé leur inscription<br>';
-$lang['UAM_Validated_Group'] = 'Pour les utilisateurs ayant validé leur inscription<br>';
-$lang['UAM_No_Confirm_Status'] = 'Pour les utilisateurs n\'ayant pas validé leur inscription<br>';
-$lang['UAM_Validated_Status'] = 'Pour les utilisateurs ayant validé leur inscription.<br>';
 $lang['UAM_ValidationLimit_Info'] = 'Limitation du délai de confirmation d\'inscription';
 $lang['UAM_ConfirmMail_TimeOut_true'] = ' Activer. Nombre de jours de délai: ';
-$lang['UAM_ConfirmMail_Remail'] = 'Mail de rappel aux inscrits non validés';
 $lang['UAM_ConfirmMail_ReMail_Txt1'] = 'Texte du message de rappel <b><u>avec</u></b> génération d\'une nouvelle clé de confirmation.';
 $lang['UAM_ConfirmMail_ReMail_Txt2'] = 'Texte du message de rappel <b><u>sans</u></b> génération d\'une nouvelle clé de confirmation.';
 
@@ -173,7 +166,6 @@ $lang['UAM_confirmmail_custom_Txt1'] = 'Texte de la page de confirmation - Confi
 $lang['UAM_confirmmail_custom_Txt2'] = 'Texte de la page de confirmation - Confirmation rejetée';
 $lang['UAM_LastVisit_Date'] = 'Dernière visite le';
 $lang['UAM_Nb_Days'] = 'Ecart en jours';
-$lang['UAM_Err_UserManager_Settings'] = 'Cette page n\'est accessible que si "Confirmation d\'inscription" est actif et si un groupe de visiteurs non validés est configuré dans le "Paramétrage des confirmations d\'inscriptions".';
 // --------- End: New or revised $lang ---- from version 2.15.0
 
 
@@ -213,97 +205,16 @@ $lang['UAM_Validation of %s'] = 'Confirmation de %s';
 
 // --------- Starting below: New or revised $lang ---- from version 2.20.0
 $lang['UAM_CustomPasswRetr'] = 'Personnaliser le contenu du mail sur mot de passe perdu';
-$lang['UAM_USRAuto'] = 'Gestion automatique des visiteurs non validés';
 $lang['UAM_USRAutoDel'] = 'Message à la suppressions automatiques des comptes';
 $lang['UAM_USRAutoMail'] = 'Message de rappel automatique';
 $lang['UAM_Disable'] = ' Désactiver (valeur par défaut)';
 $lang['UAM_Enable'] = ' Activer ';
 $lang['UAM_Tips1'] = 'Information de non confirmation d\'inscription avec UAM et PWG_Stuffs';
-$lang['UAM_Tips1_txt'] = '
-          <ul>
-            <li>
-            Objectifs : Informer le visiteur que son inscription est en attente de confirmation en affichant un bloc personnel sur la page d\'accueil de la galerie; et ce, tant que l\'inscription n\'est pas validée.<br><br>
-            <b>Rappel: En fonctionnement standard, le "Guest" ne voit que les catégories publiques, sans message d\'information.</b>
-            </li><br><br>
-            <li>
-Pré-requis:<br>
-- Une galerie avec tout ou partie des catégories privées, visibles par les seuls utilisateurs inscrits<br>
-- Au moins les 2 groupes d\'utilisateurs Piwigo suivants : "Attente", sans aucune permission sur les catégories privées, et "Validés", avec toutes les permissions sur les catégories privées<br>
-- Le plugin UAM<br>
-- Le plugin PWG Stuffs, pour l\'ajout d\'un module spécial UAM<br>
-- En option, le plugin Extended Description, pour le support multi-langues<br>
-            </li><br><br>
-            <li>
-Réalisation:<br><br>
-A. Dans le plugin UAM:<br>
-              <ol>
-                <li>Activer la confirmation d\'inscription</li>
-                <li>Activer l\'option "Module PWG Stuffs"</li>
-                <li>Saisir un "texte d\'accueil personnalisé" qui sera joint au mail de confirmation d\'inscription. Si le plugin Extended Description est activé, les balises de langues peuvent être utilisées</li>
-                <li>Sélectionner le groupe "Attente" à la rubrique "Pour les utilisateurs n\'ayant pas validé leur inscription"</li>
-                <li>Sélectionner le groupe "Validés" à la rubrique "Pour les utilisateurs ayant validé leur inscription"</li>
-                <li>Enregistrer la configuration du plugin</li>
-              </ol>
-<br>
-B. Dans le plugin PWG Stuffs:<br>
-              <ol>
-                <li>Aller dans l\'onglet "Ajouter un nouveau bloc"</li>
-                <li> Sélectionner "Module UAM"</li>
-                <li>Configurer le module, en indiquant son titre (ex : "Inscription en attente de confirmation") et sa description, et cocher uniquement "Attente" dans la liste des groupes autorisés</li>
-                <li>Compléter le contenu du module avec le texte du message d\'information qui sera affiché aux utilisateurs non validés. Comme dans UAM, les balises de langues peuvent être utilisées si le plugin Extended Description est activé</li>
-                <li>Cocher "Afficher le module sur la page d\'accueil du site"</li>
-                <li>Valider la configuration du module</li>
-              </ol>
-            </li>
-          </ul>';
 $lang['UAM_Tips2'] = 'Information de non confirmation d\'inscription avec UAM et Additional Pages';
-$lang['UAM_Tips2_txt'] = '
-          <ul>
-            <li>
-            Objectifs : Informer le visiteur que son inscription est en attente de confirmation en affichant une page additionnelle remplaçant la page d\'index standard de la galerie à chacune de ces connexions; et ce, tant que l\'inscription n\'est pas validée.
-            <br><br>
-            Avantages par rapport à la méthode avec PWG_Stuffs : Permettre une information mise en forme et moins austère et afficher immédiatement l\'information dès l\'inscription des visiteurs.
-            </li><br><br>
-            <li>
-Pré-requis:<br>
-- Une galerie avec tout ou partie des catégories privées, visibles par les seuls utilisateurs inscrits<br>
-- Au moins les 2 groupes d\'utilisateurs Piwigo suivants : "Attente", sans aucune permission sur les catégories privées, et "Validés", avec toutes les permissions sur les catégories privées<br>
-- Le plugin UAM<br>
-- Le plugin Additional Pages, pour l\'ajout et la gestion d\'une page additionnelle remplaçant la page d\'index par défaut de la galerie<br>
-- En option, le plugin Extended Description, pour le support multi-langues<br>
-            </li><br><br>
-            <li>
-Réalisation:<br><br>
-A. Dans le plugin UAM:<br>
-              <ol>
-                <li>Activer la confirmation d\'inscription</li>
-                <li>Saisir un "texte d\'accueil personnalisé" qui sera joint au mail de confirmation d\'inscription. Si le plugin Extended Description est activé, les balises de langues peuvent être utilisées</li>
-                <li>Sélectionner le groupe "Attente" à la rubrique "Pour les utilisateurs n\'ayant pas validé leur inscription"</li>
-                <li>Sélectionner le groupe "Validés" à la rubrique "Pour les utilisateurs ayant validé leur inscription"</li>
-                <li>Enregistrer la configuration du plugin</li>
-              </ol>
-<br>
-B. Dans le plugin Additional Pages:<br>
-                <b>NOTE : La gestion des droits d\'accès aux pages additionelles pour les groupes doit être activée (voir configuration du plugin Additional Pages).</b>
-                <br>
-              <ol>
-                <li>Ajouter une nouvelle page avec au minimum les paramètres suivants :</li>
-                <ul>
-                  <li>Nom de la page : Le nom que vous souhaiter donner à la page additionnelle (ex : Inscription non validée)</li>
-                  <li>Définir comme page d\'accueil coché</li>
-                  <li>Groupes autorisés : Cocher la case correspondante au groupe "Attente" configuré dans UAM</li>
-                  <li>Contenu : Le texte que vous souhaitez faire apparaitre aux visiteurs.</li>
-                </ul>
-                <br>
-                <li>Et c\'est tout ! Seuls les visiteurs inscrits et dont l\'inscription n\'a pas été validée verront cette page d\'index additionnelle.</li>
-              </ol>
-            </li>
-          </ul>';
 $lang['UAM_No_Ghosts'] = 'Pas de visiteurs fantômes pour l\'instant';
 $lang['UAM_No_Userlist'] = 'Pas de suivi de visiteurs pour l\'instant';
 $lang['UAM_No_Usermanager'] = 'Pas de confirmations d\'inscription pour l\'instant';
 $lang['UAM_Stuffs_Title'] = 'Module UAM';
-$lang['UAM_Stuffs_Desc'] = 'Ajoute un module d\'information des utilisateurs non validés';
 $lang['UAM_Stuffs'] = 'Module PWG Stuffs';
 // --------- End: New or revised $lang ---- from version 2.20.0
 
@@ -329,8 +240,6 @@ $lang['UAM_Confirm_grpstat_notice'] = 'Attention : Il est conseillé d\'affecter
 $lang['UAM_Confirm_Group'] = 'Groupes<br>(------- pour ne pas affecter de groupe)';
 $lang['UAM_Confirm_Status'] = 'Statuts<br>(------- pour conserver la valeur par défaut de Piwigo)';
 $lang['UAM_Confirm_Level'] = 'Niveau de confidentialité<br>(------- pour conserver la valeur par défaut de Piwigo)';
-$lang['UAM_No_Valid_Level'] = 'Pour les utilisateurs n\'ayant pas validé leur inscription<br>';
-$lang['UAM_Valid_Level'] = 'Pour les utilisateurs ayant validé leur inscription.<br>';
 $lang['UAM_GTAutoGp'] = 'Changement automatique de groupe / statut / niveau de confidentialité';
 $lang['UAM_Expired_Level'] = '<b>Niveau de confidentialité</b> pour les utilisateurs dont l\'inscription aura expirée<br>';
 $lang['UAM_MiscOptions'] = 'Autres options';
@@ -353,9 +262,6 @@ $lang['UAM_Error_Using_illegal_Kdays'] = 'L\'utilisation de la balise [Kdays] n\
 $lang['UAM_Default_InfoMail_Txt'] = 'Bonjour [username] et merci de vous être inscrit sur la galerie [mygallery].
 
 Vous trouverez ci-dessous vos informations de connexion sur la galerie.';
-$lang['UAM_Default_ConfirmMail_Txt'] = 'Bonjour [username] et merci de vous être inscrit sur la galerie [mygallery].
-
-Pour terminer la procédure et pouvoir parcourir l\'ensemble des photos, merci de bien vouloir valider votre inscription en cliquant sur le lien dans ce message.';
 $lang['UAM_Default_GhstReminder_Txt'] = 'Bonjour [username].
 	
 Ceci est un message de rappel car cela fait longtemps que vous n\'êtes pas revenu visiter la galerie [mygallery]. Si vous ne souhaitez plus utiliser votre compte d\'accès, merci de bien vouloir nous le faire savoir en répondant à ce message. Votre compte sera alors immédiatement détruit.
@@ -366,24 +272,8 @@ Cordialement,
 
 L\'administrateur de la galerie [mygallery] - [myurl]';
 $lang['UAM_Default_GhstDeletion_Txt'] = 'Désolé [username], votre compte a été supprimé automatiquement pour cause de délai dépassé depuis votre dernière visite à [mygallery]. Veuillez vous réinscrire.';
-$lang['UAM_Default_GhstDemotion_Txt'] = 'Désolé [username], votre compte a été rétrogradé pour cause de dépassement de délai depuis votre dernière visite à [mygallery]. Veuillez revalider votre inscription en cliquant sur le lien suivant :';
-$lang['UAM_Default_AdminValidation_Txt'] = 'Bonjour [username] et merci de vous être inscrit sur la galerie [mygallery].
-
-Votre inscription a été validée manuellement par l\'administrateur de [mygallery]. Vous pouvez maintenant vous connecter à [myurl] et modifier vos informations de profil.';
 $lang['UAM_Default_PwdRequest_Txt'] = 'Vous avez demandé le renouvellement de votre mot de passe. Veuillez trouver ci-dessous vos nouvelles informations de connexion.';
-$lang['UAM_Default_ValidationTimeout_Txt'] = 'Désolé, votre accès a été supprimé car vous n\'avez pas validé votre inscription dans le temps imparti ([Kdays] jours). Merci de vous réinscrire en prenant garde d\'utiliser une adresse de messagerie valide et accessible.';
-$lang['UAM_Default_CfmMail_Remail_Txt1'] = 'Bonjour [username].
-		
-Ceci est un message de rappel car vous n\'avez pas validé votre inscription sur [mygallery] et votre clé de confirmation a expiré. Pour vous permettre d\'accéder à notre galerie, votre période de confirmation a été réinitialisée. Vous avez donc un nouveau délai de x jours pour valider votre inscription.
-
-Note: A l\'issue de cette période sans confirmation, votre compte sera définitivement supprimé.';
-$lang['UAM_Default_CfmMail_Remail_Txt2'] = 'Bonjour [username].
-
-Ceci est un message de rappel car vous vous êtes inscrit sur notre galerie [mygallery] mais vous n\'avez pas encore validé cette inscription et le délai va bientôt expirer. Un délai supplémentaire de x jours vous est accordé. Veuillez cliquer sur le lien de confirmation que vous avez reçu lors de votre inscription.
-
-Note: A l\'issue de cette période sans confirmation, votre compte sera définitivement supprimé.';
 $lang['UAM_Default_CfmMail_Custom_Txt1'] = 'Bienvenue [username]! Vous avez confirmé que vous étiez bien un humain et non une machine. Vous pouvez maintenant profiter pleinement de [mygallery]!';
-$lang['UAM_Default_CfmMail_Custom_Txt2'] = 'Votre clé d\'activation est incorrecte ou expirée ou vous avez déjà validé votre inscription. Merci de contacter le webmestre de la galerie pour résoudre le problème.';
 $lang['UAM_DumpTxt'] = 'Sauvegarde et restauration de votre configuration';
 $lang['UAM_Restore'] = 'Pour restaurer le fichier de sauvegarde de votre configuration. Seul le fichier sauvegardé sur le serveur est pris en compte.
 <br><br>
@@ -407,14 +297,124 @@ $lang['UAM_Bad_version_backup'] = 'La version du fichier de sauvegarde ne corres
 $lang['UAM_RedirToProfile'] = 'Redirection vers la page de personnalisation';
 $lang['UAM_GTAutoMail'] = 'Email automatique sur changement de groupe / statut / Niveau de confidentialité';
 $lang['UAM_NewFeature'] = 'Nouvelle option !';
-$lang['UAM_RejectConnexion'] = 'Rejeter les connexions des utilisateurs non validés';
 $lang['UAM_RejectConnexion_Custom_Txt'] = 'Personnaliser le texte de la page de rejet de la connexion';
-$lang['UAM_Default_RejectConnexion_Txt'] = 'Désolé, vous n\'avez pas encore validé votre inscription et vous ne pouvez pas vous connecter maintenant. Merci de vérifier votre boite aux lettres. Vous devriez y trouver un message comportant un lien pour valider votre inscription. Si ce n\'est pas le cas, merci de contacter l\'administrateur de la galerie.';
 $lang['UAM_Reject_Page_Title'] = 'Connexion refusée !';
 // --------- End: New or revised $lang ---- from version 2.30.2
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.30.3
 $lang['UAM_MailExclusion_No'] = 'Exclusion des domaines de messagerie - Inaccessible car les emails ne sont pas obligatoires pour les inscriptions !';
+$lang['UAM_USRAuto'] = 'Gestion automatique des visiteurs non confirmés';
+$lang['UAM_Default_ConfirmMail_Txt'] = 'Bonjour [username] et merci de vous être inscrit sur la galerie [mygallery].
+
+Pour terminer la procédure et pouvoir parcourir l\'ensemble des photos, merci de bien vouloir confirmer votre inscription en cliquant sur le lien dans ce message.';
+$lang['UAM_Default_GhstDemotion_Txt'] = 'Désolé [username], votre compte a été rétrogradé pour cause de dépassement de délai depuis votre dernière visite à [mygallery]. Veuillez reconfirmer votre inscription en cliquant sur le lien suivant :';
+$lang['UAM_Tips2_txt'] = '
+          <ul>
+            <li>
+            Objectifs : Informer le visiteur que son inscription est en attente de confirmation en affichant une page additionnelle remplaçant la page d\'index standard de la galerie à chacune de ces connexions; et ce, tant que l\'inscription n\'est pas confirmée.
+            <br><br>
+            Avantages par rapport à la méthode avec PWG_Stuffs : Permettre une information mise en forme et moins austère et afficher immédiatement l\'information dès l\'inscription des visiteurs.
+            </li><br><br>
+            <li>
+Pré-requis:<br>
+- Une galerie avec tout ou partie des catégories privées, visibles par les seuls utilisateurs inscrits<br>
+- Au moins les 2 groupes d\'utilisateurs Piwigo suivants : "Attente", sans aucune permission sur les catégories privées, et "Confirmés", avec toutes les permissions sur les catégories privées<br>
+- Le plugin UAM<br>
+- Le plugin Additional Pages, pour l\'ajout et la gestion d\'une page additionnelle remplaçant la page d\'index par défaut de la galerie<br>
+- En option, le plugin Extended Description, pour le support multi-langues<br>
+            </li><br><br>
+            <li>
+Réalisation:<br><br>
+A. Dans le plugin UAM:<br>
+              <ol>
+                <li>Activer la confirmation d\'inscription</li>
+                <li>Saisir un "texte d\'accueil personnalisé" qui sera joint au mail de confirmation d\'inscription. Si le plugin Extended Description est activé, les balises de langues peuvent être utilisées</li>
+                <li>Sélectionner le groupe "Attente" à la rubrique "Pour les utilisateurs n\'ayant pas confirmé leur inscription"</li>
+                <li>Sélectionner le groupe "Confirmés" à la rubrique "Pour les utilisateurs ayant confirmé leur inscription"</li>
+                <li>Enregistrer la configuration du plugin</li>
+              </ol>
+<br>
+B. Dans le plugin Additional Pages:<br>
+                <b>NOTE : La gestion des droits d\'accès aux pages additionelles pour les groupes doit être activée (voir configuration du plugin Additional Pages).</b>
+                <br>
+              <ol>
+                <li>Ajouter une nouvelle page avec au minimum les paramètres suivants :</li>
+                <ul>
+                  <li>Nom de la page : Le nom que vous souhaiter donner à la page additionnelle (ex : Inscription non confirmée)</li>
+                  <li>Définir comme page d\'accueil coché</li>
+                  <li>Groupes autorisés : Cocher la case correspondante au groupe "Attente" configuré dans UAM</li>
+                  <li>Contenu : Le texte que vous souhaitez faire apparaitre aux visiteurs.</li>
+                </ul>
+                <br>
+                <li>Et c\'est tout ! Seuls les visiteurs inscrits et dont l\'inscription n\'a pas été confirmée verront cette page d\'index additionnelle.</li>
+              </ol>
+            </li>
+          </ul>';
+$lang['UAM_%d_Validated_User'] = '%d Utilisateur confirmé manuellement';
+$lang['UAM_%d_Validated_Users'] = '%d Utilisateurs confirmés manuellement';
+$lang['UAM_No_Confirm_Group'] = 'Pour les utilisateurs n\'ayant pas confirmé leur inscription<br>';
+$lang['UAM_Validated_Group'] = 'Pour les utilisateurs ayant confirmé leur inscription<br>';
+$lang['UAM_No_Confirm_Status'] = 'Pour les utilisateurs n\'ayant pas confirmé leur inscription<br>';
+$lang['UAM_Validated_Status'] = 'Pour les utilisateurs ayant confirmé leur inscription.<br>';
+$lang['UAM_ConfirmMail_Remail'] = 'Mail de rappel aux inscrits non confirmés';
+$lang['UAM_No_Valid_Level'] = 'Pour les utilisateurs n\'ayant pas confirmé leur inscription<br>';
+$lang['UAM_Valid_Level'] = 'Pour les utilisateurs ayant confirmé leur inscription.<br>';
+$lang['UAM_Err_UserManager_Settings'] = 'Cette page n\'est accessible que si "Confirmation d\'inscription" est actif et si un groupe de visiteurs non confirmés est configuré dans le "Paramétrage des confirmations d\'inscriptions".';
+$lang['UAM_Tips1_txt'] = '
+          <ul>
+            <li>
+            Objectifs : Informer le visiteur que son inscription est en attente de confirmation en affichant un bloc personnel sur la page d\'accueil de la galerie; et ce, tant que l\'inscription n\'est pas confirmée.<br><br>
+            <b>Rappel: En fonctionnement standard, le "Guest" ne voit que les catégories publiques, sans message d\'information.</b>
+            </li><br><br>
+            <li>
+Pré-requis:<br>
+- Une galerie avec tout ou partie des catégories privées, visibles par les seuls utilisateurs inscrits<br>
+- Au moins les 2 groupes d\'utilisateurs Piwigo suivants : "Attente", sans aucune permission sur les catégories privées, et "Confirmés", avec toutes les permissions sur les catégories privées<br>
+- Le plugin UAM<br>
+- Le plugin PWG Stuffs, pour l\'ajout d\'un module spécial UAM<br>
+- En option, le plugin Extended Description, pour le support multi-langues<br>
+            </li><br><br>
+            <li>
+Réalisation:<br><br>
+A. Dans le plugin UAM:<br>
+              <ol>
+                <li>Activer la confirmation d\'inscription</li>
+                <li>Activer l\'option "Module PWG Stuffs"</li>
+                <li>Saisir un "texte d\'accueil personnalisé" qui sera joint au mail de confirmation d\'inscription. Si le plugin Extended Description est activé, les balises de langues peuvent être utilisées</li>
+                <li>Sélectionner le groupe "Attente" à la rubrique "Pour les utilisateurs n\'ayant pas confirmé leur inscription"</li>
+                <li>Sélectionner le groupe "Confirmés" à la rubrique "Pour les utilisateurs ayant confirmé leur inscription"</li>
+                <li>Enregistrer la configuration du plugin</li>
+              </ol>
+<br>
+B. Dans le plugin PWG Stuffs:<br>
+              <ol>
+                <li>Aller dans l\'onglet "Ajouter un nouveau bloc"</li>
+                <li> Sélectionner "Module UAM"</li>
+                <li>Configurer le module, en indiquant son titre (ex : "Inscription en attente de confirmation") et sa description, et cocher uniquement "Attente" dans la liste des groupes autorisés</li>
+                <li>Compléter le contenu du module avec le texte du message d\'information qui sera affiché aux utilisateurs non confirmés. Comme dans UAM, les balises de langues peuvent être utilisées si le plugin Extended Description est activé</li>
+                <li>Cocher "Afficher le module sur la page d\'accueil du site"</li>
+                <li>Valider la configuration du module</li>
+              </ol>
+            </li>
+          </ul>';
+$lang['UAM_Stuffs_Desc'] = 'Ajoute un module d\'information des utilisateurs non confirmés';
+$lang['UAM_Default_AdminValidation_Txt'] = 'Bonjour [username] et merci de vous être inscrit sur la galerie [mygallery].
+
+Votre inscription a été confirmée manuellement par l\'administrateur de [mygallery]. Vous pouvez maintenant vous connecter à [myurl] et modifier vos informations de profil.';
+$lang['UAM_Default_ValidationTimeout_Txt'] = 'Désolé, votre accès a été supprimé car vous n\'avez pas confirmé votre inscription dans le temps imparti ([Kdays] jours). Merci de vous réinscrire en prenant garde d\'utiliser une adresse de messagerie valide et accessible.';
+$lang['UAM_Default_CfmMail_Remail_Txt2'] = 'Bonjour [username].
+
+Ceci est un message de rappel car vous vous êtes inscrit sur notre galerie [mygallery] mais vous n\'avez pas encore confirmé cette inscription et le délai va bientôt expirer. Un délai supplémentaire de x jours vous est accordé. Veuillez cliquer sur le lien de confirmation que vous avez reçu lors de votre inscription.
+
+Note: A l\'issue de cette période sans confirmation, votre compte sera définitivement supprimé.';
+$lang['UAM_Default_CfmMail_Custom_Txt2'] = 'Votre clé d\'activation est incorrecte ou expirée ou vous avez déjà confirmé votre inscription. Merci de contacter le webmestre de la galerie pour résoudre le problème.';
+$lang['UAM_RejectConnexion'] = 'Rejeter les connexions des utilisateurs non confirmés';
+$lang['UAM_Default_CfmMail_Remail_Txt1'] = 'Bonjour [username].
+		
+Ceci est un message de rappel car vous n\'avez pas confirmé votre inscription sur [mygallery] et votre clé de confirmation a expiré. Pour vous permettre d\'accéder à notre galerie, votre période de confirmation a été réinitialisée. Vous avez donc un nouveau délai de x jours pour confirmer votre inscription.
+
+Note: A l\'issue de cette période sans confirmation, votre compte sera définitivement supprimé.';
+$lang['UAM_Default_RejectConnexion_Txt'] = 'Désolé, vous n\'avez pas encore confirmé votre inscription et vous ne pouvez pas vous connecter maintenant. Merci de vérifier votre boite aux lettres. Vous devriez y trouver un message comportant un lien pour confirmer votre inscription. Si ce n\'est pas le cas, merci de contacter l\'administrateur de la galerie.';
 // --------- End: New or revised $lang ---- from version 2.30.3
 ?>

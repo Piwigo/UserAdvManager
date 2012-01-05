@@ -27,40 +27,6 @@ En désactivant cette option (mode par défaut), seul l\'email d\'information es
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.15.4
-$lang['UAM_restricTitle_d'] = '
-- Exclusion de caractères dans les noms d\'utilisateurs<br>
-- Renforcement des mots de passe<br>
-- Exclusion des domaines de messagerie<br>
-...
-';
-$lang['UAM_userlistTitle_d'] = 'Cette page est à titre d\'information pour l\'administrateur. Elle affiche la liste de tous les utilisateurs inscrits sur la galerie en faisant apparaitre la date et le nombre de jours depuis leur dernière visite. La liste est triée dans l\'ordre croissant du nombre de jours.
-<br><br>
-<b><u>Uniquement lorsque le Ghost Tracker est actif</u></b>, le nombre de jours sans visite s\'affiche selon le code couleur suivant, en fonction du délai maximum paramétré dans les options du Ghost Tracker :
-<br>
-- <b style=&quot;color: lime;&quot;>En vert</b> : Lorsque l\'utilisateur a visité la galerie <b style=&quot;color: lime;&quot;><u>depuis moins de 50%</u></b> du délai maximum renseigné dans le Ghost Tracker.<br>
-- <b style=&quot;color: orange;&quot;>En orange</b> : Lorsque l\'utilisateur a visité la galerie <b style=&quot;color: orange;&quot;><u>entre 50% et 99%</u></b> du délai maximum renseigné dans le Ghost Tracker.<br>
-- <b style=&quot;color: red;&quot;>En rouge</b> : Lorsque l\'utilisateur a visité la galerie <b style=&quot;color: red;&quot;><u>depuis 100% et plus</u></b> du délai maximum renseigné dans le Ghost Tracker. <b><u>Dans ce cas, l\'utilisateur doit également apparaitre dans le tableau du Ghost Tracker.</u></b><br>
-<br>
-Exemple:
-<br>
-Le délai maximum du Ghost Tracker est configuré à 100 jours.
-<br>
-Un utilisateur apparaitra en vert s\'il a visité la galerie depuis moins de 50 jours, en orange si sa dernière visite s\'est déroulée entre 50 et 99 jours et en rouge à 100 jours et au-delà.
-<br><br>
-<b>A NOTER</b>: La liste n\'affiche pas les inscrits qui n\'auraient pas validé leur inscription (si l\'option de confirmation de l\'inscription est activée). Ces utilisateurs sont alors gérés de manière particulière dans l\'onglet &quot;Suivi des confirmations&quot;.
-<br><br>
-<b>Fonction de tri du tableau</b>: Vous pouvez trier les données affichées en cliquant sur les entêtes de colonnes. L\'utilisation de la touche MAJ ou SHIFT permet de trier sur 1 à 4 colonnes simultanées maximum.';
-$lang['UAM_usermanTitle_d'] = 'Lorsque la limitation du délai d\'inscription est activée, vous trouverez ci-dessous la liste des utilisateurs en attente de confirmation d\'inscription <b style=&quot;text-decoration: underline;&quot;>qu\'ils soient ou pas</b> dans les délais pour la valider.<br><br>La date d\'enregistrement s\'affiche en vert lorsque l\'utilisateur concerné est en dessous du temps limite pour valider son inscription. Dans ce cas, la clé de confirmation est toujours valide et on pourra envoyer un email avec ou sans régénération de clé.<br><br>Lorsque la date d\'enregistrement s\'affiche en rouge, le délai de confirmation est expiré. Dans ce cas, on enverra obligatoirement un email avec régénération de clé si on veut permettre à cet utilisateur de pouvoir valider son inscription.<br><br>Dans tous les cas, il est possible de forcer manuellement la confirmation.<br><br>Dans cette vue, vous pouvez :
-<br><br>
-- Supprimer manuellement les comptes <b>(purge manuelle)</b>
-<br>
-- Générer l\'email de rappel <b>sans génération</b> d\'une nouvelle clef. Rappel : Cette fonction ne réinitialise pas la date d\'inscription du visiteur ciblé et le délai d\'expiration est toujours d\'actualité.
-<br>
-- Générer l\'email de rappel <b>avec génération</b> d\'une nouvelle clef. Rappel : Cette fonction réinitialise également la date d\'inscription du visiteur ciblé ce qui équivaut à prolonger le délai de confirmation.
-<br>
-- Valider manuellement une inscription en attente de confirmation même si la date d\'expiration est révolue <b>(forçage de la confirmation)</b>.
-<br><br>
-<b>Fonction de tri du tableau</b>: Vous pouvez trier les données affichées en cliquant sur les entêtes de colonnes. L\'utilisation de la touche MAJ ou SHIFT permet de trier sur 1 à 4 colonnes simultanées maximum.';
 $lang['UAM_gtTitle_d'] = 'Lorsque la gestion des visiteurs fantômes est activée et initialisée, vous trouverez ci-dessous la liste des visiteurs inscrits sur votre galerie et qui ne sont pas revenus depuis x jours. &quot;x&quot; étant le nombre de jours paramétrés dans l\'onglet de configuration générale. De plus, vous trouverez une colonne précisant si un mail de rappel a déjà été envoyé aux visiteurs ciblés, vous permettant de visualiser d\'un coup d\'oeil et traiter les visiteurs qui n\'auraient pas tenu compte du rappel.<br><br>Dans cette vue, vous pouvez :
 <br><br>
 - Supprimer manuellement les comptes <b>(purge manuelle)</b>
@@ -68,14 +34,6 @@ $lang['UAM_gtTitle_d'] = 'Lorsque la gestion des visiteurs fantômes est activé
 - Générer l\'email de rappel <b>avec réinitialisation de la date de dernière visite</b>. Ce qui permet de donner un &quot;joker&quot; au visiteur ciblé. Si le visiteur a déjà bénéficié d\'un mail de rappel, rien n\'empêche de renvoyer un nouveau mail qui réinitialisera, de fait, la date de dernière visite.
 <br><br>
 <b>Fonction de tri du tableau</b>: Vous pouvez trier les données affichées en cliquant sur les entêtes de colonnes. L\'utilisation de la touche MAJ ou SHIFT permet de trier sur 1 à 4 colonnes simultanées maximum.';
-$lang['UAM_confirmmailTitle_d'] = 'Cette option permet soit à un utilisateur de valider son inscription en cliquant sur un lien reçu dans un email envoyé dès son enregistrement sur la galerie, soit à l\'administrateur d\'activer manuellement les inscriptions.<br><br>
-Dans le premier cas, le message envoyé comprend une partie fixe, avec le lien d\'activation généré à partir d\'une clef aléatoire (cette clé peut éventuellement être régénérée via l\'onglet &quot;Suivi des confirmations&quot;), et une partie personnalisable par un texte d\'accueil.
-<br><br>
-Dans le second cas, <b><u>il n\'y a pas d\'envoi de clé de confirmation par email</u></b>. Les visiteurs doivent patienter que l\'administrateur valide lui même leur inscription via l\'onglet &quot;Suivi des confirmations&quot;. Il est conseillé d\'activer la notification des administrateurs lors des inscriptions (voir la configuration des options de Piwigo) et d\'utiliser la fonction &quot;Email d\'information à l\'utilisateur&quot; pour avertir les nouveaux inscrits de la nécessité de patienter avant activation de leur compte.
-<br>
-<b style=&quot;color: red;&quot;>NB: Les options &quot;Limitation du délai de confirmation d\'inscription&quot; et &quot;Mail de rappel aux inscrits non validés&quot; doivent être désactivées lorsque la confirmation manuelle est active.</b>
-<br><br>
-Cette option est généralement utilisée avec  l\'attribution automatique de groupe et/ou de statut. Selon qu\'il a validé ou non son inscription, il est en effet possible d\'affecter à l\'utilisateur un groupe différent, avec plus ou moins de restrictions d\'accès à la galerie.';
 // --------- End: New or revised $lang ---- from version 2.15.4
 
 
@@ -95,31 +53,6 @@ $lang['UAM_GTAutoTitle_d'] = 'Cette option permet d\'appliquer des règles de ge
 <br><br>Le déclenchement de ces automatismes se réalise lors de la connexion des utilisateurs (n\'importe quel utilisateur !)à la galerie.';
 $lang['UAM_GTAutoDelTitle'] = 'Message personnalisé de suppression de compte';
 // --------- End: New or revised $lang ---- from version 2.16.0
-
-
-// --------- Starting below: New or revised $lang ---- from version 2.20.0
-$lang['UAM_validationlimitTitle_d'] = 'Cette option permet de limiter le nombre de jours pendant lequel un nouvel utilisateur peut valider son inscription. Une fois ce délai expiré, le lien de confirmation sera invalide, et ne pourra plus être employé.
-<br><br>
-Cette option n\'est utilisable qu\'une fois l\'option &quot;Confirmation d\'inscription&quot; activée.
-<br><br>
-Si cette option et l\'option &quot;Mail de rappel aux inscrits non validés&quot; sont activées, de nouvelles options apparaitront plus bas dans cette section pour permettre l\'automatisation de la gestion des visiteurs non validés.';
-$lang['UAM_remailTitle_d'] = 'Cette option permet d\'envoyer un email de rappel aux utilisateurs n\'ayant pas validé leur inscription dans les temps. Elle n\'a d\'effet qu\'une fois l\'option &quot;Confirmation d\'inscription&quot; activée.
-<br><br>
-2 types d\'email peuvent être envoyés : Avec ou sans régénération de la clef de confirmation. En fonction du cas, le contenu  des emails peut être personnalisé.
-<br><br>
-Reportez-vous à l\'onglet &quot;Suivi des confirmations&quot;.
-<br><br>
-Si cette option et l\'option &quot;Limitation du délai de confirmation d\'inscription&quot; sont activées, de nouvelles options apparaitront plus bas dans cette section pour permettre l\'automatisation de la gestion des visiteurs non validés.';
-$lang['UAM_USRAutoTitle_d'] = 'La gestion automatique des visiteurs non validés est déclenchée à chaque connexion à la galerie et fonctionne ainsi :
-<br><br>
-- Suppression automatique des comptes non validés dans le temps imparti sans envoi automatique de mail de relance -> &quot;Limitation du délai de confirmation d\'inscription&quot; <b><u>est actif</u></b> et &quot;Mail de rappel aux inscrits non validés&quot; <b><u>est inactif</u></b>.
-<br><br>
-- Envoi automatique d\'un message de rappel avec génération d\'une nouvelle clé de confirmation puis suppression automatique des comptes non validés dans le temps imparti après l\'envoi de la relance -> &quot;Limitation du délai de confirmation d\'inscription&quot; <b><u>est actif</u></b> et &quot;Mail de rappel aux inscrits non validés&quot; <b><u>est actif</u></b>.';
-$lang['UAM_USRAutoMailTitle_d'] = 'Lorsque activée, cette fonction enverra automatiquement le contenu personnalisé dans &quot;Message de rappel avec regénération de clé&quot; aux visiteurs répondant au critère.';
-$lang['UAM_StuffsTitle_d'] = 'Ceci permet d\'activer un module supplémentaire UAM dans le plugin PWG Stuffs (si installé) afin d\'informer sur leur état vos visiteurs n\'ayant pas validé leur inscription.
-<br><br>
-Veuillez vous reporter à la section <b>Astuces et exemples d\'utilisation</b> en bas de cette page pour les détails.';
-// --------- End: New or revised $lang ---- from version 2.20.0
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.20.4
@@ -293,20 +226,79 @@ La restauration à partir de cette interface ne prend en charge que la sauvegard
 // --------- End: New or revised $lang ---- from version 2.30.0
 
 
-// --------- Starting below: New or revised $lang ---- from version 2.30.2
-$lang['UAM_RejectConnexion_d'] = 'Si activée, les nouveaux inscrits qui n\'ont pas validé leur inscription ne pourront pas se connecter à la galerie. Ils seront redirigés vers une page spéciale pour les informer de cet état.<br><br>
-<b style=&quot;color: red;&quot;>Attention - Cette option fonctionne uniquement avec les groupes de confirmation ! Référez-vous ci-dessous pour affecter les paramètres de groupes requis.</b>';
-$lang['UAM_RejectConnexion_Custom_Txt_d'] = 'Personnalisez ici votre message d\'explication informant les utilisateurs non validés qu\'ils ne pourront pas se connecter à la galerie tant qu\'ils n\'auront pas validé leur inscription.
-<br><br>
-Ce champ est compatible avec l\'extension FCK Editor et, pour une utilisation multi-langues, vous pouvez utiliser les balises [lang] du plugin Extended Description si celui-ci est actif.';
-// --------- End: New or revised $lang ---- from version 2.30.2
-
-
 // --------- Starting below: New or revised $lang ---- from version 2.30.3
 $lang['UAM_mailexcTitle_d'] = 'Par défaut, Piwigo accepte toutes les adresses de messagerie au format xxx@yyy.zz. L\'activation de cette option permet d\'exclure certains domaines selon le format : @[nom_du_domaine].[extension_du_domaine].<br><br>
 Exemples :<br>
 @hotmail.com -> exclusion des adresses *@hotmail.com<br>
 @hotmail -> exclusion de toutes les adresses *@hotmail*<br><br>
 <b style=&quot;color: red;&quot;>Attention ! Cette fonction n\'est accessible que si les emails sont obligatoires pour les inscriptions ! Reportez-vous aux options de configuration de Piwigo.';
+$lang['UAM_remailTitle_d'] = 'Cette option permet d\'envoyer un email de rappel aux utilisateurs n\'ayant pas confirmé leur inscription dans les temps. Elle n\'a d\'effet qu\'une fois l\'option &quot;Confirmation d\'inscription&quot; activée.
+<br><br>
+2 types d\'email peuvent être envoyés : Avec ou sans régénération de la clef de confirmation. En fonction du cas, le contenu  des emails peut être personnalisé.
+<br><br>
+Reportez-vous à l\'onglet &quot;Suivi des confirmations&quot;.
+<br><br>
+Si cette option et l\'option &quot;Limitation du délai de confirmation d\'inscription&quot; sont activées, de nouvelles options apparaitront plus bas dans cette section pour permettre l\'automatisation de la gestion des visiteurs non confirmés.';
+$lang['UAM_USRAutoTitle_d'] = 'La gestion automatique des visiteurs non confirmés est déclenchée à chaque connexion à la galerie et fonctionne ainsi :
+<br><br>
+- Suppression automatique des comptes non confirmés dans le temps imparti sans envoi automatique de mail de relance -> &quot;Limitation du délai de confirmation d\'inscription&quot; <b><u>est actif</u></b> et &quot;Mail de rappel aux inscrits non confirmés&quot; <b><u>est inactif</u></b>.
+<br><br>
+- Envoi automatique d\'un message de rappel avec génération d\'une nouvelle clé de confirmation puis suppression automatique des comptes non confirmés dans le temps imparti après l\'envoi de la relance -> &quot;Limitation du délai de confirmation d\'inscription&quot; <b><u>est actif</u></b> et &quot;Mail de rappel aux inscrits non confirmés&quot; <b><u>est actif</u></b>.';
+$lang['UAM_RejectConnexion_d'] = 'Si activée, les nouveaux inscrits qui n\'ont pas confirmé leur inscription ne pourront pas se connecter à la galerie. Ils seront redirigés vers une page spéciale pour les informer de cet état.<br><br>
+<b style=&quot;color: red;&quot;>Attention - Cette option fonctionne uniquement avec les groupes de confirmation ! Référez-vous ci-dessous pour affecter les paramètres de groupes requis.</b>';
+$lang['UAM_RejectConnexion_Custom_Txt_d'] = 'Personnalisez ici votre message d\'explication informant les utilisateurs non confirmés qu\'ils ne pourront pas se connecter à la galerie tant qu\'ils n\'auront pas confirmé leur inscription.
+<br><br>
+Ce champ est compatible avec l\'extension FCK Editor et, pour une utilisation multi-langues, vous pouvez utiliser les balises [lang] du plugin Extended Description si celui-ci est actif.';
+$lang['UAM_restricTitle_d'] = '
+- Exclusion de caractères dans les noms d\'utilisateurs<br>
+- Renforcement des mots de passe<br>
+- Exclusion des domaines de messagerie<br>
+...
+';
+$lang['UAM_userlistTitle_d'] = 'Cette page est à titre d\'information pour l\'administrateur. Elle affiche la liste de tous les utilisateurs inscrits sur la galerie en faisant apparaitre la date et le nombre de jours depuis leur dernière visite. La liste est triée dans l\'ordre croissant du nombre de jours.
+<br><br>
+<b><u>Uniquement lorsque le Ghost Tracker est actif</u></b>, le nombre de jours sans visite s\'affiche selon le code couleur suivant, en fonction du délai maximum paramétré dans les options du Ghost Tracker :
+<br>
+- <b style=&quot;color: lime;&quot;>En vert</b> : Lorsque l\'utilisateur a visité la galerie <b style=&quot;color: lime;&quot;><u>depuis moins de 50%</u></b> du délai maximum renseigné dans le Ghost Tracker.<br>
+- <b style=&quot;color: orange;&quot;>En orange</b> : Lorsque l\'utilisateur a visité la galerie <b style=&quot;color: orange;&quot;><u>entre 50% et 99%</u></b> du délai maximum renseigné dans le Ghost Tracker.<br>
+- <b style=&quot;color: red;&quot;>En rouge</b> : Lorsque l\'utilisateur a visité la galerie <b style=&quot;color: red;&quot;><u>depuis 100% et plus</u></b> du délai maximum renseigné dans le Ghost Tracker. <b><u>Dans ce cas, l\'utilisateur doit également apparaitre dans le tableau du Ghost Tracker.</u></b><br>
+<br>
+Exemple:
+<br>
+Le délai maximum du Ghost Tracker est configuré à 100 jours.
+<br>
+Un utilisateur apparaitra en vert s\'il a visité la galerie depuis moins de 50 jours, en orange si sa dernière visite s\'est déroulée entre 50 et 99 jours et en rouge à 100 jours et au-delà.
+<br><br>
+<b>A NOTER</b>: La liste n\'affiche pas les inscrits qui n\'auraient pas confirmé leur inscription (si l\'option de confirmation de l\'inscription est activée). Ces utilisateurs sont alors gérés de manière particulière dans l\'onglet &quot;Suivi des confirmations&quot;.
+<br><br>
+<b>Fonction de tri du tableau</b>: Vous pouvez trier les données affichées en cliquant sur les entêtes de colonnes. L\'utilisation de la touche MAJ ou SHIFT permet de trier sur 1 à 4 colonnes simultanées maximum.';
+$lang['UAM_USRAutoMailTitle_d'] = 'Lorsque activée, cette fonction enverra automatiquement le contenu personnalisé dans &quot;Message de rappel avec regénération de clé&quot; aux visiteurs répondant au critère.';
+$lang['UAM_StuffsTitle_d'] = 'Ceci permet d\'activer un module supplémentaire UAM dans le plugin PWG Stuffs (si installé) afin d\'informer sur leur état vos visiteurs n\'ayant pas confirmé leur inscription.
+<br><br>
+Veuillez vous reporter à la section <b>Astuces et exemples d\'utilisation</b> en bas de cette page pour les détails.';
+$lang['UAM_confirmmailTitle_d'] = 'Cette option permet soit à un utilisateur de confirmer son inscription en cliquant sur un lien reçu dans un email envoyé dès son enregistrement sur la galerie, soit à l\'administrateur d\'activer manuellement les inscriptions.<br><br>
+Dans le premier cas, le message envoyé comprend une partie fixe, avec le lien d\'activation généré à partir d\'une clef aléatoire (cette clé peut éventuellement être régénérée via l\'onglet &quot;Suivi des confirmations&quot;), et une partie personnalisable par un texte d\'accueil.
+<br><br>
+Dans le second cas, <b><u>il n\'y a pas d\'envoi de clé de confirmation par email</u></b>. Les visiteurs doivent patienter que l\'administrateur valide lui même leur inscription via l\'onglet &quot;Suivi des confirmations&quot;. Il est conseillé d\'activer la notification des administrateurs lors des inscriptions (voir la configuration des options de Piwigo) et d\'utiliser la fonction &quot;Email d\'information à l\'utilisateur&quot; pour avertir les nouveaux inscrits de la nécessité de patienter avant activation de leur compte.
+<br>
+<b style=&quot;color: red;&quot;>NB: Les options &quot;Limitation du délai de confirmation d\'inscription&quot; et &quot;Mail de rappel aux inscrits non confirmés&quot; doivent être désactivées lorsque la confirmation manuelle est active.</b>
+<br><br>
+Cette option est généralement utilisée avec  l\'attribution automatique de groupe et/ou de statut. Selon qu\'il ait confirmé ou non son inscription, il est en effet possible d\'affecter à l\'utilisateur un groupe différent, avec plus ou moins de restrictions d\'accès à la galerie.';
+$lang['UAM_usermanTitle_d'] = 'Lorsque la limitation du délai d\'inscription est activée, vous trouverez ci-dessous la liste des utilisateurs en attente de confirmation d\'inscription <b style=&quot;text-decoration: underline;&quot;>qu\'ils soient ou pas</b> dans les délais pour la confirmer.<br><br>La date d\'enregistrement s\'affiche en vert lorsque l\'utilisateur concerné est en dessous du temps limite pour confirmer son inscription. Dans ce cas, la clé de confirmation est toujours valide et on pourra envoyer un email avec ou sans régénération de clé.<br><br>Lorsque la date d\'enregistrement s\'affiche en rouge, le délai de confirmation est expiré. Dans ce cas, on enverra obligatoirement un email avec régénération de clé si on veut permettre à cet utilisateur de pouvoir confirmer son inscription.<br><br>Dans tous les cas, il est possible de forcer manuellement la confirmation.<br><br>Dans cette vue, vous pouvez :
+<br><br>
+- Supprimer manuellement les comptes <b>(purge manuelle)</b>
+<br>
+- Générer l\'email de rappel <b>sans génération</b> d\'une nouvelle clef. Rappel : Cette fonction ne réinitialise pas la date d\'inscription du visiteur ciblé et le délai d\'expiration est toujours d\'actualité.
+<br>
+- Générer l\'email de rappel <b>avec génération</b> d\'une nouvelle clef. Rappel : Cette fonction réinitialise également la date d\'inscription du visiteur ciblé ce qui équivaut à prolonger le délai de confirmation.
+<br>
+- Confirmer manuellement une inscription en attente de confirmation même si la date d\'expiration est révolue <b>(forçage de la confirmation)</b>.
+<br><br>
+<b>Fonction de tri du tableau</b>: Vous pouvez trier les données affichées en cliquant sur les entêtes de colonnes. L\'utilisation de la touche MAJ ou SHIFT permet de trier sur 1 à 4 colonnes simultanées maximum.';
+$lang['UAM_validationlimitTitle_d'] = 'Cette option permet de limiter le nombre de jours pendant lequel un nouvel utilisateur peut confirmer son inscription. Une fois ce délai expiré, le lien de confirmation sera invalide, et ne pourra plus être employé.
+<br><br>
+Cette option n\'est utilisable qu\'une fois l\'option &quot;Confirmation d\'inscription&quot; activée.
+<br><br>
+Si cette option et l\'option &quot;Mail de rappel aux inscrits non confirmés&quot; sont activées, de nouvelles options apparaitront plus bas dans cette section pour permettre l\'automatisation de la gestion des visiteurs non confirmés.';
 // --------- End: New or revised $lang ---- from version 2.30.3
 ?>

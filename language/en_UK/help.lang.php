@@ -34,38 +34,6 @@ $lang['UAM_restricTitle_d'] = '
 - Email domains exclusion<br>
 ...
 ';
-$lang['UAM_userlistTitle_d'] = 'This page is for information to the administrator. It displays a list of all users registered on the gallery showing the date and number of days since their last visit. The list is sorted in ascending order of number of days.
-<br><br>
-<b><u>Only when the Ghost Tracker is active</u></b>, the number of days without a visit appears as the following color code, according to the maximum set in the Ghost Tracker options:
-<br>
-- <b style=&quot;color: lime;&quot;>Green</b> : When the user has visited the gallery <b style=&quot;color: lime;&quot;><u>less than 50%</u></b> of the maximum indicated in the Ghost Tracker.<br>
-- <b style=&quot;color: orange;&quot;>Orange</b> : When the user has visited the gallery <b style=&quot;color: orange;&quot;><u> between 50% and 99% </u></b> of the maximum indicated in the Ghost Tracker.<br>
-- <b style=&quot;color: red;&quot;>Red</b> : When the user has visited the gallery <b style=&quot;color: red;&quot;><u>for more than 100%</u></b> of the maximum indicated in the Ghost Tracker. <b><u>In this case, the user must also appear in the Ghost Tracker table.</u></b><br>
-<br>
-Example :
-<br>
-The maximum period of Ghost Tracker is configured to 100 days.
-<br>
-A user will appear in green if he visited the gallery for less than 50 days, in orange if his last visit took place between 50 and 99 days and red for 100 days and above.
-<br><br>
-<b>NOTE</b>: The list does not display who have not validated their registration (if the option of validating the registration is activated). These users are then managed in a special way in the &quot;Tracking confirmations&quot; tab.
-<br><br>
-<b>Table Sorting Function</b>: You can sort the data displayed by clicking on the column headers. Hold the SHIFT key to sort up to 4 simultaneous columns.';
-$lang['UAM_usermanTitle_d'] = 'When limiting the deadline for registration is enabled, you will find below the list of users whose confirmation of registration is expected, <b style=&quot;text-decoration: underline;&quot;>whether or not</b> they are in time to validate.<br><br>
-The registration date is displayed in green when the user concerned is below the time limit to validate his registration. In this case, the confirmation key is still valid and we can send an email with or without a new confirmation key.<br><br>
-When the registration date appears in red, the confirmation period has expired. In this case, you must send an email with regeneration of confirmation key if you want to enable the user to validate their registration.<br><br>
-In all cases, it is possible to manually force the confirmation.<br><br>
-In this view, you can:
-<br><br>
-- Manually delete accounts <b>(manual drain)</b>
-<br>
-- Generate email reminder <b>without</b> generating a new key. Warning: Send an email reminder to targeted visitors. This function does not reset the date of registration of targeted visitors and the timeout is still valid.
-<br>
-- Generate email reminder <b>with</b> generating a new key. Warning : Send an email reminder to targeted visitors. This function also resets the date of registration of targeted visitors which equates to extend the deadline for confirmation.
-<br>
-- Submit a registration awaiting confirmation manually even if the expiry date has passed <b>(forcing confirmation)</b>.
-<br><br>
-<b>Table Sorting Function</b>: You can sort the data displayed by clicking on the column headers. Hold the SHIFT key to sort up to 4 simultaneous columns.';
 $lang['UAM_gtTitle_d'] = 'When Ghost Tracker is enabled and initialized, you will find below the list of registered visitors who have not returned since x days. &quot;x&quot; is the number of days configured in the General Setup tab. In addition, you will find a column indicating whether an email reminder has been sent to targeted visitors. So, you can see at a glance and treat visitors who have not taken account of the reminder.<br><br>In this view, you can:
 <br><br>
 - Manually delete accounts <b>(manual drain)</b>
@@ -73,13 +41,6 @@ $lang['UAM_gtTitle_d'] = 'When Ghost Tracker is enabled and initialized, you wil
 - Generate email reminder <b>with resetting the last visit date</b>. This allows to give a wildcard to targeted visitors. If the visitor has already received a reminder, nothing prevents to resent a new mail which will reset again, in fact, the last visit date.
 <br><br>
 <b>Table Sorting Function</b>: You can sort the data displayed by clicking on the column headers. Hold the SHIFT key to sort up to 4 simultaneous columns.';
-$lang['UAM_confirmmailTitle_d'] = 'This option allows a user to either confirm registration by clicking on a link received in an email sent upon registration or the administrator to manually activate the registration.<br><br>
-In first case, the e-mail is composed of a customizable part to introduce a little welcome note and a fixed part containing the activation link that is generated from a random key that can possibly regenerate through the &quot;Tracking confirmations&quot; tab.<br><br>
-In second case, <b><u>there is no confirmation key send by email!</u></b>. Visitors have to wait until an administrator validate them himself in &quot;confirmation tracking&quot; tab. It\s recommanded to activate the Piwigo\'s option &quot;Email admins when a new user registers&quot; (see in Piwigo\'s configuration options) and to use the &quot;Information email to user&quot; to warn new registers to wait on their account activation.
-<br>
-<b style=&quot;color: red;&quot;>NB: Options &quot;Deadline for confirmation of registration limited&quot; and &quot;Remind unvalidated users  &quot; have to be set to off when admin\'s manual confirmation is enabled.</b>
-<br><br>
-This option is generally used with the automatic assignment of group and/or statutes. For example, a user who has not validated their registration will be set in a specific group of users (with or without restrictions on the gallery) while a user who validated his registration shall be set in a &quot;normal&quot; group.';
 // --------- End: New or revised $lang ---- from version 2.15.4
 
 
@@ -101,31 +62,6 @@ $lang['UAM_GTAutoDelTitle'] = 'Custom message on deleted account';
 // --------- End: New or revised $lang ---- from version 2.16.0
 
 
-// --------- Starting below: New or revised $lang ---- from version 2.20.0
-$lang['UAM_validationlimitTitle_d'] = 'This option allows to limit the validity of confirmation key email sent to new registrants. Visitors who register will have x days of time to validate their registration. After this period the confirmation link will expire.
-<br><br>
-This option is used in conjunction with the &quot;Confirmation of registration&quot;
-<br><br>
-If this option and the option &quot;Remind unvalidated users&quot; are activated, new options will appear below in this section to enable the automation of unvalidated users management.';
-$lang['UAM_remailTitle_d'] = 'This option allows you to send a reminder email to users registered but have not validated their registration on time. It therefore works in conjunction with the &quot;Confirmation of registration&quot;
-<br><br>
-2 types of emails can be sent: With or without regeneration of the confirmation key. As appropriate, the content of emails can be customized.
-<br><br>
-Refer to the &quot;Tracking confirmations&quot; tab.
-<br><br>
-If this option and the option &quot;Deadline for registration confirmation limited&quot; are activated, new options will appear below in this section to enable the automation of unvalidated users management.';
-$lang['UAM_USRAutoTitle_d'] = 'Automatic handling of unvalidated visitors is triggered each time you connect to the gallery and works as follows:
-<br><br>
-- Automatic deletion of accounts not validated in the allotted time without sending automatic email reminder -> &quot;Deadline for registration confirmation limited&quot; <b><u>enabled</u></b> and &quot;Remind unvalidated users&quot; <b><u>disabled</u></b>.
-<br><br>
-- Automatically sending a reminder message with a new generation of confirmation key and automatic deletion of accounts not validated in the time after sending the reminder -> &quot;Deadline for registration confirmation limited&quot; <b><u>enabled</u></b> et &quot;Remind unvalidated users&quot; <b><u>enabled</u></b>.';
-$lang['UAM_USRAutoMailTitle_d'] = 'When activated, this function will automatically send personalized content in &quot;Reminder email with new key generated&quot; to visitors who match criteria.';
-$lang['UAM_StuffsTitle_d'] = 'This enables an additional UAM block in PWG Stuffs plugin (if installed) to inform your visitors who did not validate their registration about their condition.
-<br><br>
-Please refer to the <b>Tips and Examples of Use</b> at the bottom of this page for details.';
-// --------- End: New or revised $lang ---- from version 2.20.0
-
-
 // --------- Starting below: New or revised $lang ---- from version 2.20.4
 $lang['UAM_HidePasswTitle_d'] = 'Choose here if you want to display the password chosen by the visitor in the information email. If you enable the option, the password will then appear in clear text. If you disable the password will not appear at all.';
 // --------- End: New or revised $lang ---- from version 2.20.4
@@ -141,46 +77,7 @@ Further customize the content with special inserted tags:<br>
 - <b style=&quot;color: red;&quot;>[days]</b> to insert the maximum numbers of days between two visits.
 <br><br>
 To use multiple languages, you can use the Extended description plugin\'s tags if it is active.';
-$lang['UAM_confirmtxtTitle_d'] = 'Enter the introductory text that you want to appear in the email confirmation of registration.
-<br><br>
-Further customize the content with special inserted tags:<br>
-- <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the name of the destination user of the email.<br>
-- <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery.<br>
-- <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.<br>
-- <b style=&quot;color: red;&quot;>[Kdays]</b> to insert the number of days limit to validate a registration (&quot;Deadline for registration confirmation limited;&quot; have to be enabled).
-<br><br>
-To use multiple languages, you can use the Extended description plugin\'s tags if it is active.';
-$lang['UAM_remailtxt1Title_d'] = 'Enter the introductory text that you want to appear in the reminder email, in addition to the confirmation key regenerated.
-<br><br>
-If left blank, the mail reminder will include only the confirmation link. It is therefore strongly advised to take a little explanatory text. (NB: The text pre-filled with the installation of the plugin is provided as an example).
-<br><br>
-Further customize the content with special inserted tags:<br>
-- <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the name of the destination user of the email.<br>
-- <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery.<br>
-- <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.<br>
-- <b style=&quot;color: red;&quot;>[Kdays]</b> to insert the number of days limit to validate a registration (&quot;Deadline for registration confirmation limited;&quot; have to be enabled).
-<br><br>
-To use multiple languages, you can use the Extended description plugin\'s tags if it is active.';
-$lang['UAM_remailtxt2Title_d'] = 'Enter the introductory text that you want to appear in the reminder email without a confirmation key regenerated.
-<br><br>
-If left blank, the mail reminder will be empty. It is therefore strongly advised to take a little explanatory text. (NB: The text pre-filled with the installation of the plugin is provided as an example).
-<br><br>
-Further customize the content with special inserted tags:<br>
-- <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the name of the destination user of the email.<br>
-- <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery.<br>
-- <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.<br>
-- <b style=&quot;color: red;&quot;>[Kdays]</b> to insert the number of days limit to validate a registration (&quot;Deadline for registration confirmation limited; have to be enabled).
-<br><br>
-To use multiple languages, you can use the Extended description plugin\'s tags if it is active.';
 $lang['UAM_infotxtTitle_d'] = 'Enter the introductory text that you want to appear in the information email.
-<br><br>
-Further customize the content with special inserted tags:<br>
-- <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the name of the destination user of the email.<br>
-- <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery.<br>
-- <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.
-<br><br>
-To use multiple languages, you can use the Extended description plugin\'s tags if it is active.';
-$lang['UAM_AdminValidationMail_d'] = 'When an administrator or Webmaster of the gallery manually valid registration pending, a notification email is automatically sent to the user. Enter here the text that appears in this email.
 <br><br>
 Further customize the content with special inserted tags:<br>
 - <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the name of the destination user of the email.<br>
@@ -297,20 +194,115 @@ The recovery from this interface is available only for the local backup file (..
 // --------- End: New or revised $lang ---- from version 2.30.0
 
 
-// --------- Starting below: New or revised $lang ---- from version 2.30.2
-$lang['UAM_RejectConnexion_d'] = 'If activated, new registered users who have not validate their registration won\'t be able to connect to the gallery. They will be redirected to a special page to inform them of this state.<br><br>
-<b style=&quot;color: red;&quot;>Warning - This feature works only in conjunction with confirmation groups! See below to set the groups as required.</b>';
-$lang['UAM_RejectConnexion_Custom_Txt_d'] = 'Customize here your explanation text for inform unvalidated users that they won\'t be able to connect the gallery until they have validate their registration.
-<br><br>
-This field is compatible with the FCK Editor and, for multi-languages, you can use the [lang] tags of the Extended description plugin if it\'s active.';
-// --------- End: New or revised $lang ---- from version 2.30.2
-
-
 // --------- Starting below: New or revised $lang ---- from version 2.30.3
 $lang['UAM_mailexcTitle_d'] = 'By default, Piwigo accepts all email addresses in the format xxx@yyy.zz. Enabling this option allows you to exclude certain domains in the format: @ [domain_name].[domain_extension].<br><br>
 Examples :<br>
 @hotmail.com -> excluding addresses *@hotmail.com<br>
 @hotmail -> excluding all addresses *@hotmail*<br><br>
 <b style=&quot;color: red;&quot;>Warning - This feature works only if emails are mandatory for registrations! Please see Piwigo\'s configuration options.</b>';
+$lang['UAM_userlistTitle_d'] = 'This page is for information to the administrator. It displays a list of all users registered on the gallery showing the date and number of days since their last visit. The list is sorted in ascending order of number of days.
+<br><br>
+<b><u>Only when the Ghost Tracker is active</u></b>, the number of days without a visit appears as the following color code, according to the maximum set in the Ghost Tracker options:
+<br>
+- <b style=&quot;color: lime;&quot;>Green</b> : When the user has visited the gallery <b style=&quot;color: lime;&quot;><u>less than 50%</u></b> of the maximum indicated in the Ghost Tracker.<br>
+- <b style=&quot;color: orange;&quot;>Orange</b> : When the user has visited the gallery <b style=&quot;color: orange;&quot;><u> between 50% and 99% </u></b> of the maximum indicated in the Ghost Tracker.<br>
+- <b style=&quot;color: red;&quot;>Red</b> : When the user has visited the gallery <b style=&quot;color: red;&quot;><u>for more than 100%</u></b> of the maximum indicated in the Ghost Tracker. <b><u>In this case, the user must also appear in the Ghost Tracker table.</u></b><br>
+<br>
+Example :
+<br>
+The maximum period of Ghost Tracker is configured to 100 days.
+<br>
+A user will appear in green if he visited the gallery for less than 50 days, in orange if his last visit took place between 50 and 99 days and red for 100 days and above.
+<br><br>
+<b>NOTE</b>: The list does not display who have not confirmed their registration (if the option of confirming the registration is activated). These users are then managed in a special way in the &quot;Tracking confirmations&quot; tab.
+<br><br>
+<b>Table Sorting Function</b>: You can sort the data displayed by clicking on the column headers. Hold the SHIFT key to sort up to 4 simultaneous columns.';
+$lang['UAM_usermanTitle_d'] = 'When limiting the deadline for registration is enabled, you will find below the list of users whose confirmation of registration is expected, <b style=&quot;text-decoration: underline;&quot;>whether or not</b> they are in time to confirm.<br><br>
+The registration date is displayed in green when the user concerned is below the time limit to confirm his registration. In this case, the confirmation key is still valid and we can send an email with or without a new confirmation key.<br><br>
+When the registration date appears in red, the confirmation period has expired. In this case, you must send an email with regeneration of confirmation key if you want to enable the user to confirm their registration.<br><br>
+In all cases, it is possible to manually force the confirmation.<br><br>
+In this view, you can:
+<br><br>
+- Manually delete accounts <b>(manual drain)</b>
+<br>
+- Generate email reminder <b>without</b> generating a new key. Warning: Send an email reminder to targeted visitors. This function does not reset the date of registration of targeted visitors and the timeout is still valid.
+<br>
+- Generate email reminder <b>with</b> generating a new key. Warning : Send an email reminder to targeted visitors. This function also resets the date of registration of targeted visitors which equates to extend the deadline for confirmation.
+<br>
+- Submit a registration awaiting confirmation manually even if the expiry date has passed <b>(forcing confirmation)</b>.
+<br><br>
+<b>Table Sorting Function</b>: You can sort the data displayed by clicking on the column headers. Hold the SHIFT key to sort up to 4 simultaneous columns.';
+$lang['UAM_confirmmailTitle_d'] = 'This option allows a user to either confirm registration by clicking on a link received in an email sent upon registration or the administrator to manually activate the registration.<br><br>
+In first case, the e-mail is composed of a customizable part to introduce a little welcome note and a fixed part containing the activation link that is generated from a random key that can possibly regenerate through the &quot;Tracking confirmations&quot; tab.<br><br>
+In second case, <b><u>there is no confirmation key send by email!</u></b>. Visitors have to wait until an administrator confirm them himself in &quot;confirmation tracking&quot; tab. It\s recommanded to activate the Piwigo\'s option &quot;Email admins when a new user registers&quot; (see in Piwigo\'s configuration options) and to use the &quot;Information email to user&quot; to warn new registers to wait on their account activation.
+<br>
+<b style=&quot;color: red;&quot;>NB: Options &quot;Deadline for confirmation of registration limited&quot; and &quot;Remind unconfirmed users  &quot; have to be set to off when admin\'s manual confirmation is enabled.</b>
+<br><br>
+This option is generally used with the automatic assignment of group and/or statutes. For example, a user who has not confirmed their registration will be set in a specific group of users (with or without restrictions on the gallery) while a user who confirmed his registration shall be set in a &quot;normal&quot; group.';
+$lang['UAM_validationlimitTitle_d'] = 'This option allows to limit the validity of confirmation key email sent to new registrants. Visitors who register will have x days of time to confirm their registration. After this period the confirmation link will expire.
+<br><br>
+This option is used in conjunction with the &quot;Confirmation of registration&quot;
+<br><br>
+If this option and the option &quot;Remind unconfirmed users&quot; are activated, new options will appear below in this section to enable the automation of unconfirmed users management.';
+$lang['UAM_remailTitle_d'] = 'This option allows you to send a reminder email to users registered but have not confirmed their registration on time. It therefore works in conjunction with the &quot;Confirmation of registration&quot;
+<br><br>
+2 types of emails can be sent: With or without regeneration of the confirmation key. As appropriate, the content of emails can be customized.
+<br><br>
+Refer to the &quot;Tracking confirmations&quot; tab.
+<br><br>
+If this option and the option &quot;Deadline for registration confirmation limited&quot; are activated, new options will appear below in this section to enable the automation of unconfirmed users management.';
+$lang['UAM_USRAutoTitle_d'] = 'Automatic handling of unconfirmed visitors is triggered each time you connect to the gallery and works as follows:
+<br><br>
+- Automatic deletion of accounts not confirmed in the allowed time without sending automatic email reminder -> &quot;Deadline for registration confirmation limited&quot; <b><u>enabled</u></b> and &quot;Remind unconfirmed users&quot; <b><u>disabled</u></b>.
+<br><br>
+- Automatically sending a reminder message with a new generation of confirmation key and automatic deletion of accounts not confirmed in the time after sending the reminder -> &quot;Deadline for registration confirmation limited&quot; <b><u>enabled</u></b> et &quot;Remind unconfirmed users&quot; <b><u>enabled</u></b>.';
+$lang['UAM_USRAutoMailTitle_d'] = 'When activated, this function will automatically send personalized content in &quot;Reminder email with new key generated&quot; to visitors who match criteria.';
+$lang['UAM_StuffsTitle_d'] = 'This enables an additional UAM block in PWG Stuffs plugin (if installed) to inform your visitors who did not confirm their registration about their condition.
+<br><br>
+Please refer to the <b>Tips and Examples of Use</b> at the bottom of this page for details.';
+$lang['UAM_confirmtxtTitle_d'] = 'Enter the introductory text that you want to appear in the email confirmation of registration.
+<br><br>
+Further customize the content with special inserted tags:<br>
+- <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the name of the destination user of the email.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.<br>
+- <b style=&quot;color: red;&quot;>[Kdays]</b> to insert the number of days limit to confirm a registration (&quot;Deadline for registration confirmation limited;&quot; have to be enabled).
+<br><br>
+To use multiple languages, you can use the Extended description plugin\'s tags if it is active.';
+$lang['UAM_remailtxt1Title_d'] = 'Enter the introductory text that you want to appear in the reminder email, in addition to the confirmation key regenerated.
+<br><br>
+If left blank, the mail reminder will include only the confirmation link. It is therefore strongly advised to take a little explanatory text. (NB: The text pre-filled with the installation of the plugin is provided as an example).
+<br><br>
+Further customize the content with special inserted tags:<br>
+- <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the name of the destination user of the email.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.<br>
+- <b style=&quot;color: red;&quot;>[Kdays]</b> to insert the number of days limit to confirm a registration (&quot;Deadline for registration confirmation limited;&quot; have to be enabled).
+<br><br>
+To use multiple languages, you can use the Extended description plugin\'s tags if it is active.';
+$lang['UAM_remailtxt2Title_d'] = 'Enter the introductory text that you want to appear in the reminder email without a confirmation key regenerated.
+<br><br>
+If left blank, the mail reminder will be empty. It is therefore strongly advised to take a little explanatory text. (NB: The text pre-filled with the installation of the plugin is provided as an example).
+<br><br>
+Further customize the content with special inserted tags:<br>
+- <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the name of the destination user of the email.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.<br>
+- <b style=&quot;color: red;&quot;>[Kdays]</b> to insert the number of days limit to confirm a registration (&quot;Deadline for registration confirmation limited; have to be enabled).
+<br><br>
+To use multiple languages, you can use the Extended description plugin\'s tags if it is active.';
+$lang['UAM_AdminValidationMail_d'] = 'When an administrator or Webmaster of the gallery manually confirm registration pending, a notification email is automatically sent to the user. Enter here the text that appears in this email.
+<br><br>
+Further customize the content with special inserted tags:<br>
+- <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the name of the destination user of the email.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.
+<br><br>
+To use multiple languages, you can use the Extended description plugin\'s tags if it is active.';
+$lang['UAM_RejectConnexion_d'] = 'If activated, new registered users who have not confirm their registration won\'t be able to connect to the gallery. They will be redirected to a special page to inform them of this state.<br><br>
+<b style=&quot;color: red;&quot;>Warning - This feature works only in conjunction with confirmation groups! See below to set the groups as required.</b>';
+$lang['UAM_RejectConnexion_Custom_Txt_d'] = 'Customize here your explanation text for inform unconfirmed users that they won\'t be able to connect the gallery until they have confirmed their registration.
+<br><br>
+This field is compatible with the FCK Editor and, for multi-languages, you can use the [lang] tags of the Extended description plugin if it\'s active.';
 // --------- End: New or revised $lang ---- from version 2.30.3
 ?>
