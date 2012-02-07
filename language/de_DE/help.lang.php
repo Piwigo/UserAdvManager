@@ -140,8 +140,6 @@ $lang['UAM_validationlimitTitle_d'] = 'Diese Option ermöglicht es, die Gültigk
 Diese Option ist in Verbindung mit der "Bestätigung der Anmeldung verwendet"
 <br><br>
 If this option and the option "Erinnern Unvalidierte User" are activated, new options will appear below in this section to enable the automation of unvalidated users management.';
-<br><br>
-If this option and the option &quot;Erinnern Unvalidierte User&quot; are activated, new options will appear below in this section to enable the automation of unvalidated users management.';
 $lang['UAM_remailTitle_d'] = 'Mit dieser Option können Sie eine Erinnerung per E-Mail an registrierte Benutzer zu senden, aber noch nicht bestätigt ihre Eintragung in die Zeit. Es funktioniert also in Verbindung mit der "Bestätigung der Anmeldung"
 <br><br>
 2 Arten von E-Mails gesendet werden können: Mit oder ohne Regeneration der Validierung Schlüssel. Gegebenenfalls kann der Inhalt von E-Mails angepasst werden.
@@ -149,8 +147,6 @@ $lang['UAM_remailTitle_d'] = 'Mit dieser Option können Sie eine Erinnerung per 
 Wenden Sie sich an die "Tracking Validierungen" aus.
 <br><br>
 If this option and the option "Anmeldeschluss Validierung beschränkt" are activated, new options will appear below in this section to enable the automation of unvalidated users management.';
-<br><br>
-If this option and the option &quot;Anmeldeschluss Validierung beschränkt&quot; are activated, new options will appear below in this section to enable the automation of unvalidated users management.';
 $lang['UAM_USRAutoTitle_d'] = 'Automatic handling of unvalidated visitors is triggered each time you connect to the gallery and works as follows:
 <br><br>
 - Automatic deletion of accounts not validated in the allotted time without sending automatic email reminder -> "Deadline for registration validation limited" <b><u>enabled</u></b> and "Remind unvalidated users" <b><u>disabled</u></b>.
@@ -192,13 +188,6 @@ Further customize the content with special inserted tags:<br>
 - <b style="color: red;">[Kdays]</b> to insert the number of days limit to validate a registration ("Anmeldeschluss Validierung beschränkt;" have to be enabled).
 <br><br>
 Um mehrere Sprachen zu benutzen, können Sie die Extended description Plugin-Tags verwenden, wenn er aktiv ist.';
-Further customize the content with special inserted tags:<br>
-- <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the name of the destination user of the email.<br>
-- <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery.<br>
-- <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.<br>
-- <b style=&quot;color: red;&quot;>[Kdays]</b> to insert the number of days limit to validate a registration (&quot;Anmeldeschluss Validierung beschränkt;&quot; have to be enabled).
-<br><br>
-Um mehrere Sprachen zu benutzen, können Sie die Extended description Plugin-Tags verwenden, wenn er aktiv ist.';
 $lang['UAM_remailtxt1Title_d'] = 'Geben Sie den einleitenden Text, den Sie in der E-Mail-Erinnerung angezeigt wird, zusätzlich zu der Prüfschlüssel regeneriert.
 <br><br>
 Wenn leer, wird die E-Mail-Erinnerung nur den Bestätigungslink. Es wird daher dringend empfohlen, ein wenig erläuternden Text zu nehmen. (NB: Der Text Fertigpen mit der Installation des Plugins ist als Beispiel vorgesehen).
@@ -210,7 +199,6 @@ Further customize the content with special inserted tags:<br>
 - <b style="color: red;">[Kdays]</b> to insert the number of days limit to validate a registration ("Anmeldeschluss Validierung beschränkt;" have to be enabled).
 <br><br>
 Um mehrere Sprachen zu benutzen, können Sie die Extended description Plugin-Tags verwenden, wenn er aktiv ist.';
-Um mehrere Sprachen zu benutzen, können Sie die Extended description Plugin-Tags verwenden, wenn er aktiv ist.';
 $lang['UAM_remailtxt2Title_d'] = 'Geben Sie den einleitenden Text, den Sie in der Erinnerung, ohne eine Bestätigung per E-Mail-Taste erscheinen regeneriert.
 <br><br>
 Wenn links leer ist, wird die E-Mail-Erinnerung leer sein. Es wird daher dringend empfohlen, ein wenig erläuternden Text zu nehmen. (NB: Der Text Fertigpen mit der Installation des Plugins ist als Beispiel vorgesehen).
@@ -220,8 +208,6 @@ Further customize the content with special inserted tags:<br>
 - <b style="color: red;">[mygallery]</b> to insert the title of your gallery.<br>
 - <b style="color: red;">[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.<br>
 - <b style="color: red;">[Kdays]</b> to insert the number of days limit to validate a registration ("Anmeldeschluss Validierung beschränkt;" have to be enabled).
-<br><br>
-Um mehrere Sprachen zu benutzen, können Sie die Extended description Plugin-Tags verwenden, wenn er aktiv ist.';
 <br><br>
 Um mehrere Sprachen zu benutzen, können Sie die Extended description Plugin-Tags verwenden, wenn er aktiv ist.';
 /*TODO*/$lang['UAM_infotxtTitle_d'] = 'Geben Sie den einleitenden Text, den Sie in der Informations-E-Mail angezeigt.
