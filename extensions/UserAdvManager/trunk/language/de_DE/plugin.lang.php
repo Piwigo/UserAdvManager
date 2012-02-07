@@ -241,4 +241,82 @@ $lang['UAM_RedirToProfile'] = 'Umleitung auf Benutzerdaten Seite';
 $lang['UAM_GTAutoGp'] = 'Automatischer Wechsel der Gruppe / Status / Vertraulichkeit Grad';
 $lang['UAM_GTAutoMail'] = 'Automatisches Versenden einer E-Mail beim Wechsel Gruppe / Status / Vertraulichkeit Grad';
 // --------- End: New or revised $lang ---- from version 2.30.2
+$lang['UAM_Tips1_txt'] = '          <ul>
+            <li>
+            Goals: Inform the visitor that the registration is awaiting approval by displaying a personal block on the home page of the gallery, and this, as registration is not approved.
+            <br><br>
+            <b>Recall: In standard operation, the "Guest" only sees the public categories, without information message.</b>
+            </li><br><br>
+            <li>
+Prerequisite:<br>
+- A gallery with all or some private categories, visible only by registered users<br>
+- At least 2 following Piwigo\'s users groups: "Waiting," without permission on private categories, and "Confirmed" with all the permissions on the private categories<br>
+- UAM plugin<br>
+- PWG Stuffs plugin, for adding a special UAM module<br>
+- Optionally, the plugin Extended Description to support multi-languages<br>
+            </li><br><br>
+            <li>
+Stages:<br><br>
+A. In plugin UAM:
+              <ol>
+                <li>Enable registration confirmation</li>
+                <li>Enable PWG Stuffs module option</li>
+                <li>Enter text for additional explanation which will be attached to mail registration confirmation. If the plugin Extended Description is activated, the language tags can be used</li>
+                <li>Select the "Waiting" group under "For users who have not confirmed their registration"</li>
+                <li>Select the "Confirmed" group under "For users who have confirmed their registration"</li>
+                <li>Save the plugin configuration</li>
+              </ol>
+<br>
+B. In plugin PWG Stuffs :
+              <ol>
+                <li>Go to tab "Add a new module"</li>
+                <li>Choose "UAM Module"</li>
+                <li>Configure the module, indicating the title (eg "Registration pending confirmation") and its description, and only check "Waiting" in the list of groups allowed</li>
+                <li>Complete content of the module with the message information to be displayed to users not confirmed. As UAM, languages markup may be used if the plugin is enabled Extended Description</li>
+                <li>Check "Display the module on the homepage of the site"</li>
+                <li>Validate the configuration of the module</li>
+              </ol>
+            </li>
+          </ul>';
+$lang['UAM_Tips2_txt'] = '          <ul>
+            <li>
+            Goals: Inform the visitor that the registration is awaiting confirmation by posting an additional page replacing the standard index page gallery at each of these connections, and this, as registration is not approved.
+            <br><br>
+            Advantages over the method with PWG_Stuffs: Allow formatting information and displaying the information immediately upon registration of visitors.
+            </li><br><br>
+            <li>
+Prerequisite:<br>
+- A gallery with all or some private categories, visible only by registered users<br>
+- At least 2 following Piwigo\'s users groups: "Waiting," without permission on private categories, and "Confirmed" with all the permissions on the private categories<br>
+- UAM plugin<br>
+- Additional Pages plugin for adding and managing an additional page to replace the default index page of the gallery<br>
+- Optionally, the plugin Extended Description to support multi-languages<br>
+            </li><br><br>
+            <li>
+Stages:<br><br>
+A. In plugin UAM:
+              <ol>
+                <li>Enable registration confirmation</li>
+                <li>Enter text for additional explanation which will be attached to mail registration confirmation. If the plugin Extended Description is activated, the language tags can be used</li>
+                <li>Select the "Waiting" group under "For users who have not confirmed their registration"</li>
+                <li>Select the "Confirmed" group under "For users who have confirmed their registration"</li>
+                <li>Save the plugin configuration</li>
+              </ol>
+<br>
+B. In plugin Additional Pages:<br>
+                <b>NOTE : The management of access rights for groups on Additional Pages must be turned on (see plugin configuration settings).</b>
+                <br>
+              <ol>
+                <li>Add a new page with at least the following parameters:</li>
+                <ul>
+                  <li>Page name: The name you wish to give to the additional page (ie: Registration not confirmed)</li>
+                  <li>Set as homepage checked</li>
+                  <li>Groups allowed: Check the box corresponding to the group "Waiting" configured in UAM</li>
+                  <li>Content: The text you want to use for visitors.</li>
+                </ul>
+                <br>
+                <li>And that\'s it! Only visitors registered and whose registration has not been confirmed will see this additional index page.</li>
+              </ol>
+            </li>
+          </ul>';
 ?>
