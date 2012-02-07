@@ -65,7 +65,7 @@ Ein Benutzer wird in grün angezeigt, wenn er die Galerie für weniger als 50 Ta
 <b>HINWEIS</b>: Die Liste wird nicht angezeigt, die nicht validiert ihrer Registrierung (falls die M&ouml;glichkeit der Validierung der Registrierung aktiviert ist). Diese Benutzer werden dann in besonderer Weise in der &quot;Tracking Validierungen verwaltet&quot; aus.
 <br><br>
 <b>Die Sortierung der Tabelle Function</b>: Sie können die Daten mit einem Klick auf die Spaltenüberschriften angezeigt. Halten Sie SHIFT-Taste, um Art bis zu 4 gleichzeitige maximale Spalten.';
-$lang['UAM_usermanTitle_d'] = 'Wenn die Begrenzung der Frist für die Anmeldung aktiviert ist, finden Sie weiter unten die Liste der Benutzer, deren Validierung Eintragung erwartet wird, <b style=&quot;text-decoration: underline;&quot;>ob oder nicht</b> sind sie in der Zeit zu validieren.<br><br>
+$lang['UAM_usermanTitle_d'] = 'Wenn die Begrenzung der Frist für die Anmeldung aktiviert ist, finden Sie weiter unten die Liste der Benutzer, deren Validierung Eintragung erwartet wird, <b style="text-decoration: underline;">ob oder nicht</b> sind sie in der Zeit zu validieren.<br><br>
 Das Datum der Eintragung wird in grün angezeigt, wenn der Benutzer unter dem betreffenden Frist wird auf seine Registrierung zu bestätigen. In diesem Fall ist die Validierung Schlüssel noch gültig ist, und wir können eine E-Mail mit oder ohne eine neue Validierung Schlüssel zu schicken.<br><br>
 Wenn das Datum der Eintragung erscheint in Rot, die Validierung abgelaufen. In diesem Fall müssen Sie eine E-Mail mit der Regeneration der Validierung Schlüssel senden, wenn Sie dem Benutzer die Möglichkeit, ihre Anmeldung bestätigen möchten.<br><br>
 In allen Fällen ist es möglich, manuell die Validierung Kraft.<br><br>
@@ -87,14 +87,14 @@ $lang['UAM_gtTitle_d'] = 'Als Ghost Tracker aktiviert ist und initialisiert wurd
 - Generieren Sie per E-Mail-Erinnerung <b>mit dem Zurücksetzen der letzte Besuch date</b>. Dies erlaubt es, einen Platzhalter, um die angestrebten Besucher geben. Wenn der Besucher bereits eine Mahnung erhalten haben, durch nichts daran gehindert, eine neue Mail, die wieder zurückgesetzt werden, in der Tat übel, dem letzten Tag besuchen.
 <br><br>
 <b>Die Sortierung der Tabelle Function</b> : Sie können die Daten mit einem Klick auf die Spaltenüberschriften angezeigt. Halten Sie SHIFT-Taste, um Art bis zu 4 gleichzeitige maximale Spalten.';
-/*TODO*/$lang['UAM_confirmmailTitle_d'] = 'This option allows a user to either confirm registration by clicking on a link received in an email sent upon registration or the administrator to manually activate the registration.<br><br>
-In first case, the e-mail is composed of a customizable part to introduce a little welcome note and a fixed part containing the activation link that is generated from a random key that can possibly regenerate through the &quot;Tracking validations&quot; tab.<br><br>
+$lang['UAM_confirmmailTitle_d'] = 'This option allows a user to either confirm registration by clicking on a link received in an email sent upon registration or the administrator to manually activate the registration.<br><br>
+In first case, the e-mail is composed of a customizable part to introduce a little welcome note and a fixed part containing the activation link that is generated from a random key that can possibly regenerate through the "Tracking validations" tab.<br><br>
 <br><br>
-In second case, <b><u>there is no validation key send by email!</u></b>. Visitors have to wait until an administrator validate them himself in &quot;Validation tracking&quot; tab. It\s recommanded to activate the Piwigo\'s option &quot;Email admins when a new user registers&quot; (see in Piwigo\'s configuration options) and to use the &quot;Information email to user&quot; to warn new registers to wait on their account activation.
+In second case, <b><u>there is no validation key send by email!</u></b>. Visitors have to wait until an administrator validate them himself in "Validation tracking" tab. It\s recommanded to activate the Piwigo\'s option "Email admins when a new user registers" (see in Piwigo\'s configuration options) and to use the "Information email to user" to warn new registers to wait on their account activation.
 <br>
-<b style=&quot;color: red;&quot;>NB: Options &quot;Deadline for registration validation limited&quot; and &quot;Remind unvalidated users  &quot; have to be set to off when admin\'s manual validation is enabled.</b>
+<b style="color: red;">NB: Options "Deadline for registration validation limited" and "Remind unvalidated users  " have to be set to off when admin\'s manual validation is enabled.</b>
 <br><br>
-Diese Option ist in der Regel mit der automatischen Zuordnung der Gruppe und / oder Satzung verwendet. Zum Beispiel, ein Benutzer, der nicht validiert ihre Eintragung in eine bestimmte Gruppe von Nutzern eingestellt werden (mit oder ohne Einschr&auml;nkungen auf der Galerie), w&auml;hrend ein Benutzer, der seine Registrierung best&auml;tigt wird in einem &quot;normalen&quot; Gruppe eingestellt werden.';
+Diese Option ist in der Regel mit der automatischen Zuordnung der Gruppe und / oder Satzung verwendet. Zum Beispiel, ein Benutzer, der nicht validiert ihre Eintragung in eine bestimmte Gruppe von Nutzern eingestellt werden (mit oder ohne Einschränkungen auf der Galerie), während ein Benutzer, der seine Registrierung bestätigt wird in einem "normalen" Gruppe eingestellt werden.';
 // --------- End: New or revised $lang ---- from version 2.15.4
 
 
@@ -135,28 +135,27 @@ $lang['UAM_GTAutoGpTitle'] = 'Automatischer Wechsel der Gruppe / Status';
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.20.0
-/*TODO*/$lang['UAM_validationlimitTitle_d'] = 'Diese Option ermöglicht es, die Gültigkeit der Schlüssel Validierung E-Mail-Grenze geschickt, um neue Registranten. Besucher, wer x Tage Zeit haben, um sich identifizieren, zu registrieren. Nach Ablauf dieser Frist die Validierung Link läuft.
+$lang['UAM_validationlimitTitle_d'] = 'Diese Option ermöglicht es, die Gültigkeit der Schlüssel Validierung E-Mail-Grenze geschickt, um neue Registranten. Besucher, wer x Tage Zeit haben, um sich identifizieren, zu registrieren. Nach Ablauf dieser Frist die Validierung Link läuft.
 <br><br>
-Diese Option ist in Verbindung mit der &quot;Best&auml;tigung der Anmeldung verwendet&quot;
+Diese Option ist in Verbindung mit der "Bestätigung der Anmeldung verwendet"
+<br><br>
+If this option and the option "Erinnern Unvalidierte User" are activated, new options will appear below in this section to enable the automation of unvalidated users management.';
 <br><br>
 If this option and the option &quot;Erinnern Unvalidierte User&quot; are activated, new options will appear below in this section to enable the automation of unvalidated users management.';
-/*TODO*/$lang['UAM_remailTitle_d'] = 'Mit dieser Option k&ouml;nnen Sie eine Erinnerung per E-Mail an registrierte Benutzer zu senden, aber noch nicht best&auml;tigt ihre Eintragung in die Zeit. Es funktioniert also in Verbindung mit der &quot;Best&auml;tigung der Anmeldung&quot;
+$lang['UAM_remailTitle_d'] = 'Mit dieser Option können Sie eine Erinnerung per E-Mail an registrierte Benutzer zu senden, aber noch nicht bestätigt ihre Eintragung in die Zeit. Es funktioniert also in Verbindung mit der "Bestätigung der Anmeldung"
 <br><br>
 2 Arten von E-Mails gesendet werden können: Mit oder ohne Regeneration der Validierung Schlüssel. Gegebenenfalls kann der Inhalt von E-Mails angepasst werden.
 <br><br>
-Wenden Sie sich an die &quot;Tracking Validierungen&quot; aus.
+Wenden Sie sich an die "Tracking Validierungen" aus.
+<br><br>
+If this option and the option "Anmeldeschluss Validierung beschränkt" are activated, new options will appear below in this section to enable the automation of unvalidated users management.';
 <br><br>
 If this option and the option &quot;Anmeldeschluss Validierung beschränkt&quot; are activated, new options will appear below in this section to enable the automation of unvalidated users management.';
-/*TODO*/$lang['UAM_USRAutoTitle_d'] = 'Automatic handling of unvalidated visitors is triggered each time you connect to the gallery and works as follows:
+$lang['UAM_USRAutoTitle_d'] = 'Automatic handling of unvalidated visitors is triggered each time you connect to the gallery and works as follows:
 <br><br>
-- Automatic deletion of accounts not validated in the allotted time without sending automatic email reminder -> &quot;Deadline for registration validation limited&quot; <b><u>enabled</u></b> and &quot;Remind unvalidated users&quot; <b><u>disabled</u></b>.
+- Automatic deletion of accounts not validated in the allotted time without sending automatic email reminder -> "Deadline for registration validation limited" <b><u>enabled</u></b> and "Remind unvalidated users" <b><u>disabled</u></b>.
 <br><br>
-- Automatically sending a reminder message with a new generation of validation key and automatic deletion of accounts not validated in the time after sending the reminder -> &quot;Deadline for registration validation limited&quot; <b><u>enabled</u></b> et &quot;Remind unvalidated users&quot; <b><u>enabled</u></b>.';
-/*TODO*/$lang['UAM_USRAutoMailTitle_d'] = 'When activated, this function will automatically send personalized content in &quot;Reminder email with new key generated&quot; to visitors who match criteria.';
-/*TODO*/$lang['UAM_StuffsTitle_d'] = 'This enables an additional UAM block in PWG Stuffs plugin (if installed) to inform your visitors who did not validate their registration about their condition.
-<br><br>
-Please refer to the <b>Tipps und Beispiele</b> at the bottom of this page for details.';
-// --------- End: New or revised $lang ---- from version 2.20.0
+- Automatically sending a reminder message with a new generation of validation key and automatic deletion of accounts not validated in the time after sending the reminder -> "Deadline for registration validation limited" <b><u>enabled</u></b> et "Remind unvalidated users" <b><u>enabled</u></b>.';
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.20.3
@@ -184,8 +183,15 @@ Further customize the content with special inserted tags:<br>
 - <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options. Use <b style=&quot;color: red;&quot;>[days]</b> to insert the maximum numbers of days between two visits.
 <br><br>
 Um mehrere Sprachen zu benutzen, können Sie die Extended description Plugin-Tags verwenden, wenn er aktiv ist.';
-/*TODO*/$lang['UAM_confirmtxtTitle_d'] = 'Geben Sie den einleitenden Text, den Sie in der E-Mail-Bestätigung der Anmeldung erscheinen.
+$lang['UAM_confirmtxtTitle_d'] = 'Geben Sie den einleitenden Text, den Sie in der E-Mail-Bestätigung der Anmeldung erscheinen.
 <br><br>
+Further customize the content with special inserted tags:<br>
+- <b style="color: red;">[username]</b> to automatically insert the name of the destination user of the email.<br>
+- <b style="color: red;">[mygallery]</b> to insert the title of your gallery.<br>
+- <b style="color: red;">[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.<br>
+- <b style="color: red;">[Kdays]</b> to insert the number of days limit to validate a registration ("Anmeldeschluss Validierung beschränkt;" have to be enabled).
+<br><br>
+Um mehrere Sprachen zu benutzen, können Sie die Extended description Plugin-Tags verwenden, wenn er aktiv ist.';
 Further customize the content with special inserted tags:<br>
 - <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the name of the destination user of the email.<br>
 - <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery.<br>
@@ -193,26 +199,29 @@ Further customize the content with special inserted tags:<br>
 - <b style=&quot;color: red;&quot;>[Kdays]</b> to insert the number of days limit to validate a registration (&quot;Anmeldeschluss Validierung beschränkt;&quot; have to be enabled).
 <br><br>
 Um mehrere Sprachen zu benutzen, können Sie die Extended description Plugin-Tags verwenden, wenn er aktiv ist.';
-/*TODO*/$lang['UAM_remailtxt1Title_d'] = 'Geben Sie den einleitenden Text, den Sie in der E-Mail-Erinnerung angezeigt wird, zusätzlich zu der Prüfschlüssel regeneriert.
+$lang['UAM_remailtxt1Title_d'] = 'Geben Sie den einleitenden Text, den Sie in der E-Mail-Erinnerung angezeigt wird, zusätzlich zu der Prüfschlüssel regeneriert.
 <br><br>
 Wenn leer, wird die E-Mail-Erinnerung nur den Bestätigungslink. Es wird daher dringend empfohlen, ein wenig erläuternden Text zu nehmen. (NB: Der Text Fertigpen mit der Installation des Plugins ist als Beispiel vorgesehen).
 <br><br>
 Further customize the content with special inserted tags:<br>
-- <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the name of the destination user of the email.<br>
-- <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery.<br>
-- <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.<br>
-- <b style=&quot;color: red;&quot;>[Kdays]</b> to insert the number of days limit to validate a registration (&quot;Anmeldeschluss Validierung beschränkt;&quot; have to be enabled).
+- <b style="color: red;">[username]</b> to automatically insert the name of the destination user of the email.<br>
+- <b style="color: red;">[mygallery]</b> to insert the title of your gallery.<br>
+- <b style="color: red;">[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.<br>
+- <b style="color: red;">[Kdays]</b> to insert the number of days limit to validate a registration ("Anmeldeschluss Validierung beschränkt;" have to be enabled).
 <br><br>
 Um mehrere Sprachen zu benutzen, können Sie die Extended description Plugin-Tags verwenden, wenn er aktiv ist.';
-/*TODO*/$lang['UAM_remailtxt2Title_d'] = 'Geben Sie den einleitenden Text, den Sie in der Erinnerung, ohne eine Bestätigung per E-Mail-Taste erscheinen regeneriert.
+Um mehrere Sprachen zu benutzen, können Sie die Extended description Plugin-Tags verwenden, wenn er aktiv ist.';
+$lang['UAM_remailtxt2Title_d'] = 'Geben Sie den einleitenden Text, den Sie in der Erinnerung, ohne eine Bestätigung per E-Mail-Taste erscheinen regeneriert.
 <br><br>
 Wenn links leer ist, wird die E-Mail-Erinnerung leer sein. Es wird daher dringend empfohlen, ein wenig erläuternden Text zu nehmen. (NB: Der Text Fertigpen mit der Installation des Plugins ist als Beispiel vorgesehen).
 <br><br>
 Further customize the content with special inserted tags:<br>
-- <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the name of the destination user of the email.<br>
-- <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery.<br>
-- <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.<br>
-- <b style=&quot;color: red;&quot;>[Kdays]</b> to insert the number of days limit to validate a registration (&quot;Anmeldeschluss Validierung beschränkt;&quot; have to be enabled).
+- <b style="color: red;">[username]</b> to automatically insert the name of the destination user of the email.<br>
+- <b style="color: red;">[mygallery]</b> to insert the title of your gallery.<br>
+- <b style="color: red;">[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.<br>
+- <b style="color: red;">[Kdays]</b> to insert the number of days limit to validate a registration ("Anmeldeschluss Validierung beschränkt;" have to be enabled).
+<br><br>
+Um mehrere Sprachen zu benutzen, können Sie die Extended description Plugin-Tags verwenden, wenn er aktiv ist.';
 <br><br>
 Um mehrere Sprachen zu benutzen, können Sie die Extended description Plugin-Tags verwenden, wenn er aktiv ist.';
 /*TODO*/$lang['UAM_infotxtTitle_d'] = 'Geben Sie den einleitenden Text, den Sie in der Informations-E-Mail angezeigt.
@@ -223,12 +232,12 @@ Further customize the content with special inserted tags:<br>
 - <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.
 <br><br>
 Um mehrere Sprachen zu benutzen, können Sie die Extended description Plugin-Tags verwenden, wenn er aktiv ist.';
-/*TODO*/$lang['UAM_AdminValidationMail_d'] = 'Wenn ein Administrator oder Webmaster der Galerie manuell gültige Registrierung anhängig ist, ist eine Benachrichtigungs-Email automatisch an den Benutzer gesendet. Geben Sie hier den Text ein, in dieser E-Mail angezeigt.
+$lang['UAM_AdminValidationMail_d'] = 'Wenn ein Administrator oder Webmaster der Galerie manuell gültige Registrierung anhängig ist, ist eine Benachrichtigungs-Email automatisch an den Benutzer gesendet. Geben Sie hier den Text ein, in dieser E-Mail angezeigt.
 <br><br>
 Further customize the content with special inserted tags:<br>
-- <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the name of the destination user of the email.<br>
-- <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery.<br>
-- <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.
+- <b style="color: red;">[username]</b> to automatically insert the name of the destination user of the email.<br>
+- <b style="color: red;">[mygallery]</b> to insert the title of your gallery.<br>
+- <b style="color: red;">[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.
 <br><br>
 Um mehrere Sprachen zu benutzen, können Sie die Extended description Plugin-Tags verwenden, wenn er aktiv ist.';
 /*TODO*/$lang['UAM_confirmmail_custom1_d'] = 'Wenn die Option &quot;Bestätigung der Anmeldung&quot; aktiv ist, können Sie in diesem zu <b><u>Akzeptanz Text anpassen</u></b> auf der Anmeldebestätigung Seite angezeigt, wenn Benutzer auf den Bestätigungs-Link, die empfangen wurde per E-Mail.
@@ -290,4 +299,6 @@ Further customize the content with special inserted tags:<br>
 <br><br>
 Custom text for the redirect page can be entered in this field that is compatible with the FCK Editor and, for multi-languages, you can use the tags [lang] of the plugin Extended description if it\'s active.';
 // --------- End: New or revised $lang ---- from version 2.20.11
+$lang['UAM_RejectConnexion_d'] = 'If activated, new registered users who have not confirm their registration won\'t be able to connect to the gallery. They will be redirected to a special page to inform them of this state.<br><br>
+<b style="color: red;">Warning - This feature works only in conjunction with confirmation groups! See below to set the groups as required.</b>';
 ?>
