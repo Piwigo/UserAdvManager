@@ -111,7 +111,7 @@ $lang['UAM_Title2'] = 'Einstellen Bestätigungen und Validierungen der Registrie
 $lang['UAM_Title3'] = 'Einstellen der Registrierung durchgeführt und andere Optionen';
 $lang['UAM_Title4'] = 'Tipps und Beispiele für die Benutzung';
 $lang['UAM_No_Casse'] = 'Benutzernamen: Groß-und Kleinschreibung';
-$lang['UAM_Username_Char'] = ' Benutzernamen: Ausschluss von Zeichen';
+$lang['UAM_Username_Char'] = 'Benutzernamen: Ausschluss von Zeichen';
 $lang['UAM_Username_Char_true'] = ' Zeichen Verboten:<br>(Verwenden Sie ein Komma, um ein Zeichen getrennt)<br><br>';
 $lang['UAM_Username_Char_false'] = ' Erlauben Sie alle (Standard)';
 $lang['UAM_Password_Enforced'] = 'Stärkung des Sicherheitsniveaus von Kennwörtern';
@@ -150,7 +150,7 @@ $lang['UAM_SubTitle3'] = 'Tracking Validierungen';
 $lang['UAM_UserManager_Title'] = 'Tracking Validierungen';
 /* Ghost Tracker Tab */
 $lang['UAM_SubTitle4'] = 'Geist Tracker';
-$lang['UAM_GT_Init'] = 'Initializing Ghost Tracker';
+$lang['UAM_GT_Init'] = 'Initialisieren Geist Tracker';
 $lang['UAM_GhostTracker_Title'] = 'Geist Besucher-Management';
 $lang['UAM_GhostTracker_Init'] = 'Wenn Sie diese Funktion zum ersten Mal oder haben Sie nach einem langen Zeitraum aus, in dem neue Besucher registriert sind, müssen Sie initialisieren, oder setzen Sie den Geist Tracker reaktiviert. Dieser Vorgang ist nur nach Aktivierung oder Reaktivierung von der Möglichkeit gemacht. Bitte klicken Sie <u>einmal</u> die Reset-Taste unten.';
 /* UserList Tab */
@@ -243,46 +243,82 @@ $lang['UAM_GTAutoMail'] = 'Automatisches Versenden einer E-Mail beim Wechsel Gru
 // --------- End: New or revised $lang ---- from version 2.30.2
 $lang['UAM_Tips1_txt'] = '          <ul>
             <li>
-            Goals: Inform the visitor that the registration is awaiting approval by displaying a personal block on the home page of the gallery, and this, as registration is not approved.
+            Tore: Informieren Sie die Besucher, dass die Registrierung wartet auf die Genehmigung durch die Anzeige eines persönlichen Block auf der Homepage der Galerie, und dies, da eine Registrierung ist nicht zugelassen.
             <br><br>
-            <b>Recall: In standard operation, the "Guest" only sees the public categories, without information message.</b>
+            <b>Erinnern: Im Standard-Modus, der "Gast" sieht nur die öffentlichen Kategorien, ohne Informationen Nachricht.</b>
             </li><br><br>
             <li>
-Prerequisite:<br>
-- A gallery with all or some private categories, visible only by registered users<br>
-- At least 2 following Piwigo\'s users groups: "Waiting," without permission on private categories, and "Confirmed" with all the permissions on the private categories<br>
+Voraussetzung:<br>
+- Eine Galerie mit allen oder einigen privaten Kategorien, sichtbar nur von registrierten Benutzern<br>
+- Mindestens 2 nach Piwigo der Anwender Gruppen: "Warten", ohne Erlaubnis auf privatem Kategorien und "Bestätigt" mit alle den Berechtigungen für die private Kategorien<br>
 - UAM plugin<br>
-- PWG Stuffs plugin, for adding a special UAM module<br>
-- Optionally, the plugin Extended Description to support multi-languages<br>
+- PWG Stuffs plugin, zum Addieren eines speziellen UAM-Modul<br>
+- Optional für das Hinzufügen, das Plugin Extended Description zu Multi-Sprachen unterstützen<br>
             </li><br><br>
             <li>
-Stages:<br><br>
-A. In plugin UAM:
+Schritte:<br><br>
+A. Im plugin UAM:
               <ol>
-                <li>Enable registration confirmation</li>
-                <li>Enable PWG Stuffs module option</li>
-                <li>Enter text for additional explanation which will be attached to mail registration confirmation. If the plugin Extended Description is activated, the language tags can be used</li>
-                <li>Select the "Waiting" group under "For users who have not confirmed their registration"</li>
-                <li>Select the "Confirmed" group under "For users who have confirmed their registration"</li>
-                <li>Save the plugin configuration</li>
+                <li>Aktivieren Sie Anmeldebestätigung</li>
+                <li>Aktivieren PWG Stuffs Modul Option</li>
+                <li>Geben Sie den Text für zusätzliche Erklärung, die auf Mail-Registrierung eine Bestätigung beigefügt werden. Wenn das Plugin Extended Description aktiviert ist, können die Sprach-Tags verwendet werden</li>
+                <li>Wählen Sie das "Warten"-Gruppe unter "Für Anwender, die nicht ihre Anmeldung bestätigt haben"</li>
+                <li>Wählen Sie den "Bestätigt"-Gruppe unter "Für Anwender, die ihre Anmeldung bestätigt haben"</li>
+                <li>Speichern Sie das Plugin-Konfiguration</li>
               </ol>
 <br>
-B. In plugin PWG Stuffs :
+B. Im plugin PWG Stuffs :
               <ol>
-                <li>Go to tab "Add a new module"</li>
-                <li>Choose "UAM Module"</li>
-                <li>Configure the module, indicating the title (eg "Registration pending confirmation") and its description, and only check "Waiting" in the list of groups allowed</li>
-                <li>Complete content of the module with the message information to be displayed to users not confirmed. As UAM, languages markup may be used if the plugin is enabled Extended Description</li>
-                <li>Check "Display the module on the homepage of the site"</li>
-                <li>Validate the configuration of the module</li>
+                <li>Auf der Registerkarte "Hinzufügen eines neuen Moduls"</li>
+                <li>Wählen Sie "UAM-Modul"</li>
+                <li>Konfigurieren Sie das Modul unter Angabe des Titels (z. B.: "Anmeldung bis zur Bestätigung") und ihre Beschreibung, und nur überprüfen, "Waiting" in der Liste der Gruppen erlaubt</li>
+                <li>Kompletten Inhalt des Moduls mit der Meldung Informationen zu den Benutzern nicht bestätigt angezeigt werden. Als UAM, kann Markup Sprachen verwendet werden, wenn das Plugin aktiviert ist Extended Description werden</li>
+                <li>Aktivieren Sie "Zeigen Sie das Modul auf der Homepage der Website"</li>
+                <li>Bestätigen Sie die Konfiguration des Moduls</li>
               </ol>
             </li>
           </ul>';
 $lang['UAM_Tips2_txt'] = '          <ul>
             <li>
-            Goals: Inform the visitor that the registration is awaiting confirmation by posting an additional page replacing the standard index page gallery at each of these connections, and this, as registration is not approved.
+           Tore: Informieren Sie die Besucher, dass die Registrierung auf eine Bestätigung durch Entsendung einer zusätzlichen Seite anstelle der Standard-Index-Seite Galerie an jeder dieser Anschlüsse, und dies, da eine Registrierung ist nicht zugelassen.
             <br><br>
-            Advantages over the method with PWG_Stuffs: Allow formatting information and displaying the information immediately upon registration of visitors.
+            Vorteile gegenüber dem Verfahren mit PWG_Stuffs: Lassen Sie die Formatierung und Darstellung von Informationen sofort nach der Registrierung der Besucher.
+            </li><br><br>
+            <li>
+Voraussetzung:<br>
+- Eine Galerie mit allen oder einigen privaten Kategorien, sichtbar nur von registrierten Benutzern<br>
+- Mindestens 2 nach Piwigo der Anwender Gruppen: "Warten", ohne Erlaubnis auf privatem Kategorien und "Bestätigt" mit alle den Berechtigungen für die private Kategorien<br>
+- UAM plugin<br>
+- "Additional Pages"-Plugin für das Hinzufügen und Verwalten einer zusätzlichen Seite, um die Standard-Index-Seite der Galerie ersetzen<br>
+- Optional für das Hinzufügen, das Plugin Extended Description zu Multi-Sprachen unterstützen<br>
+            </li><br><br>
+            <li>
+Schritte:<br><br>
+A. Im plugin UAM:
+              <ol>
+                <li>Aktivieren Sie Anmeldebestätigung</li>
+                <li>Geben Sie den Text für zusätzliche Erklärung, die auf Mail-Registrierung eine Bestätigung beigefügt werden. Wenn das Plugin Extended Description aktiviert ist, können die Sprach-Tags verwendet werden</li>
+                <li>Wählen Sie das "Warten"-Gruppe unter "Für Anwender, die nicht ihre Anmeldung bestätigt haben"</li>
+                <li>Wählen Sie den "Bestätigt"-Gruppe unter "Für Anwender, die ihre Anmeldung bestätigt haben"</li>
+                <li>Speichern Sie das Plugin-Konfiguration</li>
+              </ol>
+<br>
+B. Im plugin Additional Pages:<br>
+                <b>HINWEIS: Die Verwaltung von Zugriffsrechten für Gruppen auf zusätzlichen Seiten muss eingeschaltet sein (siehe Plugin Konfigurationseinstellungen).</b>
+                <br>
+              <ol>
+                <li>Fügen Sie eine neue Seite mit mindestens den folgenden Parametern:</li>
+                <ul>
+                  <li>Page name: Der Name, den Sie möchten, auf die zusätzliche Seite geben (z. B.: Registrierung nicht bestätigt)</li>
+                  <li>Als Homepage überprüft</li>
+                  <li>Gruppen erlaubt: Aktivieren Sie das Kästchen, um der Gruppe "Warten" in UAM konfiguriert</li>
+                  <li>Inhalt: Der Text, den Sie für die Besucher zu nutzen.</li>
+                </ul>
+                <br>
+                <li>Und das ist es! Nur registrierte Besucher und deren Eintragung wurde nicht bestätigt werden sehen, diese zusätzliche Index-Seite.</li>
+              </ol>
+            </li>
+          </ul>';
             </li><br><br>
             <li>
 Prerequisite:<br>
@@ -319,4 +355,73 @@ B. In plugin Additional Pages:<br>
               </ol>
             </li>
           </ul>';
+$lang['UAM %d user pwdreseted'] = 'Passwort erneuern für %d Benutzer erforderlich';
+$lang['UAM %d users pwdreseted'] = 'Passwort erneuern für %d Benutzer erforderlich';
+$lang['UAM_Admins cannot be pwdreset'] = 'Passwort erneuern kann nicht f';
+$lang['UAM_Bad_version_backup'] = 'Die Version der Backup-Datei entspricht nicht der Version des Plugins! Die Restaurierung wurde nicht durchgef';
+$lang['UAM_Confirm_Level'] = 'Datenschutz Niveau<br>(------- verlassen, um die Piwigo der Standard zu halten)';
+$lang['UAM_Default user cannot be pwgreset'] = 'Passwort erneuern kann nicht für Standard-Benutzer eingestellt werden!';
+$lang['UAM_Default_AdminValidation_Txt'] = 'Hallo [username]! Danke für die Registrierung und willkommen bei [mygallery].
+
+Ihr Konto wurde manuell durch den Webmaster von [mygallery] bestätigt. Sie können sich jetzt anmelden unter [myurl] und nehmen alle erforderlichen Änderungen an Ihrem Profil.';
+$lang['UAM_Default_CfmMail_Custom_Txt1'] = 'Willkommen [username]! Sie haben best';
+$lang['UAM_Default_CfmMail_Custom_Txt2'] = 'Ihr Aktivierungscode ist falsch oder abgelaufen oder haben Sie schon Ihren Account bestätigt, kontaktieren Sie bitte den Webmaster, um dieses Problem zu beheben.';
+$lang['UAM_Default_CfmMail_Remail_Txt1'] = 'Hallo [username].
+
+Dies ist eine Erinnerung Nachricht, weil Sie auf unserer Galerie registriert [mygallery] aber nicht bestätigen Ihre Anmeldung und Ihre Bestätigung Schlüssel abgelaufen ist. Um noch können Sie in unserer Galerie zuzugreifen, hat Ihre Bestätigung Zeitraum wurden zurückgesetzt. Sie haben wieder x Tage, um Ihre Registrierung zu bestätigen.
+
+Hinweis: Nach Ablauf dieses Zeitraums wird Ihr Konto dauerhaft gelöscht.';
+$lang['UAM_Default_CfmMail_Remail_Txt2'] = 'Hallo [username].
+
+Dies ist eine Erinnerung Nachricht, weil Sie auf unserer Galerie registriert [mygallery] aber nicht bestätigen Ihre Anmeldung und Ihre Bestätigung Schlüssel abläuft. Damit Sie unsere Galerie zuzugreifen, müssen Sie x Tage, um Ihre Anmeldung durch Klick auf den Link in der Nachricht, die Sie erhalten haben, sollten Sie bei der Registrierung zu bestätigen.
+
+Hinweis: Nach Ablauf dieses Zeitraums wird Ihr Konto dauerhaft gelöscht.';
+$lang['UAM_Default_ConfirmMail_Txt'] = 'Hallo [username]! Wir danken Ihnen, auf [mygallery] haben registrieren lassen.
+
+Um den Vorgang abzuschlie';
+$lang['UAM_Default_GhstDeletion_Txt'] = 'Leider [username], Ihr Konto wurde aufgrund einer zu langen Zeit seit Ihrem letzten Besuch am [mygallery] weitergegeben gel';
+$lang['UAM_Default_GhstDemotion_Txt'] = 'Leider [username], Ihr Konto wurde aufgrund einer zu langen Zeit seit Ihrem letzten Besuch am [mygallery] weitergegeben wurde verworfen. Bitte benutzen Sie den folgenden Link, um Ihr Konto zu bestätigen:';
+$lang['UAM_Default_GhstReminder_Txt'] = 'Hallo [username].
+
+Dies ist eine Erinnerung, weil eine sehr lange Zeit vergangen, seit Ihrem letzten Besuch auf unserer Galerie [mygallery]. Wenn Sie nicht mehr tun wollen Ihren Zugang Konto verwenden, informieren Sie uns bitte durch eine Beantwortung dieser E-Mail. Ihr Konto wird gel';
+$lang['UAM_Default_InfoMail_Txt'] = 'Hallo [username]! Wir danken Ihnen, auf [mygallery] haben registrieren lassen.
+
+Bitte, finden Sie unten Ihre Verbindung Informationen.';
+$lang['UAM_Default_PwdRequest_Txt'] = 'Sie haben ein Passwort-Reset auf unserer Galerie anzubieten. Bitte unten Ihre neue Verbindung Einstellungen zu finden.';
+$lang['UAM_Default_RejectConnexion_Txt'] = 'Leider müssen Sie nicht Ihre Anmeldung bestätigt noch haben, so können Sie nicht schließen Sie die Galerie jetzt. Bitte überprüfen Sie Ihre E-Mail-Box. Sie sollten eine E-Mail durch die Galerie geschickt, mit einem Link zu Ihrer Bestätigung durchzuführen. Wenn nicht, wenden Sie sich bitte an den Webmaster.';
+$lang['UAM_Default_ValidationTimeout_Txt'] = 'Sorry, dein Konto wurde gelöscht, weil Sie nicht Ihre Anmeldung im gewünschten Zeitraum ([Kdays] Tage) bestätigt haben. Bitte versuchen Registrierung mit einer gültigen und nicht blockiert E-Mail-Konto.';
+$lang['UAM_Error_Using_illegal_flag'] = 'Syntax-Fehler! Die [Kdays] AutoText Flagge wird als "Anmeldeschluss Bestätigung begrenzt"-Option verwendet wurde nicht aktiviert. Bitte aktivieren Sie die Option, oder korrigieren Sie die Text-Feld rot eingefärbt.';
+$lang['UAM_Error_Using_illegal_Kdays'] = 'Mit dem [Kdays]-Tag ist nur zulässig, wenn die Frist für die Anmeldebestätigung begrenzt aktiv ist. Lesen Sie das Textfeld in rot, um das Problem zu beheben.';
+$lang['UAM_Expired_Level'] = '<b>Datenschutz Niveau</b> für Benutzer-Registrierung abgelaufen<br>';
+$lang['UAM_Generic cannot be pwdreset'] = 'Passwort erneuern kann nicht f';
+$lang['UAM_Guest cannot be pwdreset'] = 'Passwort erneuern kann nicht für die Gäste gestellt werden!';
+$lang['UAM_MailExclusion_No'] = 'E-Mail-Domänen Ausgrenzung - Nicht verfügbar, da E-Mails nicht zwingend notwendig sind für die Registrierung!';
+$lang['UAM_MiscOptions'] = 'Andere Verschiedene Optionen';
+$lang['UAM_NewFeature'] = 'Neue Funktion!';
+$lang['UAM_No_Backup_File'] = 'Kein Backup-Datei verf';
+$lang['UAM_No_Ghosts'] = 'Keine Geister Besucher im Moment';
+$lang['UAM_No_Userlist'] = 'Keine Besucher Liste im Moment';
+$lang['UAM_No_Usermanager'] = 'Keine unbestätigten registriert sich vor Liste';
+$lang['UAM_No_Valid_Level'] = 'Datenschutz Niveau für Benutzer, die nicht ihre Registrierung bestätigt haben<br>';
+$lang['UAM_Password reset selected users'] = 'Passwort anfordern Erneuerung für ausgewählte Benutzer';
+$lang['UAM_Password_Reset_Msg'] = 'Bitte, ändern Sie Ihr Passwort!';
+$lang['UAM_PwdReset'] = 'Passwort erneuern';
+$lang['UAM_PwdReset_Done'] = 'Passwort erneuert';
+$lang['UAM_PwdReset_NA'] = 'Original-Passwort';
+$lang['UAM_PwdReset_Todo'] = 'Passwort erneuert werden';
+$lang['UAM_RejectConnexion'] = 'Ablehnen Benutzer-Verbindung, bis die Registrierung bestätigt wird,';
+$lang['UAM_RejectConnexion_Custom_Txt'] = 'Passen Ablehnung Text';
+$lang['UAM_Reject_Page_Title'] = 'Connexion nicht erlaubt!';
+$lang['UAM_Restoration_NOK'] = 'Fehler beim Wiederherstellen der Konfiguration. Bitte pr';
+$lang['UAM_Restoration_OK'] = 'Wiederherstellen der Konfiguration wurde erfolgreich abgeschlossen! Bitte laden UAM-Administration, um die wiederhergestellten Einstellungen anzuzeigen.';
+$lang['UAM_Restore_File'] = 'Konfiguration wiederherstellen';
+$lang['UAM_Stuffs_Desc'] = 'Fügt einen Informationsblock für unbestätigte Benutzer';
+$lang['UAM_Tips1'] = 'Informationen von unbestätigten Registrierung mit UAM und PWG_Stuffs';
+$lang['UAM_Tips2'] = 'Informationen von unbestätigten Registrierung mit UAM und zusätzliche Seiten';
+$lang['UAM_Title5'] = 'Verschiedene Optionen';
+$lang['UAM_USRAuto'] = 'Automatische Verwaltung von Benutzern unbestätigte';
+$lang['UAM_Valid_Level'] = 'Datenschutz Niveau für Anwender, die ihre Anmeldung bestätigt haben<br>';
+$lang['UAM_Webmaster cannot be pwdreset'] = 'Passwort erneuern können nicht für den Webmaster eingestellt werden!';
+$lang['UAM_You cannot pwdreset your account'] = 'Passwort erneuern können nicht auf eigene Rechnung eingestellt werden!';
+$lang['UAM_You need to confirm pwdreset'] = 'Sie müssen bestätigen, Passwort erneuern (check box)!';
 ?>
