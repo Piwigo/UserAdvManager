@@ -282,5 +282,10 @@ Plugin Name: UserAdvManager
             Bug 2527 fixed - "Confirmation for admins" option has been moved one step higher in admin panel
             Bug 2528 fixed - The word "validation" for "registration validation" has been replaced by "confirmation"
             Bug 2569 fixed - Missing connexion rejected page
+
+**************************************************************
+***** Plugin history (branch 2.40 - Piwigo 2.4 compliant)*****
+**************************************************************
+-- 2.40.0 : Bug 2570 fixed - Adding Wiki link to complete plugin documentation 
 */
 ?>

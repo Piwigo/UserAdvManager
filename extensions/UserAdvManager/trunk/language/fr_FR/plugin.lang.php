@@ -159,6 +159,8 @@ $lang['UAM_Nb_Days'] = 'Ecart en jours';
 $lang['UAM_Support_txt'] = 'Le support officiel sur ce plugin se fait exclusivement sur ce fil du forum FR de Piwigo:<br>
 <a href="http://fr.piwigo.org/forum/viewtopic.php?id=12775" onclick="window.open(this.href);return false;">Forum français - http://fr.piwigo.org/forum/viewtopic.php?id=12775</a>
 <br><br>
+Bien que l\'aide en ligne soit assez complète, vous pouvez également vous référer à la documentation complète d\'utilisation du plugin sur <a href="http://fr.piwigo.org/doc/doku.php?id=plugins:nbc_uam" onclick="window.open(this.href);return false;">le Wiki de Piwigo</a> 
+<br><br>
 Egalement disponible, le bugtracker du projet: <a href="http://piwigo.org/bugs/" onclick="window.open(this.href);return false;">http://piwigo.org/bugs/</a>';
 // --------- End: New or revised $lang ---- from version 2.15.1
 
