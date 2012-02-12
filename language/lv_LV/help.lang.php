@@ -145,7 +145,4 @@ $lang['UAM_GTAutoGpTitle_d'] = 'Automātiska konta grupas vai statusa maiņa ir 
 Tādējādi jānosaka mainīto (pazemināto) grupu un/vai statusa piekļuves tiesības galerijai. Ja tas jau izdarītslietojot reģistrācijas apstiprināšanas funkciju, varat lietot to pašu grupu vai statusu.<br><br>
 <b style=&quot;color: red;&quot;>Important note :</b> Ja no slēptā ghost lietotāja pēc termiņa limita, neskatoties uz informēšanu ar e-pastu (ja iespējots), nav nekādas ziņas, viņš automātiski tie dzēsts no datu bāzes';
 // --------- End: New or revised $lang ---- from version 2.16.0
-
-
-//$lang['UAM_lastvisitTitle_d'] = 'Šis aktivē tabulu &quot;Tracking users&quot; iezīmē (tabā), kurā reģistrēti galeriju apmeklējušie lietotāji, viņu pēdējā apmeklējuma datums, kā arī galerijā pavadītais laiks (dienās) kopš pēdējā apmeklējuma. Monitoringam ir tīri informatīvs raksturs galerijas administratora vajadzībām.';
 ?>

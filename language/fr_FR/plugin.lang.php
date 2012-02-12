@@ -404,14 +404,5 @@ Note: A l\'issue de cette période sans confirmation, votre compte sera définit
 $lang['UAM_Default_RejectConnexion_Txt'] = 'Désolé, vous n\'avez pas encore confirmé votre inscription et vous ne pouvez pas vous connecter maintenant. Merci de vérifier votre boite aux lettres. Vous devriez y trouver un message comportant un lien pour confirmer votre inscription. Si ce n\'est pas le cas, merci de contacter l\'administrateur de la galerie.';
 $lang['UAM_Tracking registered users'] = 'Suivi des utilisateurs inscrits';
 $lang['UAM_Tracking confirmations'] = 'Suivi des confirmations';
-/* UserList Tab */
-//$lang['UAM_UserList_Title'] = 'Suivi des utilisateurs inscrits';
-//$lang['UAM_Tab_UserList'] = 'Suivi des utilisateurs';
-//$lang['UAM_LastVisit'] = ' Suivi des utilisateurs inscrits';
-//$lang['UAM_SubTitle5'] = 'Informations sur les utilisateurs';
-
-//$lang['UAM_Tab_UserManager'] = 'Suivi des confirmations';
-//$lang['UAM_SubTitle3'] = 'Suivi des confirmations';
-//$lang['UAM_UserManager_Title'] = 'Suivi des confirmations';
 // --------- End: New or revised $lang ---- from version 2.30.3
 ?>

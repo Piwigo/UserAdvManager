@@ -285,6 +285,4 @@ Further customize the content with special inserted tags:<br>
 <br><br>
 Custom text for the redirect page can be entered in this field that is compatible with the FCK Editor and, for multi-languages, you can use the tags [lang] of the plugin Extended description if it\'s active.';
 // --------- End: New or revised $lang ---- from version 2.20.11
-
-//$lang['UAM_lastvisitTitle_d'] = 'Esto activa una tabla de &quot;Seguimiento de los usuarios&quot; ficha de matriculaci&oacute;n de los usuarios que aparecen en la galer&iacute;a y la fecha de su &uacute;ltima visita y el tiempo (en d&iacute;as) desde su &uacute;ltima visita. El seguimiento es meramente informativo para el administrador de la galer&iacute;a.';
 ?>

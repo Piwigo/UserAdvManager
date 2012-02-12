@@ -300,6 +300,5 @@ Un utilisateur apparaitra en vert s\'il a visité la galerie depuis moins de 50 
 <br><br>
 <b>Fonction de tri du tableau</b>: Vous pouvez trier les données affichées en cliquant sur les entêtes de colonnes. L\'utilisation de la touche MAJ ou SHIFT permet de trier sur 1 à 4 colonnes simultanées maximum.';
 $lang['UAM_Tracking registered users_d'] = 'Cette option active, dans l\'onglet &quot;Suivi des utilisateurs inscrits&quot;, un tableau recensant les utilisateurs inscrits, la date de leur dernière visite et le nombre de jours écoulés depuis leur dernière visite. Il s\'agit d\'un suivi purement informatif pour l\'administrateur de la galerie.';
-//$lang['UAM_lastvisitTitle_d'] = 'Cette option active, dans l\'onglet &quot;Suivi des utilisateurs inscrits&quot;, un tableau recensant les utilisateurs inscrits, la date de leur dernière visite et le nombre de jours écoulés depuis leur dernière visite. Il s\'agit d\'un suivi purement informatif pour l\'administrateur de la galerie.';
 // --------- End: New or revised $lang ---- from version 2.30.3
 ?>

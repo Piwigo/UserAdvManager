@@ -401,13 +401,5 @@ $lang['UAM_RejectConnexion'] = 'Reject user\'s connexion until registration is c
 $lang['UAM_Default_RejectConnexion_Txt'] = 'Sorry, you don\'t have confirmed your registration yet, so you can\'t connect the gallery now. Please check your email box. You should find an email sent by the gallery, containing a link to perform your confirmation. If not, please contact the webmaster.';
 $lang['UAM_Tracking registered users'] = 'Tracking registered users';
 $lang['UAM_Tracking confirmations'] = 'Tracking confirmations';
-//$lang['UAM_UserList_Title'] = 'Monitoring registered users';
-//$lang['UAM_SubTitle5'] = 'Tracking users';
-//$lang['UAM_Tab_UserList'] = 'Tracking users';
-//$lang['UAM_LastVisit'] = ' Tracking registered users';
-
-//$lang['UAM_Tab_UserManager'] = 'Tracking confirmations';
-//$lang['UAM_SubTitle3'] = 'Tracking confirmations';
-//$lang['UAM_UserManager_Title'] = 'Tracking confirmations';
 // --------- End: New or revised $lang ---- from version 2.30.3
 ?>
