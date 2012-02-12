@@ -93,12 +93,6 @@ $lang['UAM_mail_exclusionlist_error'] = 'Figyelem! Egy "új sor"-t (CR-LF) írt�
 // --------- End: New or revised $lang ---- from version 2.12.8
 
 
-// --------- Starting below: New or revised $lang ---- from version 2.13.0
-/* UserList Tab */
-$lang['UAM_UserList_Title'] = 'Regisztrált felhasználó figyelése';
-// --------- End: New or revised $lang ---- from version 2.13.0
-
-
 // --------- Starting below: New or revised $lang ---- from version 2.13.4
 /* Global Configuration Tab */
 $lang['UAM_Title_Tab'] = 'UserAdvManager - Verzió : ';
@@ -140,21 +134,12 @@ $lang['UAM_ConfirmMail_ReMail_Txt2'] = 'Az emlékezetető üzenet testreszabása
 $lang['UAM_GhostTracker'] = 'Szellem-látogatók kezelése (Szellem-követő)';
 $lang['UAM_GhostTracker_true'] = ' Bekapcsol. Maximális napok száma két látogatás között: ';
 $lang['UAM_GhostTracker_ReminderText'] = 'A Szellem-Követő emlékeztető üzenetének testretszabása.';
-$lang['UAM_LastVisit'] = ' Regisztrált felhasználók követése';
 
-$lang['UAM_Tab_UserManager'] = 'Érvényesítés követése';
-
-/* UserManager Tab */
-$lang['UAM_SubTitle3'] = 'Érvényesítés követése';
-$lang['UAM_UserManager_Title'] = 'Érvényesítés követése';
 /* Ghost Tracker Tab */
 $lang['UAM_SubTitle4'] = 'Szellem-Követő';
 $lang['UAM_GT_Init'] = 'Szellem-Követő inicializálása';
 $lang['UAM_GhostTracker_Title'] = 'Szellem-látogatók kezelése';
 $lang['UAM_GhostTracker_Init'] = 'Ha ezt a funkciót most először kapcsolod be, vagy hosszú idő után (ami alatt új felhasználók regisztráltak) újra aktiválod, akkor a Szellem-Követőt inicializálnod vagy visszaállítanod kell. Ezt csak az opció bekapcsolása vagy újraindítása esetén kell megtenni.Kérlek, klikkelj <u>egyszer</u> az alábbi visszaállítás gombra.';
-/* UserList Tab */
-$lang['UAM_SubTitle5'] = 'Felhasználó-követés';
-$lang['UAM_Tab_UserList'] = 'Felhasználó-követés';
 /* Mailing */
 $lang['UAM_Add of %s'] = 'Profil elkészítve %s számára';
 $lang['UAM_Update of %s'] = '%s profilja frissítve';
@@ -355,12 +340,14 @@ $lang['UAM_Error_Using_illegal_flag'] = 'Szintaktikai hiba! Az [Kdays] AutoText 
 
 // --------- Starting below: New or revised $lang ---- from version 2.30.2
 $lang['UAM_RedirToProfile'] = 'Átirányítás a Testreszabás oldalra';
-/*TODO*/$lang['UAM_GTAutoGp'] = 'Automatic change of group / status / privacy level';
-/*TODO*/$lang['UAM_GTAutoMail'] = 'Automatically sending an email when changing group / status / privacy level';
-/*TODO*/$lang['UAM_NewFeature'] = 'New feature !';
-/*TODO*/$lang['UAM_RejectConnexion'] = 'Reject user\'s connexion until registration is validated';
-/*TODO*/$lang['UAM_RejectConnexion_Custom_Txt'] = 'Customize rejection text';
-/*TODO*/$lang['UAM_Default_RejectConnexion_Txt'] = 'Sorry, you don\'t have validate your registration yet, so you can\'t connect the gallery now. Please check your email box. You should find an email sent by the gallery, containing a link to perform your validation. If not, please contact the webmaster.';
-/*TODO*/$lang['UAM_Reject_Page_Title'] = 'Connexion not allowed !';
 // --------- End: New or revised $lang ---- from version 2.30.2
+
+//$lang['UAM_UserList_Title'] = 'Regisztrált felhasználó figyelése';
+//$lang['UAM_SubTitle5'] = 'Felhasználó-követés';
+//$lang['UAM_Tab_UserList'] = 'Felhasználó-követés';
+//$lang['UAM_LastVisit'] = ' Regisztrált felhasználók követése';
+
+//$lang['UAM_Tab_UserManager'] = 'Érvényesítés követése';
+//$lang['UAM_SubTitle3'] = 'Érvényesítés követése';
+//$lang['UAM_UserManager_Title'] = 'Érvényesítés követése';
 ?>

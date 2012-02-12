@@ -15,7 +15,6 @@ $lang['UAM_infomailTitle_d'] = 'Cette option permet d\'automatiser l\'envoi d\'u
 Le message envoyé comprend une partie fixe (login, mot de passe et adresse email de l\'utilisateur) et une partie personnalisable par un texte d\'accueil.';
 $lang['UAM_remailtxt1Title'] = 'Message de rappel avec regénération de clé';
 $lang['UAM_remailtxt2Title'] = 'Message de rappel sans regénération de clé';
-$lang['UAM_lastvisitTitle_d'] = 'Cette option active, dans l\'onglet &quot;Suivi des utilisateurs&quot;, un tableau recensant les utilisateurs inscrits, la date de leur dernière visite et le nombre de jours écoulés depuis leur dernière visite. Il s\'agit d\'un suivi purement informatif pour l\'administrateur de la galerie.';
 $lang['UAM_tipsTitle_d'] = 'Astuces et exemples divers d\'utilisation';
 
 
@@ -255,23 +254,6 @@ $lang['UAM_restricTitle_d'] = '
 - Exclusion des domaines de messagerie<br>
 ...
 ';
-$lang['UAM_userlistTitle_d'] = 'Cette page est à titre d\'information pour l\'administrateur. Elle affiche la liste de tous les utilisateurs inscrits sur la galerie en faisant apparaitre la date et le nombre de jours depuis leur dernière visite. La liste est triée dans l\'ordre croissant du nombre de jours.
-<br><br>
-<b><u>Uniquement lorsque le Ghost Tracker est actif</u></b>, le nombre de jours sans visite s\'affiche selon le code couleur suivant, en fonction du délai maximum paramétré dans les options du Ghost Tracker :
-<br>
-- <b style=&quot;color: lime;&quot;>En vert</b> : Lorsque l\'utilisateur a visité la galerie <b style=&quot;color: lime;&quot;><u>depuis moins de 50%</u></b> du délai maximum renseigné dans le Ghost Tracker.<br>
-- <b style=&quot;color: orange;&quot;>En orange</b> : Lorsque l\'utilisateur a visité la galerie <b style=&quot;color: orange;&quot;><u>entre 50% et 99%</u></b> du délai maximum renseigné dans le Ghost Tracker.<br>
-- <b style=&quot;color: red;&quot;>En rouge</b> : Lorsque l\'utilisateur a visité la galerie <b style=&quot;color: red;&quot;><u>depuis 100% et plus</u></b> du délai maximum renseigné dans le Ghost Tracker. <b><u>Dans ce cas, l\'utilisateur doit également apparaitre dans le tableau du Ghost Tracker.</u></b><br>
-<br>
-Exemple:
-<br>
-Le délai maximum du Ghost Tracker est configuré à 100 jours.
-<br>
-Un utilisateur apparaitra en vert s\'il a visité la galerie depuis moins de 50 jours, en orange si sa dernière visite s\'est déroulée entre 50 et 99 jours et en rouge à 100 jours et au-delà.
-<br><br>
-<b>A NOTER</b>: La liste n\'affiche pas les inscrits qui n\'auraient pas confirmé leur inscription (si l\'option de confirmation de l\'inscription est activée). Ces utilisateurs sont alors gérés de manière particulière dans l\'onglet &quot;Suivi des confirmations&quot;.
-<br><br>
-<b>Fonction de tri du tableau</b>: Vous pouvez trier les données affichées en cliquant sur les entêtes de colonnes. L\'utilisation de la touche MAJ ou SHIFT permet de trier sur 1 à 4 colonnes simultanées maximum.';
 $lang['UAM_USRAutoMailTitle_d'] = 'Lorsque activée, cette fonction enverra automatiquement le contenu personnalisé dans &quot;Message de rappel avec regénération de clé&quot; aux visiteurs répondant au critère.';
 $lang['UAM_StuffsTitle_d'] = 'Ceci permet d\'activer un module supplémentaire UAM dans le plugin PWG Stuffs (si installé) afin d\'informer sur leur état vos visiteurs n\'ayant pas confirmé leur inscription.
 <br><br>
@@ -300,5 +282,24 @@ $lang['UAM_validationlimitTitle_d'] = 'Cette option permet de limiter le nombre 
 Cette option n\'est utilisable qu\'une fois l\'option &quot;Confirmation d\'inscription&quot; activée.
 <br><br>
 Si cette option et l\'option &quot;Mail de rappel aux inscrits non confirmés&quot; sont activées, de nouvelles options apparaitront plus bas dans cette section pour permettre l\'automatisation de la gestion des visiteurs non confirmés.';
+$lang['UAM_userlistTitle_d'] = 'Cette page est à titre d\'information pour l\'administrateur. Elle affiche la liste de tous les utilisateurs inscrits sur la galerie en faisant apparaitre la date et le nombre de jours depuis leur dernière visite. La liste est triée dans l\'ordre croissant du nombre de jours.
+<br><br>
+<b><u>Uniquement lorsque le Ghost Tracker est actif</u></b>, le nombre de jours sans visite s\'affiche selon le code couleur suivant, en fonction du délai maximum paramétré dans les options du Ghost Tracker :
+<br>
+- <b style=&quot;color: lime;&quot;>En vert</b> : Lorsque l\'utilisateur a visité la galerie <b style=&quot;color: lime;&quot;><u>depuis moins de 50%</u></b> du délai maximum renseigné dans le Ghost Tracker.<br>
+- <b style=&quot;color: orange;&quot;>En orange</b> : Lorsque l\'utilisateur a visité la galerie <b style=&quot;color: orange;&quot;><u>entre 50% et 99%</u></b> du délai maximum renseigné dans le Ghost Tracker.<br>
+- <b style=&quot;color: red;&quot;>En rouge</b> : Lorsque l\'utilisateur a visité la galerie <b style=&quot;color: red;&quot;><u>depuis 100% et plus</u></b> du délai maximum renseigné dans le Ghost Tracker. <b><u>Dans ce cas, l\'utilisateur doit également apparaitre dans le tableau du Ghost Tracker.</u></b><br>
+<br>
+Exemple:
+<br>
+Le délai maximum du Ghost Tracker est configuré à 100 jours.
+<br>
+Un utilisateur apparaitra en vert s\'il a visité la galerie depuis moins de 50 jours, en orange si sa dernière visite s\'est déroulée entre 50 et 99 jours et en rouge à 100 jours et au-delà.
+<br><br>
+<b>A NOTER</b>: La liste n\'affiche pas les inscrits qui n\'auraient pas confirmé leur inscription (si l\'option de confirmation de l\'inscription est activée). Ces utilisateurs sont alors gérés de manière particulière dans l\'onglet &quot;Suivi des confirmations&quot;.
+<br><br>
+<b>Fonction de tri du tableau</b>: Vous pouvez trier les données affichées en cliquant sur les entêtes de colonnes. L\'utilisation de la touche MAJ ou SHIFT permet de trier sur 1 à 4 colonnes simultanées maximum.';
+$lang['UAM_Tracking registered users_d'] = 'Cette option active, dans l\'onglet &quot;Suivi des utilisateurs inscrits&quot;, un tableau recensant les utilisateurs inscrits, la date de leur dernière visite et le nombre de jours écoulés depuis leur dernière visite. Il s\'agit d\'un suivi purement informatif pour l\'administrateur de la galerie.';
+//$lang['UAM_lastvisitTitle_d'] = 'Cette option active, dans l\'onglet &quot;Suivi des utilisateurs inscrits&quot;, un tableau recensant les utilisateurs inscrits, la date de leur dernière visite et le nombre de jours écoulés depuis leur dernière visite. Il s\'agit d\'un suivi purement informatif pour l\'administrateur de la galerie.';
 // --------- End: New or revised $lang ---- from version 2.30.3
 ?>

@@ -774,8 +774,8 @@ function uam_blockToggleDisplay( headerId, contentId )
       <fieldset>
         <ul>
           <li>
-            <label class="cluetip" title="{'UAM_LastVisit'|translate}|{'UAM_lastvisitTitle_d'|translate}">
-              {'UAM_LastVisit'|@translate}
+            <label class="cluetip" title="{'UAM_Tracking registered users'|translate}|{'UAM_Tracking registered users_d'|translate}">
+              {'UAM_Tracking registered users'|@translate}
             </label>
           <br><br>
             <input type="radio" value="false" {$UAM_ADDLASTVISIT_FALSE} name="UAM_Add_LastVisit_Column">
