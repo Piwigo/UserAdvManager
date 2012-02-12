@@ -96,7 +96,6 @@ $lang['UAM_mail_exclusionlist_error'] = 'Warnung! Sie haben eine neue Zeile eing
 
 // --------- Starting below: New or revised $lang ---- from version 2.13.0
 /* UserList Tab */
-$lang['UAM_UserList_Title'] = 'Monitoring registrierte Benutzer';
 $lang['UAM_Nb_Days'] = 'Anzahl der Tage seit<br>dem letzten Besuch';
 // --------- End: New or revised $lang ---- from version 2.13.0
 
@@ -141,21 +140,12 @@ $lang['UAM_ConfirmMail_ReMail_Txt2'] = 'Anpassen der Erinnerungs-Nachricht <b><u
 $lang['UAM_GhostTracker'] = 'Geist Besucher-Management (Geist Tracker)';
 $lang['UAM_GhostTracker_true'] = ' Aktivieren. Maximale Zeit in Tagen zwischen zwei Besuche: ';
 $lang['UAM_GhostTracker_ReminderText'] = 'Anpassen der Geist Tracker Erinnerungs-Nachricht';
-$lang['UAM_LastVisit'] = ' Tracking registrierte Benutzer';
 
-$lang['UAM_Tab_UserManager'] = 'Tracking Validierungen';
-
-/* UserManager Tab */
-$lang['UAM_SubTitle3'] = 'Tracking Validierungen';
-$lang['UAM_UserManager_Title'] = 'Tracking Validierungen';
 /* Ghost Tracker Tab */
 $lang['UAM_SubTitle4'] = 'Geist Tracker';
 $lang['UAM_GT_Init'] = 'Initialisieren Geist Tracker';
 $lang['UAM_GhostTracker_Title'] = 'Geist Besucher-Management';
 $lang['UAM_GhostTracker_Init'] = 'Wenn Sie diese Funktion zum ersten Mal oder haben Sie nach einem langen Zeitraum aus, in dem neue Besucher registriert sind, müssen Sie initialisieren, oder setzen Sie den Geist Tracker reaktiviert. Dieser Vorgang ist nur nach Aktivierung oder Reaktivierung von der Möglichkeit gemacht. Bitte klicken Sie <u>einmal</u> die Reset-Taste unten.';
-/* UserList Tab */
-$lang['UAM_SubTitle5'] = 'Tracking-Besucher';
-$lang['UAM_Tab_UserList'] = 'Tracking-Besucher';
 /* Mailing */
 $lang['UAM_Add of %s'] = 'Profil erstellt für %s';
 $lang['UAM_Update of %s'] = 'Profil aktualisieren %s';
@@ -424,4 +414,12 @@ $lang['UAM_Valid_Level'] = 'Datenschutz Niveau für Anwender, die ihre Anmeldung
 $lang['UAM_Webmaster cannot be pwdreset'] = 'Passwort erneuern können nicht für den Webmaster eingestellt werden!';
 $lang['UAM_You cannot pwdreset your account'] = 'Passwort erneuern können nicht auf eigene Rechnung eingestellt werden!';
 $lang['UAM_You need to confirm pwdreset'] = 'Sie müssen bestätigen, Passwort erneuern (check box)!';
+
+//$lang['UAM_SubTitle5'] = 'Tracking-Besucher';
+//$lang['UAM_Tab_UserList'] = 'Tracking-Besucher';
+//$lang['UAM_LastVisit'] = ' Tracking registrierte Benutzer';
+
+//$lang['UAM_Tab_UserManager'] = 'Tracking Validierungen';
+//$lang['UAM_SubTitle3'] = 'Tracking Validierungen';
+//$lang['UAM_UserManager_Title'] = 'Tracking Validierungen';
 ?>
