@@ -30,7 +30,6 @@ $lang['UAM_confirmstatTitle_d'] = '<b style=&quot;color: red;&quot;>ADVERTENCIA:
 Los estatutos son validados para su uso en relaci&oacute;n con la &quot;confirmaci&oacute;n de registro&quot;';
 $lang['UAM_remailtxt1Title'] = 'Recordatorio por correo electrónico con la llave generada';
 $lang['UAM_remailtxt2Title'] = 'Recordatorio por correo electrónico sin la llave generada';
-$lang['UAM_lastvisitTitle_d'] = 'Esto activa una tabla de &quot;Seguimiento de los usuarios&quot; ficha de matriculaci&oacute;n de los usuarios que aparecen en la galer&iacute;a y la fecha de su &uacute;ltima visita y el tiempo (en d&iacute;as) desde su &uacute;ltima visita. El seguimiento es meramente informativo para el administrador de la galer&iacute;a.';
 $lang['UAM_tipsTitle_d'] = 'Consejos y diversos ejemplos de uso de';
 
 

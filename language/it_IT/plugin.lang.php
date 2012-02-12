@@ -93,13 +93,6 @@ $lang['UAM_mail_exclusionlist_error'] = 'Attenzione! Avete inserito una nuova ri
 // --------- End: New or revised $lang ---- from version 2.12.8
 
 
-// --------- Starting below: New or revised $lang ---- from version 2.13.0
-/* UserList Tab */
-$lang['UAM_UserList_Title'] = 'Monitoraggio degli utenti iscritti';
-$lang['UAM_Tab_UserList'] = 'Monitoraggio degli utenti';
-// --------- End: New or revised $lang ---- from version 2.13.0
-
-
 // --------- Starting below: New or revised $lang ---- from version 2.13.4
 /* Global Configuration Tab */
 $lang['UAM_Title_Tab'] = 'UserAdvManager - Versione : ';
@@ -141,20 +134,12 @@ $lang['UAM_ConfirmMail_ReMail_Txt2'] = 'Personalizzare l\'email di rilancio <b><
 $lang['UAM_GhostTracker'] = 'Gestione dei visitatori fantasmi (GhostTracker)';
 $lang['UAM_GhostTracker_true'] = ' Attivare. Durata massima di giorni tra due visite : ';
 $lang['UAM_GhostTracker_ReminderText'] = 'Testo di rilancio personalizzato';
-$lang['UAM_LastVisit'] = ' Monitoraggio degli utenti iscritti';
 
-$lang['UAM_Tab_UserManager'] = 'Monitoraggio delle convalide';
-
-/* UserManager Tab */
-$lang['UAM_SubTitle3'] = 'Monitoraggio delle convalide';
-$lang['UAM_UserManager_Title'] = 'Monitoraggio delle convalide';
 /* Ghost Tracker Tab */
 $lang['UAM_SubTitle4'] = 'GhostTracker';
 $lang['UAM_GT_Init'] = 'Inizializzazione del GhostTracker';
 $lang['UAM_GhostTracker_Title'] = 'Gestione degli visitatori fantasmi';
 $lang['UAM_GhostTracker_Init'] = 'Se si attiva questa funzione per la prima volta o se viene riattivata dopo un lungo periodo durante il quale dei nuovi visitatori si sono iscritti, è necessario inizializzare o azzerare il Tracker Ghost. Questa azione è da effettuarsi solo dopo l\'attivazione o la riattivazione dell\'opzione; Cliccare dunque <u>una sola volta</u> sull\'pulsante di reset sottostante';
-/* UserList Tab */
-$lang['UAM_SubTitle5'] = 'Informazioni sugli utenti';
 /* Mailing */
 $lang['UAM_Add of %s'] = 'Profilo creato per %s';
 $lang['UAM_Update of %s'] = 'Profilo %s aggiornato';
@@ -335,10 +320,5 @@ $lang['UAM_Error_Using_illegal_flag'] = 'Errore di sintassi! La bandierina d\'in
 $lang['UAM_RedirToProfile'] = 'Ridirezione verso la pagina di personalizzazione';
 $lang['UAM_GTAutoGp'] = 'Cambiamento automatico del gruppo / statuto / livello di riservatezza';
 $lang['UAM_GTAutoMail'] = 'Emailing di rilancio automatico per cambiamento gruppo / statuto / livello di riservatezza';
-/*TODO*/$lang['UAM_NewFeature'] = 'New feature !';
-/*TODO*/$lang['UAM_RejectConnexion'] = 'Reject user\'s connexion until registration is validated';
-/*TODO*/$lang['UAM_RejectConnexion_Custom_Txt'] = 'Customize rejection text';
-/*TODO*/$lang['UAM_Default_RejectConnexion_Txt'] = 'Sorry, you don\'t have validate your registration yet, so you can\'t connect the gallery now. Please check your email box. You should find an email sent by the gallery, containing a link to perform your validation. If not, please contact the webmaster.';
-/*TODO*/$lang['UAM_Reject_Page_Title'] = 'Connexion not allowed !';
 // --------- End: New or revised $lang ---- from version 2.30.2
 ?>

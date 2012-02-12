@@ -30,7 +30,6 @@ $lang['UAM_confirmstatTitle_d'] = '<b style=&quot;color: red;&quot;>WARNING : Th
 The Statutes are validated for use in conjunction with the &quot;Confirmation of registration&quot;';
 $lang['UAM_remailtxt1Title'] = 'Reminder email with new key generated';
 $lang['UAM_remailtxt2Title'] = 'Reminder email without new key generated';
-$lang['UAM_lastvisitTitle_d'] = 'This activates a table in the &quot;Tracking users&quot; tab which are registered users listed on the gallery and the date of their last visit and time spent (in days) since their last visit. Monitoring is purely informative for the administrator of the gallery.';
 $lang['UAM_tipsTitle_d'] = 'Tips and various examples of use';
 
 
