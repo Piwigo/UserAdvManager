@@ -321,13 +321,4 @@ $lang['UAM_RedirToProfile'] = 'Ridirezione verso la pagina di personalizzazione'
 $lang['UAM_GTAutoGp'] = 'Cambiamento automatico del gruppo / statuto / livello di riservatezza';
 $lang['UAM_GTAutoMail'] = 'Emailing di rilancio automatico per cambiamento gruppo / statuto / livello di riservatezza';
 // --------- End: New or revised $lang ---- from version 2.30.2
-
-//$lang['UAM_UserList_Title'] = 'Monitoraggio degli utenti iscritti';
-//$lang['UAM_Tab_UserList'] = 'Monitoraggio degli utenti';
-//$lang['UAM_SubTitle5'] = 'Informazioni sugli utenti';
-//$lang['UAM_LastVisit'] = ' Monitoraggio degli utenti iscritti';
-
-//$lang['UAM_Tab_UserManager'] = 'Monitoraggio delle convalide';
-//$lang['UAM_SubTitle3'] = 'Monitoraggio delle convalide';
-//$lang['UAM_UserManager_Title'] = 'Monitoraggio delle convalide';
 ?>

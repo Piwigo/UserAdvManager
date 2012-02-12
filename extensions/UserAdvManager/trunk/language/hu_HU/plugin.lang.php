@@ -341,13 +341,4 @@ $lang['UAM_Error_Using_illegal_flag'] = 'Szintaktikai hiba! Az [Kdays] AutoText 
 // --------- Starting below: New or revised $lang ---- from version 2.30.2
 $lang['UAM_RedirToProfile'] = 'Átirányítás a Testreszabás oldalra';
 // --------- End: New or revised $lang ---- from version 2.30.2
-
-//$lang['UAM_UserList_Title'] = 'Regisztrált felhasználó figyelése';
-//$lang['UAM_SubTitle5'] = 'Felhasználó-követés';
-//$lang['UAM_Tab_UserList'] = 'Felhasználó-követés';
-//$lang['UAM_LastVisit'] = ' Regisztrált felhasználók követése';
-
-//$lang['UAM_Tab_UserManager'] = 'Érvényesítés követése';
-//$lang['UAM_SubTitle3'] = 'Érvényesítés követése';
-//$lang['UAM_UserManager_Title'] = 'Érvényesítés követése';
 ?>

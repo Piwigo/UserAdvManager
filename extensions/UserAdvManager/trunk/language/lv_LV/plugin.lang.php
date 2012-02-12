@@ -229,13 +229,4 @@ $lang['UAM_Enable'] = ' Iespējot ';
 // --------- Starting below: New or revised $lang ---- from version 2.30.2
 $lang['UAM_RedirToProfile'] = 'Novirzīt uz pielāgošanas lapu';
 // --------- End: New or revised $lang ---- from version 2.30.2
-
-//$lang['UAM_UserList_Title'] = 'Re;gistrēto lietotāju Monitorings';
-//$lang['UAM_SubTitle5'] = 'Lietotāju izsekošana';
-//$lang['UAM_Tab_UserList'] = 'Lietotāju izsekošana';
-//$lang['UAM_LastVisit'] = ' Reģistrēto lietotāju izsekošana';
-
-//$lang['UAM_Tab_UserManager'] = 'Apstiprinājumu izsekošana';
-//$lang['UAM_SubTitle3'] = 'Apstiprinājumu izsekošana';
-//$lang['UAM_UserManager_Title'] = 'Apstiprinājumu izsekošana';
 ?>

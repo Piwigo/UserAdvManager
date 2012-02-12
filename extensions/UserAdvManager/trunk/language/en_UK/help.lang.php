@@ -304,6 +304,5 @@ $lang['UAM_RejectConnexion_Custom_Txt_d'] = 'Customize here your explanation tex
 <br><br>
 This field is compatible with the FCK Editor and, for multi-languages, you can use the [lang] tags of the Extended description plugin if it\'s active.';
 $lang['UAM_Tracking registered users_d'] = 'This activates a table in the &quot;Tracking registered users&quot; tab which are registered users listed on the gallery and the date of their last visit and time spent (in days) since their last visit. Monitoring is purely informative for the administrator of the gallery.';
-//$lang['UAM_lastvisitTitle_d'] = 'This activates a table in the &quot;Tracking users&quot; tab which are registered users listed on the gallery and the date of their last visit and time spent (in days) since their last visit. Monitoring is purely informative for the administrator of the gallery.';
 // --------- End: New or revised $lang ---- from version 2.30.3
 ?>

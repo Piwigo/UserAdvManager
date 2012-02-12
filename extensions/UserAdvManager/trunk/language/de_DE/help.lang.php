@@ -282,6 +282,4 @@ Weitere Anpassung des Inhalts mit speziellen eingefügt tags:<br>
 <br><br>
 Custom Text für die Weiterleitungsseite können in dieses Feld eingegeben werden dass ist kompatibel mit den FCK-Editor und, um mehrere Sprachen zu benutzen, können Sie die Extended Description Plugin-Tags verwenden, wenn er aktiv ist.';
 $lang['UAM_USRAutoMailTitle_d'] = 'Wenn aktiviert, wird diese Funktion automatisch zu senden personalisierte Inhalte in "Reminder per E-Mail mit neuer Schlüssel generiert", um Besucher, die Kriterien entsprechen.';
-
-//$lang['UAM_lastvisitTitle_d'] = 'Dies aktiviert einen Tisch in der &quot;Tracking users&quot;-Reiter, die Mitglieder der Galerie aufgef&uuml;hrt sind und zum Zeitpunkt ihres letzten Besuch und verbrachte Zeit (Tage) seit ihrem letzten Besuch. Die &Uuml;berwachung ist rein informativ f&uuml;r den Administrator der Galerie.';
 ?>

@@ -414,12 +414,4 @@ $lang['UAM_Valid_Level'] = 'Datenschutz Niveau für Anwender, die ihre Anmeldung
 $lang['UAM_Webmaster cannot be pwdreset'] = 'Passwort erneuern können nicht für den Webmaster eingestellt werden!';
 $lang['UAM_You cannot pwdreset your account'] = 'Passwort erneuern können nicht auf eigene Rechnung eingestellt werden!';
 $lang['UAM_You need to confirm pwdreset'] = 'Sie müssen bestätigen, Passwort erneuern (check box)!';
-
-//$lang['UAM_SubTitle5'] = 'Tracking-Besucher';
-//$lang['UAM_Tab_UserList'] = 'Tracking-Besucher';
-//$lang['UAM_LastVisit'] = ' Tracking registrierte Benutzer';
-
-//$lang['UAM_Tab_UserManager'] = 'Tracking Validierungen';
-//$lang['UAM_SubTitle3'] = 'Tracking Validierungen';
-//$lang['UAM_UserManager_Title'] = 'Tracking Validierungen';
 ?>

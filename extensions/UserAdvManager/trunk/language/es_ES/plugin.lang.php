@@ -253,14 +253,5 @@ $lang['UAM_HidePassw'] = 'Contraseña en texto claro en la información del corr
 $lang['UAM_RedirToProfile'] = 'Redirigir a la página de personalización';
 $lang['UAM_GTAutoGp'] = 'Cambio automático de grupo / estado / nivel de confidencialidad';
 $lang['UAM_GTAutoMail'] = 'Automáticamente el envío de un correo electrónico cuando se cambia de grupo / estado / nivel de confidencialidad';
-
-//$lang['UAM_UserList_Title'] = 'Seguimiento de los usuarios registrados';
-//$lang['UAM_SubTitle5'] = 'Seguimiento de los usuarios';
-//$lang['UAM_Tab_UserList'] = 'Seguimiento de los usuarios';
-//$lang['UAM_LastVisit'] = ' Seguimiento de usuarios registrados';
-
-//$lang['UAM_Tab_UserManager'] = 'Seguimiento de las validaciones';
-//$lang['UAM_SubTitle3'] = 'Seguimiento de las validaciones';
-//$lang['UAM_UserManager_Title'] = 'Seguimiento de las validaciones';
 // --------- End: New or revised $lang ---- from version 2.30.2
 ?>
