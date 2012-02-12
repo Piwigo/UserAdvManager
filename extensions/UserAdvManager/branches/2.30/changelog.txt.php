@@ -275,5 +275,12 @@ Plugin Name: UserAdvManager
             Bug 2451 fixed - Unable to handle Sql errors but control of backup file validity have been enforced.
 
 -- 2.30.2 : Bug 2456 fixed - New feature : Avoid user connexion to the gallery until there has been no validation of registration. Users are redirected to a customizable content page.
+
+-- 2.30.3 : Bug 2524 fixed - The "Information email" option has been moved to "misc options" section of admin panel
+            Bug 2525 fixed - "Obligatory email for registrations" option is checked before using the email exclusion option
+            Bug 2526 fixed - "PWG stuff" option has been moved one step higher in admin panel
+            Bug 2527 fixed - "Confirmation for admins" option has been moved one step higher in admin panel
+            Bug 2528 fixed - The word "validation" for "registration validation" has been replaced by "confirmation"
+            Bug 2569 fixed - Missing connexion rejected page
 */
 ?>
