@@ -16,7 +16,6 @@ $lang['UAM_infomailTitle_d'] = 'This option allows to automate sending an inform
 The content of the message sent is composed of a customizable part to introduce a little welcome note and a fixed part indicating the login name, password and email address of the user.';
 $lang['UAM_remailtxt1Title'] = 'Reminder email with new key generated';
 $lang['UAM_remailtxt2Title'] = 'Reminder email without new key generated';
-$lang['UAM_lastvisitTitle_d'] = 'This activates a table in the &quot;Tracking users&quot; tab which are registered users listed on the gallery and the date of their last visit and time spent (in days) since their last visit. Monitoring is purely informative for the administrator of the gallery.';
 $lang['UAM_tipsTitle_d'] = 'Tips and various examples of use';
 
 
@@ -304,5 +303,7 @@ $lang['UAM_RejectConnexion_d'] = 'If activated, new registered users who have no
 $lang['UAM_RejectConnexion_Custom_Txt_d'] = 'Customize here your explanation text for inform unconfirmed users that they won\'t be able to connect the gallery until they have confirmed their registration.
 <br><br>
 This field is compatible with the FCK Editor and, for multi-languages, you can use the [lang] tags of the Extended description plugin if it\'s active.';
+$lang['UAM_Tracking registered users_d'] = 'This activates a table in the &quot;Tracking registered users&quot; tab which are registered users listed on the gallery and the date of their last visit and time spent (in days) since their last visit. Monitoring is purely informative for the administrator of the gallery.';
+//$lang['UAM_lastvisitTitle_d'] = 'This activates a table in the &quot;Tracking users&quot; tab which are registered users listed on the gallery and the date of their last visit and time spent (in days) since their last visit. Monitoring is purely informative for the administrator of the gallery.';
 // --------- End: New or revised $lang ---- from version 2.30.3
 ?>

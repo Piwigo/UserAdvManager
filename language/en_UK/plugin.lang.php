@@ -85,12 +85,6 @@ $lang['UAM_mail_exclusionlist_error'] = 'Warning! You have entered a new line (C
 // --------- End: New or revised $lang ---- from version 2.12.8
 
 
-// --------- Starting below: New or revised $lang ---- from version 2.13.0
-/* UserList Tab */
-$lang['UAM_UserList_Title'] = 'Monitoring registered users';
-// --------- End: New or revised $lang ---- from version 2.13.0
-
-
 // --------- Starting below: New or revised $lang ---- from version 2.13.4
 /* Global Configuration Tab */
 $lang['UAM_Title_Tab'] = 'UserAdvManager - Version : ';
@@ -121,26 +115,15 @@ $lang['UAM_ConfirmMail_ReMail_Txt2'] = 'Customizing the reminder message <b><u>w
 $lang['UAM_GhostTracker'] = 'Ghost visitors management (Ghost Tracker)';
 $lang['UAM_GhostTracker_true'] = ' Enable. Maximum period in days between two visits: ';
 $lang['UAM_GhostTracker_ReminderText'] = 'Customizing Ghost Tracker\'s reminder message';
-$lang['UAM_LastVisit'] = ' Tracking registered users';
 
-$lang['UAM_Tab_UserManager'] = 'Tracking confirmations';
-
-/* UserManager Tab */
-$lang['UAM_SubTitle3'] = 'Tracking confirmations';
-$lang['UAM_UserManager_Title'] = 'Tracking confirmations';
 /* Ghost Tracker Tab */
 $lang['UAM_SubTitle4'] = 'Ghost Tracker';
 $lang['UAM_GT_Init'] = 'Initializing Ghost Tracker';
 $lang['UAM_GhostTracker_Title'] = 'Ghost visitors management';
 $lang['UAM_GhostTracker_Init'] = 'If you enable this feature for the first time or you have reactivated after a long period off during which new visitors are registered, you must initialize or reset the Ghost Tracker. This action is done only after activation or reactivation of the option. Please click <u>once</u> the reset button below.';
-/* UserList Tab */
-$lang['UAM_SubTitle5'] = 'Tracking users';
-$lang['UAM_Tab_UserList'] = 'Tracking users';
 /* Mailing */
 $lang['UAM_Add of %s'] = 'Profile created for %s';
 $lang['UAM_Update of %s'] = 'Profile %s updated';
-
-/* Mailing */
 $lang['UAM_Ghost_reminder_of_%s'] = '%s, this is a reminder email';
 $lang['UAM_Reminder_with_key_of_%s'] = '%s, your confirmation key has been renewed';
 $lang['UAM_Reminder_without_key_of_%s'] = '%s, your confirmation key will expire';
@@ -416,5 +399,15 @@ Note: After this period, your account will be permanently deleted.';
 $lang['UAM_Default_CfmMail_Custom_Txt2'] = 'Your activation key is incorrect or expired or you have already confirmed your account, please contact the webmaster to fix this problem.';
 $lang['UAM_RejectConnexion'] = 'Reject user\'s connexion until registration is confirmed';
 $lang['UAM_Default_RejectConnexion_Txt'] = 'Sorry, you don\'t have confirmed your registration yet, so you can\'t connect the gallery now. Please check your email box. You should find an email sent by the gallery, containing a link to perform your confirmation. If not, please contact the webmaster.';
+$lang['UAM_Tracking registered users'] = 'Tracking registered users';
+$lang['UAM_Tracking confirmations'] = 'Tracking confirmations';
+//$lang['UAM_UserList_Title'] = 'Monitoring registered users';
+//$lang['UAM_SubTitle5'] = 'Tracking users';
+//$lang['UAM_Tab_UserList'] = 'Tracking users';
+//$lang['UAM_LastVisit'] = ' Tracking registered users';
+
+//$lang['UAM_Tab_UserManager'] = 'Tracking confirmations';
+//$lang['UAM_SubTitle3'] = 'Tracking confirmations';
+//$lang['UAM_UserManager_Title'] = 'Tracking confirmations';
 // --------- End: New or revised $lang ---- from version 2.30.3
 ?>

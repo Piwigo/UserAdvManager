@@ -38,12 +38,12 @@ $(document).ready(function()
 </script>
 
 <div class="titrePage">
-  <h2>{'UAM_Title_Tab'|@translate} {$UAM_VERSION}<br>{'UAM_SubTitle5'|@translate}</h2>
+  <h2>{'UAM_Title_Tab'|@translate} {$UAM_VERSION}<br>{'UAM_Tracking registered users'|@translate}</h2>
 </div>
 
 <form method="post" action="" class="general">
   <fieldset>
-  	<legend class="cluetip" title="{'UAM_UserList_Title'|translate}|{'UAM_userlistTitle_d'|translate}">{'UAM_UserList_Title'|@translate}</legend>
+  	<legend class="cluetip" title="{'UAM_Tracking registered users'|translate}|{'UAM_userlistTitle_d'|translate}">{'UAM_Tracking registered users'|@translate}</legend>
     {if count($users) > 0}
       <table id="sorting" class="table2" width="97%" summary="">
   			<thead>

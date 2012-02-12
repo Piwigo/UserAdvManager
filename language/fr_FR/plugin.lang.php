@@ -90,13 +90,6 @@ $lang['UAM_mail_exclusionlist_error'] = 'Attention ! Vous avez saisi un retour �
 // --------- End: New or revised $lang ---- from version 2.12.8
 
 
-// --------- Starting below: New or revised $lang ---- from version 2.13.0
-/* UserList Tab */
-$lang['UAM_UserList_Title'] = 'Suivi des utilisateurs inscrits';
-$lang['UAM_Tab_UserList'] = 'Suivi des utilisateurs';
-// --------- End: New or revised $lang ---- from version 2.13.0
-
-
 // --------- Starting below: New or revised $lang ---- from version 2.13.4
 /* Global Configuration Tab */
 $lang['UAM_Title_Tab'] = 'UserAdvManager - Version: ';
@@ -129,20 +122,13 @@ $lang['UAM_ConfirmMail_ReMail_Txt2'] = 'Texte du message de rappel <b><u>sans</u
 $lang['UAM_GhostTracker'] = 'Gestion des visiteurs fantômes (Ghost Tracker)';
 $lang['UAM_GhostTracker_true'] = ' Activer. Nombre de jours maximum entre deux visites: ';
 $lang['UAM_GhostTracker_ReminderText'] = 'Texte de rappel personnalisé';
-$lang['UAM_LastVisit'] = ' Suivi des utilisateurs inscrits';
 
-$lang['UAM_Tab_UserManager'] = 'Suivi des confirmations';
 
-/* UserManager Tab */
-$lang['UAM_SubTitle3'] = 'Suivi des confirmations';
-$lang['UAM_UserManager_Title'] = 'Suivi des confirmations';
 /* Ghost Tracker Tab */
 $lang['UAM_SubTitle4'] = 'Ghost Tracker';
 $lang['UAM_GT_Init'] = 'Initialisation du Ghost Tracker';
 $lang['UAM_GhostTracker_Title'] = 'Gestion des visiteurs fantômes';
 $lang['UAM_GhostTracker_Init'] = 'A première activation de cette fonction, ou à sa réactivation après une longue période pendant laquelle de nouveaux visiteurs se sont inscrits, il convient d\'initialiser ou de réinitialiser le Ghost Tracker. Cette action n\'est à faire qu\'une seule fois après activation ou réactivation de l\'option; à cet effet, cliquez <u>une seule fois</u> sur le bouton d\'initialisation ci-dessous.</b>';
-/* UserList Tab */
-$lang['UAM_SubTitle5'] = 'Informations sur les utilisateurs';
 /* Mailing */
 $lang['UAM_Add of %s'] = 'Profil créé pour %s';
 $lang['UAM_Update of %s'] = 'Mise à jour du profil de %s';
@@ -416,5 +402,16 @@ Ceci est un message de rappel car vous n\'avez pas confirmé votre inscription s
 
 Note: A l\'issue de cette période sans confirmation, votre compte sera définitivement supprimé.';
 $lang['UAM_Default_RejectConnexion_Txt'] = 'Désolé, vous n\'avez pas encore confirmé votre inscription et vous ne pouvez pas vous connecter maintenant. Merci de vérifier votre boite aux lettres. Vous devriez y trouver un message comportant un lien pour confirmer votre inscription. Si ce n\'est pas le cas, merci de contacter l\'administrateur de la galerie.';
+$lang['UAM_Tracking registered users'] = 'Suivi des utilisateurs inscrits';
+$lang['UAM_Tracking confirmations'] = 'Suivi des confirmations';
+/* UserList Tab */
+//$lang['UAM_UserList_Title'] = 'Suivi des utilisateurs inscrits';
+//$lang['UAM_Tab_UserList'] = 'Suivi des utilisateurs';
+//$lang['UAM_LastVisit'] = ' Suivi des utilisateurs inscrits';
+//$lang['UAM_SubTitle5'] = 'Informations sur les utilisateurs';
+
+//$lang['UAM_Tab_UserManager'] = 'Suivi des confirmations';
+//$lang['UAM_SubTitle3'] = 'Suivi des confirmations';
+//$lang['UAM_UserManager_Title'] = 'Suivi des confirmations';
 // --------- End: New or revised $lang ---- from version 2.30.3
 ?>

@@ -52,10 +52,10 @@ $tabsheet->add('global',
                l10n('UAM_Tab_Global'),
                $my_base_url.'&amp;tab=global');
   $tabsheet->add('userlist',
-                 l10n('UAM_Tab_UserList'),
+                 l10n('UAM_Tracking registered users'),
                  $my_base_url.'&amp;tab=userlist');
 $tabsheet->add('usermanager',
-               l10n('UAM_Tab_UserManager'),
+               l10n('UAM_Tracking confirmations'),
                $my_base_url.'&amp;tab=usermanager');
 $tabsheet->add('ghosttracker',
                l10n('UAM_Tab_GhostTracker'),

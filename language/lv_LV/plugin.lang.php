@@ -93,12 +93,6 @@ $lang['UAM_mail_exclusionlist_error'] = 'Brīdinājums! Jūs esat ievadījis jau
 // --------- End: New or revised $lang ---- from version 2.12.8
 
 
-// --------- Starting below: New or revised $lang ---- from version 2.13.0
-/* UserList Tab */
-$lang['UAM_UserList_Title'] = 'Re;gistrēto lietotāju Monitorings';
-// --------- End: New or revised $lang ---- from version 2.13.0
-
-
 // --------- Starting below: New or revised $lang ---- from version 2.13.4
 /* Global Configuration Tab */
 $lang['UAM_Title_Tab'] = 'UserAdvManager - Versija : ';
@@ -140,26 +134,16 @@ $lang['UAM_ConfirmMail_ReMail_Txt2'] = 'Pielāgot atgādinājuma ziņu <b><u>bez
 $lang['UAM_GhostTracker'] = 'Ghost (slēpto) apmeklētāju pārvaldība (Ghost Tracker)';
 $lang['UAM_GhostTracker_true'] = ' Iespējot. Maksimālais periods dienās starp divām vizītēm: ';
 $lang['UAM_GhostTracker_ReminderText'] = 'Ghost Tracker atgadinājuma ziņojuma pielāgošana';
-$lang['UAM_LastVisit'] = ' Reģistrēto lietotāju izsekošana';
 
-$lang['UAM_Tab_UserManager'] = 'Apstiprinājumu izsekošana';
 
-/* UserManager Tab */
-$lang['UAM_SubTitle3'] = 'Apstiprinājumu izsekošana';
-$lang['UAM_UserManager_Title'] = 'Apstiprinājumu izsekošana';
 /* Ghost Tracker Tab */
 $lang['UAM_SubTitle4'] = 'Ghost Tracker';
 $lang['UAM_GT_Init'] = 'Ghost Tracker inicializācija';
 $lang['UAM_GhostTracker_Title'] = 'Ghost (slēpto) apmeklētāju pārvaldība';
 $lang['UAM_GhostTracker_Init'] = 'Ja grasāties lietot šo iespēju pirmo reizi vai reaktivējat to pēc ilgāka laika, kurā reģistrējušies jauni lietotāji, jums jāinicializē vai jāresetē Ghost Tracker. Šī darbība ir veicama tikai pēc opcijas aktivēšanas vai reaktivēšanas. Lūdzu klikšķiniet <u>vienreiz</u> uz reset pogas zemāk.';
-/* UserList Tab */
-$lang['UAM_SubTitle5'] = 'Lietotāju izsekošana';
-$lang['UAM_Tab_UserList'] = 'Lietotāju izsekošana';
 /* Mailing */
 $lang['UAM_Add of %s'] = 'Profils izveidos priekš %s';
 $lang['UAM_Update of %s'] = 'Profils %s atjaunināts';
-
-/* Mailing */
 $lang['UAM_Ghost_reminder_of_%s'] = '%s, šis ir atgādinājuma e-pasts';
 $lang['UAM_Reminder_with_key_of_%s'] = '%s, jūsu apstiprināšanas atslēga ir atjaunota';
 $lang['UAM_Reminder_without_key_of_%s'] = '%s, jūsu apstiprināšanas atslēgas darbība beigsies';
@@ -235,147 +219,23 @@ $lang['UAM_Confirm_Mail_local'] = ' Iespējot – Apstiprinājis administrators 
 // --------- End: New or revised $lang ---- from version 2.15.4
 
 
-// --------- Starting below: New or revised $lang ---- from version 2.16.0
-/* TODO */$lang['UAM_Expired_Group'] = '<b>Group</b> for user\'s registration has expired<br>';
-/* TODO */$lang['UAM_Expired_Status'] = '<b>Status</b> for user\'s registration has expired<br>';
-/* TODO */$lang['UAM_GTAuto'] = 'Automatic management of ghosts users';
-/* TODO */$lang['UAM_GTAutoDel'] = 'Automatic deletion of accounts';
-/* TODO */$lang['UAM_Deleted_Account_Redirection_Page'] = 'Access denied - Account destroyed!';
-/* TODO */$lang['UAM_title_redir_page'] = 'Access denied for having an account destroyed!';
-/* TODO */$lang['UAM_Error_GTAutoMail_cannot_be_set_without_ConfirmMail'] = 'Consistency error in the chosen configuration:<br><br>
-"Setting the registered users monitoring and other options > Ghost visitors management (Ghost Tracker) > Automatic management of ghosts users > Automatically sending an email when changing group / status" can not be activated if "Setting confirmations and validations of registration > Confirmation of registration - Validation by user" is not enabled at first.<br><br>
-To ensure consistency, the option "Automatically sending an email when changing group / status" was automatically repositioned "disabled".<br><br>';
-/* TODO */$lang['UAM_Demotion of %s'] = 'Demotion of %s';
-/* TODO */$lang['UAM_AdminValidationMail_Text'] = 'Notification of manual registration validation';
-/* TODO */$lang['UAM_Validation of %s'] = 'Validation of %s';
-// --------- End: New or revised $lang ---- from version 2.16.0
-
-
 // --------- Starting below: New or revised $lang ---- from version 2.20.0
-/* TODO */$lang['UAM_CustomPasswRetr'] = 'Customize lost password email content';
-/* TODO */$lang['UAM_USRAuto'] = 'Automatic management of unvalidated users';
-/* TODO */$lang['UAM_USRAutoDel'] = 'Custom message on deleted account';
-/* TODO */$lang['UAM_USRAutoMail'] = 'Automated email reminder';
 $lang['UAM_Disable'] = ' Atspējot (pēc noklusējuma)';
 $lang['UAM_Enable'] = ' Iespējot ';
-/*TODO*/$lang['UAM_Tips1'] = 'Information of non-validated registration with UAM and PWG_Stuffs';
-/*TODO*/$lang['UAM_Tips1_txt'] = '
-          <ul>
-            <li>
-            Goals: Inform the visitor that the registration is awaiting approval by displaying a personal block on the home page of the gallery, and this, as registration is not approved.
-            <br><br>
-            <b>Recall: In standard operation, the "Guest" only sees the public categories, without information message.</b>
-            </li><br><br>
-            <li>
-Prerequisite:<br>
-- A gallery with all or some private categories, visible only by registered users<br>
-- At least 2 following Piwigo\'s users groups: "Waiting," without permission on private categories, and "Validated" with all the permissions on the private categories<br>
-- UAM plugin<br>
-- PWG Stuffs plugin, for adding a special UAM module<br>
-- Optionally, the plugin Extended Description to support multi-languages<br>
-            </li><br><br>
-            <li>
-Stages:<br><br>
-A. In plugin UAM:
-              <ol>
-                <li>Enable registration confirmation</li>
-                <li>Enable PWG Stuffs module option</li>
-                <li>Enter text for additional explanation which will be attached to mail registration confirmation. If the plugin Extended Description is activated, the language tags can be used</li>
-                <li>Select the "Waiting" group under "For users who have not validated their registration"</li>
-                <li>Select the "Validated" group under "For users who have validated their registration"</li>
-                <li>Save the plugin configuration</li>
-              </ol>
-<br>
-B. In plugin PWG Stuffs :
-              <ol>
-                <li>Go to tab "Add a new module"</li>
-                <li>Choose "UAM Module"</li>
-                <li>Configure the module, indicating the title (eg "Registration pending validation") and its description, and only check "Waiting" in the list of groups allowed</li>
-                <li>Complete content of the module with the message information to be displayed to users not validated. As UAM, languages markup may be used if the plugin is enabled Extended Description</li>
-                <li>Check "Display the module on the homepage of the site"</li>
-                <li>Validate the configuration of the module</li>
-              </ol>
-            </li>
-          </ul>';
-/*TODO*/$lang['UAM_Tips2'] = 'Information of non-validated registration with UAM and Additional Pages';
-/*TODO*/$lang['UAM_Tips2_txt'] = '
-          <ul>
-            <li>
-            Goals: Inform the visitor that the registration is awaiting validation by posting an additional page replacing the standard index page gallery at each of these connections, and this, as registration is not approved.
-            <br><br>
-            Advantages over the method with PWG_Stuffs: Allow formatting information and displaying the information immediately upon registration of visitors.
-            </li><br><br>
-            <li>
-Priekšnoteikumi:<br>
-- Galerija ar visām vai dažām privātajām ketegorijām redzama tikai reģistrētiem lietotājiem<br>
-- Vismaz 2 sekojošas Piwigo lietotāju grupas:gaidīšanas grupa  "Waiting," bez tiesībām darboties ar privātām kategorijām un apstiprināto grupa "Validated" ar visām tiesībām darbam ar privātām kategorijām<br>
-- UAM spraudnis<br>
-- Additional Pages plugin for adding and managing an additional page to replace the default index page of the gallery<br>
-- Pēc izvēles (neobligāts), spraudnis Extended Description (paplašināts apraksts), lai nodrošinātu daudzvalodu atbalstu<br>
-            </li><br><br>
-            <li>
-Posmi:<br><br>
-A. UAM spraudnī:
-<ol>
-<li>Iespējo reģistrācijas apstiprināšanu</li>
-<li>Ievada papildinformāciju-skaidrojumu, kas tiks pievienots e-pasta reģistrācijas apstiprinājumam. Gadījumā, ja ir aktivēts spraudnis Extended Description (papildus apraksts), var tikt lietotas valodu iezīmes (tagi)</li>
-<li>Izvēlas gaidīšanas grupu "Waiting" sadaļā "Lietotājiem, kas nav apstiprinājuši savu reģistrāciju"</li>
-<li>Izvēlas apstiprināto grupu "Validated" sadaļā "Lietotājiem, kas apstiprinājuši savu reģistrāciju"</li>
-<li>Saglabā spraudņa konfigurāciju</li>
-</ol>
-<br>
-B. Additional Pages spraudnī :<br>
-                <b>NOTE : The management of access rights for groups on Additional Pages must be turned on (see plugin configuration settings).</b>
-                <br>
-              <ol>
-                <li>Add a new page with at least the following parameters:</li>
-                <ul>
-                  <li>Page name: The name you wish to give to the additional page (ie: Registration not validated)</li>
-                  <li>Set as homepage checked</li>
-                  <li>Groups allowed: Check the box corresponding to the group "Waiting" configured in UAM</li>
-                  <li>Content: The text you want to use for visitors.</li>
-                </ul>
-                <br>
-                <li>And that\'s it! Only visitors registered and whose registration has not been validated will see this additional index page.</li>
-              </ol>
-            </li>
-          </ul>';
-/*TODO*/$lang['UAM_No_Ghosts'] = 'No ghosts visitors for the moment';
-/*TODO*/$lang['UAM_No_Userlist'] = 'No visitors to list for the moment';
-/*TODO*/$lang['UAM_No_Usermanager'] = 'No unvalidated registers to list for the moment';
-/*TODO*/$lang['UAM_Stuffs_Title'] = 'UAM block';
-/*TODO*/$lang['UAM_Stuffs_Desc'] = 'Adds an information block for unvalidated users';
-/*TODO*/$lang['UAM_Stuffs'] = 'PWG Stuffs block';
 // --------- End: New or revised $lang ---- from version 2.20.0
 
-
-// --------- Starting below: New or revised $lang ---- from version 2.20.3
-/*TODO*/$lang['UAM_DumpTxt'] = 'Backup your configuration';
-/*TODO*/$lang['UAM_Dump_Download'] = 'To download the backup file, please check this box:';
-/*TODO*/$lang['UAM_Save'] = 'Run backup';
-/*TODO*/$lang['UAM_Dump_OK'] = 'Backup file created successfully';
-/*TODO*/$lang['UAM_Dump_NOK'] = 'Error: Unable to create backup file !';
-// --------- End: New or revised $lang ---- from version 2.20.3
-
-
-// --------- Starting below: New or revised $lang ---- from version 2.20.4
-/*TODO*/$lang['UAM_HidePassw'] = 'Clear password in information email';
-// --------- End: New or revised $lang ---- from version 2.20.4
-
-
-// --------- Starting below: New or revised $lang ---- from version 2.20.11
-/*TODO*/$lang['UAM_Error_Using_illegal_flag'] = 'Syntax error ! The [Kdays] AutoText flag is used as the "Reģistrācijas apstiprināšanas limita robežlīnija" option was not activated. Please activate the option or correct the text field(s) colored in red.';
-// --------- End: New or revised $lang ---- from version 2.20.11
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.30.2
 $lang['UAM_RedirToProfile'] = 'Novirzīt uz pielāgošanas lapu';
-/*TODO*/$lang['UAM_GTAutoGp'] = 'Automatic change of group / status / privacy level';
-/*TODO*/$lang['UAM_GTAutoMail'] = 'Automatically sending an email when changing group / status / privacy level';
-/*TODO*/$lang['UAM_NewFeature'] = 'New feature !';
-/*TODO*/$lang['UAM_RejectConnexion'] = 'Reject user\'s connexion until registration is validated';
-/*TODO*/$lang['UAM_RejectConnexion_Custom_Txt'] = 'Customize rejection text';
-/*TODO*/$lang['UAM_Default_RejectConnexion_Txt'] = 'Sorry, you don\'t have validate your registration yet, so you can\'t connect the gallery now. Please check your email box. You should find an email sent by the gallery, containing a link to perform your validation. If not, please contact the webmaster.';
-/*TODO*/$lang['UAM_Reject_Page_Title'] = 'Connexion not allowed !';
 // --------- End: New or revised $lang ---- from version 2.30.2
+
+//$lang['UAM_UserList_Title'] = 'Re;gistrēto lietotāju Monitorings';
+//$lang['UAM_SubTitle5'] = 'Lietotāju izsekošana';
+//$lang['UAM_Tab_UserList'] = 'Lietotāju izsekošana';
+//$lang['UAM_LastVisit'] = ' Reģistrēto lietotāju izsekošana';
+
+//$lang['UAM_Tab_UserManager'] = 'Apstiprinājumu izsekošana';
+//$lang['UAM_SubTitle3'] = 'Apstiprinājumu izsekošana';
+//$lang['UAM_UserManager_Title'] = 'Apstiprinājumu izsekošana';
 ?>
