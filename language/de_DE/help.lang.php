@@ -139,7 +139,6 @@ $lang['UAM_DumpTitle_d'] = 'Dies ermöglicht Ihnen die gesamte Konfiguration des
 Es kann manchmal nützlich sein, um die Backup-Datei auf Ihrem Computer abrufen. Zum Beispiel: Um zu einer anderen Datenbank auslagern wiederherzustellen oder zu halten mehrere Dateien speichern. Dazu markieren Sie das Kontrollkästchen, um die Datei herunterzuladen.
 <br><br>
 Die Erholung von dieser Schnittstelle wird nicht unterstützt. Verwenden Sie Tools wie phpMyAdmin.';
-/*TODO*/$lang['UAM_HidePasswTitle_d'] = 'Choose here if you want to display the password chosen by the visitor in the information email. If you enable the option, the password will then appear in clear text. If you disable the password will not appear at all.';
 // --------- End: New or revised $lang ---- from version 2.20.4
 
 
