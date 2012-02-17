@@ -282,5 +282,7 @@ Plugin Name: UserAdvManager
             Bug 2527 fixed - "Confirmation for admins" option has been moved one step higher in admin panel
             Bug 2528 fixed - The word "validation" for "registration validation" has been replaced by "confirmation"
             Bug 2569 fixed - Missing connexion rejected page
+
+-- 2.30.4 : Bug 2580 fixed - DE translation files corrupted
 */
 ?>
