@@ -19,7 +19,6 @@ $lang['UAM_Link: %s'] = 'Klicken Sie bitte auf diesen Link bestätigen Sie Ihre 
 /* Email confirmation page */
 $lang['UAM_title_confirm_mail'] = 'Überprüfen Sie Ihre Registrierung';
 $lang['UAM_confirm_mail_page_title'] = 'Überprüfen Sie Ihre Registrierung';
-$lang['confirm_mail_ok'] = '<br><br><br>Wir danken Ihnen, Ihre E-Mail-Adresse bestätigt haben und Ihre Anmeldung auf der Galerie. Viel Spaß!<br><br><br><br>';
 
 
 /* Errors and Warnings */
@@ -150,7 +149,6 @@ $lang['UAM_GhostTracker_Init'] = 'Wenn Sie diese Funktion zum ersten Mal oder ha
 $lang['UAM_Add of %s'] = 'Profil erstellt für %s';
 $lang['UAM_Update of %s'] = 'Profil aktualisieren %s';
 /* Email confirmation page */
-$lang['confirm_mail_bad'] = '<br><br><br>Ihre Aktivierungs-Schlüssel ist falsch oder abgelaufen oder Sie haben bereits validiert Ihrem Konto haben, wenden Sie sich bitte an den Webmaster, um dieses Problem zu beheben.<br><br><br><br>';
 /* Mailing */
 $lang['UAM_Ghost_reminder_of_%s'] = '%s, Dies ist eine Erinnerung per E-Mail';
 $lang['UAM_Reminder_with_key_of_%s'] = '%s, Ihre Validierungs-Zahl wurde erneuert';
@@ -378,4 +376,13 @@ $lang['UAM_Valid_Level'] = 'Datenschutz Niveau für Anwender, die ihre Anmeldung
 $lang['UAM_Webmaster cannot be pwdreset'] = 'Passwort erneuern können nicht für den Webmaster eingestellt werden!';
 $lang['UAM_You cannot pwdreset your account'] = 'Passwort erneuern können nicht auf eigene Rechnung eingestellt werden!';
 $lang['UAM_You need to confirm pwdreset'] = 'Sie müssen bestätigen, Passwort erneuern (check box)!';
+$lang['UAM_CustomPasswRetr'] = 'Personalisieren den Inhalt von E-Mail für verlorenes Passwort';
+$lang['UAM_Password_Enforced_true'] = 'Aktivieren. Mindestpunktzahl:';
+$lang['UAM_Restore'] = 'Um die Backup-Datei von Ihrer Konfiguration wiederherzustellen. Lediglich die gespeicherte Datei auf dem Server berücksichtigt wird.
+<br><br>
+<b style="color: red;">Hütet euch vor dem Backup-Version!<br>Ein Backup von einer Version des Plugins gemacht kann nur auf der gleichen Version wiederhergestellt werden.</b>';
+$lang['UAM_Tracking confirmations'] = 'Verfolgung Bestätigungen';
+$lang['UAM_Tracking registered users'] = 'Verfolgung registrierte Benutzer';
+$lang['UAM_USRAutoDel'] = 'Nachricht an das automatische Löschen von Konten';
+$lang['UAM_USRAutoMail'] = 'Automatisierte E-Mail-Erinnerung';
 ?>
