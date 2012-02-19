@@ -62,7 +62,7 @@ $lang['UAM_Reminder_Sent_NOK'] = 'NON';
 /* Errors and Warnings */
 $lang['UAM_save_config'] ='Configuration enregistrée.';
 $lang['UAM_reg_err_login3'] = 'Sécurité : Le mot de passe est obligatoire !';
-$lang['UAM_reg_err_login4_%s'] = 'Sécurité : Un système de contrôle calcule un score de complexité sur les mots de passe choisis. La complexité de votre mot de passe est trop faible (score = %s). Veuillez choisir un nouveau mot de passe plus sûre en respectant les règles suivantes :<br>
+$lang['UAM_reg_err_login4_%s'] = 'Sécurité : Un système de contrôle calcule un score de complexité sur les mots de passe choisis. La complexité de votre mot de passe est trop faible (score = %s). Veuillez choisir un nouveau mot de passe plus sûr en respectant les règles suivantes :<br>
 - Utiliser des lettres et des chiffres<br>
 - Utiliser des minuscules et des majuscules<br>
 - Augmenter sa longueur (nombre de caractères)<br>
