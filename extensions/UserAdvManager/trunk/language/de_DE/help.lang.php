@@ -1,5 +1,5 @@
 <?php
-global $lang;
+//global $lang;
 
 $lang['UAM_confirmTitle_d'] = '- Informationen E-Mail generation<br>
 - Registrieren und Validierung E-Mail generation<br>

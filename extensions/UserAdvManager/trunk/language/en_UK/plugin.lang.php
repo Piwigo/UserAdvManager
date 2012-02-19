@@ -1,8 +1,8 @@
 <?php
 
-global $lang,$conf;
+//global $lang,$conf;
 
-$conf_UAM = unserialize($conf['UserAdvManager']);
+//$conf_UAM = unserialize($conf['UserAdvManager']);
 
 
 /* UserManager Tab */
