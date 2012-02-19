@@ -1,5 +1,5 @@
 <?php
-global $lang;
+//global $lang;
 
 $lang['UAM_confirmTitle_d'] = '
 - Informācijas e-pasta ģenerēšana<br>
