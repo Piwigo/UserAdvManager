@@ -12,11 +12,11 @@ $lang['UAM_carexcTitle_d'] = 'Es mag interessant sein, bestimmte Zeichen in Benu
 NB: Die Option kann auch ausschließen, ganze Wörter.
 <br><br>
 <b style=&quot;color: red;&quot;>Warnung: Diese Option hat keine Auswirkungen auf den Benutzernamen erstellt vor ihrer Aktivierung.</b>';
-$lang['UAM_passwTitle_d'] = 'Durch die Aktivierung dieser Option ist zwingend die Beschlagnahme eines Passwortes bei der Anmeldung und das Kennwort erfordert vom Besucher ausgewählt, um ein Mindestmaß an Komplexität gerecht zu werden. Wird der Schwellenwert nicht erreicht wird, die Gäste erzielt, und die Mindestpunktzahl erreicht werden soll angezeigt werden, zusammen mit Empfehlungen an den Wert dieser Gäste zu steigern.<br><br>
+$lang['UAM_passwTitle_d'] = 'Durch die Aktivierung dieser Option ist zwingend die Beschlagnahme eines Passwortes bei der Anmeldung und das Passwort erfordert vom Besucher ausgewählt, um ein Mindestmaß an Komplexität gerecht zu werden. Wird der Schwellenwert nicht erreicht wird, die Gäste erzielt, und die Mindestpunktzahl erreicht werden soll angezeigt werden, zusammen mit Empfehlungen an den Wert dieser Gäste zu steigern.<br><br>
 Es gibt Feldtest der Komplexität eines Passworts zu messen und sich leisten können, eine Vorstellung von der Partitur zu erhalten, um komplexe, kundenspezifische definieren.<br><br>
 Hinweis: Die Gäste eines Passwortes ist auf der Grundlage mehrerer Parameter: Länge berechnet, die Art der verwendeten Zeichen (Buchstaben, Ziffern, Großbuchstaben, Kleinbuchstaben, Sonderzeichen). Ein Wert unter 100 wird als gering, zwischen 100 und 500, die Komplexität ist durchschnittlich, mehr als 500, die Sicherheit ist sehr gut.';
-$lang['UAM_passwtestTitle'] = 'Prüfung der Komplexität eines Passworts';
-$lang['UAM_passwtestTitle_d'] = 'Geben Sie das Kennwort zu testen, und klicken Sie auf &quot;Ergebnis Berechnung&quot;, um das Ergebnis zu sehen.';
+$lang['UAM_passwtestTitle'] = 'Prüfung der Passworts Komplexität';
+$lang['UAM_passwtestTitle_d'] = 'Geben Sie das Passwort zu testen, und klicken Sie auf &quot;Ergebnis Berechnung&quot;, um das Ergebnis zu sehen.';
 $lang['UAM_passwadmTitle_d'] = 'Ein Administrator kann einen Benutzer-Account erstellen, mit oder ohne Anwendung der Regel der Komplexität des Computings.<br><br>
 Hinweis: Wenn der Benutzer erstellte Konto will Passwort zu ändern und Passwörter für die Benutzer Stärkung aktiv ist, wird es vorbehaltlich der Regel-Satz.';
 $lang['UAM_infomailTitle_d'] = 'Diese Option ermöglicht die Automatisierung Senden einer E-Mail-Informationen an einen Benutzer bei der Anmeldung oder bei Änderungen sein Passwort oder E-Mail-Adresse in ihrem Profil.<br><br>
@@ -273,6 +273,6 @@ Weitere Anpassung des Inhalts mit speziellen eingefügt tags:<br>
 Custom Text für die Weiterleitungsseite können in dieses Feld eingegeben werden dass ist kompatibel mit den FCK-Editor und, um mehrere Sprachen zu benutzen, können Sie die Extended Description Plugin-Tags verwenden, wenn er aktiv ist.';
 $lang['UAM_USRAutoMailTitle_d'] = 'Wenn aktiviert, wird diese Funktion automatisch zu senden personalisierte Inhalte in &quot;Reminder per E-Mail mit neuer Schlüssel generiert&quot;, um Besucher, die Kriterien entsprechen.';
 $lang['UAM_confirmlevelTitle'] = 'Datenschutzstufe';
-$lang['UAM_HidePasswTitle_d'] = 'Wählen Sie hier, wenn Sie in der E-Mail-Informationen angezeigt werden das Passwort vom Besucher gewählt werden soll. Wenn Sie die Option zu aktivieren, wird das Passwort dann im Klartext angezeigt. Wenn Sie deaktivieren das Kennwort wird gar nicht angezeigt.';
+$lang['UAM_HidePasswTitle_d'] = 'Wählen Sie hier, wenn Sie in der E-Mail-Informationen angezeigt werden das Passwort vom Besucher gewählt werden soll. Wenn Sie die Option zu aktivieren, wird das Passwort dann im Klartext angezeigt. Wenn Sie deaktivieren das Passwort wird gar nicht angezeigt.';
 $lang['UAM_Tracking registered users_d'] = 'Dies aktiviert einen Tabelle im &quot;Verfolgung registrierte Benutzer&quot;-Reiter wo sind registrierten Nutzern auf der Galerie aufgelistet mit dem Datum ihrer letzten Besuch und verbrachte Zeit (in Tagen) seit ihrem letzten Besuch. Die Überwachung ist rein informativ für den Administrator der Galerie.';
 ?>
