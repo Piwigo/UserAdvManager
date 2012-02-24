@@ -258,4 +258,5 @@ $lang['UAM_USRAutoMailTitle_d'] = 'Wenn aktiviert, wird diese Funktion automatis
 $lang['UAM_confirmlevelTitle'] = 'Datenschutzstufe';
 $lang['UAM_HidePasswTitle_d'] = 'Wählen Sie hier, wenn Sie in der E-Mail-Informationen angezeigt werden das Passwort vom Besucher gewählt werden soll. Wenn Sie die Option zu aktivieren, wird das Passwort dann im Klartext angezeigt. Wenn Sie deaktivieren das Passwort wird gar nicht angezeigt.';
 $lang['UAM_Tracking registered users_d'] = 'Dies aktiviert einen Tabelle im &quot;Verfolgung registrierte Benutzer&quot;-Reiter wo sind registrierten Nutzern auf der Galerie aufgelistet mit dem Datum ihrer letzten Besuch und verbrachte Zeit (in Tagen) seit ihrem letzten Besuch. Die Überwachung ist rein informativ für den Administrator der Galerie.';
+$lang['UAM_GTAutoDelTitle'] = 'Benutzerdefinierte Nachricht auf gelöschtes Konto';
 ?>
