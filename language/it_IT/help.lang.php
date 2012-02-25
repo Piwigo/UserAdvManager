@@ -38,4 +38,18 @@ $lang['UAM_restricTitle_d'] = '
 - Esclusione dei domini d\'Email<br>
 ...
 ';
+$lang['UAM_confirmgrpTitle'] = 'Gruppi';
+$lang['UAM_confirmlevelTitle'] = 'Livello privacy';
+$lang['UAM_confirmstatTitle'] = 'Statuti';
+$lang['UAM_GTAutoDelTitle'] = 'Messaggio personalizzato all\'eliminazione di un account';
+$lang['UAM_GT_MainTitle_d'] = '- Gestione utenti ghost automatica o manuale<br>
+- E-mail<br>
+...';
+$lang['UAM_miscTitle_d'] = '- Controllo utenti registrati<br>
+- Nickname obbligatorio per i commenti degli ospiti<br>
+...';
+$lang['UAM_remailtxt1Title'] = 'Ricorda email con generazione nuove chiavi';
+$lang['UAM_remailtxt2Title'] = 'Ricorda email senza generazione nuove chiavi';
+$lang['UAM_tipsTitle_d'] = 'Suggerimenti e vari esempi d\'uso';
+$lang['UAM_USRAutoMailTitle_d'] = 'Quando attivata, questa funzione invierà automaticamente agli utenti che corrispondono ai criteri un contenuto personalizzato nelle &quot;email di reminder con la nuova chiave generata&quot;';
 ?>
