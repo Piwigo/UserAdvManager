@@ -12,10 +12,10 @@ $lang['UAM_carexcTitle_d'] = 'Es mag interessant sein, bestimmte Zeichen in Benu
 NB: Die Option kann auch ausschließen, ganze Wörter.
 <br><br>
 <b style=&quot;color: red;&quot;>Warnung: Diese Option hat keine Auswirkungen auf den Benutzernamen erstellt vor ihrer Aktivierung.</b>';
-$lang['UAM_passwTitle_d'] = 'Durch die Aktivierung dieser Option ist zwingend die Beschlagnahme eines Passwortes bei der Anmeldung und das Kennwort erfordert vom Besucher ausgewählt, um ein Mindestmaß an Komplexität gerecht zu werden. Wird der Schwellenwert nicht erreicht wird, die Gäste erzielt, und die Mindestpunktzahl erreicht werden soll angezeigt werden, zusammen mit Empfehlungen an den Wert dieser Gäste zu steigern.<br><br>
+$lang['UAM_passwTitle_d'] = 'Durch die Aktivierung dieser Option ist zwingend die Beschlagnahme eines Passwortes bei der Anmeldung und das Passwort erfordert vom Besucher ausgewählt, um ein Mindestmaß an Komplexität gerecht zu werden. Wird der Schwellenwert nicht erreicht wird, die Gäste erzielt, und die Mindestpunktzahl erreicht werden soll angezeigt werden, zusammen mit Empfehlungen an den Wert dieser Gäste zu steigern.<br><br>
 Es gibt Feldtest der Komplexität eines Passworts zu messen und sich leisten können, eine Vorstellung von der Partitur zu erhalten, um komplexe, kundenspezifische definieren.<br><br>
 Hinweis: Die Gäste eines Passwortes ist auf der Grundlage mehrerer Parameter: Länge berechnet, die Art der verwendeten Zeichen (Buchstaben, Ziffern, Großbuchstaben, Kleinbuchstaben, Sonderzeichen). Ein Wert unter 100 wird als gering, zwischen 100 und 500, die Komplexität ist durchschnittlich, mehr als 500, die Sicherheit ist sehr gut.';
-$lang['UAM_passwtestTitle'] = 'Prüfung der Passworts Komplexität ';
+$lang['UAM_passwtestTitle'] = 'Prüfung der Passworts Komplexität';
 $lang['UAM_passwtestTitle_d'] = 'Geben Sie das Passwort zu testen, und klicken Sie auf &quot;Ergebnis Berechnung&quot;, um das Ergebnis zu sehen.';
 $lang['UAM_passwadmTitle_d'] = 'Ein Administrator kann einen Benutzer-Account erstellen, mit oder ohne Anwendung der Regel der Komplexit&auml;t des Computings.<br><br>
 Hinweis: Wenn der Benutzer erstellte Konto will Passwort zu &auml;ndern und Passwörter f&uuml;r die Benutzer St&auml;rkung aktiv ist, wird es vorbehaltlich der Regel-Satz.';
@@ -45,6 +45,21 @@ $lang['UAM_restricTitle_d'] = '- Charaktere Ausgrenzung<br>
 - E-Mail-Domänen Ausgrenzung<br>
 ...
 ';
+$lang['UAM_usermanTitle_d'] = 'Wenn die Begrenzung der Frist für die Anmeldung aktiviert ist, finden Sie weiter unten die Liste der Benutzer, deren Validierung Eintragung erwartet wird, <b style=&quot;text-decoration: underline;&quot;>ob oder nicht</b> sind sie in der Zeit zu validieren.<br><br>
+Das Datum der Eintragung wird in grün angezeigt, wenn der Benutzer unter dem betreffenden Frist wird auf seine Registrierung zu bestätigen. In diesem Fall ist die Validierung Schlüssel noch gültig ist, und wir können eine E-Mail mit oder ohne eine neue Validierung Schlüssel zu schicken.<br><br>
+Wenn das Datum der Eintragung erscheint in Rot, die Validierung abgelaufen. In diesem Fall müssen Sie eine E-Mail mit der Regeneration der Validierung Schlüssel senden, wenn Sie dem Benutzer die Möglichkeit, ihre Anmeldung bestätigen möchten.<br><br>
+In allen Fällen ist es möglich, manuell die Validierung Kraft.<br><br>
+In dieser Ansicht können Sie:
+<br><br>
+- Löschen Sie manuell Konten <b>(Handbuch Drain)</b>
+<br>
+- Generieren Sie per E-Mail-Erinnerung <b>ohne</b> erzeugt einen neuen Schlüssel. Warnung: Senden Sie eine E-Mail-Erinnerung für die angestrebten Besucher. Diese Funktion kann nicht zurückgesetzt dem Zeitpunkt der Eintragung des angestrebten Besucher und das Zeitlimit ist weiterhin gültig.
+<br>
+- Generieren Sie per E-Mail-Erinnerung <b>mit</b> erzeugt einen neuen Schlüssel. Warnung: Senden Sie eine E-Mail-Erinnerung für die angestrebten Besucher. Diese Funktion setzt auch den Zeitpunkt der Eintragung des angestrebten Besucher, die die Frist für die Validierung erweitern entspricht.
+<br>
+- Senden einer Registrierung erwartet Validierung von Hand, auch wenn das Ablaufdatum überschritten ist <b>(zwingen Validierung)</b>.
+<br><br>
+<b>Die Sortierung der Tabelle Function</b> : Sie können die Daten mit einem Klick auf die Spaltenüberschriften angezeigt. Halten Sie SHIFT-Taste, um Art bis zu 4 gleichzeitige maximale Spalten.';
 $lang['UAM_gtTitle_d'] = 'Als Ghost Tracker aktiviert ist und initialisiert wurde, finden Sie weiter unten die Liste der registrierten Besucher, die sich seit x Tagen zur&uuml;ckgegeben haben. &quot;x&quot; ist die Anzahl der Tage konfiguriert in der General-Setup. Dar&uuml;ber hinaus finden Sie eine Spalte angibt, ob eine E-Mail-Erinnerung hat, um die angestrebten Besucher gesendet wurde. So k&ouml;nnen Sie auf einen Blick sehen und zu behandeln Besucher, die nicht wegen der Erinnerung genommen haben.<br><br>In dieser Ansicht können Sie:
 <br><br>
 - Löschen Sie manuell Konten <b>(Handbuch Drain)</b>
@@ -58,6 +73,7 @@ $lang['UAM_gtTitle_d'] = 'Als Ghost Tracker aktiviert ist und initialisiert wurd
 // --------- Starting below: New or revised $lang ---- from version 2.15.6
 $lang['UAM_RedirTitle_d'] = 'Diese Option automatisch umleiten ein registrierter Benutzer zum sein Benutzerdaten Seite nur bei seinem ersten Anschluss an die Galerie.<br><br>
 Bitte beachten Sie: Dieses Feature funktioniert nicht für alle registrierten Nutzer. Diejenigen mit &quot;admin&quot;, &quot;Webmaster&quot; oder &quot;Generic&quot; Status sind ausgeschlossen.';
+// --------- End: New or revised $lang ---- from version 2.15.6
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.16.0
@@ -76,6 +92,7 @@ Beispiele:<br>
 $lang['UAM_GTAutoTitle_d'] = 'Diese Option ermöglicht es, Regeln für die automatisierte Verwaltung von Geistern Benutzer anwenden.
 <br><br>Grundprinzip: Ein Benutzer, der die maximale Zeit zwischen den Besuchen <b><u>und</u></b> hat bereits per E-Mail gilt als abgelaufen gemeldet erreicht. Dann können Sie automatisierte Verarbeitung Regeln wie das automatische Löschen von abgelaufenen Konten oder Herabstufung durch Beschränkung des Zugangs zur Galerie (schaltet automatisch auf eine eingeschränkte Gruppe und / oder Status).
 <br><br>Die Ansteuerung dieser Automatisierung wird erreicht, wenn eine Verbindung Nutzer (alle Benutzer!) Auf der Galerie.';
+$lang['UAM_GTAutoDelTitle'] = 'Benutzerdefinierte Meldung auf gelöschtes Konto';
 $lang['UAM_GTAutoGpTitle_d'] = 'Der automatische Wechsel der Gruppe oder den gleichen Status zu einer Degradierung der Konten beteiligt und arbeiten nach dem gleichen Prinzip wie die Gruppe oder den Status der Validierung (finden Sie unter &quot;Einstellen Bestätigungen und Validierungen der Registrierung&quot;). Daher sein, eine Gruppe und / oder Status herabstufen Zugang zur Galerie zu definieren. Wenn dies bereits mit dem Einsatz von Anmeldebestätigung Funktion definiert wurde, können Sie mit dem gleichen Gruppe / Status.<br><br>
 <b style=&quot;color: red;&quot;>Wichtiger Hinweis:</b> Wenn ein Geist Benutzer hat noch kein von der nach Ablauf der Frist und trotz der automatische Benachrichtigung per E-Mail (wenn aktiviert) gehört, ist er automatisch aus der Datenbank gelöscht.';
 $lang['UAM_GTAutoMailTitle_d'] = 'Wenn ein Konto abgelaufen ist (Gruppe / Status-Änderung herabstufen den Besucher), kann eine E-Mail-Informationen geschickt, um die Gründe für diese Änderung und die Mittel, um den ersten Zugriff auf die Galerie wieder zu klären.
@@ -177,9 +194,9 @@ $lang['UAM_confirmmail_custom1_d'] = 'Wenn die Option &quot;Bestätigung der Anm
 Nach der Installation des Plugin ist ein Standard-Text als Beispiel vorangehen.
 <br><br>
 Weitere Anpassung des Inhalts mit speziellen eingefügt tags:<br>
-- <b style="color: red;">[username]</b> , um automatisch den Namen des Zielbenutzers der E-Mail.<br>
-- <b style="color: red;">[mygallery]</b> , um den Titel Ihrer Galerie einzufügen.<br>
-- <b style="color: red;">[myurl]</b> Ihre Galerie-URL einfügen, wenn in den Konfigurationsoptionen Piwigo gesetzt.
+- <b style=&quot;color: red;&quot;>[username]</b> , um automatisch den Namen des Zielbenutzers der E-Mail.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> , um den Titel Ihrer Galerie einzufügen.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> Ihre Galerie-URL einfügen, wenn in den Konfigurationsoptionen Piwigo gesetzt.
 <br><br>
 Dieses Feld ist kompatibel mit den FCK-Editor und, um mehrere Sprachen zu benutzen, können Sie die Extended Description Plugin-Tags verwenden, wenn er aktiv ist.';
 $lang['UAM_confirmmail_custom2_d'] = 'Wenn die Option &quot;Bestätigung der Anmeldung&quot; aktiv ist, können Sie in diesem zu <b><u>rejectance Text anpassen</u></b> auf der Anmeldebestätigung Seite angezeigt, wenn Benutzer auf den Bestätigungs-Link, die empfangen wurde per E-Mail.
@@ -258,5 +275,4 @@ $lang['UAM_USRAutoMailTitle_d'] = 'Wenn aktiviert, wird diese Funktion automatis
 $lang['UAM_confirmlevelTitle'] = 'Datenschutzstufe';
 $lang['UAM_HidePasswTitle_d'] = 'Wählen Sie hier, wenn Sie in der E-Mail-Informationen angezeigt werden das Passwort vom Besucher gewählt werden soll. Wenn Sie die Option zu aktivieren, wird das Passwort dann im Klartext angezeigt. Wenn Sie deaktivieren das Passwort wird gar nicht angezeigt.';
 $lang['UAM_Tracking registered users_d'] = 'Dies aktiviert einen Tabelle im &quot;Verfolgung registrierte Benutzer&quot;-Reiter wo sind registrierten Nutzern auf der Galerie aufgelistet mit dem Datum ihrer letzten Besuch und verbrachte Zeit (in Tagen) seit ihrem letzten Besuch. Die Überwachung ist rein informativ für den Administrator der Galerie.';
-$lang['UAM_GTAutoDelTitle'] = 'Benutzerdefinierte Nachricht auf gelöschtes Konto';
 ?>
