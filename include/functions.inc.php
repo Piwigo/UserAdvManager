@@ -2390,8 +2390,8 @@ function get_user_list()
   
   $users = array();
 
-	// Search users depending expiration date
-  // --------------------------------------
+	// Search users depending expiration date with exclusion of Adult_Content generic users
+  // ------------------------------------------------------------------------------------
   $query = '
 SELECT DISTINCT u.'.$conf['user_fields']['id'].' AS id,
                 u.'.$conf['user_fields']['username'].' AS username,
@@ -2401,6 +2401,8 @@ FROM '.USERS_TABLE.' AS u
   INNER JOIN '.USER_LASTVISIT_TABLE.' AS ug
     ON u.'.$conf['user_fields']['id'].' = ug.user_id
 WHERE u.'.$conf['user_fields']['id'].' >= 3
+  AND u.username NOT LIKE "16"
+  AND u.username NOT LIKE "18"
 ORDER BY ug.lastvisit DESC
 ;';
 
