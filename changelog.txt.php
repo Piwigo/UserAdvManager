@@ -290,11 +290,5 @@ Plugin Name: UserAdvManager
             en_UK reference translation spellchecking
             de_DE translation updated
             fr_FR translation updated
-
-**************************************************************
-***** Plugin history (branch 2.40 - Piwigo 2.4 compliant)*****
-**************************************************************
--- 2.40.0 : Bug 2570 fixed - Adding Wiki link to complete plugin documentation
-            Bug 2591 fixed - Excluding Adult_Content generic users from users tracking list
 */
 ?>
