@@ -284,5 +284,11 @@ Plugin Name: UserAdvManager
             Bug 2569 fixed - Missing connexion rejected page
 
 -- 2.30.4 : Bug 2580 fixed - DE translation files corrupted
+
+-- 2.30.5 : Bug 2583 fixed - help.lang.php was not loaded correctly
+            Bug 2602 fixed - Sql error when Confirmation by admin is set 
+            en_UK reference translation spellchecking
+            de_DE translation updated
+            fr_FR translation updated
 */
 ?>

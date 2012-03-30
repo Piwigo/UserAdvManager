@@ -1,8 +1,8 @@
 <?php
 
-global $lang,$conf;
+//global $lang,$conf;
 
-$conf_UAM = unserialize($conf['UserAdvManager']);
+//$conf_UAM = unserialize($conf['UserAdvManager']);
 
 
 /* UserManager Tab */
@@ -62,7 +62,7 @@ $lang['UAM_Reminder_Sent_NOK'] = 'NON';
 /* Errors and Warnings */
 $lang['UAM_save_config'] ='Configuration enregistrée.';
 $lang['UAM_reg_err_login3'] = 'Sécurité : Le mot de passe est obligatoire !';
-$lang['UAM_reg_err_login4_%s'] = 'Sécurité : Un système de contrôle calcule un score de complexité sur les mots de passe choisis. La complexité de votre mot de passe est trop faible (score = %s). Veuillez choisir un nouveau mot de passe plus sûre en respectant les règles suivantes :<br>
+$lang['UAM_reg_err_login4_%s'] = 'Sécurité : Un système de contrôle calcule un score de complexité sur les mots de passe choisis. La complexité de votre mot de passe est trop faible (score = %s). Veuillez choisir un nouveau mot de passe plus sûr en respectant les règles suivantes :<br>
 - Utiliser des lettres et des chiffres<br>
 - Utiliser des minuscules et des majuscules<br>
 - Augmenter sa longueur (nombre de caractères)<br>
@@ -158,6 +158,8 @@ $lang['UAM_Nb_Days'] = 'Ecart en jours';
 // --------- Starting below: New or revised $lang ---- from version 2.15.1
 $lang['UAM_Support_txt'] = 'Le support officiel sur ce plugin se fait exclusivement sur ce fil du forum FR de Piwigo:<br>
 <a href="http://fr.piwigo.org/forum/viewtopic.php?id=12775" onclick="window.open(this.href);return false;">Forum français - http://fr.piwigo.org/forum/viewtopic.php?id=12775</a>
+<br><br>
+Bien que l\'aide en ligne soit assez complète, vous pouvez également vous référer à la documentation complète d\'utilisation du plugin sur <a href="http://fr.piwigo.org/doc/doku.php?id=plugins:nbc_uam" onclick="window.open(this.href);return false;">le Wiki de Piwigo</a> 
 <br><br>
 Egalement disponible, le bugtracker du projet: <a href="http://piwigo.org/bugs/" onclick="window.open(this.href);return false;">http://piwigo.org/bugs/</a>';
 // --------- End: New or revised $lang ---- from version 2.15.1
