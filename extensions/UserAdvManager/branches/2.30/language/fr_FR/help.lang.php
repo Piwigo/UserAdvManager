@@ -1,5 +1,5 @@
 <?php
-global $lang;
+//global $lang;
 
 $lang['UAM_carexcTitle_d'] = 'Il peut être intéressant d\'interdire certains caractères dans les noms d\'utilisateurs (exemple : refuser les logins contenant un &quot;@&quot;). Cette option permet d\'exclure les caractères, ou suite de caractères, indésirables.<br>NB: l\'option permet également d\'exclure des mots complets.
 <br><br>
