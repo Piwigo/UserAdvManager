@@ -239,7 +239,7 @@ $lang['UAM_Default_InfoMail_Txt'] = 'Hello [username]! Thank you to have registe
 Please, find find below your connexion information.';
 $lang['UAM_Default_ConfirmMail_Txt'] = 'Hello [username]! Thank you to have register on [mygallery].
 
-To complete the procedure and be able to browse through the pictures, thank you kindly confirm your registration by clicking on the link in this message.';
+To complete the process and be able to browse through the pictures, thank you kindly confirm your registration by clicking on the link in this message.';
 $lang['UAM_Default_GhstReminder_Txt'] = 'Hello [username].
 	
 This is a reminder because a very long time passed since your last visit on our gallery [mygallery]. If you do not want anymore to use your access account, please let us know by replying to this email. Your account will be deleted.
