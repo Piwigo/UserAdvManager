@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: UserAdvManager
-Version: 2.30.4
+Version: 2.40.0
 Description: Renforcer la gestion des utilisateurs - Enforce users management
 Plugin URI: http://piwigo.org/ext/extension_view.php?eid=216
 Author: Nicco, Eric
@@ -24,6 +24,7 @@ include_once (UAM_PATH.'include/constants.php');
 include_once (UAM_PATH.'include/functions.inc.php');
 
 load_language('plugin.lang', UAM_PATH);
+load_language('help.lang', UAM_PATH);
 $conf_UAM = unserialize($conf['UserAdvManager']);
 
 

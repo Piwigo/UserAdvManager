@@ -99,11 +99,12 @@ function UAM_Adduser($register_user)
   // --------------------------------
   if ($register_user['username'] != "16" and $register_user['username'] != "18")
   {
+    $passwd = (isset($_POST['password'])) ? $_POST['password'] : '';
+    
     if ((isset($conf_UAM[0]) and $conf_UAM[0] == 'true') and (isset($conf_UAM[1]) and $conf_UAM[1] == 'local'))
     {
       // This is to send an information email and set user to "waiting" group or status until admin validation
       // -----------------------------------------------------------------------------------------------------
-      $passwd = (isset($_POST['password'])) ? $_POST['password'] : '';
       SendMail2User(1, $register_user['id'], $register_user['username'], $passwd, $register_user['email'], false);
       SetPermission($register_user['id']);// Set to "waiting" group or status until admin validation
     }
@@ -117,7 +118,6 @@ function UAM_Adduser($register_user)
     {
       // This is to send an information email without validation key
       // -----------------------------------------------------------
-      $passwd = (isset($_POST['password'])) ? $_POST['password'] : '';
       SendMail2User(1, $register_user['id'], $register_user['username'], $passwd, $register_user['email'], false);
     }
     // Sending registration confirmation by email
@@ -126,17 +126,14 @@ function UAM_Adduser($register_user)
     {
       if (is_admin() and isset($conf_UAM[19]) and $conf_UAM[19] == 'true')
       {
-        $passwd = (isset($_POST['password'])) ? $_POST['password'] : '';
         SendMail2User(1, $register_user['id'], $register_user['username'], $passwd, $register_user['email'], true); 
       }
       elseif (is_admin() and isset($conf_UAM[19]) and $conf_UAM[19] == 'false')
       {
-        $passwd = (isset($_POST['password'])) ? $_POST['password'] : '';
         SendMail2User(1, $register_user['id'], $register_user['username'], $passwd, $register_user['email'], false);
       }
       elseif (!is_admin())
       {
-        $passwd = (isset($_POST['password'])) ? $_POST['password'] : '';
         SendMail2User(1, $register_user['id'], $register_user['username'], $passwd, $register_user['email'], true);
       }
     }
@@ -2390,8 +2387,8 @@ function get_user_list()
   
   $users = array();
 
-	// Search users depending expiration date
-  // --------------------------------------
+	// Search users depending expiration date with exclusion of Adult_Content generic users
+  // ------------------------------------------------------------------------------------
   $query = '
 SELECT DISTINCT u.'.$conf['user_fields']['id'].' AS id,
                 u.'.$conf['user_fields']['username'].' AS username,
@@ -2401,6 +2398,8 @@ FROM '.USERS_TABLE.' AS u
   INNER JOIN '.USER_LASTVISIT_TABLE.' AS ug
     ON u.'.$conf['user_fields']['id'].' = ug.user_id
 WHERE u.'.$conf['user_fields']['id'].' >= 3
+  AND u.username NOT LIKE "16"
+  AND u.username NOT LIKE "18"
 ORDER BY ug.lastvisit DESC
 ;';
 
