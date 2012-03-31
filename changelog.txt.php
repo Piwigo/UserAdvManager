@@ -296,5 +296,6 @@ Plugin Name: UserAdvManager
 **************************************************************
 -- 2.40.0 : Bug 2570 fixed - Adding Wiki link to complete plugin documentation
             Bug 2591 fixed - Excluding Adult_Content generic users from users tracking list
+            Bug 2603 fixed - Php notice when user changes his email in his profile if confirmation by email is set
 */
 ?>
