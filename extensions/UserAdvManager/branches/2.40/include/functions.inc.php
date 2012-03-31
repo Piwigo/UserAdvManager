@@ -283,7 +283,7 @@ WHERE param = 'UserAdvManager_Redir';";
     // ----------------------
     if (isset($conf_UAM[38]) and $conf_UAM[38] == 'true' and UAM_check_pwgreset($user['id']))
     {
-      // if password not changed then pwdreset filed = true else pwdreset field = false
+      // if password not changed then pwdreset field = true else pwdreset field = false
       // ------------------------------------------------------------------------------
       if (!empty($_POST['use_new_pwd']))
       {
@@ -345,7 +345,7 @@ WHERE '.$conf['user_fields']['id'].' = \''.$user['id'].'\'
         // ---------------------------------------------------------------------------
         if ($_POST['mail_address'] != $current_email and (isset($conf_UAM[1]) and $conf_UAM[1] == 'local'))
         
-          SetPermission($register_user['id']);// Set to "waiting" group or status until admin validation
+          SetPermission($user['id']);// Set to "waiting" group or status until admin validation
           $confirm_mail_need = false;
       }
         
@@ -1594,13 +1594,13 @@ VALUES
     pwg_query($query);
   }
 
-  if (!is_admin() and $conf_UAM[2] <> -1) // Set privacy level
+  if (!is_admin() and $conf_UAM[35] <> -1) // Set privacy level
   {
     $query = "
 INSERT INTO ".USER_INFOS_TABLE."
   (user_id, level)
 VALUES
-  ('".$user_id."', '".$conf_UAM[level]."')
+  ('".$user_id."', '".$conf_UAM[35]."')
 ;";
     pwg_query($query);
   }
