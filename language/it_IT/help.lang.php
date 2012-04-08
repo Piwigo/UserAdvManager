@@ -52,4 +52,5 @@ $lang['UAM_remailtxt1Title'] = 'Ricorda email con generazione nuove chiavi';
 $lang['UAM_remailtxt2Title'] = 'Ricorda email senza generazione nuove chiavi';
 $lang['UAM_tipsTitle_d'] = 'Suggerimenti e vari esempi d\'uso';
 $lang['UAM_USRAutoMailTitle_d'] = 'Quando attivata, questa funzione invierà automaticamente agli utenti che corrispondono ai criteri un contenuto personalizzato nelle &quot;email di reminder con la nuova chiave generata&quot;';
+$lang['UAM_HidePasswTitle_d'] = 'Scegli qui se si desidera visualizzare la password scelta da parte del visitatore nella e-mail di informazioni. Se si attiva l\'opzione, la password apparirà in chiaro. Se si disattiva la password non apparirà.';
 ?>
