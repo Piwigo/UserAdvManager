@@ -283,7 +283,7 @@ WHERE param = 'UserAdvManager_Redir';";
     // ----------------------
     if (isset($conf_UAM[38]) and $conf_UAM[38] == 'true' and UAM_check_pwgreset($user['id']))
     {
-      // if password not changed then pwdreset field = true else pwdreset field = false
+      // if password not changed then pwdreset filed = true else pwdreset field = false
       // ------------------------------------------------------------------------------
       if (!empty($_POST['use_new_pwd']))
       {
@@ -345,7 +345,7 @@ WHERE '.$conf['user_fields']['id'].' = \''.$user['id'].'\'
         // ---------------------------------------------------------------------------
         if ($_POST['mail_address'] != $current_email and (isset($conf_UAM[1]) and $conf_UAM[1] == 'local'))
         
-          SetPermission($user['id']);// Set to "waiting" group or status until admin validation
+          SetPermission($register_user['id']);// Set to "waiting" group or status until admin validation
           $confirm_mail_need = false;
       }
         
@@ -2398,8 +2398,6 @@ FROM '.USERS_TABLE.' AS u
   INNER JOIN '.USER_LASTVISIT_TABLE.' AS ug
     ON u.'.$conf['user_fields']['id'].' = ug.user_id
 WHERE u.'.$conf['user_fields']['id'].' >= 3
-  AND u.username NOT LIKE "16"
-  AND u.username NOT LIKE "18"
 ORDER BY ug.lastvisit DESC
 ;';
 

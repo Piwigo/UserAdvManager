@@ -292,12 +292,5 @@ Plugin Name: UserAdvManager
             fr_FR translation updated
 
 -- 2.30.6 : Bug 2618 fixed - Apache crash when php 5.3.10 is used
-
-**************************************************************
-***** Plugin history (branch 2.40 - Piwigo 2.4 compliant)*****
-**************************************************************
--- 2.40.0 : Bug 2570 fixed - Adding Wiki link to complete plugin documentation
-            Bug 2591 fixed - Excluding Adult_Content generic users from users tracking list
-            Bug 2603 fixed - Php notice when user changes his email in his profile if confirmation by email is set
 */
 ?>
