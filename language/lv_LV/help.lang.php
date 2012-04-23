@@ -9,7 +9,7 @@ $lang['UAM_confirmTitle_d'] = '
 - Atgādinājuma e-pasta ģenerēšana<br>
 ...
 ';
-$lang['UAM_carexcTitle_d'] = 'Varētu būt saistoši aizliegt izmantot lietotājvārdos kādas noteiktas rakstzīmes (piemēram: noraidīt loginus saturošus &quot;@&quot;). Šī iespēja ļauj izslēgt rakstzīmes vai rakstzīmju secību, notikumus.<br>
+$lang['UAM_carexcTitle_d'] = 'Varētu būt saistoši aizliegt izmantot lietotājvārdos kādas noteiktas rakstzīmes (piemēram: noraidīt loginus saturošus @). Šī iespēja ļauj izslēgt rakstzīmes vai rakstzīmju secību, notikumus.<br>
 NB: Šī iespēja ļauj izslēgt arī veselus vārdus.
 <br><br>
 <b style=&quot;color: red;&quot;>Uzmanību: Šī opcija neatstāj iespaidu uz lietotājvārdiem, kas izveidoti pirms to aktivēšanas.</b>';

@@ -9,7 +9,7 @@ $lang['UAM_confirmTitle_d'] = '
 - Recuerde a los usuarios no validados<br>
 ...
 ';
-$lang['UAM_carexcTitle_d'] = 'Puede ser interesante para prohibir ciertos caracteres en nombres de usuario (por ejemplo, se niegan los inicios de sesi&oacute;n que contiene &quot;@&quot;). Esta opci&oacute;n permite excluir caracteres o secuencia de caracteres, los acontecimientos.<br>
+$lang['UAM_carexcTitle_d'] = 'Puede ser interesante para prohibir ciertos caracteres en nombres de usuario (por ejemplo, se niegan los inicios de sesi&oacute;n que contiene @). Esta opci&oacute;n permite excluir caracteres o secuencia de caracteres, los acontecimientos.<br>
 Nota: La opción también puede excluir palabras completas.
 <br><br>
 <b style=&quot;color: red;&quot;>Advertencia: Esta opción no tiene efecto sobre los nombres de usuario creados antes de su activación.</b>';
