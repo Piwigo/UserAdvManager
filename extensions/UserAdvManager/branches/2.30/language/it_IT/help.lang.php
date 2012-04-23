@@ -9,7 +9,7 @@ $lang['UAM_confirmTitle_d'] = '
 - Generazzione di un\'email di rilancio per gli utenti non convalidati<br>
 ...
 ';
-$lang['UAM_carexcTitle_d'] = 'Può essere interessante vietare certi caratteri per i pseudo (ad esempio: negare login contenente &quot;@&quot;). Questa opzione permette di escludere i caratteri o sequenza di caratteri, eventi.<br>
+$lang['UAM_carexcTitle_d'] = 'Può essere interessante vietare certi caratteri per i pseudo (ad esempio: negare login contenente @). Questa opzione permette di escludere i caratteri o sequenza di caratteri, eventi.<br>
 NB: L\'opzione può anche escludere parole intere.
 <br><br>
 <b style=&quot;color: red;&quot;>Attenzione: questa opzione non ha alcun effetto sui pseudo creati prima della sua attivazione.</b>';
@@ -52,4 +52,5 @@ $lang['UAM_remailtxt1Title'] = 'Ricorda email con generazione nuove chiavi';
 $lang['UAM_remailtxt2Title'] = 'Ricorda email senza generazione nuove chiavi';
 $lang['UAM_tipsTitle_d'] = 'Suggerimenti e vari esempi d\'uso';
 $lang['UAM_USRAutoMailTitle_d'] = 'Quando attivata, questa funzione invierà automaticamente agli utenti che corrispondono ai criteri un contenuto personalizzato nelle &quot;email di reminder con la nuova chiave generata&quot;';
+$lang['UAM_HidePasswTitle_d'] = 'Scegli qui se si desidera visualizzare la password scelta da parte del visitatore nella e-mail di informazioni. Se si attiva l\'opzione, la password apparirà in chiaro. Se si disattiva la password non apparirà.';
 ?>
