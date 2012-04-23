@@ -291,6 +291,8 @@ Plugin Name: UserAdvManager
             de_DE translation updated
             fr_FR translation updated
 
+-- 2.30.6 : Bug 2618 fixed - Apache crash when php 5.3.10 is used
+
 **************************************************************
 ***** Plugin history (branch 2.40 - Piwigo 2.4 compliant)*****
 **************************************************************
