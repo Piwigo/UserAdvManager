@@ -296,8 +296,10 @@ Plugin Name: UserAdvManager
 **************************************************************
 ***** Plugin history (branch 2.40 - Piwigo 2.4 compliant)*****
 **************************************************************
--- 2.40.0 : Bug 2570 fixed - Adding Wiki link to complete plugin documentation
+-- 2.40.0 : Bug 2570 fixed - Adding Wiki link to complete plugin documentation (FR only)
+            Bug 2571 fixed - Piwigo 2.4 compliance : Information email removed on user registration because already managed by Piwigo
             Bug 2591 fixed - Excluding Adult_Content generic users from users tracking list
             Bug 2603 fixed - Php notice when user changes his email in his profile if confirmation by email is set
+            Bug 2619 fixed - Confirmation email when registered user changes his email was not sent and user not demoted
 */
 ?>

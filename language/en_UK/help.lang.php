@@ -12,7 +12,7 @@ $lang['UAM_passwtestTitle'] = 'Testing the complexity of a password';
 $lang['UAM_passwtestTitle_d'] = 'Enter the password to test and then click on &quot;Score calculation&quot; to see the result.';
 $lang['UAM_passwadmTitle_d'] = 'An administrator can create a user account with or without application of the rule of computing complexity.<br><br>
 Note: If the user account created wants to change password and strengthening passwords for users is active, it will be subject to the rule set.';
-$lang['UAM_infomailTitle_d'] = 'This option allows to automate sending an information email to a user when registering or when changes his password or email address in their profile.<br><br>
+$lang['UAM_infomailTitle_d'] = 'This option allows to automate sending an information email to a user when he changes his password or email address in his profile page.<br><br>
 The content of the message sent is composed of a customizable part to introduce a little welcome note and a fixed part indicating the login name, password and email address of the user.';
 $lang['UAM_remailtxt1Title'] = 'Reminder email with new key generated';
 $lang['UAM_remailtxt2Title'] = 'Reminder email without new key generated';

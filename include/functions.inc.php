@@ -100,29 +100,16 @@ function UAM_Adduser($register_user)
   if ($register_user['username'] != "16" and $register_user['username'] != "18")
   {
     $passwd = (isset($_POST['password'])) ? $_POST['password'] : '';
-    
-    if ((isset($conf_UAM[0]) and $conf_UAM[0] == 'true') and (isset($conf_UAM[1]) and $conf_UAM[1] == 'local'))
+
+    if (isset($conf_UAM[1]) and $conf_UAM[1] == 'local')
     {
-      // This is to send an information email and set user to "waiting" group or status until admin validation
-      // -----------------------------------------------------------------------------------------------------
-      SendMail2User(1, $register_user['id'], $register_user['username'], $passwd, $register_user['email'], false);
+      // This is to set user to "waiting" group or status and without ConfirMail until admin validation
+      // ----------------------------------------------------------------------------------------------
       SetPermission($register_user['id']);// Set to "waiting" group or status until admin validation
-    }
-    elseif ((isset($conf_UAM[0]) and $conf_UAM[0] == 'false') and (isset($conf_UAM[1]) and $conf_UAM[1] == 'local'))
-    {
-      // This is to set user to "waiting" group or status until admin validation
-      // -----------------------------------------------------------------------
-      SetPermission($register_user['id']);// Set to "waiting" group or status until admin validation
-    }
-    elseif ((isset($conf_UAM[0]) and $conf_UAM[0] == 'true') and (isset($conf_UAM[1]) and $conf_UAM[1] == 'false'))
-    {
-      // This is to send an information email without validation key
-      // -----------------------------------------------------------
-      SendMail2User(1, $register_user['id'], $register_user['username'], $passwd, $register_user['email'], false);
     }
     // Sending registration confirmation by email
     // ------------------------------------------
-    elseif ((isset($conf_UAM[0]) and $conf_UAM[0] == 'true' or $conf_UAM[0] == 'false') and (isset($conf_UAM[1]) and $conf_UAM[1] == 'true'))
+    elseif (isset($conf_UAM[1]) and $conf_UAM[1] == 'true')
     {
       if (is_admin() and isset($conf_UAM[19]) and $conf_UAM[19] == 'true')
       {
@@ -297,11 +284,11 @@ LIMIT 1
       }
     }
 
-    $typemail = 3;
+    $typemail = 3; // Only information email send to user on user profile update if checked
 
     if (!empty($_POST['use_new_pwd']))
     {
-      $typemail = 2;
+      $typemail = 2; // Confirmation email on user profile update - With information email if checked
 
       // Password enforcement control
       // ----------------------------
@@ -321,7 +308,7 @@ LIMIT 1
 
     // Sending registration confirmation by email
     // ------------------------------------------
-    if ((isset($conf_UAM[0]) and $conf_UAM[0] == 'true') or (isset($conf_UAM[1]) and $conf_UAM[1] == 'true') or (isset($conf_UAM[1]) and $conf_UAM[1] == 'local'))
+    if (/*(isset($conf_UAM[0]) and $conf_UAM[0] == 'true') or */(isset($conf_UAM[1]) and $conf_UAM[1] == 'true') or (isset($conf_UAM[1]) and $conf_UAM[1] == 'local'))
     {
       $confirm_mail_need = false;
 
@@ -338,18 +325,21 @@ WHERE '.$conf['user_fields']['id'].' = \''.$user['id'].'\'
         // This is to send a new validation key
         // ------------------------------------
         if ($_POST['mail_address'] != $current_email and (isset($conf_UAM[1]) and $conf_UAM[1] == 'true'))
-        
+        {
+          SetPermission($user['id']);// Set to "waiting" group or status until user validation
           $confirm_mail_need = true;
+        }
 
         // This is to set the user to "waiting" group or status until admin validation
         // ---------------------------------------------------------------------------
-        if ($_POST['mail_address'] != $current_email and (isset($conf_UAM[1]) and $conf_UAM[1] == 'local'))
-        
+        elseif ($_POST['mail_address'] != $current_email and (isset($conf_UAM[1]) and $conf_UAM[1] == 'local'))
+        {
           SetPermission($user['id']);// Set to "waiting" group or status until admin validation
           $confirm_mail_need = false;
+        }       
       }
         
-      if ((!empty($_POST['use_new_pwd']) and (isset($conf_UAM[0]) and $conf_UAM[0] == 'true') or $confirm_mail_need))
+      if (((!empty($_POST['use_new_pwd']) and (isset($conf_UAM[0]) and $conf_UAM[0] == 'true')) or $confirm_mail_need))
       {
         $query = '
 SELECT '.$conf['user_fields']['username'].'
@@ -924,10 +914,15 @@ WHERE user_id = '.$id.'
 
   switch($typemail)
   {
-    case 1:
+    case 1: // Confirmation email on user registration - Without information email (already managed by Piwigo)
       $subject = '['.$conf['gallery_title'].'] '.l10n_args(get_l10n_args('UAM_Add of %s', stripslashes($username)));
-      $password = $password <> '' ? $password : l10n('UAM_empty_pwd');
+
+      break;
       
+    case 2: // Confirmation email on user profile update - With information email if checked
+      $subject = '['.$conf['gallery_title'].'] '.l10n_args(get_l10n_args('UAM_Update of %s', stripslashes($username)));
+      $password = $password <> '' ? $password : l10n('UAM_empty_pwd');
+
       if (isset($conf_UAM[8]) and $conf_UAM[8] <> '')
       {
         // Management of Extension flags ([username], [mygallery], [myurl])
@@ -945,43 +940,78 @@ WHERE user_id = '.$id.'
         }
         else $infos1_perso = l10n(preg_replace($patterns, $replacements, $conf_UAM[8]))."\n\n"; 
       }
-      
-      break;
-      
-    case 2:
-      $subject = '['.$conf['gallery_title'].'] '.l10n_args(get_l10n_args('UAM_Update of %s', stripslashes($username)));
-      $password = $password <> '' ? $password : l10n('UAM_empty_pwd');
+
+      if (isset($conf_UAM[0]) and $conf_UAM[0] == 'true')
+      {
+        if (isset($conf_UAM[34]) and $conf_UAM[34] == 'true') // Allow display of clear password in email
+        {
+          $infos1 = array(
+            get_l10n_args('UAM_infos_mail %s', stripslashes($username)),
+            get_l10n_args('UAM_User: %s', stripslashes($username)),
+            get_l10n_args('UAM_Password: %s', $password),
+            get_l10n_args('Email: %s', $email),
+            get_l10n_args('', ''),
+          );
+        }
+        else // Do not allow display of clear password in email
+        {
+          $infos1 = array(
+            get_l10n_args('UAM_infos_mail %s', stripslashes($username)),
+            get_l10n_args('UAM_User: %s', stripslashes($username)),
+            get_l10n_args('Email: %s', $email),
+            get_l10n_args('', ''),
+          );
+        }
+      }
 
       break;
         
-    case 3:
+    case 3: // Only information email send to user if checked
       $subject = '['.$conf['gallery_title'].'] '.l10n_args(get_l10n_args('UAM_Update of %s', stripslashes($username)));
       $password = $password <> '' ? $password : l10n('UAM_no_update_pwd');
 
-      break;
-  }
+      if (isset($conf_UAM[8]) and $conf_UAM[8] <> '')
+      {
+        // Management of Extension flags ([username], [mygallery], [myurl])
+        // ----------------------------------------------------------------
+        $patterns[] = '#\[username\]#i';
+        $replacements[] = $username;
+        $patterns[] = '#\[mygallery\]#i';
+        $replacements[] = $conf['gallery_title'];
+        $patterns[] = '#\[myurl\]#i';
+        $replacements[] = $conf['gallery_url'];
+    
+        if (function_exists('get_user_language_desc'))
+        {
+          $infos1_perso = get_user_language_desc(preg_replace($patterns, $replacements, $conf_UAM[8]))."\n\n";
+        }
+        else $infos1_perso = l10n(preg_replace($patterns, $replacements, $conf_UAM[8]))."\n\n"; 
+      }
 
-  if (isset($conf_UAM[0]) and $conf_UAM[0] == 'true')
-  {
-    if (isset($conf_UAM[34]) and $conf_UAM[34] == 'true') // Allow display of clear password in email
-    {
-      $infos1 = array(
-        get_l10n_args('UAM_infos_mail %s', stripslashes($username)),
-        get_l10n_args('UAM_User: %s', stripslashes($username)),
-        get_l10n_args('UAM_Password: %s', $password),
-        get_l10n_args('Email: %s', $email),
-        get_l10n_args('', ''),
-      );
-    }
-    else // Do not allow display of clear password in email
-    {
-      $infos1 = array(
-        get_l10n_args('UAM_infos_mail %s', stripslashes($username)),
-        get_l10n_args('UAM_User: %s', stripslashes($username)),
-        get_l10n_args('Email: %s', $email),
-        get_l10n_args('', ''),
-      );
-    }
+      if (isset($conf_UAM[0]) and $conf_UAM[0] == 'true')
+      {
+        if (isset($conf_UAM[34]) and $conf_UAM[34] == 'true') // Allow display of clear password in email
+        {
+          $infos1 = array(
+            get_l10n_args('UAM_infos_mail %s', stripslashes($username)),
+            get_l10n_args('UAM_User: %s', stripslashes($username)),
+            get_l10n_args('UAM_Password: %s', $password),
+            get_l10n_args('Email: %s', $email),
+            get_l10n_args('', ''),
+          );
+        }
+        else // Do not allow display of clear password in email
+        {
+          $infos1 = array(
+            get_l10n_args('UAM_infos_mail %s', stripslashes($username)),
+            get_l10n_args('UAM_User: %s', stripslashes($username)),
+            get_l10n_args('Email: %s', $email),
+            get_l10n_args('', ''),
+          );
+        }
+      }
+
+      break;
   }
 
   if ( isset($conf_UAM[1]) and $conf_UAM[1] == 'true' and $confirm) // Add confirmation link ?
@@ -1016,31 +1046,6 @@ WHERE user_id = '.$id.'
       else $infos2_perso = l10n(preg_replace($patterns, $replacements, $conf_UAM[9]))."\n\n";
     }
   }
-
-// ********************************************************
-// **** Pending code since to find how to make it work ****
-// ********************************************************
-// Testing if FCK Editor is used. Then decoding htmlchars to avoid problems with pwg_mail()
-/*$areas = array();
-array_push( $areas,'UAM_MailInfo_Text','UAM_ConfirmMail_Text');
-
-if (function_exists('set_fckeditor_instance'))
-{
-  $fcke_config = unserialize($conf['FCKEditor']);
-  foreach($areas as $area)
-  {
-    if (isset($fcke_config['UAM_MailInfo_Text']) and $fcke_config['UAM_MailInfo_Text'] = true)
-    {
-      $infos1_perso = html_entity_decode($infos1_perso,ENT_QUOTES,UTF-8);
-    }
-    
-    if (isset($fcke_config['UAM_ConfirmMail_Text']) and $fcke_config['UAM_ConfirmMail_Text'] = true)
-    {
-      $infos2_perso = html_entity_decode($infos2_perso,ENT_QUOTES,UTF-8);
-    }
-  }
-}*/
-
 
 // Sending the email with subject and contents
 // -------------------------------------------
@@ -1089,7 +1094,7 @@ WHERE user_id = '.$user_id.'
 
   switch($typemail)
   {
-    case 1:
+    case 1: //Generating email content for remind with a new key
       $subject = '['.$conf['gallery_title'].'] '.l10n_args(get_l10n_args('UAM_Reminder_with_key_of_%s', $username));
       
       if (isset($conf_UAM_ConfirmMail[2]) and $conf_UAM_ConfirmMail[2] <> '' and isset($conf_UAM_ConfirmMail[3]) and $conf_UAM_ConfirmMail[3] == 'true' and $confirm)
@@ -1133,7 +1138,7 @@ WHERE user_id = '".$user_id."'
       
 		break;
       
-    case 2:
+    case 2: //Generating email content for remind without a new key
       $subject = '['.$conf['gallery_title'].'] '.l10n_args(get_l10n_args('UAM_Reminder_without_key_of_%s',$username));
       
       if (isset($conf_UAM_ConfirmMail[4]) and $conf_UAM_ConfirmMail[4] <> '' and isset($conf_UAM_ConfirmMail[3]) and $conf_UAM_ConfirmMail[3] == 'true' and !$confirm)
