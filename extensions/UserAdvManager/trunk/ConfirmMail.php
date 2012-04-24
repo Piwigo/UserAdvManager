@@ -86,9 +86,11 @@ WHERE '.USER_INFOS_TABLE.'.user_id ='.$userid.'
     }
     
     $redirect = true;
+    $Path_UAM = UAM_PATH; // Path to be used in template to reach the icons
     
     $template->assign(
 			array(
+        'UAM_PATH'             => $Path_UAM,
         'REDIRECT'             => $redirect,
         'STATUS'               => $status,
 				'CONFIRM_MAIL_MESSAGE' => $custom_text,

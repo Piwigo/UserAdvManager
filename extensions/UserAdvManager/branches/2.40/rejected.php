@@ -35,9 +35,12 @@ if (isset($conf_UAM[40]) and $conf_UAM[40] <> '')
   }
   else $custom_text = l10n(preg_replace($patterns, $replacements, $conf_UAM[40]));
 }
-    
+
+$Path_UAM = UAM_PATH; // Path to be used in template to reach the icons
+
 $template->assign(
   array(
+    'UAM_PATH'             => $Path_UAM,
     'GALLERY_URL'          => make_index_url(),
     'CUSTOM_REJECT_MSG'    => $custom_text,
   )
