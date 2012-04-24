@@ -19,7 +19,7 @@ $lang['UAM_passwtestTitle'] = 'Prüfung der Passworts Komplexität';
 $lang['UAM_passwtestTitle_d'] = 'Geben Sie das Passwort zu testen, und klicken Sie auf &quot;Ergebnis Berechnung&quot;, um das Ergebnis zu sehen.';
 $lang['UAM_passwadmTitle_d'] = 'Ein Administrator kann einen Benutzer-Account erstellen, mit oder ohne Anwendung der Regel der Komplexit&auml;t des Computings.<br><br>
 Hinweis: Wenn der Benutzer erstellte Konto will Passwort zu &auml;ndern und Passwörter f&uuml;r die Benutzer St&auml;rkung aktiv ist, wird es vorbehaltlich der Regel-Satz.';
-$lang['UAM_infomailTitle_d'] = 'Diese Option erm&ouml;glicht die Automatisierung Senden einer E-Mail-Informationen an einen Benutzer bei der Anmeldung oder bei Änderungen sein Passwort oder E-Mail-Adresse in ihrem Profil.<br><br>
+$lang['UAM_infomailTitle_d'] = 'Diese Option erm&ouml;glicht die Automatisierung Senden einer E-Mail-Informationen an einen Benutzer bei Änderungen sein Passwort oder E-Mail-Adresse in ihrem Profil.<br><br>
 Der Inhalt der Nachricht gesendet wird von einem anpassbaren Teil komponiert, um eine kleine Begrüßung und Einf&uuml;hrung fester Bestandteil in denen die Login, Passwort und E-Mail-Adresse des Benutzers.';
 $lang['UAM_confirmgrpTitle'] = 'Validation Gruppen';
 $lang['UAM_confirmgrpTitle_d'] = '<b style=&quot;color: red;&quot;>WARNUNG: Validierung Gruppen setzt voraus, dass Sie mindestens einen Benutzer Gruppe angelegt haben und definiert ist standardmäßig im User-Gruppen Piwigo-Management.</b><br><br>
