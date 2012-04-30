@@ -292,9 +292,7 @@ function uam_blockToggleDisplay( headerId, contentId )
           </fieldset>
 
           <fieldset>
-          <div class="uam_new">
             <ul>
-              <p class="new_in_version">{'UAM_NewFeature'|@translate}</p>
          	    <li>
                 <label class="cluetip" title="{'UAM_RejectConnexion'|translate}|{'UAM_RejectConnexion_d'|translate}">
                   {'UAM_RejectConnexion'|@translate}
@@ -327,7 +325,6 @@ function uam_blockToggleDisplay( headerId, contentId )
               </div>
             {/if}
             </ul>
-          </div>
 
           <br>
 

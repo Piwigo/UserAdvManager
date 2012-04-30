@@ -299,7 +299,7 @@ Plugin Name: UserAdvManager
 -- 2.40.0 : Bug 2570 fixed - Adding Wiki link to complete plugin documentation (FR only)
             Bug 2571 fixed - Piwigo 2.4 compliance : Information email removed on user registration because already managed by Piwigo
             Bug 2572 fixed - Adding a local home icon on ConfirmMail, rejected and del_account pages
-            Bug 2591 fixed - Excluding Adult_Content generic users from users tracking list
+            Bug 2591 fixed - Exclusion of Adult_Content generic users from users tracking list
             Bug 2603 fixed - Php notice when user changes his email in his profile if confirmation by email is set
             Bug 2619 fixed - Confirmation email when registered user changes his email was not sent and user not demoted
             Bug 2620 fixed - Display of ConfirmMail, rejected and del_account pages have been improved
