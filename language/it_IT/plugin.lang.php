@@ -351,8 +351,9 @@ Alla ricezione di questo messaggio e non ricevendo altre visite entro [days] gio
 
 Distinti saluti,
 l\'amministratore della galleria [mygallery] - [myurl]';
-$lang['UAM_Default_InfoMail_Txt'] = 'Ciao [username]! Grazie per esserti registrato su [mygallery]
-Qui sotto trovi le informazioni per la connessione';
+$lang['UAM_Default_InfoMail_Txt'] = 'Ciao [username]!
+
+Sono state apportate modifiche significative nel tuo profilo sul gallery [mygallery]. Per favore, di seguito troverete le nuove impostazioni:';
 $lang['UAM_Default_PwdRequest_Txt'] = 'Hai richiesto il rinnovo della password. Qui sotto trovi i nuovi dati di connessione';
 $lang['UAM_Default_RejectConnexion_Txt'] = 'Siamo spiacenti, non hai ancora confermato la registrazione, perciò non ti puoi connettere ora alla galleria. Controlla la tua casella mail. Dovresti trovare un email inviata dalla galleria, contenente un link per eseguire la conferma. Se non la trovi, contatta il webmaster.';
 $lang['UAM_Default_ValidationTimeout_Txt'] = 'Siamo spiacenti, il tuo account è stato eliminato poichè non hai confermato la registrazione nel tempo richiesto ([Kdays] days). Riprova la registrazione con un account mail valido';

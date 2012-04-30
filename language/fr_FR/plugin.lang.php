@@ -247,9 +247,9 @@ $lang['UAM_PwdReset_NA'] = 'Mot de passe original';
 $lang['UAM %d user pwdreseted'] = 'Renouvellement de mot de passe demandé pour %d utilisateur';
 $lang['UAM %d users pwdreseted'] = 'Renouvellement de mot de passe demandé pour %d utilisateurs';
 $lang['UAM_Error_Using_illegal_Kdays'] = 'L\'utilisation de la balise [Kdays] n\'est autorisée que si la limitation du délai de confirmation d\'inscription est active. Reportez vous au champ de texte en rouge pour corriger le problème.';
-$lang['UAM_Default_InfoMail_Txt'] = 'Bonjour [username] et merci de vous être inscrit sur la galerie [mygallery].
+$lang['UAM_Default_InfoMail_Txt'] = 'Bonjour [username]!
 
-Vous trouverez ci-dessous vos informations de connexion sur la galerie.';
+Vous avez effectué des modifications importantes de profil sur la galerie [mygallery]. Voici vos nouveaux paramètres :';
 $lang['UAM_Default_GhstReminder_Txt'] = 'Bonjour [username].
 	
 Ceci est un message de rappel car cela fait longtemps que vous n\'êtes pas revenu visiter la galerie [mygallery]. Si vous ne souhaitez plus utiliser votre compte d\'accès, merci de bien vouloir nous le faire savoir en répondant à ce message. Votre compte sera alors immédiatement détruit.

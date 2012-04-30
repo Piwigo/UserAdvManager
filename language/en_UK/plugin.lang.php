@@ -234,9 +234,9 @@ $lang['UAM_PwdReset_NA'] = 'Original password';
 $lang['UAM %d user pwdreseted'] = 'Password renewal required for %d user';
 $lang['UAM %d users pwdreseted'] = 'Password renewal required for %d users';
 $lang['UAM_Error_Using_illegal_Kdays'] = 'Using the [Kdays] tag is allowed only if the deadline for registration confirmation limited is active. Refer to the text field in red to correct the problem.';
-$lang['UAM_Default_InfoMail_Txt'] = 'Hello [username]! Thank you to have register on [mygallery].
+$lang['UAM_Default_InfoMail_Txt'] = 'Hello [username]!
 
-Please, find find below your connexion information.';
+You made significant changes in your profile on the gallery [mygallery]. Please, find below your new settings:';
 $lang['UAM_Default_ConfirmMail_Txt'] = 'Hello [username]! Thank you to have register on [mygallery].
 
 To complete the process and be able to browse through the pictures, thank you kindly confirm your registration by clicking on the link in this message.';
