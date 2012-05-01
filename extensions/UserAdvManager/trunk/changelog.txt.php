@@ -303,5 +303,6 @@ Plugin Name: UserAdvManager
             Bug 2603 fixed - Php notice when user changes his email in his profile if confirmation by email is set
             Bug 2619 fixed - Confirmation email when registered user changes his email was not sent and user not demoted
             Bug 2620 fixed - Display of ConfirmMail, rejected and del_account pages have been improved
+            Bug 2628 fixed - Php notice when email is not mandatory for registration
 */
 ?>
