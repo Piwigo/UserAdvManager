@@ -132,6 +132,11 @@ switch ($page['tab'])
 
     $_POST['UAM_CustomRejectConnexion_Text'] = str_replace('\"', '"', str_replace("\'", "'", str_replace("\\\\", "\\", $_POST['UAM_CustomRejectConnexion_Text'])));
 
+
+  // Check if emails are mandatory for registrations (needed for email exclusion option)
+  // -----------------------------------------------------------------------------------
+  if ($conf['obligatory_user_mail_address'])
+  {
     // Check if CR-LF exist at begining and end of mail exclusion list - If yes, removes them
     // --------------------------------------------------------------------------------------
     if (preg_match('/^[\s]+/', $_POST['UAM_MailExclusion_List']))
@@ -139,6 +144,11 @@ switch ($page['tab'])
       array_push($page['errors'], l10n('UAM_mail_exclusionlist_error'));
       $UAM_Exclusionlist_Error = true;
     }
+  }
+  elseif (!$conf['obligatory_user_mail_address'])
+  {
+    $_POST['UAM_MailExclusion_List'] = '';
+  }
 
     // Consistency check between ConfirmMail and AutoMail - We cannot use GTAutoMail if ConfirmMail is disabled
     // ---------------------------------------------------------------------------------------------------------
