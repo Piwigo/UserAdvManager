@@ -860,7 +860,7 @@ function UAM_lost_password_mail_content($infos)
     $patterns[] = '#\[mygallery\]#i';
     $replacements[] = $conf['gallery_title'];
     $patterns[] = '#\[myurl\]#i';
-    $replacements[] = $conf['gallery_url'];
+    $replacements[] = get_gallery_home_url();
     
     $infos = preg_replace($patterns, $replacements, $conf_UAM[29])."\n"."\n".$infos;
   }
@@ -932,7 +932,7 @@ WHERE user_id = '.$id.'
         $patterns[] = '#\[mygallery\]#i';
         $replacements[] = $conf['gallery_title'];
         $patterns[] = '#\[myurl\]#i';
-        $replacements[] = $conf['gallery_url'];
+        $replacements[] = get_gallery_home_url();
     
         if (function_exists('get_user_language_desc'))
         {
@@ -979,7 +979,7 @@ WHERE user_id = '.$id.'
         $patterns[] = '#\[mygallery\]#i';
         $replacements[] = $conf['gallery_title'];
         $patterns[] = '#\[myurl\]#i';
-        $replacements[] = $conf['gallery_url'];
+        $replacements[] = get_gallery_home_url();
     
         if (function_exists('get_user_language_desc'))
         {
@@ -1031,7 +1031,7 @@ WHERE user_id = '.$id.'
       $patterns[] = '#\[mygallery\]#i';
       $replacements[] = $conf['gallery_title'];
       $patterns[] = '#\[myurl\]#i';
-      $replacements[] = $conf['gallery_url'];
+      $replacements[] = get_gallery_home_url();
       
       if (isset($conf_UAM_ConfirmMail[0]) and $conf_UAM_ConfirmMail[0] == 'true') // [Kdays] replacement only if related option is active
       {
@@ -1106,7 +1106,7 @@ WHERE user_id = '.$user_id.'
         $patterns[] = '#\[mygallery\]#i';
         $replacements[] = $conf['gallery_title'];
         $patterns[] = '#\[myurl\]#i';
-        $replacements[] = $conf['gallery_url'];
+        $replacements[] = get_gallery_home_url();
 
         if (isset($conf_UAM_ConfirmMail[0]) and $conf_UAM_ConfirmMail[0] == 'true') // [Kdays] replacement only if related option is active
         {
@@ -1150,7 +1150,7 @@ WHERE user_id = '".$user_id."'
         $patterns[] = '#\[mygallery\]#i';
         $replacements[] = $conf['gallery_title'];
         $patterns[] = '#\[myurl\]#i';
-        $replacements[] = $conf['gallery_url'];
+        $replacements[] = get_gallery_home_url();
 
         if (isset($conf_UAM_ConfirmMail[0]) and $conf_UAM_ConfirmMail[0] == 'true') // [Kdays] replacement only if related option is active
         {
@@ -1231,7 +1231,7 @@ WHERE user_id = '.$user_id.'
     $patterns[] = '#\[mygallery\]#i';
     $replacements[] = $conf['gallery_title'];
     $patterns[] = '#\[myurl\]#i';
-    $replacements[] = $conf['gallery_url'];
+    $replacements[] = get_gallery_home_url();
     $patterns[] = '#\[days\]#i';
     $replacements[] = $conf_UAM[16];
 
@@ -1312,7 +1312,7 @@ WHERE user_id = '.$id.'
     $patterns[] = '#\[mygallery\]#i';
     $replacements[] = $conf['gallery_title'];
     $patterns[] = '#\[myurl\]#i';
-    $replacements[] = $conf['gallery_url'];
+    $replacements[] = get_gallery_home_url();
 
     if (function_exists('get_user_language_desc'))
     {
@@ -1411,7 +1411,7 @@ WHERE id = '.$id.'
     $patterns[] = '#\[mygallery\]#i';
     $replacements[] = $conf['gallery_title'];
     $patterns[] = '#\[myurl\]#i';
-    $replacements[] = $conf['gallery_url'];
+    $replacements[] = get_gallery_home_url();
 
     if (function_exists('get_user_language_desc'))
     {
