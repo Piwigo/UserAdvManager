@@ -303,6 +303,9 @@ Plugin Name: UserAdvManager
             Bug 2603 fixed - Php notice when user changes his email in his profile if confirmation by email is set
             Bug 2619 fixed - Confirmation email when registered user changes his email was not sent and user not demoted
             Bug 2620 fixed - Display of ConfirmMail, rejected and del_account pages have been improved
+            Bug 2621 fixed - Display of ConfirmMail, rejected and del_account pages have been improved for IE8 and IE9 render
+            Bug 2622 fixed - Display of ConfirmMail, rejected and del_account pages have been improved for Stripped theme
             Bug 2628 fixed - Php notice when email is not mandatory for registration
+            Bug 2631 fixed - Piwigo 2.4 compliance : $conf['gallery_url'] replaced by get_gallery_home_url() for [myurl] tag
 */
 ?>
