@@ -286,7 +286,8 @@ Plugin Name: UserAdvManager
 -- 2.30.4 : Bug 2580 fixed - DE translation files corrupted
 
 -- 2.30.5 : Bug 2583 fixed - help.lang.php was not loaded correctly
-            Bug 2602 fixed - Sql error when Confirmation by admin is set 
+            Bug 2602 fixed - Sql error when Confirmation by admin is set
+            Bug 2570 fixed - Adding Wiki link to complete plugin documentation (FR only)
             en_UK reference translation spellchecking
             de_DE translation updated
             fr_FR translation updated
@@ -296,8 +297,7 @@ Plugin Name: UserAdvManager
 **************************************************************
 ***** Plugin history (branch 2.40 - Piwigo 2.4 compliant)*****
 **************************************************************
--- 2.40.0 : Bug 2570 fixed - Adding Wiki link to complete plugin documentation (FR only)
-            Bug 2571 fixed - Piwigo 2.4 compliance : Information email removed on user registration because already managed by Piwigo
+-- 2.40.0 : Bug 2571 fixed - Piwigo 2.4 compliance : Information email removed on user registration because already managed by Piwigo
             Bug 2572 fixed - Adding a local home icon on ConfirmMail, rejected and del_account pages
             Bug 2591 fixed - Exclusion of Adult_Content generic users from users tracking list
             Bug 2603 fixed - Php notice when user changes his email in his profile if confirmation by email is set
