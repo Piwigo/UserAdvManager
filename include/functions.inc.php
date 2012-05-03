@@ -855,12 +855,10 @@ function UAM_lost_password_mail_content($infos)
   if (isset($conf_UAM[28]) and $conf_UAM[28] == 'true')
   {
     // Management of Extension flags ([mygallery], [myurl])
-    //$patterns[] = '#\[username\]#i';
-    //$replacements[] = stripslashes($row['username']);
     $patterns[] = '#\[mygallery\]#i';
     $replacements[] = $conf['gallery_title'];
     $patterns[] = '#\[myurl\]#i';
-    $replacements[] = $conf['gallery_url'];
+    $replacements[] = get_gallery_home_url();
     
     $infos = preg_replace($patterns, $replacements, $conf_UAM[29])."\n"."\n".$infos;
   }
@@ -884,6 +882,7 @@ function SendMail2User($typemail, $id, $username, $password, $email, $confirm)
   
 	$infos1_perso = "";
   $infos2_perso = "";
+  $subject = "";
 
 // We have to get the user's language in database
 // ----------------------------------------------
@@ -915,12 +914,41 @@ WHERE user_id = '.$id.'
   switch($typemail)
   {
     case 1: // Confirmation email on user registration - Without information email (already managed by Piwigo)
-      $subject = '['.$conf['gallery_title'].'] '.l10n_args(get_l10n_args('UAM_Add of %s', stripslashes($username)));
+      if (isset($conf_UAM[41]) and $conf_UAM[41] <> '')
+      {
+        // Management of Extension flags ([username], [mygallery])
+        // -------------------------------------------------------
+        $patterns[] = '#\[username\]#i';
+        $replacements[] = $username;
+        $patterns[] = '#\[mygallery\]#i';
+        $replacements[] = $conf['gallery_title'];
+    
+        if (function_exists('get_user_language_desc'))
+        {
+          $subject = get_user_language_desc(preg_replace($patterns, $replacements, $conf_UAM[41]))."\n\n";
+        }
+        else $subject = l10n(preg_replace($patterns, $replacements, $conf_UAM[41]))."\n\n"; 
+      }
 
       break;
       
     case 2: // Confirmation email on user profile update - With information email if checked
-      $subject = '['.$conf['gallery_title'].'] '.l10n_args(get_l10n_args('UAM_Update of %s', stripslashes($username)));
+      if (isset($conf_UAM[41]) and $conf_UAM[41] <> '')
+      {
+        // Management of Extension flags ([username], [mygallery])
+        // -------------------------------------------------------
+        $patterns[] = '#\[username\]#i';
+        $replacements[] = $username;
+        $patterns[] = '#\[mygallery\]#i';
+        $replacements[] = $conf['gallery_title'];
+    
+        if (function_exists('get_user_language_desc'))
+        {
+          $subject = get_user_language_desc(preg_replace($patterns, $replacements, $conf_UAM[41]))."\n\n";
+        }
+        else $subject = l10n(preg_replace($patterns, $replacements, $conf_UAM[41]))."\n\n"; 
+      }
+
       $password = $password <> '' ? $password : l10n('UAM_empty_pwd');
 
       if (isset($conf_UAM[8]) and $conf_UAM[8] <> '')
@@ -932,7 +960,7 @@ WHERE user_id = '.$id.'
         $patterns[] = '#\[mygallery\]#i';
         $replacements[] = $conf['gallery_title'];
         $patterns[] = '#\[myurl\]#i';
-        $replacements[] = $conf['gallery_url'];
+        $replacements[] = get_gallery_home_url();
     
         if (function_exists('get_user_language_desc'))
         {
@@ -967,7 +995,22 @@ WHERE user_id = '.$id.'
       break;
         
     case 3: // Only information email send to user if checked
-      $subject = '['.$conf['gallery_title'].'] '.l10n_args(get_l10n_args('UAM_Update of %s', stripslashes($username)));
+      if (isset($conf_UAM[43]) and $conf_UAM[43] <> '')
+      {
+        // Management of Extension flags ([username], [mygallery])
+        // -------------------------------------------------------
+        $patterns[] = '#\[username\]#i';
+        $replacements[] = $username;
+        $patterns[] = '#\[mygallery\]#i';
+        $replacements[] = $conf['gallery_title'];
+    
+        if (function_exists('get_user_language_desc'))
+        {
+          $subject = get_user_language_desc(preg_replace($patterns, $replacements, $conf_UAM[43]))."\n\n";
+        }
+        else $subject = l10n(preg_replace($patterns, $replacements, $conf_UAM[43]))."\n\n"; 
+      }
+
       $password = $password <> '' ? $password : l10n('UAM_no_update_pwd');
 
       if (isset($conf_UAM[8]) and $conf_UAM[8] <> '')
@@ -979,7 +1022,7 @@ WHERE user_id = '.$id.'
         $patterns[] = '#\[mygallery\]#i';
         $replacements[] = $conf['gallery_title'];
         $patterns[] = '#\[myurl\]#i';
-        $replacements[] = $conf['gallery_url'];
+        $replacements[] = get_gallery_home_url();
     
         if (function_exists('get_user_language_desc'))
         {
@@ -1031,7 +1074,7 @@ WHERE user_id = '.$id.'
       $patterns[] = '#\[mygallery\]#i';
       $replacements[] = $conf['gallery_title'];
       $patterns[] = '#\[myurl\]#i';
-      $replacements[] = $conf['gallery_url'];
+      $replacements[] = get_gallery_home_url();
       
       if (isset($conf_UAM_ConfirmMail[0]) and $conf_UAM_ConfirmMail[0] == 'true') // [Kdays] replacement only if related option is active
       {
@@ -1069,6 +1112,8 @@ switch_lang_back();
 function ResendMail2User($typemail, $user_id, $username, $email, $confirm)
 {
   global $conf;
+  
+  $subject = "";
 
   $conf_UAM = unserialize($conf['UserAdvManager']);
 
@@ -1095,7 +1140,21 @@ WHERE user_id = '.$user_id.'
   switch($typemail)
   {
     case 1: //Generating email content for remind with a new key
-      $subject = '['.$conf['gallery_title'].'] '.l10n_args(get_l10n_args('UAM_Reminder_with_key_of_%s', $username));
+      if (isset($conf_UAM[42]) and $conf_UAM[42] <> '')
+      {
+        // Management of Extension flags ([username], [mygallery])
+        // -------------------------------------------------------
+        $patterns[] = '#\[username\]#i';
+        $replacements[] = $username;
+        $patterns[] = '#\[mygallery\]#i';
+        $replacements[] = $conf['gallery_title'];
+    
+        if (function_exists('get_user_language_desc'))
+        {
+          $subject = get_user_language_desc(preg_replace($patterns, $replacements, $conf_UAM[42]))."\n\n";
+        }
+        else $subject = l10n(preg_replace($patterns, $replacements, $conf_UAM[42]))."\n\n"; 
+      }
       
       if (isset($conf_UAM_ConfirmMail[2]) and $conf_UAM_ConfirmMail[2] <> '' and isset($conf_UAM_ConfirmMail[3]) and $conf_UAM_ConfirmMail[3] == 'true' and $confirm)
       {
@@ -1106,7 +1165,7 @@ WHERE user_id = '.$user_id.'
         $patterns[] = '#\[mygallery\]#i';
         $replacements[] = $conf['gallery_title'];
         $patterns[] = '#\[myurl\]#i';
-        $replacements[] = $conf['gallery_url'];
+        $replacements[] = get_gallery_home_url();
 
         if (isset($conf_UAM_ConfirmMail[0]) and $conf_UAM_ConfirmMail[0] == 'true') // [Kdays] replacement only if related option is active
         {
@@ -1139,7 +1198,21 @@ WHERE user_id = '".$user_id."'
 		break;
       
     case 2: //Generating email content for remind without a new key
-      $subject = '['.$conf['gallery_title'].'] '.l10n_args(get_l10n_args('UAM_Reminder_without_key_of_%s',$username));
+      if (isset($conf_UAM[42]) and $conf_UAM[42] <> '')
+      {
+        // Management of Extension flags ([username], [mygallery])
+        // -------------------------------------------------------
+        $patterns[] = '#\[username\]#i';
+        $replacements[] = $username;
+        $patterns[] = '#\[mygallery\]#i';
+        $replacements[] = $conf['gallery_title'];
+    
+        if (function_exists('get_user_language_desc'))
+        {
+          $subject = get_user_language_desc(preg_replace($patterns, $replacements, $conf_UAM[42]))."\n\n";
+        }
+        else $subject = l10n(preg_replace($patterns, $replacements, $conf_UAM[42]))."\n\n"; 
+      }
       
       if (isset($conf_UAM_ConfirmMail[4]) and $conf_UAM_ConfirmMail[4] <> '' and isset($conf_UAM_ConfirmMail[3]) and $conf_UAM_ConfirmMail[3] == 'true' and !$confirm)
       {
@@ -1150,7 +1223,7 @@ WHERE user_id = '".$user_id."'
         $patterns[] = '#\[mygallery\]#i';
         $replacements[] = $conf['gallery_title'];
         $patterns[] = '#\[myurl\]#i';
-        $replacements[] = $conf['gallery_url'];
+        $replacements[] = get_gallery_home_url();
 
         if (isset($conf_UAM_ConfirmMail[0]) and $conf_UAM_ConfirmMail[0] == 'true') // [Kdays] replacement only if related option is active
         {
@@ -1199,10 +1272,9 @@ function ghostreminder($user_id, $username, $email)
   global $conf;
 
   $conf_UAM = unserialize($conf['UserAdvManager']);
+  $subject = "";
   
 	include_once(PHPWG_ROOT_PATH.'include/functions_mail.inc.php');
-  
-	$infos1_perso = "";
 
 // We have to get the user's language in database
 // ----------------------------------------------
@@ -1219,8 +1291,22 @@ WHERE user_id = '.$user_id.'
   switch_lang_to($data['language']);
    
   load_language('plugin.lang', UAM_PATH);
-  
-  $subject = '['.$conf['gallery_title'].'] '.l10n_args(get_l10n_args('UAM_Ghost_reminder_of_%s', $username));     
+
+  if (isset($conf_UAM[45]) and $conf_UAM[45] <> '')
+  {
+    // Management of Extension flags ([username], [mygallery])
+    // -------------------------------------------------------
+    $patterns[] = '#\[username\]#i';
+    $replacements[] = $username;
+    $patterns[] = '#\[mygallery\]#i';
+    $replacements[] = $conf['gallery_title'];
+
+    if (function_exists('get_user_language_desc'))
+    {
+      $subject = get_user_language_desc(preg_replace($patterns, $replacements, $conf_UAM[45]))."\n\n";
+    }
+    else $subject = l10n(preg_replace($patterns, $replacements, $conf_UAM[45]))."\n\n"; 
+  }
 
   if (isset($conf_UAM[17]) and $conf_UAM[17] <> '' and isset($conf_UAM[15]) and $conf_UAM[15] == 'true')
   {
@@ -1231,7 +1317,7 @@ WHERE user_id = '.$user_id.'
     $patterns[] = '#\[mygallery\]#i';
     $replacements[] = $conf['gallery_title'];
     $patterns[] = '#\[myurl\]#i';
-    $replacements[] = $conf['gallery_url'];
+    $replacements[] = get_gallery_home_url();
     $patterns[] = '#\[days\]#i';
     $replacements[] = $conf_UAM[16];
 
@@ -1273,6 +1359,7 @@ function demotion_mail($id, $username, $email)
 	include_once(PHPWG_ROOT_PATH.'include/functions_mail.inc.php');
   
 	$custom_txt = "";
+  $subject = "";
 
 // We have to get the user's language in database
 // ----------------------------------------------
@@ -1301,7 +1388,21 @@ WHERE user_id = '.$id.'
     load_language('plugin.lang', UAM_PATH);
   }
 
-  $subject = '['.$conf['gallery_title'].'] '.l10n_args(get_l10n_args('UAM_Demotion of %s', stripslashes($username)));
+  if (isset($conf_UAM[44]) and $conf_UAM[44] <> '')
+  {
+    // Management of Extension flags ([username], [mygallery])
+    // -------------------------------------------------------
+    $patterns[] = '#\[username\]#i';
+    $replacements[] = $username;
+    $patterns[] = '#\[mygallery\]#i';
+    $replacements[] = $conf['gallery_title'];
+
+    if (function_exists('get_user_language_desc'))
+    {
+      $subject = get_user_language_desc(preg_replace($patterns, $replacements, $conf_UAM[44]))."\n\n";
+    }
+    else $subject = l10n(preg_replace($patterns, $replacements, $conf_UAM[44]))."\n\n"; 
+  }
       
   if (isset($conf_UAM[24]) and $conf_UAM[24] <> '')
   {
@@ -1312,7 +1413,7 @@ WHERE user_id = '.$id.'
     $patterns[] = '#\[mygallery\]#i';
     $replacements[] = $conf['gallery_title'];
     $patterns[] = '#\[myurl\]#i';
-    $replacements[] = $conf['gallery_url'];
+    $replacements[] = get_gallery_home_url();
 
     if (function_exists('get_user_language_desc'))
     {
@@ -1363,6 +1464,7 @@ function validation_mail($id)
 	include_once(PHPWG_ROOT_PATH.'include/functions_mail.inc.php');
   
 	$custom_txt = "";
+  $subject = "";
 
 // We have to get the user's language in database
 // ----------------------------------------------
@@ -1400,7 +1502,21 @@ WHERE id = '.$id.'
 ;';
   $result = pwg_db_fetch_assoc(pwg_query($query));
 
-  $subject = '['.$conf['gallery_title'].'] '.l10n_args(get_l10n_args('UAM_Validation of %s', stripslashes($result['username'])));
+  if (isset($conf_UAM[46]) and $conf_UAM[46] <> '')
+  {
+    // Management of Extension flags ([username], [mygallery])
+    // -------------------------------------------------------
+    $patterns[] = '#\[username\]#i';
+    $replacements[] = $username;
+    $patterns[] = '#\[mygallery\]#i';
+    $replacements[] = $conf['gallery_title'];
+
+    if (function_exists('get_user_language_desc'))
+    {
+      $subject = get_user_language_desc(preg_replace($patterns, $replacements, $conf_UAM[46]))."\n\n";
+    }
+    else $subject = l10n(preg_replace($patterns, $replacements, $conf_UAM[46]))."\n\n"; 
+  }
       
   if (isset($conf_UAM[27]) and $conf_UAM[27] <> '')
   {
@@ -1411,7 +1527,7 @@ WHERE id = '.$id.'
     $patterns[] = '#\[mygallery\]#i';
     $replacements[] = $conf['gallery_title'];
     $patterns[] = '#\[myurl\]#i';
-    $replacements[] = $conf['gallery_url'];
+    $replacements[] = get_gallery_home_url();
 
     if (function_exists('get_user_language_desc'))
     {

@@ -336,9 +336,9 @@ $lang['UAM_Default_GhstDemotion_Txt'] = 'Leider [username], Ihr Konto wurde aufg
 $lang['UAM_Default_GhstReminder_Txt'] = 'Hallo [username].
 
 Dies ist eine Erinnerung, weil eine sehr lange Zeit vergangen, seit Ihrem letzten Besuch auf unserer Galerie [mygallery]. Wenn Sie nicht mehr tun wollen Ihren Zugang Konto verwenden, informieren Sie uns bitte durch eine Beantwortung dieser E-Mail. Ihr Konto wird gel';
-$lang['UAM_Default_InfoMail_Txt'] = 'Hallo [username]! Wir danken Ihnen, auf [mygallery] haben registrieren lassen.
+$lang['UAM_Default_InfoMail_Txt'] = 'Hallo [username]!
 
-Bitte, finden Sie unten Ihre Verbindung Informationen.';
+Sie haben wesentliche Veränderungen in Ihrem Profil auf der Galerie [mygallery]. Bitte, finden Sie die neuen Einstellungen:';
 $lang['UAM_Default_PwdRequest_Txt'] = 'Sie haben ein Passwort-Reset auf unserer Galerie anzubieten. Bitte unten Ihre neue Verbindung Einstellungen zu finden.';
 $lang['UAM_Default_RejectConnexion_Txt'] = 'Leider müssen Sie nicht Ihre Anmeldung bestätigt noch haben, so können Sie nicht schließen Sie die Galerie jetzt. Bitte überprüfen Sie Ihre E-Mail-Box. Sie sollten eine E-Mail durch die Galerie geschickt, mit einem Link zu Ihrer Bestätigung durchzuführen. Wenn nicht, wenden Sie sich bitte an den Webmaster.';
 $lang['UAM_Default_ValidationTimeout_Txt'] = 'Sorry, dein Konto wurde gelöscht, weil Sie nicht Ihre Anmeldung im gewünschten Zeitraum ([Kdays] Tage) bestätigt haben. Bitte versuchen Registrierung mit einer gültigen und nicht blockiert E-Mail-Konto.';

@@ -76,8 +76,8 @@ WHERE '.USER_INFOS_TABLE.'.user_id ='.$userid.'
       $patterns[] = '#\[mygallery\]#i';
       $replacements[] = $conf['gallery_title'];
       $patterns[] = '#\[myurl\]#i';
-      $replacements[] = $conf['gallery_url'];
-   
+      $replacements[] = get_gallery_home_url();
+
       if (function_exists('get_user_language_desc'))
       {
         $custom_text = get_user_language_desc(preg_replace($patterns, $replacements, $conf_UAM_ConfirmMail[5]));
@@ -86,16 +86,6 @@ WHERE '.USER_INFOS_TABLE.'.user_id ='.$userid.'
     }
     
     $redirect = true;
-    $Path_UAM = UAM_PATH; // Path to be used in template to reach the icons
-    
-    $template->assign(
-			array(
-        'UAM_PATH'             => $Path_UAM,
-        'REDIRECT'             => $redirect,
-        'STATUS'               => $status,
-				'CONFIRM_MAIL_MESSAGE' => $custom_text,
-			)
-		);
   }  
   else
   {
@@ -111,7 +101,7 @@ WHERE '.USER_INFOS_TABLE.'.user_id ='.$userid.'
       $patterns[] = '#\[mygallery\]#i';
       $replacements[] = $conf['gallery_title'];
       $patterns[] = '#\[myurl\]#i';
-      $replacements[] = $conf['gallery_url'];
+      $replacements[] = get_gallery_home_url();
    
       if (function_exists('get_user_language_desc'))
       {
@@ -119,16 +109,18 @@ WHERE '.USER_INFOS_TABLE.'.user_id ='.$userid.'
       }
       else $custom_text = l10n(preg_replace($patterns, $replacements, $conf_UAM_ConfirmMail[6]));
     }
-    
-    $template->assign(
-			array(
-        'REDIRECT'             => $redirect,
-        'GALLERY_URL'          => make_index_url(),
-        'STATUS'               => $status,
-				'CONFIRM_MAIL_MESSAGE' => $custom_text,
-			)
-		);
   }
+
+  $Path_UAM = UAM_PATH; // Path to be used in template to reach the icons
+
+  $template->assign(
+    array(
+      'UAM_PATH'             => $Path_UAM,
+      'REDIRECT'             => $redirect,
+      'STATUS'               => $status,
+		  'CONFIRM_MAIL_MESSAGE' => $custom_text,
+    )
+  );
 }
 
 if (isset($lang['Theme: '.$user['theme']]))
