@@ -305,6 +305,7 @@ Plugin Name: UserAdvManager
             Bug 2620 fixed - Display of ConfirmMail, rejected and del_account pages have been improved
             Bug 2621 fixed - Display of ConfirmMail, rejected and del_account pages have been improved for IE8 and IE9 render
             Bug 2622 fixed - Display of ConfirmMail, rejected and del_account pages have been improved for Stripped theme
+            Bug 2623 fixed - Ability to customize email subjects (confirmation, information and ghostTracker email)
             Bug 2628 fixed - Php notice when email is not mandatory for registration
             Bug 2631 fixed - Piwigo 2.4 compliance : $conf['gallery_url'] replaced by get_gallery_home_url() for [myurl] tag
 */
