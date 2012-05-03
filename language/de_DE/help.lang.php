@@ -95,11 +95,6 @@ $lang['UAM_GTAutoTitle_d'] = 'Diese Option ermöglicht es, Regeln für die autom
 $lang['UAM_GTAutoDelTitle'] = 'Benutzerdefinierte Meldung auf gelöschtes Konto';
 $lang['UAM_GTAutoGpTitle_d'] = 'Der automatische Wechsel der Gruppe oder den gleichen Status zu einer Degradierung der Konten beteiligt und arbeiten nach dem gleichen Prinzip wie die Gruppe oder den Status der Validierung (finden Sie unter &quot;Einstellen Bestätigungen und Validierungen der Registrierung&quot;). Daher sein, eine Gruppe und / oder Status herabstufen Zugang zur Galerie zu definieren. Wenn dies bereits mit dem Einsatz von Anmeldebestätigung Funktion definiert wurde, können Sie mit dem gleichen Gruppe / Status.<br><br>
 <b style=&quot;color: red;&quot;>Wichtiger Hinweis:</b> Wenn ein Geist Benutzer hat noch kein von der nach Ablauf der Frist und trotz der automatische Benachrichtigung per E-Mail (wenn aktiviert) gehört, ist er automatisch aus der Datenbank gelöscht.';
-$lang['UAM_GTAutoMailTitle_d'] = 'Wenn ein Konto abgelaufen ist (Gruppe / Status-Änderung herabstufen den Besucher), kann eine E-Mail-Informationen geschickt, um die Gründe für diese Änderung und die Mittel, um den ersten Zugriff auf die Galerie wieder zu klären.
-<br>Um dies zu tun, wird ein Link auf die Verlängerung der Registrierung per E-Mail (automatische Generierung eines neuen Validierungsschlüssel) befestigt.<b style=&quot;color: red;&quot;>Wenn der Benutzer bereits angemeldet ist, wird sein Konto automatisch zerstört.</b> 
-<br><br>Geben Sie den Text, die auch eine Erläuterung der Gründe für die Rückstufung, um die Validierung Link zu begleiten. Der Text ist nicht vorgeschrieben, aber dringend empfohlen. In der Tat werden Ihre Besucher nicht zu schätzen Empfang einer E-Mail mit nur einem einzigen Link ohne weitere Erklärung. ;-)
-<br><br>Um mehrere Sprachen zu benutzen, können Sie die Extended Description Plugin-Tags verwenden, wenn er aktiv ist.
-<br><br><b style=&quot;color: red;&quot;>Warnung: Nutzung dieser Funktion ist eng mit der Bestätigung der Anmeldung durch den Benutzer (per Mail) verbunden und kann nicht ohne diese Option aktiviert werden.</b>';
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.20.0
