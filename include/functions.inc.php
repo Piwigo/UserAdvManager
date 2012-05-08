@@ -308,7 +308,7 @@ LIMIT 1
 
     // Sending registration confirmation by email
     // ------------------------------------------
-    if (/*(isset($conf_UAM[0]) and $conf_UAM[0] == 'true') or */(isset($conf_UAM[1]) and $conf_UAM[1] == 'true') or (isset($conf_UAM[1]) and $conf_UAM[1] == 'local'))
+    if ((isset($conf_UAM[1]) and $conf_UAM[1] == 'true') or (isset($conf_UAM[1]) and $conf_UAM[1] == 'local'))
     {
       $confirm_mail_need = false;
 
