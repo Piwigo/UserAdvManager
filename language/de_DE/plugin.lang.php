@@ -385,4 +385,17 @@ $lang['UAM_Tracking confirmations'] = 'Verfolgung Bestätigungen';
 $lang['UAM_Tracking registered users'] = 'Verfolgung registrierte Benutzer';
 $lang['UAM_USRAutoDel'] = 'Nachricht an das automatische Löschen von Konten';
 $lang['UAM_USRAutoMail'] = 'Automatisierte E-Mail-Erinnerung';
+$lang['UAM_AdminValidationMail_Subject'] = 'Manuelle Anpassung des Betreffs der Überprüfungs-E-Mail';
+$lang['UAM_ConfirmMail_ReMail_Subject'] = 'Anpassung des Betreffs der Registrierungs-Bestätigungs-Erinnerungs-E-Mail';
+$lang['UAM_ConfirmMail_Subject'] = 'Anpassung des Betreffs der Registrierungs-Bestätigungs-E-Mail';
+$lang['UAM_Default_AdminValidationMail_Subject'] = '[username] - Registration Überprüfung an [mygallery]';
+$lang['UAM_Default_ConfirmMail_Remail_Subject'] = 'Erinnerung - [username] Registrierung-Bestättigung an [mygallery]';
+$lang['UAM_Default_ConfirmMail_Subject'] = '[username] Registrierung-Bestättigung an [mygallery]';
+$lang['UAM_Default_GTAutoMail_Subject'] = '[username] - Ihr Zugangs-Konto wurde Herabgestuft  [mygallery]';
+$lang['UAM_Default_GTReminder_Subject'] = '[username] - Eine lange Zeit ist seit Ihrem letzten Besuch verganagen [mygallery]';
+$lang['UAM_Default_InfoMail_Subject'] = '[username] - Ihre Registrierung-Information an [mygallery]';
+$lang['UAM_GTAutomail_Subject'] = 'Automatische Anpassung des Betreffs der Ghost-Tracker-Herabstufungs-E-Mail';
+$lang['UAM_GTAutomail_Text'] = 'Anpassen des Herabstufens E-Mail Text';
+$lang['UAM_GTReminder_Subject'] = 'Manuelle Anpassung des Betreffs der Ghost-Tracker-Erinnerungs-E-Mail';
+$lang['UAM_MailInfo_Subject'] = 'Anpassen des Betreffs der Informations-E-Mail';
 ?>
