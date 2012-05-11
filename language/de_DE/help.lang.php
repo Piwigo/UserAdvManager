@@ -277,4 +277,52 @@ Im zweiten Fall, <b><u>gibt es keine Bestätigung Schlüssel per E-Mail!</u></b>
 <b style=&quot;color: red;&quot;>NB: Die Optionen &quot;Deadline zur Bestätigung der Registrierung begrenzt&quot; und &quot;Remind unbestätigte Benutzer&quot; müssen gesetzt werden ausgeschaltet, wenn der Admin manuelle Bestätigung aktiviert ist.</b>
 <br><br>
 Diese Option wird in der Regel mit der automatischen Zuordnung von Gruppen-und / oder Satzung verwendet. Zum Beispiel wird ein Benutzer, der nicht ihrer Registrierung hat bestätigt, in einer bestimmten Gruppe von Benutzern (mit oder ohne Einschränkungen auf der Galerie) eingestellt werden, während ein Benutzer, der seine Anmeldung bestätigt in einem &quot;normalen&quot; Gruppe festgesetzt werden.';
+$lang['UAM_AdminValidationMail_Subject_d'] = 'Wenn ein Administrator oder Webmaster der Galerie manuell bestätigen Registrierung anhängig ist, wird eine Benachrichtigung per E-Mail automatisch an den Benutzer gesendet. Geben Sie hier Ihre individuelle manuelle Validierung E-Mail-Betreff.<br>
+Standardmäßig hat das Feld einen generischen Text in Deutsch, aber Sie können es ändern, und verwenden Sie die Übersetzung tags [lang =?] von Extended Description Plugin, wenn installiert.
+<br><br>
+Die folgenden zusätzlichen Anpassungen Tags sind ohne die Verwendung der Extended Description Plugin zur Verfügung:<br>
+- <b style=&quot;color: red;&quot;>[username]</b> um automatisch den Namen des Zielbenutzers in der E-Mail.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> um den Titel Ihrer Galerie einzufügen.<br>';
+$lang['UAM_ConfirmMail_ReMail_Subject_d'] = 'Geben Sie hier Ihre individuelle Anmeldebestätigung per E-Mail Betreff Mahnung (mit oder ohne neuen Schlüssel Generation).<br>
+Standardmäßig hat das Feld einen generischen Text in Deutsch, aber Sie können es ändern, und verwenden Sie die Übersetzung tags [lang =?] von Extended Description Plugin, wenn installiert.
+<br><br>
+Die folgenden zusätzlichen Anpassungen Tags sind ohne die Verwendung der Extended Description Plugin zur Verfügung:<br>
+- <b style=&quot;color: red;&quot;>[username]</b> um automatisch den Namen des Zielbenutzers in der E-Mail.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> um den Titel Ihrer Galerie einzufügen.<br>';
+$lang['UAM_ConfirmMail_Subject_d'] = 'Geben Sie hier Ihre individuelle Anmeldebestätigung per E-Mail Thema.<br>
+Standardmäßig hat das Feld einen generischen Text in Deutsch, aber Sie können es ändern, und verwenden Sie die Übersetzung tags [lang =?] von Extended Description Plugin, wenn installiert.
+<br><br>
+Die folgenden zusätzlichen Anpassungen Tags sind ohne die Verwendung der Extended Description Plugin zur Verfügung:<br>
+- <b style=&quot;color: red;&quot;>[username]</b> um automatisch den Namen des Zielbenutzers in der E-Mail.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> um den Titel Ihrer Galerie einzufügen.<br>';
+$lang['UAM_GTAutoMailTitle_d'] = 'Wenn ein Konto abgelaufen ist (Gruppe / status / privacy Pegeländerung herabstufen den Besucher), kann eine E-Mail-Informationen geschickt, um die Gründe für diese Änderung zu klären und die Mittel, um den ersten Zugriff auf die Galerie zu erholen.
+<br>Um dies zu tun, wird ein Link auf eine Rückbestätigung der Anmeldung an die E-Mail (automatische Generierung eines neuen Bestätigungs-Taste) befestigt.<b style=&quot;color: red;&quot;>Wenn der Benutzer bereits angemeldet ist, wird sein Konto automatisch zerstört.</b> 
+<br><br>
+<b style=&quot;color: red;&quot;>Warnung: Nutzung dieser Funktion ist eng mit der Bestätigung der Anmeldung durch den Benutzer (per Mail) verbunden und kann nicht ohne diese Option aktiviert werden.</b>';
+$lang['UAM_GTAutomail_Subject_d'] = 'Geben Sie hier Ihre individuelle automatische Ghost-Tracker E-Mail Herabstufung unterliegen.<br>
+Standardmäßig hat das Feld einen generischen Text in Deutsch, aber Sie können es ändern, und verwenden Sie die Übersetzung tags [lang =?] von Extended Description Plugin, wenn installiert.
+<br><br>
+Die folgenden zusätzlichen Anpassungen Tags sind ohne die Verwendung der Extended Description Plugin zur Verfügung:<br>
+- <b style=&quot;color: red;&quot;>[username]</b> um automatisch den Namen des Zielbenutzers in der E-Mail.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> um den Titel Ihrer Galerie einzufügen.<br>';
+$lang['UAM_GTAutomail_Text_d'] = 'Geben Sie den Text, die auch eine Erläuterung der Gründe für die Rückstufung, um die Bestätigungs-Link zu begleiten. Der Text ist nicht vorgeschrieben, aber dringend empfohlen. In der Tat werden Ihre Besucher nicht zu schätzen Empfang einer E-Mail mit nur einem einzigen Link ohne weitere Erklärung. ;-)
+<br><br>
+Weitere Anpassung des Inhalts mit speziellen eingefügt tags:<br>
+- <b style=&quot;color: red;&quot;>[username]</b> um automatisch den Namen des Zielbenutzers in der E-Mail.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> um den Titel Ihrer Galerie einzufügen.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> Ihre Galerie-URL einfügen, wenn in den Konfigurationsoptionen Piwigo gesetzt.
+<br><br>
+Um mehrere Sprachen verwenden, können Sie die Extended description  Plugin-Tags, wenn installiert ist.';
+$lang['UAM_GTReminder_Subject_d'] = 'Geben Sie hier Ihre individuelle manuelle Ghost Tracker-Erinnerung per E-Mail Thema.<br>
+Standardmäßig hat das Feld einen generischen Text in Deutsch, aber Sie können es ändern, und verwenden Sie die Übersetzung tags [lang =?] von Extended Description Plugin, wenn installiert.
+<br><br>
+Die folgenden zusätzlichen Anpassungen Tags sind ohne die Verwendung der Extended Description Plugin zur Verfügung:<br>
+- <b style=&quot;color: red;&quot;>[username]</b> um automatisch den Namen des Zielbenutzers in der E-Mail.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> um den Titel Ihrer Galerie einzufügen.<br>';
+$lang['UAM_MailInfo_Subject_d'] = 'Geben Sie hier Ihre individuelle Informationen per E-Mail Thema.<br>
+Standardmäßig hat das Feld einen generischen Text in Deutsch, aber Sie können es ändern, und verwenden Sie die Übersetzung tags [lang =?] von Extended Description Plugin, wenn installiert.
+<br><br>
+Die folgenden zusätzlichen Anpassungen Tags sind ohne die Verwendung der Extended Description Plugin zur Verfügung:<br>
+- <b style=&quot;color: red;&quot;>[username]</b> um automatisch den Namen des Zielbenutzers in der E-Mail.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> um den Titel Ihrer Galerie einzufügen.<br>';
 ?>
