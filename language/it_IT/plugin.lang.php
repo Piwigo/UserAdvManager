@@ -388,4 +388,9 @@ $lang['UAM_Valid_Level'] = 'Livello privacy per gli utenti che hanno confermato 
 $lang['UAM_Webmaster cannot be pwdreset'] = 'Il rinnovo della password non può essere impostato per l\'account webmaster!';
 $lang['UAM_You cannot pwdreset your account'] = 'Il rinnovo della password non può essere impostato per il tuo stesso account!';
 $lang['UAM_You need to confirm pwdreset'] = 'Devi confermare il rinnovo della password (segna la casella)!';
+$lang['UAM_AdminValidationMail_Subject'] = 'Personalizza soggetto della mail di verifica';
+$lang['UAM_ConfirmMail_ReMail_Subject'] = 'Personalizza soggetto della mail di reminder di verifica registrazione';
+$lang['UAM_ConfirmMail_Subject'] = 'Personalizza soggetto della mail di registrazione';
+$lang['UAM_GTAutomail_Subject'] = 'Personalizza soggetto della mail automatica di Ghost Tracker';
+$lang['UAM_GTReminder_Subject'] = 'Personalizza soggetto della mail di reminder di Ghost Tracker';
 ?>
