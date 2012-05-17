@@ -308,5 +308,8 @@ Plugin Name: UserAdvManager
             Bug 2623 fixed - Ability to customize email subjects (confirmation, information and ghostTracker email)
             Bug 2628 fixed - Php notice when email is not mandatory for registration
             Bug 2631 fixed - Piwigo 2.4 compliance : $conf['gallery_url'] replaced by get_gallery_home_url() for [myurl] tag
+
+-- 2.40.1 : Update de_DE translation (thanks to Joergen)
+            Update it_IT translation (thanks to Gdvpixel)
 */
 ?>
