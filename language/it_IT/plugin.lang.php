@@ -393,4 +393,12 @@ $lang['UAM_ConfirmMail_ReMail_Subject'] = 'Personalizza soggetto della mail di r
 $lang['UAM_ConfirmMail_Subject'] = 'Personalizza soggetto della mail di registrazione';
 $lang['UAM_GTAutomail_Subject'] = 'Personalizza soggetto della mail automatica di Ghost Tracker';
 $lang['UAM_GTReminder_Subject'] = 'Personalizza soggetto della mail di reminder di Ghost Tracker';
+$lang['UAM_Default_AdminValidationMail_Subject'] = '[username] - Registrazione confermata su [mygallery]';
+$lang['UAM_Default_ConfirmMail_Remail_Subject'] = 'Reminder - [username] conferma di registrazione su [mygallery]';
+$lang['UAM_Default_ConfirmMail_Subject'] = '[username] registrazione confermata su [mygallery]';
+$lang['UAM_Default_GTAutoMail_Subject'] = '[username] - Il tuo account è stato degradato su [mygallery]';
+$lang['UAM_Default_GTReminder_Subject'] = '[username] - E\' passato molto tempo dalla tua ultima visita su [mygallery]';
+$lang['UAM_Default_InfoMail_Subject'] = '[username] - Le tue informazioni di registrazione su [mygallery]';
+$lang['UAM_GTAutomail_Text'] = 'Personalizza testo mail di degrado';
+$lang['UAM_MailInfo_Subject'] = 'Personalizza soggetto dell\'email informativa';
 ?>
