@@ -311,5 +311,7 @@ Plugin Name: UserAdvManager
 
 -- 2.40.1 : Update de_DE translation (thanks to Joergen)
             Update it_IT translation (thanks to Gdvpixel)
+
+-- 2.40.2 : Update it_IT translation (thanks to Gdvpixel and Ericnet)
 */
 ?>
