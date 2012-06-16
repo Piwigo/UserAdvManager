@@ -53,4 +53,7 @@ $lang['UAM_remailtxt2Title'] = 'Ricorda email senza generazione nuove chiavi';
 $lang['UAM_tipsTitle_d'] = 'Suggerimenti e vari esempi d\'uso';
 $lang['UAM_USRAutoMailTitle_d'] = 'Quando attivata, questa funzione invierà automaticamente agli utenti che corrispondono ai criteri un contenuto personalizzato nelle &quot;email di reminder con la nuova chiave generata&quot;';
 $lang['UAM_HidePasswTitle_d'] = 'Scegli qui se si desidera visualizzare la password scelta da parte del visitatore nella e-mail di informazioni. Se si attiva l\'opzione, la password apparirà in chiaro. Se si disattiva la password non apparirà.';
+$lang['UAM_RedirTitle_d'] = 'Questa opzione reindirizza automaticamente un utente registrato alla sua pagina di personalizzazione solo al primo collegamento alla galleria.<br><br>
+Attenzione: Questa funzione non si applica a tutti gli utenti registrati. Quelli con &quot;admin&quot;, &quot;webmaster&quot; e &quot;generico&quot; stato sono esclusi.';
+$lang['UAM_RejectConnexion_d'] = 'Se attivato, i nuovi utenti registrati che non hanno confermato la loro iscrizione non saranno in grado di connettersi alla galleria.';
 ?>
