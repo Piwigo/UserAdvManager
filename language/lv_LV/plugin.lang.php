@@ -239,4 +239,10 @@ $lang['UAM_PwdReset'] = 'Paroles atjaunošana';
 $lang['UAM_RejectConnexion_Custom_Txt'] = 'Pielāgot noraidījuma tekstu';
 $lang['UAM_RejectConnexion'] = 'Noraidīt lietotāja konekciju, kamēr reģistrācija nav apstiprināta';
 $lang['UAM_Reject_Page_Title'] = 'Konekcija nav atļauta!';
+$lang['UAM_Admins cannot be pwdreset'] = 'Paroles atjaunošanu nevar veikt admins kontam!';
+$lang['UAM_Confirm_Level'] = 'Konfidencialitātes līmenis (atstāt ------- lai paturētu Piwigo pēc noklusējuma)';
+$lang['UAM_Default user cannot be pwgreset'] = 'Paroles atjaunošanu nevar veikt lietotāja pēc noklusējuma kontam!';
+$lang['UAM_Default_AdminValidationMail_Subject'] = '[username] - Reģistrācija validēta [mygallery]';
+$lang['UAM_Default_ConfirmMail_Subject'] = '[username] reģistrācijas apstiprināšana [mygallery]';
+$lang['UAM_Default_GTAutoMail_Subject'] = '[username] - Jūsu konts [mygallery] ir pazemināts';
 ?>
