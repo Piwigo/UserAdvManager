@@ -229,4 +229,14 @@ $lang['UAM_Enable'] = ' Iespējot ';
 // --------- Starting below: New or revised $lang ---- from version 2.30.2
 $lang['UAM_RedirToProfile'] = 'Novirzīt uz pielāgošanas lapu';
 // --------- End: New or revised $lang ---- from version 2.30.2
+$lang['UAM %d user pwdreseted'] = 'Lietotājam %d nepieciešams atjautot paroli';
+$lang['UAM %d users pwdreseted'] = 'Paroles atjaunošana nepieciešama %d lietotājiem';
+$lang['UAM_Password_Reset_Msg'] = 'Lūdzu nomainiet savu paroli';
+$lang['UAM_PwdReset_Done'] = 'Parole atjaunota';
+$lang['UAM_PwdReset_NA'] = 'Oriģinālā parole';
+$lang['UAM_PwdReset_Todo'] = 'Parole jāatjauno';
+$lang['UAM_PwdReset'] = 'Paroles atjaunošana';
+$lang['UAM_RejectConnexion_Custom_Txt'] = 'Pielāgot noraidījuma tekstu';
+$lang['UAM_RejectConnexion'] = 'Noraidīt lietotāja konekciju, kamēr reģistrācija nav apstiprināta';
+$lang['UAM_Reject_Page_Title'] = 'Konekcija nav atļauta!';
 ?>
