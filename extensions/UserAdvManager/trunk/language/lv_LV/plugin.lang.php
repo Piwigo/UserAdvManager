@@ -295,4 +295,8 @@ $lang['UAM_Webmaster cannot be pwdreset'] = 'Paroles atjaunošanu nevar iestatī
 $lang['UAM_You cannot pwdreset your account'] = 'Paroles atjaunošanu nevar iestatīt jūsu paša(as) kontam!';
 $lang['UAM_You need to confirm pwdreset'] = 'Jums jāapstiprina paroles atjaunošana (atzīmēt rūtiņā)!';
 $lang['UAM_title_redir_page'] = 'Piekļuve liegta konta iznīcināšanas dēļ!';
+$lang['UAM_GTAutoGp'] = 'Grupas statusa/konfidencialitātes līmeņa automātiska nomaiņa';
+$lang['UAM_No_Userlist'] = 'Uz doto momentu nav lietotāju ko attēlot ';
+$lang['UAM_No_Valid_Level'] = 'Savu reģistrāciju neapstiprinājošo lietotāju konfidencialitātes līmenis<br>';
+$lang['UAM_Password reset selected users'] = 'Pieprasīt paroles atjaunošanu atlasītajiem lietotājiem';
 ?>
