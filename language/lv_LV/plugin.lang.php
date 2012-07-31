@@ -299,4 +299,14 @@ $lang['UAM_GTAutoGp'] = 'Grupas statusa/konfidencialitātes līmeņa automātisk
 $lang['UAM_No_Userlist'] = 'Uz doto momentu nav lietotāju ko attēlot ';
 $lang['UAM_No_Valid_Level'] = 'Savu reģistrāciju neapstiprinājošo lietotāju konfidencialitātes līmenis<br>';
 $lang['UAM_Password reset selected users'] = 'Pieprasīt paroles atjaunošanu atlasītajiem lietotājiem';
+$lang['UAM_Tips2'] = 'Informācija par neapstiprinātu reģistrāciju ar UAM un Additional Pages (papildu lapas)';
+$lang['UAM_Tips1'] = 'Informācija par neapstiprinātu reģistrāciju ar UAM un PWG_Stuffs';
+$lang['UAM_USRAutoDel'] = 'Pielāgotais ziņojums par dzēsto kontu';
+$lang['UAM_USRAuto'] = 'Neapstiprināto lietotāju automātiskā pārvaildība';
+$lang['UAM_GTReminder_Subject'] = 'Pielāgot manuālā Ghost Tracker (Spoku Izsekotāja) atgādinājuma e-pasta tēmu';
+$lang['UAM_Restoration_OK'] = 'Jūsu konfigurācijas atjaunošana pabeigta sekmīgi! Lai redzētu atjaunotos iestatījumus, lūdzu ielādējiet no jauna UAM administrēšanas lapu.';
+$lang['UAM_GTAutomail_Subject'] = 'Pielāgot automātiskā Ghost Tracker (Spoku Izsekotāja) pazemināšanas e-pasta tēmu ';
+$lang['UAM_Restoration_NOK'] = 'Atjaunojot konfigurāciju, notikusi kļūda. Lūdzu pārbaudiet sava rezerves kopijas faila derīgumu. ';
+$lang['UAM_MailExclusion_No'] = 'Izslēgtie E-pasta domēni - Nav pieejami, jo šie e-pasti reģistrācijai nav atļauti!';
+$lang['UAM_Default_InfoMail_Txt'] = 'Esat veicis(kusi) būtiskas izmaiņas savā profilā galerijā [mygallery]. Lūdzu, skatiet zemāk savus jaunos iestatījumus:';
 ?>
