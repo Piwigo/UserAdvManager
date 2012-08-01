@@ -309,4 +309,17 @@ $lang['UAM_GTAutomail_Subject'] = 'Pielāgot automātiskā Ghost Tracker (Spoku 
 $lang['UAM_Restoration_NOK'] = 'Atjaunojot konfigurāciju, notikusi kļūda. Lūdzu pārbaudiet sava rezerves kopijas faila derīgumu. ';
 $lang['UAM_MailExclusion_No'] = 'Izslēgtie E-pasta domēni - Nav pieejami, jo šie e-pasti reģistrācijai nav atļauti!';
 $lang['UAM_Default_InfoMail_Txt'] = 'Esat veicis(kusi) būtiskas izmaiņas savā profilā galerijā [mygallery]. Lūdzu, skatiet zemāk savus jaunos iestatījumus:';
+$lang['UAM_Restore'] = 'Lai atjaunotu jūsu konfigurācijas rezerves kopijas failu. Vērā tiek ņemts tikai uz servera saglabātais fails.
+<br><br>
+<b style="color: red;">Pievērsiet uzmanību rezerves kopijas versijai!<br>Rezerves kopija, kas izveidota ar vienas versijas spraudni, var tikt atjaunota tikai uz to pašu versiju.</b>';
+$lang['UAM_Default_ConfirmMail_Txt'] = 'Sveiki [lietotājvārds]! Paldies, ka  esat reģistrējies [mygallery].
+
+Lai pabeigtu procesu un gūtu iespēju pārlūkot attēlus, laipni lūdzam apstiprināt savu reģistrāciju, noklikšķinot uz saites šajā ziņojumā.';
+$lang['UAM_Expired_Group'] = '<b> Grupas </ b> lietotāja reģistrācijas termiņš ir beidzies <br>';
+$lang['UAM_GTAutoMail'] = 'Automātiska e-pasta nosūtīšana, mainot grupu / statusu/ konfidencialitātes līmeni';
+$lang['UAM_Default_RejectConnexion_Txt'] = 'Atvainojiet, bet jūs vēl neesat apstiprinājis(usi) savu reģistrāciju un tādēļ vēl nevarat pieslēgties galerijai. Lūdzu pārbaudiet savu e-pastu. Tur būtu jābūt no galerijas atsūtītai vēstulei, saturošai saiti uz reģistrācijas apstiprināšanu. Pretējā gadījumā, ja nav, sazinieties ar vebmāsteru. ';
+$lang['UAM_Default_GhstDeletion_Txt'] = 'Atvainojiet [lietotājvārds], jūsu konts ir izdzēsts, jo pagājis pārāk ilgs laiks kopš Jūsu pēdējā apmeklējuma [mygallery]. Lūdzu reģistrējieties vēlreiz.';
+$lang['UAM_Default_AdminValidation_Txt'] = 'Sveiki [username]! Paldies par reģistrēšanos un laipni lūgti galerijā [mygallery].
+
+Jūsu kontu manuāli ir apstiprinājis galerijas  [mygallery] vebmāsters. Tagad varat pieteikties kontā [myurl] un veikt nepieciešamās izmaiņas savā profilā. ';
 ?>
