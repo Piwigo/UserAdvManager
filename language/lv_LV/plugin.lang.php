@@ -322,4 +322,6 @@ $lang['UAM_Default_GhstDeletion_Txt'] = 'Atvainojiet [lietotājvārds], jūsu ko
 $lang['UAM_Default_AdminValidation_Txt'] = 'Sveiki [username]! Paldies par reģistrēšanos un laipni lūgti galerijā [mygallery].
 
 Jūsu kontu manuāli ir apstiprinājis galerijas  [mygallery] vebmāsters. Tagad varat pieteikties kontā [myurl] un veikt nepieciešamās izmaiņas savā profilā. ';
+$lang['UAM_Error_Using_illegal_flag'] = 'Sintakses kļūda! [Kdays] Automātiskā Teksts karodziņš tiek lietots kā "reģistrācijas termiņa apstiprināšanas limita robeža"- opcija nav aktivēta. Lūdzu, aktivējiet opciju vai izlabojiet sarkanā krāsā iekrāsotos teksta laukus.';
+$lang['UAM_Error_Using_illegal_Kdays'] = '[Kdays] tega (birka) izmantošana tiek atļauta tikai tad, ja ir aktīva reģistrācijas apstiprināšanas limita robeža. Atsaukties uz teksta lauku sarkanā krāsā, lai novērstu problēmu.';
 ?>
