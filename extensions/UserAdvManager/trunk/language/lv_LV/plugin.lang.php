@@ -324,4 +324,14 @@ $lang['UAM_Default_AdminValidation_Txt'] = 'Sveiki [username]! Paldies par reģi
 Jūsu kontu manuāli ir apstiprinājis galerijas  [mygallery] vebmāsters. Tagad varat pieteikties kontā [myurl] un veikt nepieciešamās izmaiņas savā profilā. ';
 $lang['UAM_Error_Using_illegal_flag'] = 'Sintakses kļūda! [Kdays] Automātiskā Teksts karodziņš tiek lietots kā "reģistrācijas termiņa apstiprināšanas limita robeža"- opcija nav aktivēta. Lūdzu, aktivējiet opciju vai izlabojiet sarkanā krāsā iekrāsotos teksta laukus.';
 $lang['UAM_Error_Using_illegal_Kdays'] = '[Kdays] tega (birka) izmantošana tiek atļauta tikai tad, ja ir aktīva reģistrācijas apstiprināšanas limita robeža. Atsaukties uz teksta lauku sarkanā krāsā, lai novērstu problēmu.';
+$lang['UAM_Default_CfmMail_Remail_Txt2'] = 'Sveiki [username].
+
+Šis ir atgādinājums, jo esat reģistrējies mūsu galerijā [mygallery], bet neesat apstiprinājis savu reģistrāciju un jūsu  apstiprinājuma atslēgas termiņš drīz beigsies.Lai ļautu piekļūt mūsu galerijai, jums ir x dienas, lai apstiprinātu savu reģistrāciju, ejot pa saiti, ko jums bija jāsaņem, kad reģistrējāties.
+
+Piezīme: Pēc šī perioda, jūsu konts tiks neatgriezeniski izdzēsts.';
+$lang['UAM_Default_CfmMail_Remail_Txt1'] = 'Sveiki [username].
+
+Šis ir atgādinājums, jo esat reģistrējies mūsu galerijā [mygallery], bet neesat apstiprinājis savu reģistrāciju un jūsu  apstiprinājuma atslēgas termiņš ir beidzies. Lai joprojām ļautu piekļūt mūsu galerijai, jūsu apstiprinājumu periods ir atjaunots. Jums ir atkal x dienas, lai apstiprinātu savu reģistrāciju.
+
+Piezīme: Pēc šī perioda, jūsu konts tiks neatgriezeniski izdzēsts.';
 ?>
