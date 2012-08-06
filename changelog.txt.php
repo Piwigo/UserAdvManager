@@ -313,5 +313,11 @@ Plugin Name: UserAdvManager
             Update it_IT translation (thanks to Gdvpixel)
 
 -- 2.40.2 : Update it_IT translation (thanks to Gdvpixel and Ericnet)
+
+-- 2.40.3 : Update it_IT, thanks to : Ericnet
+            Update hu_HU, thanks to : samli
+            Update es_ES, thanks to : jpr928
+            Update lv_LV, thanks to : agrisans
+            Update el_GR, thanks to : bas_alba
 */
 ?>

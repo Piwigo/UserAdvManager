@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: UserAdvManager
-Version: 2.40.2
+Version: 2.40.3
 Description: Renforcer la gestion des utilisateurs - Enforce users management
 Plugin URI: http://piwigo.org/ext/extension_view.php?eid=216
 Author: Nicco, Eric
