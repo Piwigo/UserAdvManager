@@ -159,4 +159,14 @@ $lang['UAM_MailExclusion'] = 'Τομείς αποκλεισμού για Email '
 $lang['UAM_Link: %s'] = 'Παρακαλώ, κάντε κλικ στο σύνδεσμο για να επιβεβαιώσετε την εγγραφή σας: %s';
 $lang['UAM_LastVisit_Date'] = 'Τελευταία επίσκεψη';
 $lang['UAM_HidePassw'] = 'Κωδικός πρόσβασης σε μορφή απλού κειμένου στο e-mail πληροφόρησης';
+$lang['UAM_No_reminder_for_default_user'] = 'Ο Προεπιλεγμένος λογαριασμός δεν είναι αντικείμενο για να λαμβάνετε υπενθυμίσεις από το GhostTracker';
+$lang['UAM_No_validation_for_your_account'] = 'Ο λογαριασμός διαχειριστή δεν υπόκειται σε επιβεβαίωση';
+$lang['UAM_No_validation_for_default_user'] = 'Ο Προεπιλεγμένος λογαριασμός δεν υπόκειται σε επιβεβαίωση';
+$lang['UAM_No_reminder_for_your_account'] = 'Ο λογαριασμός διαχειριστή δεν είναι αντικείμενο για να λαμβάνετε υπενθυμίσεις από το GhostTracker';
+$lang['UAM_No_validation_for_Webmaster'] = 'Ο λογαριασμός "Webmaster" δεν υπόκειται σε επιβεβαίωση';
+$lang['UAM_No_validation_for_Guest'] = 'Ο λογαριασμός "Επισκέπτης" δεν υπόκειται σε επιβεβαίωση';
+$lang['UAM_No_reminder_for_Webmaster'] = 'Ο λογαριασμός "Webmaster" δεν είναι αντικείμενο για να λαμβάνετε υπενθυμίσεις από το GhostTracker';
+$lang['UAM_No_reminder_for_Guest'] = 'Ο λογαριασμός "Επισκέπτης" δεν είναι αντικείμενο για να λαμβάνετε υπενθυμίσεις από το GhostTracker';
+$lang['UAM_No_Valid_Level'] = 'Επίπεδο προστασίας για τους χρήστες που δεν έχουν επιβεβαιώσει την εγγραφή τους<br>';
+$lang['UAM_No_Usermanager'] = 'Οι ανεπιβεβαίωτοι χρήστες δεν καταγράφονται στη λίστα προς το παρόν';
 ?>
