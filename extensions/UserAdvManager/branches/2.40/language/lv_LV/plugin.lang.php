@@ -229,4 +229,109 @@ $lang['UAM_Enable'] = ' Iespējot ';
 // --------- Starting below: New or revised $lang ---- from version 2.30.2
 $lang['UAM_RedirToProfile'] = 'Novirzīt uz pielāgošanas lapu';
 // --------- End: New or revised $lang ---- from version 2.30.2
+$lang['UAM %d user pwdreseted'] = 'Lietotājam %d nepieciešams atjautot paroli';
+$lang['UAM %d users pwdreseted'] = 'Paroles atjaunošana nepieciešama %d lietotājiem';
+$lang['UAM_Password_Reset_Msg'] = 'Lūdzu nomainiet savu paroli';
+$lang['UAM_PwdReset_Done'] = 'Parole atjaunota';
+$lang['UAM_PwdReset_NA'] = 'Oriģinālā parole';
+$lang['UAM_PwdReset_Todo'] = 'Parole jāatjauno';
+$lang['UAM_PwdReset'] = 'Paroles atjaunošana';
+$lang['UAM_RejectConnexion_Custom_Txt'] = 'Pielāgot noraidījuma tekstu';
+$lang['UAM_RejectConnexion'] = 'Noraidīt lietotāja konekciju, kamēr reģistrācija nav apstiprināta';
+$lang['UAM_Reject_Page_Title'] = 'Konekcija nav atļauta!';
+$lang['UAM_Admins cannot be pwdreset'] = 'Paroles atjaunošanu nevar veikt admins kontam!';
+$lang['UAM_Confirm_Level'] = 'Konfidencialitātes līmenis (atstāt ------- lai paturētu Piwigo pēc noklusējuma)';
+$lang['UAM_Default user cannot be pwgreset'] = 'Paroles atjaunošanu nevar veikt lietotāja pēc noklusējuma kontam!';
+$lang['UAM_Default_AdminValidationMail_Subject'] = '[username] - Reģistrācija validēta [mygallery]';
+$lang['UAM_Default_ConfirmMail_Subject'] = '[username] reģistrācijas apstiprināšana [mygallery]';
+$lang['UAM_Default_GTAutoMail_Subject'] = '[username] - Jūsu konts [mygallery] ir pazemināts';
+$lang['UAM_AdminValidationMail_Subject'] = 'Pielāgot manuālās reģistrācijas e-pasta tematu';
+$lang['UAM_AdminValidationMail_Text'] = 'Paziņojums par reģistrācijas manuālo apstiprinājumu';
+$lang['UAM_ConfirmMail_ReMail_Subject'] = 'Pielāgot reģistrācijas apstiprinājuma atgādinājuma e-pasta tematu';
+$lang['UAM_ConfirmMail_Subject'] = 'Pielāgot reģistrācijas apstiprinājuma e-pasta tematu';
+$lang['UAM_CustomPasswRetr'] = 'Pielāgot zaudētās paroles e-pasta saturu';
+$lang['UAM_Default_CfmMail_Custom_Txt1'] = 'Sveicināti [username]! Ir apstiprinājies, ka esat saprātīga būtne un tagad varat izmantot [mygallery]!';
+$lang['UAM_Default_CfmMail_Custom_Txt2'] = 'Jūsu aktivācijas atslēga ir nekorekta vai novecojusi vai jūsu konts jau ir apstiprināts, lūdzu sazinieties ar webmasteru, lai atrisinātu šo preoblēmu.';
+$lang['UAM_Default_ConfirmMail_Remail_Subject'] = 'Atgādinājums - [username] reģistrācijas apstiprināšana galerijā [mygallery]';
+$lang['UAM_Default_GTReminder_Subject'] = '[username] - Pagājis ilgs laiks kopš pēdējo reizi apmeklēta galerija [mygallery]';
+$lang['UAM_Deleted_Account_Redirection_Page'] = 'Piekļuve liegta - Konts iznīcināts!';
+$lang['UAM_Demotion of %s'] = '%s pazemināšana';
+$lang['UAM_DumpTxt'] = 'Izveidot jūsu configurācijas rezerves kopiju un atjaunot konfigurāciju';
+$lang['UAM_Dump_Download'] = 'Lai lejupielādētu rezerves kopijas failu, veiciet atzīmi šajā lodziņā.';
+$lang['UAM_Dump_NOK'] = 'Kļūda: Nav iespējams izveidot rezerves kopijas failu!';
+$lang['UAM_Dump_OK'] = 'Rezerves kopijas fails sekmīgi izveidots';
+$lang['UAM_Expired_Level'] = '<b> Privātums līmenis </ b> lietotāja reģistrācijai ir beidzies <br>';
+$lang['UAM_Expired_Status'] = 'Lietotāju reģistrācijas <b>Status</b> ir novecojis<br>';
+$lang['UAM_GTAutoDel'] = 'Kontu automātiskā dzēšana';
+$lang['UAM_GTAuto'] = 'Automātiska slēpto lietotāju pārvaldība';
+$lang['UAM_Bad_version_backup'] = 'Šī rezerves kopijas versija nesakrīt ar spraudņa versiju! Atjaunošana netika veikta.';
+$lang['UAM_Default_GhstDemotion_Txt'] = 'Atvainojiet [username], jūsu konts novecojis, jo pagājis pārāk ilgs laiks kopš jūsu pēdējā [mygallery] apmeklējuma. Lūdzu, izmantojiet šo saiti, lai atkārtoti apstiprinātu savu kontu:
+   ';
+$lang['UAM_Default_InfoMail_Subject'] = '[username] - Jūsu reģistrācijas informācija galerijai [mygallery]';
+$lang['UAM_Default_PwdRequest_Txt'] = 'Jūs esat pieprasijis(usi) mūsu galerijas paroles atjaunošanu. Lūdzu, zemāk skatiet jūsu jaunos savienojuma iestatījumus.';
+$lang['UAM_Default_ValidationTimeout_Txt'] = 'Atvainojiet, jūsu konts ir dzēsts, jo neesat apstiprinājis(usi) reģistrāciju paredzētajā laikā - ([Kdays] days). Lūdzu, atkārtojiet reģistrāciju, izmantojot derīgu, nebloķētu e-pasta kontu.';
+$lang['UAM_GTAutomail_Text'] = 'Pielāgot pazemināšanas e-pasta tekstu';
+$lang['UAM_Generic cannot be pwdreset'] = 'Vispārējiem kontiem nevar iestatīt paroles atjaunošanu!';
+$lang['UAM_Guest cannot be pwdreset'] = 'Paroles atjaunošanu nevar iestatīt viesu kontam!';
+$lang['UAM_HidePassw'] = 'Parole skaidrā teksta informācijas e-pastā';
+$lang['UAM_MailInfo_Subject'] = 'Pielāgot informācijas e-pasta tematu';
+$lang['UAM_MiscOptions'] = 'Dažādi citi varianti (opcijas)';
+$lang['UAM_NewFeature'] = 'Jauna iespēja!';
+$lang['UAM_No_Backup_File'] = 'Nav pieejamas rezerves kopijas!';
+$lang['UAM_No_Ghosts'] = 'Uz doto brīdi nav slepeno apmeklētāju';
+$lang['UAM_No_Usermanager'] = 'Uz doto momentu nav neapstiprinātu reģistru, ko rādīt';
+$lang['UAM_Restore_File'] = 'Atjaunošanas Konfigurācija';
+$lang['UAM_Save'] = 'Uzsākt rezerves kopijas veidošanu';
+$lang['UAM_Stuffs_Desc'] = 'Pievieno informācijas bloku priekš neapstiprinātiem lietotājiem';
+$lang['UAM_Stuffs_Title'] = 'UAM bloks';
+$lang['UAM_Stuffs'] = 'PWG Personāla bloks';
+$lang['UAM_Title5'] = 'Dažādi varianti';
+$lang['UAM_Tracking confirmations'] = 'Izsekošanas apstiprinājumi';
+$lang['UAM_Tracking registered users'] = 'Izsekot reģistrētos lietorājus';
+$lang['UAM_USRAutoMail'] = 'Automātisks e-pasta atgādinātājs';
+$lang['UAM_Valid_Level'] = 'Konfidencialitātes līmenis lietotājiem, kuri ir apliecinājuši savu reģistrāciju <br>';
+$lang['UAM_Validation of %s'] = '%s apstiprinājums ';
+$lang['UAM_Webmaster cannot be pwdreset'] = 'Paroles atjaunošanu nevar iestatīt webmastera kontam!';
+$lang['UAM_You cannot pwdreset your account'] = 'Paroles atjaunošanu nevar iestatīt jūsu paša(as) kontam!';
+$lang['UAM_You need to confirm pwdreset'] = 'Jums jāapstiprina paroles atjaunošana (atzīmēt rūtiņā)!';
+$lang['UAM_title_redir_page'] = 'Piekļuve liegta konta iznīcināšanas dēļ!';
+$lang['UAM_GTAutoGp'] = 'Grupas statusa/konfidencialitātes līmeņa automātiska nomaiņa';
+$lang['UAM_No_Userlist'] = 'Uz doto momentu nav lietotāju ko attēlot ';
+$lang['UAM_No_Valid_Level'] = 'Savu reģistrāciju neapstiprinājošo lietotāju konfidencialitātes līmenis<br>';
+$lang['UAM_Password reset selected users'] = 'Pieprasīt paroles atjaunošanu atlasītajiem lietotājiem';
+$lang['UAM_Tips2'] = 'Informācija par neapstiprinātu reģistrāciju ar UAM un Additional Pages (papildu lapas)';
+$lang['UAM_Tips1'] = 'Informācija par neapstiprinātu reģistrāciju ar UAM un PWG_Stuffs';
+$lang['UAM_USRAutoDel'] = 'Pielāgotais ziņojums par dzēsto kontu';
+$lang['UAM_USRAuto'] = 'Neapstiprināto lietotāju automātiskā pārvaildība';
+$lang['UAM_GTReminder_Subject'] = 'Pielāgot manuālā Ghost Tracker (Spoku Izsekotāja) atgādinājuma e-pasta tēmu';
+$lang['UAM_Restoration_OK'] = 'Jūsu konfigurācijas atjaunošana pabeigta sekmīgi! Lai redzētu atjaunotos iestatījumus, lūdzu ielādējiet no jauna UAM administrēšanas lapu.';
+$lang['UAM_GTAutomail_Subject'] = 'Pielāgot automātiskā Ghost Tracker (Spoku Izsekotāja) pazemināšanas e-pasta tēmu ';
+$lang['UAM_Restoration_NOK'] = 'Atjaunojot konfigurāciju, notikusi kļūda. Lūdzu pārbaudiet sava rezerves kopijas faila derīgumu. ';
+$lang['UAM_MailExclusion_No'] = 'Izslēgtie E-pasta domēni - Nav pieejami, jo šie e-pasti reģistrācijai nav atļauti!';
+$lang['UAM_Default_InfoMail_Txt'] = 'Esat veicis(kusi) būtiskas izmaiņas savā profilā galerijā [mygallery]. Lūdzu, skatiet zemāk savus jaunos iestatījumus:';
+$lang['UAM_Restore'] = 'Lai atjaunotu jūsu konfigurācijas rezerves kopijas failu. Vērā tiek ņemts tikai uz servera saglabātais fails.
+<br><br>
+<b style="color: red;">Pievērsiet uzmanību rezerves kopijas versijai!<br>Rezerves kopija, kas izveidota ar vienas versijas spraudni, var tikt atjaunota tikai uz to pašu versiju.</b>';
+$lang['UAM_Default_ConfirmMail_Txt'] = 'Sveiki [lietotājvārds]! Paldies, ka  esat reģistrējies [mygallery].
+
+Lai pabeigtu procesu un gūtu iespēju pārlūkot attēlus, laipni lūdzam apstiprināt savu reģistrāciju, noklikšķinot uz saites šajā ziņojumā.';
+$lang['UAM_Expired_Group'] = '<b> Grupas </ b> lietotāja reģistrācijas termiņš ir beidzies <br>';
+$lang['UAM_GTAutoMail'] = 'Automātiska e-pasta nosūtīšana, mainot grupu / statusu/ konfidencialitātes līmeni';
+$lang['UAM_Default_RejectConnexion_Txt'] = 'Atvainojiet, bet jūs vēl neesat apstiprinājis(usi) savu reģistrāciju un tādēļ vēl nevarat pieslēgties galerijai. Lūdzu pārbaudiet savu e-pastu. Tur būtu jābūt no galerijas atsūtītai vēstulei, saturošai saiti uz reģistrācijas apstiprināšanu. Pretējā gadījumā, ja nav, sazinieties ar vebmāsteru. ';
+$lang['UAM_Default_GhstDeletion_Txt'] = 'Atvainojiet [lietotājvārds], jūsu konts ir izdzēsts, jo pagājis pārāk ilgs laiks kopš Jūsu pēdējā apmeklējuma [mygallery]. Lūdzu reģistrējieties vēlreiz.';
+$lang['UAM_Default_AdminValidation_Txt'] = 'Sveiki [username]! Paldies par reģistrēšanos un laipni lūgti galerijā [mygallery].
+
+Jūsu kontu manuāli ir apstiprinājis galerijas  [mygallery] vebmāsters. Tagad varat pieteikties kontā [myurl] un veikt nepieciešamās izmaiņas savā profilā. ';
+$lang['UAM_Error_Using_illegal_flag'] = 'Sintakses kļūda! [Kdays] Automātiskā Teksts karodziņš tiek lietots kā "reģistrācijas termiņa apstiprināšanas limita robeža"- opcija nav aktivēta. Lūdzu, aktivējiet opciju vai izlabojiet sarkanā krāsā iekrāsotos teksta laukus.';
+$lang['UAM_Error_Using_illegal_Kdays'] = '[Kdays] tega (birka) izmantošana tiek atļauta tikai tad, ja ir aktīva reģistrācijas apstiprināšanas limita robeža. Atsaukties uz teksta lauku sarkanā krāsā, lai novērstu problēmu.';
+$lang['UAM_Default_CfmMail_Remail_Txt2'] = 'Sveiki [username].
+
+Šis ir atgādinājums, jo esat reģistrējies mūsu galerijā [mygallery], bet neesat apstiprinājis savu reģistrāciju un jūsu  apstiprinājuma atslēgas termiņš drīz beigsies.Lai ļautu piekļūt mūsu galerijai, jums ir x dienas, lai apstiprinātu savu reģistrāciju, ejot pa saiti, ko jums bija jāsaņem, kad reģistrējāties.
+
+Piezīme: Pēc šī perioda, jūsu konts tiks neatgriezeniski izdzēsts.';
+$lang['UAM_Default_CfmMail_Remail_Txt1'] = 'Sveiki [username].
+
+Šis ir atgādinājums, jo esat reģistrējies mūsu galerijā [mygallery], bet neesat apstiprinājis savu reģistrāciju un jūsu  apstiprinājuma atslēgas termiņš ir beidzies. Lai joprojām ļautu piekļūt mūsu galerijai, jūsu apstiprinājumu periods ir atjaunots. Jums ir atkal x dienas, lai apstiprinātu savu reģistrāciju.
+
+Piezīme: Pēc šī perioda, jūsu konts tiks neatgriezeniski izdzēsts.';
 ?>
