@@ -155,8 +155,7 @@ $lang['UAM_Err_Userlist_Settings'] = 'Šī lapa ir pieejama tikai, ja "Monitorin
 
 // --------- Starting below: New or revised $lang ---- from version 2.14.0
 $lang['UAM_AdminConfMail'] = 'Reģistrācijas apstiprināšana administratoriem';
-$lang['UAM_Tips1_txt'] = '
-<ul>
+$lang['UAM_Tips1_txt'] = '<ul>
 <li>
              Mērķi:<br>
              - Pēc viņa ienākšanas galerijā: Informēt apmeklētāju, ka viņam jāpiereģistrējas, lai tiktu pie privātiem fotoattēliem<br>
@@ -343,4 +342,52 @@ Ja saņemsit šo ziņu un [days] dienu laikā nebūs apmeklējumu, mēs būsim s
 Vēlot to vislabāko,
 
 Galerijas [mygallery] - [myurl] administrators.';
+$lang['UAM_Tips2_txt'] = '<ul>
+<li>
+Mērķi: Informēt apmeklētājus ka tiek gaidīta reģistrācijas apstiprināšana, nosūtot papildu lapu, aizstājot galerijas standarta indeksa lapu katrā no šiem savienojumiem, un šo, ja reģistrācija netiek apstiprināta.
+<br><br>
+Priekšrocības pār metodi ar PWG_Stuffs: Atļaut formatēt informāciju un ļauj attēlot informāciju tūlīt pēc apmeklētāju reģistrācijas. 
+</li><br><br>
+<li>
+Priekšnosacījums:<br>
+- Galerija ar visām vai dažām privātajām kategorijām, redzama tikai reģistrētiem lietotājiem<br>
+- - Vismaz 2 sekojošas Piwigo lietotāju grupas: "Gaidošie," bez atļaujas attiecībā uz privātām kategorijām, un "Apstiprinātie" ar visām atļaijām uz privātām kategorijām<br>
+- UAM spraudnis<br>
+- Papildu Lapas spraudnis priekš papildu lapas pievienošanas un pārvaldīšanas, lai aizstātu galerijas noklusējuma indeksa lappusi<br>
+- Kā opcija, spraudnis Paplašinātais Apraksts {Extended Description}, lai atbalstītu multi-valodas<br> 
+</li><br><br>
+<li>
+Posmi: <br><br>
+ A.spraudnī UAM:
+               <ol>
+               <li>Iespējot reģistrācijas apstiprināšanu</li>
+               <li> Ievadiet tekstu papildu paskaidrojumam, kas tiks pievienots reģistrācijas apstiprinājuma e-pastam. Ja spraudnis Paplašinātais Apraksts tiek aktivizēts, var lietot valodas tagus</li>
+               <li>Izvēlieties grupu "Gaidošie" zem "Lietotājiem, kuri nav apstiprinājuši savu reģistrāciju"</li>
+               <li>Izvēlieties grupu "Apstiprinātie" zem "Lietotājiem, kuri apliecinājuši savu reģistrāciju"</li>
+               <li>Saglabāt spraudnis konfigurācija</li>
+               </ol>
+<br>
+B. spraudnī Papildus Lapas: <br>
+      <b>PIEZĪME: Pārvaldībai par piekļuves tiesībām grupām uz Papildus lapām jābūt ieslēgtai (skatīt spraudņa konfigurācijas uzstādījumus).</b>
+              <br>
+              <ol>
+              <li>Pievienot jaunu lapu ar vismaz šādiem parametriem:</li>
+              <ul>
+              <li>Lapas nosaukums: Nosaukums, kuru vēlaties piešķirt papildu lapai (ti: Reģistrācija nav apstiprināta)</li>
+              <li>Uzstādīt kā sākumlapu pārbaudītu</li>
+              <li>Atļautas Grupas: Atzīmējiet lodziņu, kas atbilst grupai "Gaidošie" konfigurētam UAM</li>
+              <li>Saturs: Teksts, kuru vēlaties izmantot apmeklētājiem.</li>
+              </ul>
+               <br>
+               <li>Un tas arī viss! Tikai reģistrētie apmeklētāji un kuru reģistrācija nav apstiprināta redzēs šo papildus indeksa lapu. </li>
+               </ol>
+             </li>
+           </ul>';
+$lang['UAM_Error_GTAutoMail_cannot_be_set_without_ConfirmMail'] = 'Konsekvences kļūda izvēlētajā konfigurācijā:
+<br><br>
+"Iestatot reģistrēto lietotāju monitoringu un citus opcijas > Spoku apmeklētāju pārvaldība (Ghost Tracker) > Spoku lietotāju automātiskā pārvaldība > Automātisko e-pasta izsūtīšanu, kad tiek mainīta grupa/statuss" nevar aktivēt, ja "Iestatot reģistrācijas apstiprināšanu > Reģistrācijas apstiprināšana - Lietotāja apstiprināšana" nav iespējota.
+<br><br>
+Lai nodrošinātu konsekvenci, opcija "Automātiskā e-pasta izsūtīšana, mainot grupu/statusu" tika automātiski pārlikta uz "atspējotu".
+ <br>
+';
 ?>
