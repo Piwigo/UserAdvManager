@@ -334,4 +334,13 @@ $lang['UAM_Default_CfmMail_Remail_Txt1'] = 'Sveiki [username].
 Šis ir atgādinājums, jo esat reģistrējies mūsu galerijā [mygallery], bet neesat apstiprinājis savu reģistrāciju un jūsu  apstiprinājuma atslēgas termiņš ir beidzies. Lai joprojām ļautu piekļūt mūsu galerijai, jūsu apstiprinājumu periods ir atjaunots. Jums ir atkal x dienas, lai apstiprinātu savu reģistrāciju.
 
 Piezīme: Pēc šī perioda, jūsu konts tiks neatgriezeniski izdzēsts.';
+$lang['UAM_Default_GhstReminder_Txt'] = 'Sveiki [username].
+
+Šis ir atgādinājums, jo pagājis ļoti ilgs laiks kopš Jūsu pēdējā mūsu galerijas [mygallery] apmeklējuma. Ja vairs nevēlaties zmantot savu piekļuves kontu, lūdzu, dariet mums to zināmu, atbildot uz šo e-pastu. Jūsu konts tiks izdzēsts.
+
+Ja saņemsit šo ziņu un [days] dienu laikā nebūs apmeklējumu, mēs būsim spiesti automātiski izdzēst jūsu kontu.
+
+Vēlot to vislabāko,
+
+Galerijas [mygallery] - [myurl] administrators.';
 ?>
