@@ -426,9 +426,9 @@ $lang['UAM_Default_AdminValidationMail_Subject'] = '[username] - Inscription val
 // --------- End: New or revised $lang ---- from version 2.40
 
 
-// --------- Starting below: New or revised $lang ---- from version 2.40.4
+// --------- Starting below: New or revised $lang ---- from version 2.40.4 and 2.30.7
 $lang['UAM_mail_exclusion_error'] = 'L\'option de Piwigo "L\'adresse mail est obligatoire pour tous les utilisateurs" a été désactivée alors que l\'option du plugin UserAdvancedManager (UAM) "Exclusion des domaines de messagerie" est resté active. Cette combinaison est illogique et non compatible!<br><br>
 Veuillez réactivez l\'option de Piwigo "L\'adresse mail est obligatoire pour tous les utilisateurs" pour pouvoir désactiver ensuite l\'option UAM "Exclusion des domaines de messagerie" si c\'est ce que vous souhaitez.<br><br>
 Note : Ce message disparaitra après que vous ayez effectué la correction nécessaire et rechargé la page d\'administration.<br><br>';
-// --------- End: New or revised $lang ---- from version 2.40.4
+// --------- End: New or revised $lang ---- from version 2.40.4 and 2.30.7
 ?>
