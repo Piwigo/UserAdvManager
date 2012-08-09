@@ -247,9 +247,9 @@ $lang['UAM_PwdReset_NA'] = 'Mot de passe original';
 $lang['UAM %d user pwdreseted'] = 'Renouvellement de mot de passe demandé pour %d utilisateur';
 $lang['UAM %d users pwdreseted'] = 'Renouvellement de mot de passe demandé pour %d utilisateurs';
 $lang['UAM_Error_Using_illegal_Kdays'] = 'L\'utilisation de la balise [Kdays] n\'est autorisée que si la limitation du délai de confirmation d\'inscription est active. Reportez vous au champ de texte en rouge pour corriger le problème.';
-$lang['UAM_Default_InfoMail_Txt'] = 'Bonjour [username] et merci de vous être inscrit sur la galerie [mygallery].
+$lang['UAM_Default_InfoMail_Txt'] = 'Bonjour [username]!
 
-Vous trouverez ci-dessous vos informations de connexion sur la galerie.';
+Vous avez effectué des modifications importantes de profil sur la galerie [mygallery]. Voici vos nouveaux paramètres :';
 $lang['UAM_Default_GhstReminder_Txt'] = 'Bonjour [username].
 	
 Ceci est un message de rappel car cela fait longtemps que vous n\'êtes pas revenu visiter la galerie [mygallery]. Si vous ne souhaitez plus utiliser votre compte d\'accès, merci de bien vouloir nous le faire savoir en répondant à ce message. Votre compte sera alors immédiatement détruit.
@@ -407,4 +407,11 @@ $lang['UAM_Default_RejectConnexion_Txt'] = 'Désolé, vous n\'avez pas encore co
 $lang['UAM_Tracking registered users'] = 'Suivi des utilisateurs inscrits';
 $lang['UAM_Tracking confirmations'] = 'Suivi des confirmations';
 // --------- End: New or revised $lang ---- from version 2.30.3
+
+
+// --------- Starting below: New or revised $lang ---- from version 2.40.4 and 2.30.7
+$lang['UAM_mail_exclusion_error'] = 'L\'option de Piwigo "L\'adresse mail est obligatoire pour tous les utilisateurs" a été désactivée alors que l\'option du plugin UserAdvancedManager (UAM) "Exclusion des domaines de messagerie" est resté active. Cette combinaison est illogique et non compatible!<br><br>
+Veuillez réactivez l\'option de Piwigo "L\'adresse mail est obligatoire pour tous les utilisateurs" pour pouvoir désactiver ensuite l\'option UAM "Exclusion des domaines de messagerie" si c\'est ce que vous souhaitez.<br><br>
+Note : Ce message disparaitra après que vous ayez effectué la correction nécessaire et rechargé la page d\'administration.<br><br>';
+// --------- End: New or revised $lang ---- from version 2.40.4 and 2.30.7
 ?>

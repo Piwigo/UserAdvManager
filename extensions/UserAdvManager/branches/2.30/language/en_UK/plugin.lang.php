@@ -234,9 +234,9 @@ $lang['UAM_PwdReset_NA'] = 'Original password';
 $lang['UAM %d user pwdreseted'] = 'Password renewal required for %d user';
 $lang['UAM %d users pwdreseted'] = 'Password renewal required for %d users';
 $lang['UAM_Error_Using_illegal_Kdays'] = 'Using the [Kdays] tag is allowed only if the deadline for registration confirmation limited is active. Refer to the text field in red to correct the problem.';
-$lang['UAM_Default_InfoMail_Txt'] = 'Hello [username]! Thank you to have register on [mygallery].
+$lang['UAM_Default_InfoMail_Txt'] = 'Hello [username]!
 
-Please, find find below your connexion information.';
+You made significant changes in your profile on the gallery [mygallery]. Please, find below your new settings:';
 $lang['UAM_Default_ConfirmMail_Txt'] = 'Hello [username]! Thank you to have register on [mygallery].
 
 To complete the process and be able to browse through the pictures, thank you kindly confirm your registration by clicking on the link in this message.';
@@ -402,4 +402,11 @@ $lang['UAM_Default_RejectConnexion_Txt'] = 'Sorry, you don\'t have confirmed you
 $lang['UAM_Tracking registered users'] = 'Tracking registered users';
 $lang['UAM_Tracking confirmations'] = 'Tracking confirmations';
 // --------- End: New or revised $lang ---- from version 2.30.3
+
+
+// --------- Starting below: New or revised $lang ---- from version 2.40.4 and 2.30.7
+$lang['UAM_mail_exclusion_error'] = 'The Piwigo\'s option "The email address is mandatory for all users" has been disabled while the UserAdvancedManager\'s (UAM) plugin option "Exclusion of mail domains" remained active. This combination is illogical and not compatible!<br><br>
+Please, Reactivate the Piwigo\'s option "The email address is mandatory for all users" to be able then to disable UAM\'s option "Exclusion of mail domains" if that\'s what you want.<br><br>
+Note: This message will disappear after you have made the necessary correction and reloaded the admin page.<br><br>';
+// --------- End: New or revised $lang ---- from version 2.40.4 and 2.30.7
 ?>
