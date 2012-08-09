@@ -259,7 +259,7 @@ WHERE ui.status = "admin"
 }
 
 
-// Check options compatibilité between UAM and Piwigo at admin page load
+// Check options compatibility between UAM and Piwigo at admin page load
 // ---------------------------------------------------------------------
 add_event_handler('loc_begin_admin_page', 'UAM_check_compat');
 ?>
