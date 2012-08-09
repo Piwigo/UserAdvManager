@@ -292,5 +292,7 @@ Plugin Name: UserAdvManager
             fr_FR translation updated
 
 -- 2.30.6 : Bug 2618 fixed - Apache crash when php 5.3.10 is used
+
+-- 2.30.7 : Bug 2658 fixed - Compatibility check between UAM's "email exclusion" option and Piwigo's "Mail address is mandatory for all users" to avoid configuration conflicts.
 */
 ?>
