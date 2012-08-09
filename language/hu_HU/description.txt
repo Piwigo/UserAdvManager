@@ -1,1 +1,1 @@
-"Felhasználók kezelése" lehetőségek bővítése.
+Strengthens the possibilities of user management

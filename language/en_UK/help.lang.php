@@ -12,7 +12,7 @@ $lang['UAM_passwtestTitle'] = 'Testing the complexity of a password';
 $lang['UAM_passwtestTitle_d'] = 'Enter the password to test and then click on &quot;Score calculation&quot; to see the result.';
 $lang['UAM_passwadmTitle_d'] = 'An administrator can create a user account with or without application of the rule of computing complexity.<br><br>
 Note: If the user account created wants to change password and strengthening passwords for users is active, it will be subject to the rule set.';
-$lang['UAM_infomailTitle_d'] = 'This option allows to automate sending an information email to a user when he changes his password or email address in his profile page.<br><br>
+$lang['UAM_infomailTitle_d'] = 'This option allows to automate sending an information email to a user when registering or when changes his password or email address in their profile.<br><br>
 The content of the message sent is composed of a customizable part to introduce a little welcome note and a fixed part indicating the login name, password and email address of the user.';
 $lang['UAM_remailtxt1Title'] = 'Reminder email with new key generated';
 $lang['UAM_remailtxt2Title'] = 'Reminder email without new key generated';
@@ -152,8 +152,21 @@ $lang['UAM_confirmlevelTitle_d'] = '<b style=&quot;color: red;&quot;>WARNING : T
 The privacy level is validated for use in conjunction with the &quot;Confirmation of registration&quot;';
 $lang['UAM_GTAutoGpTitle_d'] = 'The automatic change of group, status or privacy level is like a demotion of the accounts involved and working on the same principle as the group, status or privacy level of confirmation (see &quot;Setting confirmations of registration&quot;). Therefore be to define a group, status and / or level demoting access to the gallery. If this has already been defined with the use of registration confirmation function, you can use the same group / status / level.<br><br>
 <b style=&quot;color: red;&quot;>Important note :</b> If a ghost user still has not heard from after the time limit and despite the automatic notification by email (if enabled), he\'s automatically deleted from the database.';
+$lang['UAM_GTAutoMailTitle_d'] = 'When an account is expired (group / status / privacy level change demoting the visitor), an email information can be sent to clarify the reasons for this change and the means to recover the initial access to the gallery.
+<br>To do this, a link to reconfirmation of registration is attached to the email (automatic generation of a new confirmation key).<b style=&quot;color: red;&quot;>If the user has already been notified, his account is automatically destroyed.</b> 
+<br><br>
+Enter the custom text that also explain the reasons for the demotion, to accompany the confirmation link. The custom text is not mandatory but strongly recommended. In fact, your visitors will not appreciate receiving an email containing only a single link without further explanation. ;-)
+<br><br>
+Further customize the content with special inserted tags:<br>
+- <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the name of the destination user of the email.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.
+<br><br>
+To use multiple languages, you can use the Extended description plugin\'s tags if it is active.
+<br><br>
+<b style=&quot;color: red;&quot;>Warning: The use of this function is intimately associated with the confirmation of registration by the user (confirmation by mail) and can not be activated without this option.</b>';
 $lang['UAM_GT_MainTitle_d'] = '
-- Automatic or manual management of ghost users<br>
+- Automatic or manuel management of ghost users<br>
 - E-mailing<br>
 ...
 ';
@@ -292,62 +305,4 @@ $lang['UAM_RejectConnexion_Custom_Txt_d'] = 'Customize here your explanation tex
 This field is compatible with the FCK Editor and, for multi-languages, you can use the [lang] tags of the Extended description plugin if it\'s active.';
 $lang['UAM_Tracking registered users_d'] = 'This activates a table in the &quot;Tracking registered users&quot; tab where are listed registered users on the gallery with the date of their last visit and time spent (in days) since their last visit. Monitoring is purely informative for the administrator of the gallery.';
 // --------- End: New or revised $lang ---- from version 2.30.3
-
-
-// --------- Starting below: New or revised $lang ---- from version 2.40
-$lang['UAM_AdminValidationMail_Subject_d'] = 'When an administrator or Webmaster of the gallery manually confirm registration pending, a notification email is automatically sent to the user. Enter here your customized manual validation email subject.<br>
-By default, the field has a generic text in English but you can change it and use the translation tags [lang =?] of the Extended Description plugin if installed.
-<br><br>
-The following additional customizations tags are available without using the Extended Description plugin:<br>
-- <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the name of the destination user of the email.<br>
-- <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery.<br>
-';
-$lang['UAM_ConfirmMail_Subject_d'] = 'Enter here your customized registration confirmation email subject.<br>
-By default, the field has a generic text in English but you can change it and use the translation tags [lang =?] of the Extended Description plugin if installed.
-<br><br>
-The following additional customizations tags are available without using the Extended Description plugin:<br>
-- <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the name of the destination user of the email.<br>
-- <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery.<br>
-';
-$lang['UAM_ConfirmMail_ReMail_Subject_d'] = 'Enter here your customized registration confirmation reminder email subject (with or without new key generation).<br>
-By default, the field has a generic text in English but you can change it and use the translation tags [lang =?] of the Extended Description plugin if installed.
-<br><br>
-The following additional customizations tags are available without using the Extended Description plugin:<br>
-- <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the name of the destination user of the email.<br>
-- <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery.<br>
-';
-$lang['UAM_GTReminder_Subject_d'] = 'Enter here your customized manual Ghost Tracker reminder email subject.<br>
-By default, the field has a generic text in English but you can change it and use the translation tags [lang =?] of the Extended Description plugin if installed.
-<br><br>
-The following additional customizations tags are available without using the Extended Description plugin:<br>
-- <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the name of the destination user of the email.<br>
-- <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery.<br>
-';
-$lang['UAM_GTAutomail_Subject_d'] = 'Enter here your customized automatic Ghost Tracker demotion email subject.<br>
-By default, the field has a generic text in English but you can change it and use the translation tags [lang =?] of the Extended Description plugin if installed.
-<br><br>
-The following additional customizations tags are available without using the Extended Description plugin:<br>
-- <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the name of the destination user of the email.<br>
-- <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery.<br>
-';
-$lang['UAM_GTAutoMailTitle_d'] = 'When an account is expired (group / status / privacy level change demoting the visitor), an email information can be sent to clarify the reasons for this change and the means to recover the initial access to the gallery.
-<br>To do this, a link to reconfirmation of registration is attached to the email (automatic generation of a new confirmation key).<b style=&quot;color: red;&quot;>If the user has already been notified, his account is automatically destroyed.</b> 
-<br><br>
-<b style=&quot;color: red;&quot;>Warning: The use of this function is intimately associated with the confirmation of registration by the user (confirmation by mail) and can not be activated without this option.</b>';
-$lang['UAM_GTAutomail_Text_d'] = 'Enter the custom text that also explain the reasons for the demotion, to accompany the confirmation link. The custom text is not mandatory but strongly recommended. In fact, your visitors will not appreciate receiving an email containing only a single link without further explanation. ;-)
-<br><br>
-Further customize the content with special inserted tags:<br>
-- <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the name of the destination user of the email.<br>
-- <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery.<br>
-- <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.
-<br><br>
-To use multiple languages, you can use the Extended description plugin\'s tags if it is active.';
-$lang['UAM_MailInfo_Subject_d'] = 'Enter here your customized information email subject.<br>
-By default, the field has a generic text in English but you can change it and use the translation tags [lang =?] of the Extended Description plugin if installed.
-<br><br>
-The following additional customizations tags are available without using the Extended Description plugin:<br>
-- <b style=&quot;color: red;&quot;>[username]</b> to automatically insert the name of the destination user of the email.<br>
-- <b style=&quot;color: red;&quot;>[mygallery]</b> to insert the title of your gallery.<br>
-';
-// --------- End: New or revised $lang ---- from version 2.40
 ?>

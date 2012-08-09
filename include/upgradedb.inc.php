@@ -26,7 +26,7 @@ include_once (UAM_PATH.'include/functions.inc.php');
 /* even if no database upgrade is needed   */
 /* *************************************** */
 function UAM_version_update()
-{
+{  
   // Get current plugin version
   // --------------------------
   $plugin =  PluginInfos(UAM_PATH);
@@ -583,40 +583,6 @@ WHERE param = "UserAdvManager"
   
   $Newconf_UAM[39] = 'false';
   $Newconf_UAM[40] = l10n('UAM_Default_RejectConnexion_Txt');
-
-  $update_conf = serialize($Newconf_UAM);
-
-  conf_update_param('UserAdvManager', pwg_db_real_escape_string($update_conf));
-}
-
-
-/* upgrade from 2.30.x to 2.40.0 */
-/* ***************************** */
-function upgrade_2300_2400()
-{
-  global $conf;
-  
-  load_language('plugin.lang', UAM_PATH);
-
-  // Upgrading options
-  // -----------------
-  $query = '
-SELECT value
-  FROM '.CONFIG_TABLE.'
-WHERE param = "UserAdvManager"
-;';
-
-  $result = pwg_query($query);
-  $conf_UAM = pwg_db_fetch_assoc($result);
-    
-  $Newconf_UAM = unserialize($conf_UAM['value']);
-
-  $Newconf_UAM[41] = l10n('UAM_Default_ConfirmMail_Subject');        // UAM_CONFIRMMAIL_SUBJECT
-  $Newconf_UAM[42] = l10n('UAM_Default_ConfirmMail_Remail_Subject'); // UAM_CONFIRMMAIL_REMAIL_SUBJECT
-  $Newconf_UAM[43] = l10n('UAM_Default_InfoMail_Subject');           // UAM_INFOMAIL_SUBJECT
-  $Newconf_UAM[44] = l10n('UAM_Default_GTAutoMail_Subject');         // UAM_GTAUTOMAIL_SUBJECT
-  $Newconf_UAM[45] = l10n('UAM_Default_GTReminder_Subject');         // UAM_GTREMINDER_SUBJECT
-  $Newconf_UAM[46] = l10n('UAM_Default_AdminValidationMail_Subject');// UAM_ADMINVALIDATIONMAIL_SUBJECT
 
   $update_conf = serialize($Newconf_UAM);
 

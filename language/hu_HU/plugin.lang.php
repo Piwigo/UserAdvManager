@@ -37,12 +37,12 @@ $lang['UAM_No_validation_for_your_account'] = 'A saját admin azonosítódat nem
 
 
 /* Processing messages */
-$lang['UAM_%d_Mail_With_Key'] = '%d üzenet elküldve új kulccsal';
-$lang['UAM_%d_Mails_With_Key'] = '%d üzenet elküldve új kulccsal';
-$lang['UAM_%d_Reminder_Sent'] = '%d emlékeztető elküldve';
-$lang['UAM_%d_Reminders_Sent'] = '%d emlékeztető elküldve';
-$lang['UAM_%d_Validated_User'] = '%d Felhasználó manuálisan érvényesítve';
-$lang['UAM_%d_Validated_Users'] = '%d Felhasználó manuálisan érvényesítve';
+$lang['UAM_%d_Mail_With_Key'] = '%d üzenet lett elküldve új kulccsal';
+$lang['UAM_%d_Mails_With_Key'] = '%d üzenet lett elküldve új kulccsal';
+$lang['UAM_%d_Reminder_Sent'] = '%d emlékeztető lett elküldve';
+$lang['UAM_%d_Reminders_Sent'] = '%d emlékeztető lett elküldve';
+$lang['UAM_%d_Validated_User'] = '%d Felhasználó lett kézileg érvényesítve';
+$lang['UAM_%d_Validated_Users'] = '%d Felhasználó lett kézileg érvényesítve';
 
 
 /* Action button names */
@@ -55,7 +55,7 @@ $lang['UAM_Mail_with_key'] = 'Emlékeztető kulccsal';
 
 // --------- Starting below: New or revised $lang ---- from version 2.12.0 and 2.12.1
 /* Global Configuration Tab */
-$lang['UAM_PasswordTest'] = 'Jelszó ellenőrzése: ';
+$lang['UAM_PasswordTest'] = 'Jelszó vizsgálat: ';
 /* Ghost Tracker Tab */
 $lang['UAM_Tab_GhostTracker'] = 'Szellem követő';
 $lang['UAM_Reminder'] = 'E-mail emlékeztető';
@@ -74,7 +74,7 @@ $lang['UAM_No_reminder_for_default_user'] = 'Az alapértelmezett azonosító nem
 $lang['UAM_No_reminder_for_Webmaster'] = 'A "Webmaster" ("Web-Mester") azonosító nem kap emlékeztetőt a Szellem-Követőtől';
 $lang['UAM_No_reminder_for_your_account'] = 'A személyes admin azonosítód nem kap emlékeztetőt a Szellem-Követőtől';
 /* Action button names */
-$lang['UAM_audit'] = 'Beállítások ellenőrzése';
+$lang['UAM_audit'] = 'Beállítások megvizsgálása';
 $lang['UAM_submit'] = 'Beállítások mentése';
 // --------- End: New or revised $lang ---- from version 2.12.0 and 2.12.1
 
@@ -105,9 +105,9 @@ $lang['UAM_Title4'] = 'Felhasználási ötletek és példák ';
 $lang['UAM_No_Casse'] = 'Felhasználónév: kis-és nagybetűkre érzékeny';
 $lang['UAM_Username_Char'] = 'Felhasználónév: Kizárandó karakterek';
 $lang['UAM_Username_Char_true'] = ' Kizárandó karakterek:<br>(vesszővel elválasztva)<br><br>';
-$lang['UAM_Username_Char_false'] = ' Összes engedélyezve (alapértelmezett)';
+$lang['UAM_Username_Char_false'] = ' Mind engedélyezve (alapértelmezett)';
 $lang['UAM_Password_Enforced'] = 'A jelszó biztonságosságának növelése';
-$lang['UAM_Password_Enforced_true'] = ' Bekapcsolva. Minimális érték: ';
+$lang['UAM_Password_Enforced_true'] = ' Érvényesít. Minimális érték: ';
 $lang['UAM_AdminPassword_Enforced'] = 'Adminokra érvényesítés';
 $lang['UAM_PasswordTest'] = 'Password test: ';
 $lang['UAM_ScoreTest'] = 'Eredmény: ';
@@ -118,7 +118,7 @@ $lang['UAM_Mail_Info'] = 'Info e-mail a felhasználónak:';
 $lang['UAM_MailInfo_Text'] = ' Az info e-mail testreszabása:';
 $lang['UAM_Confirm_Mail'] = 'Regisztráció megerősítése:';
 $lang['UAM_ConfirmMail_Text'] = ' A konfirmációs e-mail testreszabása:';
-$lang['UAM_Confirm_grpstat_notice'] = 'Figyelmeztetés: Célszerű vagy a csoport vagy a hitelesítés alapszabályát használni, és nem a kettőt egyszerre.';
+$lang['UAM_Confirm_grpstat_notice'] = 'Figyelmeztetés: Célszerű vagy a csoport vagy a hitelesítési alapszabályát használni, és nem a kettőt egyszerre.';
 $lang['UAM_Confirm_Group'] = 'Hitelesítési csoportok<br>(hagyd ------- hogy változatlan maradjon)';
 $lang['UAM_Confirm_Status'] = 'Érvényesítési szabályok<br>(hagyd ------- a Piwigo alapértékeihez)';
 $lang['UAM_No_Confirm_Group'] = 'A regisztrációjukat meg nem erősített felhasználók csoportja<br>';
@@ -126,13 +126,13 @@ $lang['UAM_Validated_Group'] = 'A regisztrációjukat megerősített felhasznál
 $lang['UAM_No_Confirm_Status'] = 'A regisztrációjukat meg nem erősített felhasználók állapota<br>';
 $lang['UAM_Validated_Status'] = 'A regisztrációjukat megerősített felhasználók állapota<br>';
 $lang['UAM_ValidationLimit_Info'] = 'A regisztráció megerősítésének határideje korlátozott';
-$lang['UAM_ConfirmMail_TimeOut_true'] = ' Bekapcsolva. Napok száma a lejáratig: ';
+$lang['UAM_ConfirmMail_TimeOut_true'] = ' Bekapcsol. Napok száma a lejáratig: ';
 $lang['UAM_ConfirmMail_Remail'] = 'Emlékeztető a regisztrációjukat meg nem erősített felhasználóknak ';
 $lang['UAM_ConfirmMail_ReMail_Txt1'] = 'Az emlékezetető üzenet testreszabása új érvényesítő kulcs <b><u>generálásával</u></b> ';
 $lang['UAM_ConfirmMail_ReMail_Txt2'] = 'Az emlékezetető üzenet testreszabása új érvényesítő kulcs <b><u>generálása nélkül</u></b> ';
 
 $lang['UAM_GhostTracker'] = 'Szellem-látogatók kezelése (Szellem-követő)';
-$lang['UAM_GhostTracker_true'] = ' Bekapcsolva. Maximális napok száma két látogatás között: ';
+$lang['UAM_GhostTracker_true'] = ' Bekapcsol. Maximális napok száma két látogatás között: ';
 $lang['UAM_GhostTracker_ReminderText'] = 'A Szellem-Követő emlékeztető üzenetének testretszabása.';
 
 /* Ghost Tracker Tab */
@@ -176,8 +176,8 @@ Szintén elérhető a projekt hibakövetőben: <a href="http://piwigo.org/bugs/"
 
 // --------- Starting below: New or revised $lang ---- from version 2.15.4
 $lang['UAM_Force_Validation'] = 'Kézi érvényesítés';
-$lang['UAM_Confirm_Mail_true'] = ' Bekapcsolva - Érvényesítés a felhasználó által';
-$lang['UAM_Confirm_Mail_local'] = ' Bekapcsolva - Érvényesítés az adminisztrátor által (nincs érvényesítő kulcs küldés)';
+$lang['UAM_Confirm_Mail_true'] = ' Bekapcsol - Érvényesítés a felhasználó által';
+$lang['UAM_Confirm_Mail_local'] = ' Bekapcsol - Érvényesítés az admin által (nincs érvényesítő kulcs küldés)';
 // --------- End: New or revised $lang ---- from version 2.15.4
 
 
@@ -190,12 +190,12 @@ $lang['UAM_Deleted_Account_Redirection_Page'] = 'Hozzáférés megtagadva - Azon
 $lang['UAM_title_redir_page'] = 'Hozzáférés megtagadva azonosító megsemmisítése miatt!';
 $lang['UAM_Error_GTAutoMail_cannot_be_set_without_ConfirmMail'] = 'Következetlenség a választott konfigurációban:
 <br><br>
-"Feliratkozottak követése és egyéb opciók beállítása > Szellem-látogatók kezelése (Szellem-Követő) > Szellem-felhasználók automatikus kezelése > E-mail automatikus küldése csoport / állapot változáskor" nem bekapcsolható, ha a "Regisztráció megerősítés és érvényesítés beállítás > Regisztráció megerősítése - Érvényesítés a felhasználó által" nincs előtte bekapcsolva.
+"Feliratkozottak követése és egyéb opciók beállítása > Szellem-látogatók kezelése (Szellem-Követő) > Szellem-felhasználók automatikus kezelése > E-mail automatikus küldése csoport / állapot változáskor" nem bekapcsolható, ha a "Regisztráció megerősítés és érvényesítés beállítás" > CRegisztráció megerősítése - Érvényesítés a felhasználó által" nincs előtte bekapcsolva.
 <br><br>
 A következetesség biztosítása érdekében, az "E-mail automatikus küldése csoport / állapot változáskor" lehetőséget automatikusan "kikapcsoltra" állítottuk vissza.
 <br><br>';
 $lang['UAM_Demotion of %s'] = 'Lefokozás of %s';
-$lang['UAM_AdminValidationMail_Text'] = 'Értesítés manuális regisztráció-érvényesítésről';
+$lang['UAM_AdminValidationMail_Text'] = 'Értesítés kézi regisztráció-érvényesítésről';
 $lang['UAM_Validation of %s'] = '%s érvényesítése';
 // --------- End: New or revised $lang ---- from version 2.16.0
 
@@ -205,8 +205,8 @@ $lang['UAM_CustomPasswRetr'] = 'Elveszett jelszó e-mail tartalmának beállít�
 $lang['UAM_USRAuto'] = 'Érvénytelen felhaszálók automatikus kezelése';
 $lang['UAM_USRAutoDel'] = 'Törölt azonosító egyedi üzenet';
 $lang['UAM_USRAutoMail'] = 'Automatikus e-mail emlékeztető';
-$lang['UAM_Disable'] = ' Kikapcsolva (alapértelmezett)';
-$lang['UAM_Enable'] = ' Bekapcsolva ';
+$lang['UAM_Disable'] = ' Kikapcsolt (alapértelmezett)';
+$lang['UAM_Enable'] = ' Bekapcsolt ';
 $lang['UAM_Tips1'] = 'Information of non-validated registration with UAM and PWG_Stuffs';
 $lang['UAM_Tips1_txt'] = '          <ul>
             <li>
@@ -329,7 +329,7 @@ $lang['UAM_Dump_NOK'] = 'Hiba: Sikertelen backup file készítés!';
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.20.4
-$lang['UAM_HidePassw'] = 'A jelszó egyszerű szövegként az információs e-mail-ben';
+$lang['UAM_HidePassw'] = 'Az olvasható jelszó az info e-mail-ben';
 // --------- End: New or revised $lang ---- from version 2.20.4
 
 
@@ -341,10 +341,4 @@ $lang['UAM_Error_Using_illegal_flag'] = 'Szintaktikai hiba! Az [Kdays] AutoText 
 // --------- Starting below: New or revised $lang ---- from version 2.30.2
 $lang['UAM_RedirToProfile'] = 'Átirányítás a Testreszabás oldalra';
 // --------- End: New or revised $lang ---- from version 2.30.2
-$lang['UAM_AdminValidationMail_Subject'] = 'A manuális érvényesítés e-mail testreszabása';
-$lang['UAM_ConfirmMail_ReMail_Subject'] = 'A regisztrációt visszaigazoló e-mail emlékeztetőjének testreszabása';
-$lang['UAM_ConfirmMail_Subject'] = 'A regisztrációt visszaigazoló e-mail testreszabása';
-$lang['UAM_Default_AdminValidation_Txt'] = 'Üdv [username]! Köszönjük, hogy regisztrált, és egyben üdvözli Önt a(z) [mygallery].
-
-Fiókját a(z) [mygallery] webmestere megerősítette. Most már beléphet a következő linkre kattintva, [myurl] és végrehajthatja profiljában a szükséges módosításokat.';
 ?>

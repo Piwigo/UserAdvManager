@@ -404,23 +404,6 @@ $lang['UAM_Tracking confirmations'] = 'Tracking confirmations';
 // --------- End: New or revised $lang ---- from version 2.30.3
 
 
-// --------- Starting below: New or revised $lang ---- from version 2.40
-$lang['UAM_AdminValidationMail_Subject'] = 'Customize manual validation email subject';
-$lang['UAM_ConfirmMail_Subject'] = 'Customize registration confirmation email subject';
-$lang['UAM_ConfirmMail_ReMail_Subject'] = 'Customize registration confirmation reminder email subject';
-$lang['UAM_GTReminder_Subject'] = 'Customize manual Ghost Tracker reminder email subject';
-$lang['UAM_GTAutomail_Subject'] = 'Customize automatic Ghost Tracker demotion email subject';
-$lang['UAM_GTAutomail_Text'] = 'Customize demotion email text';
-$lang['UAM_MailInfo_Subject'] = 'Customize information email subject';
-$lang['UAM_Default_ConfirmMail_Subject'] = '[username] registration confirmation on [mygallery]';
-$lang['UAM_Default_ConfirmMail_Remail_Subject'] = 'Reminder - [username] registration confirmation on [mygallery]';
-$lang['UAM_Default_InfoMail_Subject'] = '[username] - Your registration information on [mygallery]';
-$lang['UAM_Default_GTAutoMail_Subject'] = '[username] - Your account has been demoted on [mygallery]';
-$lang['UAM_Default_GTReminder_Subject'] = '[username] - A long time passed since your last visit on [mygallery]';
-$lang['UAM_Default_AdminValidationMail_Subject'] = '[username] - Registration validated on [mygallery]';
-// --------- End: New or revised $lang ---- from version 2.40
-
-
 // --------- Starting below: New or revised $lang ---- from version 2.40.4 and 2.30.7
 $lang['UAM_mail_exclusion_error'] = 'The Piwigo\'s option "The email address is mandatory for all users" has been disabled while the UserAdvancedManager\'s (UAM) plugin option "Exclusion of mail domains" remained active. This combination is illogical and not compatible!<br><br>
 Please, Reactivate the Piwigo\'s option "The email address is mandatory for all users" to be able then to disable UAM\'s option "Exclusion of mail domains" if that\'s what you want.<br><br>

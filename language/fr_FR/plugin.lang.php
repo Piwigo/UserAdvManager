@@ -409,23 +409,6 @@ $lang['UAM_Tracking confirmations'] = 'Suivi des confirmations';
 // --------- End: New or revised $lang ---- from version 2.30.3
 
 
-// --------- Starting below: New or revised $lang ---- from version 2.40
-$lang['UAM_AdminValidationMail_Subject'] = 'Personnaliser le sujet de l\'email de validation manuelle';
-$lang['UAM_ConfirmMail_Subject'] = 'Personnaliser le sujet de l\'email de confirmation d\'inscription';
-$lang['UAM_ConfirmMail_ReMail_Subject'] = 'Personnaliser le sujet de l\'email de rappel de la confirmation d\'inscription';
-$lang['UAM_GTReminder_Subject'] = 'Personnaliser le sujet de l\'email de rappel manuel du Ghost Tracker';
-$lang['UAM_GTAutomail_Subject'] = 'Personnaliser le sujet de l\'email de rétrogradation automatique du Ghost Tracker';
-$lang['UAM_GTAutomail_Text'] = 'Texte de rétrogradation personnalisé';
-$lang['UAM_MailInfo_Subject'] = 'Personnaliser le sujet de l\'email d\'information';
-$lang['UAM_Default_ConfirmMail_Subject'] = 'Confirmation d\'inscription de [username] sur [mygallery]';
-$lang['UAM_Default_ConfirmMail_Remail_Subject'] = 'Rappel - Confirmation d\'inscription de [username] sur [mygallery]';
-$lang['UAM_Default_InfoMail_Subject'] = '[username] - Vos paramètres d\'inscription sur [mygallery]';
-$lang['UAM_Default_GTAutoMail_Subject'] = '[username] - Rétrogradation de votre compte sur [mygallery]';
-$lang['UAM_Default_GTReminder_Subject'] = '[username] - Votre dernière visite sur [mygallery] remonte à longtemps';
-$lang['UAM_Default_AdminValidationMail_Subject'] = '[username] - Inscription validée sur [mygallery]';
-// --------- End: New or revised $lang ---- from version 2.40
-
-
 // --------- Starting below: New or revised $lang ---- from version 2.40.4 and 2.30.7
 $lang['UAM_mail_exclusion_error'] = 'L\'option de Piwigo "L\'adresse mail est obligatoire pour tous les utilisateurs" a été désactivée alors que l\'option du plugin UserAdvancedManager (UAM) "Exclusion des domaines de messagerie" est resté active. Cette combinaison est illogique et non compatible!<br><br>
 Veuillez réactivez l\'option de Piwigo "L\'adresse mail est obligatoire pour tous les utilisateurs" pour pouvoir désactiver ensuite l\'option UAM "Exclusion des domaines de messagerie" si c\'est ce que vous souhaitez.<br><br>

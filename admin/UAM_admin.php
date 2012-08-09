@@ -112,14 +112,14 @@ switch ($page['tab'])
 	if (isset($_POST['submit']) and isset($_POST['UAM_Mail_Info']) and isset($_POST['UAM_Username_Char']) and isset($_POST['UAM_Confirm_Mail']) and isset($_POST['UAM_Password_Enforced']) and isset($_POST['UAM_AdminPassword_Enforced']) and isset($_POST['UAM_GhostUser_Tracker']) and isset($_POST['UAM_Admin_ConfMail']) and isset($_POST['UAM_RedirToProfile']) and isset($_POST['UAM_GTAuto']) and isset($_POST['UAM_GTAutoMail']) and isset($_POST['UAM_CustomPasswRetr']) and isset($_POST['UAM_USRAuto']) and isset($_POST['UAM_USRAutoMail']) and isset($_POST['UAM_Stuffs']) and isset($_POST['UAM_HidePassw']) and isset($_POST['UAM_PwdReset']) and isset($_POST['UAM_RejectConnexion']))
   {
 
-    // Render email contents fields
-    // ----------------------------
+    // Render free text fields
+    // -----------------------
 		$_POST['UAM_MailInfo_Text'] = str_replace('\"', '"', str_replace("\'", "'", str_replace("\\\\", "\\", $_POST['UAM_MailInfo_Text'])));
 
     $_POST['UAM_ConfirmMail_Text'] = str_replace('\"', '"', str_replace("\'", "'", str_replace("\\\\", "\\", $_POST['UAM_ConfirmMail_Text'])));
 
     $_POST['UAM_GhostTracker_ReminderText'] = str_replace('\"', '"', str_replace("\'", "'", str_replace("\\\\", "\\", $_POST['UAM_GhostTracker_ReminderText'])));
-
+    
     $_POST['UAM_GTAutoDelText'] = str_replace('\"', '"', str_replace("\'", "'", str_replace("\\\\", "\\", $_POST['UAM_GTAutoDelText'])));
 
     $_POST['UAM_GTAutoMailText'] = str_replace('\"', '"', str_replace("\'", "'", str_replace("\\\\", "\\", $_POST['UAM_GTAutoMailText'])));
@@ -132,25 +132,6 @@ switch ($page['tab'])
 
     $_POST['UAM_CustomRejectConnexion_Text'] = str_replace('\"', '"', str_replace("\'", "'", str_replace("\\\\", "\\", $_POST['UAM_CustomRejectConnexion_Text'])));
 
-    // Render email subjects fields
-    // ---------------------------
-    $_POST['UAM_ConfirmMail_Subject'] = str_replace('\"', '"', str_replace("\'", "'", str_replace("\\\\", "\\", $_POST['UAM_ConfirmMail_Subject'])));
-
-    $_POST['UAM_ConfirmMail_Remail_Subject'] = str_replace('\"', '"', str_replace("\'", "'", str_replace("\\\\", "\\", $_POST['UAM_ConfirmMail_Remail_Subject'])));
-
-  $_POST['UAM_InfoMail_Subject'] = str_replace('\"', '"', str_replace("\'", "'", str_replace("\\\\", "\\", $_POST['UAM_InfoMail_Subject'])));
-
-  $_POST['UAM_GTAutoMail_Subject'] = str_replace('\"', '"', str_replace("\'", "'", str_replace("\\\\", "\\", $_POST['UAM_GTAutoMail_Subject'])));
-
-  $_POST['UAM_GTReminder_Subject'] = str_replace('\"', '"', str_replace("\'", "'", str_replace("\\\\", "\\", $_POST['UAM_GTReminder_Subject'])));
-
-  $_POST['UAM_AdminValidationMail_Subject'] = str_replace('\"', '"', str_replace("\'", "'", str_replace("\\\\", "\\", $_POST['UAM_AdminValidationMail_Subject'])));
-
-
-  // Check if emails are mandatory for registrations (needed for email exclusion option)
-  // -----------------------------------------------------------------------------------
-  if ($conf['obligatory_user_mail_address'])
-  {
     // Check if CR-LF exist at begining and end of mail exclusion list - If yes, removes them
     // --------------------------------------------------------------------------------------
     if (preg_match('/^[\s]+/', $_POST['UAM_MailExclusion_List']))
@@ -158,11 +139,6 @@ switch ($page['tab'])
       array_push($page['errors'], l10n('UAM_mail_exclusionlist_error'));
       $UAM_Exclusionlist_Error = true;
     }
-  }
-  elseif (!$conf['obligatory_user_mail_address'])
-  {
-    $_POST['UAM_MailExclusion_List'] = '';
-  }
 
     // Consistency check between ConfirmMail and AutoMail - We cannot use GTAutoMail if ConfirmMail is disabled
     // ---------------------------------------------------------------------------------------------------------
@@ -228,12 +204,6 @@ switch ($page['tab'])
       $_POST['UAM_PwdReset'],
       $_POST['UAM_RejectConnexion'],
       $_POST['UAM_CustomRejectConnexion_Text'],
-      $_POST['UAM_ConfirmMail_Subject'],
-      $_POST['UAM_ConfirmMail_Remail_Subject'],
-      $_POST['UAM_InfoMail_Subject'],
-      $_POST['UAM_GTAutoMail_Subject'],
-      $_POST['UAM_GTReminder_Subject'],
-      $_POST['UAM_AdminValidationMail_Subject'],
       );
 
     $conf['UserAdvManager'] = serialize($newconf_UAM);
@@ -570,94 +540,88 @@ ORDER BY name ASC
 
   $template->assign(
     array(
-    'nb_para'                           => $nb_para,
-    'nb_para2'                          => $nb_para2,
-    'UAM_VERSION'                       => $version,
-    'UAM_PATH'                          => UAM_PATH,
-    'UAM_DUMP_DOWNLOAD'                 => $dump_download,
-    'UAM_THEME'                         => $UAM_theme,
-		'UAM_MAIL_INFO_TRUE'                => $conf_UAM[0]=='true' ?  'checked="checked"' : '' ,
-		'UAM_MAIL_INFO_FALSE'               => $conf_UAM[0]=='false' ?  'checked="checked"' : '' ,
-		'UAM_MAILINFO_TEXT'                 => $conf_UAM[8],
-		'UAM_USERNAME_CHAR_TRUE'            => $conf_UAM[5]=='true' ?  'checked="checked"' : '' ,
-		'UAM_USERNAME_CHAR_FALSE'           => $conf_UAM[5]=='false' ?  'checked="checked"' : '' ,
-		'UAM_USERNAME_CHAR_LIST'            => $conf_UAM[6],
-		'UAM_CONFIRM_MAIL_TRUE'             => $conf_UAM[1]=='true' ?  'checked="checked"' : '' ,
-		'UAM_CONFIRM_MAIL_FALSE'            => $conf_UAM[1]=='false' ?  'checked="checked"' : '' ,
-    'UAM_CONFIRM_MAIL_LOCAL'            => $conf_UAM[1]=='local' ?  'checked="checked"' : '' ,
-		'UAM_CONFIRMMAIL_TEXT'              => $conf_UAM[9],
-		'UAM_No_Confirm_Group'              => $conf_UAM[2],
-		'UAM_Validated_Group'               => $conf_UAM[3],
-		'UAM_No_Confirm_Status'             => $conf_UAM[7],
-		'UAM_Validated_Status'              => $conf_UAM[4],
-		'UAM_MAILEXCLUSION_TRUE'            => $conf_UAM[10]=='true' ?  'checked="checked"' : '' ,
-		'UAM_MAILEXCLUSION_FALSE'           => $conf_UAM[10]=='false' ?  'checked="checked"' : '' ,
-		'UAM_MAILEXCLUSION_LIST'            => $conf_UAM[11],
-		'UAM_PASSWORDENF_TRUE'              => $conf_UAM[12]=='true' ?  'checked="checked"' : '' ,
-		'UAM_PASSWORDENF_FALSE'             => $conf_UAM[12]=='false' ?  'checked="checked"' : '' ,
-		'UAM_PASSWORD_SCORE'                => $conf_UAM[13],
-    'UAM_ADMINPASSWENF_TRUE'            => $conf_UAM[14]=='true' ?  'checked="checked"' : '' ,
-		'UAM_ADMINPASSWENF_FALSE'           => $conf_UAM[14]=='false' ?  'checked="checked"' : '' ,
-    'UAM_GHOSTRACKER_TRUE'              => $conf_UAM[15]=='true' ?  'checked="checked"' : '' ,
-		'UAM_GHOSTRACKER_FALSE'             => $conf_UAM[15]=='false' ?  'checked="checked"' : '' ,
-    'UAM_GHOSTRACKER_DAYLIMIT'          => $conf_UAM[16],
-    'UAM_GHOSTRACKER_REMINDERTEXT'      => $conf_UAM[17],
-    'UAM_ADDLASTVISIT_TRUE'             => $conf_UAM[18]=='true' ?  'checked="checked"' : '' ,
-    'UAM_ADDLASTVISIT_FALSE'            => $conf_UAM[18]=='false' ?  'checked="checked"' : '' ,
-    'UAM_ADMINCONFMAIL_TRUE'            => $conf_UAM[19]=='true' ?  'checked="checked"' : '' ,
-    'UAM_ADMINCONFMAIL_FALSE'           => $conf_UAM[19]=='false' ?  'checked="checked"' : '' ,
-    'UAM_REDIRTOPROFILE_TRUE'           => $conf_UAM[20]=='true' ?  'checked="checked"' : '' ,
-    'UAM_REDIRTOPROFILE_FALSE'          => $conf_UAM[20]=='false' ?  'checked="checked"' : '' ,
-    'UAM_GTAUTO_TRUE'                   => $conf_UAM[21]=='true' ?  'checked="checked"' : '' ,
-    'UAM_GTAUTO_FALSE'                  => $conf_UAM[21]=='false' ?  'checked="checked"' : '' ,
-    'UAM_GTAUTOMAIL_TRUE'               => $conf_UAM[22]=='true' ?  'checked="checked"' : '' ,
-    'UAM_GTAUTOMAIL_FALSE'              => $conf_UAM[22]=='false' ?  'checked="checked"' : '' ,
-    'UAM_GTAUTODEL_TEXT'                => $conf_UAM[23],
-    'UAM_GTAUTOMAILTEXT'                => $conf_UAM[24],
-		'UAM_Downgrade_Group'               => $conf_UAM[25],
-		'UAM_Downgrade_Status'              => $conf_UAM[26],
-    'UAM_ADMINVALIDATIONMAIL_TEXT'      => $conf_UAM[27],
-    'UAM_CUSTOMPASSWRETR_TRUE'          => $conf_UAM[28]=='true' ?  'checked="checked"' : '' ,
-    'UAM_CUSTOMPASSWRETR_FALSE'         => $conf_UAM[28]=='false' ?  'checked="checked"' : '' ,
-    'UAM_CUSTOMPASSWRETR_TEXT'          => $conf_UAM[29],
-    'UAM_USRAUTO_TRUE'                  => $conf_UAM[30]=='true' ?  'checked="checked"' : '' ,
-    'UAM_USRAUTO_FALSE'                 => $conf_UAM[30]=='false' ?  'checked="checked"' : '' ,
-    'UAM_USRAUTODEL_TEXT'               => $conf_UAM[31],
-    'UAM_USRAUTOMAIL_TRUE'              => $conf_UAM[32]=='true' ?  'checked="checked"' : '' ,
-    'UAM_USRAUTOMAIL_FALSE'             => $conf_UAM[32]=='false' ?  'checked="checked"' : '' ,
-    'UAM_STUFFS_TRUE'                   => $conf_UAM[33]=='true' ?  'checked="checked"' : '' ,
-    'UAM_STUFFS_FALSE'                  => $conf_UAM[33]=='false' ?  'checked="checked"' : '' ,
-    'UAM_HIDEPASSW_TRUE'                => $conf_UAM[34]=='true' ?  'checked="checked"' : '' ,
-    'UAM_HIDEPASSW_FALSE'               => $conf_UAM[34]=='false' ?  'checked="checked"' : '' ,
-		'UAM_NO_VALID_LEVEL'                => $conf_UAM[35],
-		'UAM_VALID_LEVEL'                   => $conf_UAM[36],
-    'UAM_DOWNGRADE_LEVEL'               => $conf_UAM[37],
-    'UAM_PWDRESET_TRUE'                 => $conf_UAM[38]=='true' ?  'checked="checked"' : '' ,
-    'UAM_PWDRESET_FALSE'                => $conf_UAM[38]=='false' ?  'checked="checked"' : '' ,
-    'UAM_REJECTCONNECT_TRUE'            => $conf_UAM[39]=='true' ?  'checked="checked"' : '' ,
-    'UAM_REJECTCONNECT_FALSE'           => $conf_UAM[39]=='false' ?  'checked="checked"' : '' ,
-    'UAM_REJECTCONNECT_TEXT'            => $conf_UAM[40],
-    'UAM_CONFIRMMAIL_SUBJECT'           => $conf_UAM[41],
-    'UAM_CONFIRMMAIL_REMAIL_SUBJECT'    => $conf_UAM[42],
-    'UAM_INFOMAIL_SUBJECT'              => $conf_UAM[43],
-    'UAM_GTAUTOMAIL_SUBJECT'            => $conf_UAM[44],
-    'UAM_GTREMINDER_SUBJECT'            => $conf_UAM[45],
-    'UAM_ADMINVALIDATIONMAIL_SUBJECT'   => $conf_UAM[46],
-		'UAM_PASSWORD_TEST_SCORE'           => $UAM_Password_Test_Score,
-    'UAM_ERROR_REPORTS1'                => $UAM_Exclusionlist_Error,
-    'UAM_ERROR_REPORTS2'                => $UAM_Illegal_Flag_Error1,
-    'UAM_ERROR_REPORTS3'                => $UAM_Illegal_Flag_Error2,
-    'UAM_ERROR_REPORTS4'                => $UAM_Illegal_Flag_Error3,
-    'UAM_EMAIL_MANDATORY'               => $UAM_Email_Mandatory_Check,
-		'UAM_CONFIRMMAIL_TIMEOUT_TRUE'	    => $conf_UAM_ConfirmMail[0]=='true' ?  'checked="checked"' : '' ,
-		'UAM_CONFIRMMAIL_TIMEOUT_FALSE'     => $conf_UAM_ConfirmMail[0]=='false' ?  'checked="checked"' : '' ,
-		'UAM_CONFIRMMAIL_DELAY'					    => $conf_UAM_ConfirmMail[1],
-    'UAM_CONFIRMMAIL_REMAIL_TRUE'       => $conf_UAM_ConfirmMail[3]=='true' ? 'checked="checked"' : '',
-    'UAM_CONFIRMMAIL_REMAIL_FALSE'      => $conf_UAM_ConfirmMail[3]=='false' ? 'checked="checked"' : '',
-    'UAM_CONFIRMMAIL_REMAIL_TXT1'       => $conf_UAM_ConfirmMail[2],
-    'UAM_CONFIRMMAIL_REMAIL_TXT2'       => $conf_UAM_ConfirmMail[4],
-    'UAM_CONFIRMMAIL_CUSTOM_TXT1'       => $conf_UAM_ConfirmMail[5],
-    'UAM_CONFIRMMAIL_CUSTOM_TXT2'       => $conf_UAM_ConfirmMail[6],
+    'nb_para'                        => $nb_para,
+    'nb_para2'                       => $nb_para2,
+    'UAM_VERSION'                    => $version,
+    'UAM_PATH'                       => UAM_PATH,
+    'UAM_DUMP_DOWNLOAD'              => $dump_download,
+    'UAM_THEME'                      => $UAM_theme,
+		'UAM_MAIL_INFO_TRUE'             => $conf_UAM[0]=='true' ?  'checked="checked"' : '' ,
+		'UAM_MAIL_INFO_FALSE'            => $conf_UAM[0]=='false' ?  'checked="checked"' : '' ,
+		'UAM_MAILINFO_TEXT'              => $conf_UAM[8],
+		'UAM_USERNAME_CHAR_TRUE'         => $conf_UAM[5]=='true' ?  'checked="checked"' : '' ,
+		'UAM_USERNAME_CHAR_FALSE'        => $conf_UAM[5]=='false' ?  'checked="checked"' : '' ,
+		'UAM_USERNAME_CHAR_LIST'         => $conf_UAM[6],
+		'UAM_CONFIRM_MAIL_TRUE'          => $conf_UAM[1]=='true' ?  'checked="checked"' : '' ,
+		'UAM_CONFIRM_MAIL_FALSE'         => $conf_UAM[1]=='false' ?  'checked="checked"' : '' ,
+    'UAM_CONFIRM_MAIL_LOCAL'         => $conf_UAM[1]=='local' ?  'checked="checked"' : '' ,
+		'UAM_CONFIRMMAIL_TEXT'           => $conf_UAM[9],
+		'UAM_No_Confirm_Group'           => $conf_UAM[2],
+		'UAM_Validated_Group'            => $conf_UAM[3],
+		'UAM_No_Confirm_Status'          => $conf_UAM[7],
+		'UAM_Validated_Status'           => $conf_UAM[4],
+		'UAM_MAILEXCLUSION_TRUE'         => $conf_UAM[10]=='true' ?  'checked="checked"' : '' ,
+		'UAM_MAILEXCLUSION_FALSE'        => $conf_UAM[10]=='false' ?  'checked="checked"' : '' ,
+		'UAM_MAILEXCLUSION_LIST'         => $conf_UAM[11],
+		'UAM_PASSWORDENF_TRUE'           => $conf_UAM[12]=='true' ?  'checked="checked"' : '' ,
+		'UAM_PASSWORDENF_FALSE'          => $conf_UAM[12]=='false' ?  'checked="checked"' : '' ,
+		'UAM_PASSWORD_SCORE'             => $conf_UAM[13],
+    'UAM_ADMINPASSWENF_TRUE'         => $conf_UAM[14]=='true' ?  'checked="checked"' : '' ,
+		'UAM_ADMINPASSWENF_FALSE'        => $conf_UAM[14]=='false' ?  'checked="checked"' : '' ,
+    'UAM_GHOSTRACKER_TRUE'           => $conf_UAM[15]=='true' ?  'checked="checked"' : '' ,
+		'UAM_GHOSTRACKER_FALSE'          => $conf_UAM[15]=='false' ?  'checked="checked"' : '' ,
+    'UAM_GHOSTRACKER_DAYLIMIT'       => $conf_UAM[16],
+    'UAM_GHOSTRACKER_REMINDERTEXT'   => $conf_UAM[17],
+    'UAM_ADDLASTVISIT_TRUE'          => $conf_UAM[18]=='true' ?  'checked="checked"' : '' ,
+    'UAM_ADDLASTVISIT_FALSE'         => $conf_UAM[18]=='false' ?  'checked="checked"' : '' ,
+    'UAM_ADMINCONFMAIL_TRUE'         => $conf_UAM[19]=='true' ?  'checked="checked"' : '' ,
+    'UAM_ADMINCONFMAIL_FALSE'        => $conf_UAM[19]=='false' ?  'checked="checked"' : '' ,
+    'UAM_REDIRTOPROFILE_TRUE'        => $conf_UAM[20]=='true' ?  'checked="checked"' : '' ,
+    'UAM_REDIRTOPROFILE_FALSE'       => $conf_UAM[20]=='false' ?  'checked="checked"' : '' ,
+    'UAM_GTAUTO_TRUE'                => $conf_UAM[21]=='true' ?  'checked="checked"' : '' ,
+    'UAM_GTAUTO_FALSE'               => $conf_UAM[21]=='false' ?  'checked="checked"' : '' ,
+    'UAM_GTAUTOMAIL_TRUE'            => $conf_UAM[22]=='true' ?  'checked="checked"' : '' ,
+    'UAM_GTAUTOMAIL_FALSE'           => $conf_UAM[22]=='false' ?  'checked="checked"' : '' ,
+    'UAM_GTAUTODEL_TEXT'             => $conf_UAM[23],
+    'UAM_GTAUTOMAILTEXT'             => $conf_UAM[24],
+		'UAM_Downgrade_Group'            => $conf_UAM[25],
+		'UAM_Downgrade_Status'           => $conf_UAM[26],
+    'UAM_ADMINVALIDATIONMAIL_TEXT'   => $conf_UAM[27],
+    'UAM_CUSTOMPASSWRETR_TRUE'       => $conf_UAM[28]=='true' ?  'checked="checked"' : '' ,
+    'UAM_CUSTOMPASSWRETR_FALSE'      => $conf_UAM[28]=='false' ?  'checked="checked"' : '' ,
+    'UAM_CUSTOMPASSWRETR_TEXT'       => $conf_UAM[29],
+    'UAM_USRAUTO_TRUE'               => $conf_UAM[30]=='true' ?  'checked="checked"' : '' ,
+    'UAM_USRAUTO_FALSE'              => $conf_UAM[30]=='false' ?  'checked="checked"' : '' ,
+    'UAM_USRAUTODEL_TEXT'            => $conf_UAM[31],
+    'UAM_USRAUTOMAIL_TRUE'           => $conf_UAM[32]=='true' ?  'checked="checked"' : '' ,
+    'UAM_USRAUTOMAIL_FALSE'          => $conf_UAM[32]=='false' ?  'checked="checked"' : '' ,
+    'UAM_STUFFS_TRUE'                => $conf_UAM[33]=='true' ?  'checked="checked"' : '' ,
+    'UAM_STUFFS_FALSE'               => $conf_UAM[33]=='false' ?  'checked="checked"' : '' ,
+    'UAM_HIDEPASSW_TRUE'             => $conf_UAM[34]=='true' ?  'checked="checked"' : '' ,
+    'UAM_HIDEPASSW_FALSE'            => $conf_UAM[34]=='false' ?  'checked="checked"' : '' ,
+		'UAM_NO_VALID_LEVEL'             => $conf_UAM[35],
+		'UAM_VALID_LEVEL'                => $conf_UAM[36],
+    'UAM_DOWNGRADE_LEVEL'            => $conf_UAM[37],
+    'UAM_PWDRESET_TRUE'              => $conf_UAM[38]=='true' ?  'checked="checked"' : '' ,
+    'UAM_PWDRESET_FALSE'             => $conf_UAM[38]=='false' ?  'checked="checked"' : '' ,
+    'UAM_REJECTCONNECT_TRUE'         => $conf_UAM[39]=='true' ?  'checked="checked"' : '' ,
+    'UAM_REJECTCONNECT_FALSE'        => $conf_UAM[39]=='false' ?  'checked="checked"' : '' ,
+    'UAM_REJECTCONNECT_TEXT'         => $conf_UAM[40],
+		'UAM_PASSWORD_TEST_SCORE'        => $UAM_Password_Test_Score,
+    'UAM_ERROR_REPORTS1'             => $UAM_Exclusionlist_Error,
+    'UAM_ERROR_REPORTS2'             => $UAM_Illegal_Flag_Error1,
+    'UAM_ERROR_REPORTS3'             => $UAM_Illegal_Flag_Error2,
+    'UAM_ERROR_REPORTS4'             => $UAM_Illegal_Flag_Error3,
+    'UAM_EMAIL_MANDATORY'            => $UAM_Email_Mandatory_Check,
+		'UAM_CONFIRMMAIL_TIMEOUT_TRUE'	 => $conf_UAM_ConfirmMail[0]=='true' ?  'checked="checked"' : '' ,
+		'UAM_CONFIRMMAIL_TIMEOUT_FALSE'  => $conf_UAM_ConfirmMail[0]=='false' ?  'checked="checked"' : '' ,
+		'UAM_CONFIRMMAIL_DELAY'					 => $conf_UAM_ConfirmMail[1],
+    'UAM_CONFIRMMAIL_REMAIL_TRUE'		 => $conf_UAM_ConfirmMail[3]=='true' ? 'checked="checked"' : '',
+    'UAM_CONFIRMMAIL_REMAIL_FALSE'	 => $conf_UAM_ConfirmMail[3]=='false' ? 'checked="checked"' : '',
+    'UAM_CONFIRMMAIL_REMAIL_TXT1'		 => $conf_UAM_ConfirmMail[2],
+    'UAM_CONFIRMMAIL_REMAIL_TXT2'		 => $conf_UAM_ConfirmMail[4],
+    'UAM_CONFIRMMAIL_CUSTOM_TXT1'		 => $conf_UAM_ConfirmMail[5],
+    'UAM_CONFIRMMAIL_CUSTOM_TXT2'		 => $conf_UAM_ConfirmMail[6],
     )
   );
 

@@ -19,6 +19,7 @@ $lang['UAM_Link: %s'] = 'Por favor, haga clic en este enlace para confirmar su r
 /* Email confirmation page */
 $lang['UAM_title_confirm_mail'] = 'Validar su inscripción';
 $lang['UAM_confirm_mail_page_title'] = 'Validar su inscripción';
+$lang['confirm_mail_ok'] = '<br><br><br>Gracias por haber confirmado su dirección de correo electrónico y su registro en la galería. ¡Que disfrute!<br><br><br><br>';
 
 
 /* Errors and Warnings */
@@ -128,6 +129,7 @@ $lang['UAM_Validated_Status'] = 'Situación de los usuarios que han validado su 
 $lang['UAM_ValidationLimit_Info'] = 'Plazo para la validación de registro limitado';
 $lang['UAM_ConfirmMail_TimeOut_true'] = ' Activar. Número de días hasta el vencimiento: ';
 $lang['UAM_ConfirmMail_Remail'] = 'Recuerde a los usuarios no validados';
+$lang['UAM_ConfirmMail_Remail_true'] = ' Activar';
 $lang['UAM_ConfirmMail_ReMail_Txt1'] = 'Personalización del mensaje recordatorio <b><u>con</u></b> la regeneración de validación de claves.';
 $lang['UAM_ConfirmMail_ReMail_Txt2'] = 'Personalización del mensaje recordatorio <b><u>sin</u></b> la regeneración de la validación de claves.';
 
@@ -144,6 +146,7 @@ $lang['UAM_GhostTracker_Init'] = 'Si habilita esta función por primera vez o ha
 $lang['UAM_Add of %s'] = 'Perfil creado para %s';
 $lang['UAM_Update of %s'] = '%s Perfil actualizado';
 /* Email confirmation page */
+$lang['confirm_mail_bad'] = '<br><br><br>Su clave de activación es incorrecta o está vencida o ya ha validado su cuenta, por favor, póngase en contacto con el webmaster para solucionar este problema.<br><br><br><br>';
 /* Mailing */
 $lang['UAM_Ghost_reminder_of_%s'] = '%s, este es un recordatorio por correo electrónico';
 $lang['UAM_Reminder_with_key_of_%s'] = '%s, su clave de validación se ha renovado';
@@ -251,13 +254,4 @@ $lang['UAM_RedirToProfile'] = 'Redirigir a la página de personalización';
 $lang['UAM_GTAutoGp'] = 'Cambio automático de grupo / estado / nivel de confidencialidad';
 $lang['UAM_GTAutoMail'] = 'Automáticamente el envío de un correo electrónico cuando se cambia de grupo / estado / nivel de confidencialidad';
 // --------- End: New or revised $lang ---- from version 2.30.2
-$lang['UAM %d user pwdreseted'] = 'Se pide renovación de contraseña para el usuario %d';
-$lang['UAM %d users pwdreseted'] = 'Se pide renovación de contraseña para los usuarios %d';
-$lang['UAM_AdminValidationMail_Subject'] = 'Personalizar el asunto del correo electrónico de validación manual';
-$lang['UAM_Admins cannot be pwdreset'] = 'La renovación de contraseña no puede ser solicitada para un administrador';
-$lang['UAM_Bad_version_backup'] = 'La versión del fichero de copia de seguridad no corresponde con la versión del plugin ! La restauración no se realizo.';
-$lang['UAM_ConfirmMail_ReMail_Subject'] = 'Personalizar el asunto del correo electrónico de recordatorio de confirmación de inscripción.';
-$lang['UAM_ConfirmMail_Subject'] = 'Personalizar el asunto del correo electrónico de confirmación de inscripción.';
-$lang['UAM_Confirm_Level'] = 'Nivel de confidencialidad<br>(------- para conservar el valor por defecto de Piwigo';
-$lang['UAM_CustomPasswRetr'] = 'Personalizar el contenido del correo electrónico de contraseña perdida';
 ?>

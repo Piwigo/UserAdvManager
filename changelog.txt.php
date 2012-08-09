@@ -286,8 +286,7 @@ Plugin Name: UserAdvManager
 -- 2.30.4 : Bug 2580 fixed - DE translation files corrupted
 
 -- 2.30.5 : Bug 2583 fixed - help.lang.php was not loaded correctly
-            Bug 2602 fixed - Sql error when Confirmation by admin is set
-            Bug 2570 fixed - Adding Wiki link to complete plugin documentation (FR only)
+            Bug 2602 fixed - Sql error when Confirmation by admin is set 
             en_UK reference translation spellchecking
             de_DE translation updated
             fr_FR translation updated
@@ -295,35 +294,5 @@ Plugin Name: UserAdvManager
 -- 2.30.6 : Bug 2618 fixed - Apache crash when php 5.3.10 is used
 
 -- 2.30.7 : Bug 2658 fixed - Compatibility check between UAM's "email exclusion" option and Piwigo's "Mail address is mandatory for all users" to avoid configuration conflicts.
-
-**************************************************************
-***** Plugin history (branch 2.40 - Piwigo 2.4 compliant)*****
-**************************************************************
--- 2.40.0 : Bug 2571 fixed - Piwigo 2.4 compliance : Information email removed on user registration because already managed by Piwigo
-            Bug 2572 fixed - Adding a local home icon on ConfirmMail, rejected and del_account pages
-            Bug 2591 fixed - Exclusion of Adult_Content generic users from users tracking list
-            Bug 2603 fixed - Php notice when user changes his email in his profile if confirmation by email is set
-            Bug 2619 fixed - Confirmation email when registered user changes his email was not sent and user not demoted
-            Bug 2620 fixed - Display of ConfirmMail, rejected and del_account pages have been improved
-            Bug 2621 fixed - Display of ConfirmMail, rejected and del_account pages have been improved for IE8 and IE9 render
-            Bug 2622 fixed - Display of ConfirmMail, rejected and del_account pages have been improved for Stripped theme
-            Bug 2623 fixed - Ability to customize email subjects (confirmation, information and ghostTracker email)
-            Bug 2628 fixed - Php notice when email is not mandatory for registration
-            Bug 2631 fixed - Piwigo 2.4 compliance : $conf['gallery_url'] replaced by get_gallery_home_url() for [myurl] tag
-
--- 2.40.1 : Update de_DE translation (thanks to Joergen)
-            Update it_IT translation (thanks to Gdvpixel)
-
--- 2.40.2 : Update it_IT translation (thanks to Gdvpixel and Ericnet)
-
--- 2.40.3 : Update it_IT, thanks to : Ericnet
-            Update hu_HU, thanks to : samli
-            Update es_ES, thanks to : jpr928
-            Update lv_LV, thanks to : agrisans
-            Update el_GR, thanks to : bas_alba
-
--- 2.40.4 : Bug 2658 fixed - Compatibility check between UAM's "email exclusion" option and Piwigo's "Mail address is mandatory for all users" to avoid configuration conflicts.
-            Update el_GR, thanks to : bas_alba
-            Update lv_LV, thanks to : agrisans
 */
 ?>

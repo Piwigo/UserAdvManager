@@ -351,9 +351,8 @@ Alla ricezione di questo messaggio e non ricevendo altre visite entro [days] gio
 
 Distinti saluti,
 l\'amministratore della galleria [mygallery] - [myurl]';
-$lang['UAM_Default_InfoMail_Txt'] = 'Ciao [username]!
-
-Sono state apportate modifiche significative nel tuo profilo sul gallery [mygallery]. Per favore, di seguito troverete le nuove impostazioni:';
+$lang['UAM_Default_InfoMail_Txt'] = 'Ciao [username]! Grazie per esserti registrato su [mygallery]
+Qui sotto trovi le informazioni per la connessione';
 $lang['UAM_Default_PwdRequest_Txt'] = 'Hai richiesto il rinnovo della password. Qui sotto trovi i nuovi dati di connessione';
 $lang['UAM_Default_RejectConnexion_Txt'] = 'Siamo spiacenti, non hai ancora confermato la registrazione, perciò non ti puoi connettere ora alla galleria. Controlla la tua casella mail. Dovresti trovare un email inviata dalla galleria, contenente un link per eseguire la conferma. Se non la trovi, contatta il webmaster.';
 $lang['UAM_Default_ValidationTimeout_Txt'] = 'Siamo spiacenti, il tuo account è stato eliminato poichè non hai confermato la registrazione nel tempo richiesto ([Kdays] days). Riprova la registrazione con un account mail valido';
@@ -388,17 +387,4 @@ $lang['UAM_Valid_Level'] = 'Livello privacy per gli utenti che hanno confermato 
 $lang['UAM_Webmaster cannot be pwdreset'] = 'Il rinnovo della password non può essere impostato per l\'account webmaster!';
 $lang['UAM_You cannot pwdreset your account'] = 'Il rinnovo della password non può essere impostato per il tuo stesso account!';
 $lang['UAM_You need to confirm pwdreset'] = 'Devi confermare il rinnovo della password (segna la casella)!';
-$lang['UAM_AdminValidationMail_Subject'] = 'Personalizza soggetto della mail di verifica';
-$lang['UAM_ConfirmMail_ReMail_Subject'] = 'Personalizza soggetto della mail di reminder di verifica registrazione';
-$lang['UAM_ConfirmMail_Subject'] = 'Personalizza soggetto della mail di registrazione';
-$lang['UAM_GTAutomail_Subject'] = 'Personalizza soggetto della mail automatica di Ghost Tracker';
-$lang['UAM_GTReminder_Subject'] = 'Personalizza soggetto della mail di reminder di Ghost Tracker';
-$lang['UAM_Default_AdminValidationMail_Subject'] = '[username] - Registrazione confermata su [mygallery]';
-$lang['UAM_Default_ConfirmMail_Remail_Subject'] = 'Reminder - [username] conferma di registrazione su [mygallery]';
-$lang['UAM_Default_ConfirmMail_Subject'] = '[username] registrazione confermata su [mygallery]';
-$lang['UAM_Default_GTAutoMail_Subject'] = '[username] - Il tuo account è stato degradato su [mygallery]';
-$lang['UAM_Default_GTReminder_Subject'] = '[username] - E\' passato molto tempo dalla tua ultima visita su [mygallery]';
-$lang['UAM_Default_InfoMail_Subject'] = '[username] - Le tue informazioni di registrazione su [mygallery]';
-$lang['UAM_GTAutomail_Text'] = 'Personalizza testo mail di degrado';
-$lang['UAM_MailInfo_Subject'] = 'Personalizza soggetto dell\'email informativa';
 ?>

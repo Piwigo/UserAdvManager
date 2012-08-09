@@ -21,6 +21,8 @@ $lang['UAM_passwtestTitle'] = 'Paroles komplicētības testēšana';
 $lang['UAM_passwtestTitle_d'] = 'Ievadiet testēšanao paredzēto paroli un klikšķiniet uz&quot;Score calculation&quot; lai redzētu rezultātu.';
 $lang['UAM_passwadmTitle_d'] = 'Administrators var izveidot lietotāja kontu ar vai bez paroles komplicētības pārbaudes aplikāciju.<br><br>
 Note: Ja lietotājs, kura konts jau izveidots, grib nomainīt savu paroli un ir aktīva paroles stingrības uzlabišanas aplikācija, būs jāievēro visi stingrības uzlabošanas noteikumi.';
+$lang['UAM_infomailTitle_d'] = 'Šī opcija ļauj automātiski ar e-pastu nosūtīt lietotājam informatīvu ziņu par reģistrāciju vai profila paroles vai e-pasta adreses maiņu.<br><br>
+Nosūtāmā ziņa kompozicionāli sastāv no pielāgojamās daļas, maza ievada un fiksētās daļas, kas ietver info par lietotāja loginu, paroli un e-pasta adresi.';
 $lang['UAM_confirmgrpTitle'] = 'Pārbaudāmās Grupas';
 $lang['UAM_confirmgrpTitle_d'] = '<b style=&quot;color:
 red;&quot;>UZMANĪBU : Pārbaudāmo grupu lietošana pieprasa, ka esat izveidojis vismaz vienu lietotājgrupu un, ka tā ir definēta &quot; pēc noklusējuma &quot; Piwigo grupu lietotāju pārvaldītājā.</b><br><br>

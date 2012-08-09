@@ -336,9 +336,9 @@ $lang['UAM_Default_GhstDemotion_Txt'] = 'Leider [username], Ihr Konto wurde aufg
 $lang['UAM_Default_GhstReminder_Txt'] = 'Hallo [username].
 
 Dies ist eine Erinnerung, weil eine sehr lange Zeit vergangen, seit Ihrem letzten Besuch auf unserer Galerie [mygallery]. Wenn Sie nicht mehr tun wollen Ihren Zugang Konto verwenden, informieren Sie uns bitte durch eine Beantwortung dieser E-Mail. Ihr Konto wird gel';
-$lang['UAM_Default_InfoMail_Txt'] = 'Hallo [username]!
+$lang['UAM_Default_InfoMail_Txt'] = 'Hallo [username]! Wir danken Ihnen, auf [mygallery] haben registrieren lassen.
 
-Sie haben wesentliche Veränderungen in Ihrem Profil auf der Galerie [mygallery]. Bitte, finden Sie die neuen Einstellungen:';
+Bitte, finden Sie unten Ihre Verbindung Informationen.';
 $lang['UAM_Default_PwdRequest_Txt'] = 'Sie haben ein Passwort-Reset auf unserer Galerie anzubieten. Bitte unten Ihre neue Verbindung Einstellungen zu finden.';
 $lang['UAM_Default_RejectConnexion_Txt'] = 'Leider müssen Sie nicht Ihre Anmeldung bestätigt noch haben, so können Sie nicht schließen Sie die Galerie jetzt. Bitte überprüfen Sie Ihre E-Mail-Box. Sie sollten eine E-Mail durch die Galerie geschickt, mit einem Link zu Ihrer Bestätigung durchzuführen. Wenn nicht, wenden Sie sich bitte an den Webmaster.';
 $lang['UAM_Default_ValidationTimeout_Txt'] = 'Sorry, dein Konto wurde gelöscht, weil Sie nicht Ihre Anmeldung im gewünschten Zeitraum ([Kdays] Tage) bestätigt haben. Bitte versuchen Registrierung mit einer gültigen und nicht blockiert E-Mail-Konto.';
@@ -385,17 +385,4 @@ $lang['UAM_Tracking confirmations'] = 'Verfolgung Bestätigungen';
 $lang['UAM_Tracking registered users'] = 'Verfolgung registrierte Benutzer';
 $lang['UAM_USRAutoDel'] = 'Nachricht an das automatische Löschen von Konten';
 $lang['UAM_USRAutoMail'] = 'Automatisierte E-Mail-Erinnerung';
-$lang['UAM_AdminValidationMail_Subject'] = 'Manuelle Anpassung des Betreffs der Überprüfungs-E-Mail';
-$lang['UAM_ConfirmMail_ReMail_Subject'] = 'Anpassung des Betreffs der Registrierungs-Bestätigungs-Erinnerungs-E-Mail';
-$lang['UAM_ConfirmMail_Subject'] = 'Anpassung des Betreffs der Registrierungs-Bestätigungs-E-Mail';
-$lang['UAM_Default_AdminValidationMail_Subject'] = '[username] - Registration Überprüfung an [mygallery]';
-$lang['UAM_Default_ConfirmMail_Remail_Subject'] = 'Erinnerung - [username] Registrierung-Bestättigung an [mygallery]';
-$lang['UAM_Default_ConfirmMail_Subject'] = '[username] Registrierung-Bestättigung an [mygallery]';
-$lang['UAM_Default_GTAutoMail_Subject'] = '[username] - Ihr Zugangs-Konto wurde Herabgestuft  [mygallery]';
-$lang['UAM_Default_GTReminder_Subject'] = '[username] - Eine lange Zeit ist seit Ihrem letzten Besuch verganagen [mygallery]';
-$lang['UAM_Default_InfoMail_Subject'] = '[username] - Ihre Registrierung-Information an [mygallery]';
-$lang['UAM_GTAutomail_Subject'] = 'Automatische Anpassung des Betreffs der Ghost-Tracker-Herabstufungs-E-Mail';
-$lang['UAM_GTAutomail_Text'] = 'Anpassen des Herabstufens E-Mail Text';
-$lang['UAM_GTReminder_Subject'] = 'Manuelle Anpassung des Betreffs der Ghost-Tracker-Erinnerungs-E-Mail';
-$lang['UAM_MailInfo_Subject'] = 'Anpassen des Betreffs der Informations-E-Mail';
 ?>
