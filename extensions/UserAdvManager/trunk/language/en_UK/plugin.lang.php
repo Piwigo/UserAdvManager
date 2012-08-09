@@ -419,4 +419,11 @@ $lang['UAM_Default_GTAutoMail_Subject'] = '[username] - Your account has been de
 $lang['UAM_Default_GTReminder_Subject'] = '[username] - A long time passed since your last visit on [mygallery]';
 $lang['UAM_Default_AdminValidationMail_Subject'] = '[username] - Registration validated on [mygallery]';
 // --------- End: New or revised $lang ---- from version 2.40
+
+
+// --------- Starting below: New or revised $lang ---- from version 2.40.4
+$lang['UAM_mail_exclusion_error'] = 'The Piwigo\'s option "The email address is mandatory for all users" has been disabled while the UserAdvancedManager\'s (UAM) plugin option "Exclusion of mail domains" remained active. This combination is illogical and not compatible!<br><br>
+Please, Reactivate the Piwigo\'s option "The email address is mandatory for all users" to be able then to disable UAM\'s option "Exclusion of mail domains" if that\'s what you want.<br><br>
+Note: This message will disappear after you have made the necessary correction and reloaded the admin page.<br><br>';
+// --------- End: New or revised $lang ---- from version 2.40.4
 ?>
