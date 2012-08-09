@@ -28,6 +28,24 @@ function UAM_admin_menu($menu)
 
 
 /**
+ * Triggered on loc_begin_admin_page
+ * 
+ * Check options compatibility
+ */
+function UAM_check_compat()
+{
+  global $conf, $page;
+ 
+  // Check mandatory email address for email exclusion
+  $conf_UAM = unserialize($conf['UserAdvManager']);
+  if (!$conf['obligatory_user_mail_address'] and $conf_UAM[10] = 'true')
+  {
+    array_push($page['warnings'], l10n('UAM_mail_exclusion_error'));
+  }
+}
+
+
+/**
  * Triggered on loc_begin_index
  * 
  * Initiating GhostTracker

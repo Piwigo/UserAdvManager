@@ -294,6 +294,8 @@ Plugin Name: UserAdvManager
 
 -- 2.30.6 : Bug 2618 fixed - Apache crash when php 5.3.10 is used
 
+-- 2.30.7 : Bug 2658 fixed - Compatibility check between UAM's "email exclusion" option and Piwigo's "Mail address is mandatory for all users" to avoid configuration conflicts.
+
 **************************************************************
 ***** Plugin history (branch 2.40 - Piwigo 2.4 compliant)*****
 **************************************************************
@@ -319,5 +321,9 @@ Plugin Name: UserAdvManager
             Update es_ES, thanks to : jpr928
             Update lv_LV, thanks to : agrisans
             Update el_GR, thanks to : bas_alba
+
+-- 2.40.4 : Bug 2658 fixed - Compatibility check between UAM's "email exclusion" option and Piwigo's "Mail address is mandatory for all users" to avoid configuration conflicts.
+            Update el_GR, thanks to : bas_alba
+            Update lv_LV, thanks to : agrisans
 */
 ?>

@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: UserAdvManager
-Version: 2.40.3
+Version: auto
 Description: Renforcer la gestion des utilisateurs - Enforce users management
 Plugin URI: http://piwigo.org/ext/extension_view.php?eid=216
 Author: Nicco, Eric
@@ -257,4 +257,9 @@ WHERE ui.status = "admin"
     return str_replace($search, $replacement, $content);
   }
 }
+
+
+// Check options compatibility between UAM and Piwigo at admin page load
+// ---------------------------------------------------------------------
+add_event_handler('loc_begin_admin_page', 'UAM_check_compat');
 ?>
