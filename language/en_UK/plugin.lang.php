@@ -421,9 +421,9 @@ $lang['UAM_Default_AdminValidationMail_Subject'] = '[username] - Registration va
 // --------- End: New or revised $lang ---- from version 2.40
 
 
-// --------- Starting below: New or revised $lang ---- from version 2.40.4
+// --------- Starting below: New or revised $lang ---- from version 2.40.4 and 2.30.7
 $lang['UAM_mail_exclusion_error'] = 'The Piwigo\'s option "The email address is mandatory for all users" has been disabled while the UserAdvancedManager\'s (UAM) plugin option "Exclusion of mail domains" remained active. This combination is illogical and not compatible!<br><br>
 Please, Reactivate the Piwigo\'s option "The email address is mandatory for all users" to be able then to disable UAM\'s option "Exclusion of mail domains" if that\'s what you want.<br><br>
 Note: This message will disappear after you have made the necessary correction and reloaded the admin page.<br><br>';
-// --------- End: New or revised $lang ---- from version 2.40.4
+// --------- End: New or revised $lang ---- from version 2.40.4 and 2.30.7
 ?>
