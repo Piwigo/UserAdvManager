@@ -390,4 +390,7 @@ $lang['UAM_Error_GTAutoMail_cannot_be_set_without_ConfirmMail'] = 'Konsekvences 
 Lai nodrošinātu konsekvenci, opcija "Automātiskā e-pasta izsūtīšana, mainot grupu/statusu" tika automātiski pārlikta uz "atspējotu".
  <br>
 ';
+$lang['UAM_mail_exclusion_error'] = 'Piwigo opcija "e-pasta adrese obligāta visiem lietotājiem" ir atslēgta kamēr UserAdvancedManager\'s (UAM) spraudņa opcija "E-pasta domēnu izslēgšana" paliek aktīva. Šī kombinācija ir neloģiska un nav derīga! <br><br> 
+Lūdzu, reaktivējiet Piwigo opciju "e-pasta adrese obligāta visiem lietotājiem", lai tā ir iespējota, tad atspējojiet UAM opciju "E-pasta domēnu izslēgšana", ja tas ir tas, ko vēlaties.<br><br>
+Piezīme: Šis paziņojums pazudīs līdz būsiet veicis nepieciešamās korekcijas un par jaunu atvēris administratora lapu.<br><br>  ';
 ?>
