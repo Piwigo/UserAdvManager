@@ -401,4 +401,7 @@ $lang['UAM_Default_GTReminder_Subject'] = '[username] - E\' passato molto tempo 
 $lang['UAM_Default_InfoMail_Subject'] = '[username] - Le tue informazioni di registrazione su [mygallery]';
 $lang['UAM_GTAutomail_Text'] = 'Personalizza testo mail di degrado';
 $lang['UAM_MailInfo_Subject'] = 'Personalizza soggetto dell\'email informativa';
+$lang['UAM_mail_exclusion_error'] = 'L\'opzione per Piwigo "L\'indirizzo email è obbligatorio per tutti gli utenti" è stato disattivato mentre l\'opzione plugin UserAdvancedManager (UAM) "Esclusione domini di posta" è rimasta attiva. Questa combinazione è illogica e non è compatibile!<br><br>
+Si prega di riabilitare in Piwigo "L\'indirizzo email è obbligatorio per tutti gli utenti", al fine di disattivare poi l\'opzione UAM "esclusione domini di posta" se è quello che vuoi.<br><br>
+Nota: Questo messaggio scompare dopo aver effettuato la correzione necessaria e ricaricato la pagina di amministrazione <br>';
 ?>
