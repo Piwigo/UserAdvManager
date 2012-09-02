@@ -101,6 +101,25 @@ Ejemplos :<br>
 @hotmail.com -> con exclusión de direcciones *@hotmail.com<br>
 @hotmail -> con exclusión de todas las direcciones de *@hotmail*';
 $lang['UAM_GTAutoDelTitle'] = 'Mensaje personalizado en cuenta eliminada';
-$lang['UAM_GTAutoGpTitle'] = 'Cambio automático de grupo / estado';
 // --------- End: New or revised $lang ---- from version 2.16.0
+$lang['UAM_ConfirmMail_ReMail_Subject_d'] = 'Ingrese aquí su confirmación de registro personalizado de asunto del correo electrónico (con o sin generación de la llave). <br>
+Por defecto, el campo tiene un texto genérico en Inglés, pero se puede cambiar y utilizar las etiquetas de traducción [lang =?] Del plugin de descripción ampliada si está instalado.
+<br><br>
+Las siguientes etiquetas de personalizaciones adicionales están disponibles sin necesidad de utilizar el plugin Descripción:<br>
+- <b style=&quot;color: red;&quot;>[username]</b>para insertar automáticamente el nombre del usuario de destino del correo electrónico.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> para insertar el título de la galería.';
+$lang['UAM_AdminValidationMail_d'] = 'Cuando un administrador o Webmaster de la galería manualmente confirma manualmente el registro pendiente, una notificación por correo electrónico se envía automáticamente al usuario. Escriba aquí el texto que aparece en este correo electrónico.
+<br><br>
+Siga personalizando el contenido con etiquetas especiales insertadas:<br>
+- <b style=&quot;color: red;&quot;>[username] </b> para insertar automáticamente el nombre del usuario de destino del correo electrónico.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b>para insertar el título de la galería.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b>para insertar la URL de su galería si se define en las opciones de configuración de Piwigo.
+<br><br>
+Para utilizar varios idiomas, puede utilizar las etiquetas del plugin Descripción ampliada, si está activo.';
+$lang['UAM_AdminValidationMail_Subject_d'] = 'Cuando un administrador o Webmaster de la galería confirma manualmente un registro pendiente, una notificación por correo electrónico se envía automáticamente al usuario. Ingrese aquí su validación personalizada de asunto de correo electrónico.<br>
+Por defecto, el campo tiene un texto genérico en Inglés, pero se puede cambiar y utilizar las etiquetas de traducción [lang =?] Del plugin de descripción ampliada si está instalado.
+<br><br>
+Las siguientes etiquetas de personalizaciones adicionales están disponibles sin necesidad de utilizar el plugin Descripción Extendida:<br>
+- <b style=&quot;color: red;&quot;>[nombre de usuario] </b> para insertar automáticamente el nombre del usuario de destino del correo electrónico.<br>
+- <b style=&quot;color: red;&quot;>[mygallery] </b> para insertar el título de la galería.';
 ?>
