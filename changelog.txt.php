@@ -286,7 +286,8 @@ Plugin Name: UserAdvManager
 -- 2.30.4 : Bug 2580 fixed - DE translation files corrupted
 
 -- 2.30.5 : Bug 2583 fixed - help.lang.php was not loaded correctly
-            Bug 2602 fixed - Sql error when Confirmation by admin is set 
+            Bug 2602 fixed - Sql error when Confirmation by admin is set
+            Bug 2570 fixed - Adding Wiki link to complete plugin documentation (FR only)
             en_UK reference translation spellchecking
             de_DE translation updated
             fr_FR translation updated
@@ -294,5 +295,8 @@ Plugin Name: UserAdvManager
 -- 2.30.6 : Bug 2618 fixed - Apache crash when php 5.3.10 is used
 
 -- 2.30.7 : Bug 2658 fixed - Compatibility check between UAM's "email exclusion" option and Piwigo's "Mail address is mandatory for all users" to avoid configuration conflicts.
+
+-- 2.30.8 : Bug 2739 fixed - Error on sending validation email when admins do a manual validation.
+            Bug 2740 fixed - Loggin rejection on unvalidated user connection does not work
 */
 ?>
