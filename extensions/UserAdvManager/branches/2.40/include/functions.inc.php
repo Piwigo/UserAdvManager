@@ -48,11 +48,13 @@ function UAM_check_compat()
 /**
  * Triggered on loc_begin_index
  * 
- * Initiating GhostTracker
+ * Initiating GhostTracker - Perform user logout after registration if not validated
  */
 function UAM_GhostTracker()
 {
   global $conf, $user;
+
+  include_once(PHPWG_ROOT_PATH.'admin/include/functions.php');
 
   $conf_UAM = unserialize($conf['UserAdvManager']);
 
@@ -98,6 +100,14 @@ LIMIT 1
         pwg_query($query);
       }
     }
+  }
+
+  // Perform user logout after registration if not validated
+  if ((isset($conf_UAM[39]) and $conf_UAM[39] == 'true') and !UAM_UsrReg_Verif($user['id']))
+  {
+    invalidate_user_cache();
+    logout_user();
+    redirect(UAM_PATH.'rejected.php');
   }
 }
 
@@ -1525,7 +1535,7 @@ WHERE id = '.$id.'
     // Management of Extension flags ([username], [mygallery])
     // -------------------------------------------------------
     $patterns[] = '#\[username\]#i';
-    $replacements[] = $username;
+    $replacements[] = $result['username'];
     $patterns[] = '#\[mygallery\]#i';
     $replacements[] = $conf['gallery_title'];
 

@@ -17,8 +17,8 @@ $lang['UAM_passwTitle_d'] = 'L\'attivazione di questa opzione rende obbligatorio
 Non vi è prova in campo per misurare la complessità di una password, e può permettersi di avere un\'idea del punteggio per definire personalizzati complessi.<br><br>
 Nota: Il punteggio di una password è calcolato sulla base di diversi parametri: la lunghezza, il tipo di caratteri utilizzati (lettere, numeri, lettere maiuscole, minuscole, caratteri speciali). Un punteggio inferiore a 100 è considerata bassa, da 100 a 500, la complessità è nella media, oltre 500, la sicurezza è eccellente.';
 $lang['UAM_passwtestTitle'] = 'Prova la complessità di una password';
-$lang['UAM_passwtestTitle_d'] = 'Inserisci la password per testare e quindi fare clic su &quot;calcolo del punteggio&quot;, per vedere il risultato.';
-$lang['UAM_passwadmTitle_d'] = 'Un amministratore può creare un\'pseudo con o senza l\'applicazione della regola della complessità di calcolo.<br><br>
+$lang['UAM_passwtestTitle_d'] = 'Inserisci la password per testarla e quindi fare clic su &quot;Calcolo del punteggio&quot;, per vedere il risultato.';
+$lang['UAM_passwadmTitle_d'] = 'Un amministratore può creare un account utente con o senza l\'applicazione della regola della complessità di calcolo.<br><br>
 Nota: Se l\'account utente creato vuole cambiare la password e il rafforzamento password per gli utenti è attivo, sarà soggetta alla regola.';
 $lang['UAM_infomailTitle_d'] = 'Questa opzione consente di automatizzare l\'invio di una e-mail le informazioni a un utente quando cambia la sua password o indirizzo e-mail nel loro profilo.<br><br>
 Il contenuto del messaggio inviato è composto da una parte personalizzabile di introdurre una piccola nota di benvenuto e una parte fissa che indica il login, password e indirizzo di posta elettronica dell\'utente.';
@@ -71,4 +71,7 @@ Personalizzare ulteriormente il contenuto con speciali inserted tags:<br>
 - <b style=&quot;color: red;&quot;>[mygallery]</b> di inserire il vostro URL della galleria se impostato nelle opzioni di configurazione di Piwigo.
 <br>
 Per utilizzare più lingue, è possibile utilizzare i tag del plugin Extended description, se è attivo.';
+$lang['UAM_RejectConnexion_Custom_Txt_d'] = 'Personalizza qui il tuo testo di spiegazione per informare gli utenti non confermati che non potranno accedere alla galleria finché non avranno confermato la loro registrazione.
+<br><br>
+Questo campo è compatibile con l\'Editor FCK e, per il multi-lingue, puoi utilizzare i tags [lang] del plugin Extended description se è attivo.';
 ?>
