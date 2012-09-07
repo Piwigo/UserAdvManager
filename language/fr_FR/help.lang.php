@@ -11,7 +11,7 @@ $lang['UAM_passwtestTitle'] = 'Tester la complexité d\'un mot de passe';
 $lang['UAM_passwtestTitle_d'] = 'Saisir le mot de passe à tester puis cliquer sur le bouton &quot;Calcul du score&quot; pour afficher le résultat.';
 $lang['UAM_passwadmTitle_d'] = 'Un administrateur peut créer un compte d\'utilisateur avec ou sans application de la règle de calcul de complexité.<br><br>
 A noter : Si l\'utilisateur du compte ainsi créé désire changer de mot de passe et que le renforcement des mots de passe pour les utilisateurs est actif, il sera soumis à la règle configurée.';
-$lang['UAM_infomailTitle_d'] = 'Cette option permet d\'automatiser l\'envoi d\'un email d\'information à un utilisateur lorsqu\'il modifie son mot de passe ou son adresse de messagerie dans son profil.<br><br>
+$lang['UAM_infomailTitle_d'] = 'Cette option permet d\'automatiser l\'envoi d\'un email d\'information à un utilisateur lorsqu\'il s\'inscrit ou modifie son mot de passe ou son adresse de messagerie dans son profil.<br><br>
 Le message envoyé comprend une partie fixe (login, mot de passe et adresse email de l\'utilisateur) et une partie personnalisable par un texte d\'accueil.';
 $lang['UAM_remailtxt1Title'] = 'Message de rappel avec regénération de clé';
 $lang['UAM_remailtxt2Title'] = 'Message de rappel sans regénération de clé';
@@ -184,6 +184,19 @@ $lang['UAM_confirmlevelTitle_d'] = '<b style=&quot;color: red;&quot;>ATTENTION :
 Les niveaux de confidentialité à la confirmation sont à utiliser conjointement avec l\'option &quot;Confirmation d\'inscription&quot;';
 $lang['UAM_GTAutoGpTitle_d'] = 'Le changement automatique de groupe, de statut ou de niveau de confidentialité équivaut à une rétrogradation des comptes concernés et fonctionne sur le même principe que le groupe, le statut ou le niveau de confidentialité à la confirmation (voir &quot;Paramétrage des confirmations d\'inscriptions&quot;). Il conviendra donc de définir un groupe ou un statut et/ou un niveau de confidentialité rétrogradant l\'accès à la galerie. Si cela a déjà été défini avec l\'utilisation de la fonction Confirmation d\'inscription, on peut utiliser ces mêmes groupes / statuts / niveaux.<br><br>
 <b style=&quot;color: red;&quot;>Point important :</b> Si un utilisateur fantôme n\'a toujours pas donné signe de vie après le délai imparti et malgré la notification automatique par mail (si activée), il est automatiquement supprimé de la base de données.';
+$lang['UAM_GTAutoMailTitle_d'] = 'Lorsqu\'un compte est expiré (changement de groupe, de statut ou de niveau de confidentialité rétrogradant le visiteur), un email d\'information peut être envoyé pour préciser les raisons de ce changement et le moyen de recouvrer l\'accès initial à la galerie.
+<br>Pour ce faire, un lien de reconfirmation de l\'inscription est joint à l\'email (génération automatique d\'une nouvelle clé de confirmation).<b style=&quot;color: red;&quot;>Si l\'utilisateur a déjà été notifié, son compte est automatiquement détruit.</b> 
+<br><br>
+Saisissez aussi le texte personnalisé qui expliquera les raisons de la rétrogradation et qui accompagnera le lien de confirmation. Le texte personnalisé n\'est pas obligatoire mais vivement conseillé. En effet, vos visiteurs inscrits n\'apprécieront que moyennement de recevoir un email ne contenant qu\'un simple lien sans plus d\'explications. ;-)
+<br><br>
+Personnalisez encore plus le contenu avec les balises d\'insertion spéciales :<br>
+- <b style=&quot;color: red;&quot;>[username]</b> pour insérer automatiquement le nom de l\'utilisateur destinataire de l\'email.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> pour insérer le titre de votre galerie.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> pour insérer l\'URL de votre galerie si renseigné dans les options de configuration de Piwigo.
+<br><br>
+Pour une utilisation multi-langues, vous pouvez utiliser les balises [lang] du plugin Extended Description si celui-ci est actif.
+<br><br>
+<b style=&quot;color: red;&quot;>Attention : L\'emploi de cette fonction est intimement lié à l\'option de confirmation d\'inscription par l\'utilisateur (confirmation par mail) et ne peut pas être activée sans cette option.</b>';
 $lang['UAM_GT_MainTitle_d'] = '
 - Gestion automatique ou manuelle des visiteurs fantômes<br>
 - Mailing<br>
@@ -288,62 +301,4 @@ Un utilisateur apparaitra en vert s\'il a visité la galerie depuis moins de 50 
 <b>Fonction de tri du tableau</b>: Vous pouvez trier les données affichées en cliquant sur les entêtes de colonnes. L\'utilisation de la touche MAJ ou SHIFT permet de trier sur 1 à 4 colonnes simultanées maximum.';
 $lang['UAM_Tracking registered users_d'] = 'Cette option active, dans l\'onglet &quot;Suivi des utilisateurs inscrits&quot;, un tableau recensant les utilisateurs inscrits, la date de leur dernière visite et le nombre de jours écoulés depuis leur dernière visite. Il s\'agit d\'un suivi purement informatif pour l\'administrateur de la galerie.';
 // --------- End: New or revised $lang ---- from version 2.30.3
-
-
-// --------- Starting below: New or revised $lang ---- from version 2.40
-$lang['UAM_AdminValidationMail_Subject_d'] = 'Lorsqu\'un administrateur ou un webmestre de la galerie valide manuellement une inscription en attente, un email de notification est automatiquement envoyé à l\'utilisateur concerné. Saisissez ici un sujet personnalisé pour l\'email de validation manuelle.<br>
-Par défaut, le champ comporte un texte générique en français mais vous pouvez le changer et utiliser les balises de traduction [lang=??] du plugin Extended Description s\'il est installé.
-<br><br>
-De plus les balises de personnalisations suivantes sont utilisables sans l\'aide du plugin Extended Description:<br>
-- <b style=&quot;color: red;&quot;>[username]</b> pour insérer automatiquement le nom de l\'utilisateur destinataire de l\'email.<br>
-- <b style=&quot;color: red;&quot;>[mygallery]</b> pour insérer le titre de votre galerie.<br>
-';
-$lang['UAM_ConfirmMail_Subject_d'] = 'Saisissez ici un sujet personnalisé pour l\'email de confirmation d\'inscription.<br>
-Par défaut, le champ comporte un texte générique en français mais vous pouvez le changer et utiliser les balises de traduction [lang=??] du plugin Extended Description s\'il est installé.
-<br><br>
-De plus les balises de personnalisations suivantes sont utilisables sans l\'aide du plugin Extended Description:<br>
-- <b style=&quot;color: red;&quot;>[username]</b> pour insérer automatiquement le nom de l\'utilisateur destinataire de l\'email.<br>
-- <b style=&quot;color: red;&quot;>[mygallery]</b> pour insérer le titre de votre galerie.<br>
-';
-$lang['UAM_ConfirmMail_ReMail_Subject_d'] = 'Saisissez ici un sujet personnalisé pour l\'email de rappel de confirmation d\'inscription (avec ou sans renouvellement de clé).<br>
-Par défaut, le champ comporte un texte générique en français mais vous pouvez le changer et utiliser les balises de traduction [lang=??] du plugin Extended Description s\'il est installé.
-<br><br>
-De plus les balises de personnalisations suivantes sont utilisables sans l\'aide du plugin Extended Description:<br>
-- <b style=&quot;color: red;&quot;>[username]</b> pour insérer automatiquement le nom de l\'utilisateur destinataire de l\'email.<br>
-- <b style=&quot;color: red;&quot;>[mygallery]</b> pour insérer le titre de votre galerie.<br>
-';
-$lang['UAM_GTReminder_Subject_d'] = 'Saisissez ici un sujet personnalisé pour l\'email de rappel du Ghost Tracker.<br>
-Par défaut, le champ comporte un texte générique en français mais vous pouvez le changer et utiliser les balises de traduction [lang=??] du plugin Extended Description s\'il est installé.
-<br><br>
-De plus les balises de personnalisations suivantes sont utilisables sans l\'aide du plugin Extended Description:<br>
-- <b style=&quot;color: red;&quot;>[username]</b> pour insérer automatiquement le nom de l\'utilisateur destinataire de l\'email.<br>
-- <b style=&quot;color: red;&quot;>[mygallery]</b> pour insérer le titre de votre galerie.<br>
-';
-$lang['UAM_GTAutomail_Subject_d'] = 'Saisissez ici un sujet personnalisé pour l\'email de rétrogradation automatique du Ghost Tracker.<br>
-Par défaut, le champ comporte un texte générique en français mais vous pouvez le changer et utiliser les balises de traduction [lang=??] du plugin Extended Description s\'il est installé.
-<br><br>
-De plus les balises de personnalisations suivantes sont utilisables sans l\'aide du plugin Extended Description:<br>
-- <b style=&quot;color: red;&quot;>[username]</b> pour insérer automatiquement le nom de l\'utilisateur destinataire de l\'email.<br>
-- <b style=&quot;color: red;&quot;>[mygallery]</b> pour insérer le titre de votre galerie.<br>
-';
-$lang['UAM_GTAutoMailTitle_d'] = 'Lorsqu\'un compte est expiré (changement de groupe, de statut ou de niveau de confidentialité rétrogradant le visiteur), un email d\'information peut être envoyé pour préciser les raisons de ce changement et le moyen de recouvrer l\'accès initial à la galerie.
-<br>Pour ce faire, un lien de reconfirmation de l\'inscription est joint à l\'email (génération automatique d\'une nouvelle clé de confirmation). <b style=&quot;color: red;&quot;>Si l\'utilisateur a déjà été notifié, son compte est automatiquement détruit.</b> 
-<br><br>
-<b style=&quot;color: red;&quot;>Attention : L\'emploi de cette fonction est intimement lié à l\'option de confirmation d\'inscription par l\'utilisateur (confirmation par mail) et ne peut pas être activée sans cette option.</b>';
-$lang['UAM_GTAutomail_Text_d'] = 'Saisissez ici le texte personnalisé qui expliquera les raisons de la rétrogradation et qui accompagnera le lien de confirmation. Le texte personnalisé n\'est pas obligatoire mais vivement conseillé. En effet, vos visiteurs inscrits n\'apprécieront que moyennement de recevoir un email ne contenant qu\'un simple lien sans plus d\'explications. ;-)
-<br><br>
-Personnalisez encore plus le contenu avec les balises d\'insertion spéciales :<br>
-- <b style=&quot;color: red;&quot;>[username]</b> pour insérer automatiquement le nom de l\'utilisateur destinataire de l\'email.<br>
-- <b style=&quot;color: red;&quot;>[mygallery]</b> pour insérer le titre de votre galerie.<br>
-- <b style=&quot;color: red;&quot;>[myurl]</b> pour insérer l\'URL de votre galerie si renseigné dans les options de configuration de Piwigo.
-<br><br>
-Pour une utilisation multi-langues, vous pouvez utiliser les balises [lang] du plugin Extended Description si celui-ci est actif.';
-$lang['UAM_MailInfo_Subject_d'] = 'Saisissez ici un sujet personnalisé pour l\'email d\'information.<br>
-Par défaut, le champ comporte un texte générique en français mais vous pouvez le changer et utiliser les balises de traduction [lang=??] du plugin Extended Description s\'il est installé.
-<br><br>
-De plus les balises de personnalisations suivantes sont utilisables sans l\'aide du plugin Extended Description:<br>
-- <b style=&quot;color: red;&quot;>[username]</b> pour insérer automatiquement le nom de l\'utilisateur destinataire de l\'email.<br>
-- <b style=&quot;color: red;&quot;>[mygallery]</b> pour insérer le titre de votre galerie.<br>
-';
-// --------- End: New or revised $lang ---- from version 2.40
 ?>

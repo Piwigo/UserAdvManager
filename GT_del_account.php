@@ -27,7 +27,7 @@ if (isset($conf_UAM[23]) and $conf_UAM[23] <> '')
   $patterns[] = '#\[mygallery\]#i';
   $replacements[] = $conf['gallery_title'];
   $patterns[] = '#\[myurl\]#i';
-  $replacements[] = get_gallery_home_url();
+  $replacements[] = $conf['gallery_url'];
 
   if (function_exists('get_user_language_desc'))
   {
@@ -35,12 +35,10 @@ if (isset($conf_UAM[23]) and $conf_UAM[23] <> '')
   }
   else $custom_text = l10n(preg_replace($patterns, $replacements, $conf_UAM[23]));
 }
-
-$Path_UAM = UAM_PATH; // Path to be used in template to reach the icons
-
+    
 $template->assign(
   array(
-    'UAM_PATH'             => $Path_UAM,
+    'GALLERY_URL'          => make_index_url(),
     'CUSTOM_REDIR_MSG'     => $custom_text,
   )
 );

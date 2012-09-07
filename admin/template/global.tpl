@@ -230,57 +230,29 @@ function uam_blockToggleDisplay( headerId, contentId )
 
           <fieldset>
           <ul>
-            <p class="new_in_version">{'UAM_NewFeature'|@translate}</p>
             <li>
-            <div class="uam_new">
-              <label class="cluetip" title="{'UAM_AdminValidationMail_Subject'|translate}|{'UAM_AdminValidationMail_Subject_d'|translate}">
-                {'UAM_AdminValidationMail_Subject'|@translate}
+              <label class="cluetip" title="{'UAM_AdminValidationMail_Text'|translate}|{'UAM_AdminValidationMail_d'|translate}">
+                {'UAM_AdminValidationMail_Text'|@translate}
               </label>
             <br><br>
-              &nbsp;&nbsp;<textarea class="uam_textfields" name="UAM_AdminValidationMail_Subject" id="UAM_AdminValidationMail_Subject" rows="5" {$TAG_INPUT_ENABLED}>{$UAM_ADMINVALIDATIONMAIL_SUBJECT}</textarea>
+              <textarea class="uam_textfields" name="UAM_AdminValidationMail_Text" id="UAM_AdminValidationMail_Text" rows="10" {$TAG_INPUT_ENABLED}>{$UAM_ADMINVALIDATIONMAIL_TEXT}</textarea>
             <br><br>
-            </div>
             </li>
-
-            <ul>
-              <li>
-                <label class="cluetip" title="{'UAM_AdminValidationMail_Text'|translate}|{'UAM_AdminValidationMail_d'|translate}">
-                  {'UAM_AdminValidationMail_Text'|@translate}
-                </label>
-              <br><br>
-                <textarea class="uam_textfields" name="UAM_AdminValidationMail_Text" id="UAM_AdminValidationMail_Text" rows="10" {$TAG_INPUT_ENABLED}>{$UAM_ADMINVALIDATIONMAIL_TEXT}</textarea>
-              <br><br>
-              </li>
-            </ul>
           </ul>
 
           <ul>
-            <p class="new_in_version">{'UAM_NewFeature'|@translate}</p>
             <li>
-            <div class="uam_new">
-              <label class="cluetip" title="{'UAM_ConfirmMail_Subject'|translate}|{'UAM_ConfirmMail_Subject_d'|translate}">
-                {'UAM_ConfirmMail_Subject'|@translate}
+              <label class="cluetip" title="{'UAM_ConfirmMail_Text'|translate}|{'UAM_confirmtxtTitle_d'|translate}">
+                {'UAM_ConfirmMail_Text'|@translate}
               </label>
             <br><br>
-              &nbsp;&nbsp;<textarea class="uam_textfields" name="UAM_ConfirmMail_Subject" id="UAM_ConfirmMail_Subject" rows="5" {$TAG_INPUT_ENABLED}>{$UAM_CONFIRMMAIL_SUBJECT}</textarea>
+            {if $UAM_ERROR_REPORTS2}
+                <textarea class="uam_textfields" name="UAM_ConfirmMail_Text" id="UAM_ConfirmMail_Text" rows="10" style="color: red" {$TAG_INPUT_ENABLED}>{$UAM_CONFIRMMAIL_TEXT}</textarea>
+            {else}
+                <textarea class="uam_textfields" name="UAM_ConfirmMail_Text" id="UAM_ConfirmMail_Text" rows="10" {$TAG_INPUT_ENABLED}>{$UAM_CONFIRMMAIL_TEXT}</textarea>
+            {/if}
             <br><br>
-            </div>
             </li>
-
-            <ul>
-              <li>
-                <label class="cluetip" title="{'UAM_ConfirmMail_Text'|translate}|{'UAM_confirmtxtTitle_d'|translate}">
-                  {'UAM_ConfirmMail_Text'|@translate}
-                </label>
-              <br><br>
-              {if $UAM_ERROR_REPORTS2}
-                  <textarea class="uam_textfields" name="UAM_ConfirmMail_Text" id="UAM_ConfirmMail_Text" rows="10" style="color: red" {$TAG_INPUT_ENABLED}>{$UAM_CONFIRMMAIL_TEXT}</textarea>
-              {else}
-                  <textarea class="uam_textfields" name="UAM_ConfirmMail_Text" id="UAM_ConfirmMail_Text" rows="10" {$TAG_INPUT_ENABLED}>{$UAM_CONFIRMMAIL_TEXT}</textarea>
-              {/if}
-              <br><br>
-              </li>
-            </ul>
 <!--
             {* if 'FCK_PATH'|@defined *}
               <div style="text-align:right;">
@@ -288,7 +260,7 @@ function uam_blockToggleDisplay( headerId, contentId )
               </div>
             {* /if *}
 -->
-          <br><hr><br>
+
             <li>
               <label class="cluetip" title="{'UAM_confirmmail_custom_Txt1'|translate}|{'UAM_confirmmail_custom1_d'|translate}">
                 {'UAM_confirmmail_custom_Txt1'|@translate}
@@ -320,7 +292,9 @@ function uam_blockToggleDisplay( headerId, contentId )
           </fieldset>
 
           <fieldset>
+          <div class="uam_new">
             <ul>
+              <p class="new_in_version">{'UAM_NewFeature'|@translate}</p>
          	    <li>
                 <label class="cluetip" title="{'UAM_RejectConnexion'|translate}|{'UAM_RejectConnexion_d'|translate}">
                   {'UAM_RejectConnexion'|@translate}
@@ -353,8 +327,9 @@ function uam_blockToggleDisplay( headerId, contentId )
               </div>
             {/if}
             </ul>
+          </div>
 
-          <br><hr><br>
+          <br>
 
           <ul>
             <div id="uam_notice">{'UAM_Confirm_grpstat_notice'|@translate}</div>
@@ -484,31 +459,18 @@ function uam_blockToggleDisplay( headerId, contentId )
               </li>
 
               <ul>
-                <p class="new_in_version">{'UAM_NewFeature'|@translate}</p>
                 <li>
-                <div class="uam_new">
-                  <label class="cluetip" title="{'UAM_ConfirmMail_ReMail_Subject'|translate}|{'UAM_ConfirmMail_ReMail_Subject_d'|translate}">
-                    {'UAM_ConfirmMail_ReMail_Subject'|@translate}
+                  <label class="cluetip" title="{'UAM_remailtxt1Title'|translate}|{'UAM_remailtxt1Title_d'|translate}">
+                    {'UAM_ConfirmMail_ReMail_Txt1'|@translate}
                   </label>
                 <br><br>
-                  &nbsp;&nbsp;<textarea class="uam_textfields" name="UAM_ConfirmMail_Remail_Subject" id="UAM_ConfirmMail_Remail_Subject" rows="5" {$TAG_INPUT_ENABLED}>{$UAM_CONFIRMMAIL_REMAIL_SUBJECT}</textarea>
-                <br><br>
-                </div>
-                </li>
-
-                <ul>
-                  <li>
-                    <label class="cluetip" title="{'UAM_remailtxt1Title'|translate}|{'UAM_remailtxt1Title_d'|translate}">
-                      {'UAM_ConfirmMail_ReMail_Txt1'|@translate}
-                    </label>
-                  <br><br>
-                  {if $UAM_ERROR_REPORTS3}
+                {if $UAM_ERROR_REPORTS3}
                     <textarea class="uam_textfields" name="UAM_ConfirmMail_ReMail_Txt1" id="UAM_ConfirmMail_ReMail_Txt1" rows="10" style="color: red" {$TAG_INPUT_ENABLED}>{$UAM_CONFIRMMAIL_REMAIL_TXT1}</textarea>
-                  {else}
+                {else}
                     <textarea class="uam_textfields" name="UAM_ConfirmMail_ReMail_Txt1" id="UAM_ConfirmMail_ReMail_Txt1" rows="10" {$TAG_INPUT_ENABLED}>{$UAM_CONFIRMMAIL_REMAIL_TXT1}</textarea>
-                  {/if}
-                  <br><br>
-                  </li>
+                {/if}
+                <br><br>
+                </li>
 <!--
                 {* if 'FCK_PATH'|@defined *}
                   <div style="text-align:right;">
@@ -517,18 +479,18 @@ function uam_blockToggleDisplay( headerId, contentId )
                 {* /if *}
 -->
 
-                  <li>
-                    <label class="cluetip" title="{'UAM_remailtxt2Title'|translate}|{'UAM_remailtxt2Title_d'|translate}">
-                      {'UAM_ConfirmMail_ReMail_Txt2'|@translate}
-                    </label>
-                  <br><br>
-                  {if $UAM_ERROR_REPORTS4}
+                <li>
+                  <label class="cluetip" title="{'UAM_remailtxt2Title'|translate}|{'UAM_remailtxt2Title_d'|translate}">
+                    {'UAM_ConfirmMail_ReMail_Txt2'|@translate}
+                  </label>
+                <br><br>
+                {if $UAM_ERROR_REPORTS4}
                     <textarea class="uam_textfields" name="UAM_ConfirmMail_ReMail_Txt2" id="UAM_ConfirmMail_ReMail_Txt2" rows="10" style="color: red" {$TAG_INPUT_ENABLED}>{$UAM_CONFIRMMAIL_REMAIL_TXT2}</textarea>
-                  {else}
+                {else}
                     <textarea class="uam_textfields" name="UAM_ConfirmMail_ReMail_Txt2" id="UAM_ConfirmMail_ReMail_Txt2" rows="10" {$TAG_INPUT_ENABLED}>{$UAM_CONFIRMMAIL_REMAIL_TXT2}</textarea>
-                  {/if}
-                  <br>
-                  </li>
+                {/if}
+                <br>
+                </li>
 <!--
                 {* if 'FCK_PATH'|@defined *}
                   <div style="text-align:right;">
@@ -536,8 +498,6 @@ function uam_blockToggleDisplay( headerId, contentId )
                   </div>
                 {* /if *}
 -->
-
-                </ul>
               </ul>
             </ul>
             </fieldset>
@@ -629,30 +589,16 @@ function uam_blockToggleDisplay( headerId, contentId )
           <br><br>
           </li>
 
-          <fieldset>
+          <fieldset>          
           <ul>
-            <p class="new_in_version">{'UAM_NewFeature'|@translate}</p>
             <li>
-            <div class="uam_new">
-              <label class="cluetip" title="{'UAM_GTReminder_Subject'|translate}|{'UAM_GTReminder_Subject_d'|translate}">
-                {'UAM_GTReminder_Subject'|@translate}
+              <label class="cluetip" title="{'UAM_GhostTracker_ReminderText'|translate}|{'UAM_gttextTitle_d'|translate}">
+                {'UAM_GhostTracker_ReminderText'|@translate}
               </label>
             <br><br>
-              &nbsp;&nbsp;<textarea class="uam_textfields" name="UAM_GTReminder_Subject" id="UAM_GTReminder_Subject" rows="5" {$TAG_INPUT_ENABLED}>{$UAM_GTREMINDER_SUBJECT}</textarea>
+              <textarea class="uam_textfields" name="UAM_GhostTracker_ReminderText" id="UAM_GhostTracker_ReminderText" rows="10" {$TAG_INPUT_ENABLED}>{$UAM_GHOSTRACKER_REMINDERTEXT}</textarea>
             <br><br>
-            </div>
             </li>
-
-            <ul>
-              <li>
-                <label class="cluetip" title="{'UAM_GhostTracker_ReminderText'|translate}|{'UAM_gttextTitle_d'|translate}">
-                  {'UAM_GhostTracker_ReminderText'|@translate}
-                </label>
-              <br><br>
-                <textarea class="uam_textfields" name="UAM_GhostTracker_ReminderText" id="UAM_GhostTracker_ReminderText" rows="10" {$TAG_INPUT_ENABLED}>{$UAM_GHOSTRACKER_REMINDERTEXT}</textarea>
-              <br><br>
-              </li>
-            </ul>
 <!--
             {* if 'FCK_PATH'|@defined *}
               <div style="text-align:right;">
@@ -744,29 +690,9 @@ function uam_blockToggleDisplay( headerId, contentId )
                       <br>
                         <input type="radio" value="true" {$UAM_GTAUTOMAIL_TRUE} name="UAM_GTAutoMail">
                           {'UAM_Enable'|@translate}
+                      <br><br><br>
+                        <textarea class="uam_textfields" name="UAM_GTAutoMailText" id="UAM_GTAutoMailText" rows="10" {$TAG_INPUT_ENABLED}>{$UAM_GTAUTOMAILTEXT}</textarea>
                       <br><br>
-                        <p class="new_in_version">{'UAM_NewFeature'|@translate}</p>
-                        <li>
-                        <div class="uam_new">
-                          <label class="cluetip" title="{'UAM_GTAutomail_Subject'|translate}|{'UAM_GTAutomail_Subject_d'|translate}">
-                            {'UAM_GTAutomail_Subject'|@translate}
-                          </label>
-                        <br><br>
-                          &nbsp;&nbsp;<textarea class="uam_textfields" name="UAM_GTAutoMail_Subject" id="UAM_GTAutoMail_Subject" rows="5" {$TAG_INPUT_ENABLED}>{$UAM_GTAUTOMAIL_SUBJECT}</textarea>
-                        <br><br>
-                        </div>
-                        </li>
-
-                        <ul>
-                          <li>
-                            <label class="cluetip" title="{'UAM_GTAutomail_Text'|translate}|{'UAM_GTAutomail_Text_d'|translate}">
-                              {'UAM_GTAutomail_Text'|@translate}
-                            </label>
-                          <br><br>
-                            <textarea class="uam_textfields" name="UAM_GTAutoMailText" id="UAM_GTAutoMailText" rows="10" {$TAG_INPUT_ENABLED}>{$UAM_GTAUTOMAILTEXT}</textarea>
-                          <br><br>
-                          </li>
-                        </ul>
                       </li>
                     </ul>
                   </li>
@@ -821,29 +747,15 @@ function uam_blockToggleDisplay( headerId, contentId )
                 {'UAM_Enable'|@translate}
             <br><br>
             </li>
-            
-            <p class="new_in_version">{'UAM_NewFeature'|@translate}</p>
+
             <li>
-            <div class="uam_new">
-              <label class="cluetip" title="{'UAM_MailInfo_Subject'|translate}|{'UAM_MailInfo_Subject_d'|translate}">
-                {'UAM_MailInfo_Subject'|@translate}
+              <label class="cluetip" title="{'UAM_MailInfo_Text'|translate}|{'UAM_infotxtTitle_d'|translate}">
+                {'UAM_MailInfo_Text'|@translate}
               </label>
             <br><br>
-              &nbsp;&nbsp;<textarea class="uam_textfields" name="UAM_InfoMail_Subject" id="UAM_InfoMail_Subject" rows="5" {$TAG_INPUT_ENABLED}>{$UAM_INFOMAIL_SUBJECT}</textarea>
+              <textarea class="uam_textfields" name="UAM_MailInfo_Text" id="UAM_MailInfo_Text" rows="10" {$TAG_INPUT_ENABLED}>{$UAM_MAILINFO_TEXT}</textarea>
             <br><br>
-            </div>
             </li>
-
-            <ul>
-              <li>
-                <label class="cluetip" title="{'UAM_MailInfo_Text'|translate}|{'UAM_infotxtTitle_d'|translate}">
-                  {'UAM_MailInfo_Text'|@translate}
-                </label>
-              <br><br>
-                <textarea class="uam_textfields" name="UAM_MailInfo_Text" id="UAM_MailInfo_Text" rows="10" {$TAG_INPUT_ENABLED}>{$UAM_MAILINFO_TEXT}</textarea>
-              <br><br>
-              </li>
-            </ul>
 <!--
             {* if 'FCK_PATH'|@defined *}
               <div style="text-align:right;">

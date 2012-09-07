@@ -19,6 +19,7 @@ $lang['UAM_Link: %s'] = 'Por favor, haga clic en este enlace para confirmar su r
 /* Email confirmation page */
 $lang['UAM_title_confirm_mail'] = 'Validar su inscripción';
 $lang['UAM_confirm_mail_page_title'] = 'Validar su inscripción';
+$lang['confirm_mail_ok'] = '<br><br><br>Gracias por haber confirmado su dirección de correo electrónico y su registro en la galería. ¡Que disfrute!<br><br><br><br>';
 
 
 /* Errors and Warnings */
@@ -128,6 +129,7 @@ $lang['UAM_Validated_Status'] = 'Situación de los usuarios que han validado su 
 $lang['UAM_ValidationLimit_Info'] = 'Plazo para la validación de registro limitado';
 $lang['UAM_ConfirmMail_TimeOut_true'] = ' Activar. Número de días hasta el vencimiento: ';
 $lang['UAM_ConfirmMail_Remail'] = 'Recuerde a los usuarios no validados';
+$lang['UAM_ConfirmMail_Remail_true'] = ' Activar';
 $lang['UAM_ConfirmMail_ReMail_Txt1'] = 'Personalización del mensaje recordatorio <b><u>con</u></b> la regeneración de validación de claves.';
 $lang['UAM_ConfirmMail_ReMail_Txt2'] = 'Personalización del mensaje recordatorio <b><u>sin</u></b> la regeneración de la validación de claves.';
 
@@ -144,6 +146,7 @@ $lang['UAM_GhostTracker_Init'] = 'Si habilita esta función por primera vez o ha
 $lang['UAM_Add of %s'] = 'Perfil creado para %s';
 $lang['UAM_Update of %s'] = '%s Perfil actualizado';
 /* Email confirmation page */
+$lang['confirm_mail_bad'] = '<br><br><br>Su clave de activación es incorrecta o está vencida o ya ha validado su cuenta, por favor, póngase en contacto con el webmaster para solucionar este problema.<br><br><br><br>';
 /* Mailing */
 $lang['UAM_Ghost_reminder_of_%s'] = '%s, este es un recordatorio por correo electrónico';
 $lang['UAM_Reminder_with_key_of_%s'] = '%s, su clave de validación se ha renovado';
@@ -251,150 +254,4 @@ $lang['UAM_RedirToProfile'] = 'Redirigir a la página de personalización';
 $lang['UAM_GTAutoGp'] = 'Cambio automático de grupo / estado / nivel de confidencialidad';
 $lang['UAM_GTAutoMail'] = 'Automáticamente el envío de un correo electrónico cuando se cambia de grupo / estado / nivel de confidencialidad';
 // --------- End: New or revised $lang ---- from version 2.30.2
-$lang['UAM %d user pwdreseted'] = 'Se pide renovación de contraseña para el usuario %d';
-$lang['UAM %d users pwdreseted'] = 'Se pide renovación de contraseña para los usuarios %d';
-$lang['UAM_AdminValidationMail_Subject'] = 'Personalizar el asunto del correo electrónico de validación manual';
-$lang['UAM_Admins cannot be pwdreset'] = 'La renovación de contraseña no puede ser solicitada para un administrador';
-$lang['UAM_Bad_version_backup'] = 'La versión del fichero de copia de seguridad no corresponde con la versión del plugin ! La restauración no se realizo.';
-$lang['UAM_ConfirmMail_ReMail_Subject'] = 'Personalizar el asunto del correo electrónico de recordatorio de confirmación de inscripción.';
-$lang['UAM_ConfirmMail_Subject'] = 'Personalizar el asunto del correo electrónico de confirmación de inscripción.';
-$lang['UAM_Confirm_Level'] = 'Nivel de confidencialidad<br>(------- para conservar el valor por defecto de Piwigo';
-$lang['UAM_CustomPasswRetr'] = 'Personalizar el contenido del correo electrónico de contraseña perdida';
-$lang['UAM_mail_exclusion_error'] = 'La opción Piwigo "El correo electrónico es obligatorio para todos los usuarios", ha sido desactiva cuando la opción del plugin UserAdvancedManager de (UAM) "Exclusión de dominios de correo" se mantuvo activo. Esta combinación es ilógica y no compatible! <br><br>
-Por favor, vuelva a activar la opción Piwigo "El correo electrónico es obligatorio para todos los usuarios" para poder luego desactivar la opción UAM "Exclusión de dominios de correo" si eso es lo que quieres. <br><br>
-Nota:. Este mensaje desaparecerá después de haber hecho las correcciones necesarias y volver a cargar la página de administración <br><br>';
-$lang['UAM_Tracking confirmations'] = 'Confirmaciones de seguimiento';
-$lang['UAM_Tracking registered users'] = 'Confirmaciones de usuarios registrados';
-$lang['UAM_USRAuto'] = 'Gestión automática de los usuarios no confirmados';
-$lang['UAM_USRAutoDel'] = 'Mensaje personalizado de cuenta eliminada';
-$lang['UAM_USRAutoMail'] = 'Recordatorio por correo electrónico automatizado';
-$lang['UAM_Valid_Level'] = 'Nivel de privacidad  para los usuarios que hayan confirmado su inscripción<br>';
-$lang['UAM_Webmaster cannot be pwdreset'] = 'La contraseña de webmaster no puede ser renovada !';
-$lang['UAM_You cannot pwdreset your account'] = 'Renovación de contraseñas no se pueden establecer para su propia cuenta!';
-$lang['UAM_You need to confirm pwdreset'] = 'Debe confirmar la renovación de contraseñas (casilla de verificación)!';
-$lang['UAM_Title5'] = 'Diversas opciones';
-$lang['UAM_Tips2_txt'] = '    <ul>
-       <li>
-        Objetivos: Informar al visitante que el registro está pendiente de confirmación mediante la publicación de una página adicional en sustitución de la galería índice de página estándar en cada una de estas conexiones, y esto, como el registro no ha sido aprobado.
-            <br><br>
-Las ventajas sobre el método con PWG_Stuffs: Permitir información de formato y visualización de la información de forma inmediata tras el registro de visitantes.
-            </li><br><br>
-            <li>
-Requisitos:<br>
-- Una galería con todas o algunas categorías particulares, visible sólo por usuarios registrados<br>
-- Por lo menos 2 de los siguientes grupos Piwigo usuarios: "Espera," sin permiso en las categorías privadas, y "confirmado" con todos los permisos en la categoría privado<br>
-- UAM plugin<br>
-- El plugin Páginas Adicionales para agregar y administrar una página adicional para reemplazar la página de índice por defecto de la galería<br>
-- Opcionalmente, el plug-in Descripción extendida para soportar múltiples idiomas<br>
-            </li><br><br>
-            <li>
-Stages:<br><br>
-A. En el plugin UAM:
-               <ol>
-                 <li> Habilitar confirmación de registro </ li>
-                 <li> Introduzca el texto para la explicación adicional que se adjuntará al correo de confirmación de registro. Si el plug-in Descripción ampliada está activada, las etiquetas de idioma se pueden utilizar </ li>
-                 <li> Seleccione el grupo "Esperar" de la sección "Para los usuarios que no hayan confirmado su inscripción" </ li>
-                 <li> Seleccione el grupo "Confirmado" de la sección "Para los usuarios que hayan confirmado su inscripción" </ li>
-                 <li> Guardar la configuración del plugin </ li>
-               </ ol>
-<br>
-B. En el plugin páginas adicionales: <br>
-                 <b> NOTA: La gestión de los derechos de acceso de los grupos en páginas adicionales debe estar activada (consulte Configuración del plugin de configuración) </b>.
-                 <br>
-               <ol>
-                 <li> Añadir una nueva página con al menos los siguientes parámetros: </ li>
-                 <ul>
-                   <li> nombre de la página: El nombre que desea dar a la página adicional (es decir: El registro no confirmado) </ li>
-                   <li> Como página de inicio comprobado </ li>
-                   <li>Grupos permitido: Marque la casilla correspondiente al grupo "Espera" configurada en la UAM </ li>
-                   <li> Contenido:. El texto que desea utilizar para los visitantes </ li>
-                 </ ul>
-                 <br>
-                 <li> Y eso es todo! Sólo los visitantes registrados y cuyo registro no ha sido confirmada veran esta página de índice adicional. </ Li>
-               </ ol>
-             </ li>
-           </ ul>
-';
-$lang['UAM_Tips2'] = 'Informacion UAM y Additional Pages de registros no confirmados';
-$lang['UAM_Stuffs_Desc'] = 'Adjuntar un bloque de informacion para los usuarion no confirmados';
-$lang['UAM_Tips1'] = 'Informacion UAM y PWG_Stuffs de registros no confirmados';
-$lang['UAM_Save'] = 'Ejecutar copia de seguridad';
-$lang['UAM_Restore_File'] = 'Restaurar la configuración';
-$lang['UAM_Restore'] = 'Para restaurar el archivo de copia de seguridad de su configuración. Sólo el archivo guardado en el servidor se toma en cuenta.
-<br><br>
-<b style="color: red;"> Cuidado con la versión de copia de seguridad! <br> Una copia de seguridad a partir de una versión del plugin sólo se pueden restaurar en la misma versión. </ b>';
-$lang['UAM_Restoration_OK'] = 'Restauración de la configuración completada con éxito! Vuelve a cargar la página de administración UAM para ver la configuración restaurada.';
-$lang['UAM_Restoration_NOK'] = 'Se produjo un error mientras se restaura la configuración. Por favor, compruebe la validez de su archivo de copia de seguridad.';
-$lang['UAM_Reject_Page_Title'] = 'Conexión no permitida !';
-$lang['UAM_RejectConnexion_Custom_Txt'] = 'Personalización del texto de rechazo';
-$lang['UAM_RejectConnexion'] = 'Rechazar conexión del usuario hasta que el registro se confirma';
-$lang['UAM_PwdReset_Todo'] = 'Contraseñas a renovar';
-$lang['UAM_PwdReset_NA'] = 'Contraseña original';
-$lang['UAM_PwdReset'] = 'Renovar contraseña';
-$lang['UAM_Password_Reset_Msg'] = 'Por favor cambie su contraseña';
-$lang['UAM_PwdReset_Done'] = 'Contraseña renovada';
-$lang['UAM_Password reset selected users'] = 'Solicitud de renovación de contraseñas para usuarios seleccionados';
-$lang['UAM_No_Valid_Level'] = 'Nivel de privacidad  para los usuarios que no hayan confirmado su inscripción';
-$lang['UAM_No_Usermanager'] = 'Ningún visitante sin confirmar en lista por el momento';
-$lang['UAM_No_Userlist'] = 'Ningún visitante en lista por el momento';
-$lang['UAM_No_Ghosts'] = 'Ningún visitante por ahora';
-$lang['UAM_No_Backup_File'] = 'Copia de seguridad de archivos no disponibles!';
-$lang['UAM_NewFeature'] = 'Nueva característica!';
-$lang['UAM_MailInfo_Subject'] = 'Personalice la información email';
-$lang['UAM_MiscOptions'] = 'Otras varias opciones';
-$lang['UAM_MailExclusion_No'] = 'Dominios de exclusión E-mail - No disponible porque las direcciones de correos electrónicos no son obligatorias para las inscripciones!';
-$lang['UAM_Guest cannot be pwdreset'] = 'Renovación de contraseñas no se pueden establecer para visitantes';
-$lang['UAM_GTReminder_Subject'] = 'Personalización manual del Rastreador de Ghost de recordatorio de asunto del correo electrónico';
-$lang['UAM_Generic cannot be pwdreset'] = 'Renovación de contraseñas no se pueden establecer para cuentas genéricas!';
-$lang['UAM_GTAutomail_Subject'] = 'Personalizar el Rastreador automático Ghost de degradación de asunto de correo electrónico.';
-$lang['UAM_GTAutomail_Text'] = 'Personalización del texto de degradación por correo electrónico';
-$lang['UAM_Expired_Level'] = '<b>Nivel de privacidad</b> para el registro de usuario ha caducado<br>';
-$lang['UAM_Error_Using_illegal_flag'] = 'Error de sintaxis! El [Kdays] bandera Autotexto se utiliza como "Fecha límite de confirmación de registro limitado" opción no se activará. Por favor, activar la opción o corregir el campo de texto (s) de color rojo.';
-$lang['UAM_Error_Using_illegal_Kdays'] = 'Mediante las etiquetas [días K] sólo se permite si el plazo para la confirmación de la inscripción limitada está activo. Consulte el campo de texto en rojo para corregir el problema.';
-$lang['UAM_Dump_OK'] = 'Archivo de copia de seguridad creado con éxito';
-$lang['UAM_Dump_NOK'] = 'Error: No se puede crear el archivo de copia de seguridad!';
-$lang['UAM_Dump_Download'] = 'Para descargar el archivo de copia de seguridad, por favor marque esta casilla:';
-$lang['UAM_DumpTxt'] = 'Haga una copia de seguridad y restaura su configuración';
-$lang['UAM_Default_ValidationTimeout_Txt'] = 'Lo sentimos, su cuenta ha sido borrada porque no ha confirmado su inscripción en el tiempo solicitado ([Kdays] días). Por favor, vuelva a intentar el registro con una cuenta de correo electrónico válida y no bloqueada.';
-$lang['UAM_Default_RejectConnexion_Txt'] = 'Lo sentimos, no ha confirmado su inscripción, por eso no puede conectarse a la galería ahora. Por favor revise su buzón de correo electrónico. Encontrara un correo electrónico enviado por la galería, que contiene un enlace para realizar la confirmación. Si no, por favor póngase en contacto con el webmaster.';
-$lang['UAM_Default_PwdRequest_Txt'] = 'Usted ha solicitado un restablecimiento de contraseña en nuestra galería. Por favor, encuentra a debajo la nueva configuración de su conexión.';
-$lang['UAM_Default_InfoMail_Txt'] = 'Hola [nombre de usuario]!
-
-Ha realizado cambios significativos en su perfil en la galería [mygallery]. Por favor, encuentre de debajo su nueva configuración:';
-$lang['UAM_Default_InfoMail_Subject'] = '[nombre de usuario] - Su información de registro en [mygallery]';
-$lang['UAM_Default_GTReminder_Subject'] = '[nombre de usuario] - Pasó mucho tiempo desde su última visita en [mygallery]';
-$lang['UAM_Default_GTAutoMail_Subject'] = '[nombre de usuario] - Su cuenta ha sido degradada en [mygallery]';
-$lang['UAM_Default user cannot be pwgreset'] = 'Renovación de contraseñas, no se pueden establecer para la cuenta de usuario por defecto!';
-$lang['UAM_Default_GhstDeletion_Txt'] = 'Lo sentimos [nombre de usuario], tu cuenta ha sido borrada por un tiempo demasiado largo pasado desde su última visita en [mygallery]. Haga el favor de registrarse de nuevo.';
-$lang['UAM_Default_GhstDemotion_Txt'] = 'Lo sentimos [nombre de usuario], su cuenta ha quedado obsoleta debido a un tiempo demasiado largo pasado desde su última visita en [mygallery]. Por favor, utilice el siguiente enlace para confirmar tu cuenta:';
-$lang['UAM_Default_GhstReminder_Txt'] = 'Hola [nombre de usuario].
-
-Este es un recordatorio, a pasado mucho tiempo desde su última visita en nuestra galería [mygallery]. Si usted no desea más usar su cuenta de acceso, por favor háganoslo saber respondiendo a este correo electrónico. Su cuenta será eliminada.
-
-Tras la recepción de este mensaje sin nueva visita dentro de [días] días, estaríamos obligados borrar automáticamente su cuenta.
-
-Saludos cordiales,
-
-El administrador de la galería [mygallery] - [myurl]';
-$lang['UAM_Default_AdminValidationMail_Subject'] = '[nombre de usuario] - Registro validado en [mygallery]';
-$lang['UAM_Default_AdminValidation_Txt'] = 'Hola [nombre de usuario]! Gracias por registrarse y bienvenido a [mygallery].
-
-Su cuenta ha sido confirmada de forma manual por el webmaster de [mygallery]. Ahora puede iniciar sesión en [myurl] y realizar los cambios apropiados a su perfil.';
-$lang['UAM_Default_CfmMail_Custom_Txt1'] = 'Bienvenido [nombre de usuario]! Ha confirmado que eres humano y ahora puede usar [mygallery]!';
-$lang['UAM_Default_CfmMail_Custom_Txt2'] = 'La clave de activación es incorrecta o caducada o que ya se ha confirmado su cuenta, por favor póngase en contacto con el webmaster para solucionar este problema.';
-$lang['UAM_Default_CfmMail_Remail_Txt1'] = 'Hola [nombre de usuario].
-
-Este es un mensaje de aviso porque usted se ha registrado en nuestra galería [mygallery], pero no ha confirmado su registro y su clave de confirmación ha caducado. Para permitir todavía el acceso a nuestra galería, su período de confirmación se ha restablecido. Usted tiene más de x días para confirmar su registro.
-
-Nota: Después de este período, su cuenta será eliminada permanentemente.';
-$lang['UAM_Default_CfmMail_Remail_Txt2'] = 'Hola [nombre de usuario].
-
-Este es un mensaje de aviso porque usted se ha registrado en nuestra galería [mygallery], pero no ha confirmado su registro y su clave de confirmación ha caducado. Para permitir todavía el acceso a nuestra galería, su período de confirmación se ha restablecido. Usted tiene más de x días para confirmar su registro.
-
-Nota: Después de este período, su cuenta será eliminada permanentemente.';
-$lang['UAM_Default_ConfirmMail_Subject'] = '[nombre de usuario] la confirmación de registro en [mygallery]';
-$lang['UAM_Default_ConfirmMail_Remail_Subject'] = 'Recordatorio - [nombre de usuario] la confirmación de registro en [mygallery]';
-$lang['UAM_Default_ConfirmMail_Txt'] = 'Hola [nombre de usuario]! Gracias por haber registro en [mygallery].
-
-Para completar el proceso y ser capaz de navegar a través de las imágenes, confirme por favor su registro haciendo clic en el vínculo de este mensaje.';
 ?>
