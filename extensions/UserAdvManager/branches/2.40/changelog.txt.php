@@ -296,6 +296,9 @@ Plugin Name: UserAdvManager
 
 -- 2.30.7 : Bug 2658 fixed - Compatibility check between UAM's "email exclusion" option and Piwigo's "Mail address is mandatory for all users" to avoid configuration conflicts.
 
+-- 2.30.8 : Bug 2739 fixed - Error on sending validation email when admins do a manual validation.
+            Bug 2740 fixed - Loggin rejection on unvalidated user connection does not work
+
 **************************************************************
 ***** Plugin history (branch 2.40 - Piwigo 2.4 compliant)*****
 **************************************************************
@@ -325,5 +328,13 @@ Plugin Name: UserAdvManager
 -- 2.40.4 : Bug 2658 fixed - Compatibility check between UAM's "email exclusion" option and Piwigo's "Mail address is mandatory for all users" to avoid configuration conflicts.
             Update el_GR, thanks to : bas_alba
             Update lv_LV, thanks to : agrisans
+
+-- 2.40.5 : Bug 2739 fixed - Error on sending validation email when admins do a manual validation.
+            Bug 2740 fixed - Loggin rejection on unvalidated user connection does not work
+            Update de_DE, thanks to : Joergen
+            Update el_GR, thanks to : bas_alba
+            Update lv_LV, thanks to : agrisans
+            Update es_ES, thanks to : jpr928
+            Update it_IT, thanks to : Ericnet and virgigiole
 */
 ?>
