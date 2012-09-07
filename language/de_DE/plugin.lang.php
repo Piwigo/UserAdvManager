@@ -398,4 +398,8 @@ $lang['UAM_GTAutomail_Subject'] = 'Automatische Anpassung des Betreffs der Ghost
 $lang['UAM_GTAutomail_Text'] = 'Anpassen des Herabstufens E-Mail Text';
 $lang['UAM_GTReminder_Subject'] = 'Manuelle Anpassung des Betreffs der Ghost-Tracker-Erinnerungs-E-Mail';
 $lang['UAM_MailInfo_Subject'] = 'Anpassen des Betreffs der Informations-E-Mail';
+$lang['UAM_mail_exclusion_error'] = ' 	
+Die Piwigo Option "e-Mail-Adresse ist obligatorisch für alle Benutzer" wurde deaktiviert, weil die UserAdvancedManager (UAM)  Option "Ausschluss von Mail-Domänen" aktiv war. Diese Kombination ist unlogisch und nicht kompatibel! <br> <br>
+Bitte reaktivieren Sie die Piwigo Option "e-Mail-Adresse ist obligatorisch für alle Benutzer" um dann die UAM Option "Ausschluss von Mail-Domänen" zu deaktivieren, wenn Sie das so wollen. <br> <br>
+Hinweis: Diese Meldung verschwindet, nachdem Sie die notwendige Korrektur vorgenommen haben und die Admin Seite neu geladen wurde. <br> <br>';
 ?>
