@@ -239,4 +239,98 @@ Por defecto, el campo tiene un texto genérico en Inglés, pero se puede cambiar
 Las siguientes etiquetas de personalizaciones adicionales están disponibles sin necesidad de utilizar el plugin Descripción Extendida:<br>
 - <b style=&quot;color: red;&quot;>[username]</b>para insertar automáticamente el nombre del usuario de destino del correo electrónico.<br>
 - <b style=&quot;color: red;&quot;>[mygallery]</b>para insertar el título de la galería.<br>';
+$lang['UAM_validationlimitTitle_d'] = 'Esta opción le permite limitar el número de días que un nuevo usuario pueda confirmar su registro. Una vez transcurrido el plazo, el enlace de confirmación no es válido y no se puede utilizar.
+<br><br>
+Esta opción se utiliza una vez que la "Confirmación de Registro" esta activada.
+<br><br>
+Si esta opción y la opción de "recordatorios por correo para confirmar registrado" se activan, nuevas opciones aparecerán más adelante en esta sección para la automatización de la gestión de visitantes sin confirmar.';
+$lang['UAM_remailtxt2Title_d'] = 'Escriba aquí el texto de presentación que aparece en el correo electrónico de recordatorio, junto con la confirmación de la nueva clave.
+<br><br>
+Se recomienda introducir un texto explicativo, de lo contrario el correo electrónico de recordatorio se incluirá sólo el enlace de confirmación. (Nota: El texto precargado al instalar el plugin sólo se da como ejemplo).
+<br><br>
+Personnalisez encore plus le contenu avec les balises d\'insertion spéciales :<br>
+- <b style=&quot;color: red;&quot;>[username]</b> pour insérer automatiquement le nom de l\'utilisateur destinataire de l\'email.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> pour insérer le titre de votre galerie.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> pour insérer l\'URL de votre galerie si renseigné dans les options de configuration de Piwigo.<br>
+- <b style=&quot;color: red;&quot;>[Kdays]</b>para insertar el número de días de validez de la clave de registro (el "Límite de tiempo de confirmación de registro" debe estar habilitado).
+<br><br>
+Pour une utilisation multi-langues, vous pouvez utiliser les balises [lang] du plugin Extended Description si celui-ci est actif.';
+$lang['UAM_remailtxt1Title_d'] = 'Escriba aquí el texto de presentación que aparece en el correo electrónico de recordatorio, junto con la confirmación de la nueva clave.
+<br><br>
+Se recomienda introducir un texto explicativo, de lo contrario el correo electrónico de recordatorio se incluirá sólo el enlace de confirmación. (Nota: El texto precargado al instalar el plugin sólo se da como ejemplo).
+<br><br>
+Personnalisez encore plus le contenu avec les balises d\'insertion spéciales :<br>
+- <b style=&quot;color: red;&quot;>[username]</b> pour insérer automatiquement le nom de l\'utilisateur destinataire de l\'email.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> pour insérer le titre de votre galerie.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> pour insérer l\'URL de votre galerie si renseigné dans les options de configuration de Piwigo.<br>
+- <b style=&quot;color: red;&quot;>[Kdays]</b>para insertar el número de días de validez de la clave de registro (el "Límite de tiempo de confirmación de registro" debe estar habilitado).
+<br><br>
+Pour une utilisation multi-langues, vous pouvez utiliser les balises [lang] du plugin Extended Description si celui-ci est actif.';
+$lang['UAM_remailTitle_d'] = 'Esta opción le permite enviar un recordatorio por correo electrónico a los usuarios que no hayan confirmado su inscripción en el tiempo. No tiene ningún efecto una vez que la "Confirmación de Registro" esta activada.
+<br><br>
+2 tipos de correo electrónico se pueden enviar: Con o sin regeneración de la confirmación de la clave. Según el caso, el contenido de mensajes de correo electrónico se pueden personalizar.
+<br><br>
+Consulte la pestaña "Seguimiento de donfirmación de ".
+<br><br>
+Si esta opción y la "Limitación de confirmación en tiempo de registro" se activan, nuevas opciones aparecerán más adelante en esta sección para la automatización de la gestión de visitantes sin confirmar.';
+$lang['UAM_miscTitle_d'] = '
+- Seguimiento de visitantes registrados <br>
+- Pseudo obligatorios para realizar comentarios visitantes <br>
+...';
+$lang['UAM_infotxtTitle_d'] = 'Escriba aquí el texto de presentación que aparece en la información de correo electrónico personal.
+<br><br>
+Siga personalizando el contenido con etiquetas de inserción especial:
+<br>
+- <b style=&quot;color: red;&quot;>[username]</b>para insertar automáticamente el nombre del usuario de destino del correo electrónico.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b>para insertar el título de la galería.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> para insertar la URL de su galería si esta en las opciones de configuración de Piwigo.
+<br><br>
+Este campo que es compatible con el Editor FCK y, para multi-idiomas, puede utilizar las etiquetas [lang] de la descripción Extended Plugin si está activo.';
+$lang['UAM_gttextTitle_d'] = 'Escriba aquí el texto que aparecera en el recordatorio por correo electrónico para solicitar al usuario a volver a visitar su galería (NB: El texto precargado al instalar el plugin se dara como ejemplo).
+<br><br>
+Siga personalizando el contenido con etiquetas de inserción especial:
+<br>
+- <b style=&quot;color: red;&quot;>[username]</b>para insertar automáticamente el nombre del usuario de destino del correo electrónico.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b>para insertar el título de la galería.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> para insertar la URL de su galería si esta en las opciones de configuración de Piwigo.
+<br><br>
+Este campo que es compatible con el Editor FCK y, para multi-idiomas, puede utilizar las etiquetas [lang] de la descripción Extended Plugin si está activo.';
+$lang['UAM_ghosttrackerTitle_d'] = 'Al habilitar esta función permite la gestión de visitantes registrados en función de la frecuencia de sus visitas. 2 modos de funcionamiento son posibles: <br><br>
+- Funcionamiento manual: Cuando el tiempo transcurrido entre dos visitas sucesivas se alcanza, el visitante se encuentra en la pestaña "Tracker Ghost" donde se puede reiniciar manualmente el correo electrónico o eliminarlo.
+<br><br>
+- Gestión automática: Si el tiempo entre dos visitas sucesivas se alcanza, el visitante se elimina automáticamente o se mueve en un grupo y / o el estado de espera. En el segundo caso, una información de correo electrónico puede ser enviado.<br><br><br>
+<b style=&quot;color: red;&quot;>IMPORTANTE: Al activar por primera vez esta función, o la reactivación después de un largo período durante el cual se han registrado nuevos visitantes, usted debe inicializar el Tracker Ghost (vea las instrucciones correspondientes en el "Tracker Ghost"). </b>';
+$lang['UAM_confirmtxtTitle_d'] = 'Escriba aquí el texto de presentación que aparece en el correo electrónico de confirmación.
+<br><br>
+Siga personalizando el contenido con etiquetas de inserción especial:
+<br>
+- <b style=&quot;color: red;&quot;>[username]</b>para insertar automáticamente el nombre del usuario de destino del correo electrónico.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b>para insertar el título de la galería.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> para insertar la URL de su galería si esta en las opciones de configuración de Piwigo.
+<br><br>
+Este campo que es compatible con el Editor FCK y, para multi-idiomas, puede utilizar las etiquetas [lang] de la descripción Extended Plugin si está activo.
+';
+$lang['UAM_confirmmail_custom2_d'] = 'Cuando "Confirmación de Registro" está activo, este campo le permite personalizar el texto <b><u>de rechazo</u></b>en la página de confirmación de registro que se muestra cuando usuario hace clic en el enlace de confirmación que recibió por correo electrónico.
+<br><br>
+Para instalar el plugin, un texto estándar se da como un ejemplo.
+<br><br>
+Siga personalizando el contenido con etiquetas de inserción especial:
+<br>
+- <b style=&quot;color: red;&quot;>[username]</b>para insertar automáticamente el nombre del usuario de destino del correo electrónico.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b>para insertar el título de la galería.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> para insertar la URL de su galería si esta en las opciones de configuración de Piwigo.
+<br><br>
+Este campo que es compatible con el Editor FCK y, para multi-idiomas, puede utilizar las etiquetas [lang] de la descripción Extended Plugin si está activo.';
+$lang['UAM_confirmmail_custom1_d'] = 'Cuando "Confirmación de Registro" está activo, este campo le permite personalizar el texto <b> <u> aceptación </ u> </ b> en la página de confirmación de registro que se muestra cuando un usuario hace clic en el enlace de confirmación que recibió por correo electrónico.
+<br><br>
+Para instalar el plugin, un texto estándar se da como un ejemplo.
+<br><br>
+Siga personalizando el contenido con etiquetas de inserción especial:
+<br>
+- <b style=&quot;color: red;&quot;>[username]</b>para insertar automáticamente el nombre del usuario de destino del correo electrónico.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b>para insertar el título de la galería.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> para insertar la URL de su galería si esta en las opciones de configuración de Piwigo.
+<br><br>
+Este campo que es compatible con el Editor FCK y, para multi-idiomas, puede utilizar las etiquetas [lang] de la descripción Extended Plugin si está activo.
+';
 ?>
