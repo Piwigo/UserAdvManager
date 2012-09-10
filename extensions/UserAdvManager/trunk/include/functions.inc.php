@@ -35,9 +35,10 @@ function UAM_admin_menu($menu)
 function UAM_check_compat()
 {
   global $conf, $page;
+  
+  $conf_UAM = unserialize($conf['UserAdvManager']);
  
   // Check mandatory email address for email exclusion
-  $conf_UAM = unserialize($conf['UserAdvManager']);
   if (!$conf['obligatory_user_mail_address'] and $conf_UAM[10] = 'true')
   {
     array_push($page['warnings'], l10n('UAM_mail_exclusion_error'));
@@ -103,7 +104,7 @@ LIMIT 1
   }
 
   // Perform user logout after registration if not validated
-  if ((isset($conf_UAM[39]) and $conf_UAM[39] == 'true') and !UAM_UsrReg_Verif($user['id']))
+  if ((isset($conf_UAM[39]) and $conf_UAM[39] == 'true') and !UAM_UsrReg_Verif($user['id']) and !is_admin())
   {
     invalidate_user_cache();
     logout_user();
@@ -511,8 +512,8 @@ function UAM_GT_ScheduledTasks()
     array_push($collection, $listed_user['id']);
   }
 
-  // GhostTracker auto group, status or privacy level downgrade with or without information email sending and autodeletion if user already reminded
-  // ----------------------------------------------------------------------------------------------------------------------------------------------
+  // Auto group, status or privacy level downgrade and autodeletion if user already reminded
+  // ---------------------------------------------------------------------------------------
   if ((isset($conf_UAM[21]) and $conf_UAM[21] == 'true') and ((isset($conf_UAM[25]) and $conf_UAM[25] <> -1) or (isset($conf_UAM[26]) and $conf_UAM[26] <> -1) or (isset($conf_UAM[37]) and $conf_UAM[37] <> -1)))
   {
     if (count($collection) > 0)
@@ -2127,106 +2128,54 @@ SET date_check='".$dbnow."'
 WHERE user_id = '".$id."'
 ;";
     pwg_query($query);
-	     
-		if ($conf_UAM[2] <> -1)
-		{
-			$query = "
-DELETE FROM ".USER_GROUP_TABLE."
-WHERE user_id = '".$id."'
-  AND group_id = '".$conf_UAM[2]."'
-;";
-			pwg_query($query);
-		}
-  
-		if ($conf_UAM[3] <> -1) // Change user's group
-		{
-			$query = "
-DELETE FROM ".USER_GROUP_TABLE."
-WHERE user_id = '".$id."'
-  AND group_id = '".$conf_UAM[3]."'
-;";
-      pwg_query($query);
-	
-			$query = "
-INSERT INTO ".USER_GROUP_TABLE."
-  (user_id, group_id)
-VALUES
-  ('".$id."', '".$conf_UAM[3]."')
-;";
-			pwg_query($query);
-    }
-
-		if ($conf_UAM[4] <> -1) // Change user's status
-		{
-			$query = "
-UPDATE ".USER_INFOS_TABLE."
-SET status = '".$conf_UAM[4]."'
-WHERE user_id = '".$id."'
-;";
-			pwg_query($query);
-		}
-
-		if ($conf_UAM[36] <> -1) // Change user's privacy level
-		{
-			$query = "
-UPDATE ".USER_INFOS_TABLE."
-SET level = '".$conf_UAM[36]."'
-WHERE user_id = '".$id."'
-;";
-			pwg_query($query);
-		}
   }
-  elseif (isset($conf_UAM[1]) and $conf_UAM[1] == 'local')
-  {
-    list($dbnow) = pwg_db_fetch_row(pwg_query('SELECT NOW();'));
 
-    if ($conf_UAM[2] <> -1) // Delete user's from waiting group
-    {
-		  $query = "
+  if ($conf_UAM[2] <> -1) // Delete user from waiting group
+	{
+    $query = "
 DELETE FROM ".USER_GROUP_TABLE."
 WHERE user_id = '".$id."'
   AND group_id = '".$conf_UAM[2]."'
 ;";
-		  pwg_query($query);
-    }
-
-    if ($conf_UAM[3] <> -1) // Change user's group
-    {
-      $query = "
+		pwg_query($query);
+  }
+  
+	if ($conf_UAM[3] <> -1) // Set user's valid group
+	{
+    $query = "
 DELETE FROM ".USER_GROUP_TABLE."
 WHERE user_id = '".$id."'
   AND group_id = '".$conf_UAM[3]."'
 ;";
-      pwg_query($query);
+    pwg_query($query);
 	
-		  $query = "
+		$query = "
 INSERT INTO ".USER_GROUP_TABLE."
   (user_id, group_id)
 VALUES
   ('".$id."', '".$conf_UAM[3]."')
 ;";
-		  pwg_query($query);
-    }
+		pwg_query($query);
+  }
 
-    if ($conf_UAM[4] <> -1) // Change user's status
-    {
-		  $query = "
+	if ($conf_UAM[4] <> -1) // Set user's valid status
+	{
+    $query = "
 UPDATE ".USER_INFOS_TABLE."
 SET status = '".$conf_UAM[4]."'
 WHERE user_id = '".$id."'
 ;";
-      pwg_query($query);
-    }
+		pwg_query($query);
+  }
 
-    if ($conf_UAM[36] <> -1) // Change user's privacy level
-    {
-		  $query = "
+	if ($conf_UAM[36] <> -1) // Set user's valid privacy level
+	{
+    $query = "
 UPDATE ".USER_INFOS_TABLE."
 SET level = '".$conf_UAM[36]."'
 WHERE user_id = '".$id."'
 ;";
-      pwg_query($query);
-    }
+		pwg_query($query);
   }
 }
 
@@ -2802,6 +2751,7 @@ function UAM_UsrReg_Verif($user_id)
   // ---------------------
   $conf_UAM = unserialize($conf['UserAdvManager']);
 
+  // Check for user groups
   $query = '
 SELECT group_id
   FROM '.USER_GROUP_TABLE.'
@@ -2809,15 +2759,37 @@ WHERE user_id = '.$user_id.'
   AND group_id = '.$conf_UAM[2].'
 ;';
 
-  $count = pwg_db_num_rows(pwg_query($query));
-  
+  $count1 = pwg_db_num_rows(pwg_query($query));
+
+  // Check for user status
+  $query = '
+SELECT group_id
+  FROM '.USER_INFOS_TABLE.'
+WHERE user_id = '.$user_id.'
+  AND status = '.$conf_UAM[7].'
+;';
+
+  $count2 = pwg_db_num_rows(pwg_query($query));
+
+  // Check for user privacy level
+  $query = '
+SELECT group_id
+  FROM '.USER_INFOS_TABLE.'
+WHERE user_id = '.$user_id.'
+  AND level = '.$conf_UAM[35].'
+;';
+
+  $count3 = pwg_db_num_rows(pwg_query($query));
+
+  $count = $count1 + $count2 + $count3; // Summary of counts
+
   if ($count == 0)
   {
-    return true; // User is not in a "Waiting" group
+    return true; // User has validated his registration
   }
   else
   {
-    return false; // User is still in a "Waiting" group
+    return false; // User has not validated his registration
   }
 }
 
