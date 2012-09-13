@@ -2325,7 +2325,7 @@ WHERE u.'.$conf['user_fields']['id'].' >= 3
   if ($conf_UAM[2] <> '-1' and $conf_UAM[7] <> '-1')
   {
     $query.= '
-  AND ug.group_id = \''.$conf_UAM[2]."'";
+  AND ug.group_id = '.$conf_UAM[2];
   }
   $query.= '
 ORDER BY ui.registration_date ASC
