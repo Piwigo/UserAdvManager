@@ -51,7 +51,7 @@ function UAM_check_compat()
  * 
  * Initiating GhostTracker - Perform user logout after registration if not validated
  */
-function UAM_GhostTracker()
+function UAM_Init()
 {
   global $conf, $user;
 
