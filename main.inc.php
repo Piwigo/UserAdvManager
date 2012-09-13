@@ -32,9 +32,9 @@ $conf_UAM = unserialize($conf['UserAdvManager']);
 // ---------------------------
 add_event_handler('get_admin_plugin_menu_links', 'UAM_admin_menu');
 
-// Lastvisit table feed for Ghost Tracker
-// --------------------------------------
-add_event_handler('loc_begin_index', 'UAM_GhostTracker');
+// Features and controls on user connexion
+// ---------------------------------------
+add_event_handler('loc_begin_index', 'UAM_Init');
 
 // User creation
 // -------------
