@@ -101,15 +101,15 @@ LIMIT 1
         pwg_query($query);
       }
     }
+    // Perform user logout after registration if not validated
+    if ((isset($conf_UAM[39]) and $conf_UAM[39] == 'true') and !UAM_UsrReg_Verif($user['id']) )
+    {
+      invalidate_user_cache();
+      logout_user();
+      redirect(UAM_PATH.'rejected.php');
+    }
   }
 
-  // Perform user logout after registration if not validated
-  if ((isset($conf_UAM[39]) and $conf_UAM[39] == 'true') and !UAM_UsrReg_Verif($user['id']) and !is_admin())
-  {
-    invalidate_user_cache();
-    logout_user();
-    redirect(UAM_PATH.'rejected.php');
-  }
 }
 
 
