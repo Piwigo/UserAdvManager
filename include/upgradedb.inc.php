@@ -622,4 +622,71 @@ WHERE param = "UserAdvManager"
 
   conf_update_param('UserAdvManager', pwg_db_real_escape_string($update_conf));
 }
+
+
+/* upgrade from 2.40.x to 2.41.0 */
+/* ***************************** */
+function upgrade_2400_2410()
+{
+  global $conf;
+  $conf_UAM = unserialize($conf['UserAdvManager']);
+  
+  // Piwigo's native tables modifications for validation status - Add UAM_validated column
+  // -------------------------------------------------------------------------------------
+  $query = '
+SHOW COLUMNS FROM '.USERS_TABLE.'
+LIKE "UAM_validated"
+;';
+  
+  $result = pwg_query($query);
+
+  if(!pwg_db_fetch_row($result))
+  {
+    $q = '
+ALTER TABLE '.USERS_TABLE.'
+ADD UAM_validated enum("true","false") 
+;';
+    pwg_query($q);
+  }
+
+  // Fill UAM_validated column with correct information for registered and validated  users
+  // --------------------------------------------------------------------------------------
+  $query = '
+SELECT DISTINCT u.id AS id
+FROM '.USERS_TABLE.' AS u
+  INNER JOIN '.USER_INFOS_TABLE.' AS ui
+    ON u.id = ui.user_id
+  LEFT JOIN '.USER_GROUP_TABLE.' AS ug
+    ON u.id = ug.user_id
+WHERE u.id <> 2';
+
+	if ($conf_UAM[3] <> '-1' and $conf_UAM[4] == '-1')
+  {
+    $query.= '
+  AND ug.group_id = \''.$conf_UAM[3]."'";
+  }
+  if ($conf_UAM[3] == '-1' and $conf_UAM[4] <> '-1')
+  {
+    $query.= '
+  AND ui.status = \''.$conf_UAM[4]."'";
+  }
+  if ($conf_UAM[3] <> '-1' and $conf_UAM[4] <> '-1')
+  {
+    $query.= '
+  AND ug.group_id = \''.$conf_UAM[3]."'";
+  }
+  $query.= ';';
+
+	$result = pwg_query($query);
+
+  while($row = mysql_fetch_array($result))
+  {
+    $query = '
+UPDATE '.USERS_TABLE.'
+SET UAM_validated=true
+WHERE id = "'.$row['id'].'"
+;';
+    pwg_query($query);
+  }
+}
 ?>

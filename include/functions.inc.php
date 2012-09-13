@@ -67,7 +67,7 @@ function UAM_GhostTracker()
     {
 
       $userid = get_userid($user['username']);
-        
+     	  
       // Looking for existing entry in last visit table
       // ----------------------------------------------
       $query = '
@@ -101,15 +101,15 @@ LIMIT 1
         pwg_query($query);
       }
     }
-    // Perform user logout after registration if not validated
-    if ((isset($conf_UAM[39]) and $conf_UAM[39] == 'true') and !UAM_UsrReg_Verif($user['id']) )
-    {
-      invalidate_user_cache();
-      logout_user();
-      redirect(UAM_PATH.'rejected.php');
-    }
   }
 
+  // Perform user logout after registration if not validated
+  if ((isset($conf_UAM[39]) and $conf_UAM[39] == 'true') and !UAM_UsrReg_Verif($user['id']))
+  {
+    invalidate_user_cache();
+    logout_user();
+    redirect(UAM_PATH.'rejected.php');
+  }
 }
 
 
@@ -455,13 +455,40 @@ WHERE user_id = '.$user['id'].'
       }
     }
   }
-  elseif ((isset($conf_UAM[39]) and $conf_UAM[39] == 'true') and !UAM_UsrReg_Verif($user['id']))
+  elseif ((isset($conf_UAM[39]) and $conf_UAM[39] == 'true') and UAM_UsrReg_Verif($user['id']) == false and is_admin()==false and is_webmaster() == false)
   {
     // Logged-in user cleanup, session destruction and redirected to custom page
     // -------------------------------------------------------------------------
-    invalidate_user_cache();
-    logout_user();
-    redirect(UAM_PATH.'rejected.php');
+    if (UAM_UsrReg_Verif($user['id']))
+    {
+      $var2 = "UAM_UsrReg_Verif = True";
+    }
+    else
+    {
+      $var2 = "UAM_UsrReg_Verif = False";
+    }
+    
+    if (is_admin())
+    {
+      $var3 = "is_admin = True";
+    }
+    else
+    {
+      $var3 = "is_admin = False";
+    }
+
+    if (is_webmaster())
+    {
+      $var4 = "is_webmaster = True";
+    }
+    else
+    {
+      $var4 = "is_webmaster = False";
+    }
+    UAMLog($conf_UAM[39],$var2,$var3,$var4);
+    //invalidate_user_cache();
+    //logout_user();
+    //redirect(UAM_PATH.'rejected.php');
   }
 }
 
@@ -517,11 +544,11 @@ function UAM_GT_ScheduledTasks()
   if ((isset($conf_UAM[21]) and $conf_UAM[21] == 'true') and ((isset($conf_UAM[25]) and $conf_UAM[25] <> -1) or (isset($conf_UAM[26]) and $conf_UAM[26] <> -1) or (isset($conf_UAM[37]) and $conf_UAM[37] <> -1)))
   {
     if (count($collection) > 0)
-    {
+  	{
       // Process if a non-admin nor webmaster user is logged
       // ---------------------------------------------------
       if (in_array($user['id'], $collection))
-      {
+    	{
         // Check lastvisit reminder state
         // ------------------------------
         $query = '
@@ -554,7 +581,7 @@ WHERE user_id = '.$user['id'].';';
           logout_user();
           redirect(UAM_PATH.'GT_del_account.php');
         }
-      }
+    	}
       else // Process if an admin or webmaster user is logged
       {
         foreach ($collection as $user_id)
@@ -585,7 +612,7 @@ WHERE user_id = '.$user_id.';';
             // -----------------------
             list($dbnow) = pwg_db_fetch_row(pwg_query('SELECT NOW();'));
 
-            $query = "
+		        $query = "
 UPDATE ".USER_LASTVISIT_TABLE."
 SET lastvisit='".$dbnow."'
 WHERE user_id = '".$user_id."'
@@ -659,21 +686,21 @@ WHERE user_id = '".$user_id."'
             
               // Reset confirmed user status to unvalidated
               // ------------------------------------------
-              $query = '
+						  $query = '
 UPDATE '.USER_CONFIRM_MAIL_TABLE.'
 SET date_check = NULL
 WHERE user_id = "'.$user_id.'"
 ;';
-              pwg_query($query);
+						  pwg_query($query);
 
               // Get users information for email notification
               // --------------------------------------------
-              $query = '
+						  $query = '
 SELECT id, username, mail_address
 FROM '.USERS_TABLE.'
 WHERE id = '.$user_id.'
 ;';
-              $data = pwg_db_fetch_assoc(pwg_query($query));
+						  $data = pwg_db_fetch_assoc(pwg_query($query));
             
               demotion_mail($user_id, $data['username'], $data['mail_address']);
             }
@@ -725,11 +752,11 @@ function UAM_USR_ScheduledTasks()
   if ((isset($conf_UAM[30]) and $conf_UAM[30] == 'true'))
   {
     if (count($collection) > 0)
-    {
+  	{
       // Process if a non-admin nor webmaster user is logged
       // ---------------------------------------------------
       if (in_array($user['id'], $collection))
-      {
+    	{
         // Check ConfirmMail reminder state
         // --------------------------------
         $query = '
@@ -752,7 +779,7 @@ WHERE user_id = '.$user['id'].';';
         // -------------------------------------------------------------
         if (!$reminder and isset($conf_UAM[32]) and $conf_UAM[32] == 'true')
         {
-          $typemail = 1;
+     		  $typemail = 1;
           
           // Get current user informations
           // -----------------------------
@@ -779,7 +806,7 @@ WHERE id = '".$user['id']."'
           logout_user();
           redirect(UAM_PATH.'USR_del_account.php');
         }
-      }
+    	}
       else // Process if an admin or webmaster user is logged
       {
         foreach ($collection as $user_id)
@@ -907,9 +934,9 @@ function SendMail2User($typemail, $id, $username, $password, $email, $confirm)
 
   $conf_UAM = unserialize($conf['UserAdvManager']);
   
-  include_once(PHPWG_ROOT_PATH.'include/functions_mail.inc.php');
+	include_once(PHPWG_ROOT_PATH.'include/functions_mail.inc.php');
   
-  $infos1_perso = "";
+	$infos1_perso = "";
   $infos2_perso = "";
   $subject = "";
 
@@ -1148,7 +1175,7 @@ function ResendMail2User($typemail, $user_id, $username, $email, $confirm)
 
   $conf_UAM_ConfirmMail = unserialize($conf['UserAdvManager_ConfirmMail']);
   
-  include_once(PHPWG_ROOT_PATH.'include/functions_mail.inc.php');
+	include_once(PHPWG_ROOT_PATH.'include/functions_mail.inc.php');
   
 // We have to get the user's language in database
 // ----------------------------------------------
@@ -1206,14 +1233,14 @@ WHERE user_id = '.$user_id.'
         {
           $infos1 = get_user_language_desc(preg_replace($patterns, $replacements, $conf_UAM_ConfirmMail[2]))."\n\n";
         }
-        else $infos1 = l10n(preg_replace($patterns, $replacements, $conf_UAM_ConfirmMail[2]))."\n\n";
+				else $infos1 = l10n(preg_replace($patterns, $replacements, $conf_UAM_ConfirmMail[2]))."\n\n";
 
         $infos2 = array
         (
           get_l10n_args('UAM_Link: %s', ResetConfirmMail($user_id)),
           get_l10n_args('', ''),
         );        
-      }
+			}
 
 // Set reminder true 
 // -----------------     
@@ -1224,7 +1251,7 @@ WHERE user_id = '".$user_id."'
 ;";
       pwg_query($query);
       
-    break;
+		break;
       
     case 2: //Generating email content for remind without a new key
       if (isset($conf_UAM[42]) and $conf_UAM[42] <> '')
@@ -1277,7 +1304,7 @@ WHERE user_id = '".$user_id."'
       pwg_query($query);
       
     break;
-  }
+	}
   
   pwg_mail($email, array(
     'subject' => $subject,
@@ -1303,7 +1330,7 @@ function ghostreminder($user_id, $username, $email)
   $conf_UAM = unserialize($conf['UserAdvManager']);
   $subject = "";
   
-  include_once(PHPWG_ROOT_PATH.'include/functions_mail.inc.php');
+	include_once(PHPWG_ROOT_PATH.'include/functions_mail.inc.php');
 
 // We have to get the user's language in database
 // ----------------------------------------------
@@ -1385,9 +1412,9 @@ function demotion_mail($id, $username, $email)
 
   $conf_UAM = unserialize($conf['UserAdvManager']);
   
-  include_once(PHPWG_ROOT_PATH.'include/functions_mail.inc.php');
+	include_once(PHPWG_ROOT_PATH.'include/functions_mail.inc.php');
   
-  $custom_txt = "";
+	$custom_txt = "";
   $subject = "";
 
 // We have to get the user's language in database
@@ -1490,9 +1517,9 @@ function validation_mail($id)
 
   $conf_UAM = unserialize($conf['UserAdvManager']);
   
-  include_once(PHPWG_ROOT_PATH.'include/functions_mail.inc.php');
+	include_once(PHPWG_ROOT_PATH.'include/functions_mail.inc.php');
   
-  $custom_txt = "";
+	$custom_txt = "";
   $subject = "";
 
 // We have to get the user's language in database
@@ -1782,12 +1809,12 @@ WHERE user_id = '".$user_id."'
 ;";
     pwg_query($query);
 
-    $query = "
+		$query = "
 UPDATE ".USER_INFOS_TABLE."
 SET registration_date = '".$dbnow."'
 WHERE user_id = '".$user_id."'
 ;";
-    pwg_query($query);
+		pwg_query($query);
     
     return get_absolute_root_url().UAM_PATH.'ConfirmMail.php?key='.$Confirm_Mail_ID.'&userid='.$user_id;
   }
@@ -1921,186 +1948,186 @@ WHERE user_id = '".$data['user_id']."'
 // ********************************************  
       if (!empty($registration_date))
       {
-        // Verify Confirmmail with time limit ON
+				// Verify Confirmmail with time limit ON
         // -------------------------------------
-        if (isset ($conf_UAM_ConfirmMail[1]))
-        {
-          // Dates formating and compare
+				if (isset ($conf_UAM_ConfirmMail[1]))
+				{
+					// Dates formating and compare
           // ---------------------------
-          $today = date("d-m-Y"); // Get today's date
-          list($day, $month, $year) = explode('-', $today); // explode date of today             
-          $daytimestamp = mktime(0, 0, 0, $month, $day, $year);// Generate UNIX timestamp
-        
-          list($regdate, $regtime) = explode(' ', $registration_date); // Explode date and time from registration date
-          list($regyear, $regmonth, $regday) = explode('-', $regdate); // Explode date from registration date
-          $regtimestamp = mktime(0, 0, 0, $regmonth, $regday, $regyear);// Generate UNIX timestamp
-      
-          $deltasecs = $daytimestamp - $regtimestamp;// Compare the 2 UNIX timestamps 
-          $deltadays = floor($deltasecs / 86400);// Convert result from seconds to days
+					$today = date("d-m-Y"); // Get today's date
+					list($day, $month, $year) = explode('-', $today); // explode date of today						 
+ 					$daytimestamp = mktime(0, 0, 0, $month, $day, $year);// Generate UNIX timestamp
+	  		
+	  			list($regdate, $regtime) = explode(' ', $registration_date); // Explode date and time from registration date
+					list($regyear, $regmonth, $regday) = explode('-', $regdate); // Explode date from registration date
+					$regtimestamp = mktime(0, 0, 0, $regmonth, $regday, $regyear);// Generate UNIX timestamp
+			
+					$deltasecs = $daytimestamp - $regtimestamp;// Compare the 2 UNIX timestamps	
+					$deltadays = floor($deltasecs / 86400);// Convert result from seconds to days
 
-          // Condition with the value set for time limit
+					// Condition with the value set for time limit
           // -------------------------------------------
-          if ($deltadays <= $conf_UAM_ConfirmMail[1]) // If Nb of days is less than the limit set
-          {
-            list($dbnow) = pwg_db_fetch_row(pwg_query('SELECT NOW();'));
+					if ($deltadays <= $conf_UAM_ConfirmMail[1]) // If Nb of days is less than the limit set
+					{
+						list($dbnow) = pwg_db_fetch_row(pwg_query('SELECT NOW();'));
 
             // Update ConfirmMail table
             // ------------------------
-            $query = '
+						$query = '
 UPDATE '.USER_CONFIRM_MAIL_TABLE.'
 SET date_check="'.$dbnow.'", reminder="false"
 WHERE id = "'.$id.'"
 ;';
-            pwg_query($query);
+						pwg_query($query);
 
             // Update LastVisit table - Force reminder field to false
             // Usefull when a user has been automatically downgraded and revalidate its registration
             // -------------------------------------------------------------------------------------
-            $query = '
+						$query = '
 UPDATE '.USER_LASTVISIT_TABLE.'
 SET reminder="false"
 WHERE user_id = "'.$data['user_id'].'"
 ;';
-            pwg_query($query);
+						pwg_query($query);
       
-            if ($conf_UAM[2] <> -1) // Delete user from unvalidated users group
-            {
-              $query = "
+						if ($conf_UAM[2] <> -1) // Delete user from unvalidated users group
+						{
+							$query = "
 DELETE FROM ".USER_GROUP_TABLE."
 WHERE user_id = '".$data['user_id']."'
   AND group_id = '".$conf_UAM[2]."'
 ;";
-              pwg_query($query);
-            }
-      
-            if ($conf_UAM[3] <> -1) // Add user to validated users group 
-            {
-              $query = "
+							pwg_query($query);
+						}
+	    
+						if ($conf_UAM[3] <> -1) // Add user to validated users group 
+						{
+							$query = "
 INSERT INTO ".USER_GROUP_TABLE."
   (user_id, group_id)
 VALUES
   ('".$data['user_id']."', '".$conf_UAM[3]."')
 ;";
-              pwg_query($query);
-            }
+							pwg_query($query);
+						}
 
-            if (($conf_UAM[4] <> -1 or isset($data['status']))) // Change user's status
-            {
-              $query = "
+						if (($conf_UAM[4] <> -1 or isset($data['status']))) // Change user's status
+						{
+							$query = "
 UPDATE ".USER_INFOS_TABLE."
 SET status = '".(isset($data['status']) ? $data['status'] : $conf_UAM[4])."'
 WHERE user_id = '".$data['user_id']."'
 ;";
-              pwg_query($query);
-            }
+							pwg_query($query);
+						}
 
-            if (($conf_UAM[36] <> -1 or isset($data['level']))) // Change user's privacy level
-            {
-              $query = "
+						if (($conf_UAM[36] <> -1 or isset($data['level']))) // Change user's privacy level
+						{
+							$query = "
 UPDATE ".USER_INFOS_TABLE."
 SET level = '".(isset($data['level']) ? $data['level'] : $conf_UAM[36])."'
 WHERE user_id = '".$data['user_id']."'
 ;";
-              pwg_query($query);
-            }
+							pwg_query($query);
+						}
 
-            // Refresh user's category cache
+						// Refresh user's category cache
             // -----------------------------
-            invalidate_user_cache();
+						invalidate_user_cache();
   
-            return true;
-          }
-          elseif ($deltadays > $conf_UAM_ConfirmMail[1]) // If timelimit exeeds
-          {
-            return false;
-          }
-        }
-        // Verify Confirmmail with time limit OFF
+						return true;
+					}
+					elseif ($deltadays > $conf_UAM_ConfirmMail[1]) // If timelimit exeeds
+					{
+						return false;
+					}
+				}
+				// Verify Confirmmail with time limit OFF
         // --------------------------------------
-        else
-        {
-          list($dbnow) = pwg_db_fetch_row(pwg_query('SELECT NOW();'));
+				else
+				{
+					list($dbnow) = pwg_db_fetch_row(pwg_query('SELECT NOW();'));
 
           // Update ConfirmMail table
           // ------------------------
-          $query = '
+					$query = '
 UPDATE '.USER_CONFIRM_MAIL_TABLE.'
 SET date_check="'.$dbnow.'"
 WHERE id = "'.$id.'"
 ;';
-          pwg_query($query);
+					pwg_query($query);
 
           // Update LastVisit table - Force reminder field to false
           // Usefull when a user has been automatically downgraded and revalidate its registration
           // -------------------------------------------------------------------------------------
-          $query = '
+					$query = '
 UPDATE '.USER_LASTVISIT_TABLE.'
 SET reminder="false"
 WHERE user_id = "'.$data['user_id'].'"
 ;';
           pwg_query($query);
       
-          if ($conf_UAM[2] <> -1) // Delete user from unvalidated users group
-          {
-            $query = "
+					if ($conf_UAM[2] <> -1) // Delete user from unvalidated users group
+					{
+						$query = "
 DELETE FROM ".USER_GROUP_TABLE."
 WHERE user_id = '".$data['user_id']."'
 AND group_id = '".$conf_UAM[2]."'
 ;";
-            pwg_query($query);
-          }
+						pwg_query($query);
+					}
     
-          if ($conf_UAM[3] <> -1)
-          {
-            $query = "
+					if ($conf_UAM[3] <> -1)
+					{
+						$query = "
 DELETE FROM ".USER_GROUP_TABLE."
 WHERE user_id = '".$data['user_id']."'
 AND group_id = '".$conf_UAM[3]."'
 ;";
-            pwg_query($query);
+						pwg_query($query);
 
-            $query = "
+						$query = "
 INSERT INTO ".USER_GROUP_TABLE."
   (user_id, group_id)
 VALUES
   ('".$data['user_id']."', '".$conf_UAM[3]."')
 ;";
-            pwg_query($query);
-          }
+						pwg_query($query);
+					}
 
-          if (($conf_UAM[4] <> -1 or isset($data['status']))) // Change user's status
-          {
-            $query = "
+					if (($conf_UAM[4] <> -1 or isset($data['status']))) // Change user's status
+					{
+						$query = "
 UPDATE ".USER_INFOS_TABLE."
 SET status = '".(isset($data['status']) ? $data['status'] : $conf_UAM[4])."'
 WHERE user_id = '".$data['user_id']."'
 ;";
-            pwg_query($query);
-          }
+						pwg_query($query);
+					}
 
-          if (($conf_UAM[36] <> -1 or isset($data['level']))) // Change user's privacy level
-          {
-            $query = "
+					if (($conf_UAM[36] <> -1 or isset($data['level']))) // Change user's privacy level
+					{
+						$query = "
 UPDATE ".USER_INFOS_TABLE."
 SET level = '".(isset($data['level']) ? $data['level'] : $conf_UAM[36])."'
 WHERE user_id = '".$data['user_id']."'
 ;";
-            pwg_query($query);
-          }
+						pwg_query($query);
+					}
 
-          // Refresh user's category cache
+					// Refresh user's category cache
           // -----------------------------
-          invalidate_user_cache();
+					invalidate_user_cache();
   
-          return true;
-        }
-      }
-    }
+					return true;
+				}
+			}
+		}
     else if (!empty($data) and !is_null($data['date_check']))
     {
       return false;
     }
-  }
+	}
   else
     return false;
 }
@@ -2122,7 +2149,7 @@ function ForceValidation($id)
   {
     list($dbnow) = pwg_db_fetch_row(pwg_query('SELECT NOW();'));
 
-    $query = "
+		$query = "
 UPDATE ".USER_CONFIRM_MAIL_TABLE."
 SET date_check='".$dbnow."'
 WHERE user_id = '".$id."'
@@ -2131,51 +2158,51 @@ WHERE user_id = '".$id."'
   }
 
   if ($conf_UAM[2] <> -1) // Delete user from waiting group
-  {
+	{
     $query = "
 DELETE FROM ".USER_GROUP_TABLE."
 WHERE user_id = '".$id."'
   AND group_id = '".$conf_UAM[2]."'
 ;";
-    pwg_query($query);
+		pwg_query($query);
   }
   
-  if ($conf_UAM[3] <> -1) // Set user's valid group
-  {
+	if ($conf_UAM[3] <> -1) // Set user's valid group
+	{
     $query = "
 DELETE FROM ".USER_GROUP_TABLE."
 WHERE user_id = '".$id."'
   AND group_id = '".$conf_UAM[3]."'
 ;";
     pwg_query($query);
-  
-    $query = "
+	
+		$query = "
 INSERT INTO ".USER_GROUP_TABLE."
   (user_id, group_id)
 VALUES
   ('".$id."', '".$conf_UAM[3]."')
 ;";
-    pwg_query($query);
+		pwg_query($query);
   }
 
-  if ($conf_UAM[4] <> -1) // Set user's valid status
-  {
+	if ($conf_UAM[4] <> -1) // Set user's valid status
+	{
     $query = "
 UPDATE ".USER_INFOS_TABLE."
 SET status = '".$conf_UAM[4]."'
 WHERE user_id = '".$id."'
 ;";
-    pwg_query($query);
+		pwg_query($query);
   }
 
-  if ($conf_UAM[36] <> -1) // Set user's valid privacy level
-  {
+	if ($conf_UAM[36] <> -1) // Set user's valid privacy level
+	{
     $query = "
 UPDATE ".USER_INFOS_TABLE."
 SET level = '".$conf_UAM[36]."'
 WHERE user_id = '".$id."'
 ;";
-    pwg_query($query);
+		pwg_query($query);
   }
 }
 
@@ -2228,18 +2255,18 @@ function ValidateEmailProvider($email)
 
   $conf_UAM = unserialize($conf['UserAdvManager']);
   
-  if (isset($email) and isset($conf_UAM[11]) and $conf_UAM[11] <> '')
-  {
-    $conf_MailExclusion = preg_split("/[\s,]+/",$conf_UAM[11]);
-    for ($i = 0 ; $i < count($conf_MailExclusion) ; $i++)
-    {
-      $pattern = '/'.$conf_MailExclusion[$i].'/i';
-      if (preg_match($pattern, $email))
+	if (isset($email) and isset($conf_UAM[11]) and $conf_UAM[11] <> '')
+	{
+		$conf_MailExclusion = preg_split("/[\s,]+/",$conf_UAM[11]);
+		for ($i = 0 ; $i < count($conf_MailExclusion) ; $i++)
+		{
+			$pattern = '/'.$conf_MailExclusion[$i].'/i';
+			if (preg_match($pattern, $email))
       {
-            return true;
+        		return true;
       }
-    }
-  }
+		}
+	}
   else
   {
     return false;
@@ -2255,9 +2282,9 @@ function ValidateEmailProvider($email)
  */
 function get_unvalid_user_list()
 {
-  global $conf, $page;
+	global $conf, $page;
           
-  // Get ConfirmMail configuration
+	// Get ConfirmMail configuration
   // -----------------------------
   $conf_UAM_ConfirmMail = unserialize($conf['UserAdvManager_ConfirmMail']);
   // Get UAM configuration
@@ -2266,7 +2293,7 @@ function get_unvalid_user_list()
   
   $users = array();
 
-  // Search users depending expiration date
+	// Search users depending expiration date
   // --------------------------------------
   $query = '
 SELECT DISTINCT u.'.$conf['user_fields']['id'].' AS id,
@@ -2285,7 +2312,7 @@ WHERE u.'.$conf['user_fields']['id'].' >= 3
   AND (TO_DAYS(NOW()) - TO_DAYS(ui.registration_date) >= "'.$conf_UAM_ConfirmMail[1].'"
   OR TO_DAYS(NOW()) - TO_DAYS(ui.registration_date) < "'.$conf_UAM_ConfirmMail[1].'")';
 
-  if ($conf_UAM[2] <> '-1' and $conf_UAM[7] == '-1')
+	if ($conf_UAM[2] <> '-1' and $conf_UAM[7] == '-1')
   {
     $query.= '
   AND ug.group_id = '.$conf_UAM[2];
@@ -2304,46 +2331,46 @@ WHERE u.'.$conf['user_fields']['id'].' >= 3
 ORDER BY ui.registration_date ASC
 ;';
 
-  $result = pwg_query($query);
+	$result = pwg_query($query);
       
   while ($row = pwg_db_fetch_assoc($result))
   {
-    $user = $row;
+  	$user = $row;
     $user['groups'] = array();
 
     array_push($users, $user);
-  }
+	}
 
-  // Add groups list
+	// Add groups list
   // ---------------
   $user_ids = array();
   foreach ($users as $i => $user)
   {
-    $user_ids[$i] = $user['id'];
-  }
-  
-  $user_nums = array_flip($user_ids);
+  	$user_ids[$i] = $user['id'];
+	}
+	
+	$user_nums = array_flip($user_ids);
 
   if (count($user_ids) > 0)
   {
-    $query = '
+  	$query = '
 SELECT user_id, group_id
   FROM '.USER_GROUP_TABLE.'
 WHERE user_id IN ('.implode(',', $user_ids).')
 ;';
         
-    $result = pwg_query($query);
+		$result = pwg_query($query);
         
     while ($row = pwg_db_fetch_assoc($result))
     {
-      array_push(
-        $users[$user_nums[$row['user_id']]]['groups'],
+    	array_push(
+      	$users[$user_nums[$row['user_id']]]['groups'],
         $row['group_id']
-      );
-    }
-  }
+			);
+		}
+	}
 
-  return $users;
+	return $users;
 }
 
 
@@ -2356,15 +2383,15 @@ WHERE user_id IN ('.implode(',', $user_ids).')
  */
 function get_unvalid_user_autotasks()
 {
-  global $conf, $page;
+	global $conf, $page;
           
-  // Get ConfirmMail configuration
+	// Get ConfirmMail configuration
   // -----------------------------
   $conf_UAM_ConfirmMail = unserialize($conf['UserAdvManager_ConfirmMail']);
   
   $users = array();
 
-  // search users depending expiration date
+	// search users depending expiration date
   // --------------------------------------
   $query = '
 SELECT DISTINCT u.'.$conf['user_fields']['id'].' AS id,
@@ -2376,14 +2403,14 @@ WHERE u.'.$conf['user_fields']['id'].' >= 3
   AND (TO_DAYS(NOW()) - TO_DAYS(ui.registration_date) >= "'.$conf_UAM_ConfirmMail[1].'")
 ORDER BY ui.registration_date ASC;';
 
-  $result = pwg_query($query);
+	$result = pwg_query($query);
       
   while ($row = pwg_db_fetch_assoc($result))
   {
     array_push($users, $row);
-  }
+	}
 
-  return $users;
+	return $users;
 }
 
 
@@ -2395,13 +2422,13 @@ ORDER BY ui.registration_date ASC;';
  */
 function get_ghost_user_list()
 {
-  global $conf, $page;
+	global $conf, $page;
 
   $conf_UAM = unserialize($conf['UserAdvManager']);
   
   $users = array();
 
-  // Search users depending expiration date
+	// Search users depending expiration date
   // --------------------------------------
   $query = '
 SELECT DISTINCT u.'.$conf['user_fields']['id'].' AS id,
@@ -2415,25 +2442,25 @@ FROM '.USERS_TABLE.' AS u
 WHERE (TO_DAYS(NOW()) - TO_DAYS(lv.lastvisit) >= "'.$conf_UAM[16].'")
 ORDER BY lv.lastvisit ASC;';
 
-  $result = pwg_query($query);
+	$result = pwg_query($query);
       
   while ($row = pwg_db_fetch_assoc($result))
   {
-    $user = $row;
+  	$user = $row;
     $user['groups'] = array();
 
     array_push($users, $user);
-  }
+	}
 
-  // Add groups list
+	// Add groups list
   // ---------------
   $user_ids = array();
   foreach ($users as $i => $user)
   {
-    $user_ids[$i] = $user['id'];
-  }
+  	$user_ids[$i] = $user['id'];
+	}
 
-  return $users;
+	return $users;
 }
 
 
@@ -2445,13 +2472,13 @@ ORDER BY lv.lastvisit ASC;';
  */
 function get_ghosts_autotasks()
 {
-  global $conf, $page;
+	global $conf, $page;
 
   $conf_UAM = unserialize($conf['UserAdvManager']);
   
   $users = array();
   
-  // Search users depending expiration date and reminder sent
+	// Search users depending expiration date and reminder sent
   // --------------------------------------------------------
   $query = '
 SELECT DISTINCT u.'.$conf['user_fields']['id'].' AS id,
@@ -2462,14 +2489,14 @@ FROM '.USERS_TABLE.' AS u
 WHERE (TO_DAYS(NOW()) - TO_DAYS(lv.lastvisit) >= "'.$conf_UAM[16].'")
 ORDER BY lv.lastvisit ASC;';
 
-  $result = pwg_query($query);
+	$result = pwg_query($query);
       
   while ($row = pwg_db_fetch_assoc($result))
   {
     array_push($users, $row);
-  }
+	}
   
-  return $users;
+	return $users;
 }
 
 
@@ -2481,11 +2508,11 @@ ORDER BY lv.lastvisit ASC;';
  */
 function get_user_list()
 {
-  global $conf, $page;
+	global $conf, $page;
   
   $users = array();
 
-  // Search users depending expiration date with exclusion of Adult_Content generic users
+	// Search users depending expiration date with exclusion of Adult_Content generic users
   // ------------------------------------------------------------------------------------
   $query = '
 SELECT DISTINCT u.'.$conf['user_fields']['id'].' AS id,
@@ -2501,25 +2528,25 @@ WHERE u.'.$conf['user_fields']['id'].' >= 3
 ORDER BY ug.lastvisit DESC
 ;';
 
-  $result = pwg_query($query);
+	$result = pwg_query($query);
       
   while ($row = pwg_db_fetch_assoc($result))
   {
-    $user = $row;
+  	$user = $row;
     $user['groups'] = array();
 
     array_push($users, $user);
-  }
+	}
 
-  // Add groups list
+	// Add groups list
   // ---------------
   $user_ids = array();
   foreach ($users as $i => $user)
   {
-    $user_ids[$i] = $user['id'];
-  }
+  	$user_ids[$i] = $user['id'];
+	}
 
-  return $users;
+	return $users;
 }
 
 
@@ -2533,51 +2560,51 @@ ORDER BY ug.lastvisit DESC
  */
 function expiration($id)
 {
-  global $conf, $page;
+	global $conf, $page;
           
-  // Get ConfirmMail configuration
+	// Get ConfirmMail configuration
   // -----------------------------
   $conf_UAM_ConfirmMail = unserialize($conf['UserAdvManager_ConfirmMail']);
           
-  // Get UAM configuration
+	// Get UAM configuration
   // ---------------------
   $conf_UAM = unserialize($conf['UserAdvManager']);
-  
-  $query = "
+	
+	$query = "
 SELECT registration_date
   FROM ".USER_INFOS_TABLE."
 WHERE user_id = '".$id."'
 ;";
-  list($registration_date) = pwg_db_fetch_row(pwg_query($query));
+	list($registration_date) = pwg_db_fetch_row(pwg_query($query));
 
 //              Time limit process             
 // ********************************************  
-  if (!empty($registration_date))
+	if (!empty($registration_date))
   {
-    // Dates formating and compare
+		// Dates formating and compare
     // ---------------------------
-    $today = date("d-m-Y"); // Get today's date
-    list($day, $month, $year) = explode('-', $today); // explode date of today             
-    $daytimestamp = mktime(0, 0, 0, $month, $day, $year);// Generate UNIX timestamp
-      
-    list($regdate, $regtime) = explode(' ', $registration_date); // Explode date and time from registration date
-    list($regyear, $regmonth, $regday) = explode('-', $regdate); // Explode date from registration date
-    $regtimestamp = mktime(0, 0, 0, $regmonth, $regday, $regyear);// Generate UNIX timestamp
-      
-    $deltasecs = $daytimestamp - $regtimestamp;// Compare the 2 UNIX timestamps 
-    $deltadays = floor($deltasecs / 86400);// Convert result from seconds to days
+		$today = date("d-m-Y"); // Get today's date
+		list($day, $month, $year) = explode('-', $today); // explode date of today						 
+ 		$daytimestamp = mktime(0, 0, 0, $month, $day, $year);// Generate UNIX timestamp
+	  	
+	  list($regdate, $regtime) = explode(' ', $registration_date); // Explode date and time from registration date
+		list($regyear, $regmonth, $regday) = explode('-', $regdate); // Explode date from registration date
+		$regtimestamp = mktime(0, 0, 0, $regmonth, $regday, $regyear);// Generate UNIX timestamp
+			
+		$deltasecs = $daytimestamp - $regtimestamp;// Compare the 2 UNIX timestamps	
+		$deltadays = floor($deltasecs / 86400);// Convert result from seconds to days
 
-    // Condition with the value set for time limit
+		// Condition with the value set for time limit
     // -------------------------------------------
-    if ($deltadays <= $conf_UAM_ConfirmMail[1]) // If Nb of days is less than the limit set
-    {
-      return false;
-    }
-    else
-    {
-      return true;
-    }
-  }
+		if ($deltadays <= $conf_UAM_ConfirmMail[1]) // If Nb of days is less than the limit set
+		{
+			return false;
+		}
+		else
+		{
+			return true;
+		}
+	}
 }
 
 
@@ -2617,18 +2644,18 @@ function testpassword($password) // Le mot de passe passé en paramètre - $pass
     {
       // On ajoute 1 point pour une minuscule - Adding 1 point to score for a lowercase
       // ------------------------------------------------------------------------------
-      $points = $points + 1;
+		  $points = $points + 1;
 
-      // On rajoute le bonus pour une minuscule - Adding bonus points for lowercase
+		  // On rajoute le bonus pour une minuscule - Adding bonus points for lowercase
       // --------------------------------------------------------------------------
-      $point_lowercase = 1;
+		  $point_lowercase = 1;
     }
     else if ($letters>='A' && $letters <='Z')
     {
       // On ajoute 2 points pour une majuscule - Adding 2 points to score for uppercase
       // ------------------------------------------------------------------------------
       $points = $points + 2;
-    
+		
       // On rajoute le bonus pour une majuscule - Adding bonus points for uppercase
       // --------------------------------------------------------------------------
       $point_uppercase = 2;
@@ -2638,7 +2665,7 @@ function testpassword($password) // Le mot de passe passé en paramètre - $pass
       // On ajoute 3 points pour un chiffre - Adding 3 points to score for numbers
       // -------------------------------------------------------------------------
       $points = $points + 3;
-    
+		
       // On rajoute le bonus pour un chiffre - Adding bonus points for numbers
       // ---------------------------------------------------------------------
       $point_numbers = 3;
@@ -2648,7 +2675,7 @@ function testpassword($password) // Le mot de passe passé en paramètre - $pass
       // On ajoute 5 points pour un caractère autre - Adding 5 points to score for special characters
       // --------------------------------------------------------------------------------------------
       $points = $points + 5;
-    
+		
       // On rajoute le bonus pour un caractère autre - Adding bonus points for special characters
       // ----------------------------------------------------------------------------------------
       $point_characters = 5;
@@ -2747,50 +2774,19 @@ function UAM_UsrReg_Verif($user_id)
 {
   global $conf;
 
-  // Get UAM configuration
-  // ---------------------
-  $conf_UAM = unserialize($conf['UserAdvManager']);
-
-  // Check for user groups
   $query = '
-SELECT group_id
-  FROM '.USER_GROUP_TABLE.'
-WHERE user_id = '.$user_id.'
-  AND group_id = '.$conf_UAM[2].'
+SELECT UAM_validated
+FROM '.USERS_TABLE.'
+WHERE id='.$user_id.'
 ;';
 
-  $count1 = pwg_db_num_rows(pwg_query($query));
+  $result = pwg_db_fetch_assoc(pwg_query($query));
 
-  // Check for user status
-  $query = '
-SELECT status
-  FROM '.USER_INFOS_TABLE.'
-WHERE user_id = '.$user_id.'
-  AND status in (\''.$conf_UAM[7].'\')
-;';
-
-  $count2 = pwg_db_num_rows(pwg_query($query));
-
-  // Check for user privacy level
-  $query = '
-SELECT level
-  FROM '.USER_INFOS_TABLE.'
-WHERE user_id = '.$user_id.'
-  AND level = '.$conf_UAM[35].'
-;';
-
-  $count3 = pwg_db_num_rows(pwg_query($query));
-
-  $count = $count1 + $count2 + $count3; // Summary of counts
-
-  if ($count == 0)
+  if($result['UAM_validated'] == 'true')
   {
-    return true; // User has validated his registration
+    return true;
   }
-  else
-  {
-    return false; // User has not validated his registration
-  }
+  else return false;
 }
 
 
@@ -2854,7 +2850,7 @@ SELECT DISTINCT id, UAM_pwdreset
       }
       else $pwdreset = l10n('UAM_PwdReset_NA');
       
-      $visible_user_list[$user_nums[$row['id']]]['plugin_columns'][] = $pwdreset; // Shows users password state in user_list
+		  $visible_user_list[$user_nums[$row['id']]]['plugin_columns'][] = $pwdreset; // Shows users password state in user_list
     }
   }
   return $visible_user_list;
