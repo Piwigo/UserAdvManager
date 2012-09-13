@@ -651,42 +651,54 @@ ADD UAM_validated enum("true","false")
 
   // Fill UAM_validated column with correct information for registered and validated  users
   // --------------------------------------------------------------------------------------
+		
+		// It goes for everybody registered in the gallery except for Guest and AC users (16 and 18)
   $query = '
-SELECT DISTINCT u.id AS id
+SELECT DISTINCT u.id AS id, u.username AS username
 FROM '.USERS_TABLE.' AS u
-  INNER JOIN '.USER_INFOS_TABLE.' AS ui
-    ON u.id = ui.user_id
-  LEFT JOIN '.USER_GROUP_TABLE.' AS ug
-    ON u.id = ug.user_id
-WHERE u.id <> 2';
+		INNER JOIN '.USER_INFOS_TABLE.' AS ui
+				ON u.id = ui.user_id
+		LEFT JOIN '.USER_GROUP_TABLE.' AS ug
+				ON u.id = ug.user_id
+WHERE u.id != 2
+		AND u.username != \'16\'
+		AND u.username != \'18\'';
 
-	if ($conf_UAM[3] <> '-1' and $conf_UAM[4] == '-1')
-  {
-    $query.= '
-  AND ug.group_id = '.$conf_UAM[3];
-  }
-  if ($conf_UAM[3] == '-1' and $conf_UAM[4] <> '-1')
-  {
-    $query.= '
-  AND ui.status = \''.$conf_UAM[4]."'";
-  }
-  if ($conf_UAM[3] <> '-1' and $conf_UAM[4] <> '-1')
-  {
-    $query.= '
-  AND ug.group_id = '.$conf_UAM[3];
-  }
-  $query.= ';';
+		if ($conf_UAM[3] <> '-1' and $conf_UAM[4] == '-1')
+		{
+				$query.= '
+AND ug.group_id = '.$conf_UAM[3];
+		}
+		if ($conf_UAM[3] == '-1' and $conf_UAM[4] <> '-1')
+		{
+				$query.= '
+AND ui.status = \''.$conf_UAM[4]."'";
+		}
+		if ($conf_UAM[3] <> '-1' and $conf_UAM[4] <> '-1')
+		{
+				$query.= '
+AND ug.group_id = '.$conf_UAM[3];
+		}
+		$query.= ';';
 
-	$result = pwg_query($query);
+		$result = pwg_query($query);
 
-  while($row = mysql_fetch_array($result))
-  {
-    $query = '
+		while($row = mysql_fetch_array($result))
+		{
+				$query = '
 UPDATE '.USERS_TABLE.'
 SET UAM_validated=true
-WHERE id = "'.$row['id'].'"
+WHERE id = '.$row['id'].'
 ;';
-    pwg_query($query);
-  }
+				pwg_query($query);
+		}
+
+		// It goes to Webmaster too
+		$query = '
+UPDATE '.USERS_TABLE.'
+SET UAM_validated=true
+WHERE id = 1
+;';
+		pwg_query($query);
 }
 ?>
