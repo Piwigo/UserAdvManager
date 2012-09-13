@@ -2766,7 +2766,7 @@ WHERE user_id = '.$user_id.'
 SELECT status
   FROM '.USER_INFOS_TABLE.'
 WHERE user_id = '.$user_id.'
-  AND status = '.$conf_UAM[7].'
+  AND status in (\''.$conf_UAM[7].'\')
 ;';
 
   $count2 = pwg_db_num_rows(pwg_query($query));
