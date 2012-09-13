@@ -104,7 +104,7 @@ LIMIT 1
   }
 
   // Perform user logout after registration if not validated
-  if ((isset($conf_UAM[39]) and $conf_UAM[39] == 'true') and !UAM_UsrReg_Verif($user['id']) and !is_admin() and is_webmaster())
+  if ((isset($conf_UAM[39]) and $conf_UAM[39] == 'true') and !UAM_UsrReg_Verif($user['id']) and !is_admin() and !is_webmaster())
   {
     invalidate_user_cache();
     logout_user();
@@ -455,40 +455,13 @@ WHERE user_id = '.$user['id'].'
       }
     }
   }
-  elseif ((isset($conf_UAM[39]) and $conf_UAM[39] == 'true') and UAM_UsrReg_Verif($user['id']) == false and is_admin()==false and is_webmaster() == false)
+  elseif ((isset($conf_UAM[39]) and $conf_UAM[39] == 'true') and !UAM_UsrReg_Verif($user['id']) and !is_admin() and !is_webmaster())
   {
     // Logged-in user cleanup, session destruction and redirected to custom page
     // -------------------------------------------------------------------------
-    if (UAM_UsrReg_Verif($user['id']))
-    {
-      $var2 = "UAM_UsrReg_Verif = True";
-    }
-    else
-    {
-      $var2 = "UAM_UsrReg_Verif = False";
-    }
-    
-    if (is_admin())
-    {
-      $var3 = "is_admin = True";
-    }
-    else
-    {
-      $var3 = "is_admin = False";
-    }
-
-    if (is_webmaster())
-    {
-      $var4 = "is_webmaster = True";
-    }
-    else
-    {
-      $var4 = "is_webmaster = False";
-    }
-    UAMLog($conf_UAM[39],$var2,$var3,$var4);
-    //invalidate_user_cache();
-    //logout_user();
-    //redirect(UAM_PATH.'rejected.php');
+    invalidate_user_cache();
+    logout_user();
+    redirect(UAM_PATH.'rejected.php');
   }
 }
 
