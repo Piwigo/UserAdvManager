@@ -663,7 +663,7 @@ WHERE u.id <> 2';
 	if ($conf_UAM[3] <> '-1' and $conf_UAM[4] == '-1')
   {
     $query.= '
-  AND ug.group_id = \''.$conf_UAM[3]."'";
+  AND ug.group_id = '.$conf_UAM[3];
   }
   if ($conf_UAM[3] == '-1' and $conf_UAM[4] <> '-1')
   {
@@ -673,7 +673,7 @@ WHERE u.id <> 2';
   if ($conf_UAM[3] <> '-1' and $conf_UAM[4] <> '-1')
   {
     $query.= '
-  AND ug.group_id = \''.$conf_UAM[3]."'";
+  AND ug.group_id = '.$conf_UAM[3];
   }
   $query.= ';';
 
