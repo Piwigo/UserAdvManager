@@ -136,10 +136,10 @@ function upgrade_212_213()
 {
   // Create missing table
   // --------------------
-  $query = "
-ALTER TABLE ".USER_CONFIRM_MAIL_TABLE."
-ADD reminder ENUM('true', 'false') NULL DEFAULT NULL
-;";
+  $query = '
+ALTER TABLE '.USER_CONFIRM_MAIL_TABLE.'
+ADD reminder ENUM("true", "false") NULL DEFAULT NULL
+;';
   
   pwg_query($query);
 

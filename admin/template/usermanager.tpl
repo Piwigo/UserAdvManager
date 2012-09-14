@@ -95,12 +95,12 @@ $(document).ready(function()
 <p>
 {if $CONFIRM_LOCAL == "local"}
   <input class="submit" type="submit" value="{'UAM_Delete_selected'|@translate}" name="Del_Selected">
-  <input class="submit" type="submit" value="{'UAM_Force_Validation'|@translate}" name="Force_Validation">
+  <input class="submit" type="submit" value="{'UAM_Manual_Validation'|@translate}" name="Manual_Validation">
 {else}
   <input class="submit" type="submit" value="{'UAM_Delete_selected'|@translate}" name="Del_Selected">
   <input class="submit" type="submit" value="{'UAM_Mail_without_key'|@translate}" name="Mail_Without_Key">
   <input class="submit" type="submit" value="{'UAM_Mail_with_key'|@translate}" name="Mail_With_Key">
-  <input class="submit" type="submit" value="{'UAM_Force_Validation'|@translate}" name="Force_Validation">
+  <input class="submit" type="submit" value="{'UAM_Manual_Validation'|@translate}" name="Manual_Validation">
 {/if}
 </p>
   </fieldset>

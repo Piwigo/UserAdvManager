@@ -214,7 +214,7 @@ También está disponible, el bugtracker del proyecto: <a href="http://piwigo.or
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.15.4
-$lang['UAM_Force_Validation'] = 'Validación manual';
+$lang['UAM_Manual_Validation'] = 'Validación manual';
 $lang['UAM_Confirm_Mail_true'] = ' Activar - La validación por el usuario';
 $lang['UAM_Confirm_Mail_local'] = ' Activar - La validación por el administrador (sin clave de validación enviado)';
 // --------- End: New or revised $lang ---- from version 2.15.4

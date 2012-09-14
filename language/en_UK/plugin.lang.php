@@ -154,7 +154,7 @@ Also available, the project\'s bugtracker: <a href="http://piwigo.org/bugs/" onc
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.15.4
-$lang['UAM_Force_Validation'] = 'Manual confirmation';
+$lang['UAM_Manual_Validation'] = 'Manual confirmation';
 $lang['UAM_Confirm_Mail_true'] = ' Enable - Confirmation by user';
 $lang['UAM_Confirm_Mail_local'] = ' Enable - Confirmation by admin (no confirmation key sent)';
 // --------- End: New or revised $lang ---- from version 2.15.4
