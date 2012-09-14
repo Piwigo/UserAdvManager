@@ -175,7 +175,7 @@ Szintén elérhető a projekt hibakövetőben: <a href="http://piwigo.org/bugs/"
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.15.4
-$lang['UAM_Force_Validation'] = 'Kézi érvényesítés';
+$lang['UAM_Manual_Validation'] = 'Kézi érvényesítés';
 $lang['UAM_Confirm_Mail_true'] = ' Bekapcsolva - Érvényesítés a felhasználó által';
 $lang['UAM_Confirm_Mail_local'] = ' Bekapcsolva - Érvényesítés az adminisztrátor által (nincs érvényesítő kulcs küldés)';
 // --------- End: New or revised $lang ---- from version 2.15.4
