@@ -168,7 +168,7 @@ Egalement disponible, le bugtracker du projet: <a href="http://piwigo.org/bugs/"
 // --------- Starting below: New or revised $lang ---- from version 2.15.4
 $lang['UAM_Manual_Validation'] = 'Confirmation manuelle';
 $lang['UAM_Confirm_Mail_true'] = ' Activer - Confirmation par le visiteur';
-$lang['UAM_Confirm_Mail_local'] = ' Activer - Confirmation par l\'administrateur (pas d\'envoi de clé de confirmation)';
+$lang['UAM_Confirm_Mail_local'] = ' Activer - Confirmation par l\'administrateur';
 // --------- End: New or revised $lang ---- from version 2.15.4
 
 
