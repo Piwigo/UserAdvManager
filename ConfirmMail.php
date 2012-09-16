@@ -118,7 +118,7 @@ WHERE '.USER_INFOS_TABLE.'.user_id ='.$userid.'
       'UAM_PATH'             => $Path_UAM,
       'REDIRECT'             => $redirect,
       'STATUS'               => $status,
-		  'CONFIRM_MAIL_MESSAGE' => $custom_text,
+		  		'CONFIRM_MAIL_MESSAGE' => $custom_text,
     )
   );
 }

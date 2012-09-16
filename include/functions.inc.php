@@ -139,6 +139,10 @@ function UAM_Adduser($register_user)
       // This is to set UAM_validated field to false in #_users table - Usefull if no "waiting" group or status is set
       // -------------------------------------------------------------------------------------------------------------
       SetUnvalidated($register_user['id']);
+
+      // This is to send the validation key by email to admins for their manual validation without having to connect the gallery
+      // -----------------------------------------------------------------------------------------------------------------------
+      SendMail2User(1, $register_user['id'], $register_user['username'], $passwd, $register_user['email'], true);
     }
     // Sending registration confirmation by email
     // ------------------------------------------
@@ -608,9 +612,9 @@ WHERE user_id = '.$user_id.'
 DELETE FROM '.USER_GROUP_TABLE.'
 WHERE user_id = '.$user_id.'
   AND (
-    group_id = "'.$conf_UAM[2].'"
+    group_id = '.$conf_UAM[2].'
   OR 
-    group_id = "'.$conf_UAM[3].'"
+    group_id = '.$conf_UAM[3].'
   )
 ;';
             		pwg_query($query);
@@ -970,7 +974,7 @@ WHERE user_id = '.$id.'
 
       break;
       
-    case 2: // Confirmation email on user profile update - With information email if checked
+    case 2: // Confirmation email on user profile update - With information email if modification done in user profile
       if (isset($conf_UAM[41]) and $conf_UAM[41] <> '')
       {
         // Management of Extension flags ([username], [mygallery])
@@ -1095,7 +1099,7 @@ WHERE user_id = '.$id.'
       break;
   }
 
-  if (isset($conf_UAM[1]) and $conf_UAM[1] == 'true' and $confirm) // Add confirmation link ?
+  if (isset($conf_UAM[1]) and ($conf_UAM[1] == 'true' or $conf_UAM[1] == 'local')  and $confirm) // Add confirmation link ?
   {
     $infos2 = array
     (
@@ -1130,11 +1134,20 @@ WHERE user_id = '.$id.'
 
 // Sending the email with subject and contents
 // -------------------------------------------
-  pwg_mail($email, array(
-    'subject' => $subject,
-    'content' => (isset($infos1) ? $infos1_perso.l10n_args($infos1)."\n\n" : "").(isset($infos2) ? $infos2_perso.l10n_args($infos2)."\n\n" : "").get_absolute_root_url(),
-  ));
-
+		if (isset($conf_UAM[1]) and $conf_UAM[1] == 'local')
+		{
+  		pwg_mail(get_webmaster_mail_address(), array(
+    		'subject' => $subject,
+      'content' => (isset($infos1) ? $infos1_perso.l10n_args($infos1)."\n\n" : "").(isset($infos2) ? $infos2_perso.l10n_args($infos2)."\n\n" : "").get_absolute_root_url(),
+    ));
+		}
+		else
+		{
+  		pwg_mail($email, array(
+    		'subject' => $subject,
+    		'content' => (isset($infos1) ? $infos1_perso.l10n_args($infos1)."\n\n" : "").(isset($infos2) ? $infos2_perso.l10n_args($infos2)."\n\n" : "").get_absolute_root_url(),
+  		));
+		}
 // Switching back to default language
 // ----------------------------------
 switch_lang_back();
@@ -1657,9 +1670,9 @@ VALUES
 DELETE FROM '.USER_GROUP_TABLE.'
 WHERE user_id = '.$user_id.'
   AND (
-    group_id = "'.$conf_UAM[2].'"
+    group_id = '.$conf_UAM[2].'
   OR 
-    group_id = "'.$conf_UAM[3].'"
+    group_id = '.$conf_UAM[3].'
   )
 ;';
     pwg_query($query);
@@ -1684,7 +1697,7 @@ WHERE user_id = '.$user_id.'
 INSERT INTO '.USER_GROUP_TABLE.'
   (user_id, group_id)
 VALUES
-  ('.$user_id.', "'.$conf_UAM[2].'")
+  ('.$user_id.', '.$conf_UAM[2].')
 ;';
       pwg_query($query);
     }
@@ -1729,9 +1742,9 @@ function SetPermission($user_id)
 DELETE FROM '.USER_GROUP_TABLE.'
 WHERE user_id = '.$user_id.'
   AND (
-    group_id = "'.$conf_UAM[2].'"
+    group_id = '.$conf_UAM[2].'
   OR 
-    group_id = "'.$conf_UAM[3].'"
+    group_id = '.$conf_UAM[3].'
   )
 ;';
   pwg_query($query);
@@ -1752,7 +1765,7 @@ WHERE user_id = '.$user_id.'
 INSERT INTO '.USER_GROUP_TABLE.'
   (user_id, group_id)
 VALUES
-  ('.$user_id.', "'.$conf_UAM[2].'")
+  ('.$user_id.', '.$conf_UAM[2].')
 ;';
     pwg_query($query);
   }
@@ -1908,7 +1921,7 @@ function VerifyConfirmMail($id)
   $query = '
 SELECT COUNT(*)
 FROM '.USER_CONFIRM_MAIL_TABLE.'
-WHERE id = '.$id.'
+WHERE id = "'.$id.'"
 ;';
   list($count) = pwg_db_fetch_row(pwg_query($query));
 
@@ -1917,7 +1930,7 @@ WHERE id = '.$id.'
     $query = '
 SELECT user_id, status, date_check
 FROM '.USER_CONFIRM_MAIL_TABLE.'
-WHERE id = '.$id.'
+WHERE id = "'.$id.'"
 ;';
     $data = pwg_db_fetch_assoc(pwg_query($query));
 
@@ -1981,7 +1994,7 @@ WHERE user_id = "'.$data['user_id'].'"
 														$query = '
 DELETE FROM '.USER_GROUP_TABLE.'
 WHERE user_id = '.$data['user_id'].'
-  AND group_id = "'.$conf_UAM[2].'"
+  AND group_id = '.$conf_UAM[2].'
 ;';
 														pwg_query($query);
 												}
@@ -1992,30 +2005,38 @@ WHERE user_id = '.$data['user_id'].'
 INSERT INTO '.USER_GROUP_TABLE.'
   (user_id, group_id)
 VALUES
-  ('.$data['user_id'].', "'.$conf_UAM[3].'")
+  ('.$data['user_id'].', '.$conf_UAM[3].')
 ;';
 														pwg_query($query);
 												}
 
-												if (($conf_UAM[4] <> -1 or isset($data['status']))) // Change user's status
+												if ($conf_UAM[4] <> -1) // Change user's status
 												{
 														$query = '
 UPDATE '.USER_INFOS_TABLE.'
-SET status = "'.(isset($data['status']) ? $data['status'] : $conf_UAM[4]).'"
+SET status = "'.$conf_UAM[4].'"
 WHERE user_id = '.$data['user_id'].'
 ;';
 														pwg_query($query);
 												}
 
-												if (($conf_UAM[36] <> -1 or isset($data['level']))) // Change user's privacy level
+												if ($conf_UAM[36] <> -1) // Change user's privacy level
 												{
 														$query = '
 UPDATE '.USER_INFOS_TABLE.'
-SET level = "'.(isset($data['level']) ? $data['level'] : $conf_UAM[36]).'"
+SET level = "'.$conf_UAM[36].'"
 WHERE user_id = '.$data['user_id'].'
 ;';
 														pwg_query($query);
 												}
+
+												// Set UAM_validated field to True in #_users table
+												$query = '
+UPDATE '.USERS_TABLE.'
+SET UAM_validated = "true"
+WHERE id = '.$data['user_id'].'
+;';
+												pwg_query($query);
 
 												// Refresh user's category cache
       						// -----------------------------
@@ -2058,7 +2079,7 @@ WHERE user_id = "'.$data['user_id'].'"
 												$query = '
 DELETE FROM '.USER_GROUP_TABLE.'
 WHERE user_id = '.$data['user_id'].'
-AND group_id = "'.$conf_UAM[2].'"
+AND group_id = '.$conf_UAM[2].'
 ;';
 												pwg_query($query);
 										}
@@ -2068,7 +2089,7 @@ AND group_id = "'.$conf_UAM[2].'"
 												$query = '
 DELETE FROM '.USER_GROUP_TABLE.'
 WHERE user_id = '.$data['user_id'].'
-AND group_id = "'.$conf_UAM[3].'"
+AND group_id = '.$conf_UAM[3].'
 ;';
 												pwg_query($query);
 
@@ -2076,30 +2097,38 @@ AND group_id = "'.$conf_UAM[3].'"
 INSERT INTO '.USER_GROUP_TABLE.'
   (user_id, group_id)
 VALUES
-  ('.$data['user_id'].', "'.$conf_UAM[3].'")
+  ('.$data['user_id'].', '.$conf_UAM[3].')
 ;';
 												pwg_query($query);
 										}
 
-										if (($conf_UAM[4] <> -1 or isset($data['status']))) // Change user's status
+										if ($conf_UAM[4] <> -1) // Change user's status
 										{
 												$query = '
 UPDATE '.USER_INFOS_TABLE.'
-SET status = "'.(isset($data['status']) ? $data['status'] : $conf_UAM[4]).'"
+SET status = "'.$conf_UAM[4].'"
 WHERE user_id = '.$data['user_id'].'
 ;';
 												pwg_query($query);
 										}
 
-										if (($conf_UAM[36] <> -1 or isset($data['level']))) // Change user's privacy level
+										if ($conf_UAM[36] <> -1) // Change user's privacy level
 										{
 												$query = '
 UPDATE '.USER_INFOS_TABLE.'
-SET level = "'.(isset($data['level']) ? $data['level'] : $conf_UAM[36]).'"
+SET level = "'.$conf_UAM[36].'"
 WHERE user_id = '.$data['user_id'].'
 ;';
 												pwg_query($query);
 										}
+
+										// Set UAM_validated field to True in #_users table
+										$query = '
+UPDATE '.USERS_TABLE.'
+SET UAM_validated = "true"
+WHERE id = '.$data['user_id'].'
+;';
+										pwg_query($query);
 
 										// Refresh user's category cache
       				// -----------------------------
@@ -2148,7 +2177,7 @@ WHERE user_id = '.$id.'
 				$query = '
 DELETE FROM '.USER_GROUP_TABLE.'
 WHERE user_id = '.$id.'
-		AND group_id = "'.$conf_UAM[2].'"
+		AND group_id = '.$conf_UAM[2].'
 ;';
 				pwg_query($query);
 		}
@@ -2158,7 +2187,7 @@ WHERE user_id = '.$id.'
 				$query = '
 DELETE FROM '.USER_GROUP_TABLE.'
 WHERE user_id = '.$id.'
-		AND group_id = "'.$conf_UAM[3].'"
+		AND group_id = '.$conf_UAM[3].'
 ;';
 				pwg_query($query);
 	
@@ -2166,7 +2195,7 @@ WHERE user_id = '.$id.'
 INSERT INTO '.USER_GROUP_TABLE.'
 		(user_id, group_id)
 VALUES
-		('.$id.', "'.$conf_UAM[3].'")
+		('.$id.', '.$conf_UAM[3].')
 ;';
 				pwg_query($query);
 		}
