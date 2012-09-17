@@ -58,6 +58,7 @@ function UAM_Init()
   include_once(PHPWG_ROOT_PATH.'admin/include/functions.php');
 
   $conf_UAM = unserialize($conf['UserAdvManager']);
+  
 
   // Admins, Guests and Adult_Content users are not tracked for Ghost Tracker or Users Tracker
   // -----------------------------------------------------------------------------------------
@@ -107,7 +108,14 @@ LIMIT 1
     {
       invalidate_user_cache();
       logout_user();
-      redirect(UAM_PATH.'rejected.php');
+      if ( $conf['guest_access'] )
+      {
+        redirect( make_index_url().'?UAM_msg=rejected', 0);
+      }
+      else
+      {
+        redirect( get_root_url().'identification.php?UAM_msg=rejected' , 0);
+      }
     }
   }
 }
@@ -471,7 +479,14 @@ WHERE user_id = '.$user['id'].'
     // -------------------------------------------------------------------------
     invalidate_user_cache();
     logout_user();
-    redirect(UAM_PATH.'rejected.php');
+    if ( $conf['guest_access'] )
+    {
+      redirect( make_index_url().'?UAM_msg=rejected', 0);
+    }
+    else
+    {
+      redirect( get_root_url().'identification.php?UAM_msg=rejected' , 0);
+    }
   }
 }
 
@@ -874,6 +889,36 @@ function UAM_InitPage()
   }
 }
 
+/**
+ * Triggered on init
+ * 
+ * Display a message according to $_GET['UAM_msg']
+ */
+function UAM_DisplayMsg()
+{
+  if( isset($_GET['UAM_msg']))
+  {
+    global $user, $lang, $conf, $page;
+    $conf_UAM = unserialize($conf['UserAdvManager']);
+    
+    if (isset($conf_UAM[40]) and $conf_UAM[40] <> '' and $_GET['UAM_msg']="rejected")
+    {
+      // Management of Extension flags ([mygallery], [myurl])
+      // ---------------------------------------------------
+      $patterns[] = '#\[mygallery\]#i';
+      $replacements[] = $conf['gallery_title'];
+      $patterns[] = '#\[myurl\]#i';
+      $replacements[] = get_gallery_home_url();
+    
+      if (function_exists('get_user_language_desc'))
+      {
+        $custom_text = get_user_language_desc(preg_replace($patterns, $replacements, $conf_UAM[40]));
+      }
+      else $custom_text = l10n(preg_replace($patterns, $replacements, $conf_UAM[40]));
+      $page["errors"][]=$custom_text;
+    }
+  }
+}
 
 /**
  * Triggered on render_lost_password_mail_content
@@ -3239,4 +3284,5 @@ function UAMLog($var1, $var2, $var3, $var4)
    fwrite($fo,$var4 ."\r\n") ;
    fclose($fo) ;
 }
+
 ?>

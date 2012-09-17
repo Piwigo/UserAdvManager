@@ -194,7 +194,7 @@ switch ($page['tab'])
       (isset($_POST['UAM_Validated_Status'])?$_POST['UAM_Validated_Status']:''),
       $_POST['UAM_Username_Char'],
       $_POST['UAM_Username_List'],
-      (isset($_POST['UAM_No_Confirm_Status'])?$_POST['UAM_No_Confirm_Status']:''),
+      (isset($_POST['UAM_No_Confirm_Status'])?$_POST['UAM_No_Confirm_Status']:''),//7
       $_POST['UAM_MailInfo_Text'],
       $_POST['UAM_ConfirmMail_Text'],
       $_POST['UAM_MailExclusion'],
@@ -213,7 +213,7 @@ switch ($page['tab'])
       $_POST['UAM_GTAutoDelText'],
       $_POST['UAM_GTAutoMailText'],
       (isset($_POST['UAM_Downgrade_Group'])?$_POST['UAM_Downgrade_Group']:''),
-      (isset($_POST['UAM_Downgrade_Status'])?$_POST['UAM_Downgrade_Status']:''),
+      (isset($_POST['UAM_Downgrade_Status'])?$_POST['UAM_Downgrade_Status']:''),//26
       $_POST['UAM_AdminValidationMail_Text'],
       $_POST['UAM_CustomPasswRetr'],
       $_POST['UAM_CustomPasswRetr_Text'],
@@ -339,6 +339,7 @@ switch ($page['tab'])
   }
 
   $conf_UAM = unserialize($conf['UserAdvManager']);
+  //print_r ($conf_UAM) ;
 
   // Group setting for unvalidated, validated users and downgrade group
   // ------------------------------------------------------------------
