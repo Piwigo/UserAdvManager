@@ -339,6 +339,8 @@ Plugin Name: UserAdvManager
             Update es_ES, thanks to : jpr928
             Update it_IT, thanks to : Ericnet and virgigiole
 
--- 2.41.0 : Bug 2744 fixed - User connexion rejection does not work if no group/status/privacy is set 
+-- 2.41.0 : Bug 2744 fixed - User connexion rejection does not work if no group/status/privacy is set
+						New unvalidated user controls more efficient
+						New simplifed administration panel
 */
 ?>

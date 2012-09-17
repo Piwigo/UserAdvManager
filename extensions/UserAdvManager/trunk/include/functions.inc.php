@@ -2377,25 +2377,8 @@ FROM '.USERS_TABLE.' AS u
     ON u.'.$conf['user_fields']['id'].' = ug.user_id
 WHERE u.'.$conf['user_fields']['id'].' >= 3
   AND (TO_DAYS(NOW()) - TO_DAYS(ui.registration_date) >= "'.$conf_UAM_ConfirmMail[1].'"
-  OR TO_DAYS(NOW()) - TO_DAYS(ui.registration_date) < "'.$conf_UAM_ConfirmMail[1].'")';
-
-		if ($conf_UAM[2] <> '-1' and $conf_UAM[7] == '-1')
-  {
-    $query.= '
-  AND ug.group_id = '.$conf_UAM[2];
-  }
-  if ($conf_UAM[2] == '-1' and $conf_UAM[7] <> '-1')
-  {
-    $query.= '
-  AND ui.status = \''.$conf_UAM[7]."'";
-  }
-  if ($conf_UAM[2] <> '-1' and $conf_UAM[7] <> '-1')
-  {
-    $query.= '
-  AND ug.group_id = '.$conf_UAM[2];
-  }
-
-  $query.= '
+  OR TO_DAYS(NOW()) - TO_DAYS(ui.registration_date) < "'.$conf_UAM_ConfirmMail[1].'")
+		AND u.UAM_validated = "false"
 ORDER BY ui.registration_date ASC
 ;';
 
