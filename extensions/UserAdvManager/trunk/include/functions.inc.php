@@ -58,7 +58,6 @@ function UAM_Init()
   include_once(PHPWG_ROOT_PATH.'admin/include/functions.php');
 
   $conf_UAM = unserialize($conf['UserAdvManager']);
-  
 
   // Admins, Guests and Adult_Content users are not tracked for Ghost Tracker or Users Tracker
   // -----------------------------------------------------------------------------------------
