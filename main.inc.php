@@ -69,6 +69,7 @@ add_event_handler('init', 'UAM_InitPage');
 // ---------------------------
 add_event_handler('init','UAM_DisplayMsg');
 add_event_handler('identification','UAM_DisplayMsg');
+
 // PWG_Stuffs module
 // -----------------
 if (isset($conf_UAM[33]) and $conf_UAM[33] == 'true')
