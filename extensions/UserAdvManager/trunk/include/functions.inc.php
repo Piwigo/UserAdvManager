@@ -101,14 +101,14 @@ LIMIT 1
         pwg_query($query);
       }
     }
-  }
 
-  // Perform user logout after registration if not validated
-  if ((isset($conf_UAM[39]) and $conf_UAM[39] == 'true') and !UAM_UsrReg_Verif($user['id']) and !is_admin() and !is_webmaster())
-  {
-    invalidate_user_cache();
-    logout_user();
-    redirect(UAM_PATH.'rejected.php');
+    // Perform user logout after registration if not validated
+    if ((isset($conf_UAM[39]) and $conf_UAM[39] == 'true') and !UAM_UsrReg_Verif($user['id']) and !is_admin() and !is_webmaster() )
+    {
+      invalidate_user_cache();
+      logout_user();
+      redirect(UAM_PATH.'rejected.php');
+    }
   }
 }
 
@@ -1620,7 +1620,7 @@ function FindAvailableConfirmMailID()
     $query = '
 SELECT COUNT(*)
   FROM '.USER_CONFIRM_MAIL_TABLE.'
-WHERE id = '.$id.'
+WHERE id = "'.$id.'"
 ;';
     list($count) = pwg_db_fetch_row(pwg_query($query));
 
