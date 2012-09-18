@@ -1180,6 +1180,40 @@ WHERE user_id = '.$id.'
 // -------------------------------------------
 		if (isset($conf_UAM[1]) and $conf_UAM[1] == 'local')
 		{
+<<<<<<< .mine
+			 $keyargs_content = array();
+  		$keyargs_content[] = get_l10n_args('Manual validation needed for %s', $username);
+  		$keyargs_content[] = get_l10n_args('UAM_Link: %s', AddConfirmMail($id, $email));
+  		pwg_mail_notification_admins(get_l10n_args('Manual validation for %s',$username),$keyargs_content,false);
+#  		$admins = array();
+#      $query = '
+#    SELECT
+#        u.'.$conf['user_fields']['username'].' AS username,
+#        u.'.$conf['user_fields']['email'].' AS mail_address
+#      FROM '.USERS_TABLE.' AS u
+#        JOIN '.USER_INFOS_TABLE.' AS i ON i.user_id =  u.'.$conf['user_fields']['id'].'
+#      WHERE i.status in (\'webmaster\',  \'admin\')
+#        AND '.$conf['user_fields']['email'].' IS NOT NULL
+#        AND i.user_id <> '.$user['id'].'
+#      ORDER BY username
+#    ;';
+#    
+#      $datas = pwg_query($query);
+#      if (!empty($datas))
+#      {
+#        while ($admin = pwg_db_fetch_assoc($datas))
+#        {
+#          if (!empty($admin['mail_address']))
+#          {
+#            array_push($admins, format_email($admin['username'], $admin['mail_address']));
+#          }
+#        }
+#      }
+#      pwg_mail(implode(', ', $admins), array(
+#    		'subject' => $subject,
+#      'content' => (isset($infos1) ? $infos1_perso.l10n_args($infos1)."\n\n" : "").(isset($infos2) ? $infos2_perso.l10n_args($infos2)."\n\n" : "").get_absolute_root_url(),
+#    ));
+=======
   		$admins = array();
       $query = '
     SELECT
@@ -1207,6 +1241,7 @@ WHERE user_id = '.$id.'
     		'subject' => $subject,
       'content' => (isset($infos1) ? $infos1_perso.l10n_args($infos1)."\n\n" : "").(isset($infos2) ? $infos2_perso.l10n_args($infos2)."\n\n" : "").get_absolute_root_url(),
     ));
+>>>>>>> .r17987
 		}
 		else
 		{
