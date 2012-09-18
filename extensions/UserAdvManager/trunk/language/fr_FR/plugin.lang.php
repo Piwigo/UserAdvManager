@@ -13,7 +13,7 @@ $lang['UAM_Registration_Date'] = 'Date d\'enregistrement';
 $lang['UAM_infos_mail %s'] = '%s, voici vos informations pour vous identifier sur la galerie :';
 $lang['UAM_User: %s'] = 'Utilisateur : %s';
 $lang['UAM_Password: %s'] = 'Mot de passe: %s';
-$lang['UAM_Link: %s'] = 'Cliquez sur le lien suivant pour confirmer votre inscription : %s';
+$lang['UAM_Link: %s'] = 'Cliquez sur le lien suivant pour confirmer l\'inscription : %s';
 
 
 /* Email confirmation page */
@@ -431,4 +431,8 @@ $lang['UAM_mail_exclusion_error'] = 'L\'option de Piwigo "L\'adresse mail est ob
 Veuillez réactivez l\'option de Piwigo "L\'adresse mail est obligatoire pour tous les utilisateurs" pour pouvoir désactiver ensuite l\'option UAM "Exclusion des domaines de messagerie" si c\'est ce que vous souhaitez.<br><br>
 Note : Ce message disparaitra après que vous ayez effectué la correction nécessaire et rechargé la page d\'administration.<br><br>';
 // --------- End: New or revised $lang ---- from version 2.40.4 and 2.30.7
+
+// --------- Starting below: New or revised $lang ---- from version 2.41.0
+$lang['Manual validation for %s'] = 'Inscription de %s à valider';
+// --------- End: New or revised $lang ---- from version 2.41.0
 ?>
