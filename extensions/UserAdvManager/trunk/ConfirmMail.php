@@ -40,7 +40,10 @@ WHERE ('.USERS_TABLE.'.id ='.$userid.')
     $status = true;
     
     log_user($userid, false);
-
+    if (isset($conf_UAM[1]) and $conf_UAM[1] == 'local')
+    {
+      validation_mail($userid);
+    }
 // We have to get the user's language in database
 // ----------------------------------------------
     $query = '
