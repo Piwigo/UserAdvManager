@@ -1189,7 +1189,6 @@ WHERE user_id = '.$id.'
         JOIN '.USER_INFOS_TABLE.' AS i ON i.user_id =  u.'.$conf['user_fields']['id'].'
       WHERE i.status in (\'webmaster\',  \'admin\')
         AND '.$conf['user_fields']['email'].' IS NOT NULL
-        AND i.user_id <> '.$user['id'].'
       ORDER BY username
     ;';
     
@@ -1629,12 +1628,11 @@ WHERE id = '.$id.'
     $replacements[] = $result['username'];
     $patterns[] = '#\[mygallery\]#i';
     $replacements[] = $conf['gallery_title'];
-
     if (function_exists('get_user_language_desc'))
     {
       $subject = get_user_language_desc(preg_replace($patterns, $replacements, $conf_UAM[46]))."\n\n";
     }
-    else $subject = l10n(preg_replace($patterns, $replacements, $conf_UAM[46]))."\n\n"; 
+    else $subject = l10n(preg_replace($patterns, $replacements, $conf_UAM[46]))."\n\n";
   }
       
   if (isset($conf_UAM[27]) and $conf_UAM[27] <> '')
@@ -1647,12 +1645,11 @@ WHERE id = '.$id.'
     $replacements[] = $conf['gallery_title'];
     $patterns[] = '#\[myurl\]#i';
     $replacements[] = get_gallery_home_url();
-
     if (function_exists('get_user_language_desc'))
     {
       $custom_txt = get_user_language_desc(preg_replace($patterns, $replacements, $conf_UAM[27]))."\n\n";
     }
-    else $custom_txt = l10n(preg_replace($patterns, $replacements, $conf_UAM[27]))."\n\n"; 
+    else $custom_txt = l10n(preg_replace($patterns, $replacements, $conf_UAM[27]))."\n\n";
   }
 
   $infos = array(
