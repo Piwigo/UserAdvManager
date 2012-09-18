@@ -38,7 +38,6 @@ WHERE ('.USERS_TABLE.'.id ='.$userid.')
   if (VerifyConfirmMail($key))
   {
     $status = true;
-    
     log_user($userid, false);
     if (isset($conf_UAM[1]) and $conf_UAM[1] == 'local')
     {
