@@ -426,4 +426,10 @@ $lang['UAM_mail_exclusion_error'] = 'The Piwigo\'s option "The email address is 
 Please, Reactivate the Piwigo\'s option "The email address is mandatory for all users" to be able then to disable UAM\'s option "Exclusion of mail domains" if that\'s what you want.<br><br>
 Note: This message will disappear after you have made the necessary correction and reloaded the admin page.<br><br>';
 // --------- End: New or revised $lang ---- from version 2.40.4 and 2.30.7
+
+
+// --------- Starting below: New or revised $lang ---- from version 2.41.0
+$lang['UAM Subjet manual validation for %s'] = 'Registration of %s waits for validation';
+$lang['UAM Manual validation needed for %s'] = 'The user %s has registered and awaits for manual validation by an admin.';
+// --------- End: New or revised $lang ---- from version 2.41.0
 ?>
