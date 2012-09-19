@@ -433,6 +433,7 @@ Note : Ce message disparaitra après que vous ayez effectué la correction néce
 // --------- End: New or revised $lang ---- from version 2.40.4 and 2.30.7
 
 // --------- Starting below: New or revised $lang ---- from version 2.41.0
-$lang['Manual validation for %s'] = 'Inscription de %s à valider';
+$lang['UAM Subjet manual validation for %s'] = 'Inscription de %s à valider';
+$lang['UAM Manual validation needed for %s'] = 'L\'utilisateur %s s\'est inscrit et demande une validation manuelle par un administrateur.';
 // --------- End: New or revised $lang ---- from version 2.41.0
 ?>

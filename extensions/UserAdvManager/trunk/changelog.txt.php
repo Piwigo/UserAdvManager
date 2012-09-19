@@ -340,7 +340,8 @@ Plugin Name: UserAdvManager
             Update it_IT, thanks to : Ericnet and virgigiole
 
 -- 2.41.0 : Bug 2744 fixed - User connexion rejection does not work if no group/status/privacy is set
-						New unvalidated user controls more efficient
-						New simplifed administration panel
+            New unvalidated user controls more efficient
+            Get admins emails instead of webmaster's for sending validation email
+            TODO - New simplifed administration panel
 */
 ?>
