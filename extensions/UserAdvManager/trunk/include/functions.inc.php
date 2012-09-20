@@ -1180,10 +1180,8 @@ WHERE user_id = '.$id.'
 // -------------------------------------------
 		if (isset($conf_UAM[1]) and $conf_UAM[1] == 'local')
 		{
-				$keyargs_content = array();
-  		$keyargs_content[] = get_l10n_args('UAM Manual validation needed for %s', $username);
-  		$keyargs_content[] = get_l10n_args('UAM_Link: %s', AddConfirmMail($id, $email));
-  		pwg_mail_notification_admins(get_l10n_args('UAM Subjet manual validation for %s',$username),$keyargs_content,false);
+				$validation_url = AddConfirmMail($id, $email);
+  		UAM_Admins_notification($username,AddConfirmMail($id, $validation_url));
 		}
 		else
 		{
@@ -1195,6 +1193,24 @@ WHERE user_id = '.$id.'
 // Switching back to default language
 // ----------------------------------
 switch_lang_back();
+}
+
+
+function UAM_Admins_notification($username,$validation_url)
+{
+		include_once(PHPWG_ROOT_PATH.'include/functions_mail.inc.php');
+		$keyargs_content = array
+  (
+  		get_l10n_args('UAM_Manual_validation_needed_for %s', stripslashes($username)),
+    get_l10n_args('', ''),
+    get_l10n_args('UAM_Link: %s', $validation_url)
+  );
+
+  pwg_mail_notification_admins(
+    get_l10n_args('UAM_Subject admin validation for %s',stripslashes($username)),
+    $keyargs_content,
+    false
+  );
 }
 
 
@@ -2274,7 +2290,7 @@ WHERE id = '.$id.'
 
 
 /**
- * Function called from functions.inc.php - Check if username matches forbidden caracters
+ * Function called from functions.inc.php - Check if username matches forbidden characters
  *
  * @param : User login
  * 
