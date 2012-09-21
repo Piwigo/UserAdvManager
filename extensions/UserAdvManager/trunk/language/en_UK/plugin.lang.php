@@ -13,7 +13,7 @@ $lang['UAM_Registration_Date'] = 'Registration date';
 $lang['UAM_infos_mail %s'] = '%s, please find here your information to log in the gallery :';
 $lang['UAM_User: %s'] = 'User : %s';
 $lang['UAM_Password: %s'] = 'Password: %s';
-$lang['UAM_Link: %s'] = 'Please, click on this link to confirm your registration : %s';
+$lang['UAM_Link: %s'] = 'Please, click on this link to confirm the registration : %s';
 
 
 /* Errors and Warnings */
