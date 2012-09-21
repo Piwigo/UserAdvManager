@@ -1180,8 +1180,18 @@ WHERE user_id = '.$id.'
 // -------------------------------------------
 		if (isset($conf_UAM[1]) and $conf_UAM[1] == 'local')
 		{
-				$validation_url = AddConfirmMail($id, $email);
-  		UAM_Admins_notification($username,AddConfirmMail($id, $validation_url));
+  		switch_lang_to(get_default_language());
+  		
+  		load_language('plugin.lang', UAM_PATH);
+  		$subject = get_l10n_args('UAM_Subject admin validation for %s',$username);
+
+		  $content = array(
+  		get_l10n_args('UAM_Manual_validation_needed_for %s', stripslashes($username)),
+    get_l10n_args('', ''),
+    get_l10n_args('UAM_Link: %s', AddConfirmMail($id, $email)),
+    );
+
+    UAM_mail_notification_admins($subject, $content);
 		}
 		else
 		{
@@ -1196,21 +1206,69 @@ switch_lang_back();
 }
 
 
-function UAM_Admins_notification($username,$validation_url)
+/**
+ * Function called from SendMail2User in functions.inc.php to notify admins on user registration validation with validation key
+ *
+ * @param:
+ *   - keyargs_subject: mail subject on l10n_args format
+ *   - keyargs_content: mail content on l10n_args format
+ *
+ * @return boolean (Ok or not)
+ */
+function UAM_mail_notification_admins($keyargs_subject, $keyargs_content)
 {
-		include_once(PHPWG_ROOT_PATH.'include/functions_mail.inc.php');
-		$keyargs_content = array
-  (
-  		get_l10n_args('UAM_Manual_validation_needed_for %s', stripslashes($username)),
-    get_l10n_args('', ''),
-    get_l10n_args('UAM_Link: %s', $validation_url)
-  );
+  global $conf, $user;
+  
+  // Check arguments
+  if (empty($keyargs_subject) or empty($keyargs_content))
+  {
+    return false;
+  }
 
-  pwg_mail_notification_admins(
-    get_l10n_args('UAM_Subject admin validation for %s',stripslashes($username)),
-    $keyargs_content,
-    false
-  );
+  $return = true;
+
+  $admins = array();
+
+  $query = '
+SELECT
+    u.'.$conf['user_fields']['username'].' AS username,
+    u.'.$conf['user_fields']['email'].' AS mail_address
+  FROM '.USERS_TABLE.' AS u
+    JOIN '.USER_INFOS_TABLE.' AS i ON i.user_id =  u.'.$conf['user_fields']['id'].'
+  WHERE i.status in (\'webmaster\',  \'admin\')
+    AND '.$conf['user_fields']['email'].' IS NOT NULL
+    AND i.user_id <> '.$user['id'].'
+  ORDER BY username
+;';
+
+  $datas = pwg_query($query);
+  if (!empty($datas))
+  {
+    while ($admin = pwg_db_fetch_assoc($datas))
+    {
+      if (!empty($admin['mail_address']))
+      {
+        array_push($admins, format_email($admin['username'], $admin['mail_address']));
+      }
+    }
+  }
+
+  if (count($admins) > 0)
+  {
+    $content = l10n_args($keyargs_content)."\n";
+
+    $return = pwg_mail(
+      implode(', ', $admins),
+      array(
+        'subject' => '['.$conf['gallery_title'].'] '.l10n_args($keyargs_subject),
+        'content' => $content,
+        'content_format' => 'text/plain',
+        'email_format' => 'text/plain',
+        )
+      );
+  }
+
+  return $return;
 }
 
 
