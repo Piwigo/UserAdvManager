@@ -218,9 +218,11 @@ In this view, you can:
 - Submit a registration awaiting confirmation manually even if the expiry date has passed <b>(forcing confirmation)</b>.
 <br><br>
 <b>Table Sorting Function</b>: You can sort the data displayed by clicking on the column headers. Hold the SHIFT key to sort up to 4 simultaneous columns.';
-$lang['UAM_confirmmailTitle_d'] = 'This option allows a user to either confirm registration by clicking on a link received in an email sent upon registration or the administrator to manually activate the registration.<br><br>
-In first case, the e-mail is composed of a customizable part to introduce a little welcome note and a fixed part containing the activation link that is generated from a random key that can possibly regenerate through the &quot;Tracking confirmations&quot; tab.<br><br>
-In second case, <b><u>there is no confirmation key send by email!</u></b>. Visitors have to wait until an administrator confirm them himself in &quot;confirmation tracking&quot; tab. It\s recommanded to activate the Piwigo\'s option &quot;Email admins when a new user registers&quot; (see in Piwigo\'s configuration options) and to use the &quot;Information email to user&quot; to warn new registers to wait on their account activation.
+$lang['UAM_confirmmailTitle_d'] = 'This option allows a user to either confirm registration by clicking on a link received in an email sent upon registration or administrators to manually activate the registration.
+<br><br>
+In first case, the e-mail is composed of a customizable part to introduce a little welcome note and a fixed part containing the activation link that is generated from a random key that can possibly regenerate through the &quot;Tracking confirmations&quot; tab.
+<br><br>
+In second case, the validation link is send to the gallery administrators. Visitors have to wait until an administrator confirm them himself by using the validation link or in &quot;confirmation tracking&quot; tab.
 <br>
 <b style=&quot;color: red;&quot;>NB: Options &quot;Deadline for confirmation of registration limited&quot; and &quot;Remind unconfirmed users  &quot; have to be set to off when admin\'s manual confirmation is enabled.</b>
 <br><br>

@@ -248,7 +248,7 @@ Veuillez vous reporter à la section <b>Astuces et exemples d\'utilisation</b> e
 $lang['UAM_confirmmailTitle_d'] = 'Cette option permet soit à un utilisateur de confirmer son inscription en cliquant sur un lien reçu dans un email envoyé dès son enregistrement sur la galerie, soit à l\'administrateur d\'activer manuellement les inscriptions.<br><br>
 Dans le premier cas, le message envoyé comprend une partie fixe, avec le lien d\'activation généré à partir d\'une clef aléatoire (cette clé peut éventuellement être régénérée via l\'onglet &quot;Suivi des confirmations&quot;), et une partie personnalisable par un texte d\'accueil.
 <br><br>
-Dans le second cas, <b><u>il n\'y a pas d\'envoi de clé de confirmation par email</u></b>. Les visiteurs doivent patienter que l\'administrateur valide lui même leur inscription via l\'onglet &quot;Suivi des confirmations&quot;. Il est conseillé d\'activer la notification des administrateurs lors des inscriptions (voir la configuration des options de Piwigo) et d\'utiliser la fonction &quot;Email d\'information à l\'utilisateur&quot; pour avertir les nouveaux inscrits de la nécessité de patienter avant activation de leur compte.
+Dans le second cas, l\'email avec lien de validation est envoyé aux administrateurs de la galerie. Les visiteurs doivent patienter qu\'un administrateur valide lui même leur inscription soit par ce lien, soit par l\'onglet &quot;Suivi des confirmations&quot;.
 <br>
 <b style=&quot;color: red;&quot;>NB: Les options &quot;Limitation du délai de confirmation d\'inscription&quot; et &quot;Mail de rappel aux inscrits non confirmés&quot; doivent être désactivées lorsque la confirmation manuelle est active.</b>
 <br><br>
