@@ -136,10 +136,10 @@ function upgrade_212_213()
 {
   // Create missing table
   // --------------------
-  $query = "
-ALTER TABLE ".USER_CONFIRM_MAIL_TABLE."
-ADD reminder ENUM('true', 'false') NULL DEFAULT NULL
-;";
+  $query = '
+ALTER TABLE '.USER_CONFIRM_MAIL_TABLE.'
+ADD reminder ENUM("true", "false") NULL DEFAULT NULL
+;';
   
   pwg_query($query);
 
@@ -621,5 +621,84 @@ WHERE param = "UserAdvManager"
   $update_conf = serialize($Newconf_UAM);
 
   conf_update_param('UserAdvManager', pwg_db_real_escape_string($update_conf));
+}
+
+
+/* upgrade from 2.40.x to 2.40.6 */
+/* ***************************** */
+function upgrade_2400_2406()
+{
+  global $conf;
+  $conf_UAM = unserialize($conf['UserAdvManager']);
+  
+  // Piwigo's native tables modifications for validation status - Add UAM_validated column
+  // -------------------------------------------------------------------------------------
+  $query = '
+SHOW COLUMNS FROM '.USERS_TABLE.'
+LIKE "UAM_validated"
+;';
+  
+  $result = pwg_query($query);
+
+  if(!pwg_db_fetch_row($result))
+  {
+    $q = '
+ALTER TABLE '.USERS_TABLE.'
+ADD UAM_validated enum("true","false") 
+;';
+    pwg_query($q);
+  }
+
+  // Fill UAM_validated column with correct information for registered and validated  users
+  // --------------------------------------------------------------------------------------
+		
+		// It goes for everybody registered in the gallery except for Guest and AC users (16 and 18)
+  $query = '
+SELECT DISTINCT u.id AS id, u.username AS username
+FROM '.USERS_TABLE.' AS u
+		INNER JOIN '.USER_INFOS_TABLE.' AS ui
+				ON u.id = ui.user_id
+		LEFT JOIN '.USER_GROUP_TABLE.' AS ug
+				ON u.id = ug.user_id
+WHERE u.id != 2
+		AND u.username != \'16\'
+		AND u.username != \'18\'';
+
+		if ($conf_UAM[3] <> '-1' and $conf_UAM[4] == '-1')
+		{
+				$query.= '
+AND ug.group_id = '.$conf_UAM[3];
+		}
+		if ($conf_UAM[3] == '-1' and $conf_UAM[4] <> '-1')
+		{
+				$query.= '
+AND ui.status = \''.$conf_UAM[4]."'";
+		}
+		if ($conf_UAM[3] <> '-1' and $conf_UAM[4] <> '-1')
+		{
+				$query.= '
+AND ug.group_id = '.$conf_UAM[3];
+		}
+		$query.= ';';
+
+		$result = pwg_query($query);
+
+		while($row = mysql_fetch_array($result))
+		{
+				$query = '
+UPDATE '.USERS_TABLE.'
+SET UAM_validated=true
+WHERE id = '.$row['id'].'
+;';
+				pwg_query($query);
+		}
+
+		// It goes to Webmaster too
+		$query = '
+UPDATE '.USERS_TABLE.'
+SET UAM_validated=true
+WHERE id = 1
+;';
+		pwg_query($query);
 }
 ?>

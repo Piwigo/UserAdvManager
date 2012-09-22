@@ -212,9 +212,9 @@ Vēl pieejasms projekta bugtracker: <a href="http://piwigo.org/bugs/" onclick="w
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.15.4
-$lang['UAM_Force_Validation'] = 'Manuālā apstiprināšana';
+$lang['UAM_Manual_Validation'] = 'Manuālā apstiprināšana';
 $lang['UAM_Confirm_Mail_true'] = ' Iespējot – Apstiprinājis lietotājs';
-$lang['UAM_Confirm_Mail_local'] = ' Iespējot – Apstiprinājis administrators (netika nosūtīta apstiprināšanas atslēga)';
+$lang['UAM_Confirm_Mail_local'] = ' Iespējot – Apstiprinājis administrators';
 // --------- End: New or revised $lang ---- from version 2.15.4
 
 
