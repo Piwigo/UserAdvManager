@@ -624,9 +624,9 @@ WHERE param = "UserAdvManager"
 }
 
 
-/* upgrade from 2.40.x to 2.41.0 */
+/* upgrade from 2.40.x to 2.40.6 */
 /* ***************************** */
-function upgrade_2400_2410()
+function upgrade_2400_2406()
 {
   global $conf;
   $conf_UAM = unserialize($conf['UserAdvManager']);
