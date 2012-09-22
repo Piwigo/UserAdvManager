@@ -2366,7 +2366,32 @@ function ValidateUsername($login)
     $conf_CharExclusion = preg_split("/,/",$conf_UAM[6]);
     for ($i = 0 ; $i < count($conf_CharExclusion) ; $i++)
     {
-      $pattern = '/'.$conf_CharExclusion[$i].'/i';
+    	 //Detect meta-characters (# ! ^ $ ( ) [ ] { } ? + * . \ -) for special pattern
+    	 if ($conf_CharExclusion[$i] == "#"
+							or $conf_CharExclusion[$i] == "$"
+							or $conf_CharExclusion[$i] == "!"
+							or $conf_CharExclusion[$i] == "^"
+						 or $conf_CharExclusion[$i] == "*"
+							or $conf_CharExclusion[$i] == "?"
+							or $conf_CharExclusion[$i] == "+"
+							or $conf_CharExclusion[$i] == "."
+							or $conf_CharExclusion[$i] == "\\"
+							or $conf_CharExclusion[$i] == "|"
+							or $conf_CharExclusion[$i] == "["
+							or $conf_CharExclusion[$i] == "]"
+							or $conf_CharExclusion[$i] == "("
+							or $conf_CharExclusion[$i] == ")"
+							or $conf_CharExclusion[$i] == "{"
+							or $conf_CharExclusion[$i] == "}"
+							or $conf_CharExclusion[$i] == "-")
+    	 {
+    	 	 $pattern = '/[][^$.\*+?(){}#|-]/i';
+    	 }
+    	 else
+						{
+								$pattern = '/'.$conf_CharExclusion[$i].'/i';
+						}
+
       if (preg_match($pattern, $login))
       {
         return true;
