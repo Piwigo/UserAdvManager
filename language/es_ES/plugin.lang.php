@@ -397,4 +397,6 @@ $lang['UAM_Default_ConfirmMail_Remail_Subject'] = 'Recordatorio - [nombre de usu
 $lang['UAM_Default_ConfirmMail_Txt'] = 'Hola [nombre de usuario]! Gracias por haber registro en [mygallery].
 
 Para completar el proceso y ser capaz de navegar a través de las imágenes, confirme por favor su registro haciendo clic en el vínculo de este mensaje.';
+$lang['UAM_Manual_validation_needed_for %s'] = 'El usuario %s se ha registrado y espera para la validación manual por un administrador.';
+$lang['UAM_Subject admin validation for %s'] = 'El registro de %s espera para la validación';
 ?>
