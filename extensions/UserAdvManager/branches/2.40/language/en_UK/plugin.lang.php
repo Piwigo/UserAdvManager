@@ -13,7 +13,7 @@ $lang['UAM_Registration_Date'] = 'Registration date';
 $lang['UAM_infos_mail %s'] = '%s, please find here your information to log in the gallery :';
 $lang['UAM_User: %s'] = 'User : %s';
 $lang['UAM_Password: %s'] = 'Password: %s';
-$lang['UAM_Link: %s'] = 'Please, click on this link to confirm your registration : %s';
+$lang['UAM_Link: %s'] = 'Please, click on this link to confirm the registration : %s';
 
 
 /* Errors and Warnings */
@@ -154,9 +154,9 @@ Also available, the project\'s bugtracker: <a href="http://piwigo.org/bugs/" onc
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.15.4
-$lang['UAM_Force_Validation'] = 'Manual confirmation';
+$lang['UAM_Manual_Validation'] = 'Manual confirmation';
 $lang['UAM_Confirm_Mail_true'] = ' Enable - Confirmation by user';
-$lang['UAM_Confirm_Mail_local'] = ' Enable - Confirmation by admin (no confirmation key sent)';
+$lang['UAM_Confirm_Mail_local'] = ' Enable - Confirmation by admin';
 // --------- End: New or revised $lang ---- from version 2.15.4
 
 
@@ -426,4 +426,10 @@ $lang['UAM_mail_exclusion_error'] = 'The Piwigo\'s option "The email address is 
 Please, Reactivate the Piwigo\'s option "The email address is mandatory for all users" to be able then to disable UAM\'s option "Exclusion of mail domains" if that\'s what you want.<br><br>
 Note: This message will disappear after you have made the necessary correction and reloaded the admin page.<br><br>';
 // --------- End: New or revised $lang ---- from version 2.40.4 and 2.30.7
+
+
+// --------- Starting below: New or revised $lang ---- from version 2.41.0
+$lang['UAM_Subject admin validation for %s'] = 'Registration of %s waits for validation';
+$lang['UAM_Manual_validation_needed_for %s'] = 'The user %s has registered and awaits for manual validation by an admin.';
+// --------- End: New or revised $lang ---- from version 2.41.0
 ?>

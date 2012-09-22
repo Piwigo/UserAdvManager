@@ -230,16 +230,13 @@ function uam_blockToggleDisplay( headerId, contentId )
 
           <fieldset>
           <ul>
-            <p class="new_in_version">{'UAM_NewFeature'|@translate}</p>
             <li>
-            <div class="uam_new">
               <label class="cluetip" title="{'UAM_AdminValidationMail_Subject'|translate}|{'UAM_AdminValidationMail_Subject_d'|translate}">
                 {'UAM_AdminValidationMail_Subject'|@translate}
               </label>
             <br><br>
               &nbsp;&nbsp;<textarea class="uam_textfields" name="UAM_AdminValidationMail_Subject" id="UAM_AdminValidationMail_Subject" rows="5" {$TAG_INPUT_ENABLED}>{$UAM_ADMINVALIDATIONMAIL_SUBJECT}</textarea>
             <br><br>
-            </div>
             </li>
 
             <ul>
@@ -255,16 +252,13 @@ function uam_blockToggleDisplay( headerId, contentId )
           </ul>
 
           <ul>
-            <p class="new_in_version">{'UAM_NewFeature'|@translate}</p>
             <li>
-            <div class="uam_new">
               <label class="cluetip" title="{'UAM_ConfirmMail_Subject'|translate}|{'UAM_ConfirmMail_Subject_d'|translate}">
                 {'UAM_ConfirmMail_Subject'|@translate}
               </label>
             <br><br>
               &nbsp;&nbsp;<textarea class="uam_textfields" name="UAM_ConfirmMail_Subject" id="UAM_ConfirmMail_Subject" rows="5" {$TAG_INPUT_ENABLED}>{$UAM_CONFIRMMAIL_SUBJECT}</textarea>
             <br><br>
-            </div>
             </li>
 
             <ul>
@@ -484,16 +478,13 @@ function uam_blockToggleDisplay( headerId, contentId )
               </li>
 
               <ul>
-                <p class="new_in_version">{'UAM_NewFeature'|@translate}</p>
                 <li>
-                <div class="uam_new">
                   <label class="cluetip" title="{'UAM_ConfirmMail_ReMail_Subject'|translate}|{'UAM_ConfirmMail_ReMail_Subject_d'|translate}">
                     {'UAM_ConfirmMail_ReMail_Subject'|@translate}
                   </label>
                 <br><br>
                   &nbsp;&nbsp;<textarea class="uam_textfields" name="UAM_ConfirmMail_Remail_Subject" id="UAM_ConfirmMail_Remail_Subject" rows="5" {$TAG_INPUT_ENABLED}>{$UAM_CONFIRMMAIL_REMAIL_SUBJECT}</textarea>
                 <br><br>
-                </div>
                 </li>
 
                 <ul>
@@ -631,16 +622,13 @@ function uam_blockToggleDisplay( headerId, contentId )
 
           <fieldset>
           <ul>
-            <p class="new_in_version">{'UAM_NewFeature'|@translate}</p>
             <li>
-            <div class="uam_new">
               <label class="cluetip" title="{'UAM_GTReminder_Subject'|translate}|{'UAM_GTReminder_Subject_d'|translate}">
                 {'UAM_GTReminder_Subject'|@translate}
               </label>
             <br><br>
               &nbsp;&nbsp;<textarea class="uam_textfields" name="UAM_GTReminder_Subject" id="UAM_GTReminder_Subject" rows="5" {$TAG_INPUT_ENABLED}>{$UAM_GTREMINDER_SUBJECT}</textarea>
             <br><br>
-            </div>
             </li>
 
             <ul>
@@ -745,16 +733,13 @@ function uam_blockToggleDisplay( headerId, contentId )
                         <input type="radio" value="true" {$UAM_GTAUTOMAIL_TRUE} name="UAM_GTAutoMail">
                           {'UAM_Enable'|@translate}
                       <br><br>
-                        <p class="new_in_version">{'UAM_NewFeature'|@translate}</p>
                         <li>
-                        <div class="uam_new">
                           <label class="cluetip" title="{'UAM_GTAutomail_Subject'|translate}|{'UAM_GTAutomail_Subject_d'|translate}">
                             {'UAM_GTAutomail_Subject'|@translate}
                           </label>
                         <br><br>
                           &nbsp;&nbsp;<textarea class="uam_textfields" name="UAM_GTAutoMail_Subject" id="UAM_GTAutoMail_Subject" rows="5" {$TAG_INPUT_ENABLED}>{$UAM_GTAUTOMAIL_SUBJECT}</textarea>
                         <br><br>
-                        </div>
                         </li>
 
                         <ul>
@@ -822,16 +807,13 @@ function uam_blockToggleDisplay( headerId, contentId )
             <br><br>
             </li>
             
-            <p class="new_in_version">{'UAM_NewFeature'|@translate}</p>
             <li>
-            <div class="uam_new">
               <label class="cluetip" title="{'UAM_MailInfo_Subject'|translate}|{'UAM_MailInfo_Subject_d'|translate}">
                 {'UAM_MailInfo_Subject'|@translate}
               </label>
             <br><br>
               &nbsp;&nbsp;<textarea class="uam_textfields" name="UAM_InfoMail_Subject" id="UAM_InfoMail_Subject" rows="5" {$TAG_INPUT_ENABLED}>{$UAM_INFOMAIL_SUBJECT}</textarea>
             <br><br>
-            </div>
             </li>
 
             <ul>
