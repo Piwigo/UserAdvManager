@@ -402,4 +402,6 @@ $lang['UAM_mail_exclusion_error'] = '
 Die Piwigo Option "e-Mail-Adresse ist obligatorisch für alle Benutzer" wurde deaktiviert, weil die UserAdvancedManager (UAM)  Option "Ausschluss von Mail-Domänen" aktiv war. Diese Kombination ist unlogisch und nicht kompatibel! <br> <br>
 Bitte reaktivieren Sie die Piwigo Option "e-Mail-Adresse ist obligatorisch für alle Benutzer" um dann die UAM Option "Ausschluss von Mail-Domänen" zu deaktivieren, wenn Sie das so wollen. <br> <br>
 Hinweis: Diese Meldung verschwindet, nachdem Sie die notwendige Korrektur vorgenommen haben und die Admin Seite neu geladen wurde. <br> <br>';
+$lang['UAM_Manual_validation_needed_for %s'] = 'Der Benutzer% s registriert hat und wartet auf ein Admin-Handbuch Validierung.';
+$lang['UAM_Subject admin validation for %s'] = 'Registrierung von% s wartet auf Validierung';
 ?>
