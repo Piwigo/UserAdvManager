@@ -16,11 +16,6 @@ $lang['UAM_Password: %s'] = 'Jelszó: %s';
 $lang['UAM_Link: %s'] = 'Kérlek, klikkelj ide a regisztrációd érvényesítéséhez : %s';
 
 
-/* Email confirmation page */
-$lang['UAM_title_confirm_mail'] = 'Érvényesítsd a regisztrációdat';
-$lang['UAM_confirm_mail_page_title'] = 'Érvényesítsd a regisztrációdat';
-
-
 /* Errors and Warnings */
 $lang['UAM_audit_ok'] = 'Ellenőrzés rendben, Oké';
 $lang['UAM_Err_audit_username_char'] = '<b>Itt egy vagy több érvénytelen karakter van:</b> ';
@@ -186,8 +181,6 @@ $lang['UAM_Expired_Group'] = 'Lejárt regisztrációjú felhasználók <b>csopor
 $lang['UAM_Expired_Status'] = 'Lejárt regisztrációjú felhasználók <b>csoportja</b> <br>';
 $lang['UAM_GTAuto'] = 'Szellem-felhasználók automatikus követése';
 $lang['UAM_GTAutoDel'] = 'Azonosítók automatikus törlése';
-$lang['UAM_Deleted_Account_Redirection_Page'] = 'Hozzáférés megtagadva - Azonosító megsemmisítve!';
-$lang['UAM_title_redir_page'] = 'Hozzáférés megtagadva azonosító megsemmisítése miatt!';
 $lang['UAM_Error_GTAutoMail_cannot_be_set_without_ConfirmMail'] = 'Következetlenség a választott konfigurációban:
 <br><br>
 "Feliratkozottak követése és egyéb opciók beállítása > Szellem-látogatók kezelése (Szellem-Követő) > Szellem-felhasználók automatikus kezelése > E-mail automatikus küldése csoport / állapot változáskor" nem bekapcsolható, ha a "Regisztráció megerősítés és érvényesítés beállítás > Regisztráció megerősítése - Érvényesítés a felhasználó által" nincs előtte bekapcsolva.

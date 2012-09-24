@@ -16,11 +16,6 @@ $lang['UAM_Password: %s'] = 'Passwort: %s';
 $lang['UAM_Link: %s'] = 'Klicken Sie bitte auf diesen Link bestätigen Sie Ihre Anmeldung: %s';
 
 
-/* Email confirmation page */
-$lang['UAM_title_confirm_mail'] = 'Überprüfen Sie Ihre Registrierung';
-$lang['UAM_confirm_mail_page_title'] = 'Überprüfen Sie Ihre Registrierung';
-
-
 /* Errors and Warnings */
 $lang['UAM_audit_ok'] = 'Audit OK';
 $lang['UAM_Err_audit_username_char'] = '<b>Dieses Konto verwendet eine oder mehrere der verbotenen Zeichen:</b> ';
@@ -192,8 +187,6 @@ $lang['UAM_Expired_Group'] = '<b>Gruppe</b> für Benutzer-Registrierung abgelauf
 $lang['UAM_Expired_Status'] = '<b>Status</b> für Benutzer-Registrierung abgelaufen<br>';
 $lang['UAM_GTAuto'] = 'Automatische Verwaltung von Geist Benutzern';
 $lang['UAM_GTAutoDel'] = 'Automatisches Löschen von Konten';
-$lang['UAM_Deleted_Account_Redirection_Page'] = 'Zugriff verweigert - Account zerstört!';
-$lang['UAM_title_redir_page'] = 'Zugriff verweigert sich für ein Konto zerstört!';
 $lang['UAM_Error_GTAutoMail_cannot_be_set_without_ConfirmMail'] = 'Konsistenz-Fehler in der Konfiguration gewählt:<br><br>
 "Einstellen der Registrierung durchgeführt und andere Optionen > Geist Besucher-Management (Geist Tracker) > Automatische Verwaltung von Geist Benutzern > Automatisches Versenden einer E-Mail beim Wechsel Gruppe / Status" kann nicht aktiviert werden, wenn "Einstellen Bestätigungen und Validierungen der Registrierung > Bestätigung der Anmeldung - Validation von Benutzer" ist zunächst nicht aktiviert.<br><br>
 Um die Kohärenz, die Option "Automatisches Versenden einer E-Mail beim Wechsel Gruppe / Status" wurde automatisch "deaktiviert" neu positioniert.<br><br>';
@@ -363,7 +356,6 @@ $lang['UAM_PwdReset_NA'] = 'Original-Passwort';
 $lang['UAM_PwdReset_Todo'] = 'Passwort erneuert werden';
 $lang['UAM_RejectConnexion'] = 'Ablehnen Benutzer-Verbindung, bis die Registrierung bestätigt wird,';
 $lang['UAM_RejectConnexion_Custom_Txt'] = 'Passen Ablehnung Text';
-$lang['UAM_Reject_Page_Title'] = 'Connexion nicht erlaubt!';
 $lang['UAM_Restoration_NOK'] = 'Fehler beim Wiederherstellen der Konfiguration. Bitte pr';
 $lang['UAM_Restoration_OK'] = 'Wiederherstellen der Konfiguration wurde erfolgreich abgeschlossen! Bitte laden UAM-Administration, um die wiederhergestellten Einstellungen anzuzeigen.';
 $lang['UAM_Restore_File'] = 'Konfiguration wiederherstellen';
