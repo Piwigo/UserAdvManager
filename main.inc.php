@@ -65,10 +65,6 @@ add_event_handler('render_lost_password_mail_content', 'UAM_lost_password_mail_c
 // ----------------------------------------------------------------------------------------------------
 add_event_handler('init', 'UAM_InitPage');
 
-// Display messages about Login rejected, etc
-// ---------------------------
-add_event_handler('init','UAM_DisplayMsg');
-add_event_handler('identification','UAM_DisplayMsg');
 
 // PWG_Stuffs module
 // -----------------
