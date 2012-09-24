@@ -16,11 +16,6 @@ $lang['UAM_Password: %s'] = 'Password: %s';
 $lang['UAM_Link: %s'] = 'Cliccare su questo link per confermare la vostra iscrizione: %s';
 
 
-/* Email confirmation page */
-$lang['UAM_title_confirm_mail'] = 'Conferma la tua iscrizione';
-$lang['UAM_confirm_mail_page_title'] = 'Conferma la tua iscrizione';
-
-
 /* Errors and Warnings */
 $lang['UAM_audit_ok'] = 'Audit OK';
 $lang['UAM_Err_audit_username_char'] = '<b>Questo account utente utilizza uno o più caratteri vietati:</b> ';
@@ -185,8 +180,6 @@ $lang['UAM_Expired_Group'] = '<b>Gruppo</b> per la registrazione degli utenti è
 $lang['UAM_Expired_Status'] = '<b>Stato</b> per gli utenti per i quali l\'iscrizione sarà scaduta<br>';
 $lang['UAM_GTAuto'] = 'Gestione automatica degli utenti fantasma';
 $lang['UAM_GTAutoDel'] = 'Cancellazione automatica degli account';
-$lang['UAM_Deleted_Account_Redirection_Page'] = 'Accesso negato - Account eliminato!';
-$lang['UAM_title_redir_page'] = 'Accesso negato per aver cancellato l\'account!';
 $lang['UAM_Error_GTAutoMail_cannot_be_set_without_ConfirmMail'] = 'Errore di coerenza nella configurazione prescelta :
 <br><br>
 "Parametraggio monitoraggio degli iscritti e altre opzioni > Gestione degli utenti fantasmi (Ghost Tracker) > Gestione automatica degli utenti fantasmi > Email automatica su cambiamento di gruppo / statuto" non può essere attivato se "Parametraggio delle conferme e validazione d\'iscrizione > Conferma d\'iscrizione - Conferma dal utente" non è stata perattivata
@@ -350,7 +343,7 @@ Questo è un reminder poichè è trascorso diverso tempo dal tuo ultimo accesso 
 Alla ricezione di questo messaggio e non ricevendo altre visite entro [days] giorni, saremo obbligati a cancellare l\'account.
 
 Distinti saluti,
-L\'amministratore della galleria [mygallery] - [myurl]';
+L\'amministratore della galleria [mygallery] - [myurl]
 Alla ricezione di questo messaggio e non ricevendo altre visite entro [days] giorni, saremo obbligati a cancellare l\'account.
 
 Distinti saluti,
@@ -359,7 +352,6 @@ $lang['UAM_Default_InfoMail_Txt'] = 'Ciao [username]!
 
 Sono state apportate modifiche significative nel tuo profilo sul gallery [mygallery]. Ti prego di trovare di seguito le nuove impostazioni:';
 
-Sono state apportate modifiche significative nel tuo profilo sul gallery [mygallery]. Per favore, di seguito troverete le nuove impostazioni:';
 $lang['UAM_Default_PwdRequest_Txt'] = 'Hai richiesto il rinnovo della password. Qui sotto trovi i nuovi dati di connessione';
 $lang['UAM_Default_RejectConnexion_Txt'] = 'Siamo spiacenti, non hai ancora confermato la registrazione, perciò non ti puoi connettere ora alla galleria. Controlla la tua casella mail. Dovresti trovare una mail inviata dalla galleria, contenente un link per eseguire la conferma. Se non la trovi, contatta il webmaster.';
 $lang['UAM_Default_ValidationTimeout_Txt'] = 'Siamo spiacenti, il tuo account è stato eliminato poichè non hai confermato la registrazione nel tempo richiesto ([Kdays] days). Riprova la registrazione con un account mail valido';
@@ -380,7 +372,6 @@ $lang['UAM_PwdReset_NA'] = 'Password originale';
 $lang['UAM_PwdReset_Todo'] = 'Password da rinnovare';
 $lang['UAM_RejectConnexion'] = 'Rifiuta connessione dell\'utente finchè non è confermata la registrazione';
 $lang['UAM_RejectConnexion_Custom_Txt'] = 'Personalizza testo di rifiuto';
-$lang['UAM_Reject_Page_Title'] = 'Connessione non permessa!';
 $lang['UAM_Restoration_NOK'] = 'E\' avvenuto un errore durante il ripristino della configurazione. Controlla la validità del file di backup.';
 $lang['UAM_Restoration_OK'] = 'Il ripristino della configurazione è stato completato con successo! Ricarica la pagina di amministrazione di UAM per vedere la configurazione ripristinata.';
 $lang['UAM_Restore'] = 'Per ripristinare il file della tua configurazione. Solo i file salvati sul server sono mantenuti.

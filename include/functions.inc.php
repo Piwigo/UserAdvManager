@@ -576,7 +576,7 @@ WHERE user_id = '.$user['id'].';';
           // -------------------------------------------------------------------------
           invalidate_user_cache();
           logout_user();
-          redirect(UAM_PATH.'GT_del_account.php');
+          redirect( make_index_url().'?UAM_msg=deleted', 0);
         }
     		}
       else // Process if an admin or webmaster user is logged
@@ -908,7 +908,8 @@ function UAM_DisplayMsg()
   {
     global $user, $lang, $conf, $page;
     $conf_UAM = unserialize($conf['UserAdvManager']);
-    
+
+    // Connexion rejected until validation
     if (isset($conf_UAM[40]) and $conf_UAM[40] <> '' and $_GET['UAM_msg']="rejected")
     {
       // Management of Extension flags ([mygallery], [myurl])
@@ -923,6 +924,26 @@ function UAM_DisplayMsg()
         $custom_text = get_user_language_desc(preg_replace($patterns, $replacements, $conf_UAM[40]));
       }
       else $custom_text = l10n(preg_replace($patterns, $replacements, $conf_UAM[40]));
+      
+      $page["errors"][]=$custom_text;
+    }
+
+				// User account deleted after validation deadline
+    if (isset($conf_UAM[23]) and $conf_UAM[23] <> '' and $_GET['UAM_msg']="deleted")
+    {
+      // Management of Extension flags ([mygallery], [myurl]) - [username] flag can't be used here
+      // -----------------------------------------------------------------------------------------
+      $patterns[] = '#\[mygallery\]#i';
+      $replacements[] = $conf['gallery_title'];
+      $patterns[] = '#\[myurl\]#i';
+      $replacements[] = get_gallery_home_url();
+
+      if (function_exists('get_user_language_desc'))
+      {
+        $custom_text = get_user_language_desc(preg_replace($patterns, $replacements, $conf_UAM[23]));
+      }
+      else $custom_text = l10n(preg_replace($patterns, $replacements, $conf_UAM[23]));
+      
       $page["errors"][]=$custom_text;
     }
   }

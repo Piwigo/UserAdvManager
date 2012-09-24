@@ -165,8 +165,6 @@ $lang['UAM_Expired_Group'] = '<b>Group</b> for user\'s registration has expired<
 $lang['UAM_Expired_Status'] = '<b>Status</b> for user\'s registration has expired<br>';
 $lang['UAM_GTAuto'] = 'Automatic management of ghosts users';
 $lang['UAM_GTAutoDel'] = 'Automatic deletion of accounts';
-$lang['UAM_Deleted_Account_Redirection_Page'] = 'Access denied - Account destroyed!';
-$lang['UAM_title_redir_page'] = 'Access denied for having an account destroyed!';
 $lang['UAM_Error_GTAutoMail_cannot_be_set_without_ConfirmMail'] = 'Consistency error in the chosen configuration:
 <br><br>
 "Setting the registered users monitoring and other options > Ghost visitors management (Ghost Tracker) > Automatic management of ghosts users > Automatically sending an email when changing group / status" can not be activated if "Setting confirmations of registration > Confirmation of registration - Confirmation by user" is not enabled at first.
@@ -277,7 +275,6 @@ $lang['UAM_Title2'] = 'Confirmations of registration';
 $lang['UAM_GTAutoMail'] = 'Automatically sending an email when changing group / status / privacy level';
 $lang['UAM_NewFeature'] = 'New feature !';
 $lang['UAM_RejectConnexion_Custom_Txt'] = 'Customize rejection text';
-$lang['UAM_Reject_Page_Title'] = 'Connexion not allowed !';
 // --------- End: New or revised $lang ---- from version 2.30.2
 
 
@@ -288,8 +285,6 @@ $lang['UAM_ConfirmMail_Remail'] = 'Remind unconfirmed users';
 $lang['UAM_No_Usermanager'] = 'No unconfirmed registers to list for the moment';
 $lang['UAM_Stuffs_Desc'] = 'Adds an information block for unconfirmed users';
 /* Email confirmation page */
-$lang['UAM_title_confirm_mail'] = 'Confirm your registration';
-$lang['UAM_confirm_mail_page_title'] = 'Confirm your registration';
 $lang['UAM_%d_Validated_User'] = '%d User confirmed manually';
 $lang['UAM_%d_Validated_Users'] = '%d Users confirmed manually';
 $lang['UAM_No_Confirm_Group'] = 'Group for users who have not confirmed their registration<br>';

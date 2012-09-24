@@ -16,11 +16,6 @@ $lang['UAM_Password: %s'] = 'Mot de passe: %s';
 $lang['UAM_Link: %s'] = 'Cliquez sur le lien suivant pour confirmer l\'inscription : %s';
 
 
-/* Email confirmation page */
-$lang['UAM_title_confirm_mail'] = 'Confirmation de votre inscription';
-$lang['UAM_confirm_mail_page_title'] = 'Confirmation d\'inscription';
-
-
 /* Errors and Warnings */
 $lang['UAM_audit_ok'] = 'Audit OK';
 $lang['UAM_Err_audit_username_char'] = '<b>Ce compte contient un ou des caractères interdits :</b> ';
@@ -177,8 +172,6 @@ $lang['UAM_Expired_Group'] = '<b>Groupe</b> pour les utilisateurs dont l\'inscri
 $lang['UAM_Expired_Status'] = '<b>Statut</b> pour les utilisateurs dont l\'inscription aura expirée<br>';
 $lang['UAM_GTAuto'] = 'Gestion automatique des utilisateurs fantomes';
 $lang['UAM_GTAutoDel'] = 'Suppressions automatiques des comptes';
-$lang['UAM_Deleted_Account_Redirection_Page'] = 'Accès refusé - Compte détruit !';
-$lang['UAM_title_redir_page'] = 'Accès refusé pour cause de compte détruit !';
 $lang['UAM_Error_GTAutoMail_cannot_be_set_without_ConfirmMail'] = 'Erreur de cohérence dans la configuration choisie :
 <br><br>
 "Paramétrage des suivis des inscrits et autres options > Gestion des visiteurs fantômes (Ghost Tracker) > Gestion automatique des utilisateurs fantomes > Email automatique sur changement de groupe / statut" ne peut pas être activé si "Paramétrage des confirmations d\'inscriptions > Confirmation d\'inscription - Confirmation par le visiteur" n\'est pas activé au préalable.
@@ -286,7 +279,6 @@ $lang['UAM_RedirToProfile'] = 'Redirection vers la page de personnalisation';
 $lang['UAM_GTAutoMail'] = 'Email automatique sur changement de groupe / statut / Niveau de confidentialité';
 $lang['UAM_NewFeature'] = 'Nouvelle option !';
 $lang['UAM_RejectConnexion_Custom_Txt'] = 'Personnaliser le texte de la page de rejet de la connexion';
-$lang['UAM_Reject_Page_Title'] = 'Connexion refusée !';
 // --------- End: New or revised $lang ---- from version 2.30.2
 
 
