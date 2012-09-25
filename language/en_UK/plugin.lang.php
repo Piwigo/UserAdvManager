@@ -249,7 +249,7 @@ Best regards,
 The admin of the gallery [mygallery] - [myurl]';
 $lang['UAM_Default_GhstDeletion_Txt'] = 'Sorry [username], your account has been deleted due to a too long time passed since your last visit at [mygallery]. Please register again.';
 $lang['UAM_Default_PwdRequest_Txt'] = 'You have requested a password reset on our gallery. Please, find below your new connection settings.';
-$lang['UAM_Default_CfmMail_Custom_Txt1'] = 'Welcome [username]! You have confirmed that you are human and may now use [mygallery]!';
+$lang['UAM_Default_CfmMail_Custom_Txt1'] = '[username] account successfully validated!';
 $lang['UAM_DumpTxt'] = 'Backup and restore your configuration';
 $lang['UAM_Restore'] = 'To restore the backup file of your configuration. Only the saved file on the server is taken into account.
 <br><br>
@@ -391,9 +391,9 @@ $lang['UAM_Default_CfmMail_Remail_Txt2'] = 'Hello [username].
 This is a reminder message because you registered on our gallery [mygallery] but you do not confirm your registration and your confirmation key will expire. To allow you access to our gallery, you have x days to confirm your registration by clicking on the link in the message you should have received when you registered.
 
 Note: After this period, your account will be permanently deleted.';
-$lang['UAM_Default_CfmMail_Custom_Txt2'] = 'Your activation key is incorrect or expired or you have already confirmed your account, please contact the webmaster to fix this problem.';
+$lang['UAM_Default_CfmMail_Custom_Txt2'] = 'Incorrect / expired activation key or account already validated.';
 $lang['UAM_RejectConnexion'] = 'Reject user\'s connexion until registration is confirmed';
-$lang['UAM_Default_RejectConnexion_Txt'] = 'Sorry, you don\'t have confirmed your registration yet, so you can\'t connect the gallery now. Please check your email box. You should find an email sent by the gallery, containing a link to perform your confirmation. If not, please contact the webmaster.';
+$lang['UAM_Default_RejectConnexion_Txt'] = 'Sorry, your registration is not validated yet, so you can\'t connect the gallery now.';
 $lang['UAM_Tracking registered users'] = 'Tracking registered users';
 $lang['UAM_Tracking confirmations'] = 'Tracking confirmations';
 // --------- End: New or revised $lang ---- from version 2.30.3
