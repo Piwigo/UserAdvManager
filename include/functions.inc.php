@@ -1006,7 +1006,7 @@ function UAM_ConfirmMail()
         load_language('plugin.lang', UAM_PATH);
       }
   
-      if (isset($conf_UAM_ConfirmMail[5]) and $conf_UAM_ConfirmMail[5] <> '')
+      if (isset($conf_UAM_ConfirmMail[5]) and !empty($conf_UAM_ConfirmMail[5]))
       {
         // Management of Extension flags ([username], [mygallery], [myurl])
         // ----------------------------------------------------------------
@@ -1032,7 +1032,7 @@ function UAM_ConfirmMail()
     }  
     else
     {
-      if (isset($conf_UAM_ConfirmMail[6]) and $conf_UAM_ConfirmMail[6] <> '')
+      if (isset($conf_UAM_ConfirmMail[6]) and !empty($conf_UAM_ConfirmMail[6]))
       {
         // Management of Extension flags ([username], [mygallery], [myurl])
         // ----------------------------------------------------------------
@@ -1138,7 +1138,7 @@ WHERE user_id = '.$id.'
   switch($typemail)
   {
     case 1: // Confirmation email on user registration - Without information email (already managed by Piwigo)
-      if (isset($conf_UAM[41]) and $conf_UAM[41] <> '')
+      if (isset($conf_UAM[41]) and !empty($conf_UAM[41]))
       {
         // Management of Extension flags ([username], [mygallery])
         // -------------------------------------------------------
@@ -1157,7 +1157,7 @@ WHERE user_id = '.$id.'
       break;
       
     case 2: // Confirmation email on user profile update - With information email if modification done in user profile
-      if (isset($conf_UAM[41]) and $conf_UAM[41] <> '')
+      if (isset($conf_UAM[41]) and !empty($conf_UAM[41]))
       {
         // Management of Extension flags ([username], [mygallery])
         // -------------------------------------------------------
@@ -1173,9 +1173,9 @@ WHERE user_id = '.$id.'
         else $subject = l10n(preg_replace($patterns, $replacements, $conf_UAM[41]))."\n\n"; 
       }
 
-      $password = $password <> '' ? $password : l10n('UAM_empty_pwd');
+      $password = !empty($password) ? $password : l10n('UAM_empty_pwd');
 
-      if (isset($conf_UAM[8]) and $conf_UAM[8] <> '')
+      if (isset($conf_UAM[8]) and !empty($conf_UAM[8]))
       {
         // Management of Extension flags ([username], [mygallery], [myurl])
         // ----------------------------------------------------------------
@@ -1219,7 +1219,7 @@ WHERE user_id = '.$id.'
       break;
         
     case 3: // Only information email send to user if checked
-      if (isset($conf_UAM[43]) and $conf_UAM[43] <> '')
+      if (isset($conf_UAM[43]) and !empty($conf_UAM[43]))
       {
         // Management of Extension flags ([username], [mygallery])
         // -------------------------------------------------------
@@ -1235,9 +1235,9 @@ WHERE user_id = '.$id.'
         else $subject = l10n(preg_replace($patterns, $replacements, $conf_UAM[43]))."\n\n"; 
       }
 
-      $password = $password <> '' ? $password : l10n('UAM_no_update_pwd');
+      $password = !empty($password) ? $password : l10n('UAM_no_update_pwd');
 
-      if (isset($conf_UAM[8]) and $conf_UAM[8] <> '')
+      if (isset($conf_UAM[8]) and !empty($conf_UAM[8]))
       {
         // Management of Extension flags ([username], [mygallery], [myurl])
         // ----------------------------------------------------------------
@@ -1289,7 +1289,7 @@ WHERE user_id = '.$id.'
       get_l10n_args('', ''),
     );
 
-    if (isset($conf_UAM[9]) and $conf_UAM[9] <> '') // Add personal text in confirmation email ?
+    if (isset($conf_UAM[9]) and !empty($conf_UAM[9])) // Add personal text in confirmation email ?
     {
       // Management of Extension flags ([username], [mygallery], [myurl], [Kdays])
       // -------------------------------------------------------------------------
@@ -1447,7 +1447,7 @@ WHERE user_id = '.$user_id.'
   switch($typemail)
   {
     case 1: //Generating email content for remind with a new key
-      if (isset($conf_UAM[42]) and $conf_UAM[42] <> '')
+      if (isset($conf_UAM[42]) and !empty($conf_UAM[42]))
       {
         // Management of Extension flags ([username], [mygallery])
         // -------------------------------------------------------
@@ -1463,7 +1463,7 @@ WHERE user_id = '.$user_id.'
         else $subject = l10n(preg_replace($patterns, $replacements, $conf_UAM[42]))."\n\n"; 
       }
       
-      if (isset($conf_UAM_ConfirmMail[2]) and $conf_UAM_ConfirmMail[2] <> '' and isset($conf_UAM_ConfirmMail[3]) and $conf_UAM_ConfirmMail[3] == 'true' and $confirm)
+      if (isset($conf_UAM_ConfirmMail[2]) and !empty($conf_UAM_ConfirmMail[2]) and isset($conf_UAM_ConfirmMail[3]) and $conf_UAM_ConfirmMail[3] == 'true' and $confirm)
       {
       		// Management of Extension flags ([username], [mygallery], [myurl], [Kdays])
         // -------------------------------------------------------------------------
@@ -1505,7 +1505,7 @@ WHERE user_id = '.$user_id.'
 				break;
       
     case 2: //Generating email content for remind without a new key
-      if (isset($conf_UAM[42]) and $conf_UAM[42] <> '')
+      if (isset($conf_UAM[42]) and !empty($conf_UAM[42]))
       {
         // Management of Extension flags ([username], [mygallery])
         // -------------------------------------------------------
@@ -1521,7 +1521,7 @@ WHERE user_id = '.$user_id.'
         else $subject = l10n(preg_replace($patterns, $replacements, $conf_UAM[42]))."\n\n"; 
       }
       
-      if (isset($conf_UAM_ConfirmMail[4]) and $conf_UAM_ConfirmMail[4] <> '' and isset($conf_UAM_ConfirmMail[3]) and $conf_UAM_ConfirmMail[3] == 'true' and !$confirm)
+      if (isset($conf_UAM_ConfirmMail[4]) and !empty($conf_UAM_ConfirmMail[4]) and isset($conf_UAM_ConfirmMail[3]) and $conf_UAM_ConfirmMail[3] == 'true' and !$confirm)
       {
         // Management of Extension flags ([username], [mygallery], [myurl], [Kdays])
         // -------------------------------------------------------------------------
@@ -1599,7 +1599,7 @@ WHERE user_id = '.$user_id.'
    
   load_language('plugin.lang', UAM_PATH);
 
-  if (isset($conf_UAM[45]) and $conf_UAM[45] <> '')
+  if (isset($conf_UAM[45]) and !empty($conf_UAM[45]))
   {
     // Management of Extension flags ([username], [mygallery])
     // -------------------------------------------------------
@@ -1615,7 +1615,7 @@ WHERE user_id = '.$user_id.'
     else $subject = l10n(preg_replace($patterns, $replacements, $conf_UAM[45]))."\n\n"; 
   }
 
-  if (isset($conf_UAM[17]) and $conf_UAM[17] <> '' and isset($conf_UAM[15]) and $conf_UAM[15] == 'true')
+  if (isset($conf_UAM[17]) and !empty($conf_UAM[17]) and isset($conf_UAM[15]) and $conf_UAM[15] == 'true')
   {
     // Management of Extension flags ([username], [mygallery], [myurl], [days])
     // ------------------------------------------------------------------------
@@ -1695,7 +1695,7 @@ WHERE user_id = '.$id.'
     load_language('plugin.lang', UAM_PATH);
   }
 
-  if (isset($conf_UAM[44]) and $conf_UAM[44] <> '')
+  if (isset($conf_UAM[44]) and !empty($conf_UAM[44]))
   {
     // Management of Extension flags ([username], [mygallery])
     // -------------------------------------------------------
@@ -1711,7 +1711,7 @@ WHERE user_id = '.$id.'
     else $subject = l10n(preg_replace($patterns, $replacements, $conf_UAM[44]))."\n\n"; 
   }
       
-  if (isset($conf_UAM[24]) and $conf_UAM[24] <> '')
+  if (isset($conf_UAM[24]) and !empty($conf_UAM[24]))
   {
     // Management of Extension flags ([username], [mygallery], [myurl])
     // ----------------------------------------------------------------
@@ -1809,7 +1809,7 @@ WHERE id = '.$id.'
 ;';
   $result = pwg_db_fetch_assoc(pwg_query($query));
 
-  if (isset($conf_UAM[46]) and $conf_UAM[46] <> '')
+  if (isset($conf_UAM[46]) and !empty($conf_UAM[46]))
   {
     // Management of Extension flags ([username], [mygallery])
     // -------------------------------------------------------
@@ -1825,7 +1825,7 @@ WHERE id = '.$id.'
     else $subject = l10n(preg_replace($patterns, $replacements, $conf_UAM[46]))."\n\n";
   }
       
-  if (isset($conf_UAM[27]) and $conf_UAM[27] <> '')
+  if (isset($conf_UAM[27]) and !empty($conf_UAM[27]))
   {
     // Management of Extension flags ([username], [mygallery], [myurl])
     // ----------------------------------------------------------------
@@ -2513,7 +2513,7 @@ function ValidateUsername($login)
 
   $conf_UAM = unserialize($conf['UserAdvManager']);
 
-  if (isset($login) and isset($conf_UAM[6]) and $conf_UAM[6] <> '')
+  if (isset($login) and isset($conf_UAM[6]) and !empty($conf_UAM[6]))
   {
     $conf_CharExclusion = preg_split("/,/",$conf_UAM[6]);
     for ($i = 0 ; $i < count($conf_CharExclusion) ; $i++)
@@ -2572,7 +2572,7 @@ function ValidateEmailProvider($email)
 
   $conf_UAM = unserialize($conf['UserAdvManager']);
   
-		if (isset($email) and isset($conf_UAM[11]) and $conf_UAM[11] <> '')
+		if (isset($email) and isset($conf_UAM[11]) and !empty($conf_UAM[11]))
 		{
 				$conf_MailExclusion = preg_split("/[\s,]+/",$conf_UAM[11]);
 				for ($i = 0 ; $i < count($conf_MailExclusion) ; $i++)
