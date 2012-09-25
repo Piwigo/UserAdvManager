@@ -803,7 +803,7 @@ SELECT '.$conf['user_fields']['username'].', '.$conf['user_fields']['email'].'
 						$deltasecs = $daytimestamp - $regtimestamp;// Compare the 2 UNIX timestamps	
     		$deltadays = floor($deltasecs / 86400);// Convert result from seconds to days
   
-						if (isset($conf_UAM[15]) and $conf_UAM[15]=='true' and $conf_UAM[16] <> '')
+						if (isset($conf_UAM[15]) and $conf_UAM[15]=='true' and !empty($conf_UAM[16]))
     		{
     				if ($deltadays <= ($conf_UAM[16]/2))
       		{
