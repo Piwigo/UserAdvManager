@@ -1,2 +1,13 @@
-rejected.php
+template/ConfirmMail.tpl
 template/rejected.tpl
+template/del_account.tpl
+template/index.php
+template/icon/index.php
+template/icon/errors.png
+template/icon/home.png
+template/icon/infos.png
+template/icon/
+template
+rejected.php
+ConfirmMail.php
+GT_del_account.php
