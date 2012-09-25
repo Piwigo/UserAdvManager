@@ -1,6 +1,7 @@
 template/ConfirmMail.tpl
 template/rejected.tpl
 template/del_account.tpl
+template/confmail.css
 template/index.php
 template/icon/index.php
 template/icon/errors.png
