@@ -910,7 +910,7 @@ function UAM_DisplayMsg()
     $conf_UAM = unserialize($conf['UserAdvManager']);
 
     // Connexion rejected until validation
-    if (isset($conf_UAM[40]) and $conf_UAM[40] <> '' and $_GET['UAM_msg']="rejected")
+    if (isset($conf_UAM[40]) and !empty($conf_UAM[40]) and $_GET['UAM_msg']=="rejected")
     {
       // Management of Extension flags ([mygallery], [myurl])
       // ---------------------------------------------------
@@ -929,7 +929,7 @@ function UAM_DisplayMsg()
     }
 
 				// User account deleted after validation deadline
-    if (isset($conf_UAM[23]) and $conf_UAM[23] <> '' and $_GET['UAM_msg']="deleted")
+    elseif (isset($conf_UAM[23]) and !empty($conf_UAM[23]) and $_GET['UAM_msg']=="deleted")
     {
       // Management of Extension flags ([mygallery], [myurl]) - [username] flag can't be used here
       // -----------------------------------------------------------------------------------------
