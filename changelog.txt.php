@@ -343,6 +343,9 @@ Plugin Name: UserAdvManager
 						      Bug 2749 fixed - regex meta-characters are usable in character exclusion in usernames
             New unvalidated user controls more efficient
             Get admins emails instead of webmaster's for sending validation email
+            rejected.php, ConfirmMail.php, GT_del_account.php and USR_del_account.php (and associated templates)are no more used. All messages are displayed on Piwigo's main page
             TODO - New simplifed administration panel
+            Update es_ES, thanks to : jpr928
+            Update el_GR, thanks to : bas_alba
 */
 ?>
