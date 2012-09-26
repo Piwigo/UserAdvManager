@@ -576,7 +576,7 @@ WHERE user_id = '.$user['id'].';';
           // -------------------------------------------------------------------------
           invalidate_user_cache();
           logout_user();
-          redirect( make_index_url().'?UAM_msg=deleted', 0);
+          redirect(make_index_url().'?UAM_msg=deleted', 0);
         }
     		}
       else // Process if an admin or webmaster user is logged
@@ -804,7 +804,7 @@ WHERE id = '.$user['id'].'
           // -------------------------------------------------------------------------
           invalidate_user_cache();
           logout_user();
-          redirect(UAM_PATH.'USR_del_account.php');
+          redirect(make_index_url().'?UAM_msg=deleted', 0);
         }
     		}
       else // Process if an admin or webmaster user is logged
@@ -928,7 +928,7 @@ function UAM_DisplayMsg()
       $page["errors"][]=$custom_text;
     }
 
-				// User account deleted after validation deadline
+				// User account deleted after validation deadline - Triggered by any other user
     elseif (isset($conf_UAM[23]) and !empty($conf_UAM[23]) and $_GET['UAM_msg']=="deleted")
     {
       // Management of Extension flags ([mygallery], [myurl]) - [username] flag can't be used here
@@ -943,6 +943,25 @@ function UAM_DisplayMsg()
         $custom_text = get_user_language_desc(preg_replace($patterns, $replacements, $conf_UAM[23]));
       }
       else $custom_text = l10n(preg_replace($patterns, $replacements, $conf_UAM[23]));
+      
+      $page["errors"][]=$custom_text;
+    }
+
+				// User account deleted after validation deadline - Triggered by user himself
+    elseif (isset($conf_UAM[31]) and !empty($conf_UAM[31]) and $_GET['UAM_msg']=="deleted")
+    {
+      // Management of Extension flags ([mygallery], [myurl]) - [username] flag can't be used here
+      // -----------------------------------------------------------------------------------------
+      $patterns[] = '#\[mygallery\]#i';
+      $replacements[] = $conf['gallery_title'];
+      $patterns[] = '#\[myurl\]#i';
+      $replacements[] = get_gallery_home_url();
+
+      if (function_exists('get_user_language_desc'))
+      {
+        $custom_text = get_user_language_desc(preg_replace($patterns, $replacements, $conf_UAM[31]));
+      }
+      else $custom_text = l10n(preg_replace($patterns, $replacements, $conf_UAM[31]));
       
       $page["errors"][]=$custom_text;
     }
