@@ -12,3 +12,4 @@ template
 rejected.php
 ConfirmMail.php
 GT_del_account.php
+USR_del_account.php
