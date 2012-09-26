@@ -928,7 +928,7 @@ function UAM_DisplayMsg()
       $page["errors"][]=$custom_text;
     }
 
-				// User account deleted after validation deadline - Triggered by any other user
+    // User account deleted after validation deadline - Triggered by any other user
     elseif (isset($conf_UAM[23]) and !empty($conf_UAM[23]) and $_GET['UAM_msg']=="deleted")
     {
       // Management of Extension flags ([mygallery], [myurl]) - [username] flag can't be used here
@@ -947,7 +947,7 @@ function UAM_DisplayMsg()
       $page["errors"][]=$custom_text;
     }
 
-				// User account deleted after validation deadline - Triggered by user himself
+    // User account deleted after validation deadline - Triggered by user himself
     elseif (isset($conf_UAM[31]) and !empty($conf_UAM[31]) and $_GET['UAM_msg']=="deleted")
     {
       // Management of Extension flags ([mygallery], [myurl]) - [username] flag can't be used here
