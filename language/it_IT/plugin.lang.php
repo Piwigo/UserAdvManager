@@ -401,4 +401,6 @@ $lang['UAM_MailInfo_Subject'] = 'Personalizza oggetto dell\'email informativa';
 $lang['UAM_mail_exclusion_error'] = 'L\'opzione per Piwigo "L\'indirizzo email è obbligatorio per tutti gli utenti" è stato disattivato mentre l\'opzione plugin UserAdvancedManager (UAM) "Esclusione domini di posta" è rimasta attiva. Questa combinazione è illogica e non è compatibile!<br><br>
 Si prega di riabilitare in Piwigo "L\'indirizzo email è obbligatorio per tutti gli utenti", al fine di disattivare poi l\'opzione UAM "esclusione domini di posta" se è quello che vuoi.<br><br>
 Nota: Questo messaggio scompare dopo aver effettuato la correzione necessaria e ricaricato la pagina di amministrazione <br>';
+$lang['UAM_Manual_validation_needed_for %s'] = 'L\'utente %s si è registrato ed è in attesa dell\'approvazione manuale da parte dell\'amministratore.';
+$lang['UAM_Subject admin validation for %s'] = 'La registrazione di %s è in attesa di approvazione';
 ?>
