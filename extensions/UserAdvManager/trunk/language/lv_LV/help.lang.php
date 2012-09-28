@@ -143,4 +143,8 @@ Lūdzu pēc detaļām griezties <b>Tips and Examples of Use</b> šīs lapas apak
 $lang['UAM_HidePasswTitle_d'] = 'Izvēlieties šeit, ja gribat, lai apmeklētāja parole tiktu ietverta informatīvajā e-pastā. Ja iespējojat šo opciju, tad parole tiek atainota atklātā tekstā. Ja to neiespējojat, tad parole netiek rādīta vispār.';
 $lang['UAM_GT_MainTitle_d'] = '-Automātiska vai manuāla slēpto lietotāju pārvaldība<br> 
 -E-pasta sūtīšana<br>';
+$lang['UAM_confirmlevelTitle_d'] = '<b style=&quot;color: red;&quot;>UZMANĪBU: Privātuma līmeņa lietošana prasa, lai jūs lietotu to kopā ar savām bildēm. Detalizētāka informācija Piwigo documentācijā.</b><br><br>
+Privātuma līmenis ir validēts lietošanai saistībā ar &quot;Reģistrācijas apstiprināšanu&quot;';
+$lang['UAM_confirmlevelTitle'] = 'Privātuma līmenis';
+$lang['UAM_USRAutoMailTitle_d'] = 'Kad aktivizēta, šī funkcija automātiski izsūta personificēta satura informāciju &quot;Atgādinājuma e-pastā ar no jauna izveidotu atslēgu&quot; apmeklētājiem, kuri atbilst kritērijiem.';
 ?>
