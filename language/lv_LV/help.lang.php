@@ -42,11 +42,6 @@ Atspējojot šo iespēju (pēc noklusējuma), tiek nosūtīta tikai e-pasta info
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.15.2
-$lang['UAM_casenTitle_d'] = 'Pēc noklusējuma Piwigo ir reģistrjutīgs:
-Lielie un mazie burti, veidojot vārdus pie reģistrācijas, tiek uztverti kā atsevišķas rakstzīmes. Tādējādi, &quot;Foo&quot;,
-&quot;foo&quot; un &quot;FOO&quot; var būt 3 atšķirīgi lietotāji.<br><br>
-Šīs opcijas iespējošana ļauj izanalizēt visas iespējas &quot;foo&quot; kā viena lietotāja gadījumā. Ja &quot;foo&quot; jau eksistē, jauna lietotāja &quot;Foo&quot; izveidošana tiks noraidīta.<br><br>
-<b style=&quot;color: red;&quot;>Uzmanību: Šī opcija neattiecas uz lietotājvārdiem, kas izveidoti pirms šīs opcijas aktivēšanas.</b>';
 // --------- End: New or revised $lang ---- from version 2.15.2
 
 // --------- Starting below: New or revised $lang ---- from version 2.15.4
@@ -138,9 +133,14 @@ $lang['UAM_GTAutoTitle_d'] = 'Šī opcija dod iespēju pielietot (slēptajiem) g
 <br><br>Pamatprincips: Lietotājs, kas sasniedzis maksimālo laiku starp apmeklējumiem <b><u>and</u></b> un ir jau par to ar e-pastu brīdināts, tiek uzskatīts kā vairs neesošs. Tad jūs varat pielietot automātiskās apstrādes nosacījumus, kā notecējušo kontu automātisko dzēšanu vai to pazemināšanu, ierobežojot piekļuvi galerijai (automātiski pārvirzot ierobežojumu grupā vai piešķirot šādu statusu).
 <br><br>Šis automātiskais process tiek iedarbināts lietotājiem (jebkuram lietotājam!) pieslēdzoties galerijai.';
 $lang['UAM_GTAutoDelTitle'] = 'Pielāgots ziņojums par dzēstu kontu';
-$lang['UAM_GTAutoGpTitle'] = 'Grupas/stausa automātiskā nomaiņa';
 $lang['UAM_GTAutoGpTitle_d'] = 'Automātiska konta grupas vai statusa maiņa ir ekvivalenta kontu, kas ir iesaistīti un darbojas uz vieniem un tiem pašiem principiem kā validācijas grupas, funkcionalitātes pazemināšanai (skatīt &quot;Setting confirmations and validations of registration&quot;).
 Tādējādi jānosaka mainīto (pazemināto) grupu un/vai statusa piekļuves tiesības galerijai. Ja tas jau izdarītslietojot reģistrācijas apstiprināšanas funkciju, varat lietot to pašu grupu vai statusu.<br><br>
 <b style=&quot;color: red;&quot;>Important note :</b> Ja no slēptā ghost lietotāja pēc termiņa limita, neskatoties uz informēšanu ar e-pastu (ja iespējots), nav nekādas ziņas, viņš automātiski tie dzēsts no datu bāzes';
 // --------- End: New or revised $lang ---- from version 2.16.0
+$lang['UAM_StuffsTitle_d'] = 'Šis iespējo papildus UAM bloku PWG Stuff spraudnī (ja instalēts), lai informētu apmeklētājus, kas kādu iemslu dēļ nav apstiprinājuši savu reģistrāciju.
+<br><br>
+Lūdzu pēc detaļām griezties <b>Tips and Examples of Use</b> šīs lapas apakšā. ';
+$lang['UAM_HidePasswTitle_d'] = 'Izvēlieties šeit, ja gribat, lai apmeklētāja parole tiktu ietverta informatīvajā e-pastā. Ja iespējojat šo opciju, tad parole tiek atainota atklātā tekstā. Ja to neiespējojat, tad parole netiek rādīta vispār.';
+$lang['UAM_GT_MainTitle_d'] = '-Automātiska vai manuāla slēpto lietotāju pārvaldība<br> 
+-E-pasta sūtīšana<br>';
 ?>
