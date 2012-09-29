@@ -147,4 +147,11 @@ $lang['UAM_confirmlevelTitle_d'] = '<b style=&quot;color: red;&quot;>UZMANĪBU: 
 Privātuma līmenis ir validēts lietošanai saistībā ar &quot;Reģistrācijas apstiprināšanu&quot;';
 $lang['UAM_confirmlevelTitle'] = 'Privātuma līmenis';
 $lang['UAM_USRAutoMailTitle_d'] = 'Kad aktivizēta, šī funkcija automātiski izsūta personificēta satura informāciju &quot;Atgādinājuma e-pastā ar no jauna izveidotu atslēgu&quot; apmeklētājiem, kuri atbilst kritērijiem.';
+$lang['UAM_Tracking registered users_d'] = 'Šis aktivizē tabulu &quot;Izsekošanā reģistrētie lietotāji&quot; saraksts, kur piefiksēti galeriju apmeklējušie reģistrētie lietotāji, pēdējā apmeklējuma datums un apmeklējuma ilgums (dienās) kopš viņu pēdējā apmeklējuma. Monitorings ir tīri informatīva rakstura, domāts galerijas administratora vajadzībām.';
+$lang['UAM_RejectConnexion_Custom_Txt_d'] = 'Pielāgojiet šeit savu paskaidrojuma teskstu neapstiprinātajiem lietotājiem, ka viņi nevarēs tikt galerijā, kamēr nebūs apstiprinājuši savu reģistrāciju.
+<br><br>
+Šis lauks ir savietojams ar FCK Redaktoru un, lai lietotu daudzvalodu režīmu, var izmantot Paplašinātā apraksta spraudņa, ja tas ir aktivizēts, [lang] iezīmes (tags).  ';
+$lang['UAM_RejectConnexion_d'] = 'Ja aktivizēts, no jauna reģistrētie lietotāji, kas nav apstiprinājuši savu reģistrāciju, nevarēs piekļūt galerijai. Tie tiks pārsūtīti uz speciālu lapu, kur tiks informēti par radušos situāciju. 
+<br><br>
+<b style=&quot;color: red;&quot;>Uzmanību - Šī funkcija darbojas tikai sasaistē ar apstiprinājuma grupām! Skatīt zemā, lai iestatītu grupas kā tas pieprasīts.</b>';
 ?>
