@@ -385,4 +385,6 @@ Lai nodrošinātu konsekvenci, opcija "Automātiskā e-pasta izsūtīšana, main
 $lang['UAM_mail_exclusion_error'] = 'Piwigo opcija "e-pasta adrese obligāta visiem lietotājiem" ir atslēgta kamēr UserAdvancedManager\'s (UAM) spraudņa opcija "E-pasta domēnu izslēgšana" paliek aktīva. Šī kombinācija ir neloģiska un nav derīga! <br><br> 
 Lūdzu, reaktivējiet Piwigo opciju "e-pasta adrese obligāta visiem lietotājiem", lai tā ir iespējota, tad atspējojiet UAM opciju "E-pasta domēnu izslēgšana", ja tas ir tas, ko vēlaties.<br><br>
 Piezīme: Šis paziņojums pazudīs līdz būsiet veicis nepieciešamās korekcijas un par jaunu atvēris administratora lapu.<br><br>  ';
+$lang['UAM_Manual_validation_needed_for %s'] = 'Lietotājs %s ir reģistrējies un gaida administratora apstiprinājumu. ';
+$lang['UAM_Subject admin validation for %s'] = '%s reģistrācija gaida apstiprinājumu';
 ?>
