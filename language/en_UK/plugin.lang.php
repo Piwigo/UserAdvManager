@@ -426,5 +426,8 @@ Note: This message will disappear after you have made the necessary correction a
 // --------- Starting below: New or revised $lang ---- from version 2.41.0
 $lang['UAM_Subject admin validation for %s'] = 'Registration of %s waits for validation';
 $lang['UAM_Manual_validation_needed_for %s'] = 'The user %s has registered and awaits for manual validation by an admin.';
+$lang['UAM_Customize_messagesandmails'] = 'Customize the messages and mails';
+$lang['UAM_Change'] = 'Change the Group/Status/Privacy Level of the users who have been confirmed';
+
 // --------- End: New or revised $lang ---- from version 2.41.0
 ?>
