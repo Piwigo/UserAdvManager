@@ -154,4 +154,14 @@ $lang['UAM_RejectConnexion_Custom_Txt_d'] = 'Pielāgojiet šeit savu paskaidroju
 $lang['UAM_RejectConnexion_d'] = 'Ja aktivizēts, no jauna reģistrētie lietotāji, kas nav apstiprinājuši savu reģistrāciju, nevarēs piekļūt galerijai. Tie tiks pārsūtīti uz speciālu lapu, kur tiks informēti par radušos situāciju. 
 <br><br>
 <b style=&quot;color: red;&quot;>Uzmanību - Šī funkcija darbojas tikai sasaistē ar apstiprinājuma grupām! Skatīt zemā, lai iestatītu grupas kā tas pieprasīts.</b>';
+$lang['UAM_infotxtTitle_d'] = 'Ievadiet ievadtekstu, ko vēlaties atspoguļot informējošajā e-pastā.
+<br><br>
+Tālāk pielāgojiet saturu, izmantojot speciālos tegus (iezīmes):<br>
+- <b style=&quot;color: red;&quot;>[username]</b> lai automātiski ievietotu galējā e-pasta lietotāja vārdu.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> lai ievietotu jūsu galerijas nosaukumu.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> lai ievietotu jūsu galerijas URL, ja tas iestatīts Piwigo konfigurācijā.
+<br><br>
+Lai izmantotu daudzvalodu režīmu, varat lietot Paplašinātā apraksta spraudņa iezīmes, gadījumā, ja spraudnis aktivizēts. ';
+$lang['UAM_infomailTitle_d'] = 'Šī opcija ļauj lietotājam, kad viņš savā profilā izmaina savu paroli vai e-pasta adresi, automātiski nosūtīt informējošu e-pasta vēstuli.<br><br>
+Nosūtās informācijas teksts sastāv no pielāgojamas ievaddaļas un fiksētās daļas, kas atspoguļo lietotāja lietotājvārdu, paroli un e-pasta adresi.  ';
 ?>
