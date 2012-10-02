@@ -9,6 +9,12 @@
 {footer_script}{literal}
 jQuery().ready(function()
 {
+  jQuery("#UAM_Confirm_Mail_true, #UAM_Confirm_Mail_local").click(function() {
+    jQuery("#UAM_CONFIRM_MAIL_TRUE").show("slow");
+  });
+  jQuery("#UAM_Confirm_Mail_false").click(function() {
+    jQuery("#UAM_CONFIRM_MAIL_TRUE").hide("slow");
+  });
   jQuery("#show_UAM_AdminValidation").click(function() {
     jQuery("#UAM_AdminValidation").show("slow");
     jQuery("#hide_UAM_AdminValidation").show("slow");
@@ -233,20 +239,18 @@ function uam_blockToggleDisplay( headerId, contentId )
               {'UAM_Confirm_Mail'|@translate}
             </label>
           <br><br>
-            <input type="radio" value="false" {$UAM_CONFIRM_MAIL_FALSE} name="UAM_Confirm_Mail">
-              {'UAM_Disable'|@translate}
+            <label for="UAM_Confirm_Mail_false"><input type="radio" id="UAM_Confirm_Mail_false" value="false" {$UAM_CONFIRM_MAIL_FALSE} name="UAM_Confirm_Mail">
+              {'UAM_Disable'|@translate}</label>
           <br>
-            <input type="radio" value="true" {$UAM_CONFIRM_MAIL_TRUE} name="UAM_Confirm_Mail">
-              {'UAM_Confirm_Mail_true'|@translate}
+            <label for="UAM_Confirm_Mail_true"><input type="radio" id="UAM_Confirm_Mail_true" value="true" {$UAM_CONFIRM_MAIL_TRUE} name="UAM_Confirm_Mail">
+              {'UAM_Confirm_Mail_true'|@translate}</label>
           <br>
-            <input type="radio" value="local" {$UAM_CONFIRM_MAIL_LOCAL} name="UAM_Confirm_Mail">
-              {'UAM_Confirm_Mail_local'|@translate}
+            <label for="UAM_Confirm_Mail_local"><input type="radio" id="UAM_Confirm_Mail_local" value="local" {$UAM_CONFIRM_MAIL_LOCAL} name="UAM_Confirm_Mail">
+              {'UAM_Confirm_Mail_local'|@translate}</label>
           <br><br>
           </li>
           
-        {if $UAM_CONFIRM_MAIL_FALSE}
-          <div class="uam_hide">
-        {/if}
+          <div id="UAM_CONFIRM_MAIL_TRUE" {if $UAM_CONFIRM_MAIL_FALSE}style="display:none"{/if}>
             <ul>
          	    <li>
                 <label class="cluetip" title="{'UAM_Stuffs'|translate}|{'UAM_StuffsTitle_d'|translate}">
@@ -634,10 +638,7 @@ function uam_blockToggleDisplay( headerId, contentId )
           {if $UAM_CONFIRMMAIL_TIMEOUT_FALSE and $UAM_CONFIRMMAIL_REMAIL_FALSE}
             </div>
           {/if}
-
-        {if $UAM_CONFIRM_MAIL_FALSE}
           </div>
-        {/if}
 
         </ul>
       </fieldset>
