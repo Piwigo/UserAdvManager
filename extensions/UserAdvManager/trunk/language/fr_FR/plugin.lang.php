@@ -427,5 +427,7 @@ Note : Ce message disparaitra après que vous ayez effectué la correction néce
 // --------- Starting below: New or revised $lang ---- from version 2.41.0
 $lang['UAM_Subject admin validation for %s'] = 'Inscription de %s à valider';
 $lang['UAM_Manual_validation_needed_for %s'] = 'L\'utilisateur %s s\'est inscrit et demande une validation manuelle par un administrateur.';
+$lang['UAM_Customize_messagesandmails'] = 'Personnaliser les messages et mails';
+$lang['UAM_Change'] = 'Changer l\'utilisateur confirmé de Groupe/Statut/Niveau de confidentialité';
 // --------- End: New or revised $lang ---- from version 2.41.0
 ?>

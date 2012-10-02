@@ -6,45 +6,92 @@
 {if $UAM_THEME=='roma'}{combine_css path= $UAM_PATH|@cat:'admin/template/themes/roma/theme.css'}{/if}
 {if $UAM_THEME=='default'}{combine_css path= $UAM_PATH|@cat:'admin/template/themes/default/theme.css'}{/if}
 
-
-<script type="text/javascript">
+{footer_script}{literal}
 jQuery().ready(function()
-{ldelim}
+{
+  jQuery("#show_UAM_AdminValidation").click(function() {
+    jQuery("#UAM_AdminValidation").show("slow");
+    jQuery("#hide_UAM_AdminValidation").show("slow");
+    jQuery(this).hide("slow");
+    return false;
+  });
+  jQuery("#hide_UAM_AdminValidation").click(function() {
+    jQuery("#show_UAM_AdminValidation").show("slow");
+    jQuery("#UAM_AdminValidation").hide("slow");
+    jQuery(this).hide("slow");
+    return false;
+  });
+  jQuery("#show_UAM_ConfirmMail").click(function() {
+    jQuery("#UAM_ConfirmMail").show("slow");
+    jQuery("#hide_UAM_ConfirmMail").show("slow");
+    jQuery(this).hide("slow");
+    return false;
+  });
+  jQuery("#hide_UAM_ConfirmMail").click(function() {
+    jQuery("#show_UAM_ConfirmMail").show("slow");
+    jQuery("#UAM_ConfirmMail").hide("slow");
+    jQuery(this).hide("slow");
+    return false;
+  });
+  jQuery("#show_UAM_Change").click(function() {
+    jQuery("#UAM_Change").show("slow");
+    jQuery("#hide_UAM_Change").show("slow");
+    jQuery(this).hide("slow");
+    return false;
+  });
+  jQuery("#hide_UAM_Change").click(function() {
+    jQuery("#show_UAM_Change").show("slow");
+    jQuery("#UAM_Change").hide("slow");
+    jQuery(this).hide("slow");
+    return false;
+  });
+  jQuery("#show_UAM_GTReminder").click(function() {
+    jQuery("#UAM_GTReminder").show("slow");
+    jQuery("#hide_UAM_GTReminder").show("slow");
+    jQuery(this).hide("slow");
+    return false;
+  });
+  jQuery("#hide_UAM_GTReminder").click(function() {
+    jQuery("#show_UAM_GTReminder").show("slow");
+    jQuery("#UAM_GTReminder").hide("slow");
+    jQuery(this).hide("slow");
+    return false;
+  });
   jQuery('.cluetip').cluetip(
-  {ldelim}
+  {
     width: 550,
     splitTitle: '|'
-  {rdelim});
-{rdelim});
+  });
+});
 
 function blockToggleDisplay(headerId, contentId)
-{ldelim}
+{
   var revHeader = document.getElementById(headerId);
   var revContent = document.getElementById(contentId);
 
   if (revContent.style.display == 'none')
-  {ldelim}
+  {
     revContent.style.display = 'block';
     revHeader.className = 'instructionBlockHeaderExpanded';
-  {rdelim}
+  }
   else
-  {ldelim}
+  {
     revContent.style.display = 'none';
     revHeader.className = 'instructionBlockHeaderCollapsed';
-  {rdelim}
-{rdelim}
+  }
+}
 
 function uam_blockToggleDisplay( headerId, contentId )
-{ldelim}
+{
   if (typeof(headerId)=='string')
-  {ldelim}
+  {
    if (headerId.length > 1)
        blockToggleDisplay(headerId, contentId) ;
       document.getElementById("nb_para").value =headerId ;
       document.getElementById("nb_para2").value =contentId;
-  {rdelim}
-{rdelim}
-</script>
+  }
+}
+{/literal}{/footer_script}
 
 <div class="titrePage">
   <h2>{'UAM_Title_Tab'|@translate} {$UAM_VERSION}<br>{'UAM_SubTitle1'|@translate}</h2>
@@ -227,8 +274,9 @@ function uam_blockToggleDisplay( headerId, contentId )
               <br><br>
               </li>
             </ul>
-
-          <fieldset>
+            <a id="show_UAM_AdminValidation" >{'UAM_Customize_messagesandmails'|translate}</a>
+            <a id="hide_UAM_AdminValidation" style="display: none">{'hide details'|translate}</a>
+          <fieldset id="UAM_AdminValidation" style="display: none">
           <ul>
             <li>
               <label class="cluetip" title="{'UAM_AdminValidationMail_Subject'|translate}|{'UAM_AdminValidationMail_Subject_d'|translate}">
@@ -312,8 +360,8 @@ function uam_blockToggleDisplay( headerId, contentId )
             {/if}
           </ul>
           </fieldset>
+          <br><hr><br>
 
-          <fieldset>
             <ul>
          	    <li>
                 <label class="cluetip" title="{'UAM_RejectConnexion'|translate}|{'UAM_RejectConnexion_d'|translate}">
@@ -349,8 +397,9 @@ function uam_blockToggleDisplay( headerId, contentId )
             </ul>
 
           <br><hr><br>
-
-          <ul>
+          <a id="show_UAM_Change" >{'UAM_Change'|translate}</a>
+          <a id="hide_UAM_Change" style="display: none">{'hide details'|translate}</a>
+          <ul id="UAM_Change" style="display: none">
             <div id="uam_notice">{'UAM_Confirm_grpstat_notice'|@translate}</div>
               <br>
               <li>
@@ -446,9 +495,7 @@ function uam_blockToggleDisplay( headerId, contentId )
                 </li>
               </ul>
             </ul>
-            </fieldset>
-
-            <fieldset>
+          <br><hr><br>
             <ul>
               <li>
                 <label class="cluetip" title="{'UAM_ValidationLimit_Info'|translate}|{'UAM_validationlimitTitle_d'|translate}">
@@ -476,8 +523,10 @@ function uam_blockToggleDisplay( headerId, contentId )
                   {'UAM_Enable'|@translate}
               <br><br>
               </li>
+            <a id="show_UAM_ConfirmMail" >{'UAM_Customize_messagesandmails'|translate}</a>
+            <a id="hide_UAM_ConfirmMail" style="display: none">{'hide details'|translate}</a>
 
-              <ul>
+              <ul id="UAM_ConfirmMail" style="display: none">
                 <li>
                   <label class="cluetip" title="{'UAM_ConfirmMail_ReMail_Subject'|translate}|{'UAM_ConfirmMail_ReMail_Subject_d'|translate}">
                     {'UAM_ConfirmMail_ReMail_Subject'|@translate}
@@ -531,7 +580,6 @@ function uam_blockToggleDisplay( headerId, contentId )
                 </ul>
               </ul>
             </ul>
-            </fieldset>
 
           {if $UAM_CONFIRMMAIL_TIMEOUT_FALSE and $UAM_CONFIRMMAIL_REMAIL_FALSE}
             <div class="uam_hide">
@@ -619,148 +667,148 @@ function uam_blockToggleDisplay( headerId, contentId )
             <input type="text" name="UAM_GhostTracker_DayLimit" value="{$UAM_GHOSTRACKER_DAYLIMIT}" size="5" style="text-align: center;">
           <br><br>
           </li>
-
-          <fieldset>
-          <ul>
-            <li>
-              <label class="cluetip" title="{'UAM_GTReminder_Subject'|translate}|{'UAM_GTReminder_Subject_d'|translate}">
-                {'UAM_GTReminder_Subject'|@translate}
-              </label>
-            <br><br>
-              &nbsp;&nbsp;<textarea class="uam_textfields" name="UAM_GTReminder_Subject" id="UAM_GTReminder_Subject" rows="5" {$TAG_INPUT_ENABLED}>{$UAM_GTREMINDER_SUBJECT}</textarea>
-            <br><br>
-            </li>
-
-            <ul>
-              <li>
-                <label class="cluetip" title="{'UAM_GhostTracker_ReminderText'|translate}|{'UAM_gttextTitle_d'|translate}">
-                  {'UAM_GhostTracker_ReminderText'|@translate}
-                </label>
-              <br><br>
-                <textarea class="uam_textfields" name="UAM_GhostTracker_ReminderText" id="UAM_GhostTracker_ReminderText" rows="10" {$TAG_INPUT_ENABLED}>{$UAM_GHOSTRACKER_REMINDERTEXT}</textarea>
-              <br><br>
-              </li>
-            </ul>
+        </ul>
+        <a id="show_UAM_GTReminder" >{'UAM_Customize_messagesandmails'|translate}</a>
+        <a id="hide_UAM_GTReminder" style="display: none">{'hide details'|translate}</a>
+        <ul id="UAM_GTReminder" style="display: none">
+          <li>
+            <label class="cluetip" title="{'UAM_GTReminder_Subject'|translate}|{'UAM_GTReminder_Subject_d'|translate}">
+              {'UAM_GTReminder_Subject'|@translate}
+            </label>
+          <br><br>
+            &nbsp;&nbsp;<textarea class="uam_textfields" name="UAM_GTReminder_Subject" id="UAM_GTReminder_Subject" rows="5" {$TAG_INPUT_ENABLED}>{$UAM_GTREMINDER_SUBJECT}</textarea>
+          <br><br>
+          </li>
+          <li>
+            <label class="cluetip" title="{'UAM_GhostTracker_ReminderText'|translate}|{'UAM_gttextTitle_d'|translate}">
+              {'UAM_GhostTracker_ReminderText'|@translate}
+            </label>
+          <br><br>
+            <textarea class="uam_textfields" name="UAM_GhostTracker_ReminderText" id="UAM_GhostTracker_ReminderText" rows="10" {$TAG_INPUT_ENABLED}>{$UAM_GHOSTRACKER_REMINDERTEXT}</textarea>
+          <br><br>
+          </li>
 <!--
-            {* if 'FCK_PATH'|@defined *}
-              <div style="text-align:right;">
-                <a href="#" onClick="toogleEditor('UAM_GhostTracker_ReminderText'); return false;">FCK Editor On/Off</a>
-              </div>
-            {* /if *}
+          {* if 'FCK_PATH'|@defined *}
+            <div style="text-align:right;">
+              <a href="#" onClick="toogleEditor('UAM_GhostTracker_ReminderText'); return false;">FCK Editor On/Off</a>
+            </div>
+          {* /if *}
 -->
 
-            <li>
-              <label class="cluetip" title="{'UAM_GTAuto'|translate}|{'UAM_GTAutoTitle_d'|translate}">
-                {'UAM_GTAuto'|@translate}
-              </label>
-            <br><br>
-              <input type="radio" value="false" {$UAM_GTAUTO_FALSE} name="UAM_GTAuto">
-                {'UAM_Disable'|@translate}
-            <br>
-              <input type="radio" value="true" {$UAM_GTAUTO_TRUE} name="UAM_GTAuto">
-                {'UAM_Enable'|@translate}
-            <br><br>
-            </li>
-            
-            {if $UAM_GTAUTO_FALSE}
-              <div class="uam_hide">
-            {/if}
-                <ul>
-                  <li>
-                    <label class="cluetip" title="{'UAM_GTAutoDelTitle'|translate}|{'UAM_GTAutoDelTitle_d'|translate}">
-                      {'UAM_GTAutoDel'|@translate}
-                    </label>
-                  <br><br>
-                      <textarea class="uam_textfields" name="UAM_GTAutoDelText" id="UAM_GTAutoDelText" rows="10" {$TAG_INPUT_ENABLED}>{$UAM_GTAUTODEL_TEXT}</textarea>
-                  <br><br>
-                      
-                  {if 'FCK_PATH'|@defined}
-                    <div style="text-align:right;">
-                      <a href="#" onClick="toogleEditor('UAM_GTAutoDelText'); return false;">FCK Editor On/Off</a>
-                    </div>
-                  {/if}
-                  </li>
+        </ul>
+        <br><hr><br>
+        <ul>
+          <li>
+            <label class="cluetip" title="{'UAM_GTAuto'|translate}|{'UAM_GTAutoTitle_d'|translate}">
+              {'UAM_GTAuto'|@translate}
+            </label>
+          <br><br>
+            <input type="radio" value="false" {$UAM_GTAUTO_FALSE} name="UAM_GTAuto">
+              {'UAM_Disable'|@translate}
+          <br>
+            <input type="radio" value="true" {$UAM_GTAUTO_TRUE} name="UAM_GTAuto">
+              {'UAM_Enable'|@translate}
+          <br><br>
+          </li>
+          
+          {if $UAM_GTAUTO_FALSE}
+            <div class="uam_hide">
+          {/if}
+              <ul>
+                <li>
+                  <label class="cluetip" title="{'UAM_GTAutoDelTitle'|translate}|{'UAM_GTAutoDelTitle_d'|translate}">
+                    {'UAM_GTAutoDel'|@translate}
+                  </label>
+                <br><br>
+                    <textarea class="uam_textfields" name="UAM_GTAutoDelText" id="UAM_GTAutoDelText" rows="10" {$TAG_INPUT_ENABLED}>{$UAM_GTAUTODEL_TEXT}</textarea>
+                <br><br>
+                    
+                {if 'FCK_PATH'|@defined}
+                  <div style="text-align:right;">
+                    <a href="#" onClick="toogleEditor('UAM_GTAutoDelText'); return false;">FCK Editor On/Off</a>
+                  </div>
+                {/if}
+                </li>
 
-                  <li>
-                    <label class="cluetip" title="{'UAM_GTAutoGp'|translate}|{'UAM_GTAutoGpTitle_d'|translate}">
-                      {'UAM_GTAutoGp'|@translate}
-                    </label>
-                  <br><br>
-                    <ul>
-                      <li>
-                        <label>
-                          {'UAM_Expired_Group'|@translate}
-                        </label>
-                        <br>
-                          <div id="uam_leftmargin">
-                            {html_options name="UAM_Downgrade_Group" options=$Downgrade_Group.group_options selected=$Downgrade_Group.group_selected}
-                          </div>
-                      <br><br>
-                      </li>
-
-                      <li>
-                        <label>
-                          {'UAM_Expired_Status'|@translate}
-                        </label>
+                <li>
+                  <label class="cluetip" title="{'UAM_GTAutoGp'|translate}|{'UAM_GTAutoGpTitle_d'|translate}">
+                    {'UAM_GTAutoGp'|@translate}
+                  </label>
+                <br><br>
+                  <ul>
+                    <li>
+                      <label>
+                        {'UAM_Expired_Group'|@translate}
+                      </label>
                       <br>
                         <div id="uam_leftmargin">
-                          {html_options name="UAM_Downgrade_Status" options=$Downgrade_Status.Status_options selected=$Downgrade_Status.Status_selected}
+                          {html_options name="UAM_Downgrade_Group" options=$Downgrade_Group.group_options selected=$Downgrade_Group.group_selected}
                         </div>
+                    <br><br>
+                    </li>
+
+                    <li>
+                      <label>
+                        {'UAM_Expired_Status'|@translate}
+                      </label>
+                    <br>
+                      <div id="uam_leftmargin">
+                        {html_options name="UAM_Downgrade_Status" options=$Downgrade_Status.Status_options selected=$Downgrade_Status.Status_selected}
+                      </div>
+                    <br><br>
+                    </li>
+
+                    <li>
+                      <label>
+                        {'UAM_Expired_Level'|@translate}
+                      </label>
+                    <br>
+                      <div id="uam_leftmargin">
+                        {html_options name="UAM_Downgrade_Level" options=$Downgrade_Level.Level_options selected=$Downgrade_Level.Level_selected}
+                      </div>
+                    <br><br>
+                    </li>
+                  </ul>
+
+                  <ul>
+                    <li>
+                      <label class="cluetip" title="{'UAM_GTAutoMail'|translate}|{'UAM_GTAutoMailTitle_d'|translate}">
+                        {'UAM_GTAutoMail'|@translate}
+                      </label>
+                    <br><br>
+                      <input type="radio" value="false" {$UAM_GTAUTOMAIL_FALSE} name="UAM_GTAutoMail">
+                        {'UAM_Disable'|@translate}
+                    <br>
+                      <input type="radio" value="true" {$UAM_GTAUTOMAIL_TRUE} name="UAM_GTAutoMail">
+                        {'UAM_Enable'|@translate}
+                    <br><br>
+                      <li>
+                        <label class="cluetip" title="{'UAM_GTAutomail_Subject'|translate}|{'UAM_GTAutomail_Subject_d'|translate}">
+                          {'UAM_GTAutomail_Subject'|@translate}
+                        </label>
+                      <br><br>
+                        &nbsp;&nbsp;<textarea class="uam_textfields" name="UAM_GTAutoMail_Subject" id="UAM_GTAutoMail_Subject" rows="5" {$TAG_INPUT_ENABLED}>{$UAM_GTAUTOMAIL_SUBJECT}</textarea>
                       <br><br>
                       </li>
 
-                      <li>
-                        <label>
-                          {'UAM_Expired_Level'|@translate}
-                        </label>
-                      <br>
-                        <div id="uam_leftmargin">
-                          {html_options name="UAM_Downgrade_Level" options=$Downgrade_Level.Level_options selected=$Downgrade_Level.Level_selected}
-                        </div>
-                      <br><br>
-                      </li>
-                    </ul>
-
-                    <ul>
-                      <li>
-                        <label class="cluetip" title="{'UAM_GTAutoMail'|translate}|{'UAM_GTAutoMailTitle_d'|translate}">
-                          {'UAM_GTAutoMail'|@translate}
-                        </label>
-                      <br><br>
-                        <input type="radio" value="false" {$UAM_GTAUTOMAIL_FALSE} name="UAM_GTAutoMail">
-                          {'UAM_Disable'|@translate}
-                      <br>
-                        <input type="radio" value="true" {$UAM_GTAUTOMAIL_TRUE} name="UAM_GTAutoMail">
-                          {'UAM_Enable'|@translate}
-                      <br><br>
+                      <ul>
                         <li>
-                          <label class="cluetip" title="{'UAM_GTAutomail_Subject'|translate}|{'UAM_GTAutomail_Subject_d'|translate}">
-                            {'UAM_GTAutomail_Subject'|@translate}
+                          <label class="cluetip" title="{'UAM_GTAutomail_Text'|translate}|{'UAM_GTAutomail_Text_d'|translate}">
+                            {'UAM_GTAutomail_Text'|@translate}
                           </label>
                         <br><br>
-                          &nbsp;&nbsp;<textarea class="uam_textfields" name="UAM_GTAutoMail_Subject" id="UAM_GTAutoMail_Subject" rows="5" {$TAG_INPUT_ENABLED}>{$UAM_GTAUTOMAIL_SUBJECT}</textarea>
+                          <textarea class="uam_textfields" name="UAM_GTAutoMailText" id="UAM_GTAutoMailText" rows="10" {$TAG_INPUT_ENABLED}>{$UAM_GTAUTOMAILTEXT}</textarea>
                         <br><br>
                         </li>
-
-                        <ul>
-                          <li>
-                            <label class="cluetip" title="{'UAM_GTAutomail_Text'|translate}|{'UAM_GTAutomail_Text_d'|translate}">
-                              {'UAM_GTAutomail_Text'|@translate}
-                            </label>
-                          <br><br>
-                            <textarea class="uam_textfields" name="UAM_GTAutoMailText" id="UAM_GTAutoMailText" rows="10" {$TAG_INPUT_ENABLED}>{$UAM_GTAUTOMAILTEXT}</textarea>
-                          <br><br>
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-            {if $UAM_GTAUTO_FALSE}
-              </div>
-            {/if}
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+          {if $UAM_GTAUTO_FALSE}
+            </div>
+          {/if}
           </ul>
-          </fieldset>
         </ul>
       </fieldset>
     </div>
@@ -976,11 +1024,11 @@ function uam_blockToggleDisplay( headerId, contentId )
   {'UAM_Support_txt'|@translate}
 </fieldset>
 
-<script type="text/javascript">
+{footer_script}{literal}
   var n1=document.getElementById("nb_para").value;
   var n2=document.getElementById("nb_para2").value;
    uam_blockToggleDisplay(n1,n2);
-</script>
+{/literal}{/footer_script}
 
 {html_head}
 <script type="text/javascript">
