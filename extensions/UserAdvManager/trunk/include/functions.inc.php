@@ -781,8 +781,8 @@ WHERE user_id = '.$user['id'].';';
         {
      		  	$typemail = 1;
           
-          // Get current user informations
-          // -----------------------------
+          // Get current user information
+          // ----------------------------
           $query = '
 SELECT id, username, mail_address
 FROM '.USERS_TABLE.'
@@ -835,8 +835,8 @@ WHERE user_id = '.$user_id.';';
           {
             $typemail = 1;
           
-            // Get current user informations
-            // -----------------------------
+            // Get current user information
+            // ----------------------------
             $query = '
 SELECT id, username, mail_address
 FROM '.USERS_TABLE.'
@@ -3165,8 +3165,8 @@ function UAM_loc_visible_user_list($visible_user_list)
   
   $user_nums = array_flip($user_ids);
 
-  // Query to get informations in database
-  // -------------------------------------
+  // Query to get information in database
+  // ------------------------------------
   if (!empty($user_ids))
   {
     $query = '
