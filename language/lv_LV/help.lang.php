@@ -164,4 +164,12 @@ Tālāk pielāgojiet saturu, izmantojot speciālos tegus (iezīmes):<br>
 Lai izmantotu daudzvalodu režīmu, varat lietot Paplašinātā apraksta spraudņa iezīmes, gadījumā, ja spraudnis aktivizēts. ';
 $lang['UAM_infomailTitle_d'] = 'Šī opcija ļauj lietotājam, kad viņš savā profilā izmaina savu paroli vai e-pasta adresi, automātiski nosūtīt informējošu e-pasta vēstuli.<br><br>
 Nosūtās informācijas teksts sastāv no pielāgojamas ievaddaļas un fiksētās daļas, kas atspoguļo lietotāja lietotājvārdu, paroli un e-pasta adresi.  ';
+$lang['UAM_confirmtxtTitle_d'] = 'Ievadiet ievadtekstu, ko vēlaties redzēt reģistrāciju apstiprinošajā e-pastā.<br><br>
+Tālāk pielāgojiet saturu ar speciāli ievietojamiem tegiem(iezīmēm):<br>
+- <b style=&quot;color: red;&quot;>[username]</b> lai automātiski ievietotu e-pasta gala lietotāja vārdu.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> lai ievietotu jūsu galerijas nosaukumu.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> lai ievietotu jūsu galerijas URL, ja tas izvēlēts Piwigo konfigurācijas iestatījumos.<br>
+- <b style=&quot;color: red;&quot;>[Kdays]</b> lai ievietotu astiprināšanai atvēlēto dienu limitu (&quot;Reģistrācijas apstiprināšanas termiņam;&quot; jābūt iestatītam).
+<br><br>
+';
 ?>
