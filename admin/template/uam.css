@@ -1,5 +1,8 @@
 /* UAM instructions */
-#uam_leftmargin
+li {
+  margin-bottom: 15px;
+}
+.uam_leftmargin
 {
   margin-left: 2em
 }
@@ -38,7 +41,9 @@ textarea.uam_textfields
 /* jQuery cluetip instructions */
 label.cluetip
 {
-  font-weight:bold;
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
 }
 
 /* Bloc expand-collapse instructions */
