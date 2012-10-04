@@ -2,6 +2,12 @@
 li {
   margin-bottom: 15px;
 }
+
+label {
+    cursor: pointer;
+    display: list-item;
+    list-style: none outside none;
+}
 .uam_leftmargin
 {
   margin-left: 2em
