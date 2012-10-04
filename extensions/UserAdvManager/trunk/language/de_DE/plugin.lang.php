@@ -396,4 +396,6 @@ Bitte reaktivieren Sie die Piwigo Option "e-Mail-Adresse ist obligatorisch für 
 Hinweis: Diese Meldung verschwindet, nachdem Sie die notwendige Korrektur vorgenommen haben und die Admin Seite neu geladen wurde. <br> <br>';
 $lang['UAM_Manual_validation_needed_for %s'] = 'Der Benutzer% s registriert hat und wartet auf ein Admin-Handbuch Validierung.';
 $lang['UAM_Subject admin validation for %s'] = 'Registrierung von% s wartet auf Validierung';
+$lang['UAM_Change'] = 'Ändere die Gruppe/den Status/die Privatsphäre des Benutzers der bestätigt wurde';
+$lang['UAM_Customize_messagesandmails'] = 'Personalisiere die Nachricht und Email';
 ?>
