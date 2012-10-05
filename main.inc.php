@@ -32,9 +32,9 @@ $conf_UAM = unserialize($conf['UserAdvManager']);
 // ---------------------------
 add_event_handler('get_admin_plugin_menu_links', 'UAM_admin_menu');
 
-// Features and controls on user connexion
-// ---------------------------------------
-add_event_handler('loc_begin_index', 'UAM_Init');
+// Lastvisit table feed for Ghost Tracker
+// --------------------------------------
+add_event_handler('loc_begin_index', 'UAM_GhostTracker');
 
 // User creation
 // -------------
@@ -64,11 +64,6 @@ add_event_handler('render_lost_password_mail_content', 'UAM_lost_password_mail_c
 // *** Important ! This is necessary to make email exclusion work in admin's users management panel ***
 // ----------------------------------------------------------------------------------------------------
 add_event_handler('init', 'UAM_InitPage');
-
-// Display messages about Login rejected, etc
-// ---------------------------
-add_event_handler('init','UAM_DisplayMsg');
-add_event_handler('identification','UAM_DisplayMsg');
 
 // PWG_Stuffs module
 // -----------------

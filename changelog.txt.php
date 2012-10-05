@@ -299,8 +299,6 @@ Plugin Name: UserAdvManager
 -- 2.30.8 : Bug 2739 fixed - Error on sending validation email when admins do a manual validation.
             Bug 2740 fixed - Loggin rejection on unvalidated user connection does not work
 
--- 2.30.9 : Bug 2744 fixed - User connexion rejection does not work if no group/status/privacy is set
-
 **************************************************************
 ***** Plugin history (branch 2.40 - Piwigo 2.4 compliant)*****
 **************************************************************
@@ -338,11 +336,5 @@ Plugin Name: UserAdvManager
             Update lv_LV, thanks to : agrisans
             Update es_ES, thanks to : jpr928
             Update it_IT, thanks to : Ericnet and virgigiole
-
--- 2.40.6 : Bug 2744 fixed - User connexion rejection does not work if no group/status/privacy is set
-						      Bug 2749 fixed - regex meta-characters are usable in character exclusion in usernames
-            New unvalidated user controls more efficient
-            Get admins emails instead of webmaster's for sending validation email
-            TODO - New simplifed administration panel
 */
 ?>

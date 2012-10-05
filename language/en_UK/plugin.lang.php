@@ -13,7 +13,7 @@ $lang['UAM_Registration_Date'] = 'Registration date';
 $lang['UAM_infos_mail %s'] = '%s, please find here your information to log in the gallery :';
 $lang['UAM_User: %s'] = 'User : %s';
 $lang['UAM_Password: %s'] = 'Password: %s';
-$lang['UAM_Link: %s'] = 'Please, click on this link to confirm the registration : %s';
+$lang['UAM_Link: %s'] = 'Please, click on this link to confirm your registration : %s';
 
 
 /* Errors and Warnings */
@@ -154,9 +154,9 @@ Also available, the project\'s bugtracker: <a href="http://piwigo.org/bugs/" onc
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.15.4
-$lang['UAM_Manual_Validation'] = 'Manual confirmation';
+$lang['UAM_Force_Validation'] = 'Manual confirmation';
 $lang['UAM_Confirm_Mail_true'] = ' Enable - Confirmation by user';
-$lang['UAM_Confirm_Mail_local'] = ' Enable - Confirmation by admin';
+$lang['UAM_Confirm_Mail_local'] = ' Enable - Confirmation by admin (no confirmation key sent)';
 // --------- End: New or revised $lang ---- from version 2.15.4
 
 
@@ -165,8 +165,6 @@ $lang['UAM_Expired_Group'] = '<b>Group</b> for user\'s registration has expired<
 $lang['UAM_Expired_Status'] = '<b>Status</b> for user\'s registration has expired<br>';
 $lang['UAM_GTAuto'] = 'Automatic management of ghosts users';
 $lang['UAM_GTAutoDel'] = 'Automatic deletion of accounts';
-$lang['UAM_Deleted_Account_Redirection_Page'] = 'Access denied - Account destroyed!';
-$lang['UAM_title_redir_page'] = 'Access denied for having an account destroyed!';
 $lang['UAM_Error_GTAutoMail_cannot_be_set_without_ConfirmMail'] = 'Consistency error in the chosen configuration:
 <br><br>
 "Setting the registered users monitoring and other options > Ghost visitors management (Ghost Tracker) > Automatic management of ghosts users > Automatically sending an email when changing group / status" can not be activated if "Setting confirmations of registration > Confirmation of registration - Confirmation by user" is not enabled at first.
@@ -251,7 +249,7 @@ Best regards,
 The admin of the gallery [mygallery] - [myurl]';
 $lang['UAM_Default_GhstDeletion_Txt'] = 'Sorry [username], your account has been deleted due to a too long time passed since your last visit at [mygallery]. Please register again.';
 $lang['UAM_Default_PwdRequest_Txt'] = 'You have requested a password reset on our gallery. Please, find below your new connection settings.';
-$lang['UAM_Default_CfmMail_Custom_Txt1'] = 'Welcome [username]! You have confirmed that you are human and may now use [mygallery]!';
+$lang['UAM_Default_CfmMail_Custom_Txt1'] = '[username] account successfully validated!';
 $lang['UAM_DumpTxt'] = 'Backup and restore your configuration';
 $lang['UAM_Restore'] = 'To restore the backup file of your configuration. Only the saved file on the server is taken into account.
 <br><br>
@@ -277,7 +275,6 @@ $lang['UAM_Title2'] = 'Confirmations of registration';
 $lang['UAM_GTAutoMail'] = 'Automatically sending an email when changing group / status / privacy level';
 $lang['UAM_NewFeature'] = 'New feature !';
 $lang['UAM_RejectConnexion_Custom_Txt'] = 'Customize rejection text';
-$lang['UAM_Reject_Page_Title'] = 'Connexion not allowed !';
 // --------- End: New or revised $lang ---- from version 2.30.2
 
 
@@ -288,8 +285,6 @@ $lang['UAM_ConfirmMail_Remail'] = 'Remind unconfirmed users';
 $lang['UAM_No_Usermanager'] = 'No unconfirmed registers to list for the moment';
 $lang['UAM_Stuffs_Desc'] = 'Adds an information block for unconfirmed users';
 /* Email confirmation page */
-$lang['UAM_title_confirm_mail'] = 'Confirm your registration';
-$lang['UAM_confirm_mail_page_title'] = 'Confirm your registration';
 $lang['UAM_%d_Validated_User'] = '%d User confirmed manually';
 $lang['UAM_%d_Validated_Users'] = '%d Users confirmed manually';
 $lang['UAM_No_Confirm_Group'] = 'Group for users who have not confirmed their registration<br>';
@@ -396,9 +391,9 @@ $lang['UAM_Default_CfmMail_Remail_Txt2'] = 'Hello [username].
 This is a reminder message because you registered on our gallery [mygallery] but you do not confirm your registration and your confirmation key will expire. To allow you access to our gallery, you have x days to confirm your registration by clicking on the link in the message you should have received when you registered.
 
 Note: After this period, your account will be permanently deleted.';
-$lang['UAM_Default_CfmMail_Custom_Txt2'] = 'Your activation key is incorrect or expired or you have already confirmed your account, please contact the webmaster to fix this problem.';
+$lang['UAM_Default_CfmMail_Custom_Txt2'] = 'Incorrect / expired activation key or account already validated.';
 $lang['UAM_RejectConnexion'] = 'Reject user\'s connexion until registration is confirmed';
-$lang['UAM_Default_RejectConnexion_Txt'] = 'Sorry, you don\'t have confirmed your registration yet, so you can\'t connect the gallery now. Please check your email box. You should find an email sent by the gallery, containing a link to perform your confirmation. If not, please contact the webmaster.';
+$lang['UAM_Default_RejectConnexion_Txt'] = 'Sorry, your registration is not validated yet, so you can\'t connect the gallery now.';
 $lang['UAM_Tracking registered users'] = 'Tracking registered users';
 $lang['UAM_Tracking confirmations'] = 'Tracking confirmations';
 // --------- End: New or revised $lang ---- from version 2.30.3
@@ -426,10 +421,4 @@ $lang['UAM_mail_exclusion_error'] = 'The Piwigo\'s option "The email address is 
 Please, Reactivate the Piwigo\'s option "The email address is mandatory for all users" to be able then to disable UAM\'s option "Exclusion of mail domains" if that\'s what you want.<br><br>
 Note: This message will disappear after you have made the necessary correction and reloaded the admin page.<br><br>';
 // --------- End: New or revised $lang ---- from version 2.40.4 and 2.30.7
-
-
-// --------- Starting below: New or revised $lang ---- from version 2.41.0
-$lang['UAM_Subject admin validation for %s'] = 'Registration of %s waits for validation';
-$lang['UAM_Manual_validation_needed_for %s'] = 'The user %s has registered and awaits for manual validation by an admin.';
-// --------- End: New or revised $lang ---- from version 2.41.0
 ?>

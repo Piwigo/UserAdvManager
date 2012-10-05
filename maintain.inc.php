@@ -213,24 +213,6 @@ ADD UAM_pwdreset enum("true","false")
     pwg_query($q);
   }
 
-  // Piwigo's native tables modifications for validation status
-  // ----------------------------------------------------------
-  $query = '
-SHOW COLUMNS FROM '.USERS_TABLE.'
-LIKE "UAM_validated"
-;';
-  
-  $result = pwg_query($query);
-
-  if(!pwg_db_fetch_row($result))
-  {
-    $q = '
-ALTER TABLE '.USERS_TABLE.'
-ADD UAM_validated enum("true","false") 
-;';
-    pwg_query($q);
-  }
-
 /* *************************************************************************** */
 /* **************** END - Database actions and initialization **************** */
 /* *************************************************************************** */
@@ -396,13 +378,6 @@ WHERE param = "UserAdvManager_Version"
     /* ************************************* */
       upgrade_2300_2400();
     }
-
-    if (version_compare($conf['UserAdvManager_Version'], '2.40.6') < 0)
-    {
-    /* upgrade from version 2.40.x to 2.40.6 */
-    /* ************************************* */
-      upgrade_2400_2406();
-    }
   }
 
   // Update plugin version number in #_config table and check consistency of #_plugins table
@@ -470,12 +445,6 @@ DROP TABLE '.USER_LASTVISIT_TABLE.'
   $q = '
 ALTER TABLE '.USERS_TABLE.'
 DROP UAM_pwdreset 
-;';
-  pwg_query($q);
-
-  $q = '
-ALTER TABLE '.USERS_TABLE.'
-DROP UAM_validated 
 ;';
   pwg_query($q);
 }

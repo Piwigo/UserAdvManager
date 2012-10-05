@@ -13,12 +13,7 @@ $lang['UAM_Registration_Date'] = 'Date d\'enregistrement';
 $lang['UAM_infos_mail %s'] = '%s, voici vos informations pour vous identifier sur la galerie :';
 $lang['UAM_User: %s'] = 'Utilisateur : %s';
 $lang['UAM_Password: %s'] = 'Mot de passe: %s';
-$lang['UAM_Link: %s'] = 'Cliquez sur le lien suivant pour confirmer l\'inscription : %s';
-
-
-/* Email confirmation page */
-$lang['UAM_title_confirm_mail'] = 'Confirmation de votre inscription';
-$lang['UAM_confirm_mail_page_title'] = 'Confirmation d\'inscription';
+$lang['UAM_Link: %s'] = 'Cliquez sur le lien suivant pour confirmer votre inscription : %s';
 
 
 /* Errors and Warnings */
@@ -166,9 +161,9 @@ Egalement disponible, le bugtracker du projet: <a href="http://piwigo.org/bugs/"
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.15.4
-$lang['UAM_Manual_Validation'] = 'Confirmation manuelle';
+$lang['UAM_Force_Validation'] = 'Confirmation manuelle';
 $lang['UAM_Confirm_Mail_true'] = ' Activer - Confirmation par le visiteur';
-$lang['UAM_Confirm_Mail_local'] = ' Activer - Confirmation par l\'administrateur';
+$lang['UAM_Confirm_Mail_local'] = ' Activer - Confirmation par l\'administrateur (pas d\'envoi de clé de confirmation)';
 // --------- End: New or revised $lang ---- from version 2.15.4
 
 
@@ -177,8 +172,6 @@ $lang['UAM_Expired_Group'] = '<b>Groupe</b> pour les utilisateurs dont l\'inscri
 $lang['UAM_Expired_Status'] = '<b>Statut</b> pour les utilisateurs dont l\'inscription aura expirée<br>';
 $lang['UAM_GTAuto'] = 'Gestion automatique des utilisateurs fantomes';
 $lang['UAM_GTAutoDel'] = 'Suppressions automatiques des comptes';
-$lang['UAM_Deleted_Account_Redirection_Page'] = 'Accès refusé - Compte détruit !';
-$lang['UAM_title_redir_page'] = 'Accès refusé pour cause de compte détruit !';
 $lang['UAM_Error_GTAutoMail_cannot_be_set_without_ConfirmMail'] = 'Erreur de cohérence dans la configuration choisie :
 <br><br>
 "Paramétrage des suivis des inscrits et autres options > Gestion des visiteurs fantômes (Ghost Tracker) > Gestion automatique des utilisateurs fantomes > Email automatique sur changement de groupe / statut" ne peut pas être activé si "Paramétrage des confirmations d\'inscriptions > Confirmation d\'inscription - Confirmation par le visiteur" n\'est pas activé au préalable.
@@ -261,7 +254,7 @@ Cordialement,
 L\'administrateur de la galerie [mygallery] - [myurl]';
 $lang['UAM_Default_GhstDeletion_Txt'] = 'Désolé [username], votre compte a été supprimé automatiquement pour cause de délai dépassé depuis votre dernière visite à [mygallery]. Veuillez vous réinscrire.';
 $lang['UAM_Default_PwdRequest_Txt'] = 'Vous avez demandé le renouvellement de votre mot de passe. Veuillez trouver ci-dessous vos nouvelles informations de connexion.';
-$lang['UAM_Default_CfmMail_Custom_Txt1'] = 'Bienvenue [username]! Vous avez confirmé que vous étiez bien un humain et non une machine. Vous pouvez maintenant profiter pleinement de [mygallery]!';
+$lang['UAM_Default_CfmMail_Custom_Txt1'] = 'Le compte de [username] a été validé avec succès !';
 $lang['UAM_DumpTxt'] = 'Sauvegarde et restauration de votre configuration';
 $lang['UAM_Restore'] = 'Pour restaurer le fichier de sauvegarde de votre configuration. Seul le fichier sauvegardé sur le serveur est pris en compte.
 <br><br>
@@ -286,7 +279,6 @@ $lang['UAM_RedirToProfile'] = 'Redirection vers la page de personnalisation';
 $lang['UAM_GTAutoMail'] = 'Email automatique sur changement de groupe / statut / Niveau de confidentialité';
 $lang['UAM_NewFeature'] = 'Nouvelle option !';
 $lang['UAM_RejectConnexion_Custom_Txt'] = 'Personnaliser le texte de la page de rejet de la connexion';
-$lang['UAM_Reject_Page_Title'] = 'Connexion refusée !';
 // --------- End: New or revised $lang ---- from version 2.30.2
 
 
@@ -396,14 +388,14 @@ $lang['UAM_Default_CfmMail_Remail_Txt2'] = 'Bonjour [username].
 Ceci est un message de rappel car vous vous êtes inscrit sur notre galerie [mygallery] mais vous n\'avez pas encore confirmé cette inscription et le délai va bientôt expirer. Un délai supplémentaire de x jours vous est accordé. Veuillez cliquer sur le lien de confirmation que vous avez reçu lors de votre inscription.
 
 Note: A l\'issue de cette période sans confirmation, votre compte sera définitivement supprimé.';
-$lang['UAM_Default_CfmMail_Custom_Txt2'] = 'Votre clé d\'activation est incorrecte ou expirée ou vous avez déjà confirmé votre inscription. Merci de contacter le webmestre de la galerie pour résoudre le problème.';
+$lang['UAM_Default_CfmMail_Custom_Txt2'] = 'Clé d\'activation incorrecte / expirée ou inscription déjà validée.';
 $lang['UAM_RejectConnexion'] = 'Rejeter les connexions des utilisateurs non confirmés';
 $lang['UAM_Default_CfmMail_Remail_Txt1'] = 'Bonjour [username].
 		
 Ceci est un message de rappel car vous n\'avez pas confirmé votre inscription sur [mygallery] et votre clé de confirmation a expiré. Pour vous permettre d\'accéder à notre galerie, votre période de confirmation a été réinitialisée. Vous avez donc un nouveau délai de x jours pour confirmer votre inscription.
 
 Note: A l\'issue de cette période sans confirmation, votre compte sera définitivement supprimé.';
-$lang['UAM_Default_RejectConnexion_Txt'] = 'Désolé, vous n\'avez pas encore confirmé votre inscription et vous ne pouvez pas vous connecter maintenant. Merci de vérifier votre boite aux lettres. Vous devriez y trouver un message comportant un lien pour confirmer votre inscription. Si ce n\'est pas le cas, merci de contacter l\'administrateur de la galerie.';
+$lang['UAM_Default_RejectConnexion_Txt'] = 'Désolé, votre inscription n\'est pas encore validée et vous ne pouvez pas vous connecter maintenant.';
 $lang['UAM_Tracking registered users'] = 'Suivi des utilisateurs inscrits';
 $lang['UAM_Tracking confirmations'] = 'Suivi des confirmations';
 // --------- End: New or revised $lang ---- from version 2.30.3
@@ -431,9 +423,4 @@ $lang['UAM_mail_exclusion_error'] = 'L\'option de Piwigo "L\'adresse mail est ob
 Veuillez réactivez l\'option de Piwigo "L\'adresse mail est obligatoire pour tous les utilisateurs" pour pouvoir désactiver ensuite l\'option UAM "Exclusion des domaines de messagerie" si c\'est ce que vous souhaitez.<br><br>
 Note : Ce message disparaitra après que vous ayez effectué la correction nécessaire et rechargé la page d\'administration.<br><br>';
 // --------- End: New or revised $lang ---- from version 2.40.4 and 2.30.7
-
-// --------- Starting below: New or revised $lang ---- from version 2.41.0
-$lang['UAM_Subject admin validation for %s'] = 'Inscription de %s à valider';
-$lang['UAM_Manual_validation_needed_for %s'] = 'L\'utilisateur %s s\'est inscrit et demande une validation manuelle par un administrateur.';
-// --------- End: New or revised $lang ---- from version 2.41.0
 ?>

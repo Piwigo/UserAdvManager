@@ -38,11 +38,9 @@ WHERE ('.USERS_TABLE.'.id ='.$userid.')
   if (VerifyConfirmMail($key))
   {
     $status = true;
+    
     log_user($userid, false);
-    if (isset($conf_UAM[1]) and $conf_UAM[1] == 'local')
-    {
-      validation_mail($userid);
-    }
+
 // We have to get the user's language in database
 // ----------------------------------------------
     $query = '
@@ -120,7 +118,7 @@ WHERE '.USER_INFOS_TABLE.'.user_id ='.$userid.'
       'UAM_PATH'             => $Path_UAM,
       'REDIRECT'             => $redirect,
       'STATUS'               => $status,
-		  		'CONFIRM_MAIL_MESSAGE' => $custom_text,
+		  'CONFIRM_MAIL_MESSAGE' => $custom_text,
     )
   );
 }

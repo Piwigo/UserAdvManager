@@ -16,11 +16,6 @@ $lang['UAM_Password: %s'] = 'Parole: %s';
 $lang['UAM_Link: %s'] = 'Lūdzu, uzklikšķiniet uz šīs saites, lai apstiprinātu savu reģistrāciju : %s';
 
 
-/* Email confirmation page */
-$lang['UAM_title_confirm_mail'] = 'Apstipriniet savu reģistrāciju';
-$lang['UAM_confirm_mail_page_title'] = 'Apstipriniet savu reģistrāciju';
-
-
 /* Errors and Warnings */
 $lang['UAM_audit_ok'] = 'Pārbaude OK';
 $lang['UAM_Err_audit_username_char'] = '<b>Šinī kontā izmantotas neatļautas rakstzīmes :</b> ';
@@ -212,9 +207,9 @@ Vēl pieejasms projekta bugtracker: <a href="http://piwigo.org/bugs/" onclick="w
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.15.4
-$lang['UAM_Manual_Validation'] = 'Manuālā apstiprināšana';
+$lang['UAM_Force_Validation'] = 'Manuālā apstiprināšana';
 $lang['UAM_Confirm_Mail_true'] = ' Iespējot – Apstiprinājis lietotājs';
-$lang['UAM_Confirm_Mail_local'] = ' Iespējot – Apstiprinājis administrators';
+$lang['UAM_Confirm_Mail_local'] = ' Iespējot – Apstiprinājis administrators (netika nosūtīta apstiprināšanas atslēga)';
 // --------- End: New or revised $lang ---- from version 2.15.4
 
 
@@ -237,7 +232,6 @@ $lang['UAM_PwdReset_Todo'] = 'Parole jāatjauno';
 $lang['UAM_PwdReset'] = 'Paroles atjaunošana';
 $lang['UAM_RejectConnexion_Custom_Txt'] = 'Pielāgot noraidījuma tekstu';
 $lang['UAM_RejectConnexion'] = 'Noraidīt lietotāja konekciju, kamēr reģistrācija nav apstiprināta';
-$lang['UAM_Reject_Page_Title'] = 'Konekcija nav atļauta!';
 $lang['UAM_Admins cannot be pwdreset'] = 'Paroles atjaunošanu nevar veikt admins kontam!';
 $lang['UAM_Confirm_Level'] = 'Konfidencialitātes līmenis (atstāt ------- lai paturētu Piwigo pēc noklusējuma)';
 $lang['UAM_Default user cannot be pwgreset'] = 'Paroles atjaunošanu nevar veikt lietotāja pēc noklusējuma kontam!';
@@ -253,7 +247,6 @@ $lang['UAM_Default_CfmMail_Custom_Txt1'] = 'Sveicināti [username]! Ir apstiprin
 $lang['UAM_Default_CfmMail_Custom_Txt2'] = 'Jūsu aktivācijas atslēga ir nekorekta vai novecojusi vai jūsu konts jau ir apstiprināts, lūdzu sazinieties ar webmasteru, lai atrisinātu šo preoblēmu.';
 $lang['UAM_Default_ConfirmMail_Remail_Subject'] = 'Atgādinājums - [username] reģistrācijas apstiprināšana galerijā [mygallery]';
 $lang['UAM_Default_GTReminder_Subject'] = '[username] - Pagājis ilgs laiks kopš pēdējo reizi apmeklēta galerija [mygallery]';
-$lang['UAM_Deleted_Account_Redirection_Page'] = 'Piekļuve liegta - Konts iznīcināts!';
 $lang['UAM_Demotion of %s'] = '%s pazemināšana';
 $lang['UAM_DumpTxt'] = 'Izveidot jūsu configurācijas rezerves kopiju un atjaunot konfigurāciju';
 $lang['UAM_Dump_Download'] = 'Lai lejupielādētu rezerves kopijas failu, veiciet atzīmi šajā lodziņā.';
@@ -293,7 +286,6 @@ $lang['UAM_Validation of %s'] = '%s apstiprinājums ';
 $lang['UAM_Webmaster cannot be pwdreset'] = 'Paroles atjaunošanu nevar iestatīt webmastera kontam!';
 $lang['UAM_You cannot pwdreset your account'] = 'Paroles atjaunošanu nevar iestatīt jūsu paša(as) kontam!';
 $lang['UAM_You need to confirm pwdreset'] = 'Jums jāapstiprina paroles atjaunošana (atzīmēt rūtiņā)!';
-$lang['UAM_title_redir_page'] = 'Piekļuve liegta konta iznīcināšanas dēļ!';
 $lang['UAM_GTAutoGp'] = 'Grupas statusa/konfidencialitātes līmeņa automātiska nomaiņa';
 $lang['UAM_No_Userlist'] = 'Uz doto momentu nav lietotāju ko attēlot ';
 $lang['UAM_No_Valid_Level'] = 'Savu reģistrāciju neapstiprinājošo lietotāju konfidencialitātes līmenis<br>';
@@ -393,4 +385,6 @@ Lai nodrošinātu konsekvenci, opcija "Automātiskā e-pasta izsūtīšana, main
 $lang['UAM_mail_exclusion_error'] = 'Piwigo opcija "e-pasta adrese obligāta visiem lietotājiem" ir atslēgta kamēr UserAdvancedManager\'s (UAM) spraudņa opcija "E-pasta domēnu izslēgšana" paliek aktīva. Šī kombinācija ir neloģiska un nav derīga! <br><br> 
 Lūdzu, reaktivējiet Piwigo opciju "e-pasta adrese obligāta visiem lietotājiem", lai tā ir iespējota, tad atspējojiet UAM opciju "E-pasta domēnu izslēgšana", ja tas ir tas, ko vēlaties.<br><br>
 Piezīme: Šis paziņojums pazudīs līdz būsiet veicis nepieciešamās korekcijas un par jaunu atvēris administratora lapu.<br><br>  ';
+$lang['UAM_Manual_validation_needed_for %s'] = 'Lietotājs %s ir reģistrējies un gaida administratora apstiprinājumu. ';
+$lang['UAM_Subject admin validation for %s'] = '%s reģistrācija gaida apstiprinājumu';
 ?>
