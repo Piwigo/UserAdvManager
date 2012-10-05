@@ -172,4 +172,13 @@ Tālāk pielāgojiet saturu ar speciāli ievietojamiem tegiem(iezīmēm):<br>
 - <b style=&quot;color: red;&quot;>[Kdays]</b> lai ievietotu astiprināšanai atvēlēto dienu limitu (&quot;Reģistrācijas apstiprināšanas termiņam;&quot; jābūt iestatītam).
 <br><br>
 ';
+$lang['UAM_CustomPasswRetrTitle_d'] = 'Pēc noklusēšanas, kad lietotājs ir pazaudējis savu paroli un izvēlas tās atjaunošanas iespēju, viņš ar e-pastu saņem tikai savu lietotājvārdu un jauno paroli.
+<br><br>
+Šeit, <b><u>pirms</u></b> standartziņojuma, ir iespēja ievadīt tekstu pēc jūsu ieskatiem.
+<br><br>
+Tālāk pielāgojiet ziņojuma saturu ar speciāli ievietojamajiem tegiem (iezīmēm):<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> lai ievadītu jūsu galerijas nosaukumu.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> Lai ievadītu jūsu galerijas URL, ja tas iestatīts Piwigo konfigurācijā.
+<br><br>
+Lai lietotu vairākas valodas, ja aktivēts, varat izmantot Paplašinātā apraksta spraudņa tegus.';
 ?>
