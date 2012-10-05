@@ -16,11 +16,6 @@ $lang['UAM_Password: %s'] = 'Contraseña: %s';
 $lang['UAM_Link: %s'] = 'Por favor, haga clic en este enlace para confirmar su registro: %s';
 
 
-/* Email confirmation page */
-$lang['UAM_title_confirm_mail'] = 'Validar su inscripción';
-$lang['UAM_confirm_mail_page_title'] = 'Validar su inscripción';
-
-
 /* Errors and Warnings */
 $lang['UAM_audit_ok'] = 'Auditoría OK';
 $lang['UAM_Err_audit_username_char'] = '<b>Esta cuenta utiliza uno o más caracteres prohibidos:</b> ';
@@ -214,9 +209,9 @@ También está disponible, el bugtracker del proyecto: <a href="http://piwigo.or
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.15.4
-$lang['UAM_Manual_Validation'] = 'Validación manual';
+$lang['UAM_Force_Validation'] = 'Validación manual';
 $lang['UAM_Confirm_Mail_true'] = ' Activar - La validación por el usuario';
-$lang['UAM_Confirm_Mail_local'] = ' Activar - La validación por el administrador';
+$lang['UAM_Confirm_Mail_local'] = ' Activar - La validación por el administrador (sin clave de validación enviado)';
 // --------- End: New or revised $lang ---- from version 2.15.4
 
 
@@ -225,8 +220,6 @@ $lang['UAM_Expired_Group'] = '<b>Grupo</b> para el registro de usuario ha caduca
 $lang['UAM_Expired_Status'] = '<b>Estado </b> para el registro de usuario ha caducado<br>';
 $lang['UAM_GTAuto'] = 'Gestión automática de los Espíritus usuarios';
 $lang['UAM_GTAutoDel'] = 'Borrado automático de las cuentas';
-$lang['UAM_Deleted_Account_Redirection_Page'] = 'Acceso denegado - Cuenta destruido!';
-$lang['UAM_title_redir_page'] = 'Acceso denegado por haber destruido una cuenta!';
 $lang['UAM_Error_GTAutoMail_cannot_be_set_without_ConfirmMail'] = 'Error de coherencia en la configuración elegida:<br><br>
 "Configuración de los registros seguidos y otras opciones > Gestión de Espíritu visitantes (Tracker Ghost) > Gestión automática de los Espíritus usuarios > Automáticamente el envío de un correo electrónico cuando se cambia de grupo / estado" no se puede activar si "Configuración de las confirmaciones y validaciones de registro > Confirmación de registro - La validación por el usuario" no está habilitada en un principio.<br><br>
 Para garantizar la coherencia, la opción "Automáticamente el envío de un correo electrónico cuando se cambia de grupo / estado" fue colocado de nuevo de forma automática "Desactivar".<br><br>';
@@ -325,7 +318,6 @@ $lang['UAM_Restore'] = 'Para restaurar el archivo de copia de seguridad de su co
 <b style="color: red;"> Cuidado con la versión de copia de seguridad! <br> Una copia de seguridad a partir de una versión del plugin sólo se pueden restaurar en la misma versión. </ b>';
 $lang['UAM_Restoration_OK'] = 'Restauración de la configuración completada con éxito! Vuelve a cargar la página de administración UAM para ver la configuración restaurada.';
 $lang['UAM_Restoration_NOK'] = 'Se produjo un error mientras se restaura la configuración. Por favor, compruebe la validez de su archivo de copia de seguridad.';
-$lang['UAM_Reject_Page_Title'] = 'Conexión no permitida !';
 $lang['UAM_RejectConnexion_Custom_Txt'] = 'Personalización del texto de rechazo';
 $lang['UAM_RejectConnexion'] = 'Rechazar conexión del usuario hasta que el registro se confirma';
 $lang['UAM_PwdReset_Todo'] = 'Contraseñas a renovar';
@@ -397,4 +389,6 @@ $lang['UAM_Default_ConfirmMail_Remail_Subject'] = 'Recordatorio - [nombre de usu
 $lang['UAM_Default_ConfirmMail_Txt'] = 'Hola [nombre de usuario]! Gracias por haber registro en [mygallery].
 
 Para completar el proceso y ser capaz de navegar a través de las imágenes, confirme por favor su registro haciendo clic en el vínculo de este mensaje.';
+$lang['UAM_Manual_validation_needed_for %s'] = 'El usuario %s se ha registrado y espera para la validación manual por un administrador.';
+$lang['UAM_Subject admin validation for %s'] = 'El registro de %s espera para la validación';
 ?>

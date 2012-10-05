@@ -42,11 +42,6 @@ Atspējojot šo iespēju (pēc noklusējuma), tiek nosūtīta tikai e-pasta info
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.15.2
-$lang['UAM_casenTitle_d'] = 'Pēc noklusējuma Piwigo ir reģistrjutīgs:
-Lielie un mazie burti, veidojot vārdus pie reģistrācijas, tiek uztverti kā atsevišķas rakstzīmes. Tādējādi, &quot;Foo&quot;,
-&quot;foo&quot; un &quot;FOO&quot; var būt 3 atšķirīgi lietotāji.<br><br>
-Šīs opcijas iespējošana ļauj izanalizēt visas iespējas &quot;foo&quot; kā viena lietotāja gadījumā. Ja &quot;foo&quot; jau eksistē, jauna lietotāja &quot;Foo&quot; izveidošana tiks noraidīta.<br><br>
-<b style=&quot;color: red;&quot;>Uzmanību: Šī opcija neattiecas uz lietotājvārdiem, kas izveidoti pirms šīs opcijas aktivēšanas.</b>';
 // --------- End: New or revised $lang ---- from version 2.15.2
 
 // --------- Starting below: New or revised $lang ---- from version 2.15.4
@@ -138,9 +133,52 @@ $lang['UAM_GTAutoTitle_d'] = 'Šī opcija dod iespēju pielietot (slēptajiem) g
 <br><br>Pamatprincips: Lietotājs, kas sasniedzis maksimālo laiku starp apmeklējumiem <b><u>and</u></b> un ir jau par to ar e-pastu brīdināts, tiek uzskatīts kā vairs neesošs. Tad jūs varat pielietot automātiskās apstrādes nosacījumus, kā notecējušo kontu automātisko dzēšanu vai to pazemināšanu, ierobežojot piekļuvi galerijai (automātiski pārvirzot ierobežojumu grupā vai piešķirot šādu statusu).
 <br><br>Šis automātiskais process tiek iedarbināts lietotājiem (jebkuram lietotājam!) pieslēdzoties galerijai.';
 $lang['UAM_GTAutoDelTitle'] = 'Pielāgots ziņojums par dzēstu kontu';
-$lang['UAM_GTAutoGpTitle'] = 'Grupas/stausa automātiskā nomaiņa';
 $lang['UAM_GTAutoGpTitle_d'] = 'Automātiska konta grupas vai statusa maiņa ir ekvivalenta kontu, kas ir iesaistīti un darbojas uz vieniem un tiem pašiem principiem kā validācijas grupas, funkcionalitātes pazemināšanai (skatīt &quot;Setting confirmations and validations of registration&quot;).
 Tādējādi jānosaka mainīto (pazemināto) grupu un/vai statusa piekļuves tiesības galerijai. Ja tas jau izdarītslietojot reģistrācijas apstiprināšanas funkciju, varat lietot to pašu grupu vai statusu.<br><br>
 <b style=&quot;color: red;&quot;>Important note :</b> Ja no slēptā ghost lietotāja pēc termiņa limita, neskatoties uz informēšanu ar e-pastu (ja iespējots), nav nekādas ziņas, viņš automātiski tie dzēsts no datu bāzes';
 // --------- End: New or revised $lang ---- from version 2.16.0
+$lang['UAM_StuffsTitle_d'] = 'Šis iespējo papildus UAM bloku PWG Stuff spraudnī (ja instalēts), lai informētu apmeklētājus, kas kādu iemslu dēļ nav apstiprinājuši savu reģistrāciju.
+<br><br>
+Lūdzu pēc detaļām griezties <b>Tips and Examples of Use</b> šīs lapas apakšā. ';
+$lang['UAM_HidePasswTitle_d'] = 'Izvēlieties šeit, ja gribat, lai apmeklētāja parole tiktu ietverta informatīvajā e-pastā. Ja iespējojat šo opciju, tad parole tiek atainota atklātā tekstā. Ja to neiespējojat, tad parole netiek rādīta vispār.';
+$lang['UAM_GT_MainTitle_d'] = '-Automātiska vai manuāla slēpto lietotāju pārvaldība<br> 
+-E-pasta sūtīšana<br>';
+$lang['UAM_confirmlevelTitle_d'] = '<b style=&quot;color: red;&quot;>UZMANĪBU: Privātuma līmeņa lietošana prasa, lai jūs lietotu to kopā ar savām bildēm. Detalizētāka informācija Piwigo documentācijā.</b><br><br>
+Privātuma līmenis ir validēts lietošanai saistībā ar &quot;Reģistrācijas apstiprināšanu&quot;';
+$lang['UAM_confirmlevelTitle'] = 'Privātuma līmenis';
+$lang['UAM_USRAutoMailTitle_d'] = 'Kad aktivizēta, šī funkcija automātiski izsūta personificēta satura informāciju &quot;Atgādinājuma e-pastā ar no jauna izveidotu atslēgu&quot; apmeklētājiem, kuri atbilst kritērijiem.';
+$lang['UAM_Tracking registered users_d'] = 'Šis aktivizē tabulu &quot;Izsekošanā reģistrētie lietotāji&quot; saraksts, kur piefiksēti galeriju apmeklējušie reģistrētie lietotāji, pēdējā apmeklējuma datums un apmeklējuma ilgums (dienās) kopš viņu pēdējā apmeklējuma. Monitorings ir tīri informatīva rakstura, domāts galerijas administratora vajadzībām.';
+$lang['UAM_RejectConnexion_Custom_Txt_d'] = 'Pielāgojiet šeit savu paskaidrojuma teskstu neapstiprinātajiem lietotājiem, ka viņi nevarēs tikt galerijā, kamēr nebūs apstiprinājuši savu reģistrāciju.
+<br><br>
+Šis lauks ir savietojams ar FCK Redaktoru un, lai lietotu daudzvalodu režīmu, var izmantot Paplašinātā apraksta spraudņa, ja tas ir aktivizēts, [lang] iezīmes (tags).  ';
+$lang['UAM_RejectConnexion_d'] = 'Ja aktivizēts, no jauna reģistrētie lietotāji, kas nav apstiprinājuši savu reģistrāciju, nevarēs piekļūt galerijai. Tie tiks pārsūtīti uz speciālu lapu, kur tiks informēti par radušos situāciju. 
+<br><br>
+<b style=&quot;color: red;&quot;>Uzmanību - Šī funkcija darbojas tikai sasaistē ar apstiprinājuma grupām! Skatīt zemā, lai iestatītu grupas kā tas pieprasīts.</b>';
+$lang['UAM_infotxtTitle_d'] = 'Ievadiet ievadtekstu, ko vēlaties atspoguļot informējošajā e-pastā.
+<br><br>
+Tālāk pielāgojiet saturu, izmantojot speciālos tegus (iezīmes):<br>
+- <b style=&quot;color: red;&quot;>[username]</b> lai automātiski ievietotu galējā e-pasta lietotāja vārdu.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> lai ievietotu jūsu galerijas nosaukumu.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> lai ievietotu jūsu galerijas URL, ja tas iestatīts Piwigo konfigurācijā.
+<br><br>
+Lai izmantotu daudzvalodu režīmu, varat lietot Paplašinātā apraksta spraudņa iezīmes, gadījumā, ja spraudnis aktivizēts. ';
+$lang['UAM_infomailTitle_d'] = 'Šī opcija ļauj lietotājam, kad viņš savā profilā izmaina savu paroli vai e-pasta adresi, automātiski nosūtīt informējošu e-pasta vēstuli.<br><br>
+Nosūtās informācijas teksts sastāv no pielāgojamas ievaddaļas un fiksētās daļas, kas atspoguļo lietotāja lietotājvārdu, paroli un e-pasta adresi.  ';
+$lang['UAM_confirmtxtTitle_d'] = 'Ievadiet ievadtekstu, ko vēlaties redzēt reģistrāciju apstiprinošajā e-pastā.<br><br>
+Tālāk pielāgojiet saturu ar speciāli ievietojamiem tegiem(iezīmēm):<br>
+- <b style=&quot;color: red;&quot;>[username]</b> lai automātiski ievietotu e-pasta gala lietotāja vārdu.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> lai ievietotu jūsu galerijas nosaukumu.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> lai ievietotu jūsu galerijas URL, ja tas izvēlēts Piwigo konfigurācijas iestatījumos.<br>
+- <b style=&quot;color: red;&quot;>[Kdays]</b> lai ievietotu astiprināšanai atvēlēto dienu limitu (&quot;Reģistrācijas apstiprināšanas termiņam;&quot; jābūt iestatītam).
+<br><br>
+';
+$lang['UAM_CustomPasswRetrTitle_d'] = 'Pēc noklusēšanas, kad lietotājs ir pazaudējis savu paroli un izvēlas tās atjaunošanas iespēju, viņš ar e-pastu saņem tikai savu lietotājvārdu un jauno paroli.
+<br><br>
+Šeit, <b><u>pirms</u></b> standartziņojuma, ir iespēja ievadīt tekstu pēc jūsu ieskatiem.
+<br><br>
+Tālāk pielāgojiet ziņojuma saturu ar speciāli ievietojamajiem tegiem (iezīmēm):<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> lai ievadītu jūsu galerijas nosaukumu.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> Lai ievadītu jūsu galerijas URL, ja tas iestatīts Piwigo konfigurācijā.
+<br><br>
+Lai lietotu vairākas valodas, ja aktivēts, varat izmantot Paplašinātā apraksta spraudņa tegus.';
 ?>
