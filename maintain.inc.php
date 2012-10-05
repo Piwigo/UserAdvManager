@@ -397,11 +397,11 @@ WHERE param = "UserAdvManager_Version"
       upgrade_2300_2400();
     }
 
-    if (version_compare($conf['UserAdvManager_Version'], '2.40.6') < 0)
+    if (version_compare($conf['UserAdvManager_Version'], '2.41.0') < 0)
     {
-    /* upgrade from version 2.40.x to 2.40.6 */
+    /* upgrade from version 2.40.x to 2.41.0 */
     /* ************************************* */
-      upgrade_2400_2406();
+      upgrade_2400_2410();
     }
   }
 
