@@ -403,4 +403,6 @@ Si prega di riabilitare in Piwigo "L\'indirizzo email è obbligatorio per tutti 
 Nota: Questo messaggio scompare dopo aver effettuato la correzione necessaria e ricaricato la pagina di amministrazione <br>';
 $lang['UAM_Manual_validation_needed_for %s'] = 'L\'utente %s si è registrato ed è in attesa dell\'approvazione manuale da parte dell\'amministratore.';
 $lang['UAM_Subject admin validation for %s'] = 'La registrazione di %s è in attesa di approvazione';
+$lang['UAM_Change'] = 'Cambia il Gruppo/Stato/Livello di Privacy degli utenti che sono stati confermati.';
+$lang['UAM_Customize_messagesandmails'] = 'Personalizza i messaggi e le email';
 ?>
