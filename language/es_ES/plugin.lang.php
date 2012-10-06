@@ -391,4 +391,6 @@ $lang['UAM_Default_ConfirmMail_Txt'] = 'Hola [nombre de usuario]! Gracias por ha
 Para completar el proceso y ser capaz de navegar a través de las imágenes, confirme por favor su registro haciendo clic en el vínculo de este mensaje.';
 $lang['UAM_Manual_validation_needed_for %s'] = 'El usuario %s se ha registrado y espera para la validación manual por un administrador.';
 $lang['UAM_Subject admin validation for %s'] = 'El registro de %s espera para la validación';
+$lang['UAM_Change'] = 'Change the Group/Status/Privacy Level of the users who have been confirmed';
+$lang['UAM_Customize_messagesandmails'] = 'Personalizar los mensajes y correos';
 ?>
