@@ -387,4 +387,6 @@ Lūdzu, reaktivējiet Piwigo opciju "e-pasta adrese obligāta visiem lietotājie
 Piezīme: Šis paziņojums pazudīs līdz būsiet veicis nepieciešamās korekcijas un par jaunu atvēris administratora lapu.<br><br>  ';
 $lang['UAM_Manual_validation_needed_for %s'] = 'Lietotājs %s ir reģistrējies un gaida administratora apstiprinājumu. ';
 $lang['UAM_Subject admin validation for %s'] = '%s reģistrācija gaida apstiprinājumu';
+$lang['UAM_Change'] = 'Izmainīt apstiprināto lietotāju Grupas/Statuss/Konfidencialitāte Līmeni';
+$lang['UAM_Customize_messagesandmails'] = 'Pielāgojiet ziņojumus un pastu';
 ?>
