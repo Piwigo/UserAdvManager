@@ -181,4 +181,10 @@ Tālāk pielāgojiet ziņojuma saturu ar speciāli ievietojamajiem tegiem (iezī
 - <b style=&quot;color: red;&quot;>[myurl]</b> Lai ievadītu jūsu galerijas URL, ja tas iestatīts Piwigo konfigurācijā.
 <br><br>
 Lai lietotu vairākas valodas, ja aktivēts, varat izmantot Paplašinātā apraksta spraudņa tegus.';
+$lang['UAM_ConfirmMail_Subject_d'] = 'Ievadiet šeit savu pielāgoto reģistrācijas apstiprinājuma pasta tēmu. <br>
+Pēc noklusējuma lauks ir vispārējs tekstu angļu valodā, bet to var mainīt un izmantot Paplašinātā Apraksta spraudņa tulkošanas tagus [lang =?], ja uzstādīti.
+<br><br>
+Neizmantojot Paplašinātā Apraksta spraudņa iespējas, pieejami sekojoši papildu pielāgošanas tagi: <br>
+- <b style=&quot;color: red;&quot;>[username]</b> lai automātiski ievietotu e-pasta gala lietotāja vārdu.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> lai ievietotu jūsu galerijas nosaukumu.<br>';
 ?>
