@@ -252,4 +252,86 @@ $lang['UAM_GTAutomail_Subject'] = 'Tilpasning af mailemne vedrørende automatisk
 $lang['UAM_GTAutomail_Text'] = 'Tilpasning af nedgraderingsmails tekst';
 $lang['UAM_GTReminder_Subject'] = 'Tilpasning af mailemne vedørende manuel påmindelse via Ghost Tracker';
 $lang['UAM_GT_Init'] = 'Initialiserer Ghost Tracker';
+$lang['UAM_mail_exclusion_error'] = 'Piwigos valgmulighed "E-mail-adresse er krævet for alle brugere" er blevet deaktiveret, mens plugin\'en UserAdvancedManagers (UAM) valgmulighed "Fravalg af maildomæner" stadig er aktiv. Denne kombination er ulogisk og ikke kompatibel!<br><br>
+Vær venlig at genaktivere Piwigos valgmulighed "E-mail-adresse er krævet for alle brugere", for dernæst at kunne deaktivere UAM\'s valgmulighed "Fravalg af maildomæner", hvis det er, hvad du ønsker.<br><br>
+Bemærk: Denne meddelelse forsvinder, når du har foretaget den nødvendige ændring og genindlæst administreringssiden.<br><br>';
+$lang['UAM_Tips2_txt'] = '          <ul>
+            <li>
+            Formål: At informere den besøgende om at dennes registrering venter på godkendelse ved at tilføje en ekstra side, som erstatter galleriets standardforside ved sådanne brugere, så længe registreringen ikke er godkendt.
+            <br><br>
+            <b>Fordele i forhold til metoden med PWG_Stuffs: Muliggør formatering af oplysninger og visning af dem straks besøgende registrer sig.
+            </li><br><br>
+            <li>
+	    Forudsætninger:<br>
+	    - Et galleri hvor eller nogle albummer er private, og dermed kun synlige for registrerede brugere<br>
+	    - Som minimum de to følgende Piwigos-brugergrupper: "Afventer" uden tilladelser til at se private albummer, samt "Bekræftet" med alle tilladelser til at se private albummer<br>
+	    - UAM-plugin<br>
+	    - Additional Pages-plugin\'en til tilføjelse og håndtering af ekstra side, der galleriets erstatter standardforside<br>
+	    - Valgfrit plugin\'en Extended Description til understøttelse af flere sprog<br>
+            </li><br><br>
+            <li>
+	      Trin:<br><br>
+	      A. I plugin\'en UAM:
+              <ol>
+                <li>Aktiver registreringsbekræftelse</li>
+                <li>Aktiver PWG Stuffs\' modulvalgmulighed</li>
+                <li>Skriv tekst med en uddybende forklaring, som vil blive sammen med mails vedrørende registreringsbekræftelser. Hvis plugin\'en Extended Description er aktiv kan sprogtags anvendes</li>
+                <li>Vælg gruppen "Afventer" under "Til brugere, der ikke har bekræftet deres registrering"</li>
+                <li>Vælg gruppen "Confirmed" under "Til brugere, der har bekræftet deres registrering"</li>
+                <li>Gem pluginens opsætning</li>
+              </ol>
+	      <br>
+	      B. I plugin\'en Additional Pages:<br>
+              <b>BEMÆRK: Håndteringen af adgangsrettigheder vedrørende grupper i Additional Pages skal aktiveres (se plugin\'ens opsætning).</b>
+              <br>
+              <ol>
+                <li>Tilføj en ny side i hvert fald følgende parametre:</li>
+                <ul>
+                  <li>Sidenavn: Det ønskede navn på den ekstra side (fx: "Registrering ikke bekræftet)</li>
+                  <li>Sæt flueben ved "Benyt som forside"</li>
+                  <li>Tilladte grupper: Sæt flueben i boksen som svarer til gruppen "Afventer", opsat i UAM</li>
+                  <li>Indhold: Teksten du ønsker at vise de besøgende.</li>
+                </ul>
+                <br>
+                <li>Det er alt! Kun registrerede besøgende, som endnu ikke er bekræftet, vil se den ekstra forside.</li>
+              </ol>
+            </li>
+          </ul>';
+$lang['UAM_Tips1_txt'] = '          <ul>
+            <li>
+            Formål: At informere den besøgende om at dennes registrering venter på godkendelse. Det sker ved at vise en personlig blok på galleriets forside, så længe registreringen ikke er godkendt.
+            <br><br>
+            <b>Husk: I standardtilstand ser brugeren "Guest" ("Gæst") kun de offentlige albummer, uden informerende meddelelser.</b>
+            </li><br><br>
+            <li>
+	    Forudsætninger:<br>
+	    - Et galleri hvor eller nogle albummer er private, og dermed kun synlige for registrerede brugere<br>
+	    - Som minimum de to følgende Piwigos-brugergrupper: "Afventer" uden tilladelser til at se private albummer, samt "Bekræftet" med alle tilladelser til at se private albummer<br>
+	    - UAM-plugin<br>
+	    - PWG Stuffs-plugin\'en til tilføjelse af et særligt UAM-modul<br>
+	    - Valgfrit plugin\'en Extended Description til understøttelse af flere sprog<br>
+            </li><br><br>
+            <li>
+	    Trin:<br><br>
+	    A. I plugin\'en UAM:
+              <ol>
+                <li>Aktiver registreringsbekræftelse</li>
+                <li>Aktiver PWG Stuffs\' modulvalgmulighed</li>
+                <li>Skriv tekst med en uddybende forklaring, som vil blive sammen med mails vedrørende registreringsbekræftelser. Hvis plugin\'en Extended Description er aktiv kan sprogtags anvendes</li>
+                <li>Vælg gruppen "Afventer" under "Til brugere, der ikke har bekræftet deres registrering"</li>
+                <li>Vælg gruppen "Confirmed" under "Til brugere, der har bekræftet deres registrering"</li>
+                <li>Save the plugin configuration</li>
+              </ol>
+	    <br>
+	    B. I plugin\'en PWG Stuffs :
+              <ol>
+                <li>Gå til fanebladet "Tilføjet et nyt modul"</li>
+                <li>Vælg "UAM Module"</li>
+                <li>Opsæt modulet med angivelse af titel (fx "Registrering afventer bekræftelse") og en beskrivelse, sæt kun flueben ved "Waiting" i listen over tilladte grupper</li>
+                <li>Udfyld resten af modulets indhold med en meddelelse, som skal vises til brugere, der ikke er bekræftede. Som ved UAM kan sprogtags benyttes hvis plugin\'en Extended Description er aktiveret</li>
+                <li>Sæt flueben ved "Vis modulet på webstedets forside"</li>
+                <li>Godkend modulets opsætning</li>
+              </ol>
+            </li>
+          </ul>';
 ?>
