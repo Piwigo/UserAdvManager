@@ -103,4 +103,153 @@ Ved modtagelse af denne besked og uden nye besøg inden for [days] dage, vil vi 
 Med venlig hilsen
 
 Adminstrator af galleriet [mygallery] - [myurl]';
+$lang['UAM_Error_GTAutoMail_cannot_be_set_without_ConfirmMail'] = 'Konsistensfejl i den valgte opsætning:
+<br><br>
+"Opsætning af overvågning af registrerede brugere og andre indstillinger > Håndtering af spøgelsesbesøgende (Ghost Tracker) > Automatisk håndtering af spøgelsesbesøgende > Automatisk afsendelse af mail ved ændring af gruppe / status" kan ikke aktiveres hvis  "Opsætning af registreringsbekræftelse > Bekræftelse af registrering - Brugers bekræftelse" ikke først er aktiveret.
+<br><br>
+For at sikre konsistens blev valgmuligheden "Automatisk afsendelse af mail ved ændring af gruppe / status" automatisk ændres til "deaktiveret".
+<br><br>';
+$lang['UAM_mail_exclusionlist_error'] = 'Advarsel! Du er begyndt på en ny linje (CR-LF) øverst i mailfravalgslisten (vist i rødt herunder). Selv om den nye linje ikke er synlig, er den stadig til stede og kan medfører at plugin\'en ikke fungerer korrekt. Vær venlig at genindtaste din mailfravalgsliste på en måde, der ikke begynder med en tom linje.';
+$lang['UAM_confirmmail_custom_Txt1'] = 'Tekst til bekræftelsesside - Bekræftelse accepteret';
+$lang['UAM_confirmmail_custom_Txt2'] = 'Tekst til bekræftelsesside - Bekræftelse afvist';
+$lang['UAM_empty_pwd'] = '[tom adgangskode]';
+$lang['UAM_infos_mail %s'] = '%s, her er dine loginoplysninger til galleriet:';
+$lang['UAM_no_update_pwd'] = '[profil opdateret uden ændring af adgangskode]';
+$lang['UAM_reg_err_login2'] = 'Brugernavnet må ikke indehold følgende tegn:';
+$lang['UAM_reg_err_login3'] = 'Sikkerhed: En adgangskode er påkrævet!';
+$lang['UAM_reg_err_login4_%s'] = 'Sikkerhed: Et kontrolsystem beregner en værdi for den valgte adgangskodes kompleksitet. Din adgangskodes kompleksitet er for lav (værdi = %s). Vær venlig at vælge en ny og mere sikker adgangskode ved at følge disse regler:<br>
+- Brug bogstaver og tal<br>
+- Brug små og store bogstaver<br>
+- Forøg længden (antal tegn)<br>
+Administratoren kræver følgende minimale adgangskodeværdi:';
+$lang['UAM_reg_err_login5'] = 'En mailleverandør er accepteres ikke af os. Ikke-accepterede mailleverandører er:';
+$lang['UAM_save_config'] = 'Opsætning er gemt.';
+$lang['UAM_submit'] = 'Gem indstillinger';
+$lang['UAM_Error_Using_illegal_Kdays'] = 'Anvendelse af tagget [Kdays] er kun tilladt hvis fristen for registreringsbekræftelse er aktiv. Ret problemet i det røde tekstfelt.';
+$lang['UAM_Error_Using_illegal_flag'] = 'Syntaksfejl! AutoText-flaget [Kdays] benyttes, der valgmuligheden "Begrænset frist for registreringsbekræftelse" ikke var aktiv. Aktiver valgmuligheden eller ret det/de røde tekstfelter.';
+$lang['UAM_GhostTracker_Init'] = 'Hvis du aktiverer denne funktion for første gang eller du genaktiverer efter en lang periode, hvor den har været slået fra, under hvilken nye brugere har registreret sig, skal du initialisere eller nulstillet Ghost Tracker. Det kan kun ske efter aktivering eller genaktivering af valgmuligheden. Klik <u>en gang</u> på knappen nulstil herunder.';
+$lang['UAM_Support_txt'] = 'Officiel support af denne plugin er kun tilgængelig i disse Piwigo-forumemner:<br>
+<a href="http://piwigo.org/forum/viewtopic.php?id=15015" onclick="window.open(this.href);return false;">Engelsk forum - http://piwigo.org/forum/viewtopic.php?id=15015</a><br><br>
+Også tilgængelig i projektets bugtracker: <a href="http://piwigo.org/bugs/" onclick="window.open(this.href);return false;">http://piwigo.org/bugs/</a>';
+$lang['UAM_Username_Char'] = 'Brugernavne: Fravalg af tegn';
+$lang['UAM_Username_Char_false'] = ' Tillad alle (standard)';
+$lang['UAM_Username_Char_true'] = ' Forbudte tegn:<br>(Benyt et komma til at adskille hvert tegn)<br><br>';
+$lang['UAM_Valid_Level'] = 'Privatlivsniveau til brugere, der har bekræftet deres registering<br>';
+$lang['UAM_Validated_Group'] = 'Gruppe til brugere, der har bekræftet deres registrering<br>';
+$lang['UAM_Validated_Status'] = 'Status til brugere, der har bekræftet deres registrering<br>';
+$lang['UAM_Validation of %s'] = 'Bekræftelse af %s';
+$lang['UAM_ValidationLimit_Info'] = 'Begrænset frist for registreringsbekræftelse';
+$lang['UAM_Webmaster cannot be pwdreset'] = 'Fornyelse af adgangskode kan ikke opsættes på webmasterkontoen!';
+$lang['UAM_You cannot pwdreset your account'] = 'Fornyelse af adgangskode kan ikke opsættes på din egen konto!';
+$lang['UAM_You need to confirm pwdreset'] = 'Du skal bekræfte fornyelse af adgangskode (checkboks)!';
+$lang['UAM_audit'] = 'Auditindstillinger';
+$lang['UAM_audit_ok'] = 'Audit er ok';
+$lang['UAM_Tips2'] = 'Oplysninger om ikke-bekræftede registreringer med UAM og Additional Pages';
+$lang['UAM_Title2'] = 'Registeringsbekræftelser';
+$lang['UAM_Title3'] = 'Håndtering af spøgelsesbrugere';
+$lang['UAM_Title4'] = 'Tips og anvendelseseksempler';
+$lang['UAM_Title5'] = 'Forskellige valgmuligheder';
+$lang['UAM_Title_Tab'] = 'UserAdvManager - Version: ';
+$lang['UAM_Tracking confirmations'] = 'Sporingsbekræftelser';
+$lang['UAM_Tracking registered users'] = 'Sporer registrerede brugere';
+$lang['UAM_USRAuto'] = 'Automatisk håndtering af ikke-bekræftede brugere';
+$lang['UAM_USRAutoDel'] = 'Tilpasset meddelelse ved slettet konto';
+$lang['UAM_USRAutoMail'] = 'Automatisk mailpåmindelse';
+$lang['UAM_Update of %s'] = 'Profilen %s er opdateret';
+$lang['UAM_User: %s'] = 'Bruger: %s';
+$lang['UAM_Save'] = 'Foretag sikkerhedskopiering';
+$lang['UAM_ScoreTest'] = 'Resultat:';
+$lang['UAM_Stuffs'] = 'PWG Stuffs-blok';
+$lang['UAM_Stuffs_Desc'] = 'Tilføjer en informationsblok ved ikke-bekræftede brugere';
+$lang['UAM_Stuffs_Title'] = 'UAM-blok';
+$lang['UAM_SubTitle1'] = 'Opsætning af plugin';
+$lang['UAM_SubTitle4'] = 'Ghost Tracker';
+$lang['UAM_Subject admin validation for %s'] = '%s-brugerens registering afventer godkendelse';
+$lang['UAM_Tab_GhostTracker'] = 'Ghost Tracker';
+$lang['UAM_Tab_Global'] = 'Opsætning';
+$lang['UAM_Tips1'] = 'Oplysning om ikke-bekræftede registeringer med UAM og PWG_Stuffs';
+$lang['UAM_Title1'] = 'Begræsninger vedrørende registreringer';
+$lang['UAM_PwdReset_Done'] = 'Adgangskoden er fornyet';
+$lang['UAM_PwdReset_NA'] = 'Oprindelig adgangskode';
+$lang['UAM_PwdReset_Todo'] = 'Adgangskoden fornyes';
+$lang['UAM_RedirToProfile'] = 'Omdiriger til tilpasningsside';
+$lang['UAM_Registration_Date'] = 'Registreringsdato';
+$lang['UAM_RejectConnexion'] = 'Afvis brugerens logins indtil registrering er bekræftet';
+$lang['UAM_RejectConnexion_Custom_Txt'] = 'Tilpas afvisningstekst';
+$lang['UAM_Reminder'] = 'Mailpåmindelse';
+$lang['UAM_Reminder_Sent_NOK'] = 'NEJ';
+$lang['UAM_Reminder_Sent_OK'] = 'JA';
+$lang['UAM_Reminder_with_key_of_%s'] = '%s, din bekræftelsesnøgle er blevet fornyet';
+$lang['UAM_Reminder_without_key_of_%s'] = '%s, din bekræftelsesnøgle udløber';
+$lang['UAM_Restoration_NOK'] = 'En fejl opstod mens opsætningen blev gendannet. Undersøg om din sikkerhedskopi er i orden.';
+$lang['UAM_Restoration_OK'] = 'Gendannelse af din opsætning er gennemført! Genindlæs UAM\'s administrationsside for at se gendannede indstillinger.';
+$lang['UAM_Restore'] = 'Gendannelse af sikkerhedskopi med din opsætning. Kun den gemte fil på serveren benyttes.
+<br><br>
+<b style="color: red;">Vær opmærksom på version af sikkerhedskopi!<br>En sikkerhedskopi foretaget i en version af plugin\'en, kan kun gendannes i den samme version.</b>';
+$lang['UAM_Restore_File'] = 'Gendan opsætning';
+$lang['UAM_No_Valid_Level'] = 'Privatlivsniveau til brugere, der ikke har bekræftet deres registrering<br>';
+$lang['UAM_No_reminder_for_Guest'] = 'Kontoen "Guest" ("Gæst") modtager ikke påmindelse fra Ghost Tracker';
+$lang['UAM_No_reminder_for_Webmaster'] = 'Kontoen "Webmaster" modtager ikke påmindelser fra Ghost Tracker';
+$lang['UAM_No_reminder_for_default_user'] = 'Standardkontoen modtager ikke påmindelser fra Ghost Tracker';
+$lang['UAM_No_reminder_for_your_account'] = 'Din personlige konto modtager ikke påmindelser fra Ghost Tracker';
+$lang['UAM_No_validation_for_Guest'] = 'Kontoen "Guest" ("Gæst") skal ikke bekræftes';
+$lang['UAM_No_validation_for_Webmaster'] = 'Kontoen "Webmaster" skal ikke bekræftes';
+$lang['UAM_No_validation_for_default_user'] = 'Standardkontoen skal ikke bekræftes';
+$lang['UAM_No_validation_for_your_account'] = 'Din personlige konto skal ikke bekræftes';
+$lang['UAM_Password reset selected users'] = 'Bed om at udvalgte brugere fornyer deres adgangskode';
+$lang['UAM_Password: %s'] = 'Adgangskode: %s';
+$lang['UAM_PasswordTest'] = 'Adgangskodetest:';
+$lang['UAM_Password_Enforced'] = 'Stærkere sikkerhedsniveau på adgangkoder';
+$lang['UAM_Password_Enforced_true'] = ' Aktiver. Minimal score:';
+$lang['UAM_Password_Reset_Msg'] = 'Vær venlig at ændre din adgangskode!';
+$lang['UAM_PwdReset'] = 'Fornyelse af adgangskode';
+$lang['UAM_MailInfo_Text'] = 'Tilpasning af informationsmail:';
+$lang['UAM_Mail_Info'] = 'Informationsmail til bruger:';
+$lang['UAM_Mail_with_key'] = 'Påmindelse med nøgle';
+$lang['UAM_Mail_without_key'] = 'Påmindelse uden nøgle';
+$lang['UAM_Manual_Validation'] = 'Manuel bekræftelse';
+$lang['UAM_Manual_validation_needed_for %s'] = 'Brugeren %s er registreret og venter på manuel godkendelse af en administrator.';
+$lang['UAM_MiscOptions'] = 'Forskellige andre valgmuligheder';
+$lang['UAM_Nb_Days'] = 'Forskel i dage';
+$lang['UAM_NewFeature'] = 'Ny funktion!';
+$lang['UAM_No_Backup_File'] = 'Ingen sikkerhedskopi er tilgængelig!';
+$lang['UAM_No_Casse'] = 'Brugernavne: Forskel på store og små bogstaver';
+$lang['UAM_No_Confirm_Group'] = 'Gruppe til brugere, der ikke har bekræftet deres registrering<br>';
+$lang['UAM_No_Confirm_Status'] = 'Status til brugere, der ikke har bekræftet deres registrering<br>';
+$lang['UAM_No_Ghosts'] = 'Ingen spøgelsesbesøgende i øjeblikket';
+$lang['UAM_No_Userlist'] = 'Ingen besøgende at vise i øjeblikket';
+$lang['UAM_No_Usermanager'] = 'Ingen ikke-bekræftede registreringer at vise i øjeblikket';
+$lang['UAM_GT_Reset'] = 'Nulstil Ghost Tracker';
+$lang['UAM_Generic cannot be pwdreset'] = 'Fornyelse af adgangskode kan ikke opsættes for generiske konti!';
+$lang['UAM_GhostTracker'] = 'Håndtering af spøgelsesbesøgende (Ghost Tracker)';
+$lang['UAM_GhostTracker_Init_OK'] = 'Ghost Tracker er nulstillet!';
+$lang['UAM_GhostTracker_ReminderText'] = 'Tilpasning af Ghost Trackers påmindelsesmeddelelse';
+$lang['UAM_GhostTracker_Title'] = 'Håndteringer af spøgelsesbesøgende';
+$lang['UAM_GhostTracker_true'] = ' Aktiver. Maksimal tid i dage mellem to besøg:';
+$lang['UAM_Ghost_reminder_of_%s'] = '%s, dette er en påmindelsesmail';
+$lang['UAM_Guest cannot be pwdreset'] = 'Fornyelse af adgangskode kan ikke opsættes for gæstekonto!';
+$lang['UAM_HidePassw'] = 'Adgangskode i klartekst i informationsmail';
+$lang['UAM_LastVisit_Date'] = 'Seneste besøg';
+$lang['UAM_Link: %s'] = 'Klik på linket for at bekræfte registreringen: %s';
+$lang['UAM_MailExclusion'] = 'Fravalg af maildomæner';
+$lang['UAM_MailExclusion_No'] = 'Fravalg af maildomæner - Ikke tilgængelig fordi mail ikke er krævet ved registreringer!';
+$lang['UAM_MailExclusion_true'] = ' Fravælg følgende domæner:<br>Benyt komma for at adskille hvert enkelt domæne)';
+$lang['UAM_MailInfo_Subject'] = 'Tilpasning af emne i informationsmail';
+$lang['UAM_Err_GhostTracker_Settings'] = 'Siden er kun tilgængelig hvis "Ghost Tracker" er aktiv i "Opsætning af sporede registreringer og andre valgmuligheder".';
+$lang['UAM_Err_UserManager_Settings'] = 'Siden er kun tilgængelig hvis "Bekræftelse af registrering" er aktiv og hvis en gruppe til ikke-bekræftede besøgende er opsat i  "Opsætning af registreringsbekræftelser".';
+$lang['UAM_Err_Userlist_Settings'] = 'Siden er kun tilgængelig hvis "Overvågning af registrerede brugere" er aktiv i "Opsætning af sporede registreringer og andre valgmuligheder".';
+$lang['UAM_Err_audit_advise'] = '<b>du skal udføre rettelser for at leve op til nye regler, som du har aktiveret.<br>Brug et databaseadministrationsværktøj til at rette brugerkonti direkte i tabellen ###_USERS</b>';
+$lang['UAM_Err_audit_email_forbidden'] = '<b>Denne konto anvender en ikke-tilladt e-mail-leverandør:</b> ';
+$lang['UAM_Err_audit_username_char'] = '<b>Denne konto anvender et eller flere ikke-tilladte tegn:</b> ';
+$lang['UAM_Expired_Group'] = '<b>Gruppe</b> til brugers registrering er udløbet<br>';
+$lang['UAM_Expired_Level'] = '<b>Privatlivsniveau</b> til brugers registrering er udløbet<br>';
+$lang['UAM_Expired_Status'] = '<b>Status</b> til brugers registrering er udløbet<br>';
+$lang['UAM_GTAuto'] = 'Automatisk håndtering af spøgelsesbrugere';
+$lang['UAM_GTAutoDel'] = 'Automatisk sletning af konti';
+$lang['UAM_GTAutoGp'] = 'Automatisk ændring af gruppe / status / privatlivsniveau';
+$lang['UAM_GTAutoMail'] = 'Automatisk afsendelse af e-mail når gruppe / status / privatlivsniveau ændres';
+$lang['UAM_GTAutomail_Subject'] = 'Tilpasning af mailemne vedrørende automatisk nedgradering via Ghost Tracker ';
+$lang['UAM_GTAutomail_Text'] = 'Tilpasning af nedgraderingsmails tekst';
+$lang['UAM_GTReminder_Subject'] = 'Tilpasning af mailemne vedørende manuel påmindelse via Ghost Tracker';
+$lang['UAM_GT_Init'] = 'Initialiserer Ghost Tracker';
 ?>
