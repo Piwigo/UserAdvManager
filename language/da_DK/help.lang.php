@@ -48,4 +48,17 @@ Yderligere tilpasning af indholdet kan indsættes med særlige tags:<br>
 - <b style=&quot;color: red;&quot;>[myurl]</b> til indsættelse af URL\'en pegende på dit galleri, hvis defineret i Piwigos opsætning.
 <br><br>
 For at benytte flere sprog, kan du anvende tags fra plugin\'en Extended Description, såfremt den er aktiv.';
+$lang['UAM_ConfirmMail_ReMail_Subject_d'] = 'Skriv her dit tilpassede emne på den e-mail, der sendes som påmindelse om bekræftelse af registrering (med eller uden generering af ny nøgle).<br>
+Som standard indeholder feltet en generisk tekst på engelsk, men du kan ændre den samt benytte oversættelsestags [lang=?], if plugin\'en Extended Description er installeret.
+<br><br>
+Følgende yderligere tilpasningstags er tilgængelige uden brug af plugin\'en Extended Description plugin:<br>
+- <b style=&quot;color: red;&quot;>[username]</b> til automatisk indsættelse af brugernavnet på mailens modtager.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> til indsættelse af navnet på dit galleri.<br>';
+$lang['UAM_ConfirmMail_Subject_d'] = 'Skriv her dit tilpassede emne på den e-mail, der sendes som påmindelse om bekræftelse af registrering.<br>
+Som standard indeholder feltet en generisk tekst på engelsk, men du kan ændre den samt benytte oversættelsestags [lang=?], if plugin\'en Extended Description er installeret.
+<br><br>
+Følgende yderligere tilpasningstags er tilgængelige uden brug af plugin\'en Extended Description plugin:<br>
+- <b style=&quot;color: red;&quot;>[username]</b> til automatisk indsættelse af brugernavnet på mailens modtager.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> til indsættelse af navnet på dit galleri.<br>
+';
 ?>
