@@ -61,4 +61,26 @@ Følgende yderligere tilpasningstags er tilgængelige uden brug af plugin\'en Ex
 - <b style=&quot;color: red;&quot;>[username]</b> til automatisk indsættelse af brugernavnet på mailens modtager.<br>
 - <b style=&quot;color: red;&quot;>[mygallery]</b> til indsættelse af navnet på dit galleri.<br>
 ';
+$lang['UAM_miscTitle_d'] = '- Overvågning af registrerede brugere<br>
+- Kaldenavn (nickname) obligatorisk ved gæstekommentarer<br>
+...';
+$lang['UAM_passwadmTitle_d'] = 'En administrator kan oprette en brugerkonto med eller uden krav om kompleksitetsberegning.<br><br>
+Bemærk: Hvis en brugeren senere ønsker at ændre adgangskode og der er krav om at brugerne har stærke adgangskoder, vil adgangskoden blive udsat for kravet.';
+$lang['UAM_passwtestTitle'] = 'Tester adgangskodens kompleksitet';
+$lang['UAM_passwtestTitle_d'] = 'Skriv adgangskoden, der skal testes, og klik dernæst på &quot;Beregn score&quot; for at se resultatet.';
+$lang['UAM_GT_MainTitle_d'] = '- Automatisk eller manuel håndtering af spøgelsesbrugere<br>
+- Mailing<br>
+...';
+$lang['UAM_HidePasswTitle_d'] = 'Her vælges hvorvidt du ønsker at vise den besøgendes valgte adgangskode i informationsmailen. Hvis valgmuligheden aktiveres, vil adgangskoden dermed blive vist i klar tekst. Hvis deaktiveret, vil adgangskoden slet ikke blive vist.';
+$lang['UAM_RedirTitle_d'] = 'Denne valgmulighed omdirigerer kun automatisk en registreret bruger til dennes tilpasningsside, ved det første login til galleriet.<br><br>
+Bemærk: Funktionen gælder ikke alle registrerede brugere. Dem med status som &quot;admin&quot;, &quot;webmaster&quot; eller &quot;generic&quot; påvirkes ikke.';
+$lang['UAM_CustomPasswRetrTitle_d'] = 'Som standard, når en bruger har mistet sin adgangskode og vælger at få den genskabt, modtager vedkommende en e-mail indeholdende kun brugernavn og adgangskode.
+<br><br>
+Her kan du tilføje valgfri tekst, som indsættes <b><u>før</u></b> standardoplysningerne.
+<br><br>
+Yderligere tilpasning af indholdet med særlige, indsatte tags:<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> for at indsætte navnet på dit galleri.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> for at indsætte dit galleris URL, hvis defineret i Piwigos opsætning.
+<br><br>
+For at benytte flere sprog, kan du anvende tags fra plugin\'en Extended Descriptions, hvis den er aktiv.';
 ?>
