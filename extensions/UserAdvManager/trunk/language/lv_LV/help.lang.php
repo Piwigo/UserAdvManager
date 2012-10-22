@@ -187,4 +187,14 @@ Pēc noklusējuma lauks ir vispārējs tekstu angļu valodā, bet to var mainīt
 Neizmantojot Paplašinātā Apraksta spraudņa iespējas, pieejami sekojoši papildu pielāgošanas tagi: <br>
 - <b style=&quot;color: red;&quot;>[username]</b> lai automātiski ievietotu e-pasta gala lietotāja vārdu.<br>
 - <b style=&quot;color: red;&quot;>[mygallery]</b> lai ievietotu jūsu galerijas nosaukumu.<br>';
+$lang['UAM_confirmmail_custom1_d'] = 'Kad opcija &quot;Reģistrācijas apstiprināšana&quot; ir aktīva, šis lauks ļauj jums pielāgot <b><u>akceptēšanas tekstu</u></b> reģistrēšanas apstiprināšanas lapā, kas parādās, kad lietotājs uzklikšķina uz pa e-pastā saņemto apstiprināšanas saiti.
+<br><br>
+Pēc spraudņa instalēšanas, standarta teksts tiek iestatīts kā paraugs.
+<br><br>
+Tālāk pielāgojiet saturu ar speciālo tagu-iezīmju palīdzību:<br>
+- <b style=&quot;color: red;&quot;>[username]</b> lai automātiski ievietotu atbilstošo lietotāja vārdu.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> lai ievietotu jūsu galerijas nosaukumu.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> lai ievietotu jūsu galerijas URL, ja tas iestatīts Piwigo konfigurācijas opcijās.
+<br><br>
+Šis lauks savietojams ar FCK Redaktoru un, ja lietojat daudzvalodu variantu, ja tas aktīvs, varat izmantot Paplašinātā apraksta spraudņa [lang] tagus.';
 ?>
