@@ -59,13 +59,13 @@ $(document).ready(function()
               <td><label for="selection-{$user.ID}">{$user.USERNAME}</label></td>
               <td style="text-align:center;"><a href="./admin.php?page=profile&amp;user_id={$user.ID}" title="{'Profile'|@translate}" onclick="window.open(this.href); return false;"><img src="{$UAM_PATH}admin/template/icon/edit_s.png"></a></td>
               <td>{$user.EMAIL}</td>
-{if $user.REMINDER == l10n('UAM_Reminder_Sent_NOK')}
+            {if $user.REMINDER == l10n('UAM_Reminder_Sent_NOK')}
               <td style="color:orange;text-align:center;">{$user.LASTVISIT}</td>
               <td style="color:orange;text-align:center;">{$user.REMINDER}</td>
-{else $user.REMINDER == l10n('UAM_Reminder_Sent_OK')}
+            {else $user.REMINDER == l10n('UAM_Reminder_Sent_OK')}
               <td style="color:red;text-align:center;">{$user.LASTVISIT}</td>
               <td style="color:red;text-align:center;">{$user.REMINDER}</td>
-{/if}
+            {/if}
               {foreach from=$user.plugin_columns item=data}
                 <td>{$data}</td>
               {/foreach}    			
@@ -73,37 +73,39 @@ $(document).ready(function()
           {/foreach}
         </tbody>
       </table>
-<div id="pager" class="pager">
-	<form>
-		<img src="{$UAM_PATH}admin/template/icon/first.png" class="first">
-		<img src="{$UAM_PATH}admin/template/icon/prev.png" class="prev">
-		<input type="text" class="pagedisplay">
-		<img src="{$UAM_PATH}admin/template/icon/next.png" class="next">
-		<img src="{$UAM_PATH}admin/template/icon/last.png" class="last">
-		<select class="pagesize">
-			<option  value="10">10</option>
-			<option selected="selected" value="20">20</option>
-			<option value="30">30</option>
-			<option value="40">40</option>
-		</select>
-	</form>
-</div>
-        <br>
-<p>
-  {'target'|@translate}
-  <label><input type="radio" name="target" value="all" > {'all'|@translate}</label>
-  <label><input type="radio" name="target" value="selection" checked="checked" > {'selection'|@translate}</label>
-</p>
+      <div id="pager" class="pager">
+      <form>
+        <img src="{$UAM_PATH}admin/template/icon/first.png" class="first">
+        <img src="{$UAM_PATH}admin/template/icon/prev.png" class="prev">
+        <input type="text" class="pagedisplay">
+        <img src="{$UAM_PATH}admin/template/icon/next.png" class="next">
+        <img src="{$UAM_PATH}admin/template/icon/last.png" class="last">
+        <select class="pagesize">
+          <option  value="10">10</option>
+          <option selected="selected" value="20">20</option>
+          <option value="30">30</option>
+          <option value="40">40</option>
+        </select>
+      </form>
+      </div>
+      <br>
+      <fieldset>
+      <p>
+        {'target'|@translate}
+        <label><input type="radio" name="target" value="all" > {'all'|@translate}</label>
+        <label><input type="radio" name="target" value="selection" checked="checked" > {'selection'|@translate}</label>
+      </p>
 
-<p>
-  <input class="submit" type="submit" value="{'UAM_Delete_selected'|@translate}" name="Del_Selected" >
-  <input class="submit" type="submit" value="{'UAM_Reminder'|@translate}" name="Reminder_Email" >
-</p>
+      <p>
+        <input class="submit" type="submit" value="{'UAM_Delete_selected'|@translate}" name="Del_Selected" >
+        <input class="submit" type="submit" value="{'UAM_Reminder'|@translate}" name="Reminder_Email" >
+      </p>
+      </fieldset>
   </fieldset>
-		{else}
-		<div>
-			{'UAM_No_Ghosts'|@translate}
-		</div>
+    {else}
+		  <div>
+			 {'UAM_No_Ghosts'|@translate}
+		  </div>
 		{/if}
 </form>
 
