@@ -339,7 +339,9 @@ Plugin Name: UserAdvManager
             Update es_ES, thanks to : jpr928
             Update it_IT, thanks to : Ericnet and virgigiole
 
--- 2.41.0 : Bug 2744 fixed - User connexion rejection does not work if no group/status/privacy is set
+-- 2.41.0 : Bug 2741 fixed - User connexion rejection was not working if $conf['guest_access'] = false
+            Bug 2744 fixed - User connexion rejection does not work if no group/status/privacy is set
+            Feature 2745 - Send an email to admins with a link to validate new registered users 
             Bug 2749 fixed - regex meta-characters are usable in character exclusion in usernames
             New unvalidated user controls are more efficient
             Get admins emails instead of webmaster's for sending validation email
@@ -350,6 +352,10 @@ Plugin Name: UserAdvManager
             Update lv_LV, thanks to : agrisans
             Update de_DE, thanks to : Yogie
             Update it_IT, thanks to : salvatore
-            
+
+-- 2.41.1 : Small admin panel upgrade
+            Update lv_LV, thanks to : agrisans
+            Add da_DK, thanks to : Kaare
+
 */
 ?>

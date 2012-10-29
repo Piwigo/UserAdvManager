@@ -55,6 +55,12 @@ jQuery().ready(function()
   jQuery("#UAM_Mail_Info_false").click(function() {
     jQuery("#UAM_MAIL_INFO").hide("slow");
   });
+  jQuery("#UAM_CustomPasswRetr_true").click(function() {
+    jQuery("#UAM_CustomPasswRetr").show("slow");
+  });
+  jQuery("#UAM_CustomPasswRetr_false").click(function() {
+    jQuery("#UAM_CustomPasswRetr").hide("slow");
+  });
  
   jQuery("#show_UAM_AdminValidation").click(function() {
     jQuery("#UAM_AdminValidation").show("slow");
@@ -881,8 +887,9 @@ function uam_blockToggleDisplay( headerId, contentId )
             <label for="UAM_CustomPasswRetr_true"><input id="UAM_CustomPasswRetr_true" value="true" {$UAM_CUSTOMPASSWRETR_TRUE} name="UAM_CustomPasswRetr" type="radio">
               {'UAM_Enable'|@translate}
 </label>
-            <textarea class="uam_textfields" name="UAM_CustomPasswRetr_Text" id="UAM_CustomPasswRetr_Text" rows="10" {$TAG_INPUT_ENABLED}>{$UAM_CUSTOMPASSWRETR_TEXT}</textarea>
-          
+            <fieldset id="UAM_CustomPasswRetr" {if $UAM_CUSTOMPASSWRETR_FALSE}style="display:none"{/if}>
+              <textarea class="uam_textfields" name="UAM_CustomPasswRetr_Text" id="UAM_CustomPasswRetr_Text" rows="10" {$TAG_INPUT_ENABLED}>{$UAM_CUSTOMPASSWRETR_TEXT}</textarea>
+            </fieldset>
           </li>
         </ul>
     </div>

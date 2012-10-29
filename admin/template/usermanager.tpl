@@ -67,48 +67,49 @@ $(document).ready(function()
         {/foreach}
       </tbody>
       </table>
-{if !empty($users)}
-<div id="pager" class="pager">
-	<form>
-		<img src="{$UAM_PATH}admin/template/icon/first.png" class="first">
-		<img src="{$UAM_PATH}admin/template/icon/prev.png" class="prev">
-		<input type="text" class="pagedisplay">
-		<img src="{$UAM_PATH}admin/template/icon/next.png" class="next">
-		<img src="{$UAM_PATH}admin/template/icon/last.png" class="last">
-		<select class="pagesize">
-			<option  value="10">10</option>
-			<option selected="selected" value="20">20</option>
-			<option value="30">30</option>
-			<option value="40">40</option>
-		</select>
-	</form>
-</div>
-{/if}
+      {if !empty($users)}
+        <div id="pager" class="pager">
+          <form>
+            <img src="{$UAM_PATH}admin/template/icon/first.png" class="first">
+            <img src="{$UAM_PATH}admin/template/icon/prev.png" class="prev">
+            <input type="text" class="pagedisplay">
+            <img src="{$UAM_PATH}admin/template/icon/next.png" class="next">
+            <img src="{$UAM_PATH}admin/template/icon/last.png" class="last">
+            <select class="pagesize">
+              <option  value="10">10</option>
+              <option selected="selected" value="20">20</option>
+              <option value="30">30</option>
+              <option value="40">40</option>
+            </select>
+          </form>
+        </div>
+      {/if}
     	<br>
+      <fieldset>
+        <p>
+          {'target'|@translate}
+          <label><input type="radio" name="target" value="all" > {'all'|@translate}</label>
+          <label><input type="radio" name="target" value="selection" checked="checked" > {'selection'|@translate}</label>
+        </p>
 
-<p>
-  {'target'|@translate}
-  <label><input type="radio" name="target" value="all" > {'all'|@translate}</label>
-  <label><input type="radio" name="target" value="selection" checked="checked" > {'selection'|@translate}</label>
-</p>
-
-<p>
-{if $CONFIRM_LOCAL == "local"}
-  <input class="submit" type="submit" value="{'UAM_Delete_selected'|@translate}" name="Del_Selected">
-  <input class="submit" type="submit" value="{'UAM_Manual_Validation'|@translate}" name="Manual_Validation">
-{else}
-  <input class="submit" type="submit" value="{'UAM_Delete_selected'|@translate}" name="Del_Selected">
-  <input class="submit" type="submit" value="{'UAM_Mail_without_key'|@translate}" name="Mail_Without_Key">
-  <input class="submit" type="submit" value="{'UAM_Mail_with_key'|@translate}" name="Mail_With_Key">
-  <input class="submit" type="submit" value="{'UAM_Manual_Validation'|@translate}" name="Manual_Validation">
-{/if}
-</p>
+        <p>
+        {if $CONFIRM_LOCAL == "local"}
+          <input class="submit" type="submit" value="{'UAM_Delete_selected'|@translate}" name="Del_Selected">
+          <input class="submit" type="submit" value="{'UAM_Manual_Validation'|@translate}" name="Manual_Validation">
+        {else}
+          <input class="submit" type="submit" value="{'UAM_Delete_selected'|@translate}" name="Del_Selected">
+          <input class="submit" type="submit" value="{'UAM_Mail_without_key'|@translate}" name="Mail_Without_Key">
+          <input class="submit" type="submit" value="{'UAM_Mail_with_key'|@translate}" name="Mail_With_Key">
+          <input class="submit" type="submit" value="{'UAM_Manual_Validation'|@translate}" name="Manual_Validation">
+        {/if}
+        </p>
+      </fieldset>
   </fieldset>
-		{else}
-		<div>
-			{'UAM_No_Usermanager'|@translate}
-		</div>
-		{/if}
+    {else}
+      <div>
+        {'UAM_No_Usermanager'|@translate}
+		  </div>
+    {/if}
 </form>
 
 {html_head}
