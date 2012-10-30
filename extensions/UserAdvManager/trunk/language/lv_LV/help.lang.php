@@ -197,4 +197,14 @@ Tālāk pielāgojiet saturu ar speciālo tagu-iezīmju palīdzību:<br>
 - <b style=&quot;color: red;&quot;>[myurl]</b> lai ievietotu jūsu galerijas URL, ja tas iestatīts Piwigo konfigurācijas opcijās.
 <br><br>
 Šis lauks savietojams ar FCK Redaktoru un, ja lietojat daudzvalodu variantu, ja tas aktīvs, varat izmantot Paplašinātā apraksta spraudņa [lang] tagus.';
+$lang['UAM_confirmmail_custom2_d'] = 'Kad opcija &quot;Reģistrācijas apspirināšana&quot; ir aktīva, šis lauks ļauj jums pielāgot <b><u>noraidījuma tekstu</u></b> reģistrācijas apstiprināšanas lapā, kas parādās, ja lietotājs uzklikšķina uz pas epastu saņemtās apstiprinājuma saites. 
+<br><br>
+Pēc spraudņa uzinstalēšanas standarta teksts ir iestatīts kā paraugs.
+<br><br>
+Tālāk pielāgojiet saturu izmantojot speciālos ievietojamos tagus (iezīmes):<br>
+- <b style=&quot;color: red;&quot;>[username]</b> lai automātiski ievietotu attiecīgā lietotāja vārdu.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> lai ievietotu galerijas nosaukumu.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> lai ievietotu jūsu galerijas ULR, ja tas iestatīts Piwigo konfigurācijā.
+<br><br>
+Šis lauks ir savietojams ar FCK Redaktoru un, ja lietojat daudzvalodu režīmu, ja aktivizēts, varat lietot Paplašinātā apraksta (Extended description)[lang] tagus.';
 ?>
