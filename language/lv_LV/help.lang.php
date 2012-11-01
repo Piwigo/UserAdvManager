@@ -207,4 +207,18 @@ Tālāk pielāgojiet saturu izmantojot speciālos ievietojamos tagus (iezīmes):
 - <b style=&quot;color: red;&quot;>[myurl]</b> lai ievietotu jūsu galerijas ULR, ja tas iestatīts Piwigo konfigurācijā.
 <br><br>
 Šis lauks ir savietojams ar FCK Redaktoru un, ja lietojat daudzvalodu režīmu, ja aktivizēts, varat lietot Paplašinātā apraksta (Extended description)[lang] tagus.';
+$lang['UAM_AdminValidationMail_d'] = 'Kad galerijas administrators vai Webmasters manuāli apstuprina reģistrācijas kavēšanos, lietotājam automātiski tiek nosūtīts paziņojuma e-pasts.
+<br><br>
+Tālāk pielāgojiet saturu izmantojot speciālos ievietojamos tegus:<br>
+- <b style=&quot;color: red;&quot;>[username]</b> lai automātiski pievienotu e pasta gala lietotāja vārdu.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> lai pievienotu galerijas nosaukumu.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> lai automātiski pievienotu jūsu galerijas ULR, ja iestatīts Piwigo konfigurācijā.
+<br><br>
+Lai lietotu vairākas valodas, varat izmantot Paplašinātā apraksta spraudņa tegus, ja tie aktivizēti. ';
+$lang['UAM_AdminValidationMail_Subject_d'] = 'Kad galerijas administrators vai Webmasters manuāli apstuprina reģistrācijas kavēšanos, lietotājam automātiski tiek nosūtīts paziņojuma e-pasts. Šeit ievadiet savu pielāgoto validācijas e-pasta tēmu.<br>
+Pēc noklusēšanas laukā ir oriģinālais teksts angļu valodā, bet jūs to varat mainīt un izmantot, ja uzinstalēts, Paplašinātā Apraksta spraudņa tulkošanas [lang =?] tegus. 
+<br><br>
+Sekojošie papildus pielāgošanas tegi ir pieejami bez Paplašinātā Apraksta spraudņa:<br>
+- <b style=&quot;color: red;&quot;>[username]</b> lai automātiski pievienotu e pasta gala lietotāja vārdu.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> lai pievienotu galerijas nosaukumu.<br>';
 ?>
