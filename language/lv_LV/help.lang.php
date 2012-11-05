@@ -45,8 +45,7 @@ Atspējojot šo iespēju (pēc noklusējuma), tiek nosūtīta tikai e-pasta info
 // --------- End: New or revised $lang ---- from version 2.15.2
 
 // --------- Starting below: New or revised $lang ---- from version 2.15.4
-$lang['UAM_restricTitle_d'] = '
-- Rakstzīmes izslēgšana<br>
+$lang['UAM_restricTitle_d'] = '- Rakstzīmes izslēgšana<br>
 - Paroles izpilde<br>
 - E-pasta domēnu izslēgšana<br>
 ...
@@ -118,8 +117,7 @@ Tracker&quot;, kad šī funkcija aktivēta, jūs varat pārvaldīt savus apmekl�
 - Manuālā pārvaldība : Kad tiek sasniegts laiks starp 2 apmeklējumiem, apmeklētājs parādās &quot;Ghost Tracker&quot; tabulā, kur jums ir iespēja aizsūtīt atgādinājuma e-pastu lietotājam vai to izdzēst.<br><br>
 - Automātiskā pārvaldība : Kad tiek sasniegts laiks starp 2 apmeklējumiem, apmeklētājs tiek automātiski izdzēsts vai pārvietots gaidītāju grupā. Šajā otrajā gadījumā lietotājam var tikt nosūtīts informējošs e-pasts.<br><br>
 <b style=&quot;color: red;&quot;>Svarīga piezīme : Ja izmantojat šo variantu pirmo reizi vai pēc ilgāka laika, kurā klāt nākuši jauni lietotāji, to reaktivējat, jums jāinicializē vai jāveic Ghost Tracker reset funkcija (skatīt attiecīgās instrukcijas &quot;Ghost Tracker&quot; lapā).</b>';
-$lang['UAM_miscTitle_d'] = '
-- Ghosts lietotāju automātiskā un manuālā pārvaldība<br>
+$lang['UAM_miscTitle_d'] = '- Ghosts lietotāju automātiskā un manuālā pārvaldība<br>
 - Pēc reģistrētie lietotāji<br>
 - Viesu komentāriem nepieciešams segvārds (nickname)<br>
 ...
@@ -216,6 +214,35 @@ Tālāk pielāgojiet saturu izmantojot speciālos ievietojamos tegus:<br>
 <br><br>
 Lai lietotu vairākas valodas, varat izmantot Paplašinātā apraksta spraudņa tegus, ja tie aktivizēti. ';
 $lang['UAM_AdminValidationMail_Subject_d'] = 'Kad galerijas administrators vai Webmasters manuāli apstuprina reģistrācijas kavēšanos, lietotājam automātiski tiek nosūtīts paziņojuma e-pasts. Šeit ievadiet savu pielāgoto validācijas e-pasta tēmu.<br>
+Pēc noklusēšanas laukā ir oriģinālais teksts angļu valodā, bet jūs to varat mainīt un izmantot, ja uzinstalēts, Paplašinātā Apraksta spraudņa tulkošanas [lang =?] tegus. 
+<br><br>
+Sekojošie papildus pielāgošanas tegi ir pieejami bez Paplašinātā Apraksta spraudņa:<br>
+- <b style=&quot;color: red;&quot;>[username]</b> lai automātiski pievienotu e pasta gala lietotāja vārdu.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> lai pievienotu galerijas nosaukumu.<br>';
+$lang['UAM_remailtxt2Title_d'] = 'Ievadiet ievadtekstu, ko vēlaties redzēt atgādinājuma e-pastā, nereģenerējot apstiprinājuma atslēgu.
+<br><br>
+Ja kreisā puse tukša, pasta atgādinājums būs tukšs. Tāpēc ir sirsnīgi ieteikts ievadīt kaut mazu paskaidrojuma tekstu. (PS: Instalējot spraudni ir ievadīts parauga teksts).
+Tālāk pielāgojiet saturu, izmantojot speciālos tegus (iezīmes):<br>
+- <b style=&quot;color: red;&quot;>[username]</b> lai automātiski ievietotu galējā e-pasta lietotāja vārdu.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> lai ievietotu jūsu galerijas nosaukumu.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> lai ievietotu jūsu galerijas URL, ja tas iestatīts Piwigo konfigurācijā.
+<br><br>
+Lai izmantotu daudzvalodu režīmu, varat lietot Paplašinātā apraksta spraudņa iezīmes, gadījumā, ja spraudnis aktivizēts. ';
+$lang['UAM_gttextTitle_d'] = 'Ievadiet tekstu, ko vēlaties redzēt atgādinājuma e-pastā, lai atgādinātu lietotājiem, lai tie atkal apmeklē jūsu galeriju (PS: Instalējot spraudni ir ievadīts parauga teksts).
+<br><br>
+Tālāk pielāgojiet saturu, izmantojot speciālos tegus (iezīmes):<br>
+- <b style=&quot;color: red;&quot;>[username]</b> lai automātiski ievietotu galējā e-pasta lietotāja vārdu.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> lai ievietotu jūsu galerijas nosaukumu.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> lai ievietotu jūsu galerijas URL, ja tas iestatīts Piwigo konfigurācijā.
+<br><br>
+Lai izmantotu daudzvalodu režīmu, varat lietot Paplašinātā apraksta spraudņa iezīmes, gadījumā, ja spraudnis aktivizēts. ';
+$lang['UAM_validationlimitTitle_d'] = 'Šī opcija ļauj ierobežot no jauna reģistrētajiem lietotājiem nosūtīto apstiprinājuma e-pastu validitāti.
+Reģistrējušamies apmeklētājiem ir x dienas, lai apstiprinātu savu reģistrāciju. Pēc šī laika posma apstiprinājuma saite pazudīs.
+<br><br>
+Šī opcija lietojama kopā ar &quot;Reģistrācijas apstiprināšanu&quot;
+<br><br>
+Gadījumā, ja šī opcija un opcija &quot;Atgādinājums par neapstiprinātiem lietotājiem&quot; ir aktivētas, zemāk šinī sekcijā parādīsies jaunas opcijas, lai iespējotu neapstiprināto lietotāju automātisku pārvaldību.';
+$lang['UAM_ConfirmMail_ReMail_Subject_d'] = 'Ievadiet šeit savu pielāgoto reģistrācijas apstiprināšanas e-pasta tēmu (ar vai bez jaunas atslēgas ģenerēšanas).<br>
 Pēc noklusēšanas laukā ir oriģinālais teksts angļu valodā, bet jūs to varat mainīt un izmantot, ja uzinstalēts, Paplašinātā Apraksta spraudņa tulkošanas [lang =?] tegus. 
 <br><br>
 Sekojošie papildus pielāgošanas tegi ir pieejami bez Paplašinātā Apraksta spraudņa:<br>
