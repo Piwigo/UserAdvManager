@@ -248,4 +248,10 @@ Pēc noklusēšanas laukā ir oriģinālais teksts angļu valodā, bet jūs to v
 Sekojošie papildus pielāgošanas tegi ir pieejami bez Paplašinātā Apraksta spraudņa:<br>
 - <b style=&quot;color: red;&quot;>[username]</b> lai automātiski pievienotu e pasta gala lietotāja vārdu.<br>
 - <b style=&quot;color: red;&quot;>[mygallery]</b> lai pievienotu galerijas nosaukumu.<br>';
+$lang['UAM_MailInfo_Subject_d'] = 'Ievadiet šeit savu e-pasta pielāgoto tēmu.<br>
+Pēc noklusēšanas šis lauks ir aizpildīts ar paraugtekstu angļu valodā, bet jums ir iespēja to pielāgot un tulkot, izmantojot Paplašinātā Apraksta spraudņa  [lang =?] tulkošanas tagus, ja spraudnis ir instalēts. 
+<br><br>
+Neizmantojot Paplašinātā Apraksta spraudņa iespējas, pieejami sekojoši papildu pielāgošanas tagi: <br>
+- <b style=&quot;color: red;&quot;>[username]</b> lai automātiski ievietotu e-pasta gala lietotāja vārdu.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> lai ievietotu jūsu galerijas nosaukumu.<br> ';
 ?>
