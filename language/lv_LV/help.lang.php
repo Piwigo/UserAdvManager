@@ -180,7 +180,7 @@ Tālāk pielāgojiet ziņojuma saturu ar speciāli ievietojamajiem tegiem (iezī
 <br><br>
 Lai lietotu vairākas valodas, ja aktivēts, varat izmantot Paplašinātā apraksta spraudņa tegus.';
 $lang['UAM_ConfirmMail_Subject_d'] = 'Ievadiet šeit savu pielāgoto reģistrācijas apstiprinājuma pasta tēmu. <br>
-Pēc noklusējuma lauks ir vispārējs tekstu angļu valodā, bet to var mainīt un izmantot Paplašinātā Apraksta spraudņa tulkošanas tagus [lang =?], ja uzstādīti.
+Pēc noklusējuma lauks ir ar vispārēju tekstu angļu valodā, bet to var mainīt un izmantot Paplašinātā Apraksta spraudņa tulkošanas tagus [lang =?], ja uzstādīti.
 <br><br>
 Neizmantojot Paplašinātā Apraksta spraudņa iespējas, pieejami sekojoši papildu pielāgošanas tagi: <br>
 - <b style=&quot;color: red;&quot;>[username]</b> lai automātiski ievietotu e-pasta gala lietotāja vārdu.<br>
@@ -254,4 +254,32 @@ Pēc noklusēšanas šis lauks ir aizpildīts ar paraugtekstu angļu valodā, be
 Neizmantojot Paplašinātā Apraksta spraudņa iespējas, pieejami sekojoši papildu pielāgošanas tagi: <br>
 - <b style=&quot;color: red;&quot;>[username]</b> lai automātiski ievietotu e-pasta gala lietotāja vārdu.<br>
 - <b style=&quot;color: red;&quot;>[mygallery]</b> lai ievietotu jūsu galerijas nosaukumu.<br> ';
+$lang['UAM_GTAutoDelTitle_d'] = 'Šis variants pieejams tikai tad, kad lietotājs, kura konts ir noildzis, pats sāk dzēšanas mehānisma procedūru (reti, bet iespējams). Viņš tiek atvienots no galerijas un tiek pāradresēts uz lapu, kas rāda, ka viņa konts tiek dzēsts, iespējams, tiek minēti dzēšanas iemesli. 
+<br><br>
+Tālāk pielāgojiet saturu ar speciālo tagu-iezīmju palīdzību:<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> lai ievietotu jūsu galerijas nosaukumu.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> lai ievietotu jūsu galerijas URL, ja tas iestatīts Piwigo konfigurācijas opcijās.
+<br>
+<b style=&quot;color: red;&quot;>[username]</b> nav pieejams, jo domājams, ka lietotājs ir dzēsts.<br><br>
+Šajā laukā, kas ir savietojams ar FCK Redaktoru, varat ievadīt pāradresētās lapas pielāgoto tekstu un, lai izmantotu daudzvalodu režīmu, gadījumā, ja tas ir aktīvs, varat lietot Paplašinātā apraksta spraudņa [lang] tagus.';
+$lang['UAM_GTAutomail_Text_d'] = 'Papildinot apstiprinājuma saiti, ievadiet pielāgoto tekstu, kas izskaidro reducēšanas iemeslus. Pielāgotais teksts nav obligāts, bet ļoti ieteicams, gadījumā, ja apmeklētājiem nepatiktu saņemt tikai vienu saiti bez jebkādiem paskaidrojumiem. ;-)
+<br><br>
+Tālāk pielāgojiet saturu ar speciālo tagu-iezīmju palīdzību:<br>
+- <b style=&quot;color: red;&quot;>[username]</b> lai automātiski ievietotu atbilstošo lietotāja vārdu.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> lai ievietotu jūsu galerijas nosaukumu.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> lai ievietotu jūsu galerijas URL, ja tas iestatīts Piwigo konfigurācijas opcijās.
+<br><br>
+Lai lietotu daudzvalodu variantu, ja tas aktīvs, varat izmantot Paplašinātā apraksta spraudņa [lang] tagus.';
+$lang['UAM_GTAutomail_Subject_d'] = 'Ievadiet šeit savu pielāgoto automātisko Ghost Tracker (neredzamo lietotāju izsekošana) reducēšanas e-pasta tēmu.<br>
+Pēc noklusējuma lauks ir ar vispārēju tekstu angļu valodā, bet to var mainīt un izmantot Paplašinātā Apraksta spraudņa tulkošanas tagus [lang =?], ja uzstādīti.
+<br><br>
+Neizmantojot Paplašinātā Apraksta spraudņa iespējas, pieejami sekojoši papildu pielāgošanas tagi: <br>
+- <b style=&quot;color: red;&quot;>[username]</b> lai automātiski ievietotu e-pasta gala lietotāja vārdu.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> lai ievietotu jūsu galerijas nosaukumu.<br>';
+$lang['UAM_GTReminder_Subject_d'] = 'Ievadiet šeit savu pielāgoto manuālo Ghost Tracker (neredzamo lietotāju izsekošana) atgādinājuma e-pasta tēmu.<br>
+Pēc noklusējuma lauks ir ar vispārēju tekstu angļu valodā, bet to var mainīt un izmantot Paplašinātā Apraksta spraudņa tulkošanas tagus [lang =?], ja uzstādīti.
+<br><br>
+Neizmantojot Paplašinātā Apraksta spraudņa iespējas, pieejami sekojoši papildu pielāgošanas tagi: <br>
+- <b style=&quot;color: red;&quot;>[username]</b> lai automātiski ievietotu e-pasta gala lietotāja vārdu.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> lai ievietotu jūsu galerijas nosaukumu.<br>';
 ?>
