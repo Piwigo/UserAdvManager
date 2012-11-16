@@ -1,8 +1,7 @@
 <?php
 //global $lang;
 
-$lang['UAM_confirmTitle_d'] = '
-- Informācijas e-pasta ģenerēšana<br>
+$lang['UAM_confirmTitle_d'] = '- Informācijas e-pasta ģenerēšana<br>
 - Reģistrācijas pārbaudes e-pasta ģenerēšana<br>
 - Autopievienošanās grupas vai statusa ģenerēšana<br>
 - Reģistrācijas robežlīnijas pārbaude<br>
@@ -282,4 +281,56 @@ Pēc noklusējuma lauks ir ar vispārēju tekstu angļu valodā, bet to var main
 Neizmantojot Paplašinātā Apraksta spraudņa iespējas, pieejami sekojoši papildu pielāgošanas tagi: <br>
 - <b style=&quot;color: red;&quot;>[username]</b> lai automātiski ievietotu e-pasta gala lietotāja vārdu.<br>
 - <b style=&quot;color: red;&quot;>[mygallery]</b> lai ievietotu jūsu galerijas nosaukumu.<br>';
+$lang['UAM_DumpTitle_d'] = 'Tas ļauj saglabāt visu spraudņa konfigurāciju failā, lai jūs varētu atjaunot to, ja kaut kas noiet greizi (piemēram: nepareizu manipulāciju rezultātā vai pirms atjauninājumu instalēšanas). Pēc noklusējuma fails tiek saglabāts šajā mapē .. ../plugins/UserAdvManager/include/backup/ un tiek saukta par &quot;UAM_dbbackup.sql&quot;.
+<br><br>
+<b style=&quot;color: red;&quot;>Uzmanību: Fails tiek pārrakstīts pie katras rezerves kopijas izveides!</b>
+<br><br>
+Reizēm var būt noderīgi ielādēt rezerves kopijas failu savā datorā. Piemēram: Lai veiktu atjaunošanu citā datubāzē, lai radītu rezerves kopiju citā vietā vai lai saglabātu vairākas dažādas rezerves kopijas. Lai to izdarītu, vienkārši veiciet atzīmi lodziņā, lai lejupielādētu failu.
+Atjaunošana, izmantojot šo interfeisu, ir pieejama tikai ar vietējā rezerves kopijas failu (../plugins/UserAdvManager/include/backup/UAM_dbbackup.sql). Atjaunošana, izmantojot lejupielādētu rezerves kopijas failu, šajā gadījumā nav iespējama. Lai to izdarītu, lūdzu, izmantojiet savu specializēto datubāzes pārvaldības rīku (piemēram, PhpMyAdmin for MySql database).
+<br><br>
+<b style=&quot;color: red;&quot;>Uzmanību: Pēc atjaunošanas, lai redzētu atjaunotos iestatījumus, nepieciešams no jauna ielādēt spraudņa pārvaldības lapu!</b> ';
+$lang['UAM_remailtxt1Title_d'] = 'Ievadiet ievadtekstu, ko vēlaties redzēt atgādinājuma e-pastā papildus reģenerētajai apstiprinājuma atslēgai.
+<br><br>
+Ja kreisā nav aizpildīta, atgādinājuma e-pastā būs tikai apstiprinājuma saite. Šajā gadījumā būtu ieteicams pievienot nelielu skaidrojošu tekstu.(PS: teksts, kas ievietots pie spraudņa instalēšanas ir paredzēts kā piemērs).
+<br><br>
+Tālāk pielāgojiet saturu ar speciālo tagu-iezīmju palīdzību:<br>
+- <b style=&quot;color: red;&quot;>[username]</b> lai automātiski ievietotu atbilstošo lietotāja vārdu.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> lai ievietotu jūsu galerijas nosaukumu.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> lai ievietotu jūsu galerijas URL, ja tas iestatīts Piwigo konfigurācijas opcijās.
+<br>
+- <b style=&quot;color: red;&quot;>[Kdays]</b> lai ievietotu dienu skaitu, kurā jāveic reģistrācijas apstiprināšana (&quot;Reģistrācijas apstiprināšanas termiņš ierobežots;&quot; jābūt iespējotam).
+<br><br>
+Lai lietotu daudzvalodu variantu, ja tas aktīvs, varat izmantot Paplašinātā apraksta spraudņa tagus.';
+$lang['UAM_PwdResetTitle_d'] = 'Iespējojot šo opciju Piwigo lietotāju pārvaldības panelim tiks pievienota jauna iezīme (Users> Manage), ko var izmantot, lai atlasītiem lietotājiem atjaunotu paroli. Turklāt ir pievienota jaunā kolonna, lai parādītu paroles statusu katram no viņiem ar šādām vērtībām:<br>
+- Parole būtu jāatjauno: Plānots paroles atjaunošanas pieprasījums.<br>
+- Parole atjaunota: Parole atjaunota pēc saņemtā pieprasījuma.<br>
+- Sākotnējā parole: Sākotnējā parole izvēlēta pie konta izveidošanas un nav bijis pieprasījuma to atjaunot.<br>
+Webmaster, vispārējie un viesu konti ir izslēgti no šīs funcijas.<br>
+Šie lietotāji tiks automātiski novirzīti uz to pielāgošanas lapām katrā no to savienojumiem līdz tie nomainīs savu paroli un nepārprotama ziņa par to tiks parādīta šajā lapā.';
+$lang['UAM_remailTitle_d'] = 'Šī opcija ļauj nosūtīt atgādinājuma e-pastu reģistrētiem, bet laikā neapstiprinājušiem savu reģistrāciju, lietotājiem. Tas tādējādi strādā kopā ar &quot;Reģistrācijas apstiprināšanu&quot;
+<br><br>
+Var tikt izsūtīti divu veidu e-pasti: Ar vai bez apstiprinājuma atslēgas ģenerēšanu. Ja nepieciešams, e-pastu saturu var pielāgot.
+<br><br>
+Atsaukties uz cilni &quot;Apstiprinājumu izsekošana&quot;.
+<br><br>
+Ja šī opcija un opcija &quot;Reģistrācijas apstiprināšanas termiņš ierobežots&quot; ir aktivētas, zem šīs sekcijas jāparādās jaunām opcijām, lai varētu iespējot neapstiprināto lietotāju automātisku pārvaldību.    ';
+$lang['UAM_USRAutoTitle_d'] = 'Neapstiprinātu lietotāju automātiskā apstrāde ieslēdzas katru reizi, kad jūs pieslēdzaties galerijai un darbojas sekojoši:
+<br><br>
+- Automātiska laikā neapstiprinātu kontu dzēšana, bez automātiska atgādinājuma e-pasta izsūtīšanas -> &quot; Ierobežots reģistrācijas apstiprināšanas termiņš&quot; 
+<b><u>iespējots</u></b> un &quot;Atgādinājums neapstiprinātiem lietotājiem&quot; <b><u>atslēgts</u></b>.
+<br><br>
+- Automātiska atgādinājuma un no jauna ģenerētas apstiprinājuma atslēgas izsūtīšana un automātiska kontu dzēšana, kas nav apstiprināti paredzētajā laikā pēc atgādinājuma saņemšanas -> &quot;Ierobežots reģistrācijas apstiprināšanas termiņš&quot;
+<b><u>iespējots</u></b> un &quot;Atgādinājums neapstiprinātiem lietotājiem&quot; <b><u>iespējots</u></b>. ';
+$lang['UAM_GTAutoMailTitle_d'] = 'Kad konts ir noildzis (group / status / privacy level change demoting the visitor), var tikt izsūtīts informatīvs e-pasts, kas izskaidro notikušās izmaiņas un skaidrojumu, kā atjaunot sākotnējo piekļūvi galerijai. <br>
+Lai to paveiktu, e-pastam tiek pievienota reģistrācijas reapstiprinājuma saite (automātiska jaunas apstiprinājuma atslēgas ģenerēšana).<b style=&quot;color: red;&quot;>Ja lietotājam jau ir paziņots, viņa konts automātiski tiek dzēsts.</b> 
+<br><br>
+<b style=&quot;color: red;&quot;>Uzmanību: Šīs funkcijas lietošana ir cieši saistīta ar lietotāja veicamo reģistrācijas apstiprināšanu (apstiprināšana ar e-pastu) un nevar tikt aktivēta, neizmantojot šo opciju.</b>  ';
+$lang['UAM_USRAutoDelTitle_d'] = 'Tas ir pieejams tikai, ja lietotājs, kura konts ir noildzis, pats ierosina dzēšanas procesa mehānismu (reti, bet iespējams). Viņš tad tiek atvienots no galerijas un pāradresēts uz lapu, kas satur informāciju par šī konta džēšanu un, iespējams, skaidrojumu par šī konta dzēšanas iemesliem. 
+<br><br>
+Tālāk pielāgojiet saturu ar speciālo tagu-iezīmju palīdzību:<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> lai ievietotu jūsu galerijas nosaukumu.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> lai ievietotu jūsu galerijas URL, ja tas iestatīts Piwigo konfigurācijas opcijās.
+<br>
+<b style=&quot;color: red;&quot;>[username]</b> nav pieejams, jo domājams, ka lietotājs ir dzēsts.<br><br>
+Šajā laukā, kas ir savietojams ar FCK Redaktoru, varat ievadīt pāradresētās lapas pielāgoto tekstu un, lai izmantotu daudzvalodu režīmu, gadījumā, ja tas ir aktīvs, varat lietot Paplašinātā apraksta spraudņa [lang] tagus.';
 ?>
