@@ -39,7 +39,7 @@ function UAM_check_compat()
   $conf_UAM = unserialize($conf['UserAdvManager']);
  
   // Check mandatory email address for email exclusion
-  if (!$conf['obligatory_user_mail_address'] and $conf_UAM[10] = 'true')
+  if (!$conf['obligatory_user_mail_address'] and $conf_UAM[10] == 'true')
   {
     array_push($page['warnings'], l10n('UAM_mail_exclusion_error'));
   }
