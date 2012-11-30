@@ -1,0 +1,15 @@
+template/ConfirmMail.tpl
+template/rejected.tpl
+template/del_account.tpl
+template/confmail.css
+template/index.php
+template/icon/index.php
+template/icon/errors.png
+template/icon/home.png
+template/icon/infos.png
+template/icon/
+template
+rejected.php
+ConfirmMail.php
+GT_del_account.php
+USR_del_account.php
