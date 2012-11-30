@@ -1,5 +1,4 @@
 <?php
-//global $lang;
 
 $lang['UAM_confirmTitle_d'] = '- Informācijas e-pasta ģenerēšana<br>
 - Reģistrācijas pārbaudes e-pasta ģenerēšana<br>

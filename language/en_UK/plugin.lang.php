@@ -1,10 +1,5 @@
 <?php
 
-//global $lang,$conf;
-
-//$conf_UAM = unserialize($conf['UserAdvManager']);
-
-
 /* UserManager Tab */
 $lang['UAM_Registration_Date'] = 'Registration date';
 

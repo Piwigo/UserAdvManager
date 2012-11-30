@@ -1,5 +1,4 @@
 <?php
-//global $lang;
 
 $lang['UAM_confirmTitle_d'] = '
 - Información por correo electrónico para el usuario<br>
