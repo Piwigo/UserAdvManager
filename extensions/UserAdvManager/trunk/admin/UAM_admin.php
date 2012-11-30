@@ -1616,7 +1616,7 @@ ORDER BY u.id ASC
           
         while ($row = pwg_db_fetch_assoc($result))
         {
-          list($dbnow) = pwg_db_fetch_row(pwg_query('SELECT NOW();'));
+          $dbnow = date("Y-m-d H:i:s");
             
           $query = '
 INSERT INTO '.USER_LASTVISIT_TABLE.'
@@ -1644,7 +1644,7 @@ ORDER BY u.id ASC
           
         while($row = pwg_db_fetch_assoc($result))
         {
-          list($dbnow) = pwg_db_fetch_row(pwg_query('SELECT NOW();'));
+          $dbnow = date("Y-m-d H:i:s");
             
           $query = '
 INSERT INTO '.USER_LASTVISIT_TABLE.'
