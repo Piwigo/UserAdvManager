@@ -151,18 +151,18 @@ switch ($page['tab'])
 				// -----------------------------------------------------------------------------------
 				if ($conf['obligatory_user_mail_address'])
 				{
-							// Check if CR-LF exist at begining and end of mail exclusion list - If yes, removes them
-    		// --------------------------------------------------------------------------------------
-    		if (preg_match('/^[\s]+/', $_POST['UAM_MailExclusion_List']))
-    		{
-      		array_push($page['errors'], l10n('UAM_mail_exclusionlist_error'));
-      		$UAM_Exclusionlist_Error = true;
-    		}
-  		}
-  		elseif (!$conf['obligatory_user_mail_address'])
-  		{
-    		$_POST['UAM_MailExclusion_List'] = '';
-  		}
+          // Check if CR-LF exist at begining and end of mail exclusion list - If yes, removes them
+          // --------------------------------------------------------------------------------------
+    		  if (preg_match('/^[\s]+/', $_POST['UAM_MailExclusion_List']))
+    		  {
+      		  array_push($page['errors'], l10n('UAM_mail_exclusionlist_error'));
+      		  $UAM_Exclusionlist_Error = true;
+    		  }
+  		  }
+  		  elseif (!$conf['obligatory_user_mail_address'])
+  		  {
+    		  $_POST['UAM_MailExclusion_List'] = '';
+  		  }
 
     // Consistency check between ConfirmMail and AutoMail - We cannot use GTAutoMail if ConfirmMail is disabled
     // ---------------------------------------------------------------------------------------------------------
@@ -1616,7 +1616,7 @@ ORDER BY u.id ASC
           
         while ($row = pwg_db_fetch_assoc($result))
         {
-          list($dbnow) = pwg_db_fetch_row(pwg_query('SELECT NOW();'));
+          $dbnow = date("Y-m-d H:i:s");
             
           $query = '
 INSERT INTO '.USER_LASTVISIT_TABLE.'
@@ -1644,7 +1644,7 @@ ORDER BY u.id ASC
           
         while($row = pwg_db_fetch_assoc($result))
         {
-          list($dbnow) = pwg_db_fetch_row(pwg_query('SELECT NOW();'));
+          $dbnow = date("Y-m-d H:i:s");
             
           $query = '
 INSERT INTO '.USER_LASTVISIT_TABLE.'

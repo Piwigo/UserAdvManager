@@ -227,40 +227,37 @@ function uam_blockToggleDisplay( headerId, contentId )
             </label>
 
             <div class="uam_hide">
-            
+
               <label for="UAM_MailExclusion_false"><input id="UAM_MailExclusion_false" value="false" {$UAM_MAILEXCLUSION_FALSE} name="UAM_MailExclusion" type="radio">
                 {'UAM_Disable'|@translate}
               </label>
               <label for="UAM_MailExclusion_true"><input id="UAM_MailExclusion_true" value="true" {$UAM_MAILEXCLUSION_TRUE} name="UAM_MailExclusion" type="radio">
                 {'UAM_MailExclusion_true'|@translate}
               </label>
-            
+
             </div>
           {else}
             <label class="cluetip" title="{'UAM_MailExclusion'|translate}|{'UAM_mailexcTitle_d'|translate}">
               {'UAM_MailExclusion'|@translate}
             </label>
 
-            
-              <label for="UAM_MailExclusion_false"><input id="UAM_MailExclusion_false" value="false" {$UAM_MAILEXCLUSION_FALSE} name="UAM_MailExclusion" type="radio">
+            <label for="UAM_MailExclusion_false"><input id="UAM_MailExclusion_false" value="false" {$UAM_MAILEXCLUSION_FALSE} name="UAM_MailExclusion" type="radio">
                 {'UAM_Disable'|@translate}
-              </label>
-              <label for="UAM_MailExclusion_true"><input id="UAM_MailExclusion_true" value="true" {$UAM_MAILEXCLUSION_TRUE} name="UAM_MailExclusion" type="radio">
-                {'UAM_MailExclusion_true'|@translate}
-              </label>
-            
+            </label>
 
-          {if $UAM_ERROR_REPORTS1}     
-            <div class="uam_leftmargin">
-              <textarea class="uam_textfields" name="UAM_MailExclusion_List" id="UAM_MailExclusion_List" rows="3" style="color: red" {$TAG_INPUT_ENABLED}>{$UAM_MAILEXCLUSION_LIST}</textarea>
-            </div>
-            
-          {else}
-            <div class="uam_leftmargin">
-              <textarea class="uam_textfields" name="UAM_MailExclusion_List" id="UAM_MailExclusion_List" rows="3" {$TAG_INPUT_ENABLED}>{$UAM_MAILEXCLUSION_LIST}</textarea>
-            </div>
-            
-          {/if}
+            <label for="UAM_MailExclusion_true"><input id="UAM_MailExclusion_true" value="true" {$UAM_MAILEXCLUSION_TRUE} name="UAM_MailExclusion" type="radio">
+                {'UAM_MailExclusion_true'|@translate}
+            </label>
+
+            {if $UAM_ERROR_REPORTS1}     
+              <div class="uam_leftmargin">
+                <textarea class="uam_textfields" name="UAM_MailExclusion_List" id="UAM_MailExclusion_List" rows="3" style="color: red" {$TAG_INPUT_ENABLED}>{$UAM_MAILEXCLUSION_LIST}</textarea>
+              </div>
+            {else}
+              <div class="uam_leftmargin">
+                <textarea class="uam_textfields" name="UAM_MailExclusion_List" id="UAM_MailExclusion_List" rows="3" {$TAG_INPUT_ENABLED}>{$UAM_MAILEXCLUSION_LIST}</textarea>
+              </div>
+            {/if}
           {/if}
           </li>
         </ul>
