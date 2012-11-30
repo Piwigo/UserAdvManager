@@ -357,5 +357,11 @@ Plugin Name: UserAdvManager
             Update lv_LV, thanks to : agrisans
             Add da_DK, thanks to : Kaare
 
+-- 2.41.2 : Bug 2765 fixed - Code cleanup
+            Bug 2788 fixed : Warning message on email exclusion no more remains if misconfiguration is fixed. But it's still necessary to refresh the current page once for the warning message to disappear.
+            Bug 2796 fixed - Use of php date() function instead od MySql NOW() - Usefull if MySql server is not set at the same date-time as Apache/Php server
+            Update da_DK, thanks to : Kaare
+            Update it_IT, thanks to : virgigiole
+            Update lv_LV, thanks to : agrisans
 */
 ?>

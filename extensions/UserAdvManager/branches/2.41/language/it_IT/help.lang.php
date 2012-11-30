@@ -1,5 +1,4 @@
 <?php
-//global $lang;
 
 $lang['UAM_confirmTitle_d'] = '
 - Generazzione di un\'email d\'informazione<br>
@@ -32,8 +31,7 @@ Disabilitando questa opzione ((predefinito)), solo le informazioni e-mail viene 
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.15.4
-$lang['UAM_restricTitle_d'] = '
-- Caratteri vietati nei nomi degli utenti<br>
+$lang['UAM_restricTitle_d'] = '- Caratteri vietati nei nomi degli utenti<br>
 - Rafforzare il livello di sicurezza delle password<br>
 - Esclusione dei domini d\'Email<br>
 ...
@@ -74,4 +72,9 @@ Per utilizzare più lingue, è possibile utilizzare i tag del plugin Extended de
 $lang['UAM_RejectConnexion_Custom_Txt_d'] = 'Personalizza qui il tuo testo di spiegazione per informare gli utenti non confermati che non potranno accedere alla galleria finché non avranno confermato la loro registrazione.
 <br><br>
 Questo campo è compatibile con l\'Editor FCK e, per il multi-lingue, puoi utilizzare i tags [lang] del plugin Extended description se è attivo.';
+$lang['UAM_mailexcTitle_d'] = 'Di default, Piwigo accetta tutti gli indirizzi nel formato xxx@yyy.zz. Abilitando questa opzione, escluderete alcuni domini nel formato: @ [domain_name].[domain_extension].<br><br>
+Esempi:<br>
+@hotmail.com -> esclude indirizzi *@hotmail.com<br>
+@hotmail -> esclude indirizzi *@hotmail*<br><br>
+<b style=&quot;color: red;&quot;>Warning - Questa opzione funziona solo se l\'indirizzo email è obbligatorio per la registrazione! Per favore vedere le opzioni di configrazione di Piwigo.</b>';
 ?>
