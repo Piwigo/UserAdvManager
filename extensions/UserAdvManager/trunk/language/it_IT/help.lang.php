@@ -77,4 +77,15 @@ Esempi:<br>
 @hotmail.com -> esclude indirizzi *@hotmail.com<br>
 @hotmail -> esclude indirizzi *@hotmail*<br><br>
 <b style=&quot;color: red;&quot;>Warning - Questa opzione funziona solo se l\'indirizzo email è obbligatorio per la registrazione! Per favore vedere le opzioni di configrazione di Piwigo.</b>';
+$lang['UAM_confirmgrpTitle_d'] = '<b style=&quot;color: red;&quot;>ATTENZIONE: Per l\'utilizzo di gruppi di conferma è necessario aver creato almeno un gruppo di utenti ed è definita &quot;di default&quot; nella gestione dei gruppi utenti Piwigo.</b><br><br>
+I gruppi sono convalidati per l\'uso in combinazione con il &quot;Conferma di iscrizione&quot;';
+$lang['UAM_confirmstatTitle_d'] = '<b style=&quot;color: red;&quot;>ATTENZIONE: L\'uso del status su conferma presuppone che sia stato mantenuto l\'utente &quot;Guest&quot; con impostazione di default (come modello di utente) per registrarne nuovi. Nota: è possibile impostare qualsiasi altro utente come modello per i nuovi iscritti. Si prega di fare riferimento alla documentazione di Piwigo per maggiori dettagli.</b><br><br>
+Lo Stato è convalidato per l\'uso in combinazione con la &quot;Conferma di iscrizione&quot;';
+$lang['UAM_Tracking registered users_d'] = 'Questo attiva una tabella in &quot;Tracking utenti registrati&quot; scheda in cui sono elencati gli utenti registrati alla galleria con la data della loro ultima visita e il tempo trascorso (in giorni) dalla loro ultima visita. Il monitoraggio è puramente informativo per l\'amministratore della galleria.';
+$lang['UAM_StuffsTitle_d'] = 'In questo modo un blocco UAM supplementare nel PWG Stuffs plugin (se installato) per informare i visitatori che non hanno confermano la loro iscrizione per la loro condizione.
+<br><br>
+Si prega di fare riferimento ai suggerimenti <b>Tips ed esempi di utilizzo</b> nella parte inferiore di questa pagina per i dettagli.';
+$lang['UAM_GTAutoTitle_d'] = 'Questa opzione consente di applicare le regole per la gestione automatizzata degli utenti fantasma.<br><br>Principio di base: un utente che ha raggiunto il tempo massimo tra le visite <b><u>ed</u></b> è già stato avvisato per e-mail è considerato come scaduto. Quindi è possibile applicare le regole di elaborazione automatizzate come la cancellazione automatica degli account scaduti o retrocessione limitando l\'accesso alla galleria (passare automaticamente ad un gruppo ristretto e/o di stato). <br><br>L\'attivazione di questi automazione si ottiene quando si collegano gli utenti (tutti gli utenti!) alla galleria.';
+$lang['UAM_confirmlevelTitle_d'] = '<b style=&quot;color: red;&quot;>ATTENZIONE: L\'uso di livello di privacy è necessario che li hanno utilizzati con le vostre fotografie. Si prega di fare riferimento alla documentazione di Piwigo per maggiori dettagli.</b><br><br>
+Il livello di privacy è convalidato per l\'uso in combinazione con la &quot;Conferma di iscrizione&quot;';
 ?>
