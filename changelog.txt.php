@@ -363,5 +363,8 @@ Plugin Name: UserAdvManager
             Update da_DK, thanks to : Kaare
             Update it_IT, thanks to : virgigiole
             Update lv_LV, thanks to : agrisans
+
+-- 2.41.3 : Bug 2818 fixed - "Reject user's connexion until registration is confirmed" should not reject admins connections
+            Update it_IT, thanks to : Ericnet 
 */
 ?>
