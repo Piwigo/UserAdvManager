@@ -430,7 +430,7 @@ function UAM_LoginTasks()
   }
 
   // Avoid login into public galleries until registration confirmation is done
-  if ((isset($conf_UAM[39]) and $conf_UAM[39] == 'false') or ((isset($conf_UAM[39]) and $conf_UAM[39] == 'true') and UAM_UsrReg_Verif($user['id'])))
+  if ((isset($conf_UAM[39]) and $conf_UAM[39] == 'false') or ((isset($conf_UAM[39]) and $conf_UAM[39] == 'true') and UAM_UsrReg_Verif($user['id'])) or  (!is_admin() and !is_webmaster()))
   {
     // Performing redirection to profile page on first login
     // -----------------------------------------------------
