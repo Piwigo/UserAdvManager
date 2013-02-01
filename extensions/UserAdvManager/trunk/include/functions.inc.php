@@ -136,6 +136,10 @@ function UAM_Adduser($register_user)
   {
     $passwd = (isset($_POST['password'])) ? $_POST['password'] : '';
 
+    // No validation needed when admins add users - users are considered as valid by default
+    // -------------------------------------------------------------------------------------
+    if (isset($page['page']) and ($page['page'] != 'user_list'))
+    {
     if (isset($conf_UAM[1]) and $conf_UAM[1] == 'local')
     {
       // This is to set user to "waiting" group or status and without ConfirMail until admin validation
@@ -167,6 +171,7 @@ function UAM_Adduser($register_user)
         SendMail2User(1, $register_user['id'], $register_user['username'], $passwd, $register_user['email'], true);
       }
     }
+  }
   }
 }
 
@@ -2000,11 +2005,11 @@ WHERE user_id = '.$user_id.'
 
     if ( $conf['guest_access'] )
     {
-      return( get_absolute_root_url().'?key='.$Confirm_Mail_ID.'&userid='.$user_id);
+      return(get_absolute_root_url().'?key='.$Confirm_Mail_ID.'&userid='.$user_id);
     }
     else
     {
-      return( get_absolute_root_url().'identification.php?key='.$Confirm_Mail_ID.'&userid='.$user_id);
+      return(get_absolute_root_url().'identification.php?key='.$Confirm_Mail_ID.'&userid='.$user_id);
     }
   }
 }
@@ -2110,11 +2115,11 @@ WHERE user_id = '.$user_id.'
 
     if ( $conf['guest_access'] )
     {
-      return( get_absolute_root_url().'?key='.$Confirm_Mail_ID.'&userid='.$user_id);
+      return(get_absolute_root_url().'?key='.$Confirm_Mail_ID.'&userid='.$user_id);
     }
     else
     {
-      return( get_absolute_root_url().'identification.php?key='.$Confirm_Mail_ID.'&userid='.$user_id);
+      return(get_absolute_root_url().'identification.php?key='.$Confirm_Mail_ID.'&userid='.$user_id);
     }
   }
 }

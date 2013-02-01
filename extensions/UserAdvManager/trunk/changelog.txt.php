@@ -366,5 +366,8 @@ Plugin Name: UserAdvManager
 
 -- 2.41.3 : Bug 2818 fixed - "Reject user's connexion until registration is confirmed" should not reject admins connections
             Update it_IT, thanks to : Ericnet 
+
+-- 2.41.4 : Bug 2829 fixed - Users add manually by admins are considered as valid by default. Admins or users don't have to validated the registration. 
+
 */
 ?>
