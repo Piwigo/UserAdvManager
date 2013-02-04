@@ -49,6 +49,6 @@ $lang['UAM_Default_ConfirmMail_Txt'] = 'Merhaba [username]!  [mygallery] me üye
 İşleminizi tamamlamak ve fotoğrafları izleyebilmek için mesajdaki linkle tıklayarak kaydınızı tamamlayabilirsiniz.';
 $lang['UAM_%d_Reminder_Sent'] = '%d hatırlatma mesajı gönderildi';
 $lang['UAM_%d_Reminders_Sent'] = '%d hatırlatma mesajları gönderildi';
-$lang['UAM %d users pwdreseted'] = '%d kullanıcıları için şifre yenileme gerekli';
+$lang['UAM %d users pwdreseted'] = '%d kullanıcı için şifre yenileme gerekli';
 $lang['UAM %d user pwdreseted'] = '%d kullanıcısı için şifre yenileme gerekli';
 ?>
