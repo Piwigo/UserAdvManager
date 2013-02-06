@@ -136,35 +136,40 @@ function UAM_Adduser($register_user)
   {
     $passwd = (isset($_POST['password'])) ? $_POST['password'] : '';
 
-    if (isset($conf_UAM[1]) and $conf_UAM[1] == 'local')
+    // No validation needed when admins add users - users are considered as valid by default
+    // -------------------------------------------------------------------------------------
+    if (isset($page['page']) and ($page['page'] != 'user_list'))
     {
-      // This is to set user to "waiting" group or status and without ConfirMail until admin validation
-      // ----------------------------------------------------------------------------------------------
-      SetPermission($register_user['id']);// Set to "waiting" group or status until admin validation
-      
-      // This is to set UAM_validated field to false in #_users table - Usefull if no "waiting" group or status is set
-      // -------------------------------------------------------------------------------------------------------------
-      SetUnvalidated($register_user['id']);
+      if (isset($conf_UAM[1]) and $conf_UAM[1] == 'local')
+      {
+        // This is to set user to "waiting" group or status and without ConfirMail until admin validation
+        // ----------------------------------------------------------------------------------------------
+        SetPermission($register_user['id']);// Set to "waiting" group or status until admin validation
 
-      // This is to send the validation key by email to admins for their manual validation without having to connect the gallery
-      // -----------------------------------------------------------------------------------------------------------------------
-      SendMail2User(1, $register_user['id'], $register_user['username'], $passwd, $register_user['email'], true);
-    }
-    // Sending registration confirmation by email
-    // ------------------------------------------
-    elseif (isset($conf_UAM[1]) and $conf_UAM[1] == 'true')
-    {
-      if (is_admin() and isset($conf_UAM[19]) and $conf_UAM[19] == 'true')
-      {
-        SendMail2User(1, $register_user['id'], $register_user['username'], $passwd, $register_user['email'], true); 
-      }
-      elseif (is_admin() and isset($conf_UAM[19]) and $conf_UAM[19] == 'false')
-      {
-        SendMail2User(1, $register_user['id'], $register_user['username'], $passwd, $register_user['email'], false);
-      }
-      elseif (!is_admin())
-      {
+        // This is to set UAM_validated field to false in #_users table - Usefull if no "waiting" group or status is set
+        // -------------------------------------------------------------------------------------------------------------
+        SetUnvalidated($register_user['id']);
+
+        // This is to send the validation key by email to admins for their manual validation without having to connect the gallery
+        // -----------------------------------------------------------------------------------------------------------------------
         SendMail2User(1, $register_user['id'], $register_user['username'], $passwd, $register_user['email'], true);
+      }
+      // Sending registration confirmation by email
+      // ------------------------------------------
+      elseif (isset($conf_UAM[1]) and $conf_UAM[1] == 'true')
+      {
+        if (is_admin() and isset($conf_UAM[19]) and $conf_UAM[19] == 'true')
+        {
+          SendMail2User(1, $register_user['id'], $register_user['username'], $passwd, $register_user['email'], true); 
+        }
+        elseif (is_admin() and isset($conf_UAM[19]) and $conf_UAM[19] == 'false')
+        {
+          SendMail2User(1, $register_user['id'], $register_user['username'], $passwd, $register_user['email'], false);
+        }
+        elseif (!is_admin())
+        {
+          SendMail2User(1, $register_user['id'], $register_user['username'], $passwd, $register_user['email'], true);
+        }
       }
     }
   }
@@ -2000,11 +2005,11 @@ WHERE user_id = '.$user_id.'
 
     if ( $conf['guest_access'] )
     {
-      return( get_absolute_root_url().'?key='.$Confirm_Mail_ID.'&userid='.$user_id);
+      return(get_absolute_root_url().'?key='.$Confirm_Mail_ID.'&userid='.$user_id);
     }
     else
     {
-      return( get_absolute_root_url().'identification.php?key='.$Confirm_Mail_ID.'&userid='.$user_id);
+      return(get_absolute_root_url().'identification.php?key='.$Confirm_Mail_ID.'&userid='.$user_id);
     }
   }
 }
@@ -2110,11 +2115,11 @@ WHERE user_id = '.$user_id.'
 
     if ( $conf['guest_access'] )
     {
-      return( get_absolute_root_url().'?key='.$Confirm_Mail_ID.'&userid='.$user_id);
+      return(get_absolute_root_url().'?key='.$Confirm_Mail_ID.'&userid='.$user_id);
     }
     else
     {
-      return( get_absolute_root_url().'identification.php?key='.$Confirm_Mail_ID.'&userid='.$user_id);
+      return(get_absolute_root_url().'identification.php?key='.$Confirm_Mail_ID.'&userid='.$user_id);
     }
   }
 }

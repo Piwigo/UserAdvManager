@@ -27,12 +27,12 @@ $lang['UAM_No_validation_for_your_account'] = 'Ihre personnal admin-Konto ist ni
 
 
 /* Processing messages */
-$lang['UAM_%d_Mail_With_Key'] = '%d Nachricht mit wichtigen Erneuerung gesendet wurde';
-$lang['UAM_%d_Mails_With_Key'] = '%d Nachrichten mit den wichtigsten Erneuerung geschickt wurden';
-$lang['UAM_%d_Reminder_Sent'] = '%d Erinnerung Nachricht wurde gesendet';
-$lang['UAM_%d_Reminders_Sent'] = '%d Erinnerung Nachrichten wurden gesendet';
-$lang['UAM_%d_Validated_User'] = '%d Benutzer manuell validiert';
-$lang['UAM_%d_Validated_Users'] = '%d Benutzer manuell validiert';
+$lang['UAM_%d_Mail_With_Key'] = '%d Nachricht mit wichtiger Erneuerung wurde gesendet.';
+$lang['UAM_%d_Mails_With_Key'] = '%d Nachrichten mit den wichtigsten Erneuerung wurden gesendet.';
+$lang['UAM_%d_Reminder_Sent'] = '%d Erinnerungsnachricht wurde gesendet.';
+$lang['UAM_%d_Reminders_Sent'] = '%d Erinnerungsnachrichten wurden gesendet.';
+$lang['UAM_%d_Validated_User'] = '%d Benutzer manuell validiert.';
+$lang['UAM_%d_Validated_Users'] = 'Die %d Benutzer wurden manuell validiert.';
 
 
 /* Action button names */
@@ -136,7 +136,7 @@ $lang['UAM_GT_Init'] = 'Initialisieren Geist Tracker';
 $lang['UAM_GhostTracker_Title'] = 'Geist Besucher-Management';
 $lang['UAM_GhostTracker_Init'] = 'Wenn Sie diese Funktion zum ersten Mal oder haben Sie nach einem langen Zeitraum aus, in dem neue Besucher registriert sind, müssen Sie initialisieren, oder setzen Sie den Geist Tracker reaktiviert. Dieser Vorgang ist nur nach Aktivierung oder Reaktivierung von der Möglichkeit gemacht. Bitte klicken Sie <u>einmal</u> die Reset-Taste unten.';
 /* Mailing */
-$lang['UAM_Add of %s'] = 'Profil erstellt für %s';
+$lang['UAM_Add of %s'] = 'Profil für %s wurde erstellt.';
 $lang['UAM_Update of %s'] = 'Profil aktualisieren %s';
 /* Email confirmation page */
 /* Mailing */
@@ -295,8 +295,8 @@ B. Im plugin Additional Pages:<br>
               </ol>
             </li>
           </ul>';
-$lang['UAM %d user pwdreseted'] = 'Passwort erneuern für %d Benutzer erforderlich';
-$lang['UAM %d users pwdreseted'] = 'Passwort erneuern für %d Benutzer erforderlich';
+$lang['UAM %d user pwdreseted'] = 'Passwortänderung für %d Benutzer erforderlich.';
+$lang['UAM %d users pwdreseted'] = 'Passwortänderungen für %d Benutzer erforderlich.';
 $lang['UAM_Admins cannot be pwdreset'] = 'Passwort erneuern kann nicht f';
 $lang['UAM_Bad_version_backup'] = 'Die Version der Backup-Datei entspricht nicht der Version des Plugins! Die Restaurierung wurde nicht durchgef';
 $lang['UAM_Confirm_Level'] = 'Datenschutz Niveau<br>(------- verlassen, um die Piwigo der Standard zu halten)';
