@@ -25,6 +25,7 @@ include_once (UAM_PATH.'include/functions.inc.php');
 /* Used everytime a new version is updated */
 /* even if no database upgrade is needed   */
 /* *************************************** */
+
 function UAM_version_update()
 {
   // Get current plugin version

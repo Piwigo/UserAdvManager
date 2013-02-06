@@ -271,7 +271,7 @@ Plugin Name: UserAdvManager
             Bug 2450 fixed - New feature : Backup file restoration.
             Help files remaned and relocated in the language root directory (no more "help" subdirectory) for compliance with the new online translation tool.
 
--- 2.30.1 : Bug 2455 fixed - Exclusion of specific users (généric and admins users) for password reset function.
+-- 2.30.1 : Bug 2455 fixed - Exclusion of specific users (generic and admins users) for password reset function.
             Bug 2451 fixed - Unable to handle Sql errors but control of backup file validity have been enforced.
 
 -- 2.30.2 : Bug 2456 fixed - New feature : Avoid user connexion to the gallery until there has been no validation of registration. Users are redirected to a customizable content page.
@@ -365,9 +365,12 @@ Plugin Name: UserAdvManager
             Update lv_LV, thanks to : agrisans
 
 -- 2.41.3 : Bug 2818 fixed - "Reject user's connexion until registration is confirmed" should not reject admins connections
-            Update it_IT, thanks to : Ericnet 
+            Update it_IT, thanks to : Ericnet
 
--- 2.41.4 : Bug 2829 fixed - Users add manually by admins are considered as valid by default. Admins or users don't have to validated the registration. 
+-- 2.41.4 : Bug 2829 fixed - Users add manually by admins are considered as valid by default. Admins or users don't have to validated the registration.
+            Add tr_TR, thanks to : Nakre
+            Update de_DE, thanks to : stephy
+            Update tr_TR, thanks to : hakanselcuk and LazBoy
 
 */
 ?>
