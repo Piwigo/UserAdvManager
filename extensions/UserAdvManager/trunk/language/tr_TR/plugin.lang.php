@@ -51,4 +51,33 @@ $lang['UAM_%d_Reminder_Sent'] = '%d hatırlatma mesajı gönderildi';
 $lang['UAM_%d_Reminders_Sent'] = '%d hatırlatma mesajları gönderildi';
 $lang['UAM %d users pwdreseted'] = '%d kullanıcı için şifre yenileme gerekli';
 $lang['UAM %d user pwdreseted'] = '%d kullanıcısı için şifre yenileme gerekli';
+$lang['UAM_Username_Char_true'] = 'Uygunsuz karakter: <br>(Karakterleri ayırmak için virgül kullanın)<br><br>';
+$lang['UAM_Username_Char_false'] = 'Hepsine izin ver (varsayılan)';
+$lang['UAM_Title5'] = 'Çeşitli ayarlar';
+$lang['UAM_Title2'] = 'Üyelik Onaylama';
+$lang['UAM_Title3'] = 'Kayıtsız ziyaretçi yönetimi';
+$lang['UAM_Title4'] = 'İpuçları ve kullanıma ilişkin örnekler';
+$lang['UAM_RedirToProfile'] = 'Özelleştirme sayfasına yönlendir';
+$lang['UAM_Mail_Info'] = 'Kullanıcıya bilgi maili: ';
+$lang['UAM_No_Backup_File'] = 'Backup dosyası bulunamadı!';
+$lang['UAM_Nb_Days'] = 'Günlük fark';
+$lang['UAM_MiscOptions'] = 'Diğer Seçenekler';
+$lang['UAM_Manual_validation_needed_for %s'] = '%s adlı kullanıcı üye oldu ve Admin tarafından manuel onaylama bekliyor';
+$lang['UAM_Manual_Validation'] = 'Manuel onay';
+$lang['UAM_Link: %s'] = 'Üyeliğinizi onaylamak için lütfen linke tıklayın: %s';
+$lang['UAM_LastVisit_Date'] = 'Son Ziyaret';
+$lang['UAM_GTAutoMail'] = 'Grup/durum/güvenlik seviyesi değiştirildiğinde otomatik mail gönderme';
+$lang['UAM_GTAutoGp'] = 'Grup/durum/gizlilik seviyesini otomatik olarak değiştirme';
+$lang['UAM_GTAutoDel'] = 'Hesapların otomatik silinmesi';
+$lang['UAM_Default_ValidationTimeout_Txt'] = 'Üzgünüz, Size tanınan ([Kdays] gün) süre içinde hesabınızı onaylamadığınız için hesabınız silindi. Lütfen tekrar üyelik başvurusunda bulunurken geçerli ve bloke edilmemiş bir email adresi kullanın.';
+$lang['UAM_Default_RejectConnexion_Txt'] = 'Üzgünüz, üyeliğiniz henüz doğrulanmadığı için galeriye bağlanılamıyor.';
+$lang['UAM_Default_InfoMail_Txt'] = 'Merhaba [username]!
+
+[mygallery] Galerideki profilinizde önemli değişiklikler yapılmıştır. Yeni ayarlarınızı aşağıda bulabilirsiniz:
+';
+$lang['UAM_Dump_OK'] = 'YEdekleme dosyası başarıyla oluşturuldu';
+$lang['UAM_Dump_NOK'] = 'Hata: Yedekleme dosyası oluşturulamadı!';
+$lang['UAM_Dump_Download'] = 'Yedeğinizi download etmek için, Lütfen bu kutuyu işaretleyin:';
+$lang['UAM_DumpTxt'] = 'Ayarlarınızı yedekleyin ve tekrar yükleyin';
+$lang['UAM_Delete_selected'] = 'Sil';
 ?>
