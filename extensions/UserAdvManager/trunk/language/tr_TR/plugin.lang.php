@@ -80,4 +80,49 @@ $lang['UAM_Dump_NOK'] = 'Hata: Yedekleme dosyası oluşturulamadı!';
 $lang['UAM_Dump_Download'] = 'Yedeğinizi download etmek için, Lütfen bu kutuyu işaretleyin:';
 $lang['UAM_DumpTxt'] = 'Ayarlarınızı yedekleyin ve tekrar yükleyin';
 $lang['UAM_Delete_selected'] = 'Sil';
+$lang['UAM_Webmaster cannot be pwdreset'] = 'Şifre yenileme webmaster hesabı için ayarlanamaz.';
+$lang['UAM_You cannot pwdreset your account'] = 'Şifre yenileme kendi hesabınız için ayarlanamaz.';
+$lang['UAM_You need to confirm pwdreset'] = 'Şifre yenilmeyi onaylamanız gerekir(onay kutusu)!';
+$lang['UAM_reg_err_login4_%s'] = 'Güvenlik: Kontorl sistemi seçilen şifreler için karmaşık bir kontorl mekanizması sağlar. Şifreniz çok basit (karakter sayısı=%s) Lütfen aşağıdaki kurallara dikkat ederek yeni bir şifre belirleyin: <br>
+- Harf ve rakam içermeli<br>
+- Büyük ve küçük harf içermeli<br>
+- Uzunluğu arttırın (karakter uzunluğunu)<br>
+Yönetici tarafından belirlenmiş minimum şifre uzunluğu:';
+$lang['UAM_reg_err_login5'] = 'E-posta sağlayıcınız kayıt için yasaklanmıştır. Yasaklı eposta sağlayıcıları: ';
+$lang['UAM_reg_err_login2'] = 'Kullanıcı adı izin verilen karakterlerin dışında karakter içeriyor:';
+$lang['UAM_infos_mail %s'] = '%s, burada galeriye giriş bilgilerinizi bulabilirsiniz:';
+$lang['UAM_audit_ok'] = 'Denetim OK';
+$lang['UAM_audit'] = 'Denetim ayarları';
+$lang['UAM_USRAutoDel'] = 'Silinen hesaplar için mesaj ayarlama';
+$lang['UAM_Title1'] = 'Kayıtlar için kısıtlamalar';
+$lang['UAM_Reminder'] = 'Email hatırlatma';
+$lang['UAM_Password_Reset_Msg'] = 'Lütfen Şifrenizi değiştirin!';
+$lang['UAM_No_Ghosts'] = 'Ziyaretçi yok';
+$lang['UAM_Mail_with_key'] = 'Şifre ile hatırlatma';
+$lang['UAM_MailInfo_Text'] = 'Bilgilendirme mail i ayarlama';
+$lang['UAM_Mail_without_key'] = 'Şifresiz hatırlatma';
+$lang['UAM_MailInfo_Subject'] = 'Bilgilendirme email i ayarlama';
+$lang['UAM_Ghost_reminder_of_%s'] = '%s, bu bir hatırlatma e-mail idir.';
+$lang['UAM_GTAuto'] = 'Ziyaretçiler için otomatik yönetim';
+$lang['UAM_Default_GhstDeletion_Txt'] = '[username] Üzgünüz, uzun süredir [mygallery] e girmediğiniz için hesabınız silindi. Tekrar giriş yapabilmek için lütfen üye olun.';
+$lang['UAM_Default_GTReminder_Subject'] = '[username]- [mygallery] i son ziyaretinizden bu yana uzun zaman geçti';
+$lang['UAM_Default user cannot be pwgreset'] = 'Şifre yenileme varsayılan kullanıcı hesabı için ayarlanamaz!';
+$lang['UAM_Default_CfmMail_Custom_Txt2'] = 'Yanlış / Süresi geçmiş doğrulama kodu, hesap zaten başarıyla doğrulanmış';
+$lang['UAM_Default_CfmMail_Custom_Txt1'] = '[username] hesap başarıyla doğrulandı';
+$lang['UAM_Default_AdminValidationMail_Subject'] = '[username] - [mygallery] e Kayıt başarıyla doğrulandı.';
+$lang['UAM_Default_AdminValidation_Txt'] = 'Merhaba [username]! [mygallery] Galerimize kayıt olduğunuz için teşekkür ederiz.
+
+[mygallery] üyeliğiniz admin tarafından onaylanmıştır. Profil bilgilerinizde değişiklik yapabilmek için  [myurl] ye giriş yapabilirsiniz.';
+$lang['UAM_Customize_messagesandmails'] = 'Mesaj ve email özelleştirm';
+$lang['UAM_CustomPasswRetr'] = 'Şifre hatırlatma email taslağı hazırlama';
+$lang['UAM_Confirm_Mail_true'] = 'Kullanıcı onayı etkinleştirme';
+$lang['UAM_Confirm_Mail_local'] = 'Admin onayı etkinleştirme';
+$lang['UAM_Confirm_Mail'] = 'Kayıt Onayı:';
+$lang['UAM_ConfirmMail_Remail'] = 'Onaylanmamış kulllanıcıları hatırlat';
+$lang['UAM_ConfirmMail_Subject'] = 'Kayıt Email i oluşturma';
+$lang['UAM_ConfirmMail_Text'] = 'Onaylama E-mail i oluşturma:';
+$lang['UAM_AdminConfMail'] = 'Adminler için kayıt onay';
+$lang['UAM_Add of %s'] = 'Profil %s için oluşturuldu';
+$lang['UAM_%d_Validated_Users'] = '% Kullanıcılar onaylandı';
+$lang['UAM_%d_Validated_User'] = '% Kullanıcı onaylandı';
 ?>
