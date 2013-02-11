@@ -138,8 +138,8 @@ function UAM_Adduser($register_user)
 
     // No validation needed when admins add users - users are considered as valid by default
     // -------------------------------------------------------------------------------------
-    if (isset($page['page']) and ($page['page'] != 'user_list'))
-    {
+    //Bug 2829 fix not working - if (isset($page['page']) and ($page['page'] != 'user_list'))
+    //{
       if (isset($conf_UAM[1]) and $conf_UAM[1] == 'local')
       {
         // This is to set user to "waiting" group or status and without ConfirMail until admin validation
@@ -171,7 +171,7 @@ function UAM_Adduser($register_user)
           SendMail2User(1, $register_user['id'], $register_user['username'], $passwd, $register_user['email'], true);
         }
       }
-    }
+    //}
   }
 }
 

@@ -372,5 +372,8 @@ Plugin Name: UserAdvManager
             Update de_DE, thanks to : stephy
             Update tr_TR, thanks to : hakanselcuk and LazBoy
 
+-- 2.41.5 : Bug 2842 fixed - Previews bug 2829 fix did affect the normal registration confirmation.
+            Update tr_TR, thanks to : hakanselcuk
+
 */
 ?>
