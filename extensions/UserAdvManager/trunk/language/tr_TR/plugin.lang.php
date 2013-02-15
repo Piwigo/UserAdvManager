@@ -125,4 +125,8 @@ $lang['UAM_AdminConfMail'] = 'Adminler için kayıt onay';
 $lang['UAM_Add of %s'] = 'Profil %s için oluşturuldu';
 $lang['UAM_%d_Validated_Users'] = '% Kullanıcılar onaylandı';
 $lang['UAM_%d_Validated_User'] = '% Kullanıcı onaylandı';
+$lang['UAM_Disable'] = 'Devre Dışı [varsayılan]';
+$lang['UAM_Enable'] = 'Etkinleştir';
+$lang['UAM_Default_ConfirmMail_Subject'] = '[username] adı [mygallery] kayıt onayı aşamasında';
+$lang['UAM_Default_ConfirmMail_Remail_Subject'] = 'Hatırlatma- [username] adı [mygallery] kayıt onayı aşamasında';
 ?>
