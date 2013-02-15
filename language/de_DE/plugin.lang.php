@@ -122,7 +122,7 @@ $lang['UAM_No_Confirm_Status'] = 'Status für Benutzer, die nicht validiert ihre
 $lang['UAM_Validated_Status'] = 'Status für Benutzer, die ihre Anmeldung bestätigt<br>';
 $lang['UAM_ValidationLimit_Info'] = 'Anmeldeschluss Validierung beschränkt';
 $lang['UAM_ConfirmMail_TimeOut_true'] = ' Aktivieren. Anzahl der Tage bis zum Ablauf: ';
-$lang['UAM_ConfirmMail_Remail'] = 'Erinnern Unvalidierte User';
+$lang['UAM_ConfirmMail_Remail'] = 'Unbestätigte Benutzer erinnern.';
 $lang['UAM_ConfirmMail_ReMail_Txt1'] = 'Anpassen der Erinnerungs-Nachricht <b><u>mit</u></b> neue Regeneration der Schlüssel Validierung.';
 $lang['UAM_ConfirmMail_ReMail_Txt2'] = 'Anpassen der Erinnerungs-Nachricht <b><u>ohne</u></b> neue Regeneration der Schlüssel Validierung.';
 
@@ -297,8 +297,8 @@ B. Im plugin Additional Pages:<br>
           </ul>';
 $lang['UAM %d user pwdreseted'] = 'Passwortänderung für %d Benutzer erforderlich.';
 $lang['UAM %d users pwdreseted'] = 'Passwortänderungen für %d Benutzer erforderlich.';
-$lang['UAM_Admins cannot be pwdreset'] = 'Passwort erneuern kann nicht f';
-$lang['UAM_Bad_version_backup'] = 'Die Version der Backup-Datei entspricht nicht der Version des Plugins! Die Restaurierung wurde nicht durchgef';
+$lang['UAM_Admins cannot be pwdreset'] = 'Passwort erneuern kann nicht für Administratoren gesetzt werden.';
+$lang['UAM_Bad_version_backup'] = 'Die Version der Backup-Datei entspricht nicht der Version des Plugins! Die Wiederherstellung wurde nicht durchgeführt.';
 $lang['UAM_Confirm_Level'] = 'Datenschutz Niveau<br>(------- verlassen, um die Piwigo der Standard zu halten)';
 $lang['UAM_Default user cannot be pwgreset'] = 'Passwort erneuern kann nicht für Standard-Benutzer eingestellt werden!';
 $lang['UAM_Default_AdminValidation_Txt'] = 'Hallo [username]! Danke für die Registrierung und willkommen bei [mygallery].
