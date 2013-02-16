@@ -88,4 +88,48 @@ Si prega di fare riferimento ai suggerimenti <b>Tips ed esempi di utilizzo</b> n
 $lang['UAM_GTAutoTitle_d'] = 'Questa opzione consente di applicare le regole per la gestione automatizzata degli utenti fantasma.<br><br>Principio di base: un utente che ha raggiunto il tempo massimo tra le visite <b><u>ed</u></b> è già stato avvisato per e-mail è considerato come scaduto. Quindi è possibile applicare le regole di elaborazione automatizzate come la cancellazione automatica degli account scaduti o retrocessione limitando l\'accesso alla galleria (passare automaticamente ad un gruppo ristretto e/o di stato). <br><br>L\'attivazione di questi automazione si ottiene quando si collegano gli utenti (tutti gli utenti!) alla galleria.';
 $lang['UAM_confirmlevelTitle_d'] = '<b style=&quot;color: red;&quot;>ATTENZIONE: L\'uso di livello di privacy è necessario che li hanno utilizzati con le vostre fotografie. Si prega di fare riferimento alla documentazione di Piwigo per maggiori dettagli.</b><br><br>
 Il livello di privacy è convalidato per l\'uso in combinazione con la &quot;Conferma di iscrizione&quot;';
+$lang['UAM_GTAutoGpTitle_d'] = 'Il cambio automatico del gruppo, lo stato o il livello di privacy è come un abbassamento di livello dei conti coinvolti e lavorare sullo stesso principio come il livello di gruppo, lo stato o la privacy di conferma (vedi &quot;Impostazione conferma della registrazione&quot;). Perciò sii per definire un gruppo, stato e / o abbassamento di livello alla galleria. Se questo è già stato definito con l\'uso della funzione di conferma della registrazione, lo stato e / o abbassamento di livello di accesso alla galleria.<br><br>
+<b style=&quot;color: red;&quot;>Nota importante:</b> Se un utente fantasma non ha ancora sentito dopo il limite di tempo e nonostante la notifica automatica via e-mail (se abilitata), egli sarà automaticamente eliminato dal database.';
+$lang['UAM_GTAutoDelTitle_d'] = 'Questo è valido solo quando l\'utente il cui account è scaduto e si innesca il meccanismo di eliminazione (raro ma possibile). Egli verrà disconnesso dalla galleria e reindirizzato a una pagina che mostra la cancellazione del suo account ed, eventualmente, le motivazioni di questa cancellazione.
+<br><br>
+Inoltre i contenuti con speciali tag inseriti:<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> per inserire il titolo della tua galleria.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> per inserire l\'URL della galleria, se impostato nelle opzioni di configurazione di Piwigo.<br>
+<b style=&quot;color: red;&quot;>[username]</b> non è disponibile qui perché l\'utente in questione è stato cancellato.
+<br><br>
+Testo personalizzato per il reindirizzamento pagina può essere inserito in questo campo che è compatibile con l\'editor FCK e per il multi-lingue, è possibile utilizzare i tag [lang] del plugin Extended description, se ​​è attivo.';
+$lang['UAM_DumpTitle_d'] = 'Questo consente di salvare l\'intera configurazione del plugin in un file in modo da poterlo ripristinare in caso di problemi (per esempio: errata manipolazione o prima di un aggiornamento). Per impostazione predefinita, il file viene memorizzato in questa cartella ../plugins/UserAdvManager/include/backup/ ed è chiamato
+&quot;UAM_dbbackup.sql&quot;.
+<br><br>
+<b style=&quot;color: red;&quot;>Attenzione: il file viene sovrascritto ogni azione di backup!</b>
+<br><br>
+A volte può essere utile per recuperare il file di backup sul computer. Ad esempio: per ripristinare in un altro database o per mantenere più file di salvataggio. Per fare questo, è sufficiente selezionare la casella per scaricare il file.
+<br><br>
+Il recupero da questa interfaccia è disponibile solo per il file di backup locale
+(../plugins/UserAdvManager/include/backup/UAM_dbbackup.sql).
+Scaricato il file di backup non può essere ripristinato in questo modo. Per fare questo, si deve utilizzare l\'apposito strumento di gestione di database (come PhpMyAdmin per database MySql).
+<br><br>
+<b style=&quot;color: red;&quot;>Attenzione: Al termine del ripristino, è necessario ricaricare la pagina di amministrazione del plugin per visualizzare le impostazioni ripristinate!</b>';
+$lang['UAM_CustomPasswRetrTitle_d'] = 'Per impostazione predefinita, quando un utente ha perso la password e seleziona l\'opzione di recupero, riceve una e-mail contenente solo il suo username e la sua nuova password.
+<br><br>
+Qui, puoi aggiungere testo di tua scelta per essere inserito
+<b><u>prima</u></b> delle informazioni standard.
+<br><br>
+Inoltre i contenuti con speciali tag inseriti:<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> per inserire il titolo della tua galleria.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> per inserire l\'URL della galleria, se impostato nelle opzioni di configurazione di Piwigo.
+<br><br>
+Per utilizzare più lingue, è possibile utilizzare i tag del plugin Extended description, se è attivo.';
+$lang['UAM_ConfirmMail_Subject_d'] = 'Inserisci qui il tuo personalizzato oggetto promemoria e-mail conferma della registrazione.<br>
+Per impostazione predefinita, il campo ha un testo generico in inglese, ma si può cambiare e utilizzare i tag di traduzione [lang=?] del plugin Extended Description se ​​installato.
+<br><br>
+I seguenti tag aggiuntivi personalizzazioni sono disponibili senza utilizzare il plugin Extended Description:<br>
+- <b style=&quot;color: red;&quot;>[username]</b> per inserire automaticamente il nome dell\'utente di destinazione dell\'email.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> per inserire il titolo della tua galleria.<br>';
+$lang['UAM_ConfirmMail_ReMail_Subject_d'] = 'Inserisci qui il tuo personalizzato oggetto promemoria e-mail conferma della registrazione(con o senza nuova generazione di chiavi).<br>
+Per impostazione predefinita, il campo ha un testo generico in inglese, ma si può cambiare e utilizzare i tag di traduzione [lang=?] del plugin Extended Description se ​​installato.
+<br><br>
+I seguenti tag aggiuntivi personalizzazioni sono disponibili senza utilizzare il plugin Extended Description:<br>
+- <b style=&quot;color: red;&quot;>[username]</b> per inserire automaticamente il nome dell\'utente di destinazione dell\'email.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> per inserire il titolo della tua galleria.<br>';
 ?>
