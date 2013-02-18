@@ -1,7 +1,6 @@
 <?php
 
-$lang['UAM_confirmTitle_d'] = '
-- Generazzione di un\'email d\'informazione<br>
+$lang['UAM_confirmTitle_d'] = '- Generazzione di un\'email d\'informazione<br>
 - Generazzione di un\'email di conferma d\'iscrizzione<br>
 - Inserimento in automatico dei gruppi o dei statuti<br>
 - Limitazzione del termine di convalida dell\'iscrizzione<br>
@@ -33,7 +32,7 @@ Disabilitando questa opzione ((predefinito)), solo le informazioni e-mail viene 
 // --------- Starting below: New or revised $lang ---- from version 2.15.4
 $lang['UAM_restricTitle_d'] = '- Caratteri vietati nei nomi degli utenti<br>
 - Rafforzare il livello di sicurezza delle password<br>
-- Esclusione dei domini d\'Email<br>
+- Esclusione dei domini email<br>
 ...
 ';
 $lang['UAM_confirmgrpTitle'] = 'Gruppi';
@@ -53,7 +52,8 @@ $lang['UAM_USRAutoMailTitle_d'] = 'Quando attivata, questa funzione invierà aut
 $lang['UAM_HidePasswTitle_d'] = 'Scegli qui se si desidera visualizzare la password scelta da parte del visitatore nella e-mail di informazioni. Se si attiva l\'opzione, la password apparirà in chiaro. Se si disattiva la password non apparirà.';
 $lang['UAM_RedirTitle_d'] = 'Questa opzione reindirizza automaticamente un utente registrato alla sua pagina di personalizzazione solo al primo collegamento alla galleria.<br><br>
 Attenzione: Questa funzione non si applica a tutti gli utenti registrati. Quelli con &quot;admin&quot;, &quot;webmaster&quot; e &quot;generico&quot; stato sono esclusi.';
-$lang['UAM_RejectConnexion_d'] = 'Se attivato, i nuovi utenti registrati che non hanno confermato la loro iscrizione non saranno in grado di connettersi alla galleria.';
+$lang['UAM_RejectConnexion_d'] = 'Se attivato, i nuovi utenti registrati che non hanno confermato la loro iscrizione non saranno in grado di connettersi alla galleria. Essi saranno reindirizzati a una pagina speciale per informarli di questo stato.<br><br>
+<b style=&quot;color: red;&quot;>Attenzione - Questa funzione è disponibile solo in combinazione con i gruppi di conferma! Vedere di seguito per impostare i gruppi come richiesto.</b>';
 $lang['UAM_AdminValidationMail_Subject_d'] = 'Quando una registrazione è in attesa di approvazione manuale da parte di un\'amministratore o Webmaster, una e-mail di notifica per l\'utente viene mandata automaticamente. Inserisci qui il tuo oggetto personalizzato per la validazione via email manuale.<br>
 Per impostazione predefinita, il campo ha un testo generico in inglese, ma si può cambiare e utilizzare i tag traduzione [lang =?] del plugin Extended Description se installato.
 <br><br>
@@ -85,15 +85,11 @@ $lang['UAM_Tracking registered users_d'] = 'Questo attiva una tabella in &quot;T
 $lang['UAM_StuffsTitle_d'] = 'In questo modo un blocco UAM supplementare nel PWG Stuffs plugin (se installato) per informare i visitatori che non hanno confermano la loro iscrizione per la loro condizione.
 <br><br>
 Si prega di fare riferimento ai suggerimenti <b>Tips ed esempi di utilizzo</b> nella parte inferiore di questa pagina per i dettagli.';
-$lang['UAM_GTAutoTitle_d'] = 'Questa opzione consente di applicare le regole per la gestione automatizzata degli utenti fantasma.<br><br>Principio di base: un utente che ha raggiunto il tempo massimo tra le visite <b><u>ed</u></b> è già stato avvisato per e-mail è considerato come scaduto. Quindi è possibile applicare le regole di elaborazione automatizzate come la cancellazione automatica degli account scaduti o retrocessione limitando l\'accesso alla galleria (passare automaticamente ad un gruppo ristretto e/o di stato). <br><br>L\'attivazione di questi automazione si ottiene quando si collegano gli utenti (tutti gli utenti!) alla galleria.';
+$lang['UAM_GTAutoTitle_d'] = 'Questa opzione consente di applicare le regole per la gestione automatizzata degli utenti ghosts.<br><br>Principio di base: un utente che ha raggiunto il tempo massimo tra le visite <b><u>ed</u></b> è già stato avvisato per e-mail è considerato come scaduto. Quindi è possibile applicare le regole di elaborazione automatizzate come la cancellazione automatica degli account scaduti o retrocessione limitando l\'accesso alla galleria (passare automaticamente ad un gruppo ristretto e/o di stato). <br><br>L\'attivazione di questi automazione si ottiene quando si collegano gli utenti (tutti gli utenti!) alla galleria.';
 $lang['UAM_confirmlevelTitle_d'] = '<b style=&quot;color: red;&quot;>ATTENZIONE: L\'uso di livello di privacy è necessario che li hanno utilizzati con le vostre fotografie. Si prega di fare riferimento alla documentazione di Piwigo per maggiori dettagli.</b><br><br>
 Il livello di privacy è convalidato per l\'uso in combinazione con la &quot;Conferma di iscrizione&quot;';
 $lang['UAM_GTAutoGpTitle_d'] = 'Il cambio automatico del gruppo, lo stato o il livello di privacy è come un abbassamento di livello dei conti coinvolti e lavorare sullo stesso principio come il livello di gruppo, lo stato o la privacy di conferma (vedi &quot;Impostazione conferma della registrazione&quot;). Perciò sii per definire un gruppo, stato e / o abbassamento di livello alla galleria. Se questo è già stato definito con l\'uso della funzione di conferma della registrazione, lo stato e / o abbassamento di livello di accesso alla galleria.<br><br>
-<b style=&quot;color: red;&quot;>Nota importante:</b> Se un utente fantasma non ha ancora sentito dopo il limite di tempo e nonostante la notifica automatica via e-mail (se abilitata), egli sarà automaticamente eliminato dal database.';
-$lang['UAM_GTAutoDelTitle_d'] = 'Questo è valido solo quando l\'utente il cui account è scaduto e si innesca il meccanismo di eliminazione (raro ma possibile). Egli verrà disconnesso dalla galleria e reindirizzato a una pagina che mostra la cancellazione del suo account ed, eventualmente, le motivazioni di questa cancellazione.
-<br><br>
-Inoltre i contenuti con speciali tag inseriti:<br>
-- <b style=&quot;color: red;&quot;>[mygallery]</b> per inserire il titolo della tua galleria.<br>
+<b style=&quot;color: red;&quot;>Nota importante:</b> Se un utente ghost non ha ancora sentito dopo il limite di tempo e nonostante la notifica automatica via e-mail (se abilitata), egli sarà automaticamente eliminato dal database.';
 - <b style=&quot;color: red;&quot;>[myurl]</b> per inserire l\'URL della galleria, se impostato nelle opzioni di configurazione di Piwigo.<br>
 <b style=&quot;color: red;&quot;>[username]</b> non è disponibile qui perché l\'utente in questione è stato cancellato.
 <br><br>
@@ -115,7 +111,11 @@ $lang['UAM_CustomPasswRetrTitle_d'] = 'Per impostazione predefinita, quando un u
 Qui, puoi aggiungere testo di tua scelta per essere inserito
 <b><u>prima</u></b> delle informazioni standard.
 <br><br>
-Inoltre i contenuti con speciali tag inseriti:<br>
+Personalizzare ulteriormente il contenuto con tag inseriti speciali:<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> per inserire il titolo della tua galleria.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> per inserire l\'URL della galleria, se impostato nelle opzioni di configurazione di Piwigo.
+<br><br>
+Per utilizzare più lingue, è possibile utilizzare i tag del plugin Extended description, se è attivo.';
 - <b style=&quot;color: red;&quot;>[mygallery]</b> per inserire il titolo della tua galleria.<br>
 - <b style=&quot;color: red;&quot;>[myurl]</b> per inserire l\'URL della galleria, se impostato nelle opzioni di configurazione di Piwigo.
 <br><br>
@@ -132,4 +132,29 @@ Per impostazione predefinita, il campo ha un testo generico in inglese, ma si pu
 I seguenti tag aggiuntivi personalizzazioni sono disponibili senza utilizzare il plugin Extended Description:<br>
 - <b style=&quot;color: red;&quot;>[username]</b> per inserire automaticamente il nome dell\'utente di destinazione dell\'email.<br>
 - <b style=&quot;color: red;&quot;>[mygallery]</b> per inserire il titolo della tua galleria.<br>';
+$lang['UAM_validationlimitTitle_d'] = 'Questa opzione consente di limitare il numero di giorni in cui un nuovo utente è in grado di confermare la sua registrazione. Una volta che questo periodo è scaduto, il link di conferma non sarà più valido e non potrà essere utilizzato.
+<br><br>
+Questa opzione viene utilizzata una volta che la &quot;Conferma Registrazione&quot; è attivata.
+<br><br>
+Se questa opzione e l\'opzione &quot;Ricorda agli utenti non confermati&quot; sono attivate​​, nuove opzioni appariranno sotto in questa sezione per consentire l\'automazione della gestione degli utenti non confermati.';
+$lang['UAM_GTAutoMailTitle_d'] = 'Quando un account è scaduto (gruppo / stato / modifica livello di privacy abbassare di livello del visitatore), una email può essere inviata per chiarire le motivazioni di tale cambiamento ed i mezzi per recuperare l\'accesso iniziale alla galleria.
+<br>Per fare questo, un link per la conferma della registrazione è allegato alla email (generazione automatica di un nuova chiave di conferma). <b style=&quot;color: red;&quot;>Se l\'utente è già stato notificato, il suo account viene automaticamente cancellato.
+<br><br>
+<b style=&quot;color: red;&quot;>Attenzione:. L\'uso di questa funzione è intimamente associata con la conferma della registrazione da parte dell\'utente (conferma via mail) e non può essere attivata senza questa opzione</b>';
+$lang['UAM_GTAutomail_Text_d'] = 'Inserisci il testo personalizzato che spiega anche la ragione della retrocessione, per accompagnare il link di conferma. Il testo personalizzato non è obbligatorio ma fortemente consigliato. Infatti, i vostri visitatori non apprezzeranno di ricevere una e-mail che contiene solamente un unico collegamento senza ulteriori spiegazioni. ;-)
+<br><br>
+Personalizzare ulteriormente il contenuto con speciali inserted tags:<br>
+- <b style=&quot;color: red;&quot;>[username]</b> per inserire automaticamente il nome dell\'utente di destinazione della e-mail. <br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> per inserire il titolo della tua galleria.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> per inserire l\'URL della galleria, se impostato nelle opzioni di configurazione di Piwigo.
+<br><br>
+Per utilizzare più lingue, è possibile utilizzare i tag del plugin Extended description, se è attivo.';
+$lang['UAM_GTAutoDelTitle_d'] = 'Questo è valido solo quando l\'utente il cui account è scaduto e si innesca il meccanismo di eliminazione (raro ma possibile). Egli verrà disconnesso dalla galleria e reindirizzato a una pagina che mostra la cancellazione del suo account ed, eventualmente, le motivazioni di questa cancellazione.
+<br><br>
+Personalizzare ulteriormente il contenuto con speciali inserted tags:<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> per inserire il titolo della tua galleria.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> per inserire l\'URL della galleria, se impostato nelle opzioni di configurazione di Piwigo.<br>
+<b style=&quot;color: red;&quot;>[username]</b> non è disponibile qui perché l\'utente in questione è stato cancellato.
+<br><br>
+Testo personalizzato per il reindirizzamento pagina può essere inserito in questo campo che è compatibile con l\'editor FCK e per il multi-lingue, è possibile utilizzare i tag [lang] del plugin Extended description, se ​​è attivo.';
 ?>
