@@ -90,10 +90,6 @@ $lang['UAM_confirmlevelTitle_d'] = '<b style=&quot;color: red;&quot;>ATTENZIONE:
 Il livello di privacy è convalidato per l\'uso in combinazione con la &quot;Conferma di iscrizione&quot;';
 $lang['UAM_GTAutoGpTitle_d'] = 'Il cambio automatico del gruppo, lo stato o il livello di privacy è come un abbassamento di livello dei conti coinvolti e lavorare sullo stesso principio come il livello di gruppo, lo stato o la privacy di conferma (vedi &quot;Impostazione conferma della registrazione&quot;). Perciò sii per definire un gruppo, stato e / o abbassamento di livello alla galleria. Se questo è già stato definito con l\'uso della funzione di conferma della registrazione, lo stato e / o abbassamento di livello di accesso alla galleria.<br><br>
 <b style=&quot;color: red;&quot;>Nota importante:</b> Se un utente ghost non ha ancora sentito dopo il limite di tempo e nonostante la notifica automatica via e-mail (se abilitata), egli sarà automaticamente eliminato dal database.';
-- <b style=&quot;color: red;&quot;>[myurl]</b> per inserire l\'URL della galleria, se impostato nelle opzioni di configurazione di Piwigo.<br>
-<b style=&quot;color: red;&quot;>[username]</b> non è disponibile qui perché l\'utente in questione è stato cancellato.
-<br><br>
-Testo personalizzato per il reindirizzamento pagina può essere inserito in questo campo che è compatibile con l\'editor FCK e per il multi-lingue, è possibile utilizzare i tag [lang] del plugin Extended description, se ​​è attivo.';
 $lang['UAM_DumpTitle_d'] = 'Questo consente di salvare l\'intera configurazione del plugin in un file in modo da poterlo ripristinare in caso di problemi (per esempio: errata manipolazione o prima di un aggiornamento). Per impostazione predefinita, il file viene memorizzato in questa cartella ../plugins/UserAdvManager/include/backup/ ed è chiamato
 &quot;UAM_dbbackup.sql&quot;.
 <br><br>
@@ -112,10 +108,6 @@ Qui, puoi aggiungere testo di tua scelta per essere inserito
 <b><u>prima</u></b> delle informazioni standard.
 <br><br>
 Personalizzare ulteriormente il contenuto con tag inseriti speciali:<br>
-- <b style=&quot;color: red;&quot;>[mygallery]</b> per inserire il titolo della tua galleria.<br>
-- <b style=&quot;color: red;&quot;>[myurl]</b> per inserire l\'URL della galleria, se impostato nelle opzioni di configurazione di Piwigo.
-<br><br>
-Per utilizzare più lingue, è possibile utilizzare i tag del plugin Extended description, se è attivo.';
 - <b style=&quot;color: red;&quot;>[mygallery]</b> per inserire il titolo della tua galleria.<br>
 - <b style=&quot;color: red;&quot;>[myurl]</b> per inserire l\'URL della galleria, se impostato nelle opzioni di configurazione di Piwigo.
 <br><br>
