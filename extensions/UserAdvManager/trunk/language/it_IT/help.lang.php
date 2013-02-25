@@ -66,9 +66,10 @@ Inserisci qui il testo che appare in questa e-mail.
 <br><br>
 Personalizzare ulteriormente il contenuto con speciali inserted tags:<br>
 - <b style=&quot;color: red;&quot;>[username]</b> per inserire automaticamente il nome dell\'utente di destinazione del messaggio.<br>
-- <b style=&quot;color: red;&quot;>[mygallery]</b> di inserire il vostro URL della galleria se impostato nelle opzioni di configurazione di Piwigo.
-<br>
-Per utilizzare più lingue, è possibile utilizzare i tag del plugin Extended description, se è attivo.';
+- <b style=&quot;color: red;&quot;>[mygallery]</b> per inserire il titolo della tua galleria.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> per inserire l\'URL della tua galleria se impostato nelle opzioni di configurazione di Piwigo.
+<br><br>
+Per utilizzare più lingue, è possibile utilizzare i tag del plugin Extended description se è attivo.';
 $lang['UAM_RejectConnexion_Custom_Txt_d'] = 'Personalizza qui il tuo testo di spiegazione per informare gli utenti non confermati che non potranno accedere alla galleria finché non avranno confermato la loro registrazione.
 <br><br>
 Questo campo è compatibile con l\'Editor FCK e, per il multi-lingue, puoi utilizzare i tags [lang] del plugin Extended description se è attivo.';
@@ -149,4 +150,66 @@ Personalizzare ulteriormente il contenuto con speciali inserted tags:<br>
 <b style=&quot;color: red;&quot;>[username]</b> non è disponibile qui perché l\'utente in questione è stato cancellato.
 <br><br>
 Testo personalizzato per il reindirizzamento pagina può essere inserito in questo campo che è compatibile con l\'editor FCK e per il multi-lingue, è possibile utilizzare i tag [lang] del plugin Extended description, se ​​è attivo.';
+$lang['UAM_confirmtxtTitle_d'] = 'Inserire il testo introduttivo che si desidera visualizzare nella email di conferma della registrazione.
+<br><br>
+Personalizzare ulteriormente il contenuto con speciali inserted tags:<br>
+- <b style=&quot;color: red;&quot;>[username]</b> per inserire automaticamente il nome dell\'utente di destinazione del messaggio.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> per inserire il titolo della tua galleria.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> per inserire l\'URL della tua galleria se impostato nelle opzioni di configurazione di Piwigo.<br>
+- <b style=&quot;color: red;&quot;>[Kdays]</b> per inserire il numero di giorni limite per confermare una registrazione (&quot;Termine per la conferma della registrazione limitata;&quot; deve essere attivato).
+<br><br>
+Per utilizzare più lingue, è possibile utilizzare i tag del plugin Extended description se è attivo.';
+$lang['UAM_confirmmail_custom2_d'] = 'Quando l\'opzione &quot;Conferma Registrazione&quot; è attiva, questo campo consente di personalizzare il <b><u>rejectance text</u></b> nella pagina di conferma di registrazione visualizzata quando l\'utente clicca sul link di conferma ricevuto via e-mail.
+<br><br>
+Per installare il plugin, un testo standard è dato a titolo di esempio.
+<br><br>
+- <b style=&quot;color: red;&quot;>[username]</b> per inserire automaticamente il relativo nome utente.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> per inserire il titolo della tua galleria.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> per inserire l\'URL della galleria, se impostato nelle opzioni di configurazione di Piwigo.
+<br><br>
+Questo campo è compatibile con l\'editor FCK e, per il multi-lingue, è possibile utilizzare i tag [lang] del plugin Extended description se ​​è attivo.';
+$lang['UAM_confirmmail_custom1_d'] = 'Quando l\'opzione &quot;Conferma della registrazione&quot; è attiva, questo campo consente di personalizzare il testo di <b><u>accettazione</u></b> sulla pagina di conferma registrazione visualizzata quando l\'utente clicca sul link di conferma ricevuto via email.
+<br><br>
+Dopo aver installato il plugin, un testo standard è impostato come un esempio.
+<br><br>
+Personalizzare ulteriormente il contenuto con speciali inserted tag:<br>
+- <b style=&quot;color: red;&quot;>[username]</b> per inserire automaticamente il nome del relativo utente.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> per inserire il titolo della tua galleria.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> per inserire l\'URL della galleria, se impostato nelle opzioni di configurazione di Piwigo.
+<br><br>
+Questo campo è compatibile con l\'editor FCK e, per il multi-lingue, è possibile utilizzare i tag [lang] del plugin Extended description se ​​è attivo.';
+$lang['UAM_confirmmailTitle_d'] = 'Questa opzione consente ad un utente di confermare la registrazione cliccando su di un link ricevuto in una email inviata durante la registrazione oppure agli amministratori di attivare manualmente la registrazione.
+<br><br>
+Nel primo caso, la e-mail è composta da una parte personalizzabile per introdurre una piccola nota di benvenuto e una parte fissa contenente il link di attivazione che viene generato con una chiave casuale che può essere rigenerata  attraverso la scheda &quot;Tracking confirmations&quot;.
+<br><br>
+Nel secondo caso, il link di validazione è mandato dagli amministratori della galleria. I visitatori dovranno attendere fino a quando un amministratore li confermi utilizzando il link di convalida o nella scheda &quot;confirmation tracking&quot;.
+<br>
+<b style=&quot;color: red;&quot;>NB: Opzioni &quot;Termine per la conferma della registrazione limitata&quot; e &quot;Ricordiamo agli utenti non confermati&quot; devono essere impostate su off quando è attivata la conferma manuale dell\'amministratore.</b>
+<br><br>
+Questa opzione viene generalmente utilizzata con l\'assegnazione automatica di gruppo e/o stati. Ad esempio, un utente che non ha confermato la registrazione verrà impostata in uno specifico gruppo di utenti (con o senza restrizioni sulla Galleria) mentre un utente che ha confermato la sua iscrizione deve essere inserito in un gruppo &quot;normale&quot;.';
+$lang['UAM_USRAutoTitle_d'] = 'Gestione automatica dei visitatori non confermati si attiva ogni volta che si collega alla galleria e opera nel modo seguente:
+<br><br>
+- Cancellazione automatica degli account non confermati nel tempo consentito senza l\'invio automatico di promemoria tramite e-mail -> &quot;Termine per la conferma della registrazione limitata&quot; <b><u>abilitato</u></b> e &quot;Ricorda agli utenti non confermati&quot; <b><u>disabilitato</u></b>.
+<br><br>
+- Invio automatico di un messaggio di promemoria con una nuova generazione della chiave di conferma e cancellazione automatica degli account non confermati nel tempo dopo l\'invio del promemoria -> &quot;Termine per la conferma della registrazione limitata&quot; <b><u>abilitato</u></b> e &quot;Ricorda agli utenti non confermati&quot; <b><u>abilitato</u></b>.';
+$lang['UAM_USRAutoDelTitle_d'] = 'Questo è valido solo quando l\'utente il cui account è scaduto si attiva il meccanismo di eliminazione (raro ma possibile). Egli poi sarà scollegato dalla galleria e reindirizzato a una pagina che mostra la cancellazione del suo account ed, eventualmente, le ragioni di questa cancellazione.
+<br><br>
+Personalizzare ulteriormente il contenuto con speciali inserted tags:<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> per inserire il titolo della tua galleria.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> per inserire l\'URL della tua galleria se impostato nella configurazione opzioni di Piwigo.<br>
+<b style=&quot;color: red;&quot;>[username]</b> non è disponibile qui perché l\'utente in questione è stato cancellato.
+<br><br>
+Testo personalizzato per il reindirizzamento pagina può essere inserito in questo campo che è compatibile con l\'editor FCK e, per il multi-lingue, è possibile utilizzare i tag [lang] del plugin Extended description se ​​è attivo.';
+$lang['UAM_MailInfo_Subject_d'] = 'Inserisci qui il tuo oggetto e-mail informazioni personalizzate.<br>
+Per impostazione predefinita, il campo ha un testo generico in inglese, ma si può cambiare e utilizzare i tag di traduzione [lang =?] del plugin Extended Description se ​​installato.
+<br><br>
+I seguenti tag aggiuntivi personalizzazioni sono disponibili senza utilizzare il plugin Extended Description:<br>
+- <b style=&quot;color: red;&quot;>[username]</b> per inserire automaticamente il nome dell\'utente di destinazione del messaggio.
+- <b style=&quot;color: red;&quot;>[mygallery]</b> per inserire il titolo della tua galleria.<br>';
+$lang['UAM_PwdResetTitle_d'] = 'L\'attivazione di questa opzione aggiunge una nuova funzionalità nel pannello di gestione degli utenti Piwigo (Utenti> Gestione) che può essere applicato per rinnovare la password per gli utenti selezionati. Inoltre, una nuova colonna viene aggiunta per mostrare lo stato di password per ciascuno di essi con i seguenti valori:<br>
+Password in attesa di rinnovo: Una richiesta per una nuova password è stata inserita.<br>
+- Password rinnovata: La password è stata cambiata dopo una richiesta.<br>
+- Password originale: La password originale scelta al momento della creazione dell\'account non è mai stata cambiata.<br>
+Webmaster, account generici e gli ospiti sono esclusi da questa funzione.<br>
+Questi utenti saranno automaticamente reindirizzati alla loro pagina di personalizzazione per ciascuna delle loro connessioni fino a quando hanno cambiato la propria password e un messaggio esplicito verrà visualizzato in questa pagina.';
 ?>

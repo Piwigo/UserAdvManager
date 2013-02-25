@@ -29,10 +29,10 @@ $lang['UAM_No_validation_for_your_account'] = 'Il account personale di amminstra
 /* Processing messages */
 $lang['UAM_%d_Mail_With_Key'] = '%d messaggio con rinnovo della chiave è stato inviato';
 $lang['UAM_%d_Mails_With_Key'] = '%d messaggi con rinnovo della chiave sono stati inviati';
-$lang['UAM_%d_Reminder_Sent'] = '%d email di remind è stata inviata';
-$lang['UAM_%d_Reminders_Sent'] = '%d email di remind sono state inviate';
-$lang['UAM_%d_Validated_User'] = '%d utente confermato manualmente';
-$lang['UAM_%d_Validated_Users'] = '%d utenti confermati manualmente';
+$lang['UAM_%d_Reminder_Sent'] = '%d messaggio di promemoria è stato inviato';
+$lang['UAM_%d_Reminders_Sent'] = '%d messaggi di promemoria sono stati inviati';
+$lang['UAM_%d_Validated_User'] = '%d Utente confermato manualmente';
+$lang['UAM_%d_Validated_Users'] = '%d Utenti confermati manualmente';
 
 
 /* Action button names */
@@ -107,10 +107,10 @@ $lang['UAM_MailExclusion_true'] = 'Escludi i seguenti domini:<br>(usa la virgola
 $lang['UAM_Mail_Info'] = 'Mail d\'informazione agli utenti:';
 $lang['UAM_MailInfo_Text'] = 'Personalizza la mail d\'informazione';
 $lang['UAM_Confirm_Mail'] = 'Conferma della registrazione:';
-$lang['UAM_ConfirmMail_Text'] = 'Personalizza la mail di conferma:';
+$lang['UAM_ConfirmMail_Text'] = 'Personalizza la email di conferma:';
 $lang['UAM_Confirm_Group'] = 'Gruppi<br>(lascia ------- per non influenzare i gruppi)';
-$lang['UAM_Confirm_Status'] = 'Stati<br>(lascia -------- per mantenere il default di Piwigo)';
-$lang['UAM_Confirm_grpstat_notice'] = 'Attenzione: è consigliabile utilizzare o il gruppo o le leggi di conferma e non entrambi contemporaneamente. Il livello della privacy può essere usato insieme ad un\'assegnazione di stato o di gruppo.';
+$lang['UAM_Confirm_Status'] = 'Stati<br>(lascia -------- per mantenere il predefinito di Piwigo)';
+$lang['UAM_Confirm_grpstat_notice'] = 'Attenzione: E\' consigliabile utilizzare il gruppo o gli stati di conferma e non entrambi contemporaneamente. Il livello di privacy può essere utilizzato in combinazione con un\'assegnazione di gruppo o stato.';
 $lang['UAM_No_Confirm_Group'] = 'Gruppo per gli utenti che non hanno ancora confermato la registrazione<br>';
 $lang['UAM_Validated_Group'] = 'Gruppo per gli utenti che hanno confermato la registrazione<br>';
 $lang['UAM_No_Confirm_Status'] = 'Stato per gli utenti che non hanno ancora confermato la registrazione<br>';
@@ -118,8 +118,8 @@ $lang['UAM_Validated_Status'] = 'Stato per gli utenti che hanno confermato la re
 $lang['UAM_ValidationLimit_Info'] = 'Termine per la validazione dell\'iscrizione';
 $lang['UAM_ConfirmMail_TimeOut_true'] = 'Attivato. Numero di giorni prima della scadenza:';
 $lang['UAM_ConfirmMail_Remail'] = 'Ricorda utenti non confermati';
-$lang['UAM_ConfirmMail_ReMail_Txt1'] = 'Personalizzare l\'email di remind <b><u>con</u></b> rigenerazione di una nuova chiave di convalida';
-$lang['UAM_ConfirmMail_ReMail_Txt2'] = 'Personalizzare l\'email di remind <b><u>senza</u></b> rigenerazione di una nuova chiave di convalida';
+$lang['UAM_ConfirmMail_ReMail_Txt1'] = 'Personalizzare il messaggio di promemoria <b><u>con</u></b> rigenerazione di una nuova chiave di convalida';
+$lang['UAM_ConfirmMail_ReMail_Txt2'] = 'Personalizzare il messaggio di promemoria <b><u>senza</u></b> rigenerazione di una nuova chiave di convalida';
 
 $lang['UAM_GhostTracker'] = 'Gestione dei visitatori fantasma (GhostTracker)';
 $lang['UAM_GhostTracker_true'] = ' Attivare. Durata massima tra due visite in giorni: ';
@@ -177,11 +177,11 @@ $lang['UAM_GTAuto'] = 'Gestione automatica degli utenti fantasma';
 $lang['UAM_GTAutoDel'] = 'Cancellazione automatica degli account';
 $lang['UAM_Error_GTAutoMail_cannot_be_set_without_ConfirmMail'] = 'Errore di coerenza nella configurazione prescelta :
 <br><br>
-"Parametraggio monitoraggio degli iscritti e altre opzioni > Gestione degli utenti fantasmi (Ghost Tracker) > Gestione automatica degli utenti fantasmi > Email automatica su cambiamento di gruppo / statuto" non può essere attivato se "Parametraggio delle conferme e validazione d\'iscrizione > Conferma d\'iscrizione - Conferma dal utente" non è stata perattivata
+"Impostazione del monitoraggio utenti registrati e altre opzioni > Gestione degli utenti ghost (Ghost Tracker) > Gestione automatica degli utenti ghost > Email automatica su cambiamento di gruppo / statuto" non può essere attivato se "Impostazione delle conferme di registrazione > Conferma d\'iscrizione - Conferma dal utente" non è stata prima attivata.
 <br><br>
-Per garantire la coerenza, l\'opzione "Email automatica su cambiamento del gruppo / statuto" è stata automaticamente riposizionata a "disattivato"
+Per garantire la coerenza, l\'opzione "Email automatica su cambiamento del gruppo / stato" è stata automaticamente riposizionata a "disattivato"
 <br><br>';
-$lang['UAM_Demotion of %s'] = 'Retrocessione a un grado inferiore di %s';
+$lang['UAM_Demotion of %s'] = 'Retrocessione a %s';
 $lang['UAM_AdminValidationMail_Text'] = 'Notifica di conferma manuale di registrazione';
 $lang['UAM_Validation of %s'] = 'Conferma di %s';
 // --------- End: New or revised $lang ---- from version 2.16.0
@@ -192,7 +192,7 @@ $lang['UAM_CustomPasswRetr'] = 'Personalizza contenuto email per password diment
 $lang['UAM_USRAuto'] = 'Gestione automatica degli utenti non confermati';
 $lang['UAM_USRAutoDel'] = 'Messaggio personalizzato sugli account eliminati';
 $lang['UAM_USRAutoMail'] = 'Email reminder automatico';
-$lang['UAM_Disable'] = 'Disabilita (default)';
+$lang['UAM_Disable'] = 'Disabilita (predefinito)';
 $lang['UAM_Enable'] = 'Abilita';
 $lang['UAM_Tips1'] = 'Messaggio d\'informazione per le registrazioni non confermate con UAM e PWG_Stuffs';
 $lang['UAM_Tips1_txt'] = '          <ul>
@@ -302,42 +302,40 @@ $lang['UAM_Error_Using_illegal_flag'] = 'Errore di sintassi! La bandierina d\'in
 
 // --------- Starting below: New or revised $lang ---- from version 2.30.2
 $lang['UAM_RedirToProfile'] = 'Redirect alla pagina di configurazione';
-$lang['UAM_GTAutoGp'] = 'Cambio automatico di gruppi/stato/livello privacy';
-$lang['UAM_GTAutoMail'] = 'Invia automaticamente una mail al cambio di gruppo/stato/livello privacy';
+$lang['UAM_GTAutoGp'] = 'Cambio automatico di gruppi / stato / livello privacy';
+$lang['UAM_GTAutoMail'] = 'Invia automaticamente una mail al cambio di gruppo / stato / livello privacy';
 // --------- End: New or revised $lang ---- from version 2.30.2
 $lang['UAM %d user pwdreseted'] = 'Rinnovo password richiesto per %d utente';
 $lang['UAM %d users pwdreseted'] = 'Rinnovo password richiesto per %d utenti';
 $lang['UAM_Admins cannot be pwdreset'] = 'Il rinnovo della password non può essere impostato per gli account amministratori!';
 $lang['UAM_Bad_version_backup'] = 'La versione del file di backup non corrisponde alla versione del plugin! Il ripristino non verrà effettuato.';
-$lang['UAM_Confirm_Level'] = 'Livello della privacy<br>(lascia ------- per mantenere il default di Piwigo)';
-$lang['UAM_Default user cannot be pwgreset'] = 'Il rinnovo della password non può essere impostato per l\'account default!';
+$lang['UAM_Confirm_Level'] = 'Livello della privacy<br>(lascia ------- per mantenere il predefinito di Piwigo)';
+$lang['UAM_Default user cannot be pwgreset'] = 'Rinnovo della password non può essere impostato per l\'account utente predefinito!';
 $lang['UAM_Default_AdminValidation_Txt'] = 'Ciao [username]! Grazie per esserti registrato a [mygallery].
 Il tuo account è stato attivato manualmente dal webmaster di [mygallery]. Puoi ora eseguire il login a [myurl] e modificare il tuo profilo.';
-$lang['UAM_Default_CfmMail_Custom_Txt1'] = 'Benvenuto [username]! Hai confermato che sei una persona e puoi ora usare [mygallery]!';
-$lang['UAM_Default_CfmMail_Custom_Txt2'] = 'La tua chiave di attivazione è errata o hai già confermato il tuo account, per favore contatta il webmaster per risolvere il problema.';
+$lang['UAM_Default_CfmMail_Custom_Txt1'] = '[username] account convalidato correttamente!';
+$lang['UAM_Default_CfmMail_Custom_Txt2'] = 'La tua chiave di attivazione è errata / scaduta oppure hai già confermato il tuo account.';
 $lang['UAM_Default_CfmMail_Remail_Txt1'] = 'Ciao [username].
+
+Questo è un messaggio di promemoria perché ti sei registrato sulla nostra galleria [mygallery] ma non hai ancora confermato la registrazione e la chiave di conferma è scaduta. Per consentirti comunque di accedere alla nostra galleria, il periodo di conferma è stato resettato. Ci sono ancora x giorni per confermare la registrazione.
+
+NB: Dopo questo periodo, il tuo account verrà permanentemente eliminato.';
 
 Questo è un reminder poichè ti sei registrato su [mygallery] ma non hai ancora confermato la registrazione e la chiave di conferma è scaduta. Per permetterti l\'accesso alla galleria, il tuo periodo di conferma è stato resettato. Hai ancora x giorni per confermare la tua registrazione.
 
 NB: Dopo questo periodo, il tuo account verrà permanentemente eliminato.';
 $lang['UAM_Default_CfmMail_Remail_Txt2'] = 'Ciao [username].
 
+Questo è un messaggio di promemoria perché ti sei registrato sulla nostra galleria [mygallery] ma non hai ancora confermato la registrazione e la chiave di conferma è scaduta. Per permetterti l\'accesso alla galleria, hai ancora x giorni per confermare la tua registrazione cliccando sul link del messaggio che dovresti aver ricevuto quando ti sei registrato.
+
+NB: Dopo questo periodo, il tuo account verrà permanentemente eliminato.';
+
 Questo è un reminder poichè ti sei registrato su [mygallery] ma non hai ancora confermato la registrazione e la chiave di conferma sta per scadere. Per permetterti l\'accesso alla galleria, hai ancora x giorni per confermare la tua registrazione cliccando sul link del messaggio che hai ricevuto quando ti sei registrato.
 
 NB: Dopo questo periodo, il tuo account verrà permanentemente eliminato.';
-$lang['UAM_Default_ConfirmMail_Txt'] = 'Ciao [username]! Grazie per esserti registrato su [mygallery]
+$lang['UAM_Default_ConfirmMail_Txt'] = 'Ciao [username]! Grazie per esserti registrato su [mygallery].
+
 Per completare la procedura e poter vedere le immagini, conferma la tua registrazione cliccando nel link contenuto in questo messaggio.';
-$lang['UAM_Default_GhstDeletion_Txt'] = 'Siamo spiacenti [username], il tuo account è stato eliminato a causa del lungo tempo trascorso dall\'ultima visita a [mygallery].
-Per favore registrati nuovamente';
-$lang['UAM_Default_GhstDemotion_Txt'] = 'Siamo spiacenti [username], il tuo account è stato eliminato a causa del lungo tempo trascorso dalla tua ultima visita a [mygallery].
-Usa il link sottostante per riconfermare il tuo account';
-$lang['UAM_Default_GhstReminder_Txt'] = 'Ciao [username].
-
-Questo è un reminder poichè è trascorso diverso tempo dal tuo ultimo accesso alla nostra galleria [mygallery]. Se non vuoi più usare questo account, segnalacelo rispondendo a questa mail. Il tuo account verrà cancellato.
-
-Alla ricezione di questo messaggio e non ricevendo altre visite entro [days] giorni, saremo obbligati a cancellare l\'account.
-
-Distinti saluti,
 L\'amministratore della galleria [mygallery] - [myurl]
 Alla ricezione di questo messaggio e non ricevendo altre visite entro [days] giorni, saremo obbligati a cancellare l\'account.
 
@@ -345,11 +343,13 @@ Distinti saluti,
 l\'amministratore della galleria [mygallery] - [myurl]';
 $lang['UAM_Default_InfoMail_Txt'] = 'Ciao [username]!
 
+Sono state apportate modifiche significative nel tuo profilo sulla galleria [mygallery]. Per favore, trovare sotto le nuove impostazioni:';
+
 Sono state apportate modifiche significative nel tuo profilo sul gallery [mygallery]. Ti prego di trovare di seguito le nuove impostazioni:';
 
-$lang['UAM_Default_PwdRequest_Txt'] = 'Hai richiesto il rinnovo della password. Qui sotto trovi i nuovi dati di connessione';
-$lang['UAM_Default_RejectConnexion_Txt'] = 'Siamo spiacenti, non hai ancora confermato la registrazione, perciò non ti puoi connettere ora alla galleria. Controlla la tua casella mail. Dovresti trovare una mail inviata dalla galleria, contenente un link per eseguire la conferma. Se non la trovi, contatta il webmaster.';
-$lang['UAM_Default_ValidationTimeout_Txt'] = 'Siamo spiacenti, il tuo account è stato eliminato poichè non hai confermato la registrazione nel tempo richiesto ([Kdays] days). Riprova la registrazione con un account mail valido';
+$lang['UAM_Default_PwdRequest_Txt'] = 'Hai richiesto il rinnovo della password. Qui sotto trovi i nuovi dati di connessione.';
+$lang['UAM_Default_RejectConnexion_Txt'] = 'Spiacente, la tua registrazione non è ancora convalidata, quindi non puoi collegarti alla galleria ora.';
+$lang['UAM_Default_ValidationTimeout_Txt'] = 'Siamo spiacenti, il tuo account è stato eliminato poichè non hai confermato la registrazione nel tempo richiesto ([Kdays] days). Si prega di riprovare la registrazione con un account valido e una email non bloccata.';
 $lang['UAM_Error_Using_illegal_Kdays'] = 'L\'uso del tag [Kdays] è permesso solo se è attivata la scadenza per la conferma della registrazione. Controlla il testo in rosso per correggere il problema.';
 $lang['UAM_Expired_Level'] = '<b>Il livello di privacy</b> per la registrazione degli utenti  è scaduto<br>';
 $lang['UAM_Generic cannot be pwdreset'] = 'Il rinnovo della password non può essere impostato per gli account generici!';
@@ -380,13 +380,13 @@ $lang['UAM_Valid_Level'] = 'Livello privacy per gli utenti che hanno confermato 
 $lang['UAM_Webmaster cannot be pwdreset'] = 'Il rinnovo della password non può essere impostato per l\'account webmaster!';
 $lang['UAM_You cannot pwdreset your account'] = 'Il rinnovo della password non può essere impostato per il tuo stesso account!';
 $lang['UAM_You need to confirm pwdreset'] = 'Devi confermare il rinnovo della password (spunta la casella)!';
-$lang['UAM_AdminValidationMail_Subject'] = 'Personalizza oggetto della mail di verifica manuale';
-$lang['UAM_ConfirmMail_ReMail_Subject'] = 'Personalizza oggetto della mail di reminder di verifica registrazione';
-$lang['UAM_ConfirmMail_Subject'] = 'Personalizza oggetto della mail di registrazione';
-$lang['UAM_GTAutomail_Subject'] = 'Personalizza oggetto della mail automatica di Ghost Tracker';
+$lang['UAM_AdminValidationMail_Subject'] = 'Personalizzare oggetto della e-mail di convalida manuale';
+$lang['UAM_ConfirmMail_ReMail_Subject'] = 'Personalizza oggetto della mail di promemoria della verifica registrazione';
+$lang['UAM_ConfirmMail_Subject'] = 'Personalizza oggetto della email di registrazione';
+$lang['UAM_GTAutomail_Subject'] = 'Personalizza oggetto della email automatica di Ghost Tracker';
 $lang['UAM_GTReminder_Subject'] = 'Personalizza oggetto della mail di reminder di Ghost Tracker';
 $lang['UAM_Default_AdminValidationMail_Subject'] = '[username] - Registrazione confermata su [mygallery]';
-$lang['UAM_Default_ConfirmMail_Remail_Subject'] = 'Reminder - [username] conferma di registrazione su [mygallery]';
+$lang['UAM_Default_ConfirmMail_Remail_Subject'] = 'Promemoria - [username] conferma di registrazione su [mygallery]';
 $lang['UAM_Default_ConfirmMail_Subject'] = '[username] registrazione confermata su [mygallery]';
 $lang['UAM_Default_GTAutoMail_Subject'] = '[username] - Il tuo account è stato degradato su [mygallery]';
 $lang['UAM_Default_GTReminder_Subject'] = '[username] - E\' passato molto tempo dalla tua ultima visita su [mygallery]';
