@@ -27,11 +27,11 @@ $lang['UAM_No_validation_for_your_account'] = 'Ihre personnal admin-Konto ist ni
 
 
 /* Processing messages */
-$lang['UAM_%d_Mail_With_Key'] = '%d Nachricht mit wichtiger Erneuerung wurde gesendet.';
-$lang['UAM_%d_Mails_With_Key'] = '%d Nachrichten mit den wichtigsten Erneuerung wurden gesendet.';
+$lang['UAM_%d_Mail_With_Key'] = '%d Nachricht mit Passworänderung wurde gesendet.';
+$lang['UAM_%d_Mails_With_Key'] = '%d Nachrichten mit den Passwortänderungen wurden gesendet.';
 $lang['UAM_%d_Reminder_Sent'] = '%d Erinnerungsnachricht wurde gesendet.';
 $lang['UAM_%d_Reminders_Sent'] = '%d Erinnerungsnachrichten wurden gesendet.';
-$lang['UAM_%d_Validated_User'] = '%d Benutzer manuell validiert.';
+$lang['UAM_%d_Validated_User'] = '%d Benutzer wurde manuell validiert.';
 $lang['UAM_%d_Validated_Users'] = 'Die %d Benutzer wurden manuell validiert.';
 
 
@@ -103,7 +103,7 @@ $lang['UAM_Username_Char'] = 'Benutzernamen: Ausschluss von Zeichen';
 $lang['UAM_Username_Char_true'] = ' Zeichen Verboten:<br>(Verwenden Sie ein Komma, um ein Zeichen getrennt)<br><br>';
 $lang['UAM_Username_Char_false'] = ' Erlauben Sie alle (Standard)';
 $lang['UAM_Password_Enforced'] = 'Stärkung des Sicherheitsniveaus von Passwortern';
-$lang['UAM_AdminPassword_Enforced'] = 'Die Anwendung für Administratoren';
+$lang['UAM_AdminPassword_Enforced'] = 'Trifft auch für Administratoren zu.';
 $lang['UAM_PasswordTest'] = 'Passwort testen : ';
 $lang['UAM_ScoreTest'] = 'Ergebnis : ';
 $lang['UAM_MailExclusion'] = 'E-Mail-Domänen Ausgrenzung';
@@ -114,8 +114,8 @@ $lang['UAM_MailInfo_Text'] = ' Anpassen der Informationen per E-Mail:';
 $lang['UAM_Confirm_Mail'] = 'Bestätigung der Anmeldung:';
 $lang['UAM_ConfirmMail_Text'] = ' Anpassen der E-Mail-Bestätigung';
 $lang['UAM_Confirm_grpstat_notice'] = 'Achtung: Es ist ratsam, entweder die Gruppe oder die Validierung Satzung und nicht beide gleichzeitig.';
-$lang['UAM_Confirm_Group'] = 'Validation Gruppen<br>(verlassen ------- zum nicht zu beeinträchtigen Gruppe)';
-$lang['UAM_Confirm_Status'] = 'Validation Satzung<br>(verlassen ------- ein Versäumnis des Piwigo zu halten)';
+$lang['UAM_Confirm_Group'] = 'Bestätigte Gruppen<br>(unverändert lassen ------- um nicht die Gruppe zu verändern)';
+$lang['UAM_Confirm_Status'] = 'Regeln<br>(------- unverändert lassen, um Piwigo-Standard zu erhalten)';
 $lang['UAM_No_Confirm_Group'] = 'Gruppe für Benutzer, die nicht validiert ihrer Eintragung<br>';
 $lang['UAM_Validated_Group'] = 'Gruppe für Benutzer, die ihre Anmeldung bestätigt<br>';
 $lang['UAM_No_Confirm_Status'] = 'Status für Benutzer, die nicht validiert ihrer Eintragung<br>';
@@ -123,8 +123,8 @@ $lang['UAM_Validated_Status'] = 'Status für Benutzer, die ihre Anmeldung bestä
 $lang['UAM_ValidationLimit_Info'] = 'Anmeldeschluss Validierung beschränkt';
 $lang['UAM_ConfirmMail_TimeOut_true'] = ' Aktivieren. Anzahl der Tage bis zum Ablauf: ';
 $lang['UAM_ConfirmMail_Remail'] = 'Unbestätigte Benutzer erinnern.';
-$lang['UAM_ConfirmMail_ReMail_Txt1'] = 'Anpassen der Erinnerungs-Nachricht <b><u>mit</u></b> neue Regeneration der Schlüssel Validierung.';
-$lang['UAM_ConfirmMail_ReMail_Txt2'] = 'Anpassen der Erinnerungs-Nachricht <b><u>ohne</u></b> neue Regeneration der Schlüssel Validierung.';
+$lang['UAM_ConfirmMail_ReMail_Txt1'] = 'Anpassen der Erinnerungs-Nachricht <b><u>mit</u></b> Neuerstellung des Schlüssels zur Validierung.';
+$lang['UAM_ConfirmMail_ReMail_Txt2'] = 'Anpassen der Erinnerungs-Nachricht <b><u>ohne</u></b> Neuerstellung des Schlüssels zur Validierung.';
 
 $lang['UAM_GhostTracker'] = 'Geist Besucher-Management (Geist Tracker)';
 $lang['UAM_GhostTracker_true'] = ' Aktivieren. Maximale Zeit in Tagen zwischen zwei Besuche: ';
@@ -150,7 +150,7 @@ $lang['UAM_Err_Userlist_Settings'] = 'Diese Seite ist nur verfügbar, wenn &quot
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.14.0
-$lang['UAM_AdminConfMail'] = 'Bestätigung der Anmeldung für Administratoren';
+$lang['UAM_AdminConfMail'] = 'Bestätigung der Anmeldung für Administratoren.';
 // --------- End: New or revised $lang ---- from version 2.14.0
 
 
@@ -172,8 +172,8 @@ Ebenfalls erhältlich, das Projekt Bugtracker: <a href="http://piwigo.org/bugs/"
 
 // --------- Starting below: New or revised $lang ---- from version 2.15.4
 $lang['UAM_Manual_Validation'] = 'Handbuch Validierung';
-$lang['UAM_Confirm_Mail_true'] = ' Aktivieren - Validation von Benutzer';
-$lang['UAM_Confirm_Mail_local'] = ' Aktivieren - Validation von admin';
+$lang['UAM_Confirm_Mail_true'] = ' Aktiviere - Bestätigung durch Benutzer';
+$lang['UAM_Confirm_Mail_local'] = ' Aktiviere - Bestätigung durch Administrator';
 // --------- End: New or revised $lang ---- from version 2.15.4
 
 
@@ -186,7 +186,7 @@ $lang['UAM_Error_GTAutoMail_cannot_be_set_without_ConfirmMail'] = 'Konsistenz-Fe
 "Einstellen der Registrierung durchgeführt und andere Optionen > Geist Besucher-Management (Geist Tracker) > Automatische Verwaltung von Geist Benutzern > Automatisches Versenden einer E-Mail beim Wechsel Gruppe / Status" kann nicht aktiviert werden, wenn "Einstellen Bestätigungen und Validierungen der Registrierung > Bestätigung der Anmeldung - Validation von Benutzer" ist zunächst nicht aktiviert.<br><br>
 Um die Kohärenz, die Option "Automatisches Versenden einer E-Mail beim Wechsel Gruppe / Status" wurde automatisch "deaktiviert" neu positioniert.<br><br>';
 $lang['UAM_Demotion of %s'] = 'Herabstufung von %s';
-$lang['UAM_AdminValidationMail_Text'] = 'Mitteilung der manuellen Registrierung Validierung';
+$lang['UAM_AdminValidationMail_Text'] = 'Mitteilung über manuelle Bestätigung der Registrierung.';
 $lang['UAM_Validation of %s'] = 'Validierung von %s';
 // --------- End: New or revised $lang ---- from version 2.16.0
 
@@ -297,9 +297,9 @@ B. Im plugin Additional Pages:<br>
           </ul>';
 $lang['UAM %d user pwdreseted'] = 'Passwortänderung für %d Benutzer erforderlich.';
 $lang['UAM %d users pwdreseted'] = 'Passwortänderungen für %d Benutzer erforderlich.';
-$lang['UAM_Admins cannot be pwdreset'] = 'Passwort erneuern kann nicht für Administratoren gesetzt werden.';
+$lang['UAM_Admins cannot be pwdreset'] = 'Passwortänderung kann nicht für Administratorenkonten gesetzt werden.';
 $lang['UAM_Bad_version_backup'] = 'Die Version der Backup-Datei entspricht nicht der Version des Plugins! Die Wiederherstellung wurde nicht durchgeführt.';
-$lang['UAM_Confirm_Level'] = 'Datenschutz Niveau<br>(------- verlassen, um die Piwigo der Standard zu halten)';
+$lang['UAM_Confirm_Level'] = 'Datenschutz Niveau<br>(------- unverändert lassen, um Piwigo-Standard zu erhalten)';
 $lang['UAM_Default user cannot be pwgreset'] = 'Passwort erneuern kann nicht für Standard-Benutzer eingestellt werden!';
 $lang['UAM_Default_AdminValidation_Txt'] = 'Hallo [username]! Danke für die Registrierung und willkommen bei [mygallery].
 
@@ -373,7 +373,7 @@ $lang['UAM_Tracking registered users'] = 'Verfolgung registrierte Benutzer';
 $lang['UAM_USRAutoDel'] = 'Nachricht an das automatische Löschen von Konten';
 $lang['UAM_USRAutoMail'] = 'Automatisierte E-Mail-Erinnerung';
 $lang['UAM_AdminValidationMail_Subject'] = 'Manuelle Anpassung des Betreffs der Überprüfungs-E-Mail';
-$lang['UAM_ConfirmMail_ReMail_Subject'] = 'Anpassung des Betreffs der Registrierungs-Bestätigungs-Erinnerungs-E-Mail';
+$lang['UAM_ConfirmMail_ReMail_Subject'] = 'Anpassung des Betreffs der Registrierungs-Bestätigungs-Erinnerungs-E-Mail.';
 $lang['UAM_ConfirmMail_Subject'] = 'Anpassung des Betreffs der Registrierungs-Bestätigungs-E-Mail';
 $lang['UAM_Default_AdminValidationMail_Subject'] = '[username] - Registration Überprüfung an [mygallery]';
 $lang['UAM_Default_ConfirmMail_Remail_Subject'] = 'Erinnerung - [username] Registrierung-Bestättigung an [mygallery]';
@@ -391,6 +391,6 @@ Bitte reaktivieren Sie die Piwigo Option "e-Mail-Adresse ist obligatorisch für 
 Hinweis: Diese Meldung verschwindet, nachdem Sie die notwendige Korrektur vorgenommen haben und die Admin Seite neu geladen wurde. <br> <br>';
 $lang['UAM_Manual_validation_needed_for %s'] = 'Der Benutzer% s registriert hat und wartet auf ein Admin-Handbuch Validierung.';
 $lang['UAM_Subject admin validation for %s'] = 'Registrierung von% s wartet auf Validierung';
-$lang['UAM_Change'] = 'Ändere die Gruppe/den Status/die Privatsphäre des Benutzers der bestätigt wurde';
+$lang['UAM_Change'] = 'Ändere die Gruppe/den Status/die Privatsphäre des Benutzers der bestätigt wurde.';
 $lang['UAM_Customize_messagesandmails'] = 'Personalisiere die Nachricht und Email';
 ?>
