@@ -113,7 +113,7 @@ $lang['UAM_Mail_Info'] = 'Informationen E-Mail an Benutzer:';
 $lang['UAM_MailInfo_Text'] = ' Anpassen der Informationen per E-Mail:';
 $lang['UAM_Confirm_Mail'] = 'Bestätigung der Anmeldung:';
 $lang['UAM_ConfirmMail_Text'] = ' Anpassen der E-Mail-Bestätigung';
-$lang['UAM_Confirm_grpstat_notice'] = 'Achtung: Es ist ratsam, entweder die Gruppe oder die Validierung Satzung und nicht beide gleichzeitig.';
+$lang['UAM_Confirm_grpstat_notice'] = 'Achtung: Es wird empfohlen, entweder die Gruppe oder die Regeln zu ändern und nicht beides gleichzeitig. Die Sicherheit des Datenschutzes kann mit der Gruppen- und/oder Status-Zuweisung erfolgen.';
 $lang['UAM_Confirm_Group'] = 'Bestätigte Gruppen<br>(unverändert lassen ------- um nicht die Gruppe zu verändern)';
 $lang['UAM_Confirm_Status'] = 'Regeln<br>(------- unverändert lassen, um Piwigo-Standard zu erhalten)';
 $lang['UAM_No_Confirm_Group'] = 'Gruppe für Benutzer, die nicht validiert ihrer Eintragung<br>';
@@ -300,17 +300,30 @@ $lang['UAM %d users pwdreseted'] = 'Passwortänderungen für %d Benutzer erforde
 $lang['UAM_Admins cannot be pwdreset'] = 'Passwortänderung kann nicht für Administratorenkonten gesetzt werden.';
 $lang['UAM_Bad_version_backup'] = 'Die Version der Backup-Datei entspricht nicht der Version des Plugins! Die Wiederherstellung wurde nicht durchgeführt.';
 $lang['UAM_Confirm_Level'] = 'Datenschutz Niveau<br>(------- unverändert lassen, um Piwigo-Standard zu erhalten)';
-$lang['UAM_Default user cannot be pwgreset'] = 'Passwort erneuern kann nicht für Standard-Benutzer eingestellt werden!';
-$lang['UAM_Default_AdminValidation_Txt'] = 'Hallo [username]! Danke für die Registrierung und willkommen bei [mygallery].
+$lang['UAM_Default user cannot be pwgreset'] = 'Passwort-Änderung kann nicht für den Standard-Benutzer eingestellt werden!';
+$lang['UAM_Default_AdminValidation_Txt'] = 'Hallo [username]! 
 
-Ihr Konto wurde manuell durch den Webmaster von [mygallery] bestätigt. Sie können sich jetzt anmelden unter [myurl] und nehmen alle erforderlichen Änderungen an Ihrem Profil.';
-$lang['UAM_Default_CfmMail_Custom_Txt1'] = 'Willkommen [username]! Sie haben best';
-$lang['UAM_Default_CfmMail_Custom_Txt2'] = 'Ihr Aktivierungscode ist falsch oder abgelaufen oder haben Sie schon Ihren Account bestätigt, kontaktieren Sie bitte den Webmaster, um dieses Problem zu beheben.';
+Danke für die Registrierung und willkommen bei [mygallery].
+
+Ihr Konto wurde manuell durch den Webmaster von [mygallery] bestätigt. Sie können sich jetzt anmelden unter [myurl] und eventuelle Profiländerung durchführen.';
+$lang['UAM_Default_CfmMail_Custom_Txt1'] = 'Willkommen [username]! 
+
+Ihr Konto wurde erfolgreich bestätigt.';
+$lang['UAM_Default_CfmMail_Custom_Txt2'] = 'Ihr Aktivierungscode ist falsch oder abgelaufen oder das Konto wurde schon bestätigt.
+
+Kontaktieren Sie bitte den Webmaster, um dieses Problem zu beheben.';
 $lang['UAM_Default_CfmMail_Remail_Txt1'] = 'Hallo [username].
 
-Dies ist eine Erinnerung Nachricht, weil Sie auf unserer Galerie registriert [mygallery] aber nicht bestätigen Ihre Anmeldung und Ihre Bestätigung Schlüssel abgelaufen ist. Um noch können Sie in unserer Galerie zuzugreifen, hat Ihre Bestätigung Zeitraum wurden zurückgesetzt. Sie haben wieder x Tage, um Ihre Registrierung zu bestätigen.
+Dies ist eine Erinnerungs Nachricht. 
 
-Hinweis: Nach Ablauf dieses Zeitraums wird Ihr Konto dauerhaft gelöscht.';
+Sie haben sich auf unserer Galerie [mygallery] angemeldet, aber leider die Registrierung noch nicht abgeschlossen und Ihr Bestätigungsschlüssel ist abgelaufen.
+
+Der Bestätigungszeitraum wurde zurückgesetzt, um Ihnen weiterhin Zugang zu der Galerie zu ermöglichen.
+
+Sie haben wieder x Tage, die Registrierung zu bestätigen.
+
+Hinweis: Nach Ablauf dieses Zeitraums wird Ihr Konto dauerhaft gelöscht.
+';
 $lang['UAM_Default_CfmMail_Remail_Txt2'] = 'Hallo [username].
 
 Dies ist eine Erinnerung Nachricht, weil Sie auf unserer Galerie registriert [mygallery] aber nicht bestätigen Ihre Anmeldung und Ihre Bestätigung Schlüssel abläuft. Damit Sie unsere Galerie zuzugreifen, müssen Sie x Tage, um Ihre Anmeldung durch Klick auf den Link in der Nachricht, die Sie erhalten haben, sollten Sie bei der Registrierung zu bestätigen.
@@ -363,7 +376,7 @@ $lang['UAM_Valid_Level'] = 'Datenschutz Niveau für Anwender, die ihre Anmeldung
 $lang['UAM_Webmaster cannot be pwdreset'] = 'Passwort erneuern können nicht für den Webmaster eingestellt werden!';
 $lang['UAM_You cannot pwdreset your account'] = 'Passwort erneuern können nicht auf eigene Rechnung eingestellt werden!';
 $lang['UAM_You need to confirm pwdreset'] = 'Sie müssen bestätigen, Passwort erneuern (check box)!';
-$lang['UAM_CustomPasswRetr'] = 'Personalisieren den Inhalt von E-Mail für verlorenes Passwort';
+$lang['UAM_CustomPasswRetr'] = 'Anpassen des E-Mail-Inhalts der Passwort-Vergessen-E-Mail.';
 $lang['UAM_Password_Enforced_true'] = 'Aktivieren. Mindestpunktzahl:';
 $lang['UAM_Restore'] = 'Um die Backup-Datei von Ihrer Konfiguration wiederherzustellen. Lediglich die gespeicherte Datei auf dem Server berücksichtigt wird.
 <br><br>
@@ -375,8 +388,8 @@ $lang['UAM_USRAutoMail'] = 'Automatisierte E-Mail-Erinnerung';
 $lang['UAM_AdminValidationMail_Subject'] = 'Manuelle Anpassung des Betreffs der Überprüfungs-E-Mail';
 $lang['UAM_ConfirmMail_ReMail_Subject'] = 'Anpassung des Betreffs der Registrierungs-Bestätigungs-Erinnerungs-E-Mail.';
 $lang['UAM_ConfirmMail_Subject'] = 'Anpassung des Betreffs der Registrierungs-Bestätigungs-E-Mail';
-$lang['UAM_Default_AdminValidationMail_Subject'] = '[username] - Registration Überprüfung an [mygallery]';
-$lang['UAM_Default_ConfirmMail_Remail_Subject'] = 'Erinnerung - [username] Registrierung-Bestättigung an [mygallery]';
+$lang['UAM_Default_AdminValidationMail_Subject'] = '[username] - Registrierung wurde bestätigt bei [mygallery]';
+$lang['UAM_Default_ConfirmMail_Remail_Subject'] = 'Erinnerung - [username] Registrierung-Bestätigung bei [mygallery]';
 $lang['UAM_Default_ConfirmMail_Subject'] = '[username] Registrierung-Bestättigung an [mygallery]';
 $lang['UAM_Default_GTAutoMail_Subject'] = '[username] - Ihr Zugangs-Konto wurde Herabgestuft  [mygallery]';
 $lang['UAM_Default_GTReminder_Subject'] = '[username] - Eine lange Zeit ist seit Ihrem letzten Besuch verganagen [mygallery]';
@@ -392,5 +405,5 @@ Hinweis: Diese Meldung verschwindet, nachdem Sie die notwendige Korrektur vorgen
 $lang['UAM_Manual_validation_needed_for %s'] = 'Der Benutzer% s registriert hat und wartet auf ein Admin-Handbuch Validierung.';
 $lang['UAM_Subject admin validation for %s'] = 'Registrierung von% s wartet auf Validierung';
 $lang['UAM_Change'] = 'Ändere die Gruppe/den Status/die Privatsphäre des Benutzers der bestätigt wurde.';
-$lang['UAM_Customize_messagesandmails'] = 'Personalisiere die Nachricht und Email';
+$lang['UAM_Customize_messagesandmails'] = 'Anpassen der Nachrichten und E-Mails.';
 ?>
