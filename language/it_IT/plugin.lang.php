@@ -320,17 +320,9 @@ $lang['UAM_Default_CfmMail_Remail_Txt1'] = 'Ciao [username].
 Questo è un messaggio di promemoria perché ti sei registrato sulla nostra galleria [mygallery] ma non hai ancora confermato la registrazione e la chiave di conferma è scaduta. Per consentirti comunque di accedere alla nostra galleria, il periodo di conferma è stato resettato. Ci sono ancora x giorni per confermare la registrazione.
 
 NB: Dopo questo periodo, il tuo account verrà permanentemente eliminato.';
-
-Questo è un reminder poichè ti sei registrato su [mygallery] ma non hai ancora confermato la registrazione e la chiave di conferma è scaduta. Per permetterti l\'accesso alla galleria, il tuo periodo di conferma è stato resettato. Hai ancora x giorni per confermare la tua registrazione.
-
-NB: Dopo questo periodo, il tuo account verrà permanentemente eliminato.';
 $lang['UAM_Default_CfmMail_Remail_Txt2'] = 'Ciao [username].
 
 Questo è un messaggio di promemoria perché ti sei registrato sulla nostra galleria [mygallery] ma non hai ancora confermato la registrazione e la chiave di conferma è scaduta. Per permetterti l\'accesso alla galleria, hai ancora x giorni per confermare la tua registrazione cliccando sul link del messaggio che dovresti aver ricevuto quando ti sei registrato.
-
-NB: Dopo questo periodo, il tuo account verrà permanentemente eliminato.';
-
-Questo è un reminder poichè ti sei registrato su [mygallery] ma non hai ancora confermato la registrazione e la chiave di conferma sta per scadere. Per permetterti l\'accesso alla galleria, hai ancora x giorni per confermare la tua registrazione cliccando sul link del messaggio che hai ricevuto quando ti sei registrato.
 
 NB: Dopo questo periodo, il tuo account verrà permanentemente eliminato.';
 $lang['UAM_Default_ConfirmMail_Txt'] = 'Ciao [username]! Grazie per esserti registrato su [mygallery].
@@ -344,8 +336,6 @@ l\'amministratore della galleria [mygallery] - [myurl]';
 $lang['UAM_Default_InfoMail_Txt'] = 'Ciao [username]!
 
 Sono state apportate modifiche significative nel tuo profilo sulla galleria [mygallery]. Per favore, trovare sotto le nuove impostazioni:';
-
-Sono state apportate modifiche significative nel tuo profilo sul gallery [mygallery]. Ti prego di trovare di seguito le nuove impostazioni:';
 
 $lang['UAM_Default_PwdRequest_Txt'] = 'Hai richiesto il rinnovo della password. Qui sotto trovi i nuovi dati di connessione.';
 $lang['UAM_Default_RejectConnexion_Txt'] = 'Spiacente, la tua registrazione non è ancora convalidata, quindi non puoi collegarti alla galleria ora.';
