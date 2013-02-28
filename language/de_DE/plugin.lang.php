@@ -311,7 +311,7 @@ $lang['UAM_Default_CfmMail_Custom_Txt1'] = 'Willkommen [username]!
 Ihr Konto wurde erfolgreich bestätigt.';
 $lang['UAM_Default_CfmMail_Custom_Txt2'] = 'Ihr Aktivierungscode ist falsch oder abgelaufen oder das Konto wurde schon bestätigt.
 
-Kontaktieren Sie bitte den Webmaster, um dieses Problem zu beheben.';
+Kontaktieren Sie eventuell bitte den Webmaster, um dieses Problem zu beheben.';
 $lang['UAM_Default_CfmMail_Remail_Txt1'] = 'Hallo [username].
 
 Dies ist eine Erinnerungs Nachricht. 
@@ -326,17 +326,33 @@ Hinweis: Nach Ablauf dieses Zeitraums wird Ihr Konto dauerhaft gelöscht.
 ';
 $lang['UAM_Default_CfmMail_Remail_Txt2'] = 'Hallo [username].
 
-Dies ist eine Erinnerung Nachricht, weil Sie auf unserer Galerie registriert [mygallery] aber nicht bestätigen Ihre Anmeldung und Ihre Bestätigung Schlüssel abläuft. Damit Sie unsere Galerie zuzugreifen, müssen Sie x Tage, um Ihre Anmeldung durch Klick auf den Link in der Nachricht, die Sie erhalten haben, sollten Sie bei der Registrierung zu bestätigen.
+Dies ist eine Erinnerungs Nachricht. 
+
+Sie haben sich auf unserer Galerie [mygallery] angemeldet, aber leider die Registrierung noch nicht abgeschlossen und Ihr Bestätigungsschlüssel wird bald ungültig.
+
+Um Ihnen weiterhin Zugang zu der Galerie zu ermöglichen, 
+haben Sie wieder x Tage, durch klick auf den Link in der Nachricht, die Sie erhalten haben, die Registrierung zu bestätigen.
 
 Hinweis: Nach Ablauf dieses Zeitraums wird Ihr Konto dauerhaft gelöscht.';
-$lang['UAM_Default_ConfirmMail_Txt'] = 'Hallo [username]! Wir danken Ihnen, auf [mygallery] haben registrieren lassen.
 
-Um den Vorgang abzuschlie';
-$lang['UAM_Default_GhstDeletion_Txt'] = 'Leider [username], Ihr Konto wurde aufgrund einer zu langen Zeit seit Ihrem letzten Besuch am [mygallery] weitergegeben gel';
-$lang['UAM_Default_GhstDemotion_Txt'] = 'Leider [username], Ihr Konto wurde aufgrund einer zu langen Zeit seit Ihrem letzten Besuch am [mygallery] weitergegeben wurde verworfen. Bitte benutzen Sie den folgenden Link, um Ihr Konto zu bestätigen:';
+Hinweis: Nach Ablauf dieses Zeitraums wird Ihr Konto dauerhaft gelöscht.';
+$lang['UAM_Default_ConfirmMail_Txt'] = 'Hallo [username]! 
+
+Wir danken Ihnen für die Registrierung auf [mygallery].
+
+Um den Vorgang abzuschliessen und durch die Bilder blättern zu können, bitten wir Sie noch Ihre Registrierung durch anklicken des Links in dieser Nachricht zu bestätigen. ';
+$lang['UAM_Default_GhstDeletion_Txt'] = 'Leider [username], Ihr Konto wurde auf Grund einer zu langen Zeit seit Ihrem letzten Besuch bei [mygallery] gelöscht. Bitte registrieren Sie sich erneut.';
+$lang['UAM_Default_GhstDemotion_Txt'] = 'Leider [username], Ihr Konto wurde auf Grund einer zu langen Zeit seit Ihrem letzten Besuchs am [mygallery] deaktiviert. Bitte benutzen Sie den folgenden Link, um Ihr Konto zu bestätigen:';
 $lang['UAM_Default_GhstReminder_Txt'] = 'Hallo [username].
 
-Dies ist eine Erinnerung, weil eine sehr lange Zeit vergangen, seit Ihrem letzten Besuch auf unserer Galerie [mygallery]. Wenn Sie nicht mehr tun wollen Ihren Zugang Konto verwenden, informieren Sie uns bitte durch eine Beantwortung dieser E-Mail. Ihr Konto wird gel';
+Dies ist eine Erinnerung, da eine sehr lange Zeit seit Ihrem letzten Besuch auf unserer Galerie [mygallery] vergangen ist. Wenn Sie Ihr Zugang Konto nicht mehr verwenden möchten, informieren Sie uns bitte durch eine Beantwortung dieser E-Mail. Ihr Konto wird dann gelöscht.
+
+Mit Empfang dieser Nachricht und keinem erneutem Login haben Sie noch [days] Tage Zeit, ansonsten wird Ihr Konto automatisch gelöscht.
+
+mit freundlichen Grüssen
+
+Der Administrator der Galerie 
+[mygallery] - [myurl]';
 $lang['UAM_Default_InfoMail_Txt'] = 'Hallo [username]!
 
 Sie haben wesentliche Veränderungen in Ihrem Profil auf der Galerie [mygallery]. Bitte, finden Sie die neuen Einstellungen:';
@@ -390,10 +406,10 @@ $lang['UAM_ConfirmMail_ReMail_Subject'] = 'Anpassung des Betreffs der Registrier
 $lang['UAM_ConfirmMail_Subject'] = 'Anpassung des Betreffs der Registrierungs-Bestätigungs-E-Mail';
 $lang['UAM_Default_AdminValidationMail_Subject'] = '[username] - Registrierung wurde bestätigt bei [mygallery]';
 $lang['UAM_Default_ConfirmMail_Remail_Subject'] = 'Erinnerung - [username] Registrierung-Bestätigung bei [mygallery]';
-$lang['UAM_Default_ConfirmMail_Subject'] = '[username] Registrierung-Bestättigung an [mygallery]';
-$lang['UAM_Default_GTAutoMail_Subject'] = '[username] - Ihr Zugangs-Konto wurde Herabgestuft  [mygallery]';
-$lang['UAM_Default_GTReminder_Subject'] = '[username] - Eine lange Zeit ist seit Ihrem letzten Besuch verganagen [mygallery]';
-$lang['UAM_Default_InfoMail_Subject'] = '[username] - Ihre Registrierung-Information an [mygallery]';
+$lang['UAM_Default_ConfirmMail_Subject'] = '[username] Registrierungbestätigung bei [mygallery]';
+$lang['UAM_Default_GTAutoMail_Subject'] = '[username] - Ihr Zugangs-Konto bei [mygallery] wurde herabgestuft';
+$lang['UAM_Default_GTReminder_Subject'] = '[username] - Eine lange Zeit ist seit Ihrem letzten Besuch bei [mygallery] vergangen';
+$lang['UAM_Default_InfoMail_Subject'] = '[username] - Ihre Registrierung-Information für [mygallery]';
 $lang['UAM_GTAutomail_Subject'] = 'Automatische Anpassung des Betreffs der Ghost-Tracker-Herabstufungs-E-Mail';
 $lang['UAM_GTAutomail_Text'] = 'Anpassen des Herabstufens E-Mail Text';
 $lang['UAM_GTReminder_Subject'] = 'Manuelle Anpassung des Betreffs der Ghost-Tracker-Erinnerungs-E-Mail';
