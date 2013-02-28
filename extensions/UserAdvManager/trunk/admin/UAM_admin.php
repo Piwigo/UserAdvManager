@@ -178,7 +178,7 @@ switch ($page['tab'])
 
     // Check if [Kdays] flag is used in a legal way (ConfirmMail Time out have to be set)
     // ----------------------------------------------------------------------------------
-    if (isset($conf_UAM_ConfirmMail[0]) and $conf_UAM_ConfirmMail[0] == 'false' and preg_match('#\[Kdays\]#i',$_POST['UAM_ConfirmMail_Text']) != 0)
+    if (isset($conf_UAM_ConfirmMail['CONFIRMMAIL_TIMEOUT']) and $conf_UAM_ConfirmMail['CONFIRMMAIL_TIMEOUT'] == 'false' and preg_match('#\[Kdays\]#i',$_POST['UAM_ConfirmMail_Text']) != 0)
     {
       $UAM_Illegal_Flag_Error1 = true;
       array_push($page['errors'], l10n('UAM_Error_Using_illegal_Kdays'));
@@ -186,59 +186,57 @@ switch ($page['tab'])
 
     // Save global UAM configuration
     // -----------------------------
-    $newconf_UAM = array(
-      $_POST['UAM_Mail_Info'],
-      $_POST['UAM_Confirm_Mail'],
-      (isset($_POST['UAM_No_Confirm_Group'])?$_POST['UAM_No_Confirm_Group']:''),
-      (isset($_POST['UAM_Validated_Group'])?$_POST['UAM_Validated_Group']:''),
-      (isset($_POST['UAM_Validated_Status'])?$_POST['UAM_Validated_Status']:''),
-      $_POST['UAM_Username_Char'],
-      $_POST['UAM_Username_List'],
-      (isset($_POST['UAM_No_Confirm_Status'])?$_POST['UAM_No_Confirm_Status']:''),
-      $_POST['UAM_MailInfo_Text'],
-      $_POST['UAM_ConfirmMail_Text'],
-      $_POST['UAM_MailExclusion'],
-      $_POST['UAM_MailExclusion_List'],
-      $_POST['UAM_Password_Enforced'],
-      $_POST['UAM_Password_Score'],
-      $_POST['UAM_AdminPassword_Enforced'],
-      $_POST['UAM_GhostUser_Tracker'],
-      $_POST['UAM_GhostTracker_DayLimit'],
-      $_POST['UAM_GhostTracker_ReminderText'],
-      $_POST['UAM_Add_LastVisit_Column'],
-      $_POST['UAM_Admin_ConfMail'],
-      $_POST['UAM_RedirToProfile'],
-      $_POST['UAM_GTAuto'],
-      $_POST['UAM_GTAutoMail'],
-      $_POST['UAM_GTAutoDelText'],
-      $_POST['UAM_GTAutoMailText'],
-      (isset($_POST['UAM_Downgrade_Group'])?$_POST['UAM_Downgrade_Group']:''),
-      (isset($_POST['UAM_Downgrade_Status'])?$_POST['UAM_Downgrade_Status']:''),
-      $_POST['UAM_AdminValidationMail_Text'],
-      $_POST['UAM_CustomPasswRetr'],
-      $_POST['UAM_CustomPasswRetr_Text'],
-      $_POST['UAM_USRAuto'],
-      $_POST['UAM_USRAutoDelText'],
-      $_POST['UAM_USRAutoMail'],
-      $_POST['UAM_Stuffs'],
-      $_POST['UAM_HidePassw'],
-      (isset($_POST['UAM_No_Valid_Level'])?$_POST['UAM_No_Valid_Level']:''),
-      (isset($_POST['UAM_Valid_Level'])?$_POST['UAM_Valid_Level']:''),
-      (isset($_POST['UAM_Downgrade_Level'])?$_POST['UAM_Downgrade_Level']:''),
-      $_POST['UAM_PwdReset'],
-      $_POST['UAM_RejectConnexion'],
-      $_POST['UAM_CustomRejectConnexion_Text'],
-      $_POST['UAM_ConfirmMail_Subject'],
-      $_POST['UAM_ConfirmMail_Remail_Subject'],
-      $_POST['UAM_InfoMail_Subject'],
-      $_POST['UAM_GTAutoMail_Subject'],
-      $_POST['UAM_GTReminder_Subject'],
-      $_POST['UAM_AdminValidationMail_Subject'],
-    );
+    $newconf_UAM['MAIL_INFO'] = (isset($_POST['UAM_Mail_Info']) ? $_POST['UAM_Mail_Info'] : 'false');
+    $newconf_UAM['CONFIRM_MAIL'] = (isset($_POST['UAM_Confirm_Mail']) ? $_POST['UAM_Confirm_Mail'] : 'false');
+    $newconf_UAM['NO_CONFIRM_GROUP'] = (isset($_POST['UAM_No_Confirm_Group']) ? $_POST['UAM_No_Confirm_Group'] : '');
+    $newconf_UAM['VALIDATED_GROUP'] = (isset($_POST['UAM_Validated_Group']) ? $_POST['UAM_Validated_Group'] : '');
+    $newconf_UAM['VALIDATED_STATUS'] = (isset($_POST['UAM_Validated_Status'])?$_POST['UAM_Validated_Status'] : '');
+    $newconf_UAM['USERNAME_CHAR'] = $_POST['UAM_Username_Char'];
+    $newconf_UAM['USERNAME_CHAR_LIST'] = (isset($_POST['UAM_Username_List']) ? $_POST['UAM_Username_List'] : '');
+    $newconf_UAM['NO_CONFIRM_STATUS'] = (isset($_POST['UAM_No_Confirm_Status']) ? $_POST['UAM_No_Confirm_Status'] : '');
+    $newconf_UAM['MAILINFO_TEXT'] = (isset($_POST['UAM_MailInfo_Text']) ? $_POST['UAM_MailInfo_Text'] : l10n('UAM_Default_InfoMail_Txt'));
+    $newconf_UAM['CONFIRMMAIL_TEXT'] = (isset($_POST['UAM_ConfirmMail_Text']) ? $_POST['UAM_ConfirmMail_Text'] : l10n('UAM_Default_ConfirmMail_Txt'));
+    $newconf_UAM['MAILEXCLUSION'] = (isset($_POST['UAM_MailExclusion']) ? $_POST['UAM_MailExclusion'] : 'false');
+    $newconf_UAM['MAILEXCLUSION_LIST'] = (isset($_POST['UAM_MailExclusion_List']) ? $_POST['UAM_MailExclusion_List'] : '');
+    $newconf_UAM['PASSWORDENF'] = (isset($_POST['UAM_Password_Enforced']) ? $_POST['UAM_Password_Enforced'] : 'false');
+    $newconf_UAM['PASSWORD_SCORE'] = (isset($_POST['UAM_Password_Score']) ? $_POST['UAM_Password_Score'] : '100');
+    $newconf_UAM['ADMINPASSWENF'] = (isset($_POST['UAM_AdminPassword_Enforced']) ? $_POST['UAM_AdminPassword_Enforced'] : 'false');
+    $newconf_UAM['GHOSTRACKER'] = (isset($_POST['UAM_GhostUser_Tracker']) ? $_POST['UAM_GhostUser_Tracker'] : 'false');
+    $newconf_UAM['GHOSTRACKER_DAYLIMIT'] = (isset($_POST['UAM_GhostTracker_DayLimit']) ? $_POST['UAM_GhostTracker_DayLimit'] : '10');
+    $newconf_UAM['GHOSTRACKER_REMINDERTEXT'] = (isset($_POST['UAM_GhostTracker_ReminderText']) ? $_POST['UAM_GhostTracker_ReminderText'] : l10n('UAM_Default_GhstReminder_Txt'));
+    $newconf_UAM['ADDLASTVISIT'] = (isset($_POST['UAM_Add_LastVisit_Column']) ? $_POST['UAM_Add_LastVisit_Column'] : 'false');
+    $newconf_UAM['ADMINCONFMAIL'] = (isset($_POST['UAM_Admin_ConfMail']) ? $_POST['UAM_Admin_ConfMail'] : 'false');
+    $newconf_UAM['REDIRTOPROFILE'] = (isset($_POST['UAM_RedirToProfile']) ? $_POST['UAM_RedirToProfile'] : 'false');
+    $newconf_UAM['GTAUTO'] = (isset($_POST['UAM_GTAuto']) ? $_POST['UAM_GTAuto'] : 'false');
+    $newconf_UAM['GTAUTOMAIL'] = (isset($_POST['UAM_GTAutoMail']) ? $_POST['UAM_GTAutoMail'] : 'false');
+    $newconf_UAM['GTAUTODEL'] = (isset($_POST['UAM_GTAutoDelText']) ? $_POST['UAM_GTAutoDelText'] : l10n('UAM_Default_GhstDeletion_Txt'));
+    $newconf_UAM['GTAUTOMAILTEXT'] = (isset($_POST['UAM_GTAutoMailText']) ? $_POST['UAM_GTAutoMailText'] : l10n('UAM_Default_GhstDemotion_Txt'));
+    $newconf_UAM['DOWNGRADE_GROUP'] = (isset($_POST['UAM_Downgrade_Group']) ? $_POST['UAM_Downgrade_Group'] : '');
+    $newconf_UAM['DOWNGRADE_STATUS'] = (isset($_POST['UAM_Downgrade_Status']) ? $_POST['UAM_Downgrade_Status'] : '');
+    $newconf_UAM['ADMINVALIDATIONMAIL'] = (isset($_POST['UAM_AdminValidationMail_Text']) ? $_POST['UAM_AdminValidationMail_Text'] : l10n('UAM_Default_AdminValidation_Txt'));
+    $newconf_UAM['CUSTOMPASSWRETR'] = (isset($_POST['UAM_CustomPasswRetr']) ? $_POST['UAM_CustomPasswRetr'] : 'false');
+    $newconf_UAM['CUSTOMPASSWRETR_TEXT'] = (isset($_POST['UAM_CustomPasswRetr_Text']) ? $_POST['UAM_CustomPasswRetr_Text'] : l10n('UAM_Default_PwdRequest_Txt'));
+    $newconf_UAM['USRAUTO'] = (isset($_POST['UAM_USRAuto']) ? $_POST['UAM_USRAuto'] : 'false');
+    $newconf_UAM['USRAUTODEL'] = (isset($_POST['UAM_USRAutoDelText']) ? $_POST['UAM_USRAutoDelText'] : l10n('UAM_Default_ValidationTimeout_Txt'));
+    $newconf_UAM['USRAUTOMAIL'] = (isset($_POST['UAM_USRAutoMail']) ? $_POST['UAM_USRAutoMail'] : 'false');
+    $newconf_UAM['STUFFS'] = (isset($_POST['UAM_Stuffs']) ? $_POST['UAM_Stuffs'] : 'false');
+    $newconf_UAM['HIDEPASSW'] = (isset($_POST['UAM_HidePassw']) ? $_POST['UAM_HidePassw'] : 'false');
+    $newconf_UAM['NO_VALID_LEVEL'] = (isset($_POST['UAM_No_Valid_Level']) ? $_POST['UAM_No_Valid_Level'] : '');
+    $newconf_UAM['VALID_LEVEL'] = (isset($_POST['UAM_Valid_Level']) ? $_POST['UAM_Valid_Level'] : '');
+    $newconf_UAM['DOWNGRADE_LEVEL'] = (isset($_POST['UAM_Downgrade_Level']) ? $_POST['UAM_Downgrade_Level'] : '');
+    $newconf_UAM['PWDRESET'] = (isset($_POST['UAM_PwdReset']) ? $_POST['UAM_PwdReset'] : 'false');
+    $newconf_UAM['REJECTCONNECT'] = (isset($_POST['UAM_RejectConnexion']) ? $_POST['UAM_RejectConnexion'] : 'false');
+    $newconf_UAM['REJECTCONNECT_TEXT'] = (isset($_POST['UAM_CustomRejectConnexion_Text']) ? $_POST['UAM_CustomRejectConnexion_Text'] : l10n('UAM_Default_RejectConnexion_Txt'));
+    $newconf_UAM['CONFIRMMAIL_SUBJECT'] = (isset($_POST['UAM_ConfirmMail_Subject']) ? $_POST['UAM_ConfirmMail_Subject'] : l10n('UAM_Default_ConfirmMail_Subject'));
+    $newconf_UAM['CONFIRMMAIL_REMAIL_SUBJECT'] = (isset($_POST['UAM_ConfirmMail_Remail_Subject']) ? $_POST['UAM_ConfirmMail_Remail_Subject'] : l10n('UAM_Default_ConfirmMail_Remail_Subject'));
+    $newconf_UAM['INFOMAIL_SUBJECT'] = (isset($_POST['UAM_InfoMail_Subject']) ? $_POST['UAM_InfoMail_Subject'] : l10n('UAM_Default_InfoMail_Subject'));
+    $newconf_UAM['GTAUTOMAIL_SUBJECT'] = (isset($_POST['UAM_GTAutoMail_Subject']) ? $_POST['UAM_GTAutoMail_Subject'] : l10n('UAM_Default_GTAutoMail_Subject'));
+    $newconf_UAM['GTREMINDER_SUBJECT'] = (isset($_POST['UAM_GTReminder_Subject']) ? $_POST['UAM_GTReminder_Subject'] : l10n('UAM_Default_GTReminder_Subject'));
+    $newconf_UAM['ADMINVALIDATIONMAIL_SUBJECT'] = (isset($_POST['UAM_AdminValidationMail_Subject']) ? $_POST['UAM_AdminValidationMail_Subject'] : l10n('UAM_Default_AdminValidationMail_Subject'));
 
     $conf['UserAdvManager'] = serialize($newconf_UAM);
 
-    conf_update_param('UserAdvManager', pwg_db_real_escape_string($conf['UserAdvManager']));
+    conf_update_param('UserAdvManager', pwg_db_real_escape_string($conf['UserAdvManager'])); 
 
     // Email confirmation settings
     // --------------------------
@@ -252,12 +250,12 @@ switch ($page['tab'])
 
     // Check if [Kdays] flag is used in a legal way (ConfirmMail Time out have to be set)
     // ----------------------------------------------------------------------------------
-    if (isset($conf_UAM_ConfirmMail[0]) and $conf_UAM_ConfirmMail[0] == 'false' and preg_match('#\[Kdays\]#i',$_POST['UAM_ConfirmMail_ReMail_Txt1']) == 1)
+    if (isset($conf_UAM_ConfirmMail['CONFIRMMAIL_TIMEOUT']) and $conf_UAM_ConfirmMail['CONFIRMMAIL_TIMEOUT'] == 'false' and preg_match('#\[Kdays\]#i',$_POST['UAM_ConfirmMail_ReMail_Txt1']) == 1)
     {
       $UAM_Illegal_Flag_Error2 = true;
       array_push($page['errors'], l10n('UAM_Error_Using_illegal_flag'));
     }
-    elseif (isset($conf_UAM_ConfirmMail[0]) and $conf_UAM_ConfirmMail[0] == 'false' and preg_match('#\[Kdays\]#i',$_POST['UAM_ConfirmMail_ReMail_Txt2']) == 1)
+    elseif (isset($conf_UAM_ConfirmMail['CONFIRMMAIL_TIMEOUT']) and $conf_UAM_ConfirmMail['CONFIRMMAIL_TIMEOUT'] == 'false' and preg_match('#\[Kdays\]#i',$_POST['UAM_ConfirmMail_ReMail_Txt2']) == 1)
     {
       $UAM_Illegal_Flag_Error3 = true;
       array_push($page['errors'], l10n('UAM_Error_Using_illegal_flag'));
@@ -265,15 +263,13 @@ switch ($page['tab'])
 
     // Save ConfirmMail settings
     // -------------------------
-    $newconf_UAM_ConfirmMail = array (
-      $_POST['UAM_ConfirmMail_TimeOut'],
-      $_POST['UAM_ConfirmMail_Delay'],
-      $_POST['UAM_ConfirmMail_ReMail_Txt1'],
-      $_POST['UAM_ConfirmMail_Remail'],
-      $_POST['UAM_ConfirmMail_ReMail_Txt2'],
-      $_POST['UAM_ConfirmMail_Custom_Txt1'],
-      $_POST['UAM_ConfirmMail_Custom_Txt2']
-    );
+    $newconf_UAM_ConfirmMail['CONFIRMMAIL_TIMEOUT'] = (isset($_POST['UAM_ConfirmMail_TimeOut']) ? $_POST['UAM_ConfirmMail_TimeOut'] : 'false');
+    $newconf_UAM_ConfirmMail['CONFIRMMAIL_DELAY'] = (isset($_POST['UAM_ConfirmMail_Delay']) ? $_POST['UAM_ConfirmMail_Delay'] : '5');
+    $newconf_UAM_ConfirmMail['CONFIRMMAIL_REMAIL_TXT1'] = (isset($_POST['UAM_ConfirmMail_ReMail_Txt1']) ? $_POST['UAM_ConfirmMail_ReMail_Txt1'] : l10n('UAM_Default_CfmMail_Remail_Txt1'));
+    $newconf_UAM_ConfirmMail['CONFIRMMAIL_REMAIL'] = (isset($_POST['UAM_ConfirmMail_Remail']) ? $_POST['UAM_ConfirmMail_Remail'] : 'false');
+    $newconf_UAM_ConfirmMail['CONFIRMMAIL_REMAIL_TXT2'] = (isset($_POST['UAM_ConfirmMail_ReMail_Txt2']) ? $_POST['UAM_ConfirmMail_ReMail_Txt2'] : l10n('UAM_Default_CfmMail_Remail_Txt2'));
+    $newconf_UAM_ConfirmMail['CONFIRMMAIL_CUSTOM_TXT1'] = (isset($_POST['UAM_ConfirmMail_Custom_Txt1']) ? $_POST['UAM_ConfirmMail_Custom_Txt1'] : l10n('UAM_Default_CfmMail_Custom_Txt1'));
+    $newconf_UAM_ConfirmMail['CONFIRMMAIL_CUSTOM_TXT2'] = (isset($_POST['UAM_ConfirmMail_Custom_Txt2']) ? $_POST['UAM_ConfirmMail_Custom_Txt2'] : l10n('UAM_Default_CfmMail_Custom_Txt2'));
 
     $conf['UserAdvManager_ConfirmMail'] = serialize($newconf_UAM_ConfirmMail);
 
@@ -362,17 +358,17 @@ ORDER BY name ASC
   {
     $groups[$row['id']] = $row['name'];
     //configuration value for unvalidated users
-    if (isset($conf_UAM[2]) and $conf_UAM[2] == $row['id'])
+    if (isset($conf_UAM['NO_CONFIRM_GROUP']) and $conf_UAM['NO_CONFIRM_GROUP'] == $row['id'])
     {
       $No_Valid = $row['id'];
     }
     //configuration value for validated users
-    if (isset($conf_UAM[3]) and $conf_UAM[3] == $row['id'])
+    if (isset($conf_UAM['VALIDATED_GROUP']) and $conf_UAM['VALIDATED_GROUP'] == $row['id'])
     {
       $Valid = $row['id'];
     }
     //configuration value for downgrade users
-    if (isset($conf_UAM[25]) and $conf_UAM[25] == $row['id'])
+    if (isset($conf_UAM['DOWNGRADE_GROUP']) and $conf_UAM['DOWNGRADE_GROUP'] == $row['id'])
     {
       $Downgrade = $row['id'];
     }
@@ -420,7 +416,7 @@ ORDER BY name ASC
   foreach (get_enums(USER_INFOS_TABLE, 'status') as $status)
   {
 	  $status_options[$status] = l10n('user_status_'.$status);
-	  if (isset($conf_UAM[7]) and $conf_UAM[7] == $status)
+	  if (isset($conf_UAM['NO_CONFIRM_STATUS']) and $conf_UAM['NO_CONFIRM_STATUS'] == $status)
 	  {
 	    $No_Valid_Status = $status;
 	  }
@@ -441,7 +437,7 @@ ORDER BY name ASC
   foreach (get_enums(USER_INFOS_TABLE, 'status') as $status)
   {
     $status_options[$status] = l10n('user_status_'.$status);
-    if (isset($conf_UAM[4]) and $conf_UAM[4] == $status)
+    if (isset($conf_UAM['VALIDATED_STATUS']) and $conf_UAM['VALIDATED_STATUS'] == $status)
     {
       $Valid_Status = $status;
     }
@@ -462,7 +458,7 @@ ORDER BY name ASC
   foreach (get_enums(USER_INFOS_TABLE, 'status') as $status)
   {
     $status_options[$status] = l10n('user_status_'.$status);
-    if (isset($conf_UAM[26]) and $conf_UAM[26] == $status)
+    if (isset($conf_UAM['DOWNGRADE_STATUS']) and $conf_UAM['DOWNGRADE_STATUS'] == $status)
     {
       $Downgrade_Status = $status;
     }
@@ -491,7 +487,7 @@ ORDER BY name ASC
   foreach ($conf['available_permission_levels'] as $level)
   {
     $level_options[$level] = l10n(sprintf('Level %d', $level));
-    if (isset($conf_UAM[35]) and $conf_UAM[35] == $level)
+    if (isset($conf_UAM['NO_VALID_LEVEL']) and $conf_UAM['NO_VALID_LEVEL'] == $level)
     {
       $No_Valid_Level = $level;
     }
@@ -512,7 +508,7 @@ ORDER BY name ASC
   foreach ($conf['available_permission_levels'] as $level)
   {
     $level_options[$level] = l10n(sprintf('Level %d', $level));
-    if (isset($conf_UAM[36]) and $conf_UAM[36] == $level)
+    if (isset($conf_UAM['VALID_LEVEL']) and $conf_UAM['VALID_LEVEL'] == $level)
     {
       $Valid_Level = $level;
     }
@@ -533,7 +529,7 @@ ORDER BY name ASC
   foreach ($conf['available_permission_levels'] as $level)
   {
     $level_options[$level] = l10n(sprintf('Level %d', $level));
-    if (isset($conf_UAM[37]) and $conf_UAM[37] == $level)
+    if (isset($conf_UAM['DOWNGRADE_LEVEL']) and $conf_UAM['DOWNGRADE_LEVEL'] == $level)
     {
       $Downgrade_Level = $level;
     }
@@ -577,88 +573,88 @@ ORDER BY name ASC
             'UAM_PATH'                          => UAM_PATH,
             'UAM_DUMP_DOWNLOAD'                 => $dump_download,
             'UAM_THEME'                         => $UAM_theme,
-						'UAM_MAIL_INFO_TRUE'                => $conf_UAM[0]=='true' ?  'checked="checked"' : '' ,
-						'UAM_MAIL_INFO_FALSE'               => $conf_UAM[0]=='false' ?  'checked="checked"' : '' ,
-						'UAM_MAILINFO_TEXT'                 => $conf_UAM[8],
-						'UAM_USERNAME_CHAR_TRUE'            => $conf_UAM[5]=='true' ?  'checked="checked"' : '' ,
-						'UAM_USERNAME_CHAR_FALSE'           => $conf_UAM[5]=='false' ?  'checked="checked"' : '' ,
-						'UAM_USERNAME_CHAR_LIST'            => $conf_UAM[6],
-						'UAM_CONFIRM_MAIL_TRUE'             => $conf_UAM[1]=='true' ?  'checked="checked"' : '' ,
-						'UAM_CONFIRM_MAIL_FALSE'            => $conf_UAM[1]=='false' ?  'checked="checked"' : '' ,
-            'UAM_CONFIRM_MAIL_LOCAL'            => $conf_UAM[1]=='local' ?  'checked="checked"' : '' ,
-						'UAM_CONFIRMMAIL_TEXT'              => $conf_UAM[9],
-						'UAM_No_Confirm_Group'              => $conf_UAM[2],
-						'UAM_Validated_Group'               => $conf_UAM[3],
-						'UAM_No_Confirm_Status'             => $conf_UAM[7],
-						'UAM_Validated_Status'              => $conf_UAM[4],
-						'UAM_MAILEXCLUSION_TRUE'            => $conf_UAM[10]=='true' ?  'checked="checked"' : '' ,
-						'UAM_MAILEXCLUSION_FALSE'           => $conf_UAM[10]=='false' ?  'checked="checked"' : '' ,
-						'UAM_MAILEXCLUSION_LIST'            => $conf_UAM[11],
-						'UAM_PASSWORDENF_TRUE'              => $conf_UAM[12]=='true' ?  'checked="checked"' : '' ,
-						'UAM_PASSWORDENF_FALSE'             => $conf_UAM[12]=='false' ?  'checked="checked"' : '' ,
-						'UAM_PASSWORD_SCORE'                => $conf_UAM[13],
-            'UAM_ADMINPASSWENF_TRUE'            => $conf_UAM[14]=='true' ?  'checked="checked"' : '' ,
-						'UAM_ADMINPASSWENF_FALSE'           => $conf_UAM[14]=='false' ?  'checked="checked"' : '' ,
-            'UAM_GHOSTRACKER_TRUE'              => $conf_UAM[15]=='true' ?  'checked="checked"' : '' ,
-						'UAM_GHOSTRACKER_FALSE'             => $conf_UAM[15]=='false' ?  'checked="checked"' : '' ,
-            'UAM_GHOSTRACKER_DAYLIMIT'          => $conf_UAM[16],
-            'UAM_GHOSTRACKER_REMINDERTEXT'      => $conf_UAM[17],
-            'UAM_ADDLASTVISIT_TRUE'             => $conf_UAM[18]=='true' ?  'checked="checked"' : '' ,
-            'UAM_ADDLASTVISIT_FALSE'            => $conf_UAM[18]=='false' ?  'checked="checked"' : '' ,
-            'UAM_ADMINCONFMAIL_TRUE'            => $conf_UAM[19]=='true' ?  'checked="checked"' : '' ,
-            'UAM_ADMINCONFMAIL_FALSE'           => $conf_UAM[19]=='false' ?  'checked="checked"' : '' ,
-            'UAM_REDIRTOPROFILE_TRUE'           => $conf_UAM[20]=='true' ?  'checked="checked"' : '' ,
-            'UAM_REDIRTOPROFILE_FALSE'          => $conf_UAM[20]=='false' ?  'checked="checked"' : '' ,
-            'UAM_GTAUTO_TRUE'                   => $conf_UAM[21]=='true' ?  'checked="checked"' : '' ,
-            'UAM_GTAUTO_FALSE'                  => $conf_UAM[21]=='false' ?  'checked="checked"' : '' ,
-            'UAM_GTAUTOMAIL_TRUE'               => $conf_UAM[22]=='true' ?  'checked="checked"' : '' ,
-            'UAM_GTAUTOMAIL_FALSE'              => $conf_UAM[22]=='false' ?  'checked="checked"' : '' ,
-            'UAM_GTAUTODEL_TEXT'                => $conf_UAM[23],
-            'UAM_GTAUTOMAILTEXT'                => $conf_UAM[24],
-						'UAM_Downgrade_Group'               => $conf_UAM[25],
-						'UAM_Downgrade_Status'              => $conf_UAM[26],
-            'UAM_ADMINVALIDATIONMAIL_TEXT'      => $conf_UAM[27],
-            'UAM_CUSTOMPASSWRETR_TRUE'          => $conf_UAM[28]=='true' ?  'checked="checked"' : '' ,
-            'UAM_CUSTOMPASSWRETR_FALSE'         => $conf_UAM[28]=='false' ?  'checked="checked"' : '' ,
-            'UAM_CUSTOMPASSWRETR_TEXT'          => $conf_UAM[29],
-            'UAM_USRAUTO_TRUE'                  => $conf_UAM[30]=='true' ?  'checked="checked"' : '' ,
-            'UAM_USRAUTO_FALSE'                 => $conf_UAM[30]=='false' ?  'checked="checked"' : '' ,
-            'UAM_USRAUTODEL_TEXT'               => $conf_UAM[31],
-            'UAM_USRAUTOMAIL_TRUE'              => $conf_UAM[32]=='true' ?  'checked="checked"' : '' ,
-            'UAM_USRAUTOMAIL_FALSE'             => $conf_UAM[32]=='false' ?  'checked="checked"' : '' ,
-            'UAM_STUFFS_TRUE'                   => $conf_UAM[33]=='true' ?  'checked="checked"' : '' ,
-            'UAM_STUFFS_FALSE'                  => $conf_UAM[33]=='false' ?  'checked="checked"' : '' ,
-            'UAM_HIDEPASSW_TRUE'                => $conf_UAM[34]=='true' ?  'checked="checked"' : '' ,
-            'UAM_HIDEPASSW_FALSE'               => $conf_UAM[34]=='false' ?  'checked="checked"' : '' ,
-						'UAM_NO_VALID_LEVEL'                => $conf_UAM[35],
-						'UAM_VALID_LEVEL'                   => $conf_UAM[36],
-            'UAM_DOWNGRADE_LEVEL'               => $conf_UAM[37],
-            'UAM_PWDRESET_TRUE'                 => $conf_UAM[38]=='true' ?  'checked="checked"' : '' ,
-            'UAM_PWDRESET_FALSE'                => $conf_UAM[38]=='false' ?  'checked="checked"' : '' ,
-            'UAM_REJECTCONNECT_TRUE'            => $conf_UAM[39]=='true' ?  'checked="checked"' : '' ,
-            'UAM_REJECTCONNECT_FALSE'           => $conf_UAM[39]=='false' ?  'checked="checked"' : '' ,
-            'UAM_REJECTCONNECT_TEXT'            => $conf_UAM[40],
-            'UAM_CONFIRMMAIL_SUBJECT'           => $conf_UAM[41],
-            'UAM_CONFIRMMAIL_REMAIL_SUBJECT'    => $conf_UAM[42],
-            'UAM_INFOMAIL_SUBJECT'              => $conf_UAM[43],
-            'UAM_GTAUTOMAIL_SUBJECT'            => $conf_UAM[44],
-            'UAM_GTREMINDER_SUBJECT'            => $conf_UAM[45],
-            'UAM_ADMINVALIDATIONMAIL_SUBJECT'   => $conf_UAM[46],
+						'UAM_MAIL_INFO_TRUE'                => $conf_UAM['MAIL_INFO']=='true' ? 'checked="checked"' : '' ,
+						'UAM_MAIL_INFO_FALSE'               => $conf_UAM['MAIL_INFO']=='false' ? 'checked="checked"' : '' ,
+						'UAM_MAILINFO_TEXT'                 => $conf_UAM['MAILINFO_TEXT'],
+						'UAM_USERNAME_CHAR_TRUE'            => $conf_UAM['USERNAME_CHAR']=='true' ? 'checked="checked"' : '' ,
+						'UAM_USERNAME_CHAR_FALSE'           => $conf_UAM['USERNAME_CHAR']=='false' ? 'checked="checked"' : '' ,
+						'UAM_USERNAME_CHAR_LIST'            => $conf_UAM['USERNAME_CHAR_LIST'],
+						'UAM_CONFIRM_MAIL_TRUE'             => $conf_UAM['CONFIRM_MAIL']=='true' ? 'checked="checked"' : '' ,
+						'UAM_CONFIRM_MAIL_FALSE'            => $conf_UAM['CONFIRM_MAIL']=='false' ? 'checked="checked"' : '' ,
+            'UAM_CONFIRM_MAIL_LOCAL'            => $conf_UAM['CONFIRM_MAIL']=='local' ? 'checked="checked"' : '' ,
+						'UAM_CONFIRMMAIL_TEXT'              => $conf_UAM['CONFIRMMAIL_TEXT'],
+						'UAM_No_Confirm_Group'              => $conf_UAM['NO_CONFIRM_GROUP'],
+						'UAM_Validated_Group'               => $conf_UAM['VALIDATED_GROUP'],
+						'UAM_No_Confirm_Status'             => $conf_UAM['NO_CONFIRM_STATUS'],
+						'UAM_Validated_Status'              => $conf_UAM['VALIDATED_STATUS'],
+						'UAM_MAILEXCLUSION_TRUE'            => $conf_UAM['MAILEXCLUSION']=='true' ? 'checked="checked"' : '' ,
+						'UAM_MAILEXCLUSION_FALSE'           => $conf_UAM['MAILEXCLUSION']=='false' ? 'checked="checked"' : '' ,
+						'UAM_MAILEXCLUSION_LIST'            => $conf_UAM['MAILEXCLUSION_LIST'],
+						'UAM_PASSWORDENF_TRUE'              => $conf_UAM['PASSWORDENF']=='true' ? 'checked="checked"' : '' ,
+						'UAM_PASSWORDENF_FALSE'             => $conf_UAM['PASSWORDENF']=='false' ? 'checked="checked"' : '' ,
+						'UAM_PASSWORD_SCORE'                => $conf_UAM['PASSWORD_SCORE'],
+            'UAM_ADMINPASSWENF_TRUE'            => $conf_UAM['ADMINPASSWENF']=='true' ? 'checked="checked"' : '' ,
+						'UAM_ADMINPASSWENF_FALSE'           => $conf_UAM['ADMINPASSWENF']=='false' ? 'checked="checked"' : '' ,
+            'UAM_GHOSTRACKER_TRUE'              => $conf_UAM['GHOSTRACKER']=='true' ? 'checked="checked"' : '' ,
+						'UAM_GHOSTRACKER_FALSE'             => $conf_UAM['GHOSTRACKER']=='false' ? 'checked="checked"' : '' ,
+            'UAM_GHOSTRACKER_DAYLIMIT'          => $conf_UAM['GHOSTRACKER_DAYLIMIT'],
+            'UAM_GHOSTRACKER_REMINDERTEXT'      => $conf_UAM['GHOSTRACKER_REMINDERTEXT'],
+            'UAM_ADDLASTVISIT_TRUE'             => $conf_UAM['ADDLASTVISIT']=='true' ? 'checked="checked"' : '' ,
+            'UAM_ADDLASTVISIT_FALSE'            => $conf_UAM['ADDLASTVISIT']=='false' ? 'checked="checked"' : '' ,
+            'UAM_ADMINCONFMAIL_TRUE'            => $conf_UAM['ADMINCONFMAIL']=='true' ? 'checked="checked"' : '' ,
+            'UAM_ADMINCONFMAIL_FALSE'           => $conf_UAM['ADMINCONFMAIL']=='false' ? 'checked="checked"' : '' ,
+            'UAM_REDIRTOPROFILE_TRUE'           => $conf_UAM['REDIRTOPROFILE']=='true' ? 'checked="checked"' : '' ,
+            'UAM_REDIRTOPROFILE_FALSE'          => $conf_UAM['REDIRTOPROFILE']=='false' ? 'checked="checked"' : '' ,
+            'UAM_GTAUTO_TRUE'                   => $conf_UAM['GTAUTO']=='true' ? 'checked="checked"' : '' ,
+            'UAM_GTAUTO_FALSE'                  => $conf_UAM['GTAUTO']=='false' ? 'checked="checked"' : '' ,
+            'UAM_GTAUTOMAIL_TRUE'               => $conf_UAM['GTAUTOMAIL']=='true' ? 'checked="checked"' : '' ,
+            'UAM_GTAUTOMAIL_FALSE'              => $conf_UAM['GTAUTOMAIL']=='false' ? 'checked="checked"' : '' ,
+            'UAM_GTAUTODEL_TEXT'                => $conf_UAM['GTAUTODEL'],
+            'UAM_GTAUTOMAILTEXT'                => $conf_UAM['GTAUTOMAILTEXT'],
+						'UAM_Downgrade_Group'               => $conf_UAM['DOWNGRADE_GROUP'],
+						'UAM_Downgrade_Status'              => $conf_UAM['DOWNGRADE_STATUS'],
+            'UAM_ADMINVALIDATIONMAIL_TEXT'      => $conf_UAM['ADMINVALIDATIONMAIL'],
+            'UAM_CUSTOMPASSWRETR_TRUE'          => $conf_UAM['CUSTOMPASSWRETR']=='true' ? 'checked="checked"' : '' ,
+            'UAM_CUSTOMPASSWRETR_FALSE'         => $conf_UAM['CUSTOMPASSWRETR']=='false' ? 'checked="checked"' : '' ,
+            'UAM_CUSTOMPASSWRETR_TEXT'          => $conf_UAM['CUSTOMPASSWRETR_TEXT'],
+            'UAM_USRAUTO_TRUE'                  => $conf_UAM['USRAUTO']=='true' ? 'checked="checked"' : '' ,
+            'UAM_USRAUTO_FALSE'                 => $conf_UAM['USRAUTO']=='false' ? 'checked="checked"' : '' ,
+            'UAM_USRAUTODEL_TEXT'               => $conf_UAM['USRAUTODEL'],
+            'UAM_USRAUTOMAIL_TRUE'              => $conf_UAM['USRAUTOMAIL']=='true' ? 'checked="checked"' : '' ,
+            'UAM_USRAUTOMAIL_FALSE'             => $conf_UAM['USRAUTOMAIL']=='false' ? 'checked="checked"' : '' ,
+            'UAM_STUFFS_TRUE'                   => $conf_UAM['STUFFS']=='true' ? 'checked="checked"' : '' ,
+            'UAM_STUFFS_FALSE'                  => $conf_UAM['STUFFS']=='false' ? 'checked="checked"' : '' ,
+            'UAM_HIDEPASSW_TRUE'                => $conf_UAM['HIDEPASSW']=='true' ? 'checked="checked"' : '' ,
+            'UAM_HIDEPASSW_FALSE'               => $conf_UAM['HIDEPASSW']=='false' ? 'checked="checked"' : '' ,
+						'UAM_NO_VALID_LEVEL'                => $conf_UAM['NO_VALID_LEVEL'],
+						'UAM_VALID_LEVEL'                   => $conf_UAM['VALID_LEVEL'],
+            'UAM_DOWNGRADE_LEVEL'               => $conf_UAM['DOWNGRADE_LEVEL'],
+            'UAM_PWDRESET_TRUE'                 => $conf_UAM['PWDRESET']=='true' ? 'checked="checked"' : '' ,
+            'UAM_PWDRESET_FALSE'                => $conf_UAM['PWDRESET']=='false' ? 'checked="checked"' : '' ,
+            'UAM_REJECTCONNECT_TRUE'            => $conf_UAM['REJECTCONNECT']=='true' ? 'checked="checked"' : '' ,
+            'UAM_REJECTCONNECT_FALSE'           => $conf_UAM['REJECTCONNECT']=='false' ? 'checked="checked"' : '' ,
+            'UAM_REJECTCONNECT_TEXT'            => $conf_UAM['REJECTCONNECT_TEXT'],
+            'UAM_CONFIRMMAIL_SUBJECT'           => $conf_UAM['CONFIRMMAIL_SUBJECT'],
+            'UAM_CONFIRMMAIL_REMAIL_SUBJECT'    => $conf_UAM['CONFIRMMAIL_REMAIL_SUBJECT'],
+            'UAM_INFOMAIL_SUBJECT'              => $conf_UAM['INFOMAIL_SUBJECT'],
+            'UAM_GTAUTOMAIL_SUBJECT'            => $conf_UAM['GTAUTOMAIL_SUBJECT'],
+            'UAM_GTREMINDER_SUBJECT'            => $conf_UAM['GTREMINDER_SUBJECT'],
+            'UAM_ADMINVALIDATIONMAIL_SUBJECT'   => $conf_UAM['ADMINVALIDATIONMAIL_SUBJECT'],
 						'UAM_PASSWORD_TEST_SCORE'           => $UAM_Password_Test_Score,
             'UAM_ERROR_REPORTS1'                => $UAM_Exclusionlist_Error,
             'UAM_ERROR_REPORTS2'                => $UAM_Illegal_Flag_Error1,
             'UAM_ERROR_REPORTS3'                => $UAM_Illegal_Flag_Error2,
             'UAM_ERROR_REPORTS4'                => $UAM_Illegal_Flag_Error3,
             'UAM_EMAIL_MANDATORY'               => $UAM_Email_Mandatory_Check,
-						'UAM_CONFIRMMAIL_TIMEOUT_TRUE'      => $conf_UAM_ConfirmMail[0]=='true' ?  'checked="checked"' : '' ,
-						'UAM_CONFIRMMAIL_TIMEOUT_FALSE'     => $conf_UAM_ConfirmMail[0]=='false' ?  'checked="checked"' : '' ,
-						'UAM_CONFIRMMAIL_DELAY'             => $conf_UAM_ConfirmMail[1],
-            'UAM_CONFIRMMAIL_REMAIL_TRUE'       => $conf_UAM_ConfirmMail[3]=='true' ? 'checked="checked"' : '',
-            'UAM_CONFIRMMAIL_REMAIL_FALSE'      => $conf_UAM_ConfirmMail[3]=='false' ? 'checked="checked"' : '',
-            'UAM_CONFIRMMAIL_REMAIL_TXT1'       => $conf_UAM_ConfirmMail[2],
-            'UAM_CONFIRMMAIL_REMAIL_TXT2'       => $conf_UAM_ConfirmMail[4],
-            'UAM_CONFIRMMAIL_CUSTOM_TXT1'       => $conf_UAM_ConfirmMail[5],
-            'UAM_CONFIRMMAIL_CUSTOM_TXT2'       => $conf_UAM_ConfirmMail[6],
+						'UAM_CONFIRMMAIL_TIMEOUT_TRUE'      => $conf_UAM_ConfirmMail['CONFIRMMAIL_TIMEOUT']=='true' ? 'checked="checked"' : '' ,
+						'UAM_CONFIRMMAIL_TIMEOUT_FALSE'     => $conf_UAM_ConfirmMail['CONFIRMMAIL_TIMEOUT']=='false' ? 'checked="checked"' : '' ,
+						'UAM_CONFIRMMAIL_DELAY'             => $conf_UAM_ConfirmMail['CONFIRMMAIL_DELAY'],
+            'UAM_CONFIRMMAIL_REMAIL_TRUE'       => $conf_UAM_ConfirmMail['CONFIRMMAIL_REMAIL']=='true' ? 'checked="checked"' : '',
+            'UAM_CONFIRMMAIL_REMAIL_FALSE'      => $conf_UAM_ConfirmMail['CONFIRMMAIL_REMAIL']=='false' ? 'checked="checked"' : '',
+            'UAM_CONFIRMMAIL_REMAIL_TXT1'       => $conf_UAM_ConfirmMail['CONFIRMMAIL_REMAIL_TXT1'],
+            'UAM_CONFIRMMAIL_REMAIL_TXT2'       => $conf_UAM_ConfirmMail['CONFIRMMAIL_REMAIL_TXT2'],
+            'UAM_CONFIRMMAIL_CUSTOM_TXT1'       => $conf_UAM_ConfirmMail['CONFIRMMAIL_CUSTOM_TXT1'],
+            'UAM_CONFIRMMAIL_CUSTOM_TXT2'       => $conf_UAM_ConfirmMail['CONFIRMMAIL_CUSTOM_TXT2'],
     )
   );
 
@@ -668,7 +664,7 @@ ORDER BY name ASC
 		
     // Username without forbidden keys
     // -------------------------------
-    if ( isset($conf_UAM[5]) and $conf_UAM[5] == 'true' )
+    if ( isset($conf_UAM['USERNAME_CHAR']) and $conf_UAM['USERNAME_CHAR'] == 'true' )
 	  {
       $query = '
 SELECT '.$conf['user_fields']['username'].', '.$conf['user_fields']['email'].'
@@ -688,7 +684,7 @@ FROM '.USERS_TABLE.'
 		
     // Email without forbidden domain
     // ------------------------------
-    if ( isset($conf_UAM[10]) and $conf_UAM[10] == 'true' )
+    if ( isset($conf_UAM['MAILEXCLUSION']) and $conf_UAM['MAILEXCLUSION'] == 'true' )
     {
       $query = '
 SELECT '.$conf['user_fields']['username'].', '.$conf['user_fields']['email'].'
@@ -699,7 +695,7 @@ FROM '.USERS_TABLE.'
 
       while($row = pwg_db_fetch_assoc($result))
       {
-        $conf_MailExclusion = preg_split("/[\s,]+/",$conf_UAM[11]);
+        $conf_MailExclusion = preg_split("/[\s,]+/",$conf_UAM['MAILEXCLUSION_LIST']);
         for ($i = 0 ; $i < count($conf_MailExclusion) ; $i++)
         {
           $pattern = '/'.$conf_MailExclusion[$i].'/';
@@ -754,7 +750,7 @@ FROM '.USERS_TABLE.'
   
   $conf_UAM = unserialize($conf['UserAdvManager']);
   
-  if (isset($conf_UAM[18]) and $conf_UAM[18]=='true')
+  if (isset($conf_UAM['ADDLASTVISIT']) and $conf_UAM['ADDLASTVISIT']=='true')
   {
 // +-----------------------------------------------------------------------+
 // |                           initialization                              |
@@ -804,19 +800,19 @@ FROM '.USERS_TABLE.'
         $deltasecs = $daytimestamp - $regtimestamp;// Compare the 2 UNIX timestamps	
     		$deltadays = floor($deltasecs / 86400);// Convert result from seconds to days
   
-        if (isset($conf_UAM[15]) and $conf_UAM[15]=='true' and !empty($conf_UAM[16]))
+        if (isset($conf_UAM['GHOSTRACKER']) and $conf_UAM['GHOSTRACKER']=='true' and !empty($conf_UAM['GHOSTRACKER_DAYLIMIT']))
     		{
-          if ($deltadays <= ($conf_UAM[16]/2))
+          if ($deltadays <= ($conf_UAM['GHOSTRACKER_DAYLIMIT']/2))
       		{
             $display = 'green';
       		}
 
-          if (($deltadays > ($conf_UAM[16]/2)) and ($deltadays < $conf_UAM[16]))
+          if (($deltadays > ($conf_UAM['GHOSTRACKER_DAYLIMIT']/2)) and ($deltadays < $conf_UAM['GHOSTRACKER_DAYLIMIT']))
       		{
             $display = 'orange';
       		}
 
-      		if ($deltadays >= $conf_UAM[16])
+      		if ($deltadays >= $conf_UAM['GHOSTRACKER_DAYLIMIT'])
       		{
             $display = 'red';
      			}
@@ -884,7 +880,7 @@ break;
 
   $conf_UAM_ConfirmMail = unserialize($conf['UserAdvManager_ConfirmMail']);
 	
-  if (isset($conf_UAM[1]) and ($conf_UAM[1]=='true' or $conf_UAM[1]=='local'))
+  if (isset($conf_UAM['CONFIRM_MAIL']) and ($conf_UAM['CONFIRM_MAIL']=='true' or $conf_UAM['CONFIRM_MAIL']=='local'))
   {
 // +-----------------------------------------------------------------------+
 // |                           initialization                              |
@@ -1350,9 +1346,9 @@ WHERE user_id = '.$local_user['id'].'
     // -----------------------------------------------------------
     $Confirm_Local = "";
     
-    if ($conf_UAM[1] == 'local')
+    if ($conf_UAM['CONFIRM_MAIL'] == 'local')
     {
-      $Confirm_Local = $conf_UAM[1];
+      $Confirm_Local = $conf_UAM['CONFIRM_MAIL'];
     }
     else
     {
@@ -1403,7 +1399,7 @@ WHERE user_id = '.$local_user['id'].'
 
   $conf_UAM = unserialize($conf['UserAdvManager']);
 	
-  if (isset($conf_UAM[16]) and $conf_UAM[15]=='true')
+  if (isset($conf_UAM['GHOSTRACKER_DAYLIMIT']) and $conf_UAM['GHOSTRACKER']=='true')
   {
 // +-----------------------------------------------------------------------+
 // |                           initialization                              |

@@ -68,14 +68,14 @@ add_event_handler('init', 'UAM_InitPage');
 
 // PWG_Stuffs module
 // -----------------
-if (isset($conf_UAM[33]) and $conf_UAM[33] == 'true')
+if (isset($conf_UAM['STUFFS']) and $conf_UAM['STUFFS'] == 'true')
 {
   add_event_handler('get_stuffs_modules', 'register_UAM_stuffs_module');
 }
 
 // Add new feature in user_list - Password Reset
 // ---------------------------------------------
-if (isset($conf_UAM[38]) and $conf_UAM[38] == 'true')
+if (isset($conf_UAM['PWDRESET']) and $conf_UAM['PWDRESET'] == 'true')
 {
   // Add new column on user_list
   // ---------------------------

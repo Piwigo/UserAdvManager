@@ -19,68 +19,69 @@ function plugin_install()
 /* **************** BEGIN - Data preparation in vars **************** */
 /* ****************************************************************** */
 
-  $defaultUAM = array();
-  $defaultConfirmMail = array();
-
   // Default global parameters for UserAdvManager conf
   // -------------------------------------------------
-  $defaultUAM[0] = 'false';                                         // UAM_MAIL_INFO_TRUE/FALSE
-  $defaultUAM[1] = 'false';                                         // UAM_CONFIRM_MAIL_TRUE/FALSE
-  $defaultUAM[2] = '-1';                                            // UAM_No_Confirm_Group
-  $defaultUAM[3] = '-1';                                            // UAM_Validated_Group
-  $defaultUAM[4] = '-1';                                            // UAM_Validated_Status
-  $defaultUAM[5] = 'false';                                         // UAM_USERNAME_CHAR_TRUE
-  $defaultUAM[6] = '';                                              // UAM_USERNAME_CHAR_LIST
-  $defaultUAM[7] = '-1';                                            // UAM_No_Confirm_Status
-  $defaultUAM[8] = l10n('UAM_Default_InfoMail_Txt');                // UAM_MAILINFO_TEXT
-  $defaultUAM[9] = l10n('UAM_Default_ConfirmMail_Txt');             // UAM_CONFIRMMAIL_TEXT
-  $defaultUAM[10] = 'false';                                        // UAM_MAILEXCLUSION_TRUE/FALSE
-  $defaultUAM[11] = '';                                             // UAM_MAILEXCLUSION_LIST
-  $defaultUAM[12] = 'false';                                        // UAM_PASSWORDENF_TRUE/FALSE
-  $defaultUAM[13] = '100';                                          // UAM_PASSWORD_SCORE
-  $defaultUAM[14] = 'false';                                        // UAM_ADMINPASSWENF_TRUE/FALSE
-  $defaultUAM[15] = 'false';                                        // UAM_GHOSTRACKER_TRUE/FALSE
-  $defaultUAM[16] = '10';                                           // UAM_GHOSTRACKER_DAYLIMIT
-  $defaultUAM[17] = l10n('UAM_Default_GhstReminder_Txt');           // UAM_GHOSTRACKER_REMINDERTEXT
-  $defaultUAM[18] = 'false';                                        // UAM_ADDLASTVISIT_TRUE/FALSE
-  $defaultUAM[19] = 'false';                                        // UAM_ADMINCONFMAIL_TRUE/FALSE
-  $defaultUAM[20] = 'false';                                        // UAM_REDIRTOPROFILE_TRUE/FALSE
-  $defaultUAM[21] = 'false';                                        // UAM_GTAUTO_TRUE/FALSE
-  $defaultUAM[22] = 'false';                                        // UAM_GTAUTOMAIL_TRUE/FALSE
-  $defaultUAM[23] = l10n('UAM_Default_GhstDeletion_Txt');           // UAM_GTAUTODEL_TEXT
-  $defaultUAM[24] = l10n('UAM_Default_GhstDemotion_Txt');           // UAM_GTAUTOMAILTEXT
-  $defaultUAM[25] = '-1';                                           // UAM_Downgrade_Group
-  $defaultUAM[26] = '-1';                                           // UAM_Downgrade_Status
-  $defaultUAM[27] = l10n('UAM_Default_AdminValidation_Txt');        // UAM_ADMINVALIDATIONMAIL_TEXT
-  $defaultUAM[28] = 'false';                                        // UAM_CUSTOMPASSWRETR_TRUE/FALSE
-  $defaultUAM[29] = l10n('UAM_Default_PwdRequest_Txt');             // UAM_CUSTOMPASSWRETR_TEXT
-  $defaultUAM[30] = 'false';                                        // UAM_USRAUTO_TRUE/FALSE
-  $defaultUAM[31] = l10n('UAM_Default_ValidationTimeout_Txt');      // UAM_USRAUTODEL_TEXT
-  $defaultUAM[32] = 'false';                                        // UAM_USRAUTOMAIL_TRUE/FALSE
-  $defaultUAM[33] = 'false';                                        // UAM_STUFFS_TRUE/FALSE
-  $defaultUAM[34] = 'false';                                        // UAM_HIDEPASSW_TRUE/FALSE
-  $defaultUAM[35] = '-1';                                           // UAM_NO_VALID_LEVEL
-  $defaultUAM[36] = '-1';                                           // UAM_VALID_LEVEL
-  $defaultUAM[37] = '-1';                                           // UAM_DOWNGRADE_LEVEL
-  $defaultUAM[38] = 'false';                                        // UAM_PWDRESET_TRUE/FALSE
-  $defaultUAM[39] = 'false';                                        // UAM_REJECTCONNECT_TRUE/FALSE
-  $defaultUAM[40] = l10n('UAM_Default_RejectConnexion_Txt');        // UAM_REJECTCONNECT_TEXT
-  $defaultUAM[41] = l10n('UAM_Default_ConfirmMail_Subject');        // UAM_CONFIRMMAIL_SUBJECT
-  $defaultUAM[42] = l10n('UAM_Default_ConfirmMail_Remail_Subject'); // UAM_CONFIRMMAIL_REMAIL_SUBJECT
-  $defaultUAM[43] = l10n('UAM_Default_InfoMail_Subject');           // UAM_INFOMAIL_SUBJECT
-  $defaultUAM[44] = l10n('UAM_Default_GTAutoMail_Subject');         // UAM_GTAUTOMAIL_SUBJECT
-  $defaultUAM[45] = l10n('UAM_Default_GTReminder_Subject');         // UAM_GTREMINDER_SUBJECT
-  $defaultUAM[46] = l10n('UAM_Default_AdminValidationMail_Subject');// UAM_ADMINVALIDATIONMAIL_SUBJECT
+  $defaultUAM = array(
+    'MAIL_INFO'                   => 'false',
+    'CONFIRM_MAIL'                => 'false',
+    'NO_CONFIRM_GROUP'            => '-1',
+    'VALIDATED_GROUP'             => '-1',
+    'VALIDATED_STATUS'            => '-1',
+    'USERNAME_CHAR'               => 'false',
+    'USERNAME_CHAR_LIST'          => '',
+    'NO_CONFIRM_STATUS'           => '-1',
+    'MAILINFO_TEXT'               => l10n('UAM_Default_InfoMail_Txt'),
+    'CONFIRMMAIL_TEXT'            => l10n('UAM_Default_ConfirmMail_Txt'),
+    'MAILEXCLUSION'               => 'false',
+    'MAILEXCLUSION_LIST'          => '',
+    'PASSWORDENF'                 => 'false',
+    'PASSWORD_SCORE'              => '100',
+    'ADMINPASSWENF'               => 'false',
+    'GHOSTRACKER'                 => 'false',
+    'GHOSTRACKER_DAYLIMIT'        => '10',
+    'GHOSTRACKER_REMINDERTEXT'    => l10n('UAM_Default_GhstReminder_Txt'),
+    'ADDLASTVISIT'                => 'false',
+    'ADMINCONFMAIL'               => 'false',
+    'REDIRTOPROFILE'              => 'false',
+    'GTAUTO'                      => 'false',
+    'GTAUTOMAIL'                  => 'false',
+    'GTAUTODEL'                   => l10n('UAM_Default_GhstDeletion_Txt'),
+    'GTAUTOMAILTEXT'              => l10n('UAM_Default_GhstDemotion_Txt'),
+    'DOWNGRADE_GROUP'             => '-1',
+    'DOWNGRADE_STATUS'            => '-1',
+    'ADMINVALIDATIONMAIL'         => l10n('UAM_Default_AdminValidation_Txt'),
+    'CUSTOMPASSWRETR'             => 'false',
+    'CUSTOMPASSWRETR_TEXT'        => l10n('UAM_Default_PwdRequest_Txt'),
+    'USRAUTO'                     => 'false',
+    'USRAUTODEL'                  => l10n('UAM_Default_ValidationTimeout_Txt'),
+    'USRAUTOMAIL'                 => 'false',
+    'STUFFS'                      => 'false',
+    'HIDEPASSW'                   => 'false',
+    'NO_VALID_LEVEL'              => '-1',
+    'VALID_LEVEL'                 => '-1',
+    'DOWNGRADE_LEVEL'             => '-1',
+    'PWDRESET'                    => 'false',
+    'REJECTCONNECT'               => 'false',
+    'REJECTCONNECT_TEXT'          => l10n('UAM_Default_RejectConnexion_Txt'),
+    'CONFIRMMAIL_SUBJECT'         => l10n('UAM_Default_ConfirmMail_Subject'),
+    'CONFIRMMAIL_REMAIL_SUBJECT'  => l10n('UAM_Default_ConfirmMail_Remail_Subject'),
+    'INFOMAIL_SUBJECT'            => l10n('UAM_Default_InfoMail_Subject'),
+    'GTAUTOMAIL_SUBJECT'          => l10n('UAM_Default_GTAutoMail_Subject'),
+    'GTREMINDER_SUBJECT'          => l10n('UAM_Default_GTReminder_Subject'),
+    'ADMINVALIDATIONMAIL_SUBJECT' => l10n('UAM_Default_AdminValidationMail_Subject')
+  );
   
   // Default specific parameters for UserAdvManager ConfirmMail conf
   // ---------------------------------------------------------------
-  $defaultConfirmMail[0] = 'false';                                 // UAM_CONFIRMMAIL_TIMEOUT_TRUE/FALSE
-  $defaultConfirmMail[1] = '5';                                     // UAM_CONFIRMMAIL_DELAY
-  $defaultConfirmMail[2] = l10n('UAM_Default_CfmMail_Remail_Txt1'); // UAM_CONFIRMMAIL_REMAIL_TXT1
-  $defaultConfirmMail[3] = 'false';                                 // UAM_CONFIRMMAIL_REMAIL_TRUE/FALSE
-  $defaultConfirmMail[4] = l10n('UAM_Default_CfmMail_Remail_Txt2'); // UAM_CONFIRMMAIL_REMAIL_TXT2
-  $defaultConfirmMail[5] = l10n('UAM_Default_CfmMail_Custom_Txt1'); // UAM_CONFIRMMAIL_CUSTOM_TXT1
-  $defaultConfirmMail[6] = l10n('UAM_Default_CfmMail_Custom_Txt2'); // UAM_CONFIRMMAIL_CUSTOM_TXT2
+  $defaultConfirmMail = array(
+    'CONFIRMMAIL_TIMEOUT'     => 'false',
+    'CONFIRMMAIL_DELAY'       => '5',
+    'CONFIRMMAIL_REMAIL_TXT1' => l10n('UAM_Default_CfmMail_Remail_Txt1'),
+    'CONFIRMMAIL_REMAIL'      => 'false',
+    'CONFIRMMAIL_REMAIL_TXT2' => l10n('UAM_Default_CfmMail_Remail_Txt2'),
+    'CONFIRMMAIL_CUSTOM_TXT1' => l10n('UAM_Default_CfmMail_Custom_Txt1'),
+    'CONFIRMMAIL_CUSTOM_TXT2' => l10n('UAM_Default_CfmMail_Custom_Txt2')
+  );
   
   // Set current plugin version in config table
   // ------------------------------------------
@@ -289,8 +290,8 @@ WHERE param = "nbc_UserAdvManager_ConfirmMail"
 
 /* Check for upgrade from 2.12 to 2.13 */
 /* *********************************** */
-    $fields = mysql_list_fields($conf['db_base'],USER_CONFIRM_MAIL_TABLE);
-    $nb_fields = mysql_num_fields($fields); 
+    $fields = pwg_query('SHOW COLUMNS FROM '.USER_CONFIRM_MAIL_TABLE.';');
+    $nb_fields = pwg_db_num_rows($fields);
 
     if ($nb_fields < 6)
     {
@@ -402,6 +403,13 @@ WHERE param = "UserAdvManager_Version"
     /* upgrade from version 2.40.x to 2.41.0 */
     /* ************************************* */
       upgrade_2400_2410();
+    }
+
+    if (version_compare($conf['UserAdvManager_Version'], '2.50.0') < 0)
+    {
+    /* upgrade from version 2.41.x to 2.50.0 */
+    /* ************************************* */
+      upgrade_2410_2500();
     }
   }
 

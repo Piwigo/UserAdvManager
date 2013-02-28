@@ -684,7 +684,7 @@ AND ug.group_id = '.$conf_UAM[3];
 
 		$result = pwg_query($query);
 
-		while($row = mysql_fetch_array($result))
+		while($row = pwg_db_fetch_assoc($result))
 		{
 				$query = '
 UPDATE '.USERS_TABLE.'
@@ -701,5 +701,107 @@ SET UAM_validated=true
 WHERE id = 1
 ;';
 		pwg_query($query);
+}
+
+
+/* upgrade from 2.41.x to 2.50.0 */
+/* ***************************** */
+function upgrade_2410_2500()
+{
+  global $conf;
+  
+  load_language('plugin.lang', UAM_PATH);
+
+  // Upgrading options - Changing config variables to assoc array
+  // ------------------------------------------------------------
+  
+  // Upgrade $conf_UAM options
+  $conf_UAM = unserialize($conf['UserAdvManager']);
+
+  $Newconf_UAM = array(
+    'MAIL_INFO'                   => $conf_UAM[0],
+    'CONFIRM_MAIL'                => $conf_UAM[1],
+    'NO_CONFIRM_GROUP'            => $conf_UAM[2],
+    'VALIDATED_GROUP'             => $conf_UAM[3],
+    'VALIDATED_STATUS'            => $conf_UAM[4],
+    'USERNAME_CHAR'               => $conf_UAM[5],
+    'USERNAME_CHAR_LIST'          => $conf_UAM[6],
+    'NO_CONFIRM_STATUS'           => $conf_UAM[7],
+    'MAILINFO_TEXT'               => $conf_UAM[8],
+    'CONFIRMMAIL_TEXT'            => $conf_UAM[9],
+    'MAILEXCLUSION'               => $conf_UAM[10],
+    'MAILEXCLUSION_LIST'          => $conf_UAM[11],
+    'PASSWORDENF'                 => $conf_UAM[12],
+    'PASSWORD_SCORE'              => $conf_UAM[13],
+    'ADMINPASSWENF'               => $conf_UAM[14],
+    'GHOSTRACKER'                 => $conf_UAM[15],
+    'GHOSTRACKER_DAYLIMIT'        => $conf_UAM[16],
+    'GHOSTRACKER_REMINDERTEXT'    => $conf_UAM[17],
+    'ADDLASTVISIT'                => $conf_UAM[18],
+    'ADMINCONFMAIL'               => $conf_UAM[19],
+    'REDIRTOPROFILE'              => $conf_UAM[20],
+    'GTAUTO'                      => $conf_UAM[21],
+    'GTAUTOMAIL'                  => $conf_UAM[22],
+    'GTAUTODEL'                   => $conf_UAM[23],
+    'GTAUTOMAILTEXT'              => $conf_UAM[24],
+    'DOWNGRADE_GROUP'             => $conf_UAM[25],
+    'DOWNGRADE_STATUS'            => $conf_UAM[26],
+    'ADMINVALIDATIONMAIL'         => $conf_UAM[27],
+    'CUSTOMPASSWRETR'             => $conf_UAM[28],
+    'CUSTOMPASSWRETR_TEXT'        => $conf_UAM[29],
+    'USRAUTO'                     => $conf_UAM[30],
+    'USRAUTODEL'                  => $conf_UAM[31],
+    'USRAUTOMAIL'                 => $conf_UAM[32],
+    'STUFFS'                      => $conf_UAM[33],
+    'HIDEPASSW'                   => $conf_UAM[34],
+    'NO_VALID_LEVEL'              => $conf_UAM[35],
+    'VALID_LEVEL'                 => $conf_UAM[36],
+    'DOWNGRADE_LEVEL'             => $conf_UAM[37],
+    'PWDRESET'                    => $conf_UAM[38],
+    'REJECTCONNECT'               => $conf_UAM[39],
+    'REJECTCONNECT_TEXT'          => $conf_UAM[40],
+    'CONFIRMMAIL_SUBJECT'         => $conf_UAM[41],
+    'CONFIRMMAIL_REMAIL_SUBJECT'  => $conf_UAM[42],
+    'INFOMAIL_SUBJECT'            => $conf_UAM[43],
+    'GTAUTOMAIL_SUBJECT'          => $conf_UAM[44],
+    'GTREMINDER_SUBJECT'          => $conf_UAM[45],
+    'ADMINVALIDATIONMAIL_SUBJECT' => $conf_UAM[46]
+  );
+
+  // unset obsolete conf
+  // -------------------
+  for ($i = 0; $i <= 46; $i++)
+  {
+    unset ($conf_UAM[$i]);
+  }
+
+  $update_conf = serialize($Newconf_UAM);
+
+  conf_update_param('UserAdvManager', pwg_db_real_escape_string($update_conf));
+
+
+  // Upgrade $conf_UAM_ConfirmMail
+  $conf_UAM_ConfirmMail = unserialize($conf['UserAdvManager_ConfirmMail']);
+
+  $Newconf_UAM_ConfirmMail = array (
+    'CONFIRMMAIL_TIMEOUT'     => $conf_UAM_ConfirmMail[0],
+    'CONFIRMMAIL_DELAY'       => $conf_UAM_ConfirmMail[1],
+    'CONFIRMMAIL_REMAIL_TXT1' => $conf_UAM_ConfirmMail[2],
+    'CONFIRMMAIL_REMAIL'      => $conf_UAM_ConfirmMail[3],
+    'CONFIRMMAIL_REMAIL_TXT2' => $conf_UAM_ConfirmMail[4],
+    'CONFIRMMAIL_CUSTOM_TXT1' => $conf_UAM_ConfirmMail[5],
+    'CONFIRMMAIL_CUSTOM_TXT2' => $conf_UAM_ConfirmMail[6]
+  );
+
+  // unset obsolete conf
+  // -------------------
+  for ($i = 0; $i <= 6; $i++)
+  {
+    unset ($conf_UAM_ConfirmMail[$i]);
+  }
+
+  $update_conf = serialize($Newconf_UAM_ConfirmMail);
+
+  conf_update_param('UserAdvManager_ConfirmMail', pwg_db_real_escape_string($update_conf));
 }
 ?>
