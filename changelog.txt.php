@@ -375,5 +375,12 @@ Plugin Name: UserAdvManager
 -- 2.41.5 : Bug 2842 fixed - Previews bug 2829 fix did affect the normal registration confirmation.
             Update tr_TR, thanks to : hakanselcuk
 
+-- 2.50.0 : Compliance with Piwigo 2.5
+            Bug 2764 fixed - Code refactory : Change config variables to assoc array and $_POST vars control before writing conf in database - Thx to flop25 for his advices ;-)
+            Update fr_FR
+            Update de_DE, thanks to : stephy
+            Update tr_TR, thanks to : hakanselcuk and LazBoy
+            Update it_IT, thanks to : Ericnet
+            
 */
 ?>
