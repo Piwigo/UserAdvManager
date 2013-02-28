@@ -334,8 +334,6 @@ Um Ihnen weiterhin Zugang zu der Galerie zu ermöglichen,
 haben Sie wieder x Tage, durch klick auf den Link in der Nachricht, die Sie erhalten haben, die Registrierung zu bestätigen.
 
 Hinweis: Nach Ablauf dieses Zeitraums wird Ihr Konto dauerhaft gelöscht.';
-
-Hinweis: Nach Ablauf dieses Zeitraums wird Ihr Konto dauerhaft gelöscht.';
 $lang['UAM_Default_ConfirmMail_Txt'] = 'Hallo [username]! 
 
 Wir danken Ihnen für die Registrierung auf [mygallery].
