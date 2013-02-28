@@ -129,4 +129,10 @@ $lang['UAM_Disable'] = 'Devre Dışı [varsayılan]';
 $lang['UAM_Enable'] = 'Etkinleştir';
 $lang['UAM_Default_ConfirmMail_Subject'] = '[username] adı [mygallery] kayıt onayı aşamasında';
 $lang['UAM_Default_ConfirmMail_Remail_Subject'] = 'Hatırlatma- [username] adı [mygallery] kayıt onayı aşamasında';
+$lang['UAM_Demotion of %s'] = '%s İndirgeme';
+$lang['UAM_AdminValidationMail_Subject'] = 'Elle doğrulama e-posta konusunu özelleştir';
+$lang['UAM_AdminPassword_Enforced'] = 'Yöneticilere uygulanıyor';
+$lang['UAM_%d_Mails_With_Key'] = 'yenileme anahtarı içeren %d mesaj gönderildi';
+$lang['UAM_%d_Mail_With_Key'] = 'yenileme anahtarı içeren %d mesaj gönderildi';
+$lang['UAM_Admins cannot be pwdreset'] = 'Yönetici hesapları için şifre yenilemesi ayarlanamaz!';
 ?>
