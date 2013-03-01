@@ -377,6 +377,10 @@ Plugin Name: UserAdvManager
 
 -- 2.50.0 : Compliance with Piwigo 2.5
             Bug 2764 fixed - Code refactory : Change config variables to assoc array and $_POST vars control before writing conf in database - Thx to flop25 for his advices ;-)
+            Bug 2829 fixed - Workflow refactory if confirmation of registrations are done by admins :
+              - Admins add manually user *and* confirmation of registration for admins is set to OFF -> new added users are considered automatically as validated.
+              - Admins add manually user *and* confirmation of registration for admins is set to ON -> new added users receive the confirmation email.
+              - Finally, if a user registers himself, admins receive the validation link. 
             Update fr_FR
             Update de_DE, thanks to : stephy
             Update tr_TR, thanks to : hakanselcuk and LazBoy

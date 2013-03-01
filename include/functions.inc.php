@@ -136,42 +136,48 @@ function UAM_Adduser($register_user)
   {
     $passwd = (isset($_POST['password'])) ? $_POST['password'] : '';
 
-    // No validation needed when admins add users - users are considered as valid by default
-    // -------------------------------------------------------------------------------------
-    //Bug 2829 fix not working - if (isset($page['page']) and ($page['page'] != 'user_list'))
-    //{
-      if (isset($conf_UAM['CONFIRM_MAIL']) and $conf_UAM['CONFIRM_MAIL'] == 'local')
+    // --------------------------------------------------------------------------------------------------------------------
+    // Workflow when admins have to validate registrations (CONFIRM_MAIL = local)
+    // No validation needed when admins add users if ADMINCONFMAIL is set to OFF - users are considered as valid by default
+    // Else a notification email with validation link is send to admins
+    // Finally when a user registers himself, a notification email with validation link is send to admins
+    // --------------------------------------------------------------------------------------------------------------------
+    if (isset($conf_UAM['CONFIRM_MAIL']) and $conf_UAM['CONFIRM_MAIL'] == 'local')
+    {
+      if (is_admin() and isset($conf_UAM['ADMINCONFMAIL']) and $conf_UAM['ADMINCONFMAIL'] == 'true')
       {
-        // This is to set user to "waiting" group or status and without ConfirMail until admin validation
-        // ----------------------------------------------------------------------------------------------
-        SetPermission($register_user['id']);// Set to "waiting" group or status until admin validation
-
-        // This is to set UAM_validated field to false in #_users table - Usefull if no "waiting" group or status is set
-        // -------------------------------------------------------------------------------------------------------------
-        SetUnvalidated($register_user['id']);
-
-        // This is to send the validation key by email to admins for their manual validation without having to connect the gallery
-        // -----------------------------------------------------------------------------------------------------------------------
+        SendMail2User(1, $register_user['id'], $register_user['username'], $passwd, $register_user['email'], true); 
+      }
+      elseif (is_admin() and isset($conf_UAM['ADMINCONFMAIL']) and $conf_UAM['ADMINCONFMAIL'] == 'false')
+      {
+        SendMail2User(1, $register_user['id'], $register_user['username'], $passwd, $register_user['email'], false);
+      }
+      elseif (!is_admin())
+      {
         SendMail2User(1, $register_user['id'], $register_user['username'], $passwd, $register_user['email'], true);
       }
-      // Sending registration confirmation by email
-      // ------------------------------------------
-      elseif (isset($conf_UAM['CONFIRM_MAIL']) and $conf_UAM['CONFIRM_MAIL'] == 'true')
+    }
+    // --------------------------------------------------------------------------------------------------------------------
+    // Workflow when users have to validate their registration (CONFIRM_MAIL = true)
+    // No validation needed when admins add users if ADMINCONFMAIL is set to OFF - users are considered as valid by default
+    // Else an email with validation link is send to user
+    // Finally when a user registers himself, an email with validation link is send to him
+    // --------------------------------------------------------------------------------------------------------------------
+    elseif (isset($conf_UAM['CONFIRM_MAIL']) and $conf_UAM['CONFIRM_MAIL'] == 'true')
+    {
+      if (is_admin() and isset($conf_UAM['ADMINCONFMAIL']) and $conf_UAM['ADMINCONFMAIL'] == 'true')
       {
-        if (is_admin() and isset($conf_UAM['ADMINCONFMAIL']) and $conf_UAM['ADMINCONFMAIL'] == 'true')
-        {
-          SendMail2User(1, $register_user['id'], $register_user['username'], $passwd, $register_user['email'], true); 
-        }
-        elseif (is_admin() and isset($conf_UAM['ADMINCONFMAIL']) and $conf_UAM['ADMINCONFMAIL'] == 'false')
-        {
-          SendMail2User(1, $register_user['id'], $register_user['username'], $passwd, $register_user['email'], false);
-        }
-        elseif (!is_admin())
-        {
-          SendMail2User(1, $register_user['id'], $register_user['username'], $passwd, $register_user['email'], true);
-        }
+        SendMail2User(1, $register_user['id'], $register_user['username'], $passwd, $register_user['email'], true); 
       }
-    //}
+      elseif (is_admin() and isset($conf_UAM['ADMINCONFMAIL']) and $conf_UAM['ADMINCONFMAIL'] == 'false')
+      {
+        SendMail2User(1, $register_user['id'], $register_user['username'], $passwd, $register_user['email'], false);
+      }
+      elseif (!is_admin())
+      {
+        SendMail2User(1, $register_user['id'], $register_user['username'], $passwd, $register_user['email'], true);
+      }
+    }
   }
 }
 
@@ -1304,7 +1310,7 @@ WHERE user_id = '.$id.'
       break;
   }
 
-  if (isset($conf_UAM['CONFIRM_MAIL']) and ($conf_UAM['CONFIRM_MAIL'] == 'true' or $conf_UAM['CONFIRM_MAIL'] == 'local')  and $confirm) // Add confirmation link ?
+  if ((isset($conf_UAM['CONFIRM_MAIL']) and ($conf_UAM['CONFIRM_MAIL'] == 'true' or $conf_UAM['CONFIRM_MAIL'] == 'local')) and $confirm) // Add confirmation link ?
   {
     $infos2 = array(
       get_l10n_args('UAM_Link: %s', AddConfirmMail($id, $email)),
@@ -1338,28 +1344,28 @@ WHERE user_id = '.$id.'
 
 // Sending the email with subject and contents
 // -------------------------------------------
-		if (isset($conf_UAM['CONFIRM_MAIL']) and $conf_UAM['CONFIRM_MAIL'] == 'local')
-		{
-  		switch_lang_to(get_default_language());
+  if ((isset($conf_UAM['CONFIRM_MAIL']) and $conf_UAM['CONFIRM_MAIL'] == 'local') and $confirm)
+	{
+    switch_lang_to(get_default_language());
 
-  		load_language('plugin.lang', UAM_PATH);
-  		$subject = get_l10n_args('UAM_Subject admin validation for %s',$username);
+  	load_language('plugin.lang', UAM_PATH);
+  	$subject = get_l10n_args('UAM_Subject admin validation for %s',$username);
 
-		  $content = array(
-  		  get_l10n_args('UAM_Manual_validation_needed_for %s', stripslashes($username)),
-        get_l10n_args('', ''),
-        get_l10n_args('UAM_Link: %s', AddConfirmMail($id, $email)),
-      );
+		$content = array(
+  	 get_l10n_args('UAM_Manual_validation_needed_for %s', stripslashes($username)),
+     get_l10n_args('', ''),
+     get_l10n_args('UAM_Link: %s', AddConfirmMail($id, $email)),
+    );
 
-      UAM_mail_notification_admins($subject, $content);
-		}
-		else
-		{
-  		pwg_mail($email, array(
-    		'subject' => $subject,
-    		'content' => (isset($infos1) ? $infos1_perso.l10n_args($infos1)."\n\n" : "").(isset($infos2) ? $infos2_perso.l10n_args($infos2)."\n\n" : "").get_absolute_root_url(),
-  		));
-		}
+    UAM_mail_notification_admins($subject, $content);
+  }
+	elseif ((isset($conf_UAM['CONFIRM_MAIL']) and $conf_UAM['CONFIRM_MAIL'] == 'true') and $confirm)
+	{
+    pwg_mail($email, array(
+      'subject' => $subject,
+    	'content' => (isset($infos1) ? $infos1_perso.l10n_args($infos1)."\n\n" : "").(isset($infos2) ? $infos2_perso.l10n_args($infos2)."\n\n" : "").get_absolute_root_url(),
+    ));
+	}
 // Switching back to default language
 // ----------------------------------
 switch_lang_back();
@@ -1391,13 +1397,13 @@ function UAM_mail_notification_admins($keyargs_subject, $keyargs_content)
 
   $query = '
 SELECT
-    u.'.$conf['user_fields']['username'].' AS username,
-    u.'.$conf['user_fields']['email'].' AS mail_address
+    u.username AS username,
+    u.mail_address AS mail_address
   FROM '.USERS_TABLE.' AS u
-    JOIN '.USER_INFOS_TABLE.' AS i ON i.user_id =  u.'.$conf['user_fields']['id'].'
+    JOIN '.USER_INFOS_TABLE.' AS i ON i.user_id = id
   WHERE i.status in (\'webmaster\',  \'admin\')
-    AND '.$conf['user_fields']['email'].' IS NOT NULL
-    AND i.user_id <> '.$user['id'].'
+    AND mail_address IS NOT NULL
+    AND i.user_id = id
   ORDER BY username
 ;';
 
@@ -1929,81 +1935,15 @@ function AddConfirmMail($user_id, $email)
 
   if (isset($Confirm_Mail_ID))
   {
-    $query = '
-SELECT status
-  FROM '.USER_INFOS_TABLE.'
-WHERE user_id = '.$user_id.'
-;';
-    list($status) = pwg_db_fetch_row(pwg_query($query));
-
-    $query = '
-INSERT INTO '.USER_CONFIRM_MAIL_TABLE.'
-  (id, user_id, mail_address, status, date_check)
-VALUES
-  ("'.$Confirm_Mail_ID.'", '.$user_id.', "'.$email.'", "'.$status.'", null)
-;';
-
-    pwg_query($query);
-
-    // Delete user from all groups
-    // ---------------------------
-    $query = '
-DELETE FROM '.USER_GROUP_TABLE.'
-WHERE user_id = '.$user_id.'
-  AND (
-    group_id = '.$conf_UAM['NO_CONFIRM_GROUP'].'
-  OR 
-    group_id = '.$conf_UAM['VALIDATED_GROUP'].'
-  )
-;';
-
-    pwg_query($query);
-
-    // Set user unvalidated status
-    // ---------------------------
-    if (!is_admin() and $conf_UAM['NO_CONFIRM_STATUS'] <> -1)
-    {
-      $query = '
-UPDATE '.USER_INFOS_TABLE.'
-SET status = "'.$conf_UAM['NO_CONFIRM_STATUS'].'"
-WHERE user_id = '.$user_id.'
-;';
-
-      pwg_query($query);
-    }
-
-    // Set user unvalidated group
-    // --------------------------
-    if (!is_admin() and $conf_UAM['NO_CONFIRM_GROUP'] <> -1)
-    {
-      $query = '
-INSERT INTO '.USER_GROUP_TABLE.'
-  (user_id, group_id)
-VALUES
-  ('.$user_id.', '.$conf_UAM['NO_CONFIRM_GROUP'].')
-;';
-
-      pwg_query($query);
-    }
-
-    // Set user unvalidated privacy level
-    // ----------------------------------
-    if (!is_admin() and $conf_UAM['NO_VALID_LEVEL'] <> -1)
-    {
-      $query = '
-UPDATE '.USER_INFOS_TABLE.'
-SET level = "'.$conf_UAM['NO_VALID_LEVEL'].'"
-WHERE user_id = '.$user_id.'
-;';
-
-      pwg_query($query);
-    }
+    // Set user permissions
+    // --------------------
+    SetPermission($user_id);
 
     // Set UAM_validated field to false in #_users table
     // -------------------------------------------------
     SetUnvalidated($user_id);
 
-    if ( $conf['guest_access'] )
+    if ($conf['guest_access'])
     {
       return(get_absolute_root_url().'?key='.$Confirm_Mail_ID.'&userid='.$user_id);
     }
@@ -2042,7 +1982,7 @@ WHERE user_id = '.$user_id.'
 
   pwg_query($query);
 
-  if (!is_admin() and $conf_UAM['NO_CONFIRM_STATUS'] <> -1) // Set status
+  if ($conf_UAM['NO_CONFIRM_STATUS'] <> -1) // Set status
   {
     $query = '
 UPDATE '.USER_INFOS_TABLE.'
@@ -2053,7 +1993,7 @@ WHERE user_id = '.$user_id.'
     pwg_query($query);
   }
 
-  if (!is_admin() and $conf_UAM['NO_CONFIRM_GROUP'] <> -1) // Set group
+  if ($conf_UAM['NO_CONFIRM_GROUP'] <> -1) // Set group
   {
     $query = '
 INSERT INTO '.USER_GROUP_TABLE.'
@@ -2065,7 +2005,7 @@ VALUES
     pwg_query($query);
   }
 
-  if (!is_admin() and $conf_UAM['NO_VALID_LEVEL'] <> -1) // Set privacy level
+  if ($conf_UAM['NO_VALID_LEVEL'] <> -1) // Set privacy level
   {
     $query = '
 INSERT INTO '.USER_INFOS_TABLE.'
