@@ -212,4 +212,29 @@ Password in attesa di rinnovo: Una richiesta per una nuova password è stata ins
 - Password originale: La password originale scelta al momento della creazione dell\'account non è mai stata cambiata.<br>
 Webmaster, account generici e gli ospiti sono esclusi da questa funzione.<br>
 Questi utenti saranno automaticamente reindirizzati alla loro pagina di personalizzazione per ciascuna delle loro connessioni fino a quando hanno cambiato la propria password e un messaggio esplicito verrà visualizzato in questa pagina.';
+$lang['UAM_remailTitle_d'] = 'Questa opzione consente di inviare un promemoria via email agli utenti registrati ma che non hanno confermato la loro registrazione in tempo. Essa si avvale della collaborazione con la &quot;Conferma della registrazione&quot;
+<br><br>
+2 tipi di email possono essere inviate: con o senza rigenerazione della chiave di conferma. Se lo si desidera, il contenuto delle email può essere personalizzato.
+<br><br>
+Fare riferimento alla scheda &quot;Tracking confirmations&quot;.
+<br><br>
+Se questa opzione e l\'opzione &quot;Termine per la conferma della registrazione&quot; sono attivati, nuove opzioni appariranno sotto a questa sezione per consentirne l\'automazione della gestione degli utenti non confermati.';
+$lang['UAM_userlistTitle_d'] = 'Questa pagina è per informazioni all\'amministratore. Visualizza l\'elenco di tutti gli utenti registrati sulla galleria e mostra la data e il numero di giorni dalla loro ultima visita. La lista è ordinata in ordine crescente di numero di giorni.
+<br><br>
+<b><u>Solo quando è attivo il Ghost Tracker</u></b>, il numero di giorni senza una visita appare come il seguente codice colore, secondo il massimo impostato nelle opzioni Ghost Tracker:
+<br>
+- <b style=&quot;color: lime;&quot;>Verde</b>: Quando l\'utente ha visitato la galleria <b style=&quot;color: lime;&quot;><u>meno del 50%</u></b> del massimale indicato nel Ghost Tracker.<br>
+- <b style=&quot;color: orange;&quot;>Arancio</b>: Quando l\'utente ha visitato la galleria <b style=&quot;color: orange;&quot;><u>per piu del 100%</u></b> del massimale indicato nel Ghost Tracker.<br>
+- <b style=&quot;color: red;&quot;>Rosso</b>: Quando l\'utente ha visitato la galleria <b style=&quot;color: red;&quot;><u>tra il 50% e il 99%</u></b> del massimale indicato nel Ghost Tracker. <b><u>In questo caso, l\'utente deve apparire anche nella tabella di Ghost Tracker.</u></b>
+<br>
+<br>
+Esempio:
+<br>
+Il periodo massimo di Ghost Tracker è configurato per 100 giorni.
+<br>
+Un utente viene visualizzato in verde se ha visitato la galleria per meno di 50 giorni, in arancione se la sua ultima visita ha avuto luogo tra i 50 e 99 giorni e rosso per 100 giorni e oltre.
+<br><br>
+<b>NOTA</b>: L\'elenco non viene visualizzato se non hanno confermato la loro registrazione (se è attivata l\'opzione di conferma della registrazione). Questi utenti sono poi gestiti in speciale modo nella scheda &quot;Tracking confirmations&quot;.
+<br><br>
+<b>Funzione di ordinamento tabella</b>: Puoi ordinare i dati visualizzati cliccando sulle intestazioni di colonna. Tenere premuto il tasto MAIUSC per ordinare fino a 4 colonne simultaneamente.';
 ?>
