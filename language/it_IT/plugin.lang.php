@@ -328,11 +328,6 @@ NB: Dopo questo periodo, il tuo account verrà permanentemente eliminato.';
 $lang['UAM_Default_ConfirmMail_Txt'] = 'Ciao [username]! Grazie per esserti registrato su [mygallery].
 
 Per completare la procedura e poter vedere le immagini, conferma la tua registrazione cliccando nel link contenuto in questo messaggio.';
-L\'amministratore della galleria [mygallery] - [myurl]
-Alla ricezione di questo messaggio e non ricevendo altre visite entro [days] giorni, saremo obbligati a cancellare l\'account.
-
-Distinti saluti,
-l\'amministratore della galleria [mygallery] - [myurl]';
 $lang['UAM_Default_InfoMail_Txt'] = 'Ciao [username]!
 
 Sono state apportate modifiche significative nel tuo profilo sulla galleria [mygallery]. Per favore, trovare sotto le nuove impostazioni:';
