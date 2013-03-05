@@ -150,22 +150,10 @@ Personalizzare ulteriormente il contenuto inserendo speciali tags:<br>
 <b style=&quot;color: red;&quot;>[username]</b> non è disponibile qui perché l\'utente in questione è stato cancellato.
 <br><br>
 Testo personalizzato per il reindirizzamento pagina può essere inserito in questo campo che è compatibile con l\'editor FCK e per il multi-lingue, è possibile utilizzare i tag [lang] del plugin Extended description, se ​​è attivo.';
-<br><br>
-Personalizzare ulteriormente il contenuto con speciali inserted tags:<br>
-- <b style=&quot;color: red;&quot;>[mygallery]</b> per inserire il titolo della tua galleria.<br>
-- <b style=&quot;color: red;&quot;>[myurl]</b> per inserire l\'URL della galleria, se impostato nelle opzioni di configurazione di Piwigo.<br>
-<b style=&quot;color: red;&quot;>[username]</b> non è disponibile qui perché l\'utente in questione è stato cancellato.
-<br><br>
-Testo personalizzato per il reindirizzamento pagina può essere inserito in questo campo che è compatibile con l\'editor FCK e per il multi-lingue, è possibile utilizzare i tag [lang] del plugin Extended description, se ​​è attivo.';
 $lang['UAM_confirmtxtTitle_d'] = 'Inserire il testo introduttivo che si desidera visualizzare nella email di conferma della registrazione.
 <br><br>
 Personalizzare ulteriormente il contenuto inserendo speciali tags:<br>
 - <b style=&quot;color: red;&quot;>[username]</b> per inserire automaticamente il nome dell\'utente di destinazione del messaggio.<br>
-- <b style=&quot;color: red;&quot;>[mygallery]</b> per inserire il titolo della tua galleria.<br>
-- <b style=&quot;color: red;&quot;>[myurl]</b> per inserire l\'URL della tua galleria se impostato nelle opzioni di configurazione di Piwigo.<br>
-- <b style=&quot;color: red;&quot;>[Kdays]</b> per inserire il numero di giorni limite per confermare una registrazione (&quot;Termine per la conferma della registrazione limitata;&quot; deve essere attivato).
-<br><br>
-Per utilizzare più lingue, è possibile utilizzare i tag del plugin Extended description se è attivo.';
 - <b style=&quot;color: red;&quot;>[mygallery]</b> per inserire il titolo della tua galleria.<br>
 - <b style=&quot;color: red;&quot;>[myurl]</b> per inserire l\'URL della tua galleria se impostato nelle opzioni di configurazione di Piwigo.<br>
 - <b style=&quot;color: red;&quot;>[Kdays]</b> per inserire il numero di giorni limite per confermare una registrazione (&quot;Termine per la conferma della registrazione limitata;&quot; deve essere attivato).
@@ -176,13 +164,6 @@ $lang['UAM_confirmmail_custom2_d'] = 'Quando l\'opzione &quot;Conferma Registraz
 Per installare il plugin, un testo standard è dato a titolo di esempio.
 <br><br>
 Personalizzare ulteriormente il contenuto inserendo speciali tags:<br>
-- <b style=&quot;color: red;&quot;>[username]</b> per inserire automaticamente il relativo nome utente.<br>
-- <b style=&quot;color: red;&quot;>[mygallery]</b> per inserire il titolo della tua galleria.<br>
-- <b style=&quot;color: red;&quot;>[myurl]</b> per inserire l\'URL della galleria, se impostato nelle opzioni di configurazione di Piwigo.
-<br><br>
-Questo campo è compatibile con l\'editor FCK e, per il multi-lingue, è possibile utilizzare i tag [lang] del plugin Extended description se ​​è attivo.';
-Per installare il plugin, un testo standard è dato a titolo di esempio.
-<br><br>
 - <b style=&quot;color: red;&quot;>[username]</b> per inserire automaticamente il relativo nome utente.<br>
 - <b style=&quot;color: red;&quot;>[mygallery]</b> per inserire il titolo della tua galleria.<br>
 - <b style=&quot;color: red;&quot;>[myurl]</b> per inserire l\'URL della galleria, se impostato nelle opzioni di configurazione di Piwigo.
