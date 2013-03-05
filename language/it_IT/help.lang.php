@@ -198,11 +198,6 @@ Personalizzare ulteriormente il contenuto inserendo speciali tags:<br>
 - <b style=&quot;color: red;&quot;>[myurl]</b> per inserire l\'URL della galleria, se impostato nelle opzioni di configurazione di Piwigo.
 <br><br>
 Questo campo è compatibile con l\'editor FCK e, per il multi-lingue, è possibile utilizzare i tag [lang] del plugin Extended description se ​​è attivo.';
-- <b style=&quot;color: red;&quot;>[username]</b> per inserire automaticamente il nome del relativo utente.<br>
-- <b style=&quot;color: red;&quot;>[mygallery]</b> per inserire il titolo della tua galleria.<br>
-- <b style=&quot;color: red;&quot;>[myurl]</b> per inserire l\'URL della galleria, se impostato nelle opzioni di configurazione di Piwigo.
-<br><br>
-Questo campo è compatibile con l\'editor FCK e, per il multi-lingue, è possibile utilizzare i tag [lang] del plugin Extended description se ​​è attivo.';
 $lang['UAM_confirmmailTitle_d'] = 'Questa opzione consente ad un utente di confermare la registrazione cliccando su di un link ricevuto in una email inviata durante la registrazione oppure agli amministratori di attivare manualmente la registrazione.
 <br><br>
 Nel primo caso, la e-mail è composta da una parte personalizzabile per introdurre una piccola nota di benvenuto e una parte fissa contenente il link di attivazione che viene generato con una chiave casuale che può essere rigenerata  attraverso la scheda &quot;Tracking confirmations&quot;.
