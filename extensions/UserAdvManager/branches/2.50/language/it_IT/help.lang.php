@@ -45,8 +45,8 @@ $lang['UAM_GT_MainTitle_d'] = '- Gestione utenti ghost automatica o manuale<br>
 $lang['UAM_miscTitle_d'] = '- Controllo utenti registrati<br>
 - Nickname obbligatorio per i commenti degli ospiti<br>
 ...';
-$lang['UAM_remailtxt1Title'] = 'Ricorda email con generazione nuove chiavi';
-$lang['UAM_remailtxt2Title'] = 'Ricorda email senza generazione nuove chiavi';
+$lang['UAM_remailtxt1Title'] = 'Promemoria email con generata nuova chiave';
+$lang['UAM_remailtxt2Title'] = 'Promemoria email senza generare nuova chiave';
 $lang['UAM_tipsTitle_d'] = 'Suggerimenti e vari esempi d\'uso';
 $lang['UAM_USRAutoMailTitle_d'] = 'Quando attivata, questa funzione invierà automaticamente agli utenti che corrispondono ai criteri un contenuto personalizzato nelle &quot;email di reminder con la nuova chiave generata&quot;';
 $lang['UAM_HidePasswTitle_d'] = 'Scegli qui se si desidera visualizzare la password scelta da parte del visitatore nella e-mail di informazioni. Se si attiva l\'opzione, la password apparirà in chiaro. Se si disattiva la password non apparirà.';
@@ -64,7 +64,7 @@ I seguenti tag aggiuntivi personalizzati sono disponibili senza utilizzare il pl
 $lang['UAM_AdminValidationMail_d'] = 'Quando una registrazione è in attesa di approvazione manuale da parte di un\'amministratore o Webmaster, una e-mail di notifica per l\'utente viene mandata automaticamente.
 Inserisci qui il testo che appare in questa e-mail.
 <br><br>
-Personalizzare ulteriormente il contenuto con speciali inserted tags:<br>
+Personalizzare ulteriormente il contenuto inserendo speciali tags:<br>
 - <b style=&quot;color: red;&quot;>[username]</b> per inserire automaticamente il nome dell\'utente di destinazione del messaggio.<br>
 - <b style=&quot;color: red;&quot;>[mygallery]</b> per inserire il titolo della tua galleria.<br>
 - <b style=&quot;color: red;&quot;>[myurl]</b> per inserire l\'URL della tua galleria se impostato nelle opzioni di configurazione di Piwigo.
@@ -108,7 +108,7 @@ $lang['UAM_CustomPasswRetrTitle_d'] = 'Per impostazione predefinita, quando un u
 Qui, puoi aggiungere testo di tua scelta per essere inserito
 <b><u>prima</u></b> delle informazioni standard.
 <br><br>
-Personalizzare ulteriormente il contenuto con tag inseriti speciali:<br>
+Personalizzare ulteriormente il contenuto inserendo speciali tags:<br>
 - <b style=&quot;color: red;&quot;>[mygallery]</b> per inserire il titolo della tua galleria.<br>
 - <b style=&quot;color: red;&quot;>[myurl]</b> per inserire l\'URL della galleria, se impostato nelle opzioni di configurazione di Piwigo.
 <br><br>
@@ -136,7 +136,7 @@ $lang['UAM_GTAutoMailTitle_d'] = 'Quando un account è scaduto (gruppo / stato /
 <b style=&quot;color: red;&quot;>Attenzione:. L\'uso di questa funzione è intimamente associata con la conferma della registrazione da parte dell\'utente (conferma via mail) e non può essere attivata senza questa opzione</b>';
 $lang['UAM_GTAutomail_Text_d'] = 'Inserisci il testo personalizzato che spiega anche la ragione della retrocessione, per accompagnare il link di conferma. Il testo personalizzato non è obbligatorio ma fortemente consigliato. Infatti, i vostri visitatori non apprezzeranno di ricevere una e-mail che contiene solamente un unico collegamento senza ulteriori spiegazioni. ;-)
 <br><br>
-Personalizzare ulteriormente il contenuto con speciali inserted tags:<br>
+Personalizzare ulteriormente il contenuto inserendo speciali tags:<br>
 - <b style=&quot;color: red;&quot;>[username]</b> per inserire automaticamente il nome dell\'utente di destinazione della e-mail. <br>
 - <b style=&quot;color: red;&quot;>[mygallery]</b> per inserire il titolo della tua galleria.<br>
 - <b style=&quot;color: red;&quot;>[myurl]</b> per inserire l\'URL della galleria, se impostato nelle opzioni di configurazione di Piwigo.
@@ -144,7 +144,7 @@ Personalizzare ulteriormente il contenuto con speciali inserted tags:<br>
 Per utilizzare più lingue, è possibile utilizzare i tag del plugin Extended description, se è attivo.';
 $lang['UAM_GTAutoDelTitle_d'] = 'Questo è valido solo quando l\'utente il cui account è scaduto e si innesca il meccanismo di eliminazione (raro ma possibile). Egli verrà disconnesso dalla galleria e reindirizzato a una pagina che mostra la cancellazione del suo account ed, eventualmente, le motivazioni di questa cancellazione.
 <br><br>
-Personalizzare ulteriormente il contenuto con speciali inserted tags:<br>
+Personalizzare ulteriormente il contenuto inserendo speciali tags:<br>
 - <b style=&quot;color: red;&quot;>[mygallery]</b> per inserire il titolo della tua galleria.<br>
 - <b style=&quot;color: red;&quot;>[myurl]</b> per inserire l\'URL della galleria, se impostato nelle opzioni di configurazione di Piwigo.<br>
 <b style=&quot;color: red;&quot;>[username]</b> non è disponibile qui perché l\'utente in questione è stato cancellato.
@@ -152,7 +152,7 @@ Personalizzare ulteriormente il contenuto con speciali inserted tags:<br>
 Testo personalizzato per il reindirizzamento pagina può essere inserito in questo campo che è compatibile con l\'editor FCK e per il multi-lingue, è possibile utilizzare i tag [lang] del plugin Extended description, se ​​è attivo.';
 $lang['UAM_confirmtxtTitle_d'] = 'Inserire il testo introduttivo che si desidera visualizzare nella email di conferma della registrazione.
 <br><br>
-Personalizzare ulteriormente il contenuto con speciali inserted tags:<br>
+Personalizzare ulteriormente il contenuto inserendo speciali tags:<br>
 - <b style=&quot;color: red;&quot;>[username]</b> per inserire automaticamente il nome dell\'utente di destinazione del messaggio.<br>
 - <b style=&quot;color: red;&quot;>[mygallery]</b> per inserire il titolo della tua galleria.<br>
 - <b style=&quot;color: red;&quot;>[myurl]</b> per inserire l\'URL della tua galleria se impostato nelle opzioni di configurazione di Piwigo.<br>
@@ -163,6 +163,7 @@ $lang['UAM_confirmmail_custom2_d'] = 'Quando l\'opzione &quot;Conferma Registraz
 <br><br>
 Per installare il plugin, un testo standard è dato a titolo di esempio.
 <br><br>
+Personalizzare ulteriormente il contenuto inserendo speciali tags:<br>
 - <b style=&quot;color: red;&quot;>[username]</b> per inserire automaticamente il relativo nome utente.<br>
 - <b style=&quot;color: red;&quot;>[mygallery]</b> per inserire il titolo della tua galleria.<br>
 - <b style=&quot;color: red;&quot;>[myurl]</b> per inserire l\'URL della galleria, se impostato nelle opzioni di configurazione di Piwigo.
@@ -172,7 +173,7 @@ $lang['UAM_confirmmail_custom1_d'] = 'Quando l\'opzione &quot;Conferma della reg
 <br><br>
 Dopo aver installato il plugin, un testo standard è impostato come un esempio.
 <br><br>
-Personalizzare ulteriormente il contenuto con speciali inserted tag:<br>
+Personalizzare ulteriormente il contenuto inserendo speciali tags:<br>
 - <b style=&quot;color: red;&quot;>[username]</b> per inserire automaticamente il nome del relativo utente.<br>
 - <b style=&quot;color: red;&quot;>[mygallery]</b> per inserire il titolo della tua galleria.<br>
 - <b style=&quot;color: red;&quot;>[myurl]</b> per inserire l\'URL della galleria, se impostato nelle opzioni di configurazione di Piwigo.
@@ -194,22 +195,87 @@ $lang['UAM_USRAutoTitle_d'] = 'Gestione automatica dei visitatori non confermati
 - Invio automatico di un messaggio di promemoria con una nuova generazione della chiave di conferma e cancellazione automatica degli account non confermati nel tempo dopo l\'invio del promemoria -> &quot;Termine per la conferma della registrazione limitata&quot; <b><u>abilitato</u></b> e &quot;Ricorda agli utenti non confermati&quot; <b><u>abilitato</u></b>.';
 $lang['UAM_USRAutoDelTitle_d'] = 'Questo è valido solo quando l\'utente il cui account è scaduto si attiva il meccanismo di eliminazione (raro ma possibile). Egli poi sarà scollegato dalla galleria e reindirizzato a una pagina che mostra la cancellazione del suo account ed, eventualmente, le ragioni di questa cancellazione.
 <br><br>
-Personalizzare ulteriormente il contenuto con speciali inserted tags:<br>
+Personalizzare ulteriormente il contenuto inserendo speciali tags:<br>
 - <b style=&quot;color: red;&quot;>[mygallery]</b> per inserire il titolo della tua galleria.<br>
 - <b style=&quot;color: red;&quot;>[myurl]</b> per inserire l\'URL della tua galleria se impostato nella configurazione opzioni di Piwigo.<br>
 <b style=&quot;color: red;&quot;>[username]</b> non è disponibile qui perché l\'utente in questione è stato cancellato.
 <br><br>
 Testo personalizzato per il reindirizzamento pagina può essere inserito in questo campo che è compatibile con l\'editor FCK e, per il multi-lingue, è possibile utilizzare i tag [lang] del plugin Extended description se ​​è attivo.';
-$lang['UAM_MailInfo_Subject_d'] = 'Inserisci qui il tuo oggetto e-mail informazioni personalizzate.<br>
-Per impostazione predefinita, il campo ha un testo generico in inglese, ma si può cambiare e utilizzare i tag di traduzione [lang =?] del plugin Extended Description se ​​installato.
-<br><br>
-I seguenti tag aggiuntivi personalizzazioni sono disponibili senza utilizzare il plugin Extended Description:<br>
-- <b style=&quot;color: red;&quot;>[username]</b> per inserire automaticamente il nome dell\'utente di destinazione del messaggio.
-- <b style=&quot;color: red;&quot;>[mygallery]</b> per inserire il titolo della tua galleria.<br>';
 $lang['UAM_PwdResetTitle_d'] = 'L\'attivazione di questa opzione aggiunge una nuova funzionalità nel pannello di gestione degli utenti Piwigo (Utenti> Gestione) che può essere applicato per rinnovare la password per gli utenti selezionati. Inoltre, una nuova colonna viene aggiunta per mostrare lo stato di password per ciascuno di essi con i seguenti valori:<br>
 Password in attesa di rinnovo: Una richiesta per una nuova password è stata inserita.<br>
 - Password rinnovata: La password è stata cambiata dopo una richiesta.<br>
 - Password originale: La password originale scelta al momento della creazione dell\'account non è mai stata cambiata.<br>
 Webmaster, account generici e gli ospiti sono esclusi da questa funzione.<br>
 Questi utenti saranno automaticamente reindirizzati alla loro pagina di personalizzazione per ciascuna delle loro connessioni fino a quando hanno cambiato la propria password e un messaggio esplicito verrà visualizzato in questa pagina.';
+$lang['UAM_remailTitle_d'] = 'Questa opzione consente di inviare un promemoria via email agli utenti registrati ma che non hanno confermato la loro registrazione in tempo. Essa si avvale della collaborazione con la &quot;Conferma della registrazione&quot;
+<br><br>
+2 tipi di email possono essere inviate: con o senza rigenerazione della chiave di conferma. Se lo si desidera, il contenuto delle email può essere personalizzato.
+<br><br>
+Fare riferimento alla scheda &quot;Tracking confirmations&quot;.
+<br><br>
+Se questa opzione e l\'opzione &quot;Termine per la conferma della registrazione&quot; sono attivati, nuove opzioni appariranno sotto a questa sezione per consentirne l\'automazione della gestione degli utenti non confermati.';
+$lang['UAM_userlistTitle_d'] = 'Questa pagina è per informazioni all\'amministratore. Visualizza l\'elenco di tutti gli utenti registrati sulla galleria e mostra la data e il numero di giorni dalla loro ultima visita. La lista è ordinata in ordine crescente di numero di giorni.
+<br><br>
+<b><u>Solo quando è attivo il Ghost Tracker</u></b>, il numero di giorni senza una visita appare come il seguente codice colore, secondo il massimo impostato nelle opzioni Ghost Tracker:
+<br>
+- <b style=&quot;color: lime;&quot;>Verde</b>: Quando l\'utente ha visitato la galleria <b style=&quot;color: lime;&quot;><u>meno del 50%</u></b> del massimale indicato nel Ghost Tracker.<br>
+- <b style=&quot;color: orange;&quot;>Arancio</b>: Quando l\'utente ha visitato la galleria <b style=&quot;color: orange;&quot;><u>per piu del 100%</u></b> del massimale indicato nel Ghost Tracker.<br>
+- <b style=&quot;color: red;&quot;>Rosso</b>: Quando l\'utente ha visitato la galleria <b style=&quot;color: red;&quot;><u>tra il 50% e il 99%</u></b> del massimale indicato nel Ghost Tracker. <b><u>In questo caso, l\'utente deve apparire anche nella tabella di Ghost Tracker.</u></b>
+<br>
+<br>
+Esempio:
+<br>
+Il periodo massimo di Ghost Tracker è configurato per 100 giorni.
+<br>
+Un utente viene visualizzato in verde se ha visitato la galleria per meno di 50 giorni, in arancione se la sua ultima visita ha avuto luogo tra i 50 e 99 giorni e rosso per 100 giorni e oltre.
+<br><br>
+<b>NOTA</b>: L\'elenco non viene visualizzato se non hanno confermato la loro registrazione (se è attivata l\'opzione di conferma della registrazione). Questi utenti sono poi gestiti in speciale modo nella scheda &quot;Tracking confirmations&quot;.
+<br><br>
+<b>Funzione di ordinamento tabella</b>: Puoi ordinare i dati visualizzati cliccando sulle intestazioni di colonna. Tenere premuto il tasto MAIUSC per ordinare fino a 4 colonne simultaneamente.';
+$lang['UAM_remailtxt1Title_d'] = 'Immettere il testo introduttivo che si desidera venga visualizzato nell\'email di promemoria, in aggiunta alla chiave di conferma rigenerata.
+<br><br>
+Se lasciato vuoto, la email di promemoria includerà solo il link di conferma. Pertanto si consiglia vivamente di inserire un piccolo testo esplicativo. (NB: Con l\'installazione del plugin un testo pre-compilato è fornito come esempio).
+<br><br>
+Personalizzare ulteriormente il contenuto inserendo speciali tags:<br>
+- <b style=&quot;color: red;&quot;>[username]</b> per inserire automaticamente il nome dell\'utente di destinazione del messaggio.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> per inserire il titolo della tua galleria.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> per inserire l\'URL della tua galleria se impostato nella configurazione opzioni di Piwigo.<br>
+- <b style=&quot;color: red;&quot;>[Kdays]</b> per inserire il numero di giorni limite per confermare una registrazione (&quot;termine per la conferma della registrazione limitata&quot; devono essere abilitati).
+<br><br>
+Per utilizzare più lingue, è possibile utilizzare il tag del plugin Extended description se è attivo.';
+$lang['UAM_infotxtTitle_d'] = 'Immettere il testo introduttivo che si desidera venga visualizzato nell\'email di informazioni.
+<br><br>
+Personalizzare ulteriormente il contenuto inserendo speciali tags:<br>
+- <b style=&quot;color: red;&quot;>[username]</b> per inserire automaticamente il nome dell\'utente di destinazione del messaggio.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> per inserire il titolo della tua galleria.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> per inserire l\'URL della tua galleria se impostato nella configurazione opzioni di Piwigo.
+<br><br>
+Per utilizzare più lingue, è possibile utilizzare il tag del plugin Extended description se è attivo.';
+$lang['UAM_gttextTitle_d'] = 'Inserisci il testo che si desidera visualizzare nel promemoria e-mail per richiedere all\'utente di tornare a visitare la tua galleria (NB: Con l\'installazione del plugin un testo pre-compilato è fornito come esempio).
+<br><br>
+Personalizzare ulteriormente il contenuto inserendo speciali tags:<br>
+- <b style=&quot;color: red;&quot;>[username]</b> per inserire automaticamente il nome dell\'utente di destinazione del messaggio.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> per inserire il titolo della tua galleria.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> per inserire l\'URL della tua galleria se impostato nella configurazione opzioni di Piwigo.<br>
+- <b style=&quot;color: red;&quot;>[days]</b> per inserire il numero massimo di giorni tra due visite.
+<br><br>
+Per utilizzare più lingue, è possibile utilizzare il tag del plugin Extended description se è attivo.';
+$lang['UAM_remailtxt2Title_d'] = 'Immettere il testo introduttivo che si desidera venga visualizzato nell\'email di sollecito senza rigenerare una chiave di conferma.
+<br><br>
+Se lasciato vuoto, il promemoria email sarà vuoto. Pertanto si consiglia vivamente di inserire un piccolo testo esplicativo. (NB: Con l\'installazione del plugin un testo pre-compilato è fornito come esempio).
+<br><br>
+Personalizzare ulteriormente il contenuto inserendo speciali tags:<br>
+- <b style=&quot;color: red;&quot;>[username]</b> per inserire automaticamente il nome dell\'utente di destinazione del messaggio.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> per inserire il titolo della tua galleria.<br>
+- <b style=&quot;color: red;&quot;>[myurl]</b> per inserire l\'URL della tua galleria se impostato nella configurazione opzioni di Piwigo.<br>
+- <b style=&quot;color: red;&quot;>[Kdays]</b> per inserire il numero di giorni limite per confermare una registrazione (&quot;termine per la conferma della registrazione limitata&quot; devono essere abilitati).
+<br><br>
+Per utilizzare più lingue, è possibile utilizzare il tag del plugin Extended description se è attivo.';
+$lang['UAM_gtTitle_d'] = 'Quando Ghost Tracker è abilitato e inizializzato, di seguito troverete l\'elenco dei visitatori registrati che non sono tornati da x giorni. &quot;x&quot; è il numero di giorni configurati nella scheda Configurazione generale. Inoltre, si trova una colonna che indica se un promemoria tramite email è stata inviata ai al target di visitatori. Quindi, si può vedere a colpo d\'occhio e trattare i visitatori che non hanno preso in considerazione il promemoria.<br><br>In questa vista, è possibile:
+<br><br>
+- Eliminare manualmente gli account <b>(manual drain)</b>
+<br>
+- Generare promemoria e-mail <b>con il reset della data ultima visita</b>. Questo permette di dare un carattere speciale per un target di visitatori. Se il visitatore ha già ricevuto un sollecito, nulla impedisce di reinviare un nuovo messaggio, che resetterà nuovamente la data dell\'ultima visita.
+<br><br>
+<b>Tabella Ordinamento delle funzioni</b>: E\' possibile ordinare i dati visualizzati facendo clicando sulle intestazioni delle colonne. Tenere premuto il tasto SHIFT per ordinare fino a 4 colonne contemporaneamente.';
 ?>

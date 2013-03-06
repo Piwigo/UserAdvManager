@@ -13,8 +13,8 @@ $lang['UAM_Link: %s'] = 'Klicken Sie bitte auf diesen Link bestätigen Sie Ihre 
 
 /* Errors and Warnings */
 $lang['UAM_audit_ok'] = 'Audit OK';
-$lang['UAM_Err_audit_username_char'] = '<b>Dieses Konto verwendet eine oder mehrere der verbotenen Zeichen:</b> ';
-$lang['UAM_Err_audit_email_forbidden'] = '<b>Dieses Konto verwendet eine E-Mail-Anbieter sind untersagt:</b> ';
+$lang['UAM_Err_audit_username_char'] = '<b>Dieses Konto verwendet ein oder mehrere der nicht erlaubten Zeichen:</b> ';
+$lang['UAM_Err_audit_email_forbidden'] = '<b>Dieses Konto verwendet einen nicht erlaubten E-Mail-Anbieter:</b> ';
 $lang['UAM_Err_audit_advise'] = '<b>Sie müssen Korrekturen an mit neuen Regeln die Sie aktiviert haben, nachzukommen durchzuführen.<br>Verwenden Sie ein Datenbank-Management-Dienstprogramm, um Benutzer-Accounts direkt in der Tabelle richtig ###_USERS';
 $lang['UAM_reg_err_login2'] = 'Benutzername muss nicht die folgenden Zeichen übereinstimmen: ';
 $lang['UAM_reg_err_login5'] = 'Ihre E-Mail-Anbieter für die Registrierung ist verboten. Gebannten E-Mail-Anbieter sind: ';
@@ -132,7 +132,7 @@ $lang['UAM_GhostTracker_ReminderText'] = 'Anpassen der Geist Tracker Erinnerungs
 
 /* Ghost Tracker Tab */
 $lang['UAM_SubTitle4'] = 'Geist Tracker';
-$lang['UAM_GT_Init'] = 'Initialisieren Geist Tracker';
+$lang['UAM_GT_Init'] = 'Initialisieren Inaktiven-Nutzer-Verfolgung';
 $lang['UAM_GhostTracker_Title'] = 'Geist Besucher-Management';
 $lang['UAM_GhostTracker_Init'] = 'Wenn Sie diese Funktion zum ersten Mal oder haben Sie nach einem langen Zeitraum aus, in dem neue Besucher registriert sind, müssen Sie initialisieren, oder setzen Sie den Geist Tracker reaktiviert. Dieser Vorgang ist nur nach Aktivierung oder Reaktivierung von der Möglichkeit gemacht. Bitte klicken Sie <u>einmal</u> die Reset-Taste unten.';
 /* Mailing */
@@ -144,8 +144,8 @@ $lang['UAM_Ghost_reminder_of_%s'] = '%s, Dies ist eine Erinnerung per E-Mail';
 $lang['UAM_Reminder_with_key_of_%s'] = '%s, Ihre Validierungs-Zahl wurde erneuert';
 $lang['UAM_Reminder_without_key_of_%s'] = '%s, Ihre Validierung Schlüssel abläuft';
 /* Errors and Warnings */
-$lang['UAM_Err_GhostTracker_Settings'] = 'Diese Seite ist nur verfügbar, wenn &quot;Geist Tracker&quot; aktiv &quot;Einstellen der Registrierung durchgeführt und andere Optionen&quot;.';
-$lang['UAM_Err_Userlist_Settings'] = 'Diese Seite ist nur verfügbar, wenn &quot;Monitoring registrierte Benutzer&quot; ist aktiv in der &quot;Einstellung der Registrierung durchgeführt und andere Optionen&quot;';
+$lang['UAM_Err_GhostTracker_Settings'] = 'Diese Seite ist nur verfügbar, wenn &quot;Inaktive-Nutzer-Verfolgung&quot; aktiv ist &quot;Einstellungen der Registrierung durchgeführt und andere Optionen gesetzt sind&quot;.';
+$lang['UAM_Err_Userlist_Settings'] = 'Diese Seite ist nur verfügbar, wenn &quot;Überwache registrierte Benutzer&quot; aktiv ist in der &quot;Einstellung der Registrierung durchgeführt und andere Optionen&quot;';
 // --------- End: New or revised $lang ---- from version 2.13.4
 
 
@@ -159,7 +159,7 @@ $lang['UAM_confirmmail_custom_Txt1'] = 'Text der Bestätigungs-Seite - Bestätig
 $lang['UAM_confirmmail_custom_Txt2'] = 'Text der Bestätigungs-Seite - Bestätigung abgelehnt';
 $lang['UAM_LastVisit_Date'] = 'Letzter Besuch';
 $lang['UAM_Nb_Days'] = 'Differenz in Tagen';
-$lang['UAM_Err_UserManager_Settings'] = 'Diese Seite ist nur verfügbar, wenn "Bestätigung der Anmeldung" aktiv ist und wenn eine Gruppe von nicht validierte Besuchern wird in "Einstellen Bestätigungen und Validierungen der Registrierung" konfiguriert.';
+$lang['UAM_Err_UserManager_Settings'] = 'Diese Seite ist nur verfügbar, wenn "Bestätigung der Anmeldung" aktiv ist und wenn eine Gruppe von nicht validierte Besuchern in "Einstellen Bestätigungen und Validierungen der Registrierung" konfiguriert wird.';
 // --------- End: New or revised $lang ---- from version 2.15.0
 
 
@@ -178,9 +178,9 @@ $lang['UAM_Confirm_Mail_local'] = ' Aktiviere - Bestätigung durch Administrator
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.16.0
-$lang['UAM_Expired_Group'] = '<b>Gruppe</b> für Benutzer-Registrierung abgelaufen<br>';
+$lang['UAM_Expired_Group'] = '<b>Gruppe</b> für Benutzer-Registrierung ist abgelaufen<br>';
 $lang['UAM_Expired_Status'] = '<b>Status</b> für Benutzer-Registrierung abgelaufen<br>';
-$lang['UAM_GTAuto'] = 'Automatische Verwaltung von Geist Benutzern';
+$lang['UAM_GTAuto'] = 'Automatische Verwaltung der Inaktiven-Nutzer-Verfolgung';
 $lang['UAM_GTAutoDel'] = 'Automatisches Löschen von Konten';
 $lang['UAM_Error_GTAutoMail_cannot_be_set_without_ConfirmMail'] = 'Konsistenz-Fehler in der Konfiguration gewählt:<br><br>
 "Einstellen der Registrierung durchgeführt und andere Optionen > Geist Besucher-Management (Geist Tracker) > Automatische Verwaltung von Geist Benutzern > Automatisches Versenden einer E-Mail beim Wechsel Gruppe / Status" kann nicht aktiviert werden, wenn "Einstellen Bestätigungen und Validierungen der Registrierung > Bestätigung der Anmeldung - Validation von Benutzer" ist zunächst nicht aktiviert.<br><br>
@@ -192,18 +192,18 @@ $lang['UAM_Validation of %s'] = 'Validierung von %s';
 
 // --------- Starting below: New or revised $lang ---- from version 2.20.0
 $lang['UAM_Disable'] = ' Deaktivieren (Standard)';
-$lang['UAM_Enable'] = ' Aktivieren ';
+$lang['UAM_Enable'] = 'Aktivieren ';
 $lang['UAM_Stuffs_Title'] = 'UAM-Modul';
 $lang['UAM_Stuffs'] = 'PWG Stuffs Modul';
 // --------- End: New or revised $lang ---- from version 2.20.0
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.20.3
-$lang['UAM_DumpTxt'] = 'Sichern Sie Ihre Konfiguration';
-$lang['UAM_Dump_Download'] = 'Zum Download der Backup-Datei, überprüfen Sie bitte dieses Feld:';
+$lang['UAM_DumpTxt'] = 'Sichern Sie oder stellen Sie Ihre Konfiguration wieder her.';
+$lang['UAM_Dump_Download'] = 'Zum Download der Backup-Datei Box markieren bitte:';
 $lang['UAM_Save'] = 'Starten der Backup';
-$lang['UAM_Dump_OK'] = 'Backup-Datei erfolgreich erstellt';
-$lang['UAM_Dump_NOK'] = 'Fehler: Backup-Datei kann nicht erstellt werden !';
+$lang['UAM_Dump_OK'] = 'Backup-Datei erfolgreich erstellt.';
+$lang['UAM_Dump_NOK'] = 'Fehler: Backup-Datei kann nicht erstellt werden!';
 // --------- End: New or revised $lang ---- from version 2.20.3
 
 
@@ -214,7 +214,7 @@ $lang['UAM_HidePassw'] = 'Passwort im Klartext in der Informations-E-Mail';
 
 // --------- Starting below: New or revised $lang ---- from version 2.30.2
 $lang['UAM_RedirToProfile'] = 'Umleitung auf Benutzerdaten Seite';
-$lang['UAM_GTAutoGp'] = 'Automatischer Wechsel der Gruppe / Status / Vertraulichkeit Grad';
+$lang['UAM_GTAutoGp'] = 'Automatischer Wechsel der Gruppe / des Statuses / Vertraulichkeit Grad';
 $lang['UAM_GTAutoMail'] = 'Automatisches Versenden einer E-Mail beim Wechsel Gruppe / Status / Vertraulichkeit Grad';
 // --------- End: New or revised $lang ---- from version 2.30.2
 $lang['UAM_Tips1_txt'] = '          <ul>
@@ -339,8 +339,14 @@ $lang['UAM_Default_ConfirmMail_Txt'] = 'Hallo [username]!
 Wir danken Ihnen für die Registrierung auf [mygallery].
 
 Um den Vorgang abzuschliessen und durch die Bilder blättern zu können, bitten wir Sie noch Ihre Registrierung durch anklicken des Links in dieser Nachricht zu bestätigen. ';
-$lang['UAM_Default_GhstDeletion_Txt'] = 'Leider [username], Ihr Konto wurde auf Grund einer zu langen Zeit seit Ihrem letzten Besuch bei [mygallery] gelöscht. Bitte registrieren Sie sich erneut.';
-$lang['UAM_Default_GhstDemotion_Txt'] = 'Leider [username], Ihr Konto wurde auf Grund einer zu langen Zeit seit Ihrem letzten Besuchs am [mygallery] deaktiviert. Bitte benutzen Sie den folgenden Link, um Ihr Konto zu bestätigen:';
+$lang['UAM_Default_GhstDeletion_Txt'] = 'Leider [username], 
+
+Ihr Konto wurde auf Grund einer zu langen Zeit seit Ihrem letzten Besuch bei [mygallery] gelöscht. 
+Bitte registrieren Sie sich erneut.';
+$lang['UAM_Default_GhstDemotion_Txt'] = 'Leider [username], 
+
+Ihr Konto wurde auf Grund einer zu langen Zeit seit Ihrem letzten Besuchs am [mygallery] deaktiviert. 
+Bitte benutzen Sie den folgenden Link, um Ihr Konto zu bestätigen:';
 $lang['UAM_Default_GhstReminder_Txt'] = 'Hallo [username].
 
 Dies ist eine Erinnerung, da eine sehr lange Zeit seit Ihrem letzten Besuch auf unserer Galerie [mygallery] vergangen ist. Wenn Sie Ihr Zugang Konto nicht mehr verwenden möchten, informieren Sie uns bitte durch eine Beantwortung dieser E-Mail. Ihr Konto wird dann gelöscht.
@@ -353,10 +359,13 @@ Der Administrator der Galerie
 [mygallery] - [myurl]';
 $lang['UAM_Default_InfoMail_Txt'] = 'Hallo [username]!
 
-Sie haben wesentliche Veränderungen in Ihrem Profil auf der Galerie [mygallery]. Bitte, finden Sie die neuen Einstellungen:';
-$lang['UAM_Default_PwdRequest_Txt'] = 'Sie haben ein Passwort-Reset auf unserer Galerie anzubieten. Bitte unten Ihre neue Verbindung Einstellungen zu finden.';
-$lang['UAM_Default_RejectConnexion_Txt'] = 'Leider müssen Sie nicht Ihre Anmeldung bestätigt noch haben, so können Sie nicht schließen Sie die Galerie jetzt. Bitte überprüfen Sie Ihre E-Mail-Box. Sie sollten eine E-Mail durch die Galerie geschickt, mit einem Link zu Ihrer Bestätigung durchzuführen. Wenn nicht, wenden Sie sich bitte an den Webmaster.';
-$lang['UAM_Default_ValidationTimeout_Txt'] = 'Sorry, dein Konto wurde gelöscht, weil Sie nicht Ihre Anmeldung im gewünschten Zeitraum ([Kdays] Tage) bestätigt haben. Bitte versuchen Registrierung mit einer gültigen und nicht blockiert E-Mail-Konto.';
+Sie haben wesentliche Veränderungen in Ihrem Profil auf der Galerie [mygallery] vorgenommen. 
+Hier finden Sie Ihre neuen Einstellungen:';
+$lang['UAM_Default_PwdRequest_Txt'] = 'Sie haben ein Passwort-Reset auf unserer Galerie angefordert. 
+Unten sehen Sie Ihre neuen Logindaten.
+';
+$lang['UAM_Default_RejectConnexion_Txt'] = 'Entschuldigung, Ihre Registrierung ist noch nicht bestätigt worden, somit ist noch kein Login möglich.';
+$lang['UAM_Default_ValidationTimeout_Txt'] = 'Entschuldigung, Ihr Konto wurde gelöscht, weil Sie Ihre Anmeldung im gewünschten Zeitraum ([Kdays] Tage) noch nicht bestätigt haben. Bitte versuchen Sie die Registrierung mit einer gültigen und nicht blockiertem E-Mail-Adresse erneut.';
 $lang['UAM_Error_Using_illegal_flag'] = 'Syntax-Fehler! Die [Kdays] AutoText Flagge wird als "Anmeldeschluss Bestätigung begrenzt"-Option verwendet wurde nicht aktiviert. Bitte aktivieren Sie die Option, oder korrigieren Sie die Text-Feld rot eingefärbt.';
 $lang['UAM_Error_Using_illegal_Kdays'] = 'Mit dem [Kdays]-Tag ist nur zulässig, wenn die Frist für die Anmeldebestätigung begrenzt aktiv ist. Lesen Sie das Textfeld in rot, um das Problem zu beheben.';
 $lang['UAM_Expired_Level'] = '<b>Datenschutz Niveau</b> für Benutzer-Registrierung abgelaufen<br>';
@@ -405,12 +414,12 @@ $lang['UAM_ConfirmMail_Subject'] = 'Anpassung des Betreffs der Registrierungs-Be
 $lang['UAM_Default_AdminValidationMail_Subject'] = '[username] - Registrierung wurde bestätigt bei [mygallery]';
 $lang['UAM_Default_ConfirmMail_Remail_Subject'] = 'Erinnerung - [username] Registrierung-Bestätigung bei [mygallery]';
 $lang['UAM_Default_ConfirmMail_Subject'] = '[username] Registrierungbestätigung bei [mygallery]';
-$lang['UAM_Default_GTAutoMail_Subject'] = '[username] - Ihr Zugangs-Konto bei [mygallery] wurde herabgestuft';
-$lang['UAM_Default_GTReminder_Subject'] = '[username] - Eine lange Zeit ist seit Ihrem letzten Besuch bei [mygallery] vergangen';
+$lang['UAM_Default_GTAutoMail_Subject'] = '[username] - Ihr Zugangs-Konto bei [mygallery] wurde herabgestuft.';
+$lang['UAM_Default_GTReminder_Subject'] = '[username] - Eine lange Zeit ist seit Ihrem letzten Besuch bei [mygallery] vergangen.';
 $lang['UAM_Default_InfoMail_Subject'] = '[username] - Ihre Registrierung-Information für [mygallery]';
 $lang['UAM_GTAutomail_Subject'] = 'Automatische Anpassung des Betreffs der Ghost-Tracker-Herabstufungs-E-Mail';
-$lang['UAM_GTAutomail_Text'] = 'Anpassen des Herabstufens E-Mail Text';
-$lang['UAM_GTReminder_Subject'] = 'Manuelle Anpassung des Betreffs der Ghost-Tracker-Erinnerungs-E-Mail';
+$lang['UAM_GTAutomail_Text'] = 'Anpassen des Herabstufens-E-Mail-Textes';
+$lang['UAM_GTReminder_Subject'] = 'Manuelle Anpassung des Betreffs der Inaktiven-Nutzer-Verfolgungs-Erinnerungs-E-Mail';
 $lang['UAM_MailInfo_Subject'] = 'Anpassen des Betreffs der Informations-E-Mail';
 $lang['UAM_mail_exclusion_error'] = ' 	
 Die Piwigo Option "e-Mail-Adresse ist obligatorisch für alle Benutzer" wurde deaktiviert, weil die UserAdvancedManager (UAM)  Option "Ausschluss von Mail-Domänen" aktiv war. Diese Kombination ist unlogisch und nicht kompatibel! <br> <br>

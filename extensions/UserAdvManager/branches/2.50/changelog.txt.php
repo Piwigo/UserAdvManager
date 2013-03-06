@@ -385,6 +385,11 @@ Plugin Name: UserAdvManager
             Update de_DE, thanks to : stephy
             Update tr_TR, thanks to : hakanselcuk and LazBoy
             Update it_IT, thanks to : Ericnet
+
+-- 2.50.1 : Blocking bug fixed : New registrants could not validate their registration with the confirmation link
+            Update tr_TR, thanks to : LazBoy
+            Update de_DE, thanks to : stephy
+            Update it_IT, thanks to : Ericnet
             
 */
 ?>
