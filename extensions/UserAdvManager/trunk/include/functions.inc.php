@@ -1903,6 +1903,7 @@ function FindAvailableConfirmMailID()
   while (true)
   {
     $id = generate_key(16);
+
     $query = '
 SELECT COUNT(*)
 FROM '.USER_CONFIRM_MAIL_TABLE.'
@@ -1935,6 +1936,22 @@ function AddConfirmMail($user_id, $email)
 
   if (isset($Confirm_Mail_ID))
   {
+    $query = "
+SELECT status
+  FROM ".USER_INFOS_TABLE."
+WHERE user_id = '".$user_id."'
+;";
+    list($status) = pwg_db_fetch_row(pwg_query($query));
+
+    // Insert $Confirm_Mail_ID in USER_CONFIRM_MAIL_TABLE
+    $query = "
+INSERT INTO ".USER_CONFIRM_MAIL_TABLE."
+  (id, user_id, mail_address, status, date_check, reminder)
+VALUES
+  ('".$Confirm_Mail_ID."', '".$user_id."', '".$email."', '".$status."', null, false)
+;";
+    pwg_query($query);
+
     // Set user permissions
     // --------------------
     SetPermission($user_id);
