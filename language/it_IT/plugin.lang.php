@@ -21,9 +21,9 @@ $lang['UAM_reg_err_login5'] = 'Il vostro provider di posta usa un dominio email 
 $lang['UAM_empty_pwd'] = '[password vuota]';
 $lang['UAM_no_update_pwd'] = '[profilo aggiornato senza cambiamento della password]';
 $lang['UAM_No_validation_for_Guest'] = 'L\'account Guest non è soggetto a conferma';
-$lang['UAM_No_validation_for_default_user'] = 'L\'account di default non è soggetto a conferma';
+$lang['UAM_No_validation_for_default_user'] = 'L\'account predefinito non è soggetto a conferma';
 $lang['UAM_No_validation_for_Webmaster'] = 'L\'account Webmaster non è soggetto a conferma';
-$lang['UAM_No_validation_for_your_account'] = 'Il account personale di amminstratore non è soggetto a conferma';
+$lang['UAM_No_validation_for_your_account'] = 'Il tuo personale account di amminstratore non è soggetto a conferma';
 
 
 /* Processing messages */
@@ -37,8 +37,8 @@ $lang['UAM_%d_Validated_Users'] = '%d Utenti confermati manualmente';
 
 /* Action button names */
 $lang['UAM_Delete_selected'] = 'Elimina';
-$lang['UAM_Mail_without_key'] = 'Email di remind senza chiave';
-$lang['UAM_Mail_with_key'] = 'Email di remind con chiave';
+$lang['UAM_Mail_without_key'] = 'Promemoria senza chiave';
+$lang['UAM_Mail_with_key'] = 'Promemoria con chiave';
 
 
 
@@ -48,9 +48,9 @@ $lang['UAM_Mail_with_key'] = 'Email di remind con chiave';
 $lang['UAM_PasswordTest'] = 'Prova la password : ';
 /* Ghost Tracker Tab */
 $lang['UAM_Tab_GhostTracker'] = 'Ghost Tracker';
-$lang['UAM_Reminder'] = 'Email di remind';
-$lang['UAM_Reminder_Sent_OK'] = 'Sì';
-$lang['UAM_Reminder_Sent_NOK'] = 'No';
+$lang['UAM_Reminder'] = 'E-mail promemoria';
+$lang['UAM_Reminder_Sent_OK'] = 'SI';
+$lang['UAM_Reminder_Sent_NOK'] = 'NO';
 /* Errors and Warnings */
 $lang['UAM_save_config'] = 'Configurazione salvata.';
 $lang['UAM_reg_err_login3'] = 'Sicurezza: la password è obbligatoria!';
@@ -60,7 +60,7 @@ $lang['UAM_reg_err_login4_%s'] = 'Sicurezza: Un sistema di controllo calcola un 
 - Aumentare la lunghezza (numero dei caratteri)<br>
 Il punteggio minimo per la password richiesto dall\'amministratore è:';
 $lang['UAM_No_reminder_for_Guest'] = 'Il conto utente "Guest" non è soggetto a ricevere dei promemoria dal GhostTracker';
-$lang['UAM_No_reminder_for_default_user'] = 'L\'account utente di default non è soggetto a ricevere dei promemoria dal GhostTracker';
+$lang['UAM_No_reminder_for_default_user'] = 'L\'account utente predefinito non è soggetto a ricevere dei promemoria dal GhostTracker';
 $lang['UAM_No_reminder_for_Webmaster'] = 'Il conto utente "Webmaster" non è soggetto a ricevere dei promemoria dal GhostTracker';
 $lang['UAM_No_reminder_for_your_account'] = 'Il vostro account personale di amministratore non è soggetto a ricevere dei promemoria dal GhostTracker';
 /* Action button names */
@@ -90,12 +90,12 @@ $lang['UAM_SubTitle1'] = 'Configurazione Plugin';
 $lang['UAM_Tab_Global'] = 'Configurazione';
 $lang['UAM_Title1'] = 'Restrizioni per le registrazioni';
 $lang['UAM_Title2'] = 'Conferme delle registrazioni';
-$lang['UAM_Title3'] = 'Impostazioni utenti fantasma';
+$lang['UAM_Title3'] = 'Impostazioni utenti ghost';
 $lang['UAM_Title4'] = 'Suggerimenti e esempi d\'uso';
 $lang['UAM_No_Casse'] = 'Nome utente: distinzione tra maiusc/minusc';
 $lang['UAM_Username_Char'] = 'Nome utente: Esclusione di caratteri';
 $lang['UAM_Username_Char_true'] = 'Vieta i caratteri : <br>(usare una virgola per separare ogni carattere)<br><br>';
-$lang['UAM_Username_Char_false'] = 'Permetti tutto (default)';
+$lang['UAM_Username_Char_false'] = 'Permetti tutto (predefinito)';
 $lang['UAM_Password_Enforced'] = 'Rafforzamento del livello di sicurezza delle password';
 $lang['UAM_Password_Enforced_true'] = 'Attivato. Punteggio minimo:';
 $lang['UAM_AdminPassword_Enforced'] = 'Applica a tutti gli amministratori';
@@ -104,8 +104,8 @@ $lang['UAM_ScoreTest'] = 'Risultato:';
 $lang['UAM_MailExclusion'] = 'Esclusione dei domini email';
 $lang['UAM_MailExclusion_true'] = 'Escludi i seguenti domini:<br>(usa la virgola per separare ogni dominio)';
 
-$lang['UAM_Mail_Info'] = 'Mail d\'informazione agli utenti:';
-$lang['UAM_MailInfo_Text'] = 'Personalizza la mail d\'informazione';
+$lang['UAM_Mail_Info'] = 'Email d\'informazione agli utenti:';
+$lang['UAM_MailInfo_Text'] = 'Personalizza la email d\'informazione';
 $lang['UAM_Confirm_Mail'] = 'Conferma della registrazione:';
 $lang['UAM_ConfirmMail_Text'] = 'Personalizza la email di conferma:';
 $lang['UAM_Confirm_Group'] = 'Gruppi<br>(lascia ------- per non influenzare i gruppi)';
@@ -121,20 +121,20 @@ $lang['UAM_ConfirmMail_Remail'] = 'Ricorda utenti non confermati';
 $lang['UAM_ConfirmMail_ReMail_Txt1'] = 'Personalizzare il messaggio di promemoria <b><u>con</u></b> rigenerazione di una nuova chiave di convalida';
 $lang['UAM_ConfirmMail_ReMail_Txt2'] = 'Personalizzare il messaggio di promemoria <b><u>senza</u></b> rigenerazione di una nuova chiave di convalida';
 
-$lang['UAM_GhostTracker'] = 'Gestione dei visitatori fantasma (GhostTracker)';
+$lang['UAM_GhostTracker'] = 'Gestione dei visitatori ghost (GhostTracker)';
 $lang['UAM_GhostTracker_true'] = ' Attivare. Durata massima tra due visite in giorni: ';
-$lang['UAM_GhostTracker_ReminderText'] = 'Testo di reminder di Ghost Tracker personalizzato';
+$lang['UAM_GhostTracker_ReminderText'] = 'Personalizzare il messaggio di promemoria del Ghost Tracker';
 
 /* Ghost Tracker Tab */
 $lang['UAM_SubTitle4'] = 'Ghost Tracker';
 $lang['UAM_GT_Init'] = 'Inizializza Ghost Tracker';
-$lang['UAM_GhostTracker_Title'] = 'Gestione dei visitatori fantasma';
-$lang['UAM_GhostTracker_Init'] = 'Se si attiva questa funzione per la prima volta o se viene riattivata dopo un lungo periodo durante il quale dei nuovi visitatori si sono iscritti, è necessario inizializzare o azzerare il Tracker Ghost. Questa azione è da effettuarsi solo dopo l\'attivazione o la riattivazione dell\'opzione; Cliccare dunque <u>una sola volta</u> sul pulsante di reset sottostante';
+$lang['UAM_GhostTracker_Title'] = 'Gestione dei visitatori ghost';
+$lang['UAM_GhostTracker_Init'] = 'Se si attiva questa funzione per la prima volta o se viene riattivata dopo un lungo periodo durante il quale dei nuovi visitatori si sono iscritti, è necessario inizializzare o azzerare il Ghost Tracker. Questa azione è da effettuarsi solo dopo l\'attivazione o la riattivazione dell\'opzione; Cliccare dunque <u>una sola volta</u> sul pulsante di reset sottostante.';
 /* Mailing */
 $lang['UAM_Add of %s'] = 'Profilo creato per %s';
 $lang['UAM_Update of %s'] = 'Profilo %s aggiornato';
 /* Mailing */
-$lang['UAM_Ghost_reminder_of_%s'] = '%s, questa è un\'email di remind';
+$lang['UAM_Ghost_reminder_of_%s'] = '%s, questa è un\'email di promemoria';
 $lang['UAM_Reminder_with_key_of_%s'] = '%s, la tua chiave di conferma è stata rinnovata';
 $lang['UAM_Reminder_without_key_of_%s'] = '%s, la tua chiave di conferma sta per scadere';
 /* Errors and Warnings */
@@ -191,14 +191,14 @@ $lang['UAM_Validation of %s'] = 'Conferma di %s';
 $lang['UAM_CustomPasswRetr'] = 'Personalizza contenuto email per password dimenticata';
 $lang['UAM_USRAuto'] = 'Gestione automatica degli utenti non confermati';
 $lang['UAM_USRAutoDel'] = 'Messaggio personalizzato sugli account eliminati';
-$lang['UAM_USRAutoMail'] = 'Email reminder automatico';
+$lang['UAM_USRAutoMail'] = 'Promemoria e-mail automatizzata';
 $lang['UAM_Disable'] = 'Disabilita (predefinito)';
 $lang['UAM_Enable'] = 'Abilita';
 $lang['UAM_Tips1'] = 'Messaggio d\'informazione per le registrazioni non confermate con UAM e PWG_Stuffs';
 $lang['UAM_Tips1_txt'] = '          <ul>
             <li>
-            Obiettivo : Informare il visitatore che la sua iscrizione è in attesa di convalida visualizzando un messagio in un blocco personale sulla homepage della galleria finché l\'iscrizione non viene convalidata.<br><br>
-            <b>Nota : Di default, l\'Utente "Guest" vede solo gli album pubblici, senza nessun messaggio d\'informazione.</b>
+            Obiettivo : Informare il visitatore che la sua iscrizione è in attesa di convalida visualizzando un messaggio in un blocco personale sulla homepage della galleria finché l\'iscrizione non viene convalidata.<br><br>
+            <b>Richiamo: Nel funzionamento standard, il "Guest" vede soltanto le categorie pubbliche, senza messaggio di informazione.</b>
             </li><br><br>
             <li>
 Prerequisiti :<br>
@@ -239,9 +239,9 @@ $lang['UAM_Tips2_txt'] = '          <ul>
             Vantaggi rispetto al metodo con PWG_Stuffs : Consente una formattazione e visualizzazione delle informazioni immediatamente dopo l\'iscrizione dei visitatori.
             </li><br><br>
             <li>
-Prerequisiti :<br>
-- Una galleria con tutte o alcuni album privati, visibili solo agli utenti iscritti<br>
-- Almeno 2 gruppi d\'utenti Piwigo seguenti : "Attesa", senza alcuna autorizzazione sugli album privati, e "Convalidati" con tutte le autorizzazioni per gli album privati<br>
+Prerequisiti:<br>
+- Una galleria con tutti o alcuni album privati, visibili solo agli utenti iscritti<br>
+- Almeno 2 gruppi d\'utenti Piwigo seguenti: "Attesa", senza alcuna autorizzazione sugli album privati, e "Convalidati" con tutte le autorizzazioni per gli album privati<br>
 - Il plugin UAM<br>
 - Il plugin Additional Pages per l\'aggiunta e la gestione di una pagina aggiuntiva che rimpiazza la pagina indice di default della galleria<br>
 - In opzione, il plugin Extended Description per il supporto multi-lingue<br>
@@ -273,7 +273,7 @@ B. Nel plugin Additional Pages :<br>
               </ol>
             </li>
           </ul>';
-$lang['UAM_No_Ghosts'] = 'Nessun visitatore fantasma al momento';
+$lang['UAM_No_Ghosts'] = 'Nessun visitatore ghost al momento';
 $lang['UAM_No_Userlist'] = 'Nessun visitatore al momento';
 $lang['UAM_No_Usermanager'] = 'Nessun utente non verificato da visualizzare al momento';
 $lang['UAM_Stuffs_Title'] = 'Blocco UAM';
@@ -292,7 +292,7 @@ $lang['UAM_Dump_NOK'] = 'Errore: impossibile creare il file di backup!';
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.20.4
-$lang['UAM_HidePassw'] = 'Password in chiaro nella mail d\'informazione';
+$lang['UAM_HidePassw'] = 'Password in chiaro nella email d\'informazione';
 // --------- End: New or revised $lang ---- from version 2.20.4
 
 // --------- Starting below: New or revised $lang ---- from version 2.20.11
@@ -328,11 +328,6 @@ NB: Dopo questo periodo, il tuo account verrà permanentemente eliminato.';
 $lang['UAM_Default_ConfirmMail_Txt'] = 'Ciao [username]! Grazie per esserti registrato su [mygallery].
 
 Per completare la procedura e poter vedere le immagini, conferma la tua registrazione cliccando nel link contenuto in questo messaggio.';
-L\'amministratore della galleria [mygallery] - [myurl]
-Alla ricezione di questo messaggio e non ricevendo altre visite entro [days] giorni, saremo obbligati a cancellare l\'account.
-
-Distinti saluti,
-l\'amministratore della galleria [mygallery] - [myurl]';
 $lang['UAM_Default_InfoMail_Txt'] = 'Ciao [username]!
 
 Sono state apportate modifiche significative nel tuo profilo sulla galleria [mygallery]. Per favore, trovare sotto le nuove impostazioni:';
@@ -346,7 +341,7 @@ $lang['UAM_Generic cannot be pwdreset'] = 'Il rinnovo della password non può es
 $lang['UAM_Guest cannot be pwdreset'] = 'Il rinnovo della password non può essere impostato per l\'account ospite!';
 $lang['UAM_MailExclusion_No'] = 'Esclusione domini mail non disponibile in quanto le email non sono obbligatorie per la registrazione';
 $lang['UAM_MiscOptions'] = 'Altre opzioni varie';
-$lang['UAM_NewFeature'] = 'Nuove funzionalità!';
+$lang['UAM_NewFeature'] = 'Nuove funzionalità !';
 $lang['UAM_No_Backup_File'] = 'Nessun file di backup disponibile!';
 $lang['UAM_No_Valid_Level'] = 'Livello privacy per gli utenti che non hanno confermato la loro iscrizione <br>';
 $lang['UAM_Password reset selected users'] = 'Richiedi rinnovo password per gli utenti selezionati';
@@ -366,7 +361,7 @@ $lang['UAM_Restore_File'] = 'Ripristino configurazione';
 $lang['UAM_Title5'] = 'Opzioni varie';
 $lang['UAM_Tracking confirmations'] = 'Monitora conferme';
 $lang['UAM_Tracking registered users'] = 'Monitora utenti registrati';
-$lang['UAM_Valid_Level'] = 'Livello privacy per gli utenti che hanno confermato la loro iscrizione <br>';
+$lang['UAM_Valid_Level'] = 'Livello privacy per gli utenti che hanno confermato la loro registrazione<br>';
 $lang['UAM_Webmaster cannot be pwdreset'] = 'Il rinnovo della password non può essere impostato per l\'account webmaster!';
 $lang['UAM_You cannot pwdreset your account'] = 'Il rinnovo della password non può essere impostato per il tuo stesso account!';
 $lang['UAM_You need to confirm pwdreset'] = 'Devi confermare il rinnovo della password (spunta la casella)!';
@@ -390,4 +385,15 @@ $lang['UAM_Manual_validation_needed_for %s'] = 'L\'utente %s si è registrato ed
 $lang['UAM_Subject admin validation for %s'] = 'La registrazione di %s è in attesa di approvazione';
 $lang['UAM_Change'] = 'Cambia il Gruppo/Stato/Livello di Privacy degli utenti che sono stati confermati.';
 $lang['UAM_Customize_messagesandmails'] = 'Personalizza i messaggi e le email';
+$lang['UAM_Default_GhstReminder_Txt'] = 'Ciao [username].
+
+Questo è un promemoria, perché molto tempo è passato dalla tua ultima visita sulla nostra galleria [mygallery]. Se non si desidera più utilizzare il tuo account di accesso, fatecelo sapere rispondendo a questa email. Il tuo account verrà eliminato.
+
+Alla ricezione di questo messaggio e nessuna nuova visita entro [days] giorni, saremmo obbligati a cancellare automaticamente il tuo account.
+
+Migliori saluti
+
+L\'amministratore della galleria [mygallery]-[myurl]';
+$lang['UAM_Default_GhstDemotion_Txt'] = 'Mi dispiace [username], il tuo account è stato deprecato a causa di un troppo lungo tempo passato dalla tua ultima visita a [mygallery]. Per favore, utilizzare il seguente link per confermare il tuo account:';
+$lang['UAM_Default_GhstDeletion_Txt'] = 'Mi dispiace [username], il tuo account è stato eliminato a causa di un troppo lungo tempo passato dalla tua ultima visita a [mygallery]. Si prega di registrarsi nuovamente.';
 ?>

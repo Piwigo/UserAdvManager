@@ -135,4 +135,15 @@ $lang['UAM_AdminPassword_Enforced'] = 'Yöneticilere uygulanıyor';
 $lang['UAM_%d_Mails_With_Key'] = 'yenileme anahtarı içeren %d mesaj gönderildi';
 $lang['UAM_%d_Mail_With_Key'] = 'yenileme anahtarı içeren %d mesaj gönderildi';
 $lang['UAM_Admins cannot be pwdreset'] = 'Yönetici hesapları için şifre yenilemesi ayarlanamaz!';
+$lang['UAM_Err_audit_username_char'] = '<b>Bu hesap bir veya daha fazla yasaklı karakter kullanıyor:</b>';
+$lang['UAM_Err_audit_email_forbidden'] = '<b>Bu hesap yasaklı bir e-posta sağlayıcısı kullanıyor:</b>';
+$lang['UAM_GT_Init'] = 'Hayalet Takipçisi Başlatılıyor';
+$lang['UAM_GT_Reset'] = 'Hayalet Takipçisini Sıfırla';
+$lang['UAM_GhostTracker_true'] = 'Etkinleştir. İki ziyaret arasında azami süre: ';
+$lang['UAM_Guest cannot be pwdreset'] = 'Misafir hesabı için şifre yenileme ayarlanamaz!';
+$lang['UAM_HidePassw'] = 'Bilgi e-postasında açık yazı şeklinde şifre';
+$lang['UAM_GhostTracker_ReminderText'] = 'Hayalet Takipçisi hatırlatma mesajının özelleştirilmesi';
+$lang['UAM_GhostTracker_Init_OK'] = 'Hayalet Takipçisi sıfırlandı!';
+$lang['UAM_Generic cannot be pwdreset'] = 'Jenerik hesaplar için şifre yenileme ayarlanamaz!';
+$lang['UAM_GhostTracker'] = 'Hayalet ziyaretçilerin yönetimi (Hayalet Takipçisi)';
 ?>
