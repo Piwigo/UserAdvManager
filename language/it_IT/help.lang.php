@@ -1,10 +1,10 @@
 <?php
 
-$lang['UAM_confirmTitle_d'] = '- Generazzione di un\'email d\'informazione<br>
-- Generazzione di un\'email di conferma d\'iscrizzione<br>
-- Inserimento in automatico dei gruppi o dei statuti<br>
-- Limitazzione del termine di convalida dell\'iscrizzione<br>
-- Generazzione di un\'email di rilancio per gli utenti non convalidati<br>
+$lang['UAM_confirmTitle_d'] = '- Generazione di un\'email d\'informazione<br>
+- Generazione di un\'email di conferma iscrizione<br>
+- Gruppi, stato o livello di privacy auto adesione<br>
+- Limitazione del termine di convalida dell\'iscrizione<br>
+- Generazione email di promemoria<br>
 ...
 ';
 $lang['UAM_carexcTitle_d'] = 'Può essere interessante vietare certi caratteri per i pseudo (ad esempio: negare login contenente @). Questa opzione permette di escludere i caratteri o sequenza di caratteri, eventi.<br>
@@ -113,13 +113,18 @@ Personalizzare ulteriormente il contenuto inserendo speciali tags:<br>
 - <b style=&quot;color: red;&quot;>[myurl]</b> per inserire l\'URL della galleria, se impostato nelle opzioni di configurazione di Piwigo.
 <br><br>
 Per utilizzare più lingue, è possibile utilizzare i tag del plugin Extended description, se è attivo.';
-$lang['UAM_ConfirmMail_Subject_d'] = 'Inserisci qui il tuo personalizzato oggetto promemoria e-mail conferma della registrazione.<br>
+$lang['UAM_ConfirmMail_Subject_d'] = 'Inserisci qui il tuo oggetto personalizzato per l\'email di promemoria conferma della registrazione.<br>
 Per impostazione predefinita, il campo ha un testo generico in inglese, ma si può cambiare e utilizzare i tag di traduzione [lang=?] del plugin Extended Description se ​​installato.
 <br><br>
 I seguenti tag aggiuntivi personalizzazioni sono disponibili senza utilizzare il plugin Extended Description:<br>
 - <b style=&quot;color: red;&quot;>[username]</b> per inserire automaticamente il nome dell\'utente di destinazione dell\'email.<br>
 - <b style=&quot;color: red;&quot;>[mygallery]</b> per inserire il titolo della tua galleria.<br>';
-$lang['UAM_ConfirmMail_ReMail_Subject_d'] = 'Inserisci qui il tuo personalizzato oggetto promemoria e-mail conferma della registrazione(con o senza nuova generazione di chiavi).<br>
+$lang['UAM_ConfirmMail_ReMail_Subject_d'] = 'Inserisci qui il tuo oggetto personalizzato per l\'email di promemoria conferma della registrazione (con o senza nuova generazione di chiavi).<br>
+Per impostazione predefinita, il campo ha un testo generico in inglese, ma si può cambiare e utilizzare i tag di traduzione [lang=?] del plugin Extended Description se ​​installato.
+<br><br>
+I seguenti tag aggiuntivi personalizzazioni sono disponibili senza utilizzare il plugin Extended Description:<br>
+- <b style=&quot;color: red;&quot;>[username]</b> per inserire automaticamente il nome dell\'utente di destinazione dell\'email.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> per inserire il titolo della tua galleria.<br>';
 Per impostazione predefinita, il campo ha un testo generico in inglese, ma si può cambiare e utilizzare i tag di traduzione [lang=?] del plugin Extended Description se ​​installato.
 <br><br>
 I seguenti tag aggiuntivi personalizzazioni sono disponibili senza utilizzare il plugin Extended Description:<br>
@@ -278,4 +283,41 @@ $lang['UAM_gtTitle_d'] = 'Quando Ghost Tracker è abilitato e inizializzato, di 
 - Generare promemoria e-mail <b>con il reset della data ultima visita</b>. Questo permette di dare un carattere speciale per un target di visitatori. Se il visitatore ha già ricevuto un sollecito, nulla impedisce di reinviare un nuovo messaggio, che resetterà nuovamente la data dell\'ultima visita.
 <br><br>
 <b>Tabella Ordinamento delle funzioni</b>: E\' possibile ordinare i dati visualizzati facendo clicando sulle intestazioni delle colonne. Tenere premuto il tasto SHIFT per ordinare fino a 4 colonne contemporaneamente.';
+$lang['UAM_ghosttrackerTitle_d'] = 'Chiamato anche &quot;Ghost Tracker &quot; quando questa funzione è attivata è possibile gestire i vostri ospiti a seconda della frequenza delle loro visite. Sono 2 le modalità di funzionamento disponibili:<br><br>
+- Gestione manuale: Quando il tempo tra 2 visite è raggiunto, il visitatore viene visualizzato nella tabella &quot;Ghost Tracker&quot; nella quale si sarà in grado di mandare un promemoria ai visitatori via email o alla loro cancellazione.<br><br>
+- Gestione automatizzata: Quando viene raggiunto il periodo tra 2 visite successive, il visitatore viene automaticamente cancellato o spostato in un gruppo di attesa e/o stato. In questo secondo caso, un\'email di informazione può essere inviata a lui.<br><br>
+<b style=&quot;color: red;&quot;>Nota importante: Se si attiva questa funzione per la prima volta o si riattiva dopo un lungo periodo durante il quale si sono registrati nuovi visitatori, sarà necessario inizializzare o reimpostare il Ghost Tracker (vedere le istruzioni corrispondenti sulla scheda &quot;Ghost Tracker&quot).</b>';
+$lang['UAM_GTAutomail_Subject_d'] = 'Inserire qui il vostro oggetto per l\'email Ghost Tracker automatica di retrocessione.
+<br>
+Per impostazione predefinita, il campo ha un testo generico in inglese, ma si può cambiare e utilizzare i tag di traduzione [lang=?] del plugin Extended Description se ​​installato.
+<br><br>
+I seguenti tag aggiuntivi personalizzazioni sono disponibili senza utilizzare il plugin Extended Description:<br>
+- <b style=&quot;color: red;&quot;>[username]</b> per inserire automaticamente il nome dell\'utente di destinazione dell\'email.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> per inserire il titolo della tua galleria.<br>';
+$lang['UAM_GTReminder_Subject_d'] = 'Inserire qui il vostro oggetto per l\'email Ghost Tracker automatica di retrocessione.
+<br>
+Per impostazione predefinita, il campo ha un testo generico in inglese, ma si può cambiare e utilizzare i tag di traduzione [lang=?] del plugin Extended Description se ​​installato.
+<br><br>
+I seguenti tag aggiuntivi personalizzazioni sono disponibili senza utilizzare il plugin Extended Description:<br>
+- <b style=&quot;color: red;&quot;>[username]</b> per inserire automaticamente il nome dell\'utente di destinazione dell\'email.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> per inserire il titolo della tua galleria.<br>';
+$lang['UAM_usermanTitle_d'] = 'Quando limitare la scadenza per la registrazione è abilitata, troverete qui di seguito l\'elenco di utenti la cui conferma dell\'iscrizione è prevista, <b style=&quot;text-decoration: underline;&quot;>se o non</b> sono in tempo per confermare.<br><br>
+La data di registrazione viene visualizzata in verde quando l\'utente interessato è dentro il limite di tempo per confermare la sua registrazione. In questo caso, il pulsante di conferma è ancora valido e possiamo inviare un email con o senza una nuova chiave di conferma.<br><br>
+Quando la data di registrazione viene visualizzata in rosso è scaduto il periodo di conferma. In questo caso è necessario inviare una email con rigenerazione della chiave di conferma se si desidera consentire all\'utente di confermare la sua registrazione.<br><br>
+In tutti i casi, è possibile forzare manualmente la conferma.<br><br>
+In questa vista, è possibile:
+<br><br>
+Generare una email di promemoria <b>senza</b> la generazione di una nuova chiave. Attenzione: Inviare un promemoria tramite email ai visitatori designati. Questa funzione non reimposta la data di registrazione dei visitatori designati e il timeout è ancora valido.
+<br>
+Generare una email di promemoria <b>con</b> la generazione di una nuova chiave. Attenzione: Inviare un promemoria tramite email ai visitatori designati. Questa funzione resetta anche la data di registrazione dei visitatori designati che equivale a prorogare il termine per la conferma.
+<br>
+-Presentare una registrazione in attesa di conferma manuale anche se la data di scadenza è passata <b>(conferma forzata)</b>.
+<br><br>
+<b>Ordinamento Tabella delle funzioni</b>: E\' possibile ordinare i dati visualizzati facendo clic sulle intestazioni delle colonne. Tenere premuto il tasto SHIFT per ordinare fino a 4 colonne contemporaneamente.';
+$lang['UAM_MailInfo_Subject_d'] = 'Inserisci qui il tuo oggetto personalizzato per l\'email di informazione.<br>
+Per impostazione predefinita, il campo ha un testo generico in inglese, ma si può cambiare e utilizzare i tag di traduzione [lang =?] Del plugin Extended Description se ​​installato.
+<br><br>
+I seguenti tag aggiuntivi personalizzati sono disponibili senza utilizzare il plugin Extended Description:<br>
+- <b style=&quot;color: red;&quot;>[username]</b> per inserire automaticamente il nome dell\'utente di destinazione del messaggio email.<br>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> per inserire il titolo della tua galleria.<br>';
 ?>
