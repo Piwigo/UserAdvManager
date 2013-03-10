@@ -125,11 +125,6 @@ Per impostazione predefinita, il campo ha un testo generico in inglese, ma si pu
 I seguenti tag aggiuntivi personalizzazioni sono disponibili senza utilizzare il plugin Extended Description:<br>
 - <b style=&quot;color: red;&quot;>[username]</b> per inserire automaticamente il nome dell\'utente di destinazione dell\'email.<br>
 - <b style=&quot;color: red;&quot;>[mygallery]</b> per inserire il titolo della tua galleria.<br>';
-Per impostazione predefinita, il campo ha un testo generico in inglese, ma si può cambiare e utilizzare i tag di traduzione [lang=?] del plugin Extended Description se ​​installato.
-<br><br>
-I seguenti tag aggiuntivi personalizzazioni sono disponibili senza utilizzare il plugin Extended Description:<br>
-- <b style=&quot;color: red;&quot;>[username]</b> per inserire automaticamente il nome dell\'utente di destinazione dell\'email.<br>
-- <b style=&quot;color: red;&quot;>[mygallery]</b> per inserire il titolo della tua galleria.<br>';
 $lang['UAM_validationlimitTitle_d'] = 'Questa opzione consente di limitare il numero di giorni in cui un nuovo utente è in grado di confermare la sua registrazione. Una volta che questo periodo è scaduto, il link di conferma non sarà più valido e non potrà essere utilizzato.
 <br><br>
 Questa opzione viene utilizzata una volta che la &quot;Conferma Registrazione&quot; è attivata.
