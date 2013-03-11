@@ -152,4 +152,10 @@ $lang['UAM_ConfirmMail_ReMail_Txt1'] = 'Doğrulama anahtarının yenilenmesi <b>
 $lang['UAM_ConfirmMail_ReMail_Subject'] = 'Kayıt doğrulama hatırlatma e-posta konusunu özelleştir';
 $lang['UAM_Bad_version_backup'] = 'Yedek dosyasınınki ile eklenti versiyonu uyuşmuyor! Onarım yapılmadı.';
 $lang['UAM_AdminValidationMail_Text'] = 'Elle doğrulama işlemi bilgilendirme mesajı';
+$lang['UAM_No_Userlist'] = 'Şu an için listelenecek ziyaretçi bulunmuyor';
+$lang['UAM_GhostTracker_Title'] = 'Hayalet ziyaretçilerin yönetimi';
+$lang['UAM_Change'] = 'Doğrulanan kullanıcıların Grup/Durum/Gizlilik seviyelerini değiştirir';
+$lang['UAM_Confirm_Group'] = 'Gruplar<br>(grubu etkilememesi için ------- olarak bırakın)';
+$lang['UAM_Confirm_Status'] = 'Durumlar<br>(Piwigo varsayılanı için ------- olarak bırakın)';
+$lang['UAM_Confirm_Level'] = 'Gizlilik seviyesi<br>(Piwigo varsayılanı için ------- olarak bırakın)';
 ?>
