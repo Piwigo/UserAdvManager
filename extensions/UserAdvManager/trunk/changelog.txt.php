@@ -375,6 +375,9 @@ Plugin Name: UserAdvManager
 -- 2.41.5 : Bug 2842 fixed - Previews bug 2829 fix did affect the normal registration confirmation.
             Update tr_TR, thanks to : hakanselcuk
 
+**************************************************************
+***** Plugin history (branch 2.50 - Piwigo 2.5 compliant)*****
+**************************************************************
 -- 2.50.0 : Compliance with Piwigo 2.5
             Bug 2764 fixed - Code refactory : Change config variables to assoc array and $_POST vars control before writing conf in database - Thx to flop25 for his advices ;-)
             Bug 2829 fixed - Workflow refactory if confirmation of registrations are done by admins :
@@ -389,6 +392,10 @@ Plugin Name: UserAdvManager
 -- 2.50.1 : Blocking bug fixed : New registrants could not validate their registration with the confirmation link
             Update tr_TR, thanks to : LazBoy
             Update de_DE, thanks to : stephy
+            Update it_IT, thanks to : Ericnet
+
+-- 2.50.2 : Bug 2866 fixed - Fatal error message (Fatal error: Call to undefined function switch_lang_to()) when using validation link
+            Update tr_TR, thanks to : LazBoy
             Update it_IT, thanks to : Ericnet
             
 */
