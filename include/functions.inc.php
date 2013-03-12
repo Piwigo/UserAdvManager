@@ -986,6 +986,9 @@ function UAM_DisplayMsg()
  */
 function UAM_ConfirmMail()
 {
+  global $conf;
+  include_once(PHPWG_ROOT_PATH.'include/functions_mail.inc.php');
+
   if (isset($_GET['key']) and isset($_GET['userid']))
   {
     global $user, $lang, $conf, $page;
