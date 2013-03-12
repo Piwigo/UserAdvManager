@@ -171,29 +171,29 @@ VALUES ("UserAdvManager_Version","'.$version.'","UAM version check")
 
   // Create USER_CONFIRM_MAIL_TABLE
   // ------------------------------
-	$q = "
-CREATE TABLE IF NOT EXISTS ".USER_CONFIRM_MAIL_TABLE." (
-  id varchar(50) NOT NULL default '',
-  user_id smallint(5) NOT NULL default '0',
+	$q = '
+CREATE TABLE IF NOT EXISTS '.USER_CONFIRM_MAIL_TABLE.' (
+  id varchar(50) NOT NULL default "",
+  user_id smallint(5) NOT NULL default "0",
   mail_address varchar(255) default NULL,
-  status enum('webmaster','admin','normal','generic','guest') default NULL,
+  status enum("webmaster","admin","normal","generic","guest") default NULL,
   date_check datetime default NULL,
-  reminder ENUM('true','false') NULL,
+  reminder ENUM("true","false") NULL,
 PRIMARY KEY  (id)
   )
-ENGINE=MyISAM;";
+ENGINE=MyISAM;';
   pwg_query($q);
 
   // Create USER_LASTVISIT_TABLE
   // ---------------------------
-	$q = "
-CREATE TABLE IF NOT EXISTS ".USER_LASTVISIT_TABLE." (
-  user_id SMALLINT(5) NOT NULL DEFAULT '0',
+	$q = '
+CREATE TABLE IF NOT EXISTS '.USER_LASTVISIT_TABLE.' (
+  user_id SMALLINT(5) NOT NULL DEFAULT "0",
   lastvisit DATETIME NULL DEFAULT NULL,
-  reminder ENUM('true','false') NULL,
+  reminder ENUM("true","false") NULL,
 PRIMARY KEY (`user_id`)
   )
-ENGINE=MyISAM;";
+ENGINE=MyISAM;';
   pwg_query($q);
 
   // Piwigo's native tables modifications for password reset function - Add pwdreset column if not already exists
