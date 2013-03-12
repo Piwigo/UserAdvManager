@@ -146,4 +146,16 @@ $lang['UAM_GhostTracker_ReminderText'] = 'Hayalet Takipçisi hatırlatma mesajı
 $lang['UAM_GhostTracker_Init_OK'] = 'Hayalet Takipçisi sıfırlandı!';
 $lang['UAM_Generic cannot be pwdreset'] = 'Jenerik hesaplar için şifre yenileme ayarlanamaz!';
 $lang['UAM_GhostTracker'] = 'Hayalet ziyaretçilerin yönetimi (Hayalet Takipçisi)';
+$lang['UAM_ConfirmMail_TimeOut_true'] = 'Etkin. Kullanım süresinin dolmasına bu kadar gün kaldı:';
+$lang['UAM_ConfirmMail_ReMail_Txt2'] = 'Doğrulama anahtarının yenilenmesi <b><u>olmadan</u></b> hatırlatma mesajı özelleştirme.';
+$lang['UAM_ConfirmMail_ReMail_Txt1'] = 'Doğrulama anahtarının yenilenmesi <b><u>ile</u></b> hatırlatma mesajı özelleştirme.';
+$lang['UAM_ConfirmMail_ReMail_Subject'] = 'Kayıt doğrulama hatırlatma e-posta konusunu özelleştir';
+$lang['UAM_Bad_version_backup'] = 'Yedek dosyasınınki ile eklenti versiyonu uyuşmuyor! Onarım yapılmadı.';
+$lang['UAM_AdminValidationMail_Text'] = 'Elle doğrulama işlemi bilgilendirme mesajı';
+$lang['UAM_No_Userlist'] = 'Şu an için listelenecek ziyaretçi bulunmuyor';
+$lang['UAM_GhostTracker_Title'] = 'Hayalet ziyaretçilerin yönetimi';
+$lang['UAM_Change'] = 'Doğrulanan kullanıcıların Grup/Durum/Gizlilik seviyelerini değiştirir';
+$lang['UAM_Confirm_Group'] = 'Gruplar<br>(grubu etkilememesi için ------- olarak bırakın)';
+$lang['UAM_Confirm_Status'] = 'Durumlar<br>(Piwigo varsayılanı için ------- olarak bırakın)';
+$lang['UAM_Confirm_Level'] = 'Gizlilik seviyesi<br>(Piwigo varsayılanı için ------- olarak bırakın)';
 ?>
