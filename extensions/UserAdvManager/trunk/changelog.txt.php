@@ -399,5 +399,6 @@ Plugin Name: UserAdvManager
             Update it_IT, thanks to : Ericnet
 
 -- 2.50.3 : Bug 2870 fixed - Error in tracking confirmation tab if $conf['default_user_id'] is set with an ID different than Guest user ID
+            Bug 2871 fixed - Improved process : User registration is confirmed by default when user is added by an admin and confirmation of registration for admins is set to OFF
 */
 ?>

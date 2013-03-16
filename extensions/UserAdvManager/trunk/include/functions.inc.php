@@ -2302,12 +2302,7 @@ WHERE user_id = '.$data['user_id'].'
             }
 
 						// Set UAM_validated field to True in #_users table
-						$query = '
-UPDATE '.USERS_TABLE.'
-SET UAM_validated = "true"
-WHERE id = '.$data['user_id'].'
-;';
-						pwg_query($query);
+            SetValidated($data['user_id']);
 
 						// Refresh user's category cache
             // -----------------------------
@@ -2394,12 +2389,7 @@ WHERE user_id = '.$data['user_id'].'
           }
 
           // Set UAM_validated field to True in #_users table
-          $query = '
-UPDATE '.USERS_TABLE.'
-SET UAM_validated = "true"
-WHERE id = '.$data['user_id'].'
-;';
-          pwg_query($query);
+          SetValidated($data['user_id']);
 
           // Refresh user's category cache
           // -----------------------------
@@ -2492,12 +2482,7 @@ WHERE user_id = '.$id.'
 		}
 
 		// Set UAM_validated field to True in #_users table
-		$query = '
-UPDATE '.USERS_TABLE.'
-SET UAM_validated = "true"
-WHERE id = '.$id.'
-;';
-		pwg_query($query);
+		SetValidated($data['user_id']);
 }
 
 
@@ -3090,7 +3075,7 @@ WHERE id='.$user_id.'
 
   $result = pwg_db_fetch_assoc(pwg_query($query));
 
-  if($result['UAM_validated'] == 'true')
+  if($result['UAM_validated'] == 'true' or is_null($result['UAM_validated']))
   {
     return true;
   }
@@ -3108,6 +3093,24 @@ function SetUnvalidated($user_id)
   $query ='
 UPDATE '.USERS_TABLE.'
 SET UAM_validated = "false"
+WHERE id = '.$user_id.'
+LIMIT 1
+;';
+
+  pwg_query($query);
+}
+
+
+/**
+ * SetValidated
+ * Set UAM_validated field to true in #_users table
+ * 
+ **/
+function SetValidated($user_id)
+{
+  $query ='
+UPDATE '.USERS_TABLE.'
+SET UAM_validated = "true"
 WHERE id = '.$user_id.'
 LIMIT 1
 ;';
