@@ -1335,7 +1335,7 @@ WHERE user_id = '.$local_user['id'].'
           'EMAIL'            => get_email_address_as_display_text($local_user['email']),
           'GROUPS'           => $groups_string,
           'REGISTRATION'     => $local_user['registration_date'],
-          'REMINDER'         => $reminder,    
+          'REMINDER'         => $reminder,   
           'EXPIRATION'       => $expiration,
         )
       );
