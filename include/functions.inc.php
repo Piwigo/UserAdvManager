@@ -2302,12 +2302,7 @@ WHERE user_id = '.$data['user_id'].'
             }
 
 						// Set UAM_validated field to True in #_users table
-						$query = '
-UPDATE '.USERS_TABLE.'
-SET UAM_validated = "true"
-WHERE id = '.$data['user_id'].'
-;';
-						pwg_query($query);
+            SetValidated($data['user_id']);
 
 						// Refresh user's category cache
             // -----------------------------
@@ -2394,12 +2389,7 @@ WHERE user_id = '.$data['user_id'].'
           }
 
           // Set UAM_validated field to True in #_users table
-          $query = '
-UPDATE '.USERS_TABLE.'
-SET UAM_validated = "true"
-WHERE id = '.$data['user_id'].'
-;';
-          pwg_query($query);
+          SetValidated($data['user_id']);
 
           // Refresh user's category cache
           // -----------------------------
@@ -2492,12 +2482,7 @@ WHERE user_id = '.$id.'
 		}
 
 		// Set UAM_validated field to True in #_users table
-		$query = '
-UPDATE '.USERS_TABLE.'
-SET UAM_validated = "true"
-WHERE id = '.$id.'
-;';
-		pwg_query($query);
+		SetValidated($data['user_id']);
 }
 
 
@@ -2628,6 +2613,7 @@ FROM '.USERS_TABLE.' AS u
   LEFT JOIN '.USER_GROUP_TABLE.' AS ug
     ON u.'.$conf['user_fields']['id'].' = ug.user_id
 WHERE u.'.$conf['user_fields']['id'].' >= 3
+  AND u.'.$conf['user_fields']['id'].' <> '.$conf['default_user_id'].'
   AND (TO_DAYS(NOW()) - TO_DAYS(ui.registration_date) >= "'.$conf_UAM_ConfirmMail['CONFIRMMAIL_DELAY'].'"
   OR TO_DAYS(NOW()) - TO_DAYS(ui.registration_date) < "'.$conf_UAM_ConfirmMail['CONFIRMMAIL_DELAY'].'")
 		AND u.UAM_validated = "false"
@@ -2703,6 +2689,7 @@ FROM '.USERS_TABLE.' AS u
   INNER JOIN '.USER_INFOS_TABLE.' AS ui
     ON u.'.$conf['user_fields']['id'].' = ui.user_id
 WHERE u.'.$conf['user_fields']['id'].' >= 3
+  AND u.'.$conf['user_fields']['id'].' <> '.$conf['default_user_id'].'
   AND (TO_DAYS(NOW()) - TO_DAYS(ui.registration_date) >= "'.$conf_UAM_ConfirmMail['CONFIRMMAIL_DELAY'].'")
 ORDER BY ui.registration_date ASC;';
 
@@ -2743,6 +2730,7 @@ FROM '.USERS_TABLE.' AS u
   INNER JOIN '.USER_LASTVISIT_TABLE.' AS lv
     ON u.'.$conf['user_fields']['id'].' = lv.user_id
 WHERE (TO_DAYS(NOW()) - TO_DAYS(lv.lastvisit) >= "'.$conf_UAM['GHOSTRACKER_DAYLIMIT'].'")
+AND u.'.$conf['user_fields']['id'].' <> '.$conf['default_user_id'].'
 ORDER BY lv.lastvisit ASC;';
 
   $result = pwg_query($query);
@@ -2790,6 +2778,7 @@ FROM '.USERS_TABLE.' AS u
   INNER JOIN '.USER_LASTVISIT_TABLE.' AS lv
     ON u.'.$conf['user_fields']['id'].' = lv.user_id
 WHERE (TO_DAYS(NOW()) - TO_DAYS(lv.lastvisit) >= "'.$conf_UAM['GHOSTRACKER_DAYLIMIT'].'")
+AND u.'.$conf['user_fields']['id'].' <> '.$conf['default_user_id'].'
 ORDER BY lv.lastvisit ASC;';
 
   $result = pwg_query($query);
@@ -2826,6 +2815,7 @@ FROM '.USERS_TABLE.' AS u
   INNER JOIN '.USER_LASTVISIT_TABLE.' AS ug
     ON u.'.$conf['user_fields']['id'].' = ug.user_id
 WHERE u.'.$conf['user_fields']['id'].' >= 3
+  AND u.'.$conf['user_fields']['id'].' <> '.$conf['default_user_id'].'
   AND u.username NOT LIKE "16"
   AND u.username NOT LIKE "18"
 ORDER BY ug.lastvisit DESC
@@ -3085,7 +3075,7 @@ WHERE id='.$user_id.'
 
   $result = pwg_db_fetch_assoc(pwg_query($query));
 
-  if($result['UAM_validated'] == 'true')
+  if($result['UAM_validated'] == 'true' or is_null($result['UAM_validated']))
   {
     return true;
   }
@@ -3103,6 +3093,24 @@ function SetUnvalidated($user_id)
   $query ='
 UPDATE '.USERS_TABLE.'
 SET UAM_validated = "false"
+WHERE id = '.$user_id.'
+LIMIT 1
+;';
+
+  pwg_query($query);
+}
+
+
+/**
+ * SetValidated
+ * Set UAM_validated field to true in #_users table
+ * 
+ **/
+function SetValidated($user_id)
+{
+  $query ='
+UPDATE '.USERS_TABLE.'
+SET UAM_validated = "true"
 WHERE id = '.$user_id.'
 LIMIT 1
 ;';

@@ -184,6 +184,35 @@ switch ($page['tab'])
       array_push($page['errors'], l10n('UAM_Error_Using_illegal_Kdays'));
     }
 
+    // Check if VALIDATED_GROUP is set as the gallery's default group and set it as default if not
+    // Experimental : It's better the "validated users" group is the gallery's default group
+    // -------------------------------------------------------------------------------------------
+    if (isset($_POST['UAM_Validated_Group']) and $_POST['UAM_Validated_Group'] <> '-1')
+    {
+      $query = '
+SELECT name, is_default
+FROM '.GROUPS_TABLE.'
+WHERE id = '.$_POST['UAM_Validated_Group'].'
+;';
+
+      $UAM_group = pwg_db_fetch_assoc(pwg_query($query));
+
+      if (isset($UAM_group['is_default']) and $UAM_group['is_default'] == "false")
+      {
+        $query = '
+UPDATE '.GROUPS_TABLE.'
+SET is_default = true
+WHERE id = '.$_POST['UAM_Validated_Group'].'
+;';
+        pwg_query($query);
+
+        array_push(
+          $page['infos'],
+          sprintf(l10n('UAM_group "%s" updated'), $UAM_group['name'])
+        );
+      }
+    }
+
     // Save global UAM configuration
     // -----------------------------
     $newconf_UAM['MAIL_INFO'] = (isset($_POST['UAM_Mail_Info']) ? $_POST['UAM_Mail_Info'] : 'false');
@@ -1335,7 +1364,7 @@ WHERE user_id = '.$local_user['id'].'
           'EMAIL'            => get_email_address_as_display_text($local_user['email']),
           'GROUPS'           => $groups_string,
           'REGISTRATION'     => $local_user['registration_date'],
-          'REMINDER'         => $reminder,    
+          'REMINDER'         => $reminder,   
           'EXPIRATION'       => $expiration,
         )
       );
