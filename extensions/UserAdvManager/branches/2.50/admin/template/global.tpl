@@ -968,13 +968,3 @@ function uam_blockToggleDisplay( headerId, contentId )
   var n2=document.getElementById("nb_para2").value;
    uam_blockToggleDisplay(n1,n2);
 {/literal}{/footer_script}
-
-{html_head}
-<script type="text/javascript">
-jQuery(document).ready(function() {ldelim}
-  jQuery('#theAdminPage #the_page').addClass('{$themeconf.name}');
-	jQuery(".infos").fadeOut(800).fadeIn(1200).fadeOut(400).fadeIn(800).fadeOut(400);
-	//jQuery(".errors").fadeOut(200).fadeIn(200).fadeOut(300).fadeIn(300).fadeOut(400).fadeIn(400); 
-});
-</script>
-{/html_head}
