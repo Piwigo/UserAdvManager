@@ -401,5 +401,6 @@ Plugin Name: UserAdvManager
 -- 2.50.3 : Bug 2870 fixed - Error in tracking confirmation tab if $conf['default_user_id'] is set with an ID different than Guest user ID
             Bug 2871 fixed - Improved process : User registration is confirmed by default when user is added by an admin and confirmation of registration for admins is set to OFF
             Bug 2872 fixed - Check if confirmed users group is set as the default group and set it if not
+            Bug 2873 fixed - Remove annoying flashing message on config submit 
 */
 ?>
