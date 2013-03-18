@@ -17,12 +17,9 @@ $lang['UAM_remailtxt1Title'] = 'Reminder email with new key generated';
 $lang['UAM_remailtxt2Title'] = 'Reminder email without new key generated';
 $lang['UAM_tipsTitle_d'] = 'Tips and various examples of use';
 
-
-// --------- Starting below: New or revised $lang ---- from version 2.14.0
 $lang['UAM_adminconfmailTitle_d'] = 'You can disable this confirmation only for user accounts created by the administrator via Piwigo\'s users management interface.<br><br>
 By activating this option, email confirmation for registration will be sent to each user created by admin.<br><br>
-By disabling this option (default), only the email information is sent (if &quot;Information email to user&quot; is enabled).';
-// --------- End: New or revised $lang ---- from version 2.14.0
+By disabling this option (default), only the email information is sent (if &quot;Information email to user&quot; is enabled). In addition, the user created will be <b>considered validated</b> by default.';
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.15.4
