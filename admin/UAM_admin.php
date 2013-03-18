@@ -1316,11 +1316,10 @@ WHERE user_id = '.$local_user['id'].'
       {
         $reminder = l10n('UAM_Reminder_Sent_OK');
       }
-      else if ((isset($row['reminder']) and $row['reminder'] == 'false') or !isset($row['reminder']))
+      else if ((isset($row['reminder']) and $row['reminder'] == 'false') or $row['reminder'] == null)
       {
         $reminder = l10n('UAM_Reminder_Sent_NOK');
       }
-
 
       if (isset($_POST['pref_submit'])
         and isset($_POST['selection'])

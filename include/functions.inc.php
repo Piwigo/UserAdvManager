@@ -1313,7 +1313,7 @@ WHERE user_id = '.$id.'
       break;
   }
 
-  if ((isset($conf_UAM['CONFIRM_MAIL']) and ($conf_UAM['CONFIRM_MAIL'] == 'true' or $conf_UAM['CONFIRM_MAIL'] == 'local')) and $confirm) // Add confirmation link ?
+  if ((isset($conf_UAM['CONFIRM_MAIL']) and ($conf_UAM['CONFIRM_MAIL'] == 'true')) and $confirm) // Add confirmation link ?
   {
     $infos2 = array(
       get_l10n_args('UAM_Link: %s', AddConfirmMail($id, $email)),
@@ -1951,7 +1951,7 @@ WHERE user_id = '".$user_id."'
 INSERT INTO ".USER_CONFIRM_MAIL_TABLE."
   (id, user_id, mail_address, status, date_check, reminder)
 VALUES
-  ('".$Confirm_Mail_ID."', '".$user_id."', '".$email."', '".$status."', null, false)
+  ('".$Confirm_Mail_ID."', '".$user_id."', '".$email."', '".$status."', null, 'false')
 ;";
     pwg_query($query);
 

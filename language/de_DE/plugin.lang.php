@@ -429,4 +429,5 @@ $lang['UAM_Manual_validation_needed_for %s'] = 'Der Benutzer% s registriert hat 
 $lang['UAM_Subject admin validation for %s'] = 'Registrierung von% s wartet auf Validierung';
 $lang['UAM_Change'] = 'Ändere die Gruppe/den Status/die Privatsphäre des Benutzers der bestätigt wurde.';
 $lang['UAM_Customize_messagesandmails'] = 'Anpassen der Nachrichten und E-Mails.';
+$lang['UAM_group "%s" updated'] = 'Für die beste Geschwindigkeit, wurde die Gruppe %s als Standardgruppe eingestellt.';
 ?>
