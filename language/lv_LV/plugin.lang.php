@@ -384,4 +384,5 @@ $lang['UAM_Manual_validation_needed_for %s'] = 'Lietotājs %s ir reģistrējies 
 $lang['UAM_Subject admin validation for %s'] = '%s reģistrācija gaida apstiprinājumu';
 $lang['UAM_Change'] = 'Izmainīt apstiprināto lietotāju Grupas/Statuss/Konfidencialitāte Līmeni';
 $lang['UAM_Customize_messagesandmails'] = 'Pielāgojiet ziņojumus un pastu';
+$lang['UAM_group "%s" updated'] = 'Labākam sniegumam, grupa %s automātiski tika iestatīta kā noklusējuma grupa.';
 ?>
