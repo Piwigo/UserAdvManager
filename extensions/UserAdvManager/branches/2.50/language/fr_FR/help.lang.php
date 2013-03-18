@@ -16,12 +16,9 @@ $lang['UAM_remailtxt1Title'] = 'Message de rappel avec regénération de clé';
 $lang['UAM_remailtxt2Title'] = 'Message de rappel sans regénération de clé';
 $lang['UAM_tipsTitle_d'] = 'Astuces et exemples divers d\'utilisation';
 
-
-// --------- Starting below: New or revised $lang ---- from version 2.14.0
 $lang['UAM_adminconfmailTitle_d'] = 'On peut ici désactiver la confirmation des inscriptions uniquement pour les comptes d\'utilisateurs créés par l\'administrateur via l\'interface de gestion des utilisateurs de Piwigo.<br><br>
 En activant cette option, l\'email de confirmation d\'inscription sera envoyé à chaque utilisateur créé par l\'admin.<br><br>
-En désactivant cette option (mode par défaut), seul l\'email d\'information est envoyé (si la fonction &quot;Email d\'information &agrave; l\'utilisateur&quot; est activée).';
-// --------- End: New or revised $lang ---- from version 2.14.0
+En désactivant cette option (mode par défaut), seul l\'email d\'information est envoyé (si la fonction &quot;Email d\'information &agrave; l\'utilisateur&quot; est activée). De plus, l\'utilisateur ainsi créé sera <b>considéré comme validé</b> par défaut.';
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.15.4
