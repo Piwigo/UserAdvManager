@@ -2482,7 +2482,7 @@ WHERE user_id = '.$id.'
 		}
 
 		// Set UAM_validated field to True in #_users table
-		SetValidated($data['user_id']);
+		SetValidated($id);
 }
 
 
