@@ -408,6 +408,7 @@ Plugin Name: UserAdvManager
             Update lv_LV, thanks to : agrisans
 
 -- 2.50.5 : Bug 2875 fixed - MySql error on manual validation (tracking confirmation tab)
+            Bug 2876 fixed - Make templates compatible HTML 5
             Update it_IT, thanks to : salvatore
 */
 ?>
