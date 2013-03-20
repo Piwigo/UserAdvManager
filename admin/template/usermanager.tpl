@@ -25,7 +25,7 @@ $(document).ready(function()
 </script>
 
 <div class="titrePage">
-  <h2>{'UAM_Title_Tab'|@translate} {$UAM_VERSION}<br>{'UAM_Tracking confirmations'|@translate}</h2>
+  <h2>{'UAM_Title_Tab'|@translate} {$UAM_VERSION}<br/>{'UAM_Tracking confirmations'|@translate}</h2>
 </div>
 
 <form method="post" action="" class="general">
@@ -50,9 +50,9 @@ $(document).ready(function()
         <tbody>
         {foreach from=$users item=user name=users_loop}
           <tr class="{if $smarty.foreach.users_loop.index is odd}row1{else}row2{/if}">
-            <td><input type="checkbox" name="selection[]" value="{$user.ID}" {$user.CHECKED} id="selection-{$user.ID}" ></td>
+            <td><input type="checkbox" name="selection[]" value="{$user.ID}" {$user.CHECKED} id="selection-{$user.ID}"/></td>
             <td><label for="selection-{$user.ID}">{$user.USERNAME}</label></td>
-            <td style="text-align:center;"><a href="./admin.php?page=profile&amp;user_id={$user.ID}" title="{'Profile'|@translate}" onclick="window.open(this.href); return false;"><img src="{$UAM_PATH}admin/template/icon/edit_s.png"></a></td>
+            <td style="text-align:center;"><a href="./admin.php?page=profile&amp;user_id={$user.ID}" title="{'Profile'|@translate}" onclick="window.open(this.href); return false;"><img src="{$UAM_PATH}admin/template/icon/edit_s.png"/></a></td>
             <td>{$user.STATUS}</td>
             <td>{$user.EMAIL}</td>
             <td>{$user.GROUPS}</td>
@@ -70,11 +70,11 @@ $(document).ready(function()
       {if !empty($users)}
         <div id="pager" class="pager">
           <form>
-            <img src="{$UAM_PATH}admin/template/icon/first.png" class="first">
-            <img src="{$UAM_PATH}admin/template/icon/prev.png" class="prev">
-            <input type="text" class="pagedisplay">
-            <img src="{$UAM_PATH}admin/template/icon/next.png" class="next">
-            <img src="{$UAM_PATH}admin/template/icon/last.png" class="last">
+            <img src="{$UAM_PATH}admin/template/icon/first.png" class="first"/>
+            <img src="{$UAM_PATH}admin/template/icon/prev.png" class="prev"/>
+            <input type="text" class="pagedisplay"/>
+            <img src="{$UAM_PATH}admin/template/icon/next.png" class="next"/>
+            <img src="{$UAM_PATH}admin/template/icon/last.png" class="last"/>
             <select class="pagesize">
               <option  value="10">10</option>
               <option selected="selected" value="20">20</option>
@@ -84,23 +84,23 @@ $(document).ready(function()
           </form>
         </div>
       {/if}
-    	<br>
+    	<br/>
       <fieldset>
         <p>
           {'target'|@translate}
-          <label><input type="radio" name="target" value="all" > {'all'|@translate}</label>
-          <label><input type="radio" name="target" value="selection" checked="checked" > {'selection'|@translate}</label>
+          <label><input type="radio" name="target" value="all"/> {'all'|@translate}</label>
+          <label><input type="radio" name="target" value="selection" checked="checked"/> {'selection'|@translate}</label>
         </p>
 
         <p>
         {if $CONFIRM_LOCAL == "local"}
-          <input class="submit" type="submit" value="{'UAM_Delete_selected'|@translate}" name="Del_Selected">
-          <input class="submit" type="submit" value="{'UAM_Manual_Validation'|@translate}" name="Manual_Validation">
+          <input class="submit" type="submit" value="{'UAM_Delete_selected'|@translate}" name="Del_Selected"/>
+          <input class="submit" type="submit" value="{'UAM_Manual_Validation'|@translate}" name="Manual_Validation"/>
         {else}
-          <input class="submit" type="submit" value="{'UAM_Delete_selected'|@translate}" name="Del_Selected">
-          <input class="submit" type="submit" value="{'UAM_Mail_without_key'|@translate}" name="Mail_Without_Key">
-          <input class="submit" type="submit" value="{'UAM_Mail_with_key'|@translate}" name="Mail_With_Key">
-          <input class="submit" type="submit" value="{'UAM_Manual_Validation'|@translate}" name="Manual_Validation">
+          <input class="submit" type="submit" value="{'UAM_Delete_selected'|@translate}" name="Del_Selected"/>
+          <input class="submit" type="submit" value="{'UAM_Mail_without_key'|@translate}" name="Mail_Without_Key"/>
+          <input class="submit" type="submit" value="{'UAM_Mail_with_key'|@translate}" name="Mail_With_Key"/>
+          <input class="submit" type="submit" value="{'UAM_Manual_Validation'|@translate}" name="Manual_Validation"/>
         {/if}
         </p>
       </fieldset>
