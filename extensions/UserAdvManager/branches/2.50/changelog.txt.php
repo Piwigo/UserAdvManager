@@ -406,5 +406,8 @@ Plugin Name: UserAdvManager
 -- 2.50.4 : Bug 2874 fixed - Warning message on tracking confirmation tab when confirmation by admins is set and a user is added manually by an admin
             Update de_DE, thanks to : stephy
             Update lv_LV, thanks to : agrisans
+
+-- 2.50.5 : Bug 2875 fixed - MySql error on manual validation (tracking confirmation tab)
+            Update it_IT, thanks to : salvatore
 */
 ?>
