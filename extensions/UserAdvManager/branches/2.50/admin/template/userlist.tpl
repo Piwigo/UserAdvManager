@@ -38,7 +38,7 @@ $(document).ready(function()
 </script>
 
 <div class="titrePage">
-  <h2>{'UAM_Title_Tab'|@translate} {$UAM_VERSION}<br>{'UAM_Tracking registered users'|@translate}</h2>
+  <h2>{'UAM_Title_Tab'|@translate} {$UAM_VERSION}<br/>{'UAM_Tracking registered users'|@translate}</h2>
 </div>
 
 <form method="post" action="" class="general">
@@ -59,7 +59,7 @@ $(document).ready(function()
         {foreach from=$users item=user name=users_loop}
           <tr class="{if $smarty.foreach.users_loop.index is odd}row1{else}row2{/if}">
             <td><label for="selection-{$user.ID}">{$user.USERNAME}</label></td>
-            <td style="text-align:center;"><a href="./admin.php?page=profile&amp;user_id={$user.ID}" title="{'Profile'|@translate}" onclick="window.open(this.href); return false;"><img src="{$UAM_PATH}admin/template/icon/edit_s.png"></a></td>
+            <td style="text-align:center;"><a href="./admin.php?page=profile&amp;user_id={$user.ID}" title="{'Profile'|@translate}" onclick="window.open(this.href); return false;"><img src="{$UAM_PATH}admin/template/icon/edit_s.png"/></a></td>
             <td>{$user.EMAIL}</td>
             <td style="text-align:center;">{$user.LASTVISIT}</td>
 {if $user.DISPLAY == 'green'}
@@ -80,11 +80,11 @@ $(document).ready(function()
       </table>
 <div id="pager" class="pager">
 	<form>
-		<img src="{$UAM_PATH}admin/template/icon/first.png" class="first">
-		<img src="{$UAM_PATH}admin/template/icon/prev.png" class="prev">
-		<input type="text" class="pagedisplay">
-		<img src="{$UAM_PATH}admin/template/icon/next.png" class="next">
-		<img src="{$UAM_PATH}admin/template/icon/last.png" class="last">
+		<img src="{$UAM_PATH}admin/template/icon/first.png" class="first"/>
+		<img src="{$UAM_PATH}admin/template/icon/prev.png" class="prev"/>
+		<input type="text" class="pagedisplay"/>
+		<img src="{$UAM_PATH}admin/template/icon/next.png" class="next"/>
+		<img src="{$UAM_PATH}admin/template/icon/last.png" class="last"/>
 		<select class="pagesize">
 			<option  value="10">10</option>
 			<option selected="selected" value="20">20</option>
@@ -93,7 +93,7 @@ $(document).ready(function()
 		</select>
 	</form>
 </div>
-    	<br>
+    	<br/>
   </fieldset>
 		{else}
 		<div>

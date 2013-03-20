@@ -147,17 +147,17 @@ function uam_blockToggleDisplay( headerId, contentId )
 {/literal}{/footer_script}
 
 <div class="titrePage">
-  <h2>{'UAM_Title_Tab'|@translate} {$UAM_VERSION}<br>{'UAM_SubTitle1'|@translate}</h2>
+  <h2>{'UAM_Title_Tab'|@translate} {$UAM_VERSION}<br/>{'UAM_SubTitle1'|@translate}</h2>
 </div>
 
 <form method="post" action="" class="general">
 
   <p>
-    <input class="submit" type="submit" value="{'UAM_submit'|@translate}" name="submit" {$TAG_INPUT_ENABLED}>
+    <input class="submit" type="submit" value="{'UAM_submit'|@translate}" name="submit" {$TAG_INPUT_ENABLED}/>
       &nbsp;
-    <input class="submit" type="submit" value="{'UAM_audit'|@translate}" name="audit">
-    <input name="nb_para" id="nb_para" type="text" value="{$nb_para}" style="display:none"> 
-    <input name="nb_para2" id="nb_para2" type="text" value="{$nb_para2}" style="display:none"> 
+    <input class="submit" type="submit" value="{'UAM_audit'|@translate}" name="audit"/>
+    <input name="nb_para" id="nb_para" type="text" value="{$nb_para}" style="display:none"/> 
+    <input name="nb_para2" id="nb_para2" type="text" value="{$nb_para2}" style="display:none"/> 
   </p>
 
 
@@ -175,13 +175,13 @@ function uam_blockToggleDisplay( headerId, contentId )
             <label class="cluetip" title="{'UAM_Username_Char'|translate}|{'UAM_carexcTitle_d'|translate}">
               {'UAM_Username_Char'|@translate}
             </label>
-            <label for="UAM_Username_Char_false"><input id="UAM_Username_Char_false" type="radio" value="false" {$UAM_USERNAME_CHAR_FALSE} name="UAM_Username_Char">
-              {'UAM_Username_Char_false'|@translate}<br>
+            <label for="UAM_Username_Char_false"><input id="UAM_Username_Char_false" type="radio" value="false" {$UAM_USERNAME_CHAR_FALSE} name="UAM_Username_Char"/>
+              {'UAM_Username_Char_false'|@translate}<br/>
             </label>
-            <label for="UAM_Username_Char_true"><input id="UAM_Username_Char_true" type="radio" value="true" {$UAM_USERNAME_CHAR_TRUE} name="UAM_Username_Char">
+            <label for="UAM_Username_Char_true"><input id="UAM_Username_Char_true" type="radio" value="true" {$UAM_USERNAME_CHAR_TRUE} name="UAM_Username_Char"/>
               {'UAM_Username_Char_true'|@translate}
             <div class="uam_leftmargin">
-              <input type="text" name="UAM_Username_List" value="{$UAM_USERNAME_CHAR_LIST}" size="20" style="text-align: center;">
+              <input type="text" name="UAM_Username_List" value="{$UAM_USERNAME_CHAR_LIST}" size="20" style="text-align: center;"/>
             </div>
             </label>
           </li>
@@ -190,17 +190,17 @@ function uam_blockToggleDisplay( headerId, contentId )
               {'UAM_Password_Enforced'|@translate}
             </label>
           
-            <label for="UAM_Password_Enforced_false"><input id="UAM_Password_Enforced_false" type="radio" value="false" {$UAM_PASSWORDENF_FALSE} name="UAM_Password_Enforced">
+            <label for="UAM_Password_Enforced_false"><input id="UAM_Password_Enforced_false" type="radio" value="false" {$UAM_PASSWORDENF_FALSE} name="UAM_Password_Enforced"/>
               {'UAM_Disable'|@translate}
             </label>
-            <label for="UAM_Password_Enforced_true"><input id="UAM_Password_Enforced_true" type="radio" value="true" {$UAM_PASSWORDENF_TRUE} name="UAM_Password_Enforced">
+            <label for="UAM_Password_Enforced_true"><input id="UAM_Password_Enforced_true" type="radio" value="true" {$UAM_PASSWORDENF_TRUE} name="UAM_Password_Enforced"/>
               {'UAM_Password_Enforced_true'|@translate}&nbsp;
-            <input type="text" name="UAM_Password_Score" value="{$UAM_PASSWORD_SCORE}" size="5" style="text-align: center;">
+            <input type="text" name="UAM_Password_Score" value="{$UAM_PASSWORD_SCORE}" size="5" style="text-align: center;"/>
             </label>
             {'UAM_PasswordTest'|@translate}
-              <input class="cluetip" title="{'UAM_passwtestTitle'|translate}|{'UAM_passwtestTitle_d'|translate}" type="text" name="UAM_Password_Test" value="{$UAM_PASSWORD_TEST}" size="50" style="text-align: left;">
+              <input class="cluetip" title="{'UAM_passwtestTitle'|translate}|{'UAM_passwtestTitle_d'|translate}" type="text" name="UAM_Password_Test" value="{$UAM_PASSWORD_TEST}" size="50" style="text-align: left;"/>
               &nbsp;&nbsp;&nbsp;
-              <input class="submit" type="submit" value="{'UAM_PasswordTest'|@translate}" name="PasswordTest">
+              <input class="submit" type="submit" value="{'UAM_PasswordTest'|@translate}" name="PasswordTest"/>
               &nbsp;&nbsp;&nbsp;{'UAM_ScoreTest'|@translate}{$UAM_PASSWORD_TEST_SCORE}
             
           </li>
@@ -210,10 +210,10 @@ function uam_blockToggleDisplay( headerId, contentId )
                 {'UAM_AdminPassword_Enforced'|@translate}
               </label>
             
-              <label for="UAM_AdminPassword_Enforced_false"><input id="UAM_AdminPassword_Enforced_false" value="false" {$UAM_ADMINPASSWENF_FALSE} name="UAM_AdminPassword_Enforced" type="radio">
+              <label for="UAM_AdminPassword_Enforced_false"><input id="UAM_AdminPassword_Enforced_false" value="false" {$UAM_ADMINPASSWENF_FALSE} name="UAM_AdminPassword_Enforced" type="radio"/>
                 {'UAM_Disable'|@translate}
               </label>
-              <label for="UAM_AdminPassword_Enforced_true"><input id="UAM_AdminPassword_Enforced_true" value="true" {$UAM_ADMINPASSWENF_TRUE} name="UAM_AdminPassword_Enforced" type="radio">
+              <label for="UAM_AdminPassword_Enforced_true"><input id="UAM_AdminPassword_Enforced_true" value="true" {$UAM_ADMINPASSWENF_TRUE} name="UAM_AdminPassword_Enforced" type="radio"/>
                 {'UAM_Enable'|@translate}
               </label>
             
@@ -228,10 +228,10 @@ function uam_blockToggleDisplay( headerId, contentId )
 
             <div class="uam_hide">
 
-              <label for="UAM_MailExclusion_false"><input id="UAM_MailExclusion_false" value="false" {$UAM_MAILEXCLUSION_FALSE} name="UAM_MailExclusion" type="radio">
+              <label for="UAM_MailExclusion_false"><input id="UAM_MailExclusion_false" value="false" {$UAM_MAILEXCLUSION_FALSE} name="UAM_MailExclusion" type="radio"/>
                 {'UAM_Disable'|@translate}
               </label>
-              <label for="UAM_MailExclusion_true"><input id="UAM_MailExclusion_true" value="true" {$UAM_MAILEXCLUSION_TRUE} name="UAM_MailExclusion" type="radio">
+              <label for="UAM_MailExclusion_true"><input id="UAM_MailExclusion_true" value="true" {$UAM_MAILEXCLUSION_TRUE} name="UAM_MailExclusion" type="radio"/>
                 {'UAM_MailExclusion_true'|@translate}
               </label>
 
@@ -241,11 +241,11 @@ function uam_blockToggleDisplay( headerId, contentId )
               {'UAM_MailExclusion'|@translate}
             </label>
 
-            <label for="UAM_MailExclusion_false"><input id="UAM_MailExclusion_false" value="false" {$UAM_MAILEXCLUSION_FALSE} name="UAM_MailExclusion" type="radio">
+            <label for="UAM_MailExclusion_false"><input id="UAM_MailExclusion_false" value="false" {$UAM_MAILEXCLUSION_FALSE} name="UAM_MailExclusion" type="radio"/>
                 {'UAM_Disable'|@translate}
             </label>
 
-            <label for="UAM_MailExclusion_true"><input id="UAM_MailExclusion_true" value="true" {$UAM_MAILEXCLUSION_TRUE} name="UAM_MailExclusion" type="radio">
+            <label for="UAM_MailExclusion_true"><input id="UAM_MailExclusion_true" value="true" {$UAM_MAILEXCLUSION_TRUE} name="UAM_MailExclusion" type="radio"/>
                 {'UAM_MailExclusion_true'|@translate}
             </label>
 
@@ -281,11 +281,11 @@ function uam_blockToggleDisplay( headerId, contentId )
             <label class="cluetip" title="{'UAM_Confirm_Mail'|translate}|{'UAM_confirmmailTitle_d'|translate}">
               {'UAM_Confirm_Mail'|@translate}
             </label>
-            <label for="UAM_Confirm_Mail_false"><input type="radio" id="UAM_Confirm_Mail_false" value="false" {$UAM_CONFIRM_MAIL_FALSE} name="UAM_Confirm_Mail">
+            <label for="UAM_Confirm_Mail_false"><input type="radio" id="UAM_Confirm_Mail_false" value="false" {$UAM_CONFIRM_MAIL_FALSE} name="UAM_Confirm_Mail"/>
               {'UAM_Disable'|@translate}</label>
-            <label for="UAM_Confirm_Mail_true"><input type="radio" id="UAM_Confirm_Mail_true" value="true" {$UAM_CONFIRM_MAIL_TRUE} name="UAM_Confirm_Mail">
+            <label for="UAM_Confirm_Mail_true"><input type="radio" id="UAM_Confirm_Mail_true" value="true" {$UAM_CONFIRM_MAIL_TRUE} name="UAM_Confirm_Mail"/>
               {'UAM_Confirm_Mail_true'|@translate}</label>
-            <label for="UAM_Confirm_Mail_local"><input type="radio" id="UAM_Confirm_Mail_local" value="local" {$UAM_CONFIRM_MAIL_LOCAL} name="UAM_Confirm_Mail">
+            <label for="UAM_Confirm_Mail_local"><input type="radio" id="UAM_Confirm_Mail_local" value="local" {$UAM_CONFIRM_MAIL_LOCAL} name="UAM_Confirm_Mail"/>
               {'UAM_Confirm_Mail_local'|@translate}</label>
           </li>
         </ul>
@@ -296,10 +296,10 @@ function uam_blockToggleDisplay( headerId, contentId )
                   {'UAM_Stuffs'|@translate}
                 </label>
               
-                <label for="UAM_Stuffs_false"><input id="UAM_Stuffs_false" value="false" {$UAM_STUFFS_FALSE} name="UAM_Stuffs" type="radio">
+                <label for="UAM_Stuffs_false"><input id="UAM_Stuffs_false" value="false" {$UAM_STUFFS_FALSE} name="UAM_Stuffs" type="radio"/>
                   {'UAM_Disable'|@translate}
                 </label>
-                <label for="UAM_Stuffs_true"><input id="UAM_Stuffs_true" value="true" {$UAM_STUFFS_TRUE} name="UAM_Stuffs" type="radio">
+                <label for="UAM_Stuffs_true"><input id="UAM_Stuffs_true" value="true" {$UAM_STUFFS_TRUE} name="UAM_Stuffs" type="radio"/>
                   {'UAM_Enable'|@translate}
                 </label>
               
@@ -309,10 +309,10 @@ function uam_blockToggleDisplay( headerId, contentId )
                 <label class="cluetip" title="{'UAM_AdminConfMail'|translate}|{'UAM_adminconfmailTitle_d'|translate}">
                   {'UAM_AdminConfMail'|@translate}
                 </label>
-                <label for="UAM_Admin_ConfMail_false"><input id="UAM_Admin_ConfMail_false" value="false" {$UAM_ADMINCONFMAIL_FALSE} name="UAM_Admin_ConfMail" type="radio">
+                <label for="UAM_Admin_ConfMail_false"><input id="UAM_Admin_ConfMail_false" value="false" {$UAM_ADMINCONFMAIL_FALSE} name="UAM_Admin_ConfMail" type="radio"/>
                   {'UAM_Disable'|@translate}
                 </label>
-                <label for="UAM_Admin_ConfMail_true"><input id="UAM_Admin_ConfMail_true" value="true" {$UAM_ADMINCONFMAIL_TRUE} name="UAM_Admin_ConfMail" type="radio">
+                <label for="UAM_Admin_ConfMail_true"><input id="UAM_Admin_ConfMail_true" value="true" {$UAM_ADMINCONFMAIL_TRUE} name="UAM_Admin_ConfMail" type="radio"/>
                   {'UAM_Enable'|@translate}
                 </label>
               
@@ -363,7 +363,7 @@ function uam_blockToggleDisplay( headerId, contentId )
               </div>
             {* /if *}
 -->
-          <br><hr><br>
+          <br/><hr/><br/>
             <li>
               <label class="cluetip" title="{'UAM_confirmmail_custom_Txt1'|translate}|{'UAM_confirmmail_custom1_d'|translate}">
                 {'UAM_confirmmail_custom_Txt1'|@translate}
@@ -388,17 +388,17 @@ function uam_blockToggleDisplay( headerId, contentId )
             {/if}
           </ul>
           </fieldset>
-          <br><hr><br>
+          <br/><hr/><br/>
             <ul>
          	    <li>
                 <label class="cluetip" title="{'UAM_RejectConnexion'|translate}|{'UAM_RejectConnexion_d'|translate}">
                   {'UAM_RejectConnexion'|@translate}
                 </label>
             
-                <label for="UAM_RejectConnexion_false"><input id="UAM_RejectConnexion_false" type="radio" value="false" {$UAM_REJECTCONNECT_FALSE} name="UAM_RejectConnexion">
+                <label for="UAM_RejectConnexion_false"><input id="UAM_RejectConnexion_false" type="radio" value="false" {$UAM_REJECTCONNECT_FALSE} name="UAM_RejectConnexion"/>
                   {'UAM_Disable'|@translate}
                 </label>
-                <label for="UAM_RejectConnexion_true"><input id="UAM_RejectConnexion_true" type="radio" value="true" {$UAM_REJECTCONNECT_TRUE} name="UAM_RejectConnexion">
+                <label for="UAM_RejectConnexion_true"><input id="UAM_RejectConnexion_true" type="radio" value="true" {$UAM_REJECTCONNECT_TRUE} name="UAM_RejectConnexion"/>
                   {'UAM_Enable'|@translate}</label>
                 </label>
               </li>
@@ -414,12 +414,12 @@ function uam_blockToggleDisplay( headerId, contentId )
             {/if}
               </li>
             </ul>
-          <br><hr><br>
+          <br/><hr/><br/>
           <a id="show_UAM_Change" >{'UAM_Change'|translate}</a>
           <a id="hide_UAM_Change" style="display: none">{'hide details'|translate}</a>
           <ul id="UAM_Change" style="display: none">
             <div id="uam_notice">{'UAM_Confirm_grpstat_notice'|@translate}</div>
-              <br>
+              <br/>
               <li>
                 <label class="cluetip" title="{'UAM_confirmgrpTitle'|translate}|{'UAM_confirmgrpTitle_d'|translate}">
                   {'UAM_Confirm_Group'|@translate}
@@ -490,26 +490,26 @@ function uam_blockToggleDisplay( headerId, contentId )
                 </li>
               </ul>
             </ul>
-          <br><hr><br>
+          <br/><hr/><br/>
             <ul>
               <li>
                 <label class="cluetip" title="{'UAM_ValidationLimit_Info'|translate}|{'UAM_validationlimitTitle_d'|translate}">
                   {'UAM_ValidationLimit_Info'|@translate}
                 </label>
-                <label for="UAM_ConfirmMail_TimeOut_false" ><input id="UAM_ConfirmMail_TimeOut_false" type="radio" value="false" {$UAM_CONFIRMMAIL_TIMEOUT_FALSE} name="UAM_ConfirmMail_TimeOut">
+                <label for="UAM_ConfirmMail_TimeOut_false" ><input id="UAM_ConfirmMail_TimeOut_false" type="radio" value="false" {$UAM_CONFIRMMAIL_TIMEOUT_FALSE} name="UAM_ConfirmMail_TimeOut"/>
                   {'UAM_Disable'|@translate}</label>
-                <label for="UAM_ConfirmMail_TimeOut_true" ><input id="UAM_ConfirmMail_TimeOut_true" type="radio" value="true" {$UAM_CONFIRMMAIL_TIMEOUT_TRUE} name="UAM_ConfirmMail_TimeOut">
+                <label for="UAM_ConfirmMail_TimeOut_true" ><input id="UAM_ConfirmMail_TimeOut_true" type="radio" value="true" {$UAM_CONFIRMMAIL_TIMEOUT_TRUE} name="UAM_ConfirmMail_TimeOut"/>
                   {'UAM_ConfirmMail_TimeOut_true'|@translate}
-                <input type="text" name="UAM_ConfirmMail_Delay" value="{$UAM_CONFIRMMAIL_DELAY}" size="5" style="text-align: center;">
+                <input type="text" name="UAM_ConfirmMail_Delay" value="{$UAM_CONFIRMMAIL_DELAY}" size="5" style="text-align: center;"/>
                 </label>
               </li>
               <li>
                 <label class="cluetip" title="{'UAM_ConfirmMail_Remail'|translate}|{'UAM_remailTitle_d'|translate}">
                   {'UAM_ConfirmMail_Remail'|@translate}
                 </label>
-                <label for="UAM_ConfirmMail_Remail_false" ><input id="UAM_ConfirmMail_Remail_false" type="radio" value="false" {$UAM_CONFIRMMAIL_REMAIL_FALSE} name="UAM_ConfirmMail_Remail">
+                <label for="UAM_ConfirmMail_Remail_false" ><input id="UAM_ConfirmMail_Remail_false" type="radio" value="false" {$UAM_CONFIRMMAIL_REMAIL_FALSE} name="UAM_ConfirmMail_Remail"/>
                   {'UAM_Disable'|@translate}</label>
-                <label for="UAM_ConfirmMail_Remail_true" ><input id="UAM_ConfirmMail_Remail_true" type="radio" value="true" {$UAM_CONFIRMMAIL_REMAIL_TRUE} name="UAM_ConfirmMail_Remail">
+                <label for="UAM_ConfirmMail_Remail_true" ><input id="UAM_ConfirmMail_Remail_true" type="radio" value="true" {$UAM_CONFIRMMAIL_REMAIL_TRUE} name="UAM_ConfirmMail_Remail"/>
                   {'UAM_Enable'|@translate}</label>
               </li>
             <a id="show_UAM_ConfirmMail" >{'UAM_Customize_messagesandmails'|translate}</a>
@@ -548,7 +548,7 @@ function uam_blockToggleDisplay( headerId, contentId )
                   {else}
                     <textarea class="uam_textfields" name="UAM_ConfirmMail_ReMail_Txt2" id="UAM_ConfirmMail_ReMail_Txt2" rows="10" {$TAG_INPUT_ENABLED}>{$UAM_CONFIRMMAIL_REMAIL_TXT2}</textarea>
                   {/if}
-                  <br>
+                  <br/>
                   </li>
 <!--
                 {* if 'FCK_PATH'|@defined *}
@@ -568,10 +568,10 @@ function uam_blockToggleDisplay( headerId, contentId )
                 {'UAM_USRAuto'|@translate}
               </label>
             
-              <label for="UAM_USRAuto_false"><input id="UAM_USRAuto_false" value="false" {$UAM_USRAUTO_FALSE} name="UAM_USRAuto" type="radio">
+              <label for="UAM_USRAuto_false"><input id="UAM_USRAuto_false" value="false" {$UAM_USRAUTO_FALSE} name="UAM_USRAuto" type="radio"/>
                 {'UAM_Disable'|@translate}
               </label>
-              <label for="UAM_USRAuto_true"><input id="UAM_USRAuto_true" value="true" {$UAM_USRAUTO_TRUE} name="UAM_USRAuto" type="radio">
+              <label for="UAM_USRAuto_true"><input id="UAM_USRAuto_true" value="true" {$UAM_USRAUTO_TRUE} name="UAM_USRAuto" type="radio"/>
                 {'UAM_Enable'|@translate}
               </label>
             </li>
@@ -591,10 +591,10 @@ function uam_blockToggleDisplay( headerId, contentId )
                 <label class="cluetip" title="{'UAM_USRAutoMail'|translate}|{'UAM_USRAutoMailTitle_d'|translate}">
                   {'UAM_USRAutoMail'|@translate}
                 </label>
-                <label for="UAM_USRAutoMail_false"><input id="UAM_USRAutoMail_false" value="false" {$UAM_USRAUTOMAIL_FALSE} name="UAM_USRAutoMail" type="radio">
+                <label for="UAM_USRAutoMail_false"><input id="UAM_USRAutoMail_false" value="false" {$UAM_USRAUTOMAIL_FALSE} name="UAM_USRAutoMail" type="radio"/>
                   {'UAM_Disable'|@translate}
                 </label>
-                <label for="UAM_USRAutoMail_true"><input id="UAM_USRAutoMail_true" value="true" {$UAM_USRAUTOMAIL_TRUE} name="UAM_USRAutoMail" type="radio">
+                <label for="UAM_USRAutoMail_true"><input id="UAM_USRAutoMail_true" value="true" {$UAM_USRAUTOMAIL_TRUE} name="UAM_USRAutoMail" type="radio"/>
                   {'UAM_Enable'|@translate}
                 </label>
               </li>
@@ -618,13 +618,13 @@ function uam_blockToggleDisplay( headerId, contentId )
               {'UAM_GhostTracker'|@translate}
             </label>
             <label for"UAM_GhostUser_Tracker_false">
-              <input id="UAM_GhostUser_Tracker_false" type="radio" value="false" {$UAM_GHOSTRACKER_FALSE} name="UAM_GhostUser_Tracker">
+              <input id="UAM_GhostUser_Tracker_false" type="radio" value="false" {$UAM_GHOSTRACKER_FALSE} name="UAM_GhostUser_Tracker"/>
               {'UAM_Disable'|@translate}
             </label>
             <label for"UAM_GhostUser_Tracker_true">
-              <input id="UAM_GhostUser_Tracker_true" type="radio" value="true" {$UAM_GHOSTRACKER_TRUE} name="UAM_GhostUser_Tracker">
+              <input id="UAM_GhostUser_Tracker_true" type="radio" value="true" {$UAM_GHOSTRACKER_TRUE} name="UAM_GhostUser_Tracker"/>
               {'UAM_GhostTracker_true'|@translate}
-            <input type="text" name="UAM_GhostTracker_DayLimit" value="{$UAM_GHOSTRACKER_DAYLIMIT}" size="5" style="text-align: center;">
+            <input type="text" name="UAM_GhostTracker_DayLimit" value="{$UAM_GHOSTRACKER_DAYLIMIT}" size="5" style="text-align: center;"/>
             </label>
           
           </li>
@@ -665,10 +665,10 @@ function uam_blockToggleDisplay( headerId, contentId )
                 {'UAM_GTAuto'|@translate}
               </label>
             
-              <label for="UAM_GTAuto_false"><input id="UAM_GTAuto_false" type="radio" value="false" {$UAM_GTAUTO_FALSE} name="UAM_GTAuto">
+              <label for="UAM_GTAuto_false"><input id="UAM_GTAuto_false" type="radio" value="false" {$UAM_GTAUTO_FALSE} name="UAM_GTAuto"/>
                 {'UAM_Disable'|@translate}
               
-              <label for="UAM_GTAuto_true"><input id="UAM_GTAuto_true" type="radio" value="true" {$UAM_GTAUTO_TRUE} name="UAM_GTAuto">
+              <label for="UAM_GTAuto_true"><input id="UAM_GTAuto_true" type="radio" value="true" {$UAM_GTAUTO_TRUE} name="UAM_GTAuto"/>
                 {'UAM_Enable'|@translate}
               </label>
             
@@ -732,10 +732,10 @@ function uam_blockToggleDisplay( headerId, contentId )
                         {'UAM_GTAutoMail'|@translate}
                       </label>
                     
-                      <label for="UAM_GTAutoMail_false"><input id="UAM_GTAutoMail_false" value="false" {$UAM_GTAUTOMAIL_FALSE} name="UAM_GTAutoMail" type="radio">
+                      <label for="UAM_GTAutoMail_false"><input id="UAM_GTAutoMail_false" value="false" {$UAM_GTAUTOMAIL_FALSE} name="UAM_GTAutoMail" type="radio"/>
                         {'UAM_Disable'|@translate}
                       </label>
-                      <label for="UAM_GTAutoMail_true"><input id="UAM_GTAutoMail_true" value="true" {$UAM_GTAUTOMAIL_TRUE} name="UAM_GTAutoMail" type="radio">
+                      <label for="UAM_GTAutoMail_true"><input id="UAM_GTAutoMail_true" value="true" {$UAM_GTAUTOMAIL_TRUE} name="UAM_GTAutoMail" type="radio"/>
                         {'UAM_Enable'|@translate}
                       </label>
                     
@@ -781,10 +781,10 @@ function uam_blockToggleDisplay( headerId, contentId )
               {'UAM_Mail_Info'|@translate}
             </label>
           
-            <label for="UAM_Mail_Info_false"><input id="UAM_Mail_Info_false" type="radio" value="false" {$UAM_MAIL_INFO_FALSE} name="UAM_Mail_Info">
+            <label for="UAM_Mail_Info_false"><input id="UAM_Mail_Info_false" type="radio" value="false" {$UAM_MAIL_INFO_FALSE} name="UAM_Mail_Info"/>
               {'UAM_Disable'|@translate}
             </label>
-            <label for="UAM_Mail_Info_true"><input id="UAM_Mail_Info_true" type="radio" value="true" {$UAM_MAIL_INFO_TRUE} name="UAM_Mail_Info">
+            <label for="UAM_Mail_Info_true"><input id="UAM_Mail_Info_true" type="radio" value="true" {$UAM_MAIL_INFO_TRUE} name="UAM_Mail_Info"/>
               {'UAM_Enable'|@translate}
             </label>
           
@@ -796,10 +796,10 @@ function uam_blockToggleDisplay( headerId, contentId )
               <label class="cluetip" title="{'UAM_HidePassw'|translate}|{'UAM_HidePasswTitle_d'|translate}">
                 {'UAM_HidePassw'|@translate}
               </label>
-              <label for="UAM_HidePassw_false"><input id="UAM_HidePassw_false" value="false" {$UAM_HIDEPASSW_FALSE} name="UAM_HidePassw" type="radio">
+              <label for="UAM_HidePassw_false"><input id="UAM_HidePassw_false" value="false" {$UAM_HIDEPASSW_FALSE} name="UAM_HidePassw" type="radio"/>
                 {'UAM_Disable'|@translate}
               </label>
-              <label for="UAM_HidePassw_true"><input id="UAM_HidePassw_true" value="true" {$UAM_HIDEPASSW_TRUE} name="UAM_HidePassw" type="radio">
+              <label for="UAM_HidePassw_true"><input id="UAM_HidePassw_true" value="true" {$UAM_HIDEPASSW_TRUE} name="UAM_HidePassw" type="radio"/>
                 {'UAM_Enable'|@translate}
               </label>
             </li>
@@ -837,10 +837,10 @@ function uam_blockToggleDisplay( headerId, contentId )
               {'UAM_Tracking registered users'|@translate}
             </label>
           
-            <label for="UAM_Add_LastVisit_Column_false"><input id="UAM_Add_LastVisit_Column_false" value="false" {$UAM_ADDLASTVISIT_FALSE} name="UAM_Add_LastVisit_Column" type="radio">
+            <label for="UAM_Add_LastVisit_Column_false"><input id="UAM_Add_LastVisit_Column_false" value="false" {$UAM_ADDLASTVISIT_FALSE} name="UAM_Add_LastVisit_Column" type="radio"/>
               {'UAM_Disable'|@translate}
             </label>
-            <label for="UAM_Add_LastVisit_Column_true"><input id="UAM_Add_LastVisit_Column_true" value="true" {$UAM_ADDLASTVISIT_TRUE} name="UAM_Add_LastVisit_Column" type="radio">
+            <label for="UAM_Add_LastVisit_Column_true"><input id="UAM_Add_LastVisit_Column_true" value="true" {$UAM_ADDLASTVISIT_TRUE} name="UAM_Add_LastVisit_Column" type="radio"/>
               {'UAM_Enable'|@translate}
           </label>
           </li>
@@ -849,10 +849,10 @@ function uam_blockToggleDisplay( headerId, contentId )
               {'UAM_RedirToProfile'|@translate}
             </label>
           
-            <label for="UAM_RedirToProfile_false"><input id="UAM_RedirToProfile_false" value="false" {$UAM_REDIRTOPROFILE_FALSE} name="UAM_RedirToProfile" type="radio">
+            <label for="UAM_RedirToProfile_false"><input id="UAM_RedirToProfile_false" value="false" {$UAM_REDIRTOPROFILE_FALSE} name="UAM_RedirToProfile" type="radio"/>
               {'UAM_Disable'|@translate}
             </label>
-            <label for="UAM_RedirToProfile_true"><input id="UAM_RedirToProfile_true" value="true" {$UAM_REDIRTOPROFILE_TRUE} name="UAM_RedirToProfile" type="radio">
+            <label for="UAM_RedirToProfile_true"><input id="UAM_RedirToProfile_true" value="true" {$UAM_REDIRTOPROFILE_TRUE} name="UAM_RedirToProfile" type="radio"/>
               {'UAM_Enable'|@translate}
             </label>
           
@@ -863,10 +863,10 @@ function uam_blockToggleDisplay( headerId, contentId )
               {'UAM_PwdReset'|@translate}
             </label>
           
-            <label for="UAM_PwdReset_false"><input id="UAM_PwdReset_false" value="false" {$UAM_PWDRESET_FALSE} name="UAM_PwdReset" type="radio">
+            <label for="UAM_PwdReset_false"><input id="UAM_PwdReset_false" value="false" {$UAM_PWDRESET_FALSE} name="UAM_PwdReset" type="radio"/>
               {'UAM_Disable'|@translate}
             </label>
-            <label for="UAM_PwdReset_true"><input id="UAM_PwdReset_true" value="true" {$UAM_PWDRESET_TRUE} name="UAM_PwdReset" type="radio">
+            <label for="UAM_PwdReset_true"><input id="UAM_PwdReset_true" value="true" {$UAM_PWDRESET_TRUE} name="UAM_PwdReset" type="radio"/>
               {'UAM_Enable'|@translate}
             </label>
           
@@ -878,10 +878,10 @@ function uam_blockToggleDisplay( headerId, contentId )
               {'UAM_CustomPasswRetr'|@translate}
             </label>
           
-            <label for="UAM_CustomPasswRetr_false"><input id="UAM_CustomPasswRetr_false" value="false" {$UAM_CUSTOMPASSWRETR_FALSE} name="UAM_CustomPasswRetr" type="radio">
+            <label for="UAM_CustomPasswRetr_false"><input id="UAM_CustomPasswRetr_false" value="false" {$UAM_CUSTOMPASSWRETR_FALSE} name="UAM_CustomPasswRetr" type="radio"/>
               {'UAM_Disable'|@translate}
 </label>
-            <label for="UAM_CustomPasswRetr_true"><input id="UAM_CustomPasswRetr_true" value="true" {$UAM_CUSTOMPASSWRETR_TRUE} name="UAM_CustomPasswRetr" type="radio">
+            <label for="UAM_CustomPasswRetr_true"><input id="UAM_CustomPasswRetr_true" value="true" {$UAM_CUSTOMPASSWRETR_TRUE} name="UAM_CustomPasswRetr" type="radio"/>
               {'UAM_Enable'|@translate}
 </label>
             <fieldset id="UAM_CustomPasswRetr" {if $UAM_CUSTOMPASSWRETR_FALSE}style="display:none"{/if}>
@@ -893,7 +893,7 @@ function uam_blockToggleDisplay( headerId, contentId )
   </div>
 
   <p>
-    <input class="submit" type="submit" value="{'UAM_submit'|@translate}" name="submit" {$TAG_INPUT_ENABLED} >&nbsp;<input class="submit" type="submit" value="{'UAM_audit'|@translate}" name="audit">
+    <input class="submit" type="submit" value="{'UAM_submit'|@translate}" name="submit" {$TAG_INPUT_ENABLED} >&nbsp;<input class="submit" type="submit" value="{'UAM_audit'|@translate}" name="audit"/>
   </p>
 </form>
 
@@ -908,9 +908,9 @@ function uam_blockToggleDisplay( headerId, contentId )
 <form method="post" action="" class="general">
   <p>
     {'UAM_Dump_Download'|@translate}&nbsp;
-      <input type="checkbox" name="dump_download" value="true" {$UAM_DUMP_DOWNLOAD}>
+      <input type="checkbox" name="dump_download" value="true" {$UAM_DUMP_DOWNLOAD}/>
   
-      <input class="submit" type="submit" value="{'UAM_Save'|@translate}" name="save" {$TAG_INPUT_ENABLED}>
+      <input class="submit" type="submit" value="{'UAM_Save'|@translate}" name="save" {$TAG_INPUT_ENABLED}/>
   </p>
 </form>
 </fieldset>
@@ -918,7 +918,7 @@ function uam_blockToggleDisplay( headerId, contentId )
 <form method="post" action="" class="general">
   <p>
     {'UAM_Restore'|@translate}
-      <input class="submit" type="submit" value="{'UAM_Restore_File'|@translate}" name="restore" {$TAG_INPUT_ENABLED}>
+      <input class="submit" type="submit" value="{'UAM_Restore_File'|@translate}" name="restore" {$TAG_INPUT_ENABLED}/>
   </p>
 </form>
 </fieldset>
