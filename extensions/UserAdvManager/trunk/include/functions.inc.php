@@ -102,7 +102,11 @@ LIMIT 1
     }
 
     // Perform user logout after registration if not validated
-    if ((isset($conf_UAM['REJECTCONNECT']) and $conf_UAM['REJECTCONNECT'] == 'true') and !UAM_UsrReg_Verif($user['id']) and !is_admin() and !is_webmaster() )
+    if ((isset($conf_UAM['CONFIRM_MAIL']) and ($conf_UAM['CONFIRM_MAIL']=='true' or $conf_UAM['CONFIRM_MAIL']=='local'))
+          and (isset($conf_UAM['REJECTCONNECT']) and $conf_UAM['REJECTCONNECT'] == 'true')
+          and !UAM_UsrReg_Verif($user['id'])
+          and !is_admin()
+          and !is_webmaster())
     {
       invalidate_user_cache();
       logout_user();
@@ -435,13 +439,16 @@ function UAM_LoginTasks()
 
   // Performing User validation scheduled tasks
   // ------------------------------------------
-  if ((isset($conf_UAM['USRAUTO']) and $conf_UAM['USRAUTO'] == 'true'))
+  if ((isset($conf_UAM['CONFIRM_MAIL']) and $conf_UAM['CONFIRM_MAIL']=='true')
+        and (isset($conf_UAM['USRAUTO']) and $conf_UAM['USRAUTO'] == 'true'))
   {
     UAM_USR_ScheduledTasks();
   }
 
   // Avoid login into public galleries until registration confirmation is done
-  if ((isset($conf_UAM['REJECTCONNECT']) and $conf_UAM['REJECTCONNECT'] == 'false') or ((isset($conf_UAM['REJECTCONNECT']) and $conf_UAM['REJECTCONNECT'] == 'true') and UAM_UsrReg_Verif($user['id'])) or  (!is_admin() and !is_webmaster()))
+  if ((isset($conf_UAM['REJECTCONNECT']) and $conf_UAM['REJECTCONNECT'] == 'false')
+        or ((isset($conf_UAM['REJECTCONNECT']) and $conf_UAM['REJECTCONNECT'] == 'true') and UAM_UsrReg_Verif($user['id']))
+        or (!is_admin() and !is_webmaster()))
   {
     // Performing redirection to profile page on first login
     // -----------------------------------------------------
