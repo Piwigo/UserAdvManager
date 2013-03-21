@@ -411,7 +411,7 @@ Plugin Name: UserAdvManager
             Bug 2876 fixed - Make templates compatible HTML 5
             Update it_IT, thanks to : salvatore
 
--- 2.50.6 : // TODO: Bug 2877
+-- 2.50.6 : Bug 2877 - Disabling Confirmation of registration option disables child options (child options remain configured and shown but no force or effect)
             Bug 2878 - [Kdays] flag was not translated in confirmation text sent by email to user
 */
 ?>
