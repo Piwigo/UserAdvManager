@@ -1133,6 +1133,7 @@ function SendMail2User($typemail, $id, $username, $password, $email, $confirm)
   global $conf;
 
   $conf_UAM = unserialize($conf['UserAdvManager']);
+  $conf_UAM_ConfirmMail = unserialize($conf['UserAdvManager_ConfirmMail']);
 
   include_once(PHPWG_ROOT_PATH.'include/functions_mail.inc.php');
 
