@@ -410,5 +410,12 @@ Plugin Name: UserAdvManager
 -- 2.50.5 : Bug 2875 fixed - MySql error on manual validation (tracking confirmation tab)
             Bug 2876 fixed - Make templates compatible HTML 5
             Update it_IT, thanks to : salvatore
+
+-- 2.50.6 : Bug 2877 fixed - Disabling Confirmation of registration main option disables child options (child options remain configured and shown but no force or effect)
+            Bug 2878 fixed - [Kdays] flag was not translated in confirmation text sent by email to user
+            Update tr_TR, thanks to : LazBoy
+            Update da_DK, thanks to : Kaare
+            Update es_ES, thanks to : crazydark
+            
 */
 ?>

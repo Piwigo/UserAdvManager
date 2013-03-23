@@ -334,4 +334,5 @@ $lang['UAM_Tips1_txt'] = '          <ul>
               </ol>
             </li>
           </ul>';
+$lang['UAM_group "%s" updated'] = 'For at opnå den bedste ydeevne, er gruppen %s automatisk blevet opsat som standardgruppen. ';
 ?>
