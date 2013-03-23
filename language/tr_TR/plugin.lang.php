@@ -108,7 +108,7 @@ $lang['UAM_Default_GhstDeletion_Txt'] = '[username] Üzgünüz, uzun süredir [m
 $lang['UAM_Default_GTReminder_Subject'] = '[username]- [mygallery] i son ziyaretinizden bu yana uzun zaman geçti';
 $lang['UAM_Default user cannot be pwgreset'] = 'Şifre yenileme varsayılan kullanıcı hesabı için ayarlanamaz!';
 $lang['UAM_Default_CfmMail_Custom_Txt2'] = 'Yanlış / Süresi geçmiş doğrulama kodu, hesap zaten başarıyla doğrulanmış';
-$lang['UAM_Default_CfmMail_Custom_Txt1'] = '[username] hesap başarıyla doğrulandı';
+$lang['UAM_Default_CfmMail_Custom_Txt1'] = '[username] hesabı başarıyla doğrulandı!';
 $lang['UAM_Default_AdminValidationMail_Subject'] = '[username] - [mygallery] e Kayıt başarıyla doğrulandı.';
 $lang['UAM_Default_AdminValidation_Txt'] = 'Merhaba [username]! [mygallery] Galerimize kayıt olduğunuz için teşekkür ederiz.
 
@@ -158,4 +158,6 @@ $lang['UAM_Change'] = 'Doğrulanan kullanıcıların Grup/Durum/Gizlilik seviyel
 $lang['UAM_Confirm_Group'] = 'Gruplar<br>(grubu etkilememesi için ------- olarak bırakın)';
 $lang['UAM_Confirm_Status'] = 'Durumlar<br>(Piwigo varsayılanı için ------- olarak bırakın)';
 $lang['UAM_Confirm_Level'] = 'Gizlilik seviyesi<br>(Piwigo varsayılanı için ------- olarak bırakın)';
+$lang['UAM_Expired_Group'] = 'Kullanıcının kayıtlı olduğu <b>grubun</b> geçerliliği sona ermiş durumdadır.<br>';
+$lang['UAM_Confirm_grpstat_notice'] = 'Dikkat: Grup yada doğrulama durumlarından sadece birini kullanmanız önerilir. Gizlilik seviyesi bir grup ya da durum atama ile bağlantılı olarak kullanılabilir.';
 ?>
