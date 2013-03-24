@@ -334,4 +334,5 @@ $lang['UAM_Subject admin validation for %s'] = 'Η καταχώρηση των %
 $lang['UAM_Manual_validation_needed_for %s'] = 'Ο χρήστης % καταχωρήθηκε και περιμένει χειροκίνητη επικύρωση από τον διαχειριστή';
 $lang['UAM_Customize_messagesandmails'] = 'Προσαρμόστε τα μηνύματα και τα e-mails';
 $lang['UAM_Change'] = 'Αλλάξτε την Ομάδα / Status / Επίπεδο προστασίας των χρηστών που έχουν επιβεβαιωθεί';
+$lang['UAM_group "%s" updated'] = 'Για καλύτερη απόδοση, η ομάδα %s έχει οριστει αυτόματα ως προεπιλεγμένη ομάδα.';
 ?>
