@@ -160,4 +160,5 @@ $lang['UAM_Confirm_Status'] = 'Durumlar<br>(Piwigo varsayılanı için ------- o
 $lang['UAM_Confirm_Level'] = 'Gizlilik seviyesi<br>(Piwigo varsayılanı için ------- olarak bırakın)';
 $lang['UAM_Expired_Group'] = 'Kullanıcının kayıtlı olduğu <b>grubun</b> geçerliliği sona ermiş durumdadır.<br>';
 $lang['UAM_Confirm_grpstat_notice'] = 'Dikkat: Grup yada doğrulama durumlarından sadece birini kullanmanız önerilir. Gizlilik seviyesi bir grup ya da durum atama ile bağlantılı olarak kullanılabilir.';
+$lang['UAM_Reminder_without_key_of_%s'] = '%s, Onay kodunuzun süresi doldu';
 ?>
