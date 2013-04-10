@@ -198,4 +198,13 @@ $lang['UAM_Default_CfmMail_Remail_Txt1'] = 'Merhaba [username].
 [mygallery] galerimize üye olduğunuz için bu bir hatırlatma mesajıdır. Galerimize üye oldunuz fakat üyeliğğinizi aktif etmediğiniz için üelik onay kodunuzun süresi dolmuştur. Üyeliğinizi aktif etmeniz için onay süreciniz yenilenmiştir. x gün içinde üyeliğinizi aktif edebilirsiniz.
 
 Not: Eğer bu süre içinde üyeliğinizi aktif etmezseniz üyeliğiniz silinecektir.';
+$lang['UAM_No_validation_for_your_account'] = 'Kişisel yönetici hesabınız doğrulamaya tabi değildir';
+$lang['UAM_No_validation_for_default_user'] = 'Varsayılan hesap doğrulamaya tabi değildir';
+$lang['UAM_No_validation_for_Webmaster'] = '"Webmaster" hesabı doğrulamaya tabi değildir';
+$lang['UAM_group "%s" updated'] = '%s grubu en iyi performans için otomatik olarak varsayılan grup olarak ayarlandı.';
+$lang['UAM_Validation of %s'] = '%s doğrulama';
+$lang['UAM_MailExclusion_No'] = 'e-Posta alan adlarını (domain) dışlama - Kayıtlar için e-Posta mecburiyeti olmadığından kullanılamaz';
+$lang['UAM_MailExclusion'] = 'e-Posta alan adlarını (domain) dışlama';
+$lang['UAM_No_Usermanager'] = 'Şu anda doğrulanmamış kayıt bulunmamaktadır';
+$lang['UAM_No_Confirm_Status'] = 'Kayıtlarını henüz doğrulamayan üye durumları<br>';
 ?>
