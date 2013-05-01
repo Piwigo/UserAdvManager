@@ -160,4 +160,51 @@ $lang['UAM_Confirm_Status'] = 'Durumlar<br>(Piwigo varsayılanı için ------- o
 $lang['UAM_Confirm_Level'] = 'Gizlilik seviyesi<br>(Piwigo varsayılanı için ------- olarak bırakın)';
 $lang['UAM_Expired_Group'] = 'Kullanıcının kayıtlı olduğu <b>grubun</b> geçerliliği sona ermiş durumdadır.<br>';
 $lang['UAM_Confirm_grpstat_notice'] = 'Dikkat: Grup yada doğrulama durumlarından sadece birini kullanmanız önerilir. Gizlilik seviyesi bir grup ya da durum atama ile bağlantılı olarak kullanılabilir.';
+$lang['UAM_Reminder_without_key_of_%s'] = '%s, Onay kodunuzun süresi doldu';
+$lang['UAM_ValidationLimit_Info'] = 'Kayıt onay sınırı için son tarih';
+$lang['UAM_USRAutoMail'] = 'Otomatik E-Posta hatırlatma';
+$lang['UAM_USRAuto'] = 'Doğrulanmamış kullanıcıların otomatik yönetimi';
+$lang['UAM_Tracking registered users'] = 'Kayıtlı kullanıcı takibi';
+$lang['UAM_Tracking confirmations'] = 'Takip onayları';
+$lang['UAM_Title_Tab'] = 'UsrAdvManager - Versiyon:';
+$lang['UAM_Restoration_OK'] = 'apılandırma geri yüklemeniz başarıyla tamamlandı. Restore ayarlarını görüntülemek için UAM yönetim sayfasını yeniden yükleyin.';
+$lang['UAM_Restoration_NOK'] = 'Yapılandırma geri yükleme sırasında bir hata oluştu. Yedekleme dosya geçerliliğini kontrol ediniz.';
+$lang['UAM_Stuffs_Desc'] = 'Doğrulanmamış kullanıcılar için bir bilgi bloğu ekler';
+$lang['UAM_Reminder_with_key_of_%s'] = '%s, onay key i  yenilendi.';
+$lang['UAM_RejectConnexion_Custom_Txt'] = 'Reddetme metni düzenleme';
+$lang['UAM_RejectConnexion'] = 'Kaydı onaylayana kadar kullanıcının bağlantısını redddet';
+$lang['UAM_Password_Enforced'] = 'Şifre güvenlik düzeyinin güçlendirilmesi';
+$lang['UAM_Password reset selected users'] = 'Seçilen kullanıcılar için şifre yenileme isteği';
+$lang['UAM_GTAutomail_Text'] = 'İndirgeme e-posta metnini düzenleyin';
+$lang['UAM_Default_PwdRequest_Txt'] = 'Galerimize şifre yenileme isteğinde bulundunuz. Yeni bağlantı ayarlarınızı aşağıdaki linkten yapabilirsiniz.';
+$lang['UAM_Default_InfoMail_Subject'] = '[username] - [mygalley] Galerisi Kayıt bilgileriniz ';
+$lang['UAM_Default_GhstReminder_Txt'] = 'Merhaba [username].
+
+Bu bilgilendirme mesajının gönderilmesini  sebebi [mygallery] galerimize son girişiniden bugüne uzun süre geçmiş olmasıdır. Eğer üyeliğinizi kullanmak istemiyorsanız bu mail i cevaplayarak bunu bize iletirseniz üyeliğinizi silebiliriz.
+
+Bu mesajın alındığı günden itibaren [days] gün de galeriye herhangi bir giriş yapmazsanız üyeliğiniz otoamatik olarak silinecektir.
+
+Saygılarımızla,
+
+[mygallery] Galeri yöneticisi - [myurl]';
+$lang['UAM_Default_GTAutoMail_Subject'] = '[username] - Hesabınız [mygallery] de indirgendi.';
+$lang['UAM_Default_CfmMail_Remail_Txt2'] = 'Merhaba [username].
+
+Bu hatırlatma mesajının gönderilme amacı üye olduüunuz [mygallery] galerimizdeki üyeliğinizi aktif etmediniz. Galerimizi görebilmeniz için üyeliğinizi aktif etmeniz gerekmektedir. x gün içinde üyeliğinizi aktif edebilmeniz için üye olduğunuzda size gönderilen mesajdaki linke tıklayarak aktif etmeniz gerekiyor.
+
+Not: Eğer bu süre içinde üyeliğinizi aktif etmezseniz üyeliğiniz silinecektir.';
+$lang['UAM_Default_CfmMail_Remail_Txt1'] = 'Merhaba [username].
+
+[mygallery] galerimize üye olduğunuz için bu bir hatırlatma mesajıdır. Galerimize üye oldunuz fakat üyeliğğinizi aktif etmediğiniz için üelik onay kodunuzun süresi dolmuştur. Üyeliğinizi aktif etmeniz için onay süreciniz yenilenmiştir. x gün içinde üyeliğinizi aktif edebilirsiniz.
+
+Not: Eğer bu süre içinde üyeliğinizi aktif etmezseniz üyeliğiniz silinecektir.';
+$lang['UAM_No_validation_for_your_account'] = 'Kişisel yönetici hesabınız doğrulamaya tabi değildir';
+$lang['UAM_No_validation_for_default_user'] = 'Varsayılan hesap doğrulamaya tabi değildir';
+$lang['UAM_No_validation_for_Webmaster'] = '"Webmaster" hesabı doğrulamaya tabi değildir';
+$lang['UAM_group "%s" updated'] = '%s grubu en iyi performans için otomatik olarak varsayılan grup olarak ayarlandı.';
+$lang['UAM_Validation of %s'] = '%s doğrulama';
+$lang['UAM_MailExclusion_No'] = 'e-Posta alan adlarını (domain) dışlama - Kayıtlar için e-Posta mecburiyeti olmadığından kullanılamaz';
+$lang['UAM_MailExclusion'] = 'e-Posta alan adlarını (domain) dışlama';
+$lang['UAM_No_Usermanager'] = 'Şu anda doğrulanmamış kayıt bulunmamaktadır';
+$lang['UAM_No_Confirm_Status'] = 'Kayıtlarını henüz doğrulamayan üye durumları<br>';
 ?>
