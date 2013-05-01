@@ -416,6 +416,9 @@ Plugin Name: UserAdvManager
             Update tr_TR, thanks to : LazBoy
             Update da_DK, thanks to : Kaare
             Update es_ES, thanks to : crazydark
+
+-- 2.50.7 : Update el_GR, thanks to : bas_alba
+            Update tr_TR, thanks to : hakanselcuk and LazBoy
             
 */
 ?>
