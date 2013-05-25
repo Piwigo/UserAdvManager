@@ -419,6 +419,10 @@ Plugin Name: UserAdvManager
 
 -- 2.50.7 : Update el_GR, thanks to : bas_alba
             Update tr_TR, thanks to : hakanselcuk and LazBoy
+
+-- 2.50.8 : Add ru_RU, thanks to : Konve
+            Add pt_BR, thanks to : hespanhol
+            Update tr_TR, thanks to : hakanselcuk
             
 */
 ?>
