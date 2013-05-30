@@ -180,4 +180,15 @@ $lang['UAM_Default_ConfirmMail_Remail_Subject'] = 'Напоминание - ре
 $lang['UAM_Default_ConfirmMail_Txt'] = 'Здравствуйте, [username]! Спасибо за Вашу регистрацию на сайте [mygallery].
 
 Чтобы завершить процесс и для перехода к полноценному просмотру изображений, будьте любезны, подтвердите свою регистрацию, перейдя по сссылке в этом сообщении.';
+$lang['UAM_No_Valid_Level'] = 'Уровень доступа для пользователей, которые не подтвердили свою регистрацию <br>';
+$lang['UAM_Mail_with_key'] = 'Напоминание с ключом';
+$lang['UAM_Mail_without_key'] = 'Напоминание без ключа';
+$lang['UAM_Nb_Days'] = 'Разница в днях';
+$lang['UAM_Generic cannot be pwdreset'] = 'Восстановленный пароль не может быть установлен на основном аккаунте!';
+$lang['UAM_ConfirmMail_ReMail_Subject'] = 'Настройка напоминания подтверждения регистрации по e-mail';
+$lang['UAM_ConfirmMail_ReMail_Txt1'] = 'Настройка сообщения с напоминанием  <b><u>С</u></b> восстановлением ключа подтверждения.';
+$lang['UAM_ConfirmMail_ReMail_Txt2'] = 'Настройка сообщения с напоминанием  <b><u>БЕЗ</u></b> восстановления ключа подтверждения.';
+$lang['UAM_ConfirmMail_Subject'] = 'Настройка подтверждения регистрации по e-mail';
+$lang['UAM_ConfirmMail_Text'] = 'Настройка e-mail для подтверждения:';
+$lang['UAM_Customize_messagesandmails'] = 'Настройка сообщений и адресов почты';
 ?>
