@@ -106,4 +106,13 @@ A pontuação mínima exigido nas senhas pelo administrador é:';
 $lang['UAM_reg_err_login5'] = 'Seu provedor de e-mail está proibido de inscrição. Os Provedores de email proibidos são:';
 $lang['UAM_save_config'] = 'Configurações salvas';
 $lang['UAM_submit'] = 'Submeter configurações';
+$lang['UAM_Demotion of %s'] = 'Rebaixamento de %s';
+$lang['UAM_DumpTxt'] = 'Backup e restauração da configuração';
+$lang['UAM_Dump_Download'] = 'Para baixar o arquivo de backup, por favor marque esta caixa:';
+$lang['UAM_Confirm_Group'] = 'Grupos<br>(deixe ------- para não afetar grupo)';
+$lang['UAM_Confirm_Level'] = 'Nível de privacidade<br>(dexe------- para manter o padrão do Piwigo)';
+$lang['UAM_Confirm_Status'] = 'Estado<br>(dexe------- para manter o padrão do Piwigo)';
+$lang['UAM_Confirm_grpstat_notice'] = 'Atenção: É aconselhável a utilização de um ou outro grupo ou dos estatutos de confirmação e não os dois simultaneamente. O nível de uso pode ser utilizado em conjunto com um grupo ou uma atribuição de estado.';
+$lang['UAM_Default user cannot be pwgreset'] = 'Renovação de senha não pode ser definido para conta de usuário padrão!';
+$lang['UAM_Default_AdminValidationMail_Subject'] = '[username] - Inscrições validada em [mygallery]';
 ?>
