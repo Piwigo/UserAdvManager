@@ -115,4 +115,35 @@ $lang['UAM_Confirm_Status'] = 'Estado<br>(dexe------- para manter o padrão do P
 $lang['UAM_Confirm_grpstat_notice'] = 'Atenção: É aconselhável a utilização de um ou outro grupo ou dos estatutos de confirmação e não os dois simultaneamente. O nível de uso pode ser utilizado em conjunto com um grupo ou uma atribuição de estado.';
 $lang['UAM_Default user cannot be pwgreset'] = 'Renovação de senha não pode ser definido para conta de usuário padrão!';
 $lang['UAM_Default_AdminValidationMail_Subject'] = '[username] - Inscrições validada em [mygallery]';
+$lang['UAM_Default_GhstDemotion_Txt'] = 'Desculpe [username], sua conta foi reprovada devido a um  longo período de tempo passado desde a sua última visita a [mygallery]. Por favor, use o seguinte link para confirmar sua conta:';
+$lang['UAM_Default_GhstReminder_Txt'] = 'Olá [username].
+
+Este é um lembrete, porque muito tempo passou desde a sua última visita em nossa galeria [mygallery]. Se você não quer mais usar sua conta de acesso, por favor, avise-nos por respondendo a este e-mail. Sua conta será excluída.
+
+Ao receber esta mensagem e nenhuma nova visita no período de [days] dias, seremos obrigados a excluir sua conta automaticamente.
+
+Atenciosamente,
+
+O administrador da galeria [mygallery] - [MyURL]';
+$lang['UAM_Default_ConfirmMail_Subject'] = '[username] registro de confirmação na [mygallery]';
+$lang['UAM_Default_ConfirmMail_Txt'] = 'Olá [username]! Obrigado a ter se registro na [mygallery].
+
+Para concluir o processo e ser capaz de navegar através das imagens, por favor confirme sua inscrição clicando no link na mensagem.';
+$lang['UAM_Default_GTAutoMail_Subject'] = '[username] - Sua conta foi desclassificada em [mygallery]';
+$lang['UAM_Default_GTReminder_Subject'] = '[username] - Um longo tempo já passou desde a sua última visita em [mygallery]';
+$lang['UAM_Default_GhstDeletion_Txt'] = 'Desculpe [username], sua conta foi excluída devido a um longo período de tempo passado desde a sua última visita a [mygallery]. Por favor, registre novamente.';
+$lang['UAM_Default_CfmMail_Remail_Txt1'] = 'Olá [username].
+
+Esta é uma mensagem de lembrete porque você se registrou em nossa galeria [mygallery], mas você não confirmou sua inscrição e sua chave de confirmação expirou. Ainda é permitido que você acesse a nossa galeria, o período de confirmação foi redefinido. Você tem novamente x dias para confirmar sua inscrição.
+
+Nota: Após este período, a sua conta será excluída permanentemente.';
+$lang['UAM_Default_CfmMail_Remail_Txt2'] = 'Olá [username].
+Esta é uma mensagem de lembrete, porque você se registrou em nossa galeria [mygallery], mas você não confirmou sua inscrição e sua chave de confirmação irá expirar. Para permitir você acessar a nossa galeria, você tem x dias para confirmar sua inscrição clicando no link na mensagem que você deve ter recebido quando se registrou.
+
+Nota: Após este período, a sua conta será excluída permanentemente.';
+$lang['UAM_Default_AdminValidation_Txt'] = 'Olá [username]! Obrigado por se registrar e receber a [mygallery].
+
+Sua conta foi confirmada manualmente pelo webmaster de [mygallery]. Agora você pode entrar em [MyURL] e fazer as mudanças necessárias para o seu perfil.';
+$lang['UAM_Default_CfmMail_Custom_Txt1'] = '[username] conta validada com sucesso!';
+$lang['UAM_Default_CfmMail_Custom_Txt2'] = 'Chave de ativação incorreta/expirada ou conta já validada.';
 ?>
