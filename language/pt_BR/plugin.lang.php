@@ -146,4 +146,12 @@ $lang['UAM_Default_AdminValidation_Txt'] = 'Olá [username]! Obrigado por se reg
 Sua conta foi confirmada manualmente pelo webmaster de [mygallery]. Agora você pode entrar em [MyURL] e fazer as mudanças necessárias para o seu perfil.';
 $lang['UAM_Default_CfmMail_Custom_Txt1'] = '[username] conta validada com sucesso!';
 $lang['UAM_Default_CfmMail_Custom_Txt2'] = 'Chave de ativação incorreta/expirada ou conta já validada.';
+$lang['UAM_Err_UserManager_Settings'] = 'Esta página está disponível apenas se "Confirmação de inscrição" estiver ativa e se um grupo de visitantes não confirmados está configurado em "Configurar as confirmações de inscrição".';
+$lang['UAM_Default_InfoMail_Subject'] = '[username] - Suas informações de registro em [mygallery]';
+$lang['UAM_Default_InfoMail_Txt'] = 'Olá [username]!
+Você fez mudanças significativas em seu perfil na galeria [mygallery]. Por favor, Veja abaixo as novas configurações:';
+$lang['UAM_Default_PwdRequest_Txt'] = 'Você pediu uma redefinição de senha em nossa galeria. Por favor, Veja abaixo as novas configurações de conexão.';
+$lang['UAM_Default_RejectConnexion_Txt'] = 'Desculpe, seu registro não é validado ainda, então você não pode se conectar a galeria agora.';
+$lang['UAM_Default_ValidationTimeout_Txt'] = 'Desculpe, sua conta foi excluída por não ter confirmado a sua inscrição no tempo solicitado ([Kdays] dias). Por favor, tente novamente registro com uma conta de e-mail válido e não bloqueado.';
+$lang['UAM_Err_GhostTracker_Settings'] = 'Esta página está disponível apenas se "Ghost Tracker" estiver ativa em "Configurar as inscrições seguidas e outras opções."';
 ?>
