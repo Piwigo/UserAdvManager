@@ -154,4 +154,8 @@ $lang['UAM_Default_PwdRequest_Txt'] = 'Você pediu uma redefinição de senha em
 $lang['UAM_Default_RejectConnexion_Txt'] = 'Desculpe, seu registro não é validado ainda, então você não pode se conectar a galeria agora.';
 $lang['UAM_Default_ValidationTimeout_Txt'] = 'Desculpe, sua conta foi excluída por não ter confirmado a sua inscrição no tempo solicitado ([Kdays] dias). Por favor, tente novamente registro com uma conta de e-mail válido e não bloqueado.';
 $lang['UAM_Err_GhostTracker_Settings'] = 'Esta página está disponível apenas se "Ghost Tracker" estiver ativa em "Configurar as inscrições seguidas e outras opções."';
+$lang['UAM_Err_Userlist_Settings'] = 'Esta página está disponível apenas se "Monitoramento de usuários registrados" está ativo no "Definindo as inscrições seguidas e outras opções."';
+$lang['UAM_Err_audit_advise'] = '<b>você tem que executar correções para cumprir com as novas regras que você ativou.<b>Use um utilitário de gerenciamento de banco de dados de contas de usuário corretas diretamente na tabela ###_USERS';
+$lang['UAM_Err_audit_email_forbidden'] = '<b>Esta conta usa um provedor de e-mail proibida:</b>';
+$lang['UAM_Err_audit_username_char'] = '<b>Esta conta usa um ou mais caracteres proibidos:</b>';
 ?>
