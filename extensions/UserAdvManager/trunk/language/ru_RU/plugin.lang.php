@@ -191,4 +191,6 @@ $lang['UAM_ConfirmMail_ReMail_Txt2'] = 'Настройка сообщения с
 $lang['UAM_ConfirmMail_Subject'] = 'Настройка подтверждения регистрации по e-mail';
 $lang['UAM_ConfirmMail_Text'] = 'Настройка e-mail для подтверждения:';
 $lang['UAM_Customize_messagesandmails'] = 'Настройка сообщений и адресов почты';
+$lang['UAM_Guest cannot be pwdreset'] = 'Возобновление пароля для аккаунта гостя установить невозможно!';
+$lang['UAM_GhostTracker_true'] = 'Включено. Максимальный период между двумя визитами (в днях):';
 ?>
