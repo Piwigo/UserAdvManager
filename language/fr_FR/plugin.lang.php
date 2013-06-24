@@ -427,4 +427,5 @@ $lang['UAM_Change'] = 'Changer l\'utilisateur confirmé de Groupe/Statut/Niveau 
 // --------- End: New or revised $lang ---- from version 2.41.0
 
 $lang['UAM_group "%s" updated'] = 'Pour un meilleur fonctionnement, le groupe %s a été automatiquement positionné comme groupe par défault.';
+$lang['personal_content'] = 'contenu';
 ?>
