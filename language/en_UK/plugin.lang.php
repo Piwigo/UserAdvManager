@@ -426,5 +426,5 @@ $lang['UAM_Change'] = 'Change the Group/Status/Privacy Level of the users who ha
 // --------- End: New or revised $lang ---- from version 2.41.0
 
 $lang['UAM_group "%s" updated'] = 'For best performance, the group %s was automatically set as the default group.';
-$lang['personal_content'] = 'contenu';
+$lang['personal_content'] = 'Content';
 ?>
