@@ -209,4 +209,7 @@ $lang['UAM_No_Usermanager'] = 'Şu anda doğrulanmamış kayıt bulunmamaktadır
 $lang['UAM_No_Confirm_Status'] = 'Kayıtlarını henüz doğrulamayan üye durumları<br>';
 $lang['UAM_Expired_Level'] = '<b>Gizlilik seviyesi</b> kullanıcı kayıt süresi doldu<br>';
 $lang['UAM_Expired_Status'] = '<b>Durum</b> kullanıcının kayıt süresi doldu<br>';
+$lang['UAM_Stuffs_Title'] = 'UAM Blok';
+$lang['UAM_Password_Enforced_true'] = 'Etkin. Minimum Puan:';
+$lang['UAM_No_Confirm_Group'] = 'Kayıtları onaylanmış kullanıcı grubu<br>';
 ?>

@@ -1340,7 +1340,7 @@ WHERE user_id = '.$local_user['id'].'
       }
 
       $properties[] = (isset($local_user['enabled_high']) and ($local_user['enabled_high'] == 'true'))
-        ? l10n('is_high_enabled') : l10n('is_high_disabled');
+        ? l10n('High definition') : l10n('High definition');
 
       $expiration = expiration($local_user['id']);
 
@@ -1355,9 +1355,9 @@ WHERE user_id = '.$local_user['id'].'
           'U_PERM'           => $perm_url.$local_user['id'],
           'USERNAME'         => stripslashes($local_user['username'])
                                 .($local_user['id'] == $conf['guest_id']
-                                ? '<BR>['.l10n('is_the_guest').']' : '')
+                                ? '<BR>['.l10n('guest').']' : '')
                                 .($local_user['id'] == $conf['default_user_id']
-                                ? '<BR>['.l10n('is_the_default').']' : ''),
+                                ? '<BR>['.l10n('default values').']' : ''),
                                 'STATUS' => l10n('user_status_'
                                 .$local_user['status']),
           'EMAIL'            => get_email_address_as_display_text($local_user['email']),
