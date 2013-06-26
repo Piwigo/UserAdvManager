@@ -423,6 +423,11 @@ Plugin Name: UserAdvManager
 -- 2.50.8 : Add ru_RU, thanks to : Konve
             Add pt_BR, thanks to : hespanhol
             Update tr_TR, thanks to : hakanselcuk
+
+-- 2.50.9 : Update ru_RU, thanks to : Konve and nadusha
+            Update pt_BR, thanks to : flaviove
+            Update tr_TR, thanks to : hakanselcuk
+            Missing translation keys fixed
             
 */
 ?>
