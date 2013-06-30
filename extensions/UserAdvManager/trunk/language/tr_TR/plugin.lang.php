@@ -212,4 +212,6 @@ $lang['UAM_Expired_Status'] = '<b>Durum</b> kullanıcının kayıt süresi doldu
 $lang['UAM_Stuffs_Title'] = 'UAM Blok';
 $lang['UAM_Password_Enforced_true'] = 'Etkin. Minimum Puan:';
 $lang['UAM_No_Confirm_Group'] = 'Kayıtları onaylanmış kullanıcı grubu<br>';
+$lang['UAM_SubTitle4'] = 'Hayalet İzleyici';
+$lang['UAM_MailExclusion_true'] = 'Takip eden domainleri hariç tut:<br>(her domaini aralarına virgül koyarak ayırınız)';
 ?>
