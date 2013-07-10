@@ -719,6 +719,7 @@ WHERE id = '.$user_id.'
 ;';
               $data = pwg_db_fetch_assoc(pwg_query($query));
 
+              SetUnvalidated($user_id);
               demotion_mail($user_id, $data['username'], $data['mail_address']);
             }
           }

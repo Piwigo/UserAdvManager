@@ -55,7 +55,7 @@ if (script_basename() == 'profile')
 
 // Redirection to profile page
 // ---------------------------
-add_event_handler('login_success', 'UAM_LoginTasks');
+add_event_handler('login_success', 'UAM_LoginTasks',EVENT_HANDLER_PRIORITY_NEUTRAL, 1);
 
 // Adding customized text to lost password email
 // ---------------------------------------------
