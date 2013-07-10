@@ -428,6 +428,14 @@ Plugin Name: UserAdvManager
             Update pt_BR, thanks to : flaviove
             Update tr_TR, thanks to : hakanselcuk
             Missing translation keys fixed
-            
+
+-- 2.50.10 : Bug fixed on automated task triggered for ghost users
+             Compatibility with other plugins fixed (considering Register_FluxBB and Prune_History)
+             Update el_GR, thanks to : bas_alba
+             Update da_DK, thanks to : Kaare
+             Update es_ES, thanks to : jpr928
+             Update tr_TR, thanks to : LazBoy
+             Update de_DE, thanks to : Yogie
+             Update ru_RU, thanks to : Konve
 */
 ?>

@@ -389,4 +389,5 @@ $lang['UAM_Subject admin validation for %s'] = 'El registro de %s espera para la
 $lang['UAM_Change'] = 'Change the Group/Status/Privacy Level of the users who have been confirmed';
 $lang['UAM_Customize_messagesandmails'] = 'Personalizar los mensajes y correos';
 $lang['UAM_group "%s" updated'] = 'Para un mejor rendimiento, el grupo %s se configura automáticamente como el grupo predeterminado.';
+$lang['personal_content'] = 'Contenido';
 ?>
