@@ -427,4 +427,6 @@ $lang['UAM_Change'] = 'Change the Group/Status/Privacy Level of the users who ha
 
 $lang['UAM_group "%s" updated'] = 'For best performance, the group %s was automatically set as the default group.';
 $lang['personal_content'] = 'Content';
+
+$lang['UAM_AddURL2Mail'] = 'Add the URL of the gallery at the end of emails (like a signature)';
 ?>

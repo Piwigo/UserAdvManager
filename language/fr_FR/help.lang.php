@@ -342,4 +342,6 @@ De plus les balises de personnalisations suivantes sont utilisables sans l\'aide
 - <b style=&quot;color: red;&quot;>[mygallery]</b> pour insérer le titre de votre galerie.<br>
 ';
 // --------- End: New or revised $lang ---- from version 2.40
+
+$lang['UAM_AddURL2Mail_d'] = 'L\'activation de cette option ajoutera l\'URL de votre galerie à la fin des emails générés par le plugin, à la manière d\'une signature.';
 ?>
