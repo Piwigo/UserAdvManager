@@ -437,5 +437,11 @@ Plugin Name: UserAdvManager
              Update tr_TR, thanks to : LazBoy
              Update de_DE, thanks to : Yogie
              Update ru_RU, thanks to : Konve
+
+-- 2.50.11 : Evolution 2951 fixed - Add an option to add the gallery URL at the end of emails sent by UAM
+             Update ru_RU, thanks to : Konve
+             Update lv_LV, thanks to : agrisans
+             Add pt_PT, thanks to : ANO
+
 */
 ?>

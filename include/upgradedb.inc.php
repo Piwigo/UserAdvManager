@@ -804,4 +804,33 @@ function upgrade_2410_2500()
 
   conf_update_param('UserAdvManager_ConfirmMail', pwg_db_real_escape_string($update_conf));
 }
+
+
+/* upgrade from 2.50.x to 2.50.11 */
+/* ***************************** */
+function upgrade_2500_25011()
+{
+  global $conf;
+  
+  load_language('plugin.lang', UAM_PATH);
+
+  // Upgrading options
+  // -----------------
+  $query = '
+SELECT value
+  FROM '.CONFIG_TABLE.'
+WHERE param = "UserAdvManager"
+;';
+
+  $result = pwg_query($query);
+  $conf_UAM = pwg_db_fetch_assoc($result);
+    
+  $Newconf_UAM = unserialize($conf_UAM['value']);
+
+  $Newconf_UAM['ADD_GALLERY_URL_TO_EMAILS'] = 'false';
+
+  $update_conf = serialize($Newconf_UAM);
+
+  conf_update_param('UserAdvManager', pwg_db_real_escape_string($update_conf));
+}
 ?>

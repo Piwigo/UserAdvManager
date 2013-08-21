@@ -428,4 +428,6 @@ $lang['UAM_Change'] = 'Changer l\'utilisateur confirmé de Groupe/Statut/Niveau 
 
 $lang['UAM_group "%s" updated'] = 'Pour un meilleur fonctionnement, le groupe %s a été automatiquement positionné comme groupe par défault.';
 $lang['personal_content'] = 'Contenu';
+
+$lang['UAM_AddURL2Mail'] = 'Ajouter l\'URL de la galerie à la fin des emails (comme une signature)';
 ?>
