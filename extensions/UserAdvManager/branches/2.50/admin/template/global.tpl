@@ -315,7 +315,6 @@ function uam_blockToggleDisplay( headerId, contentId )
                 <label for="UAM_Admin_ConfMail_true"><input id="UAM_Admin_ConfMail_true" value="true" {$UAM_ADMINCONFMAIL_TRUE} name="UAM_Admin_ConfMail" type="radio"/>
                   {'UAM_Enable'|@translate}
                 </label>
-              
               </li>
             </ul>
             <a id="show_UAM_AdminValidation" >{'UAM_Customize_messagesandmails'|translate}</a>
@@ -417,7 +416,8 @@ function uam_blockToggleDisplay( headerId, contentId )
           <br/><hr/><br/>
           <a id="show_UAM_Change" >{'UAM_Change'|translate}</a>
           <a id="hide_UAM_Change" style="display: none">{'hide details'|translate}</a>
-          <ul id="UAM_Change" style="display: none">
+          <fieldset id="UAM_Change" style="display: none">
+          <ul>
             <div id="uam_notice">{'UAM_Confirm_grpstat_notice'|@translate}</div>
               <br/>
               <li>
@@ -490,6 +490,7 @@ function uam_blockToggleDisplay( headerId, contentId )
                 </li>
               </ul>
             </ul>
+            </fieldset>
           <br/><hr/><br/>
             <ul>
               <li>
@@ -514,7 +515,8 @@ function uam_blockToggleDisplay( headerId, contentId )
               </li>
             <a id="show_UAM_ConfirmMail" >{'UAM_Customize_messagesandmails'|translate}</a>
             <a id="hide_UAM_ConfirmMail" style="display: none">{'hide details'|translate}</a>
-              <ul id="UAM_ConfirmMail" style="display: none">
+            <fieldset id="UAM_ConfirmMail" style="display: none">
+              <ul>
                 <li>
                   <label class="cluetip" title="{'UAM_ConfirmMail_ReMail_Subject'|translate}|{'UAM_ConfirmMail_ReMail_Subject_d'|translate}">
                     {'UAM_ConfirmMail_ReMail_Subject'|@translate}
@@ -560,6 +562,7 @@ function uam_blockToggleDisplay( headerId, contentId )
 
                 </ul>
               </ul>
+            </fieldset>
             </ul>
           <fieldset id="UAM_ConfirmMail_field" {if $UAM_CONFIRMMAIL_TIMEOUT_FALSE and $UAM_CONFIRMMAIL_REMAIL_FALSE}style="display:none"{/if}>
           <ul>
@@ -632,7 +635,8 @@ function uam_blockToggleDisplay( headerId, contentId )
         <div id="UAM_GHOSTRACKER_OPT" {if $UAM_GHOSTRACKER_FALSE}style="display: none"{/if}>
           <a id="show_UAM_GTReminder" >{'UAM_Customize_messagesandmails'|translate}</a>
           <a id="hide_UAM_GTReminder" style="display: none">{'hide details'|translate}</a>
-          <ul id="UAM_GTReminder" style="display: none">
+          <fieldset id="UAM_GTReminder" style="display: none">
+          <ul>
             <li>
               <label class="cluetip" title="{'UAM_GTReminder_Subject'|translate}|{'UAM_GTReminder_Subject_d'|translate}">
                 {'UAM_GTReminder_Subject'|@translate}
@@ -658,6 +662,7 @@ function uam_blockToggleDisplay( headerId, contentId )
   -->
   
           </ul>
+          </fieldset>
           <br><hr><br>
           <ul>
             <li>
@@ -787,10 +792,22 @@ function uam_blockToggleDisplay( headerId, contentId )
             <label for="UAM_Mail_Info_true"><input id="UAM_Mail_Info_true" type="radio" value="true" {$UAM_MAIL_INFO_TRUE} name="UAM_Mail_Info"/>
               {'UAM_Enable'|@translate}
             </label>
-          
           </li>
+
+            <li>
+              <label class="cluetip" title="{'UAM_AddURL2Mail'|translate}|{'UAM_AddURL2Mail_d'|translate}">
+                {'UAM_AddURL2Mail'|@translate}
+              </label>
+              <label for="UAM_AddURL2Mail_false"><input id="UAM_AddURL2Mail_false" value="false" {$UAM_ADDURL2MAIL_FALSE} name="UAM_AddURL2Mail" type="radio"/>
+                {'UAM_Disable'|@translate}
+              </label>
+              <label for="UAM_AddURL2Mail_true"><input id="UAM_AddURL2Mail_true" value="true" {$UAM_ADDURL2MAIL_TRUE} name="UAM_AddURL2Mail" type="radio"/>
+                {'UAM_Enable'|@translate}
+              </label>
+            </li>
+
         </ul>
-        <fieldset id="UAM_MAIL_INFO" {if $UAM_MAIL_INFO_FALSE}style="display:none"{/if}>
+        <fieldset id="UAM_MAIL_INFO" {if $UAM_MAIL_INFO_FALSE} style="display:none"{/if}>
           <ul>
             <li>
               <label class="cluetip" title="{'UAM_HidePassw'|translate}|{'UAM_HidePasswTitle_d'|translate}">
@@ -855,7 +872,6 @@ function uam_blockToggleDisplay( headerId, contentId )
             <label for="UAM_RedirToProfile_true"><input id="UAM_RedirToProfile_true" value="true" {$UAM_REDIRTOPROFILE_TRUE} name="UAM_RedirToProfile" type="radio"/>
               {'UAM_Enable'|@translate}
             </label>
-          
           </li>
 
           <li>
