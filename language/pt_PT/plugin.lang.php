@@ -83,7 +83,7 @@ B. Na extensão PWG Stuffs:
 ';
 $lang['UAM_Error_GTAutoMail_cannot_be_set_without_ConfirmMail'] = 'Erro de consistência na configuração escolhida:
 <br><br>
-"Definir o monitoramento dos utilizadores registados e outras opções> Gestão visitantes fantasma (ghost Tracker)> gestão automática de utilizadores fantasma> que automaticamente enviam um e-mail quando mudam de grupo/status" não pode ser ativada se em "Definir as confirmações de inscrição> Confirmação de registo - Confirmação pelo utilizador "não estiver ativada primeiramente.
+"Definir o monitoramento dos utilizadores registados e outras opções> Gestão visitantes fantasma (detetor de fantasmas)> gestão automática de utilizadores fantasma> que automaticamente enviam um e-mail quando mudam de grupo/status" não pode ser ativada se em "Definir as confirmações de inscrição> Confirmação de registo - Confirmação pelo utilizador "não estiver ativada primeiramente.
 <br><br>
 Para garantir a coerência, a opção "enviar automaticamente um e-mail quando mudar de grupo/status" foi automaticamente reposicionada em "desativada".
 <br>';
@@ -186,4 +186,36 @@ $lang['UAM_Default_PwdRequest_Txt'] = 'Pediu uma redefinição de senha na nossa
 $lang['UAM_Default_RejectConnexion_Txt'] = 'Desculpe, o seu registo não é válido, assim não poderá ligar-se à galeria agora';
 $lang['UAM_Demotion of %s'] = 'Rebaixamento de %s';
 $lang['UAM_DumpTxt'] = 'Backup e restaurar a sua configuração';
+$lang['UAM_No_Casse'] = 'Utilizadores: Letra maiúscula e minúscula';
+$lang['UAM_GhostTracker_Title'] = 'gerênciar visitantes fantasma';
+$lang['UAM_GhostTracker_true'] = 'Ativar. Período máximo de dias entre duas visitas';
+$lang['UAM_MailExclusion'] = 'Domínios de Email excluídos';
+$lang['UAM_MailInfo_Subject'] = 'Personalizção do assunto do email';
+$lang['UAM_MailInfo_Text'] = 'Personalizção do email informação:';
+$lang['UAM_Mail_with_key'] = 'Relembrar com chave';
+$lang['UAM_GTAutomail_Subject'] = 'Personalizar automaticamente o assunto do Email do Detetor de  fantasmas';
+$lang['UAM_GTReminder_Subject'] = 'Personalizar manualmente o assunto do Email do Detetor de  fantasmas';
+$lang['UAM_GT_Init'] = 'Inicializar o Detetor de Fantasmas';
+$lang['UAM_GT_Reset'] = 'Reset Detetor de fantasmas';
+$lang['UAM_GhostTracker'] = 'Gerênciar Visitantes fantasmas (Detetor de fantasmas)';
+$lang['UAM_GhostTracker_Init'] = 'Se ativou este recurso pela primeira vez ou se o tiver reativado depois de um longo período, durante o qual novos visitantes se registaram, você deve inicializar ou reiniciar o Detetor de fantasmas. Essa ação deve ser feita somente após a ativação ou reativação da opção. Por favor, clique <u>uma vez</u> o botão  reset abaixo.';
+$lang['UAM_GhostTracker_Init_OK'] = 'Reset de Detetor de fantasmas executado';
+$lang['UAM_GhostTracker_ReminderText'] = 'Personalizar mensagem informadora do Detetor de fantasmas';
+$lang['UAM_SubTitle4'] = 'Detetor de fantasmas';
+$lang['UAM_Tab_GhostTracker'] = 'Detetor de fantasmas';
+$lang['UAM_Err_audit_advise'] = '<b> Tem que executar correções para cumprir com as novas regras que ativou. .<br>Use um utilitário de gerenciamento do banco de dados para corrigir contas de utilizador diretamente na tabela ### _USERS';
+$lang['UAM_Err_audit_email_forbidden'] = '<b>Esta conta usa um provedor de e-mail não permitido:</b>';
+$lang['UAM_Err_audit_username_char'] = '<b>Esta conta usa um ou mais caracteres não permitidos:</b>';
+$lang['UAM_Error_Using_illegal_Kdays'] = 'Uso de etiqueta [Kdays] só é permitido se a limitação do prazo para inscrição está ativo. Consulte o campo de texto a vermelho para corrigir o problema.';
+$lang['UAM_Error_Using_illegal_flag'] = 'Erro de sintaxe! A bandeira [Kdays] de texto automático é usado como o "Prazo de confirmação de registo limitado" opção não foi ativada. Por favor ativar esta opção ou corrigir os campos de texto (s) coloridos a vermelho.';
+$lang['UAM_Expired_Group'] = '<b>Grupo</b> para registo de utilizadores expirou<br>';
+$lang['UAM_Err_Userlist_Settings'] = 'Esta página está disponível apenas se "Monitoramento de utilizadores registados" está ativo em "Configurar inscrições e outras opções."';
+$lang['UAM_Err_UserManager_Settings'] = 'Esta página está disponível apenas se "Confirmação de inscrição" está ativa e se um grupo de visitantes não confirmados estiver configurado em "Configurar as confirmações de inscrição".';
+$lang['UAM_Default_GTReminder_Subject'] = 'username] - Longo tempo decorreu desde a sua última visita à [mygallery]
+';
+$lang['UAM_Dump_Download'] = '
+Para descarregar o arquivo de backup, por favor assinale esta caixa';
+$lang['UAM_Dump_NOK'] = 'Erro: Impossível criar o arquivo backup';
+$lang['UAM_Dump_OK'] = 'Arquivo backup, criado com sucesso';
+$lang['UAM_Err_GhostTracker_Settings'] = 'Esta página está disponível apenas se "Ghost Rastreador" está activo em "Configurar inscrições e outras opções."';
 ?>
