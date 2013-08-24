@@ -218,4 +218,107 @@ Para descarregar o arquivo de backup, por favor assinale esta caixa';
 $lang['UAM_Dump_NOK'] = 'Erro: Impossível criar o arquivo backup';
 $lang['UAM_Dump_OK'] = 'Arquivo backup, criado com sucesso';
 $lang['UAM_Err_GhostTracker_Settings'] = 'Esta página está disponível apenas se "Ghost Rastreador" está activo em "Configurar inscrições e outras opções."';
+$lang['UAM_Title_Tab'] = 'UserAdvManager - Versão: ';
+$lang['UAM_mail_exclusionlist_error'] = 'Atenção! Você adicionou uma nova linha (CR-LF) no início da lista do e-mail exclusão (mostrado abaixo a vermelho). Embora esta nova linha não seja visível, ela existe e pode causar mau funcionamento da extensão. Por favor, re-digite na sua lista de exclusão de forma a não começar com uma nova linha.';
+$lang['UAM_USRAutoMail'] = 'Email lembrete automático';
+$lang['UAM_confirmmail_custom_Txt2'] = 'Texto da página confirmação - Confirmação rejeitada';
+$lang['UAM_empty_pwd'] = '[empty password]';
+$lang['UAM_audit'] = 'Definições de auditoria';
+$lang['UAM_audit_ok'] = 'Auditoria OK';
+$lang['UAM_confirmmail_custom_Txt1'] = 'Texto da página confirmação - Confirmação aceite';
+$lang['UAM_Tracking registered users'] = 'Rastrear utilizadores registados';
+$lang['UAM_Update of %s'] = 'Perfil de %s atualizado';
+$lang['UAM_Username_Char'] = 'Nome de Utilizadores: Caratéres excluidos';
+$lang['UAM_Valid_Level'] = 'Nivel de privacidade para utilizadores que confirmaram o seu registo<br>';
+$lang['UAM_Validated_Status'] = 'Status para utilizadores que não confirmaram o seu registo<br>';
+$lang['UAM_ValidationLimit_Info'] = 'Prazo para confirmação de registo limitado';
+$lang['UAM_No_reminder_for_Webmaster'] = 'A conta "Webmaster" não recebe lembretes do Detetor de Fantasmas';
+$lang['UAM_No_reminder_for_Guest'] = 'A conta de "Visitante" não recebe lembretes do Detetor de Fantasmas';
+$lang['UAM_No_reminder_for_default_user'] = 'Conta padrão não recebe lembretes do Detetor de Fantasmas';
+$lang['UAM_No_reminder_for_your_account'] = 'A sua conta pessoal de aAdmin não recebe lembretes do Detetor de Fantasmas';
+$lang['UAM_No_Confirm_Group'] = 'Grupo de utilizadores que não confirmou o seu registo<br>';
+$lang['UAM_No_Confirm_Status'] = 'Status dos utilizadores que não confirmaram o seu registo<br>';
+$lang['UAM_No_Valid_Level'] = 'Nível de privacidade para utilizadores que não confirmaram o seu registo<br>';
+$lang['UAM_Password_Enforced'] = 'Reforço do nível de senhas de segurança';
+$lang['UAM_Stuffs'] = 'Bloco PWG Stuffs';
+$lang['UAM_Title4'] = 'Tipos e exemplos de uso';
+$lang['UAM_Tracking confirmations'] = 'Confirmações de rastreameneto';
+$lang['UAM_Support_txt'] = 'O apoio oficial sobre esta extensão é apenas apenas existe neste tópico do fórum Piwigo: <br>
+<a href="http://piwigo.org/forum/viewtopic.php?id=15015" onclick="window.open(this.href);return false;"> Forum em Inglês - http://piwigo.org/forum/viewtopic.php?id=15015</a><br>
+Também disponível,projeto bugtracker: <a href="http://piwigo.org/bugs/" onclick="window.open(this.href);return false;">http://piwigo.org/bugs/</a>';
+$lang['UAM_Tips2_txt'] = '            <ul>
+            <li>
+            Objetivos: Informar o visitante que o registo está aguardando a confirmação por colocação de uma página adicional  substituindo a página padrão inicial da galeria  em cada uma das ligações, e isto, porque  o registo não foi aprovado.
+            <br><br>
+            Vantagens sobre o método com PWG_Stuffs: Permitir informações de formatação e exibir imediatamente após o registo de visitantes.
+            </li><br><br>
+            <li>
+Pré-requisito:<br>
+- Uma galeria com todas ou algumas categorias privadas, é visível apenas por utilizadores registados <br>
+- Pelo menos os dois seguintes grupos de utilizadores Piwigo: "Em espera", sem permissão nas categorias privadas, e "Confirmado", com todas as permissões nas categorias privadas<br>
+- Extenção UAM<br>
+- Extensão para Páginas adicionais para adicionar e gerenciar uma página adicional para substituir a página inicial da galeria<br>
+ - Opcionalmente, a extensão de Descrição Alargada para suporte de multi-idiomas<br>
+            </li><br><br>
+            <li>
+Estágios:<br>
+A. Na extenção UAM:
+              <ol>
+                <li>Habilitar o registro de confirmação </ li>
+                <li>Digite o texto para explicação adicional que será anexado no mail confirmação de inscrição. Se a extensão de Descrição Alargada estiver ativado, as etiquetas do idioma podem ser usadam</li>
+                <li>Selecione o grupo "Em Espera" em "Para os utilizadores que não tenham confirmado a sua inscrição"</li>
+                <li> Selecione o grupo "Confirmado" em "Para os utilizadores que já confirmaram a sua inscrição"</li>
+                <li>Salve a configuração da extensão</li>
+              </ol>
+<br>
+B. Nas páginas adicionais da extensão:<br>
+                <b> NOTA: A gestão de direitos de acesso para grupos em páginas adicionais deve estar ativada (consulte as configurações da extensão) </b>.
+                <br>
+              <ol>
+                <li> Adicione uma nova página com, pelo menos, os seguintes parâmetros:</li>
+                <ul>
+                  <li>Nome da página: O nome que você deseja dar à página adicional (ou seja: Registo não confirmado)</li>
+                  <li> Definir como página inicial (sinaliza a caixa)</li>
+                  <li> Grupos  permitidos: Marque a caixa correspondente ao grupo "Em espera" configurado no UAM</li>
+                  <li> Conteúdo:. O texto que você deseja usar para visitantes </li>
+                </ul>
+                <br>
+                <li> E é isto! Somente os visitantes inscritos e cuja inscrição não tenha sido confirmada verá esta página inicial  adicional.</li>
+              </ol>
+            </li>
+          </ul>';
+$lang['UAM_Title3'] = 'Gerênciar utilizadores fantasma';
+$lang['UAM_Password_Enforced_true'] = 'Ativar: Pontuação mínima';
+$lang['UAM_RedirToProfile'] = 'Redirecionar para página personalizada';
+$lang['UAM_RejectConnexion_Custom_Txt'] = 'personalizar texto rejeição';
+$lang['UAM_Restore_File'] = 'Restaurar configuração';
+$lang['UAM_No_validation_for_Webmaster'] = 'A conta "Webmaster" não está sujeita a confirmação';
+$lang['UAM_No_validation_for_default_user'] = 'Conta padrão não está sujeita a confirmação';
+$lang['UAM_No_validation_for_your_account'] = 'A sua conta pessoal de admin não está sujeita a confirmação';
+$lang['UAM_Password reset selected users'] = 'Solicitar renovação de senha aos seguintes utilizadores';
+$lang['UAM_Reminder_without_key_of_%s'] = '%s,a sua chave de confirmação vai expirar';
+$lang['UAM_Password_Reset_Msg'] = 'Por favor altere a sua semha';
+$lang['UAM_Reminder'] = 'Email lembrete';
+$lang['UAM_Reminder_with_key_of_%s'] = '%s,A sua chave de confirmação foi renovada';
+$lang['UAM_Expired_Level'] = '<b>Nivel de privacidade</b> para utilizadores de registo expirado<br>';
+$lang['UAM_Expired_Status'] = '<b>Status</b> para utilizadores com registo expirado<br>';
+$lang['UAM_No_Ghosts'] = 'Não existem visitantes fantasma de momento';
+$lang['UAM_No_Userlist'] = 'Não existem visitantes a listar de momento';
+$lang['UAM_No_Usermanager'] = 'Não existem registos não confirmados de momento';
+$lang['UAM_No_validation_for_Guest'] = 'A conta de "Visitante" não está sujeita a confirmação';
+$lang['UAM_GTAuto'] = 'Gerência automática dos utilizadores fantasma';
+$lang['UAM_GTAutoGp'] = 'Alteração automática do grupo/status/nível de privacidade';
+$lang['UAM_GTAutoMail'] = 'Enviar automaticamente um e-mail quando alteração de grupo / status/nível de privacidade';
+$lang['UAM_GTAutomail_Text'] = 'Personalizar texto do email';
+$lang['UAM_Generic cannot be pwdreset'] = 'Renovação de senha não pode ser definida para contas genéricas';
+$lang['UAM_Ghost_reminder_of_%s'] = '%s, este é um mail lembrete';
+$lang['UAM_Guest cannot be pwdreset'] = 'Renovação de senha não pode ser definido para contas de visitantes!';
+$lang['UAM_HidePassw'] = 'Senha em texto explicito no mail informativo';
+$lang['UAM_Link: %s'] = 'Por favor clique neste link para confirmar o registo:  %s';
+$lang['UAM_MailExclusion_No'] = 'Domínios de Emails excluídos - Não disponível pois estes e-mails não são aceites para inscrição!';
+$lang['UAM_MailExclusion_true'] = 'Excluir os seguintes domínios:<br>(Separar cada domínio por virgula)';
+$lang['UAM_Mail_Info'] = 'Mail informação para o utilizador';
+$lang['UAM_Mail_without_key'] = 'Lembrar sem chave';
+$lang['UAM_MiscOptions'] = 'Outras operações diversas';
+$lang['UAM_No_Backup_File'] = 'Não existe backup do arquivo';
 ?>
