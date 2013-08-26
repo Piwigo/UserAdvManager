@@ -332,4 +332,5 @@ Siga personalizando el contenido con etiquetas de inserción especial:
 <br><br>
 Este campo que es compatible con el Editor FCK y, para multi-idiomas, puede utilizar las etiquetas [lang] de la descripción Extended Plugin si está activo.
 ';
+$lang['UAM_AddURL2Mail_d'] = 'Activando esta opción añadirá la dirección de su galería al final del email generado por el plugin, como una firma.';
 ?>
