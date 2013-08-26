@@ -390,4 +390,5 @@ $lang['UAM_Change'] = 'Change the Group/Status/Privacy Level of the users who ha
 $lang['UAM_Customize_messagesandmails'] = 'Personalizar los mensajes y correos';
 $lang['UAM_group "%s" updated'] = 'Para un mejor rendimiento, el grupo %s se configura automáticamente como el grupo predeterminado.';
 $lang['personal_content'] = 'Contenido';
+$lang['UAM_AddURL2Mail'] = 'Añade la dirección de la galería al final del email (como una firma)';
 ?>
