@@ -324,4 +324,5 @@ Standardmäßig hat das Feld einen generischen Text in Deutsch, aber Sie können
 Die folgenden zusätzlichen Anpassungen Tags sind ohne die Verwendung der Extended Description Plugin zur Verfügung:<br>
 - <b style=&quot;color: red;&quot;>[username]</b> um automatisch den Namen des Zielbenutzers in der E-Mail.<br>
 - <b style=&quot;color: red;&quot;>[mygallery]</b> um den Titel Ihrer Galerie einzufügen.<br>';
+$lang['UAM_AddURL2Mail_d'] = 'Aktivieren dieser Option durch das Plugin fügt ihre Galerie URL am Ende von E-Mails hin zu, wie eine Unterschrift.';
 ?>
