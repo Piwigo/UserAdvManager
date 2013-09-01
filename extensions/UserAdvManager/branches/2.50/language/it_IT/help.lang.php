@@ -315,4 +315,5 @@ Per impostazione predefinita, il campo ha un testo generico in inglese, ma si pu
 I seguenti tag aggiuntivi personalizzati sono disponibili senza utilizzare il plugin Extended Description:<br>
 - <b style=&quot;color: red;&quot;>[username]</b> per inserire automaticamente il nome dell\'utente di destinazione del messaggio email.<br>
 - <b style=&quot;color: red;&quot;>[mygallery]</b> per inserire il titolo della tua galleria.<br>';
+$lang['UAM_AddURL2Mail_d'] = 'L\'attivazione di questa opzione aggiunge l\'URL della tua galleria in fondo all\'e-mail generata dal plugin, come una firma.';
 ?>
