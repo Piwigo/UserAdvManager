@@ -443,5 +443,12 @@ Plugin Name: UserAdvManager
              Update lv_LV, thanks to : agrisans
              Add pt_PT, thanks to : ANO
 
+-- 2.50.12 : Update pt_PT, thanks to : ANO
+             Update ru_RU, thanks to : Konve
+             Update it_IT, thanks to : Ericnet
+             Update da_DK, thanks to : Kaare
+             Update es_ES, thanks to : petaqui
+             Update de_DE, thanks to : Joergen
+             Update lv_LV, thanks to : agrisans
 */
 ?>
