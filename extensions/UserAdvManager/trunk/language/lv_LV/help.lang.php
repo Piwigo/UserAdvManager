@@ -332,4 +332,5 @@ Tālāk pielāgojiet saturu ar speciālo tagu-iezīmju palīdzību:<br>
 <br>
 <b style=&quot;color: red;&quot;>[username]</b> nav pieejams, jo domājams, ka lietotājs ir dzēsts.<br><br>
 Šajā laukā, kas ir savietojams ar FCK Redaktoru, varat ievadīt pāradresētās lapas pielāgoto tekstu un, lai izmantotu daudzvalodu režīmu, gadījumā, ja tas ir aktīvs, varat lietot Paplašinātā apraksta spraudņa [lang] tagus.';
+$lang['UAM_AddURL2Mail_d'] = 'Iespējojot šo opciju, spraudņa ģenerētais, jūsu galerijas URL tiks pievienots e-pasta beigās kā paraksts.';
 ?>
