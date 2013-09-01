@@ -397,4 +397,6 @@ L\'amministratore della galleria [mygallery]-[myurl]';
 $lang['UAM_Default_GhstDemotion_Txt'] = 'Mi dispiace [username], il tuo account è stato deprecato a causa di un troppo lungo tempo passato dalla tua ultima visita a [mygallery]. Per favore, utilizzare il seguente link per confermare il tuo account:';
 $lang['UAM_Default_GhstDeletion_Txt'] = 'Mi dispiace [username], il tuo account è stato eliminato a causa di un troppo lungo tempo passato dalla tua ultima visita a [mygallery]. Si prega di registrarsi nuovamente.';
 $lang['UAM_group "%s" updated'] = 'Per la migliore perfrormance,il gruppo %s è stato automaticamente impostato quale gruppo di default';
+$lang['personal_content'] = 'Contenuto';
+$lang['UAM_AddURL2Mail'] = 'Aggiungi l\'URL della galleria alla fine delle e-mail (come una firma)';
 ?>

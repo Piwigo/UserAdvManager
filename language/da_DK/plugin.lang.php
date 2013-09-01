@@ -336,4 +336,5 @@ $lang['UAM_Tips1_txt'] = '          <ul>
           </ul>';
 $lang['UAM_group "%s" updated'] = 'For at opnå den bedste ydeevne, er gruppen %s automatisk blevet opsat som standardgruppen. ';
 $lang['personal_content'] = 'Indhold';
+$lang['UAM_AddURL2Mail'] = 'Tilføj galleriets URL i slutningen af mails (som en signatur)';
 ?>

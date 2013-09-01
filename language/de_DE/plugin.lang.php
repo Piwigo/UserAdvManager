@@ -431,4 +431,5 @@ $lang['UAM_Change'] = 'Ändere die Gruppe/den Status/die Privatsphäre des Benut
 $lang['UAM_Customize_messagesandmails'] = 'Anpassen der Nachrichten und E-Mails.';
 $lang['UAM_group "%s" updated'] = 'Für die beste Geschwindigkeit, wurde die Gruppe %s als Standardgruppe eingestellt.';
 $lang['personal_content'] = 'Inhalt';
+$lang['UAM_AddURL2Mail'] = 'Hinzufügen der Galerie URL am Ende von E-Mails (wie eine Unterschrift)';
 ?>
