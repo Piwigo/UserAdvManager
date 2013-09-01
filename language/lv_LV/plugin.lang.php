@@ -386,4 +386,5 @@ $lang['UAM_Change'] = 'Izmainīt apstiprināto lietotāju Grupas/Statuss/Konfide
 $lang['UAM_Customize_messagesandmails'] = 'Pielāgojiet ziņojumus un pastu';
 $lang['UAM_group "%s" updated'] = 'Labākam sniegumam, grupa %s automātiski tika iestatīta kā noklusējuma grupa.';
 $lang['personal_content'] = 'Saturs';
+$lang['UAM_AddURL2Mail'] = 'Pievienojiet galerijas URL e-pasta beigās kā parakstu.';
 ?>
