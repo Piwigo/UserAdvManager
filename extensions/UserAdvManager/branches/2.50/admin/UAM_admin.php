@@ -189,28 +189,34 @@ switch ($page['tab'])
     // -------------------------------------------------------------------------------------------
     if (isset($_POST['UAM_Validated_Group']) and $_POST['UAM_Validated_Group'] <> '-1')
     {
+      // Unset old group as group by default
       $query = '
-SELECT name, is_default
+UPDATE '.GROUPS_TABLE.'
+SET is_default = \''.boolean_to_string(false).'\'
+WHERE is_default = true
+;';
+      pwg_query($query);
+
+      // Set the new group as group by default
+      $query = '
+SELECT name
 FROM '.GROUPS_TABLE.'
 WHERE id = '.$_POST['UAM_Validated_Group'].'
 ;';
 
       $UAM_group = pwg_db_fetch_assoc(pwg_query($query));
 
-      if (isset($UAM_group['is_default']) and $UAM_group['is_default'] == "false")
-      {
-        $query = '
+      $query = '
 UPDATE '.GROUPS_TABLE.'
-SET is_default = true
+SET is_default = \''.boolean_to_string(true).'\'
 WHERE id = '.$_POST['UAM_Validated_Group'].'
 ;';
-        pwg_query($query);
+      pwg_query($query);
 
-        array_push(
-          $page['infos'],
-          sprintf(l10n('UAM_group "%s" updated'), $UAM_group['name'])
-        );
-      }
+      array_push(
+        $page['infos'],
+        sprintf(l10n('UAM_group "%s" updated'), $UAM_group['name'])
+      );
     }
 
     // Save global UAM configuration

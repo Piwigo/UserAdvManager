@@ -323,4 +323,5 @@ Nogle gange kan det være nyttigt at placere sikkerhedskopifilen på din compute
 Denne grænseflade understøtter kun genskabeles fra den lokale sikkerhedskopifil (../plugins/UserAdvManager/include/backup/UAM_dbbackup.sql).  Sikkerhedskopifiler man har downloadet kan ikke genskabe opsætningen på denne måde.  I stedet skal man benytte et dedikeret databaseværktøj (så som PhpMyAdmin til MySQL-databaser).
 <br><br>
 <b style=&quot;color: red;&quot;>Advarsel: Efter en genskabelse er det nødvendigt at genindlæse plugin\'ens administrationsside for at se de genskabte indstillinger!</b>';
+$lang['UAM_AddURL2Mail_d'] = 'Aktivering af denne valgmulighed, tilføjer dit galleris URL i slutningen af mails, der genereres af plugin\'en, som en signatur.';
 ?>

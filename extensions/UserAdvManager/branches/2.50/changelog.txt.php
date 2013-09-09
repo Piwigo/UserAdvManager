@@ -450,5 +450,10 @@ Plugin Name: UserAdvManager
              Update es_ES, thanks to : petaqui
              Update de_DE, thanks to : Joergen
              Update lv_LV, thanks to : agrisans
+
+-- 2.50.13 : Bug 2958 fixed - Only one user group can be set as default group. Unicity check when a group is set for validated users.
+             Update da_DK, thanks to : Kaare
+             Update el_GR, thanks to : bas_alba
+             
 */
 ?>
