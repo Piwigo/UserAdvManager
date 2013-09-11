@@ -211,4 +211,125 @@ $lang['UAM_GTAutoMail'] = 'Envio automático de email ao mudar grupo/estado/nív
 $lang['UAM_GTAutoDel'] = 'Remoção automática de contas';
 $lang['UAM_GTAuto'] = 'Gerenciamento automático de usuários fantasmas';
 $lang['UAM_AddURL2Mail'] = 'Adiciona a URL da galeria ao final dos emails (como uma assinatura)';
+$lang['UAM_Tips2_txt'] = '<ul>
+            <li>
+            Objetivos : Informar o visitante que o registo está aguardando a confirmação postando uma página adicional em substituição a galeria de páginas de índice padrão em cada uma dessas conexões , e isso, como o registro não está aprovado .
+            <br>
+            Vantagens sobre o método com PWG_Stuffs : Permitir informações de formatação e exibir as informações imediatamente após o registro de visitantes.
+            </li><br><br>
+            <li>
+Pré-requisito: <br>
+- Uma galeria com todas ou algumas categorias particulares, visível somente por usuários registrados<br>
+- Pelo menos dois seguintes grupos de usuários de Piwigo : "Aguardando", sem permissão nas categorias privadas, e " Confirmado", com todas as permissões nas categorias privadas<br>
+- UAM plugin<br>
+- Páginas Adicionais do plugin para adicionar e gerenciar uma página adicional para substituir a página índice da galeria<br>
+- Opcionalmente , o plugin de Descrição Extendida para suporte a multi-idiomas<br>
+            </ li><br><br>
+            <li>
+Estágios : <br>
+A. No plug-in UAM :
+              <ol>
+                <li> Habilitar o registro de confirmação </li>
+                <li> Digite o texto para explicação adicional que será anexado a confirmação de inscrição do e-mail. Se o plug-in de Descrição Extendida estiver ativado , as tags de linguagem pode ser usadas </li>
+                <li> Selecione o grupo de "Espera" em "Para os usuários que não tenham confirmado a sua inscrição " </li>
+                <li> Selecione o grupo "Confirmado" em " Para os usuários que já confirmaram a sua inscrição " </li>
+                <li> Salve a configuração do plugin </li>
+              </ol>
+<br>
+B. No plugin Páginas Adicionais:<br>
+                <b> NOTA: A gestão de direitos de acesso para os grupos em páginas adicionais deve ser ativado (consulte as configurações do plugin)</b>.
+                <br>
+              <ol>
+                <li> Adicione uma nova página com , pelo menos, os seguintes parâmetros:</li>
+                <ul>
+                  <li> Nome da página: O nome que você deseja dar à página adicional (ou seja: O registro não confirmado) </li>
+                  <li> Definir como página inicial verificada </li>
+                  <li> Grupos permitidos: Marque a caixa correspondente ao grupo "Espera" configurado no UAM </li>
+                  <li> Conteúdo: O texto que você deseja usar para visitantes</li>
+                </ul>
+                <br>
+                <li> E é isso! Somente os visitantes inscritos e cuja inscrição não tenha sido confirmada verá esta página de índice adicional. </Li>
+              </ol>
+            </li>
+          </ul>';
+$lang['UAM_Tips1_txt'] = '<ul>
+            <li>
+            Objetivos : Informar o visitante que o registo está aguardando a aprovação ao exibir um bloco pessoal na página inicial da galeria, e isso, como o registo não está aprovado .
+            <br>
+            <b> Lembre-se : . Na operação padrão , o "Convidado" vê apenas as categorias públicas , sem mensagem de informação </ b>
+            </li><br>
+            <li>
+Pré-requisito: <br>
+- Uma galeria com todas ou algumas categorias particulares , visível somente por usuários registrados <br>
+- Pelo menos os dois seguintes grupos de usuários do Piwigo : "Aguardando", sem permissão nas categorias privadas, e "Confirmado", com todas as permissões nas categorias privadas <br>
+- UAM plugin<br>
+- PWG Stuffs plugin, para adicionar um módulo UAM especial<br>
+- Opcionalmente , o plugin de Descrição Alargada para suporte multi- idiomas <br></li> <br>
+            <li>
+Estágios:<br>
+A. No plug-in UAM :
+              <ol>
+                <li> Habilitar o registro de confirmação </li>
+                <li> Ativar PWG Stuffs, módulo opcional </li>
+                <li> Digite o texto para explicação adicional que será anexado a confirmação de inscrição no e-mail. Se o plug-in de Descrição Alargada é ativado , as tags de linguagem podem ser usadas </li>
+                <li> Selecione o grupo de "Espera" em "Para os usuários que não tenham confirmado a sua inscrição"</li>
+                <li> Selecione o grupo "Confirmado" em " Para os usuários que já confirmaram a sua inscrição " </li>
+                <li> Salve a configuração do plugin </li>
+              </ol>
+<br>
+B. No plugin do PWG Stuffs :
+              <ol>
+                <li> Vá para a aba "Adicionar um novo módulo " </li>
+                <li> Escolha "UAM Module" </li>
+                <li> Configure o módulo , indicando o título (por exemplo, "confirmação pendente de Registro") e sua descrição , e só verificar "Aguardando" na lista de grupos permitidos </li>
+                <li> conteúdo completo do módulo com as informações da mensagem a ser exibida para os usuários não confirmados . Como UAM , linguagens de marcação pode ser usado se o plugin está habilitado para Descrição Extendida </li>
+                <li> Verifique "Mostrar o módulo na página inicial do site" </li>
+                <li> validar a configuração do módulo </li>
+              </ol>
+            </li>
+          </ul>';
+$lang['UAM_Support_txt'] = 'O suporte oficial para este plugin é encontrado somente neste tópico do forum Piwigo:<br>
+<a href="http://piwigo.org/forum/viewtopic.php?id=15015" onclick="window.open(this.href);return false;">Forum em inglês - http://piwigo.org/forum/viewtopic.php?id=15015</a><br><br>
+Tamem disponível, no bugtracker do projeto: <a href="http://piwigo.org/bugs/" onclick="window.open(this.href);return false;">http://piwigo.org/bugs/</a>';
+$lang['UAM_Restore'] = 'Para restaurar o arquivo de backup de sua configuração. Apenas o arquivo salvo no servidor é tida em conta.
+<br><br>
+<b style="color:red;">Esteja atento a versão de backup!<br>Um backup feito a partir de uma versão do plug-in só pode ser restaurada na mesma versão. </b>';
+$lang['UAM_Error_GTAutoMail_cannot_be_set_without_ConfirmMail'] = 'Erro de consistência na configuração escolhida:
+<br><br>
+"Definir o monitoramento de usuários registrados e outras opções> Gestão visitantes Ghost (Ghost Tracker)> Gestão automática de  usuários ghost> O envio automatico de um e-mail quando mudar de grupo / status" não pode ser ativado se "Definir as confirmações de inscrição> Confirmação de registro - "Confirmação pelo usuário" não for habilitado em primeiro lugar.
+<br><br>
+Para garantir a coerência, a opção "enviar automaticamente um e-mail quando mudar de grupo / status" foi automaticamente reposicionado "desativado".
+<br><br>';
+$lang['UAM_Tips1'] = 'Informações de registro não confirmado com UAM e PWG_Stuffs';
+$lang['UAM_Tips2'] = 'Informações de registro não confirmado em Páginas da UAM e Adicionais';
+$lang['UAM_Error_Using_illegal_flag'] = 'Erro de sintaxe! O [Kdays] bandeira de Texto Automático é usado como "Prazo de confirmação de registo limitado por" opção não foi ativado. Por favor ativar a opção ou corrigir o campo de texto(s) colorido em vermelho.';
+$lang['UAM_Expired_Group'] = '<b>Grupo</b> para o registro do usuário expirou<br>';
+$lang['UAM_Expired_Level'] = '<b>Nível de privacidade</b> para o registro do usuário expirou<br>';
+$lang['UAM_Expired_Status'] = '<b>Estado</b> para o registro do usuário expirou<br>';
+$lang['UAM_Password_Enforced'] = 'Reforçar o nível de senhas de segurança';
+$lang['UAM_Password_Enforced_true'] = 'Ativar. Pontuação Mínima:';
+$lang['UAM_RejectConnexion'] = 'Rejeitar conexão do usuário até que o registo seja confirmado';
+$lang['UAM_Restoration_NOK'] = 'Ocorreu um erro ao restaurar a configuração. Por favor verifique a validade de seu arquivo de backup.';
+$lang['UAM_Restoration_OK'] = 'Restauração de sua configuração concluída com sucesso! Por favor, recarregue a página de administração da UAM para visualizar as configurações restauradas.';
+$lang['UAM_Stuffs'] = 'Bloco PWG Stuffs';
+$lang['UAM_Stuffs_Desc'] = 'Adiciona um bloco de informações para os usuários não confirmados';
+$lang['UAM_Stuffs_Title'] = 'Bloco UAM';
+$lang['UAM_SubTitle4'] = 'Ghost Tracker';
+$lang['UAM_Subject admin validation for %s'] = 'Registro de %s aguarda para validação';
+$lang['UAM_Tab_GhostTracker'] = 'Ghost Tracker';
+$lang['UAM_GTAutomail_Subject'] = 'Personalização automática do assunto do email rebaixamento  Ghost Tracker';
+$lang['UAM_GTAutomail_Text'] = 'Personalize o texto do e-mail rebaixamento';
+$lang['UAM_GTReminder_Subject'] = 'Personalização manual do assunto do email do Ghost Tracker';
+$lang['UAM_GhostTracker_Init'] = 'Se você ativar esse recurso pela primeira vez ou se você tiver reativado depois de um longo período, durante o qual os novos visitantes forão registrados, você deve inicializar ou reiniciar o Ghost Tracker. Essa ação é feita somente após a ativação ou reativação da opção. Por favor, clique <u>uma vez</u> o botão de reinicializar abaixo.';
+$lang['UAM_GhostTracker_Init_OK'] = 'Ghost Tracker redefinição concluída!';
+$lang['UAM_GhostTracker_ReminderText'] = 'Lembrete personalizar GhostTracker\'s';
+$lang['UAM_Mail_Info'] = 'Informações de e-mail para o usuário:';
+$lang['UAM_No_Casse'] = 'Nomes de usuários: maiúsculas e minúsculas';
+$lang['UAM_No_reminder_for_Guest'] = 'A conta "Convidado" não está sujeito a receber lembretes de GhostTracker';
+$lang['UAM_No_reminder_for_Webmaster'] = 'A conta "Webmaster" não está sujeito a receber lembretes de GhostTracker';
+$lang['UAM_No_reminder_for_default_user'] = 'A conta padrão não está sujeito a receber lembretes de GhostTracker';
+$lang['UAM_No_reminder_for_your_account'] = 'Sua conta de administrador pessoal não está sujeito a receber lembretes de GhostTracker';
+$lang['UAM_No_validation_for_your_account'] = 'Sua conta de administrador pessoal não está sujeito a confirmação';
+$lang['UAM_Password reset selected users'] = 'Pedido de renovação de senha para usuários selecionados';
+$lang['UAM_PasswordTest'] = 'Testar Senha:';
 ?>
