@@ -214,4 +214,5 @@ $lang['UAM_Password_Enforced_true'] = 'Etkin. Minimum Puan:';
 $lang['UAM_No_Confirm_Group'] = 'Kayıtları onaylanmış kullanıcı grubu<br>';
 $lang['UAM_SubTitle4'] = 'Hayalet İzleyici';
 $lang['UAM_MailExclusion_true'] = 'Takip eden domainleri hariç tut:<br>(her domaini aralarına virgül koyarak ayırınız)';
+$lang['UAM_Err_audit_advise'] = '<b>etkinleştirdiğiniz yeni kuralların uygun hale gelmesi için değişiklikler yapmalısınız.<br>Herhangi bir veri tabanı yönetim yardımcısı kullanarak ###_USERS tablosundaki kullanıcı hesaplarını düzeltin.';
 ?>
