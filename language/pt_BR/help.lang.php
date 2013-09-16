@@ -46,4 +46,7 @@ As tags seguintes de customização estão disponíveis sem usar o plugin de Des
 - <b style=&quot;color: red;&quot;>[username]</b> para inserir o nome do destinatário do email automaticamente.<br>
 - <b style=&quot;color: red;&quot;>[mygallery]</b> para inserir o título da sua galeria.<br>';
 $lang['UAM_AddURL2Mail_d'] = 'Ativando essa opção, a URL de sua galeria será adicionada ao rodapé dos emails gerados pelo plugin, como uma assinatura.';
+$lang['UAM_RejectConnexion_Custom_Txt_d'] = 'Personalize aqui seu texto explicativo que informa usuários não confirmados que eles não poderão conectar à galeria até que confirmem seu registro.
+<br><br>
+Este campo é compatível com o editor FCK e, para múltiplos idiomas, pode-se usar a tag [lang] do plugin de descrição estendida, se este estiver ativo.';
 ?>
