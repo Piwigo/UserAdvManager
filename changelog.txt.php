@@ -454,6 +454,9 @@ Plugin Name: UserAdvManager
 -- 2.50.13 : Bug 2958 fixed - Only one user group can be set as default group. Unicity check when a group is set for validated users.
              Update da_DK, thanks to : Kaare
              Update el_GR, thanks to : bas_alba
-             
+
+
+-- 2.51.0 : Bug 2979 fixed - Users manually added by an admin with "Confirmation of registration for admins" disabled and "Automatic management of unconfirmed users" enabled will no longer receive a reminder email to confirm the registration
+            Bug 1109 fixed - Password enforcement features have been removed from UAM and set in a new dedicated plugin : Password Policy
 */
 ?>
