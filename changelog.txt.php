@@ -457,8 +457,5 @@ Plugin Name: UserAdvManager
 
 
 -- 2.50.14 : Bug 2979 fixed - Users manually added by an admin with "Confirmation of registration for admins" disabled and "Automatic management of unconfirmed users" enabled will no longer receive a reminder email to confirm the registration
-
-
--- 2.51.0 : Bug 1109 fixed - Password enforcement features have been removed from UAM and set in a new dedicated plugin : Password Policy
 */
 ?>
