@@ -154,6 +154,7 @@ function UAM_Adduser($register_user)
       }
       elseif (is_admin() and isset($conf_UAM['ADMINCONFMAIL']) and $conf_UAM['ADMINCONFMAIL'] == 'false')
       {
+        SetValidated($register_user['id']);
         SendMail2User(1, $register_user['id'], $register_user['username'], $passwd, $register_user['email'], false);
       }
       elseif (!is_admin())
@@ -175,6 +176,7 @@ function UAM_Adduser($register_user)
       }
       elseif (is_admin() and isset($conf_UAM['ADMINCONFMAIL']) and $conf_UAM['ADMINCONFMAIL'] == 'false')
       {
+        SetValidated($register_user['id']);
         SendMail2User(1, $register_user['id'], $register_user['username'], $passwd, $register_user['email'], false);
       }
       elseif (!is_admin())
@@ -445,7 +447,7 @@ function UAM_LoginTasks()
     UAM_USR_ScheduledTasks();
   }
 
-  // Avoid login into public galleries until registration confirmation is done
+  // Avoid login into private galleries until registration confirmation is done
   if ((isset($conf_UAM['REJECTCONNECT']) and $conf_UAM['REJECTCONNECT'] == 'false')
         or ((isset($conf_UAM['REJECTCONNECT']) and $conf_UAM['REJECTCONNECT'] == 'true') and UAM_UsrReg_Verif($user['id']))
         or (!is_admin() and !is_webmaster()))
@@ -770,7 +772,7 @@ function UAM_USR_ScheduledTasks()
   if ((isset($conf_UAM['USRAUTO']) and $conf_UAM['USRAUTO'] == 'true'))
   {
     if (count($collection) > 0)
-  		{
+		{
       // Process if a non-admin nor webmaster user is logged
       // ---------------------------------------------------
       if (in_array($user['id'], $collection))
@@ -1620,7 +1622,6 @@ WHERE user_id = '.$user_id.'
   // Adding gallery URL at the end of the email
   if (isset($conf_UAM['ADD_GALLERY_URL_TO_EMAILS']) and $conf_UAM['ADD_GALLERY_URL_TO_EMAILS'] == 'true')
   {
-    UAMLog(get_absolute_root_url(),'','','');
     pwg_mail($email, array(
       'subject' => $subject,
       'content' => ($infos1."\n\n").(isset($infos2) ? l10n_args($infos2)."\n\n" : "").get_absolute_root_url(),
@@ -2794,6 +2795,7 @@ function get_unvalid_user_autotasks()
   // --------------------------------------
   $query = '
 SELECT DISTINCT u.'.$conf['user_fields']['id'].' AS id,
+                u.UAM_validated,
                 ui.registration_date
 FROM '.USERS_TABLE.' AS u
   INNER JOIN '.USER_INFOS_TABLE.' AS ui
@@ -2801,6 +2803,7 @@ FROM '.USERS_TABLE.' AS u
 WHERE u.'.$conf['user_fields']['id'].' >= 3
   AND u.'.$conf['user_fields']['id'].' <> '.$conf['default_user_id'].'
   AND (TO_DAYS(NOW()) - TO_DAYS(ui.registration_date) >= "'.$conf_UAM_ConfirmMail['CONFIRMMAIL_DELAY'].'")
+  AND u.UAM_validated <> "true"
 ORDER BY ui.registration_date ASC;';
 
   $result = pwg_query($query);
