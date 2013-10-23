@@ -150,7 +150,7 @@ $lang['UAM_Confirm_Mail_local'] = ' Activer - Confirmation par l\'administrateur
 
 // --------- Starting below: New or revised $lang ---- from version 2.16.0
 $lang['UAM_Expired_Group'] = '<b>Groupe</b> pour les utilisateurs dont l\'inscription aura expirée<br/>';
-$lang['UAM_Expired_Status'] = '<b>Statut</b> pour les utilisateurs dont l\'inscription aura expirée - Sera obligatoirement "--------"<br/><b style="color: red;">Note : Pour cause de désuétude, cette fonction est vouée à disparaitre dans le prochaines versions</b><br/>';
+$lang['UAM_Expired_Status'] = '<b>Statut</b> pour les utilisateurs dont l\'inscription aura expirée<br/><b style="color: red;">Important : N\'utilisez pas le status "Invité". Pour cause de désuétude, cette fonction est vouée à disparaitre dans le prochaines versions</b><br/>';
 $lang['UAM_GTAuto'] = 'Gestion automatique des utilisateurs fantomes';
 $lang['UAM_GTAutoDel'] = 'Suppressions automatiques des comptes';
 $lang['UAM_Error_GTAutoMail_cannot_be_set_without_ConfirmMail'] = 'Erreur de cohérence dans la configuration choisie :
@@ -200,7 +200,7 @@ $lang['UAM_Error_Using_illegal_flag'] = 'Erreur de syntaxe ! Le drapeau d\'inser
 // --------- Starting below: New or revised $lang ---- from version 2.30.0
 $lang['UAM_Confirm_grpstat_notice'] = 'Attention : Il est conseillé d\'affecter soit les groupes, soit les statuts et pas les deux simultanément. Le niveau de confidentialité peut être utilisé conjointement avec une affectation de groupe ou de statut.';
 $lang['UAM_Confirm_Group'] = 'Groupes<br/>(------- pour ne pas affecter de groupe)';
-$lang['UAM_Confirm_Status'] = 'Statuts <b style="color: red;">Note : Pour cause de désuétude, cette fonction est vouée à disparaitre dans le prochaines versions</b><br/>(------- pour conserver la valeur par défaut de Piwigo)';
+$lang['UAM_Confirm_Status'] = 'Statuts <b style="color: red;">Important : N\'utilisez pas le status "Invité". Pour cause de désuétude, cette fonction est vouée à disparaitre dans le prochaines versions</b><br/>(------- pour conserver la valeur par défaut de Piwigo)';
 $lang['UAM_Confirm_Level'] = 'Niveau de confidentialité<br/>(------- pour conserver la valeur par défaut de Piwigo)';
 $lang['UAM_GTAutoGp'] = 'Changement automatique de groupe / statut / niveau de confidentialité';
 $lang['UAM_Expired_Level'] = '<b>Niveau de confidentialité</b> pour les utilisateurs dont l\'inscription aura expirée<br/>';
@@ -301,7 +301,7 @@ $lang['UAM_%d_Validated_User'] = '%d Utilisateur confirmé manuellement';
 $lang['UAM_%d_Validated_Users'] = '%d Utilisateurs confirmés manuellement';
 $lang['UAM_No_Confirm_Group'] = 'Pour les utilisateurs n\'ayant pas confirmé leur inscription<br/>';
 $lang['UAM_Validated_Group'] = 'Pour les utilisateurs ayant confirmé leur inscription<br/>';
-$lang['UAM_No_Confirm_Status'] = 'Pour les utilisateurs n\'ayant pas confirmé leur inscription sera toujours "----------"<br/>';
+$lang['UAM_No_Confirm_Status'] = 'Pour les utilisateurs n\'ayant pas confirmé leur inscription<br/>';
 $lang['UAM_Validated_Status'] = 'Pour les utilisateurs ayant confirmé leur inscription.<br/>';
 $lang['UAM_ConfirmMail_Remail'] = 'Mail de rappel aux inscrits non confirmés';
 $lang['UAM_No_Valid_Level'] = 'Pour les utilisateurs n\'ayant pas confirmé leur inscription<br/>';

@@ -463,5 +463,6 @@ Plugin Name: UserAdvManager
             Bug 2986 fixed - Status for unvalidated users can not be "Guest" and is forced to "-------"
             Bug 2987 fixed - New registered users have to follow a link on confirmation page before log in
 
+-- 2.51.1 : Bug 2986 rollback - The fix is not working well. A special notice is added in administration panel
 */
 ?>
