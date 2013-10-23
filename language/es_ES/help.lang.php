@@ -12,13 +12,6 @@ $lang['UAM_carexcTitle_d'] = 'Puede ser interesante para prohibir ciertos caract
 Nota: La opción también puede excluir palabras completas.
 <br><br>
 <b style=&quot;color: red;&quot;>Advertencia: Esta opción no tiene efecto sobre los nombres de usuario creados antes de su activación.</b>';
-$lang['UAM_passwTitle_d'] = 'Al habilitar esta opción hace obligatoria la creación de una contraseña en el registro, y requiere la contraseña elegida por el usuario para cumplir un nivel mínimo de complejidad. Si el umbral no se alcanza, la puntuación obtenida y la puntuación mínima que deben alcanzarse se muestran, junto con recomendaciones para aumentar el valor de esta puntuación.<br><br>
-Un campo de prueba permite medir la complejidad de la contraseña, y puede hacerse una idea de la puntuación necesaria para alcanzar una contraseña valida .<br><br>
-Nota: La puntuación de una contraseña se calcula en función de varios parámetros: longitud, tipo de caracteres utilizados (letras, números, mayúsculas, minúsculas, caracteres especiales). Una puntuación por debajo de 100 se considera bajo, de 100 a 500, la complejidad es mediana, más allá de 500, la seguridad es excelente.';
-$lang['UAM_passwtestTitle'] = 'Prueba de la complejidad de la contraseña';
-$lang['UAM_passwtestTitle_d'] = 'Introduzca la contrase&ntilde;a para pruebar y luego haga clic en &quot;c&aacute;lcular complejidad&quot; para ver el resultado.';
-$lang['UAM_passwadmTitle_d'] = 'Un administrador puede crear una cuenta de usuario, con o sin aplicación de la regla de la complejidad informática.<br><br>
-Nota: Si el  usuario de la cuenta  creada quiere cambiar la contraseña, y el fortalecimiento de las contraseñas de los usuarios está activo, la misma estará sujeta a la norma establecida.';
 $lang['UAM_infomailTitle_d'] = 'Esta opción permite automatizar el envío de un correo electrónico y la información a un usuario cuando cambie su contraseña o dirección de correo electrónico en su perfil.<br><br>
 El contenido del mensaje enviado se compone de una parte personalizable para introducir una nota de bienvenida, y una parte fija que indica el inicio de sesión, contraseña y dirección de correo electrónico del usuario.';
 $lang['UAM_confirmgrpTitle'] = 'Grupos de validación';
@@ -157,12 +150,6 @@ $lang['UAM_RejectConnexion_d'] = 'Si se activa, los nuevos usuarios registrados 
 $lang['UAM_RejectConnexion_Custom_Txt_d'] = 'Personaliza aquí tu texto de explicación para informar a los usuarios no confirmados de que no serán capaz de conectarse a la galería hasta que hayan confirmado su inscripción.
 <br> <br>
 Este campo es compatible con el editor FCK y, para múltiples idiomas, puede usar los botones [lang] del plugin Descripción ampliada si es activo.';
-$lang['UAM_PwdResetTitle_d'] = 'Al habilitar esta opción, se agregará una nueva función en el panel de gestión de usuarios de Piwigo (Usuarios> Administrar) para  solicitar la renovación de la contraseña para los usuarios seleccionados. Además, una nueva columna se agrega para mostrar el estado de contraseñas para cada uno de ellos con los siguientes valores: <br>
-- La contraseña debe renovarse:. Una solicitud de renovación de contraseña ha sido planeado <br>
-- Password renovado:. La contraseña se ha renovado después de una solicitud <br>
-- Password Original:. La contraseña original elegido al crear la cuenta y que nunca ha sido requerido para una renovación <br>
-Webmaster, cuentas genéricas y su acompañante están excluidos de esta función. <br>
-Estos usuarios serán redirigidos automáticamente a su página de personalización en cada una de sus conexiones hasta que cambien su contraseña y un mensaje explícito se muestrara en esta página.';
 $lang['UAM_MailInfo_Subject_d'] = 'Inserte aquí un texto personalizado para el email<br>
 Por defecto, el campo tiene un texto genérico en ingles pero puede cambiarlo utilizando las etiquetas de traducción [lang=??] del plugin Extended Description si esta instalado.
 <br><br>

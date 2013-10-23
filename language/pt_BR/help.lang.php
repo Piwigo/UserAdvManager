@@ -23,8 +23,6 @@
 $lang['UAM_tipsTitle_d'] = 'Dicas e vários exemplos de uso';
 $lang['UAM_remailtxt2Title'] = 'Email de lembrete sem uma nova chave';
 $lang['UAM_remailtxt1Title'] = 'Email de lembrete com uma nova chave gerada';
-$lang['UAM_passwtestTitle_d'] = 'Digite a senha a ser testada e clique em  &quot;Cálculo do score&quot; para ver o resultado.';
-$lang['UAM_passwtestTitle'] = 'Testando a complexidade da senha';
 $lang['UAM_confirmgrpTitle'] = 'Grupos';
 $lang['UAM_confirmlevelTitle'] = 'Nível de privacidade';
 $lang['UAM_GT_MainTitle_d'] = '- Gerenciamento automático ou manual de usuários fantasmas<br>

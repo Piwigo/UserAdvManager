@@ -44,8 +44,6 @@ $lang['UAM_Mail_with_key'] = 'Atgādinājums ar atslēgu';
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.12.0 and 2.12.1
-/* Global Configuration Tab */
-$lang['UAM_PasswordTest'] = 'Rezultāta aprēķins';
 /* Ghost Tracker Tab */
 $lang['UAM_Tab_GhostTracker'] = 'Ghost Tracker (neredzamais izsekotājs)';
 $lang['UAM_Reminder'] = 'Atgādinājuma e-pasts';
@@ -53,12 +51,6 @@ $lang['UAM_Reminder_Sent_OK'] = 'JĀ';
 $lang['UAM_Reminder_Sent_NOK'] = 'NĒ';
 /* Errors and Warnings */
 $lang['UAM_save_config'] ='Konfigurācija saglabāta.';
-$lang['UAM_reg_err_login3'] = 'Drošība : Parole ir obligāta !';
-$lang['UAM_reg_err_login4_%s'] = 'Drošība : Kontrolsistēma aprēķina izvēlētās paroles sarežģītības pakāpi. Jūsu paroles sarežģītība ir par zemu (rezultāts = %s). Lūdzu, izveidojiet jaunu, drošāku paroli, sekojot šiem nosacījumiem:<br>
-- Lietojiet burtus un ciparus<br>
-- Lietojiet apakšējo un augšējo reģistru<br>
-- Palieliniet tās garumu (rakstzīmju skaits)<br>
-Minimālais, administratora pieprasītais paroles sarežģītības līmenis ir: ';
 $lang['UAM_No_reminder_for_Guest'] = 'Konts "Guest" nav atgādinājumu no GhostTracker saņēmējsubjekts';
 $lang['UAM_No_reminder_for_default_user'] = 'Konts pēc noklusējumu nav atgādinājumu no GhostTracker saņēmējsubjekts';
 $lang['UAM_No_reminder_for_Webmaster'] = 'Konts "Webmaster" nav atgādinājumu no GhostTracker saņēmējsubjekts ';
@@ -96,11 +88,6 @@ $lang['UAM_No_Casse'] = 'Lietotājvārdi: Reģistrjutība';
 $lang['UAM_Username_Char'] = 'Lietotājvārdi: Rakstzīmju izslēgšana';
 $lang['UAM_Username_Char_true'] = ' Aizliegtās rakstzīmes:<br>(Lietot komatu, atdalot rakstzīmes)<br><br>';
 $lang['UAM_Username_Char_false'] = ' Atļaut visas (pēc noklusēšanas)';
-$lang['UAM_Password_Enforced'] = 'Paroļu drošības līmeņa stiprināšana';
-$lang['UAM_Password_Enforced_true'] = ' Iespējot. Minimālais līmenis: ';
-$lang['UAM_AdminPassword_Enforced'] = 'Attiecas uz administratoriem';
-$lang['UAM_PasswordTest'] = 'Paroles tests: ';
-$lang['UAM_ScoreTest'] = 'Rezultāts: ';
 $lang['UAM_MailExclusion'] = 'E-pasta domēnu izslēgšana';
 $lang['UAM_MailExclusion_true'] = ' Izslēgt sekojošus domēnus:<br>(Lietojiet komatu, lai atdalītu domēnus)';
 
@@ -218,18 +205,9 @@ $lang['UAM_Enable'] = ' Iespējot ';
 // --------- Starting below: New or revised $lang ---- from version 2.30.2
 $lang['UAM_RedirToProfile'] = 'Novirzīt uz pielāgošanas lapu';
 // --------- End: New or revised $lang ---- from version 2.30.2
-$lang['UAM %d user pwdreseted'] = 'Lietotājam %d nepieciešams atjautot paroli';
-$lang['UAM %d users pwdreseted'] = 'Paroles atjaunošana nepieciešama %d lietotājiem';
-$lang['UAM_Password_Reset_Msg'] = 'Lūdzu nomainiet savu paroli';
-$lang['UAM_PwdReset_Done'] = 'Parole atjaunota';
-$lang['UAM_PwdReset_NA'] = 'Oriģinālā parole';
-$lang['UAM_PwdReset_Todo'] = 'Parole jāatjauno';
-$lang['UAM_PwdReset'] = 'Paroles atjaunošana';
 $lang['UAM_RejectConnexion_Custom_Txt'] = 'Pielāgot noraidījuma tekstu';
 $lang['UAM_RejectConnexion'] = 'Noraidīt lietotāja konekciju, kamēr reģistrācija nav apstiprināta';
-$lang['UAM_Admins cannot be pwdreset'] = 'Paroles atjaunošanu nevar veikt admins kontam!';
 $lang['UAM_Confirm_Level'] = 'Konfidencialitātes līmenis (atstāt ------- lai paturētu Piwigo pēc noklusējuma)';
-$lang['UAM_Default user cannot be pwgreset'] = 'Paroles atjaunošanu nevar veikt lietotāja pēc noklusējuma kontam!';
 $lang['UAM_Default_AdminValidationMail_Subject'] = '[username] - Reģistrācija validēta [mygallery]';
 $lang['UAM_Default_ConfirmMail_Subject'] = '[username] reģistrācijas apstiprināšana [mygallery]';
 $lang['UAM_Default_GTAutoMail_Subject'] = '[username] - Jūsu konts [mygallery] ir pazemināts';
@@ -258,8 +236,6 @@ $lang['UAM_Default_InfoMail_Subject'] = '[username] - Jūsu reģistrācijas info
 $lang['UAM_Default_PwdRequest_Txt'] = 'Jūs esat pieprasijis(usi) mūsu galerijas paroles atjaunošanu. Lūdzu, zemāk skatiet jūsu jaunos savienojuma iestatījumus.';
 $lang['UAM_Default_ValidationTimeout_Txt'] = 'Atvainojiet, jūsu konts ir dzēsts, jo neesat apstiprinājis(usi) reģistrāciju paredzētajā laikā - ([Kdays] days). Lūdzu, atkārtojiet reģistrāciju, izmantojot derīgu, nebloķētu e-pasta kontu.';
 $lang['UAM_GTAutomail_Text'] = 'Pielāgot pazemināšanas e-pasta tekstu';
-$lang['UAM_Generic cannot be pwdreset'] = 'Vispārējiem kontiem nevar iestatīt paroles atjaunošanu!';
-$lang['UAM_Guest cannot be pwdreset'] = 'Paroles atjaunošanu nevar iestatīt viesu kontam!';
 $lang['UAM_HidePassw'] = 'Parole skaidrā teksta informācijas e-pastā';
 $lang['UAM_MailInfo_Subject'] = 'Pielāgot informācijas e-pasta tematu';
 $lang['UAM_MiscOptions'] = 'Dažādi citi varianti (opcijas)';
@@ -278,13 +254,9 @@ $lang['UAM_Tracking registered users'] = 'Izsekot reģistrētos lietorājus';
 $lang['UAM_USRAutoMail'] = 'Automātisks e-pasta atgādinātājs';
 $lang['UAM_Valid_Level'] = 'Konfidencialitātes līmenis lietotājiem, kuri ir apliecinājuši savu reģistrāciju <br>';
 $lang['UAM_Validation of %s'] = '%s apstiprinājums ';
-$lang['UAM_Webmaster cannot be pwdreset'] = 'Paroles atjaunošanu nevar iestatīt webmastera kontam!';
-$lang['UAM_You cannot pwdreset your account'] = 'Paroles atjaunošanu nevar iestatīt jūsu paša(as) kontam!';
-$lang['UAM_You need to confirm pwdreset'] = 'Jums jāapstiprina paroles atjaunošana (atzīmēt rūtiņā)!';
 $lang['UAM_GTAutoGp'] = 'Grupas statusa/konfidencialitātes līmeņa automātiska nomaiņa';
 $lang['UAM_No_Userlist'] = 'Uz doto momentu nav lietotāju ko attēlot ';
 $lang['UAM_No_Valid_Level'] = 'Savu reģistrāciju neapstiprinājošo lietotāju konfidencialitātes līmenis<br>';
-$lang['UAM_Password reset selected users'] = 'Pieprasīt paroles atjaunošanu atlasītajiem lietotājiem';
 $lang['UAM_Tips2'] = 'Informācija par neapstiprinātu reģistrāciju ar UAM un Additional Pages (papildu lapas)';
 $lang['UAM_Tips1'] = 'Informācija par neapstiprinātu reģistrāciju ar UAM un PWG_Stuffs';
 $lang['UAM_USRAutoDel'] = 'Pielāgotais ziņojums par dzēsto kontu';

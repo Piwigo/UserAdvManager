@@ -24,7 +24,6 @@ $lang['UAM_LastVisit_Date'] = 'Última visita';
 $lang['UAM_Manual_Validation'] = 'Confirmação manual';
 $lang['UAM_reg_err_login5'] = 'O seu provedor de e-mail está banido para inscrição. Os provedores de email banidos são:';
 $lang['UAM_reg_err_login2'] = 'Nome de utilizador não tem que coincidir com os seguintes caracteres:';
-$lang['UAM_reg_err_login3'] = 'Segurança: A senha é obrigatória';
 $lang['UAM_save_config'] = 'Configuração salva';
 $lang['UAM_submit'] = 'Submeter definições';
 $lang['personal_content'] = 'Conteúdo';
@@ -90,11 +89,6 @@ Para garantir a coerência, a opção "enviar automaticamente um e-mail quando m
 $lang['UAM_mail_exclusion_error'] = 'A opção do Piwigo "O endereço de email é obrigatório para todos os utilizadores", foi desativada enquanto que a extensão "Exclusão de domínios de correio" do UserAdvancedManager (UAM) se mantém ativa. Esta combinação é ilógica e não é compatível! <br>
 Por favor, reative a opção Piwigo "O endereço de e-mail é obrigatório para todos os utilizadores" para poder, em seguida, desativar a opção "Exclusão de domínios de correio" da UAM se é isso que você quer. <br>
 Nota:. Esta mensagem desaparecerá depois de ter feito a respetiva correção e refrescar a página de administração <br>';
-$lang['UAM_reg_err_login4_%s'] = 'Segurança: Um sistema de controle calcula uma pontuação na complexidade das senhas escolhidas. A complexidade da sua senha é muito baixa (escore =%s). Por favor, escolha uma nova senha mais segura, seguindo as seguintes regras:<br>
-- Use letras e números<br>
-- Use maiúsculas e minúsculas<br>
-- Aumentar (número de caracteres) <br>
-A pontuação mínima exigida pelo administrador é de:';
 $lang['UAM_Disable'] = 'Desativar (padrão)';
 $lang['UAM_Enable'] = 'Ativar';
 $lang['UAM_Default_ConfirmMail_Txt'] = 'Olá  [username]!  Obrigado por se registar na [mygallery].
@@ -125,7 +119,6 @@ $lang['UAM_Confirm_Mail_local'] = 'Ativar - Confirmação pela admin';
 $lang['UAM_Confirm_Mail_true'] = 'Ativar - Confirmação pelo utilizador';
 $lang['UAM_Confirm_Status'] = 'Estatutos<br>(deixar------- para manter o padrão do Piwigo)';
 $lang['UAM_Confirm_grpstat_notice'] = 'Atenção: É aconselhável usar  ou o grupo ou a confirmação do status e não os dois simultaneamente. O nível de privacidade pode ser utilizado em conjunto com um grupo ou status atribuido.';
-$lang['UAM_Default user cannot be pwgreset'] = 'Renovação de senha pode ser definida por defeito para conta de utilizador';
 $lang['UAM_Default_AdminValidationMail_Subject'] = '[username]- Registo validado na [mygallery]';
 $lang['UAM_Default_AdminValidation_Txt'] = 'Olá [username]! Obrigado pelo seu registo e benvindo(a)à [mygallery].
 Sua conta foi confirmada manualmente pelo webmaster da [mygallery]. Agora você pode entrar em [MyURL] e fazer as alterações necessárias ao seu perfile.';
@@ -138,11 +131,8 @@ $lang['UAM_ConfirmMail_Text'] = 'Personalização do email confirmação';
 $lang['UAM_CustomPasswRetr'] = 'Personalizar email de senha perdida';
 $lang['UAM_Customize_messagesandmails'] = 'Personalizar mensagens e mails';
 $lang['UAM_AdminValidationMail_Text'] = 'Notificação de confirmação manual de registo';
-$lang['UAM_Admins cannot be pwdreset'] = 'Renovação da senha não pode ser definida para conta de administrador';
 $lang['UAM_AdminValidationMail_Subject'] = 'Personalizar validação manual do assunto do email';
 $lang['UAM_AdminConfMail'] = 'Confiemação de registo para administradores';
-$lang['UAM %d user pwdreseted'] = 'Renovação de senha requerida para %d um utilizador';
-$lang['UAM %d users pwdreseted'] = 'Renovação de senha requerida para %d utilizadores';
 $lang['UAM_%d_Mail_With_Key'] = 'Foi enviada %d mensagem com chave renovada';
 $lang['UAM_%d_Mails_With_Key'] = 'Foram enviadas %d mensagens com chave renovada';
 $lang['UAM_%d_Reminder_Sent'] = 'Foi enviada %d mensagem a relembrar';
@@ -150,7 +140,6 @@ $lang['UAM_%d_Reminders_Sent'] = 'Foram enviadas %d mensagens a relembrar';
 $lang['UAM_%d_Validated_User'] = '%d Utilizadoe confirmado manualmente';
 $lang['UAM_%d_Validated_Users'] = ' %d Utilizadores confirmados manualmente';
 $lang['UAM_Add of %s'] = 'Perfile criado para  %s';
-$lang['UAM_AdminPassword_Enforced'] = 'Aplicar aos administradores';
 $lang['UAM_ConfirmMail_Remail'] = 'Lembrar utilizadores não confirmados';
 $lang['UAM_Title1'] = 'Restrições de registo';
 $lang['UAM_Title2'] = 'Confirmação de registo';
@@ -158,11 +147,6 @@ $lang['UAM_Validation of %s'] = 'Confirmação de  %s';
 $lang['UAM_User: %s'] = 'Utilizador: %s';
 $lang['UAM_Username_Char_false'] = 'Permitir tudo (padrão)';
 $lang['UAM_Password: %s'] = 'Senha:%s';
-$lang['UAM_PasswordTest'] = 'Senha teste:';
-$lang['UAM_PwdReset'] = 'Renovação de senha';
-$lang['UAM_PwdReset_Done'] = 'Senha renovada';
-$lang['UAM_PwdReset_NA'] = 'Senha original';
-$lang['UAM_PwdReset_Todo'] = 'Senha a ser renovada';
 $lang['UAM_Registration_Date'] = 'Data de registo';
 $lang['UAM_Reminder_Sent_NOK'] = 'NÃO';
 $lang['UAM_Reminder_Sent_OK'] = 'SIM';
@@ -222,7 +206,7 @@ $lang['UAM_Title_Tab'] = 'UserAdvManager - Versão: ';
 $lang['UAM_mail_exclusionlist_error'] = 'Atenção! Você adicionou uma nova linha (CR-LF) no início da lista do e-mail exclusão (mostrado abaixo a vermelho). Embora esta nova linha não seja visível, ela existe e pode causar mau funcionamento da extensão. Por favor, re-digite na sua lista de exclusão de forma a não começar com uma nova linha.';
 $lang['UAM_USRAutoMail'] = 'Email lembrete automático';
 $lang['UAM_confirmmail_custom_Txt2'] = 'Texto da página confirmação - Confirmação rejeitada';
-$lang['UAM_empty_pwd'] = '[empty password]';
+
 $lang['UAM_audit'] = 'Definições de auditoria';
 $lang['UAM_audit_ok'] = 'Auditoria OK';
 $lang['UAM_confirmmail_custom_Txt1'] = 'Texto da página confirmação - Confirmação aceite';
@@ -239,7 +223,6 @@ $lang['UAM_No_reminder_for_your_account'] = 'A sua conta pessoal de aAdmin não 
 $lang['UAM_No_Confirm_Group'] = 'Grupo de utilizadores que não confirmou o seu registo<br>';
 $lang['UAM_No_Confirm_Status'] = 'Status dos utilizadores que não confirmaram o seu registo<br>';
 $lang['UAM_No_Valid_Level'] = 'Nível de privacidade para utilizadores que não confirmaram o seu registo<br>';
-$lang['UAM_Password_Enforced'] = 'Reforço do nível de senhas de segurança';
 $lang['UAM_Stuffs'] = 'Bloco PWG Stuffs';
 $lang['UAM_Title4'] = 'Tipos e exemplos de uso';
 $lang['UAM_Tracking confirmations'] = 'Confirmações de rastreameneto';
@@ -288,16 +271,13 @@ B. Nas páginas adicionais da extensão:<br>
             </li>
           </ul>';
 $lang['UAM_Title3'] = 'Gerênciar utilizadores fantasma';
-$lang['UAM_Password_Enforced_true'] = 'Ativar: Pontuação mínima';
 $lang['UAM_RedirToProfile'] = 'Redirecionar para página personalizada';
 $lang['UAM_RejectConnexion_Custom_Txt'] = 'personalizar texto rejeição';
 $lang['UAM_Restore_File'] = 'Restaurar configuração';
 $lang['UAM_No_validation_for_Webmaster'] = 'A conta "Webmaster" não está sujeita a confirmação';
 $lang['UAM_No_validation_for_default_user'] = 'Conta padrão não está sujeita a confirmação';
 $lang['UAM_No_validation_for_your_account'] = 'A sua conta pessoal de admin não está sujeita a confirmação';
-$lang['UAM_Password reset selected users'] = 'Solicitar renovação de senha aos seguintes utilizadores';
 $lang['UAM_Reminder_without_key_of_%s'] = '%s,a sua chave de confirmação vai expirar';
-$lang['UAM_Password_Reset_Msg'] = 'Por favor altere a sua semha';
 $lang['UAM_Reminder'] = 'Email lembrete';
 $lang['UAM_Reminder_with_key_of_%s'] = '%s,A sua chave de confirmação foi renovada';
 $lang['UAM_Expired_Level'] = '<b>Nivel de privacidade</b> para utilizadores de registo expirado<br>';
@@ -310,9 +290,7 @@ $lang['UAM_GTAuto'] = 'Gerência automática dos utilizadores fantasma';
 $lang['UAM_GTAutoGp'] = 'Alteração automática do grupo/status/nível de privacidade';
 $lang['UAM_GTAutoMail'] = 'Enviar automaticamente um e-mail quando alteração de grupo / status/nível de privacidade';
 $lang['UAM_GTAutomail_Text'] = 'Personalizar texto do email';
-$lang['UAM_Generic cannot be pwdreset'] = 'Renovação de senha não pode ser definida para contas genéricas';
 $lang['UAM_Ghost_reminder_of_%s'] = '%s, este é um mail lembrete';
-$lang['UAM_Guest cannot be pwdreset'] = 'Renovação de senha não pode ser definido para contas de visitantes!';
 $lang['UAM_HidePassw'] = 'Senha em texto explicito no mail informativo';
 $lang['UAM_Link: %s'] = 'Por favor clique neste link para confirmar o registo:  %s';
 $lang['UAM_MailExclusion_No'] = 'Domínios de Emails excluídos - Não disponível pois estes e-mails não são aceites para inscrição!';
@@ -328,10 +306,7 @@ $lang['UAM_group "%s" updated'] = 'Para melhor performance o grupo %s foi automa
 $lang['UAM_Tips1'] = 'Informação de registo não confirmado com UAM e PWG_Stuffs';
 $lang['UAM_Manual_validation_needed_for %s'] = 'O utilizador  %s registou-se e aguarda validação manual por um Admin.';
 $lang['UAM_Tips2'] = 'Informação de registo não confirmado com UAM e Páginas adicionais';
-$lang['UAM_Webmaster cannot be pwdreset'] = 'Renovação de senha não pode ser definida para a conta de Webmaster';
-$lang['UAM_You cannot pwdreset your account'] = 'Renovação de senha não pode ser definida para a sua própria galeria';
 $lang['UAM_infos_mail %s'] = '%s, veja aqui a sua informação para entrada na galeria';
-$lang['UAM_You need to confirm pwdreset'] = 'Deverá confirmar a renovação da senha (sinalize a caixa)';
 $lang['UAM_USRAuto'] = 'Gerência automática de utilizadores não confirmados';
 $lang['UAM_no_update_pwd'] = '[Perfile atualizado sem alteração da senha]';
 $lang['UAM_USRAutoDel'] = 'Personalizar mensagem para contas apagadas';

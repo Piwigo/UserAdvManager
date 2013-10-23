@@ -64,10 +64,6 @@ Følgende yderligere tilpasningstags er tilgængelige uden brug af plugin\'en Ex
 $lang['UAM_miscTitle_d'] = '- Overvågning af registrerede brugere<br>
 - Kaldenavn (nickname) obligatorisk ved gæstekommentarer<br>
 ...';
-$lang['UAM_passwadmTitle_d'] = 'En administrator kan oprette en brugerkonto med eller uden krav om kompleksitetsberegning.<br><br>
-Bemærk: Hvis en brugeren senere ønsker at ændre adgangskode og der er krav om at brugerne har stærke adgangskoder, vil adgangskoden blive udsat for kravet.';
-$lang['UAM_passwtestTitle'] = 'Tester adgangskodens kompleksitet';
-$lang['UAM_passwtestTitle_d'] = 'Skriv adgangskoden, der skal testes, og klik dernæst på &quot;Beregn score&quot; for at se resultatet.';
 $lang['UAM_GT_MainTitle_d'] = '- Automatisk eller manuel håndtering af spøgelsesbrugere<br>
 - Mailing<br>
 ...';
@@ -239,12 +235,6 @@ Yderligere tilpasning af indholdet med særlige, indsatte tags:<br>
 <b style=&quot;color: red;&quot;>[username]</b> er ikke tilgængeligt her, fordi brugeren er blevet slettet.
 <br><br>
 Tilpassset tekst til omdirigeringssiden kan skrives feltet, som er kompatibelt med FCK Editor og, ved flere sprog, kan man anvendes [lang]-tags fra plugin\'en Extended Description, hvis denne er aktiv.';
-$lang['UAM_PwdResetTitle_d'] = 'Aktivering af denne valgmulighed tilføjer en ny funktion til Piwigos brugerhåndteringspanel (Brugere > Håndter), vedrørende fornyelse af udvalgte brugeres adgangskoder. Desuden tilføjes en ny kolonne, som viser adgangskodestatus for hver af dem, med følgende værdier:<br>
-- Adgangskode skal fornyes: Der er planlagt at bede om fornyelse af adgangskoden.<br>
-- Adgangskode fornyet: Adgangskoden er blevet fornyet, efter der er bedt om det.<br>
-- Oprindelig adgangskode: Den oprindelige adgangskode valgt ved kontooprettelsen, og som aldrig har været krævet fornyet.<br>
-Funktionen gælder ikke webmaster, generiske og gæstekonti.<br>
-Disse brugere vil automatisk blive omdirigeret til deres opsætningsside, hver gang de logger på, indtil adgangskoden er blevet ændret, og der vil eksplicit blive givet besked om det på den side.';
 $lang['UAM_GTReminder_Subject_d'] = 'Her skrives emnet på den automatiske Ghost Tracker-påmindelsesmail.<br>
 Som standard indeholder feltet en generisk tekst på engelsk, men du kan ændre den samt anvende oversættelsestags [lang =?] fra plugin\'en Extended Description, hvis den er installeret.
 <br><br>
@@ -289,9 +279,6 @@ $lang['UAM_GTAutoMailTitle_d'] = 'Når en konto sættes til at udløbe (ændring
 <b style=&quot;color: red;&quot;>Advarsel: Anvendelse af funktionen hænger tæt sammen med brugeres registreringsbekræftelser (mailbekræftelse) og kan ikke aktiveres uden denne valgmulighed.</b>';
 $lang['UAM_GTAutoGpTitle_d'] = 'Den automatiske ændring af gruppe, status eller privatlivsniveau svarer til en nedgradering af de involverede konti og arbejder efter samme princip som bekræftedes gruppe, status eller privatlivsniveau (se &quot;Opsætning af registreringsbekræftelse&quot;). Dvs. at der defineres en gruppe. status og/eller niveau som nedgraderer adgangen til galleriet. Hvis det allerede er opsat med brug af funktionen til registreringsbekræftelser, kan du anvende samme gruppe/status/niveau.<br><br>
 <b style=&quot;color: red;&quot;>Vigtigt:</b> Hvis en spøgelsesbruger stadig ikke har ladet høre fra sig efter tidsbegrænsningen og på trods af automatisk mailnotifikation (hvis aktiveret), vil vedkommende automatisk blive slettet fra databasen.';
-$lang['UAM_passwTitle_d'] = 'Aktivering af denne valgmulighed gør det til at krav at have en adgangskode ved registreringen, og kræver at den valgte adgangskode opfylder et minimalt kompleksitetsniveau.  Hvis tærsklen ikke opfyldes, vil den opnåede score og den minimale score, der skal opfyldes, blive vist, sammen med anbefalinger til forbedring af scoren.<br><br>
-Der er et testfelt til måling af adgangskodens kompleksitet, og som giver en idé om hvordan man definerer en sådan.<br><br>
-Bemærk: Adgangskodens score beregnes ud fra flere parametre: længde, typen af benyttede tegn (bogstaver, tal, store bogstaver, små bogstaver, særlige tegn). En score på under 100 betragtes som lav, fra 100 til 500 er kompleksiteten gennemsnitlig og over 500 er sikkerheden fremragende.';
 $lang['UAM_restricTitle_d'] = '- Fravalg af tegn<br>
 - Adgangskodehåndhævelse<br>
 - Fravalg af maildomæner<br>
