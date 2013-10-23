@@ -15,7 +15,7 @@ $lang['UAM_Link: %s'] = 'Please, click on this link to confirm the registration 
 $lang['UAM_audit_ok'] = 'Audit OK';
 $lang['UAM_Err_audit_username_char'] = '<b>This account uses one or more forbidden characters :</b> ';
 $lang['UAM_Err_audit_email_forbidden'] = '<b>This account uses a forbidden email provider :</b> ';
-$lang['UAM_Err_audit_advise'] = '<b>you have to perform corrections to comply with new rules that you have activated.<br>Use a database management utility to correct user accounts directly in the table ###_USERS';
+$lang['UAM_Err_audit_advise'] = '<b>you have to perform corrections to comply with new rules that you have activated.<br/>Use a database management utility to correct user accounts directly in the table ###_USERS';
 $lang['UAM_reg_err_login2'] = 'Username does not have to match the following characters: ';
 $lang['UAM_reg_err_login5'] = 'Your email provider is banned for registration. Banned email providers are: ';
 $lang['UAM_empty_pwd'] = '[empty password]';
@@ -42,8 +42,6 @@ $lang['UAM_Mail_with_key'] = 'Reminder with key';
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.12.0 and 2.12.1
-/* Global Configuration Tab */
-$lang['UAM_PasswordTest'] = 'Score calculation';
 /* Ghost Tracker Tab */
 $lang['UAM_Tab_GhostTracker'] = 'Ghost Tracker';
 $lang['UAM_Reminder'] = 'Email reminder';
@@ -51,12 +49,6 @@ $lang['UAM_Reminder_Sent_OK'] = 'YES';
 $lang['UAM_Reminder_Sent_NOK'] = 'NO';
 /* Errors and Warnings */
 $lang['UAM_save_config'] ='Configuration saved.';
-$lang['UAM_reg_err_login3'] = 'Security : Password is mandatory !';
-$lang['UAM_reg_err_login4_%s'] = 'Security : A control system calculates a score on the chosen passwords complexity. The complexity of your password is too low (score = %s). Please, choose a new password more secure by following these rules:<br>
-- Use letters and numbers<br>
-- Use lowercase and uppercase<br>
-- Increase its length (number of characters)<br>
-The minimum passwords score required by the administrator is: ';
 $lang['UAM_No_reminder_for_Guest'] = 'The "Guest" account is not subject to receive reminders from GhostTracker';
 $lang['UAM_No_reminder_for_default_user'] = 'The default account is not subject to receive reminders from GhostTracker';
 $lang['UAM_No_reminder_for_Webmaster'] = 'The "Webmaster" account is not subject to receive reminders from GhostTracker';
@@ -88,15 +80,10 @@ $lang['UAM_Tab_Global'] = 'Configuration';
 $lang['UAM_Title4'] = 'Tips and examples of use';
 $lang['UAM_No_Casse'] = 'Usernames: Case sensitivity';
 $lang['UAM_Username_Char'] = 'Usernames: Exclusion of characters';
-$lang['UAM_Username_Char_true'] = ' Banning characters:<br>(Use a comma to separate each character)<br><br>';
+$lang['UAM_Username_Char_true'] = ' Banning characters:<br/>(Use a comma to separate each character)<br/><br/>';
 $lang['UAM_Username_Char_false'] = ' Permit all (default)';
-$lang['UAM_Password_Enforced'] = 'Strengthening the security level of passwords';
-$lang['UAM_Password_Enforced_true'] = ' Enable. Minimum Score: ';
-$lang['UAM_AdminPassword_Enforced'] = 'Applying to administrators';
-$lang['UAM_PasswordTest'] = 'Password test: ';
-$lang['UAM_ScoreTest'] = 'Result: ';
 $lang['UAM_MailExclusion'] = 'Email domains exclusion';
-$lang['UAM_MailExclusion_true'] = ' Exclude the following domains:<br>(Use a comma to separate each domain)';
+$lang['UAM_MailExclusion_true'] = ' Exclude the following domains:<br/>(Use a comma to separate each domain)';
 
 $lang['UAM_Mail_Info'] = 'Information email to user:';
 $lang['UAM_MailInfo_Text'] = ' Customizing the information email:';
@@ -142,8 +129,8 @@ $lang['UAM_Nb_Days'] = 'Difference in days';
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.15.1
-$lang['UAM_Support_txt'] = 'The official support on this plugin is only on these Piwigo forum topic:<br>
-<a href="http://piwigo.org/forum/viewtopic.php?id=15015" onclick="window.open(this.href);return false;">English forum - http://piwigo.org/forum/viewtopic.php?id=15015</a><br><br>
+$lang['UAM_Support_txt'] = 'The official support on this plugin is only on these Piwigo forum topic:<br/>
+<a href="http://piwigo.org/forum/viewtopic.php?id=15015" onclick="window.open(this.href);return false;">English forum - http://piwigo.org/forum/viewtopic.php?id=15015</a><br/><br/>
 Also available, the project\'s bugtracker: <a href="http://piwigo.org/bugs/" onclick="window.open(this.href);return false;">http://piwigo.org/bugs/</a>';
 // --------- End: New or revised $lang ---- from version 2.15.1
 
@@ -156,16 +143,16 @@ $lang['UAM_Confirm_Mail_local'] = ' Enable - Confirmation by admin';
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.16.0
-$lang['UAM_Expired_Group'] = '<b>Group</b> for user\'s registration has expired<br>';
-$lang['UAM_Expired_Status'] = '<b>Status</b> for user\'s registration has expired<br>';
+$lang['UAM_Expired_Group'] = '<b>Group</b> for user\'s registration has expired<br/>';
+$lang['UAM_Expired_Status'] = '<b>Status</b> for user\'s registration has expired will ever be "--------"<br/><b style="color: red;">Note : Because useless, this feature could be removed in the future versions</b><br/>';
 $lang['UAM_GTAuto'] = 'Automatic management of ghosts users';
 $lang['UAM_GTAutoDel'] = 'Automatic deletion of accounts';
 $lang['UAM_Error_GTAutoMail_cannot_be_set_without_ConfirmMail'] = 'Consistency error in the chosen configuration:
-<br><br>
+<br/><br/>
 "Setting the registered users monitoring and other options > Ghost visitors management (Ghost Tracker) > Automatic management of ghosts users > Automatically sending an email when changing group / status" can not be activated if "Setting confirmations of registration > Confirmation of registration - Confirmation by user" is not enabled at first.
-<br><br>
+<br/><br/>
 To ensure consistency, the option "Automatically sending an email when changing group / status" was automatically repositioned "disabled".
-<br><br>';
+<br/><br/>';
 $lang['UAM_Demotion of %s'] = 'Demotion of %s';
 $lang['UAM_AdminValidationMail_Text'] = 'Notification of manual confirmation of registration';
 $lang['UAM_Validation of %s'] = 'Confirmation of %s';
@@ -204,28 +191,15 @@ $lang['UAM_Error_Using_illegal_flag'] = 'Syntax error ! The [Kdays] AutoText fla
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.30.0
-$lang['UAM_Confirm_grpstat_notice'] = 'Caution: It is advisable to use either the group or the confirmation statutes and not both simultaneously. The privacy level can be used in conjunction with a group or status assignment.';
-$lang['UAM_Confirm_Group'] = 'Groups<br>(leave ------- to not affect group)';
-$lang['UAM_Confirm_Status'] = 'Statutes<br>(leave ------- to keep the Piwigo\'s default)';
-$lang['UAM_Confirm_Level'] = 'Privacy level<br>(leave ------- to keep the Piwigo\'s default)';
+$lang['UAM_Confirm_grpstat_notice'] = 'Caution: It is advisable to use either the group or the statutes confirmation and not both simultaneously. The privacy level can be used in conjunction with a group or status assignment.';
+$lang['UAM_Confirm_Group'] = 'Groups<br/>(leave ------- to not affect group)';
+$lang['UAM_Confirm_Status'] = 'Statutes <b style="color: red;">Note : Because useless, this feature could be removed in the future versions</b><br/>(leave ------- to keep the Piwigo\'s default)';
+$lang['UAM_Confirm_Level'] = 'Privacy level<br/>(leave ------- to keep the Piwigo\'s default)';
 $lang['UAM_GTAutoGp'] = 'Automatic change of group / status / privacy level';
-$lang['UAM_Expired_Level'] = '<b>Privacy level</b> for user\'s registration has expired<br>';
+$lang['UAM_Expired_Level'] = '<b>Privacy level</b> for user\'s registration has expired<br/>';
 $lang['UAM_MiscOptions'] = 'Other miscellaneous options';
 $lang['UAM_Title3'] = 'Ghost users management';
 $lang['UAM_Title5'] = 'Miscellaneous options';
-$lang['UAM_Password_Reset_Msg'] = 'Please, change your password!';
-$lang['UAM_PwdReset'] = 'Password renewal';
-$lang['UAM_Password reset selected users'] = 'Request password renewal for selected users';
-$lang['UAM_Guest cannot be pwdreset'] = 'Password renewal can\'t be set for guests account!';
-$lang['UAM_Default user cannot be pwgreset'] = 'Password renewal can\'t be set for default user account!';
-$lang['UAM_Webmaster cannot be pwdreset'] = 'Password renewal can\'t be set for the webmaster account!';
-$lang['UAM_You cannot pwdreset your account'] = 'Password renewal can\'t be set for your own account!';
-$lang['UAM_You need to confirm pwdreset'] = 'You must confirm password renewal (check box)!';
-$lang['UAM_PwdReset_Todo'] = 'Password to be renewed';
-$lang['UAM_PwdReset_Done'] = 'Password renewed';
-$lang['UAM_PwdReset_NA'] = 'Original password';
-$lang['UAM %d user pwdreseted'] = 'Password renewal required for %d user';
-$lang['UAM %d users pwdreseted'] = 'Password renewal required for %d users';
 $lang['UAM_Error_Using_illegal_Kdays'] = 'Using the [Kdays] tag is allowed only if the deadline for registration confirmation limited is active. Refer to the text field in red to correct the problem.';
 $lang['UAM_Default_InfoMail_Txt'] = 'Hello [username]!
 
@@ -247,8 +221,8 @@ $lang['UAM_Default_PwdRequest_Txt'] = 'You have requested a password reset on ou
 $lang['UAM_Default_CfmMail_Custom_Txt1'] = '[username] account successfully validated!';
 $lang['UAM_DumpTxt'] = 'Backup and restore your configuration';
 $lang['UAM_Restore'] = 'To restore the backup file of your configuration. Only the saved file on the server is taken into account.
-<br><br>
-<b style="color: red;">Beware of the backup version!<br>A backup made from one version of the plugin can only be restored on the same version.</b>';
+<br/><br/>
+<b style="color: red;">Beware of the backup version!<br/>A backup made from one version of the plugin can only be restored on the same version.</b>';
 $lang['UAM_Restore_File'] = 'Restore Configuration';
 $lang['UAM_No_Backup_File'] = 'No backup file available!';
 $lang['UAM_Restoration_NOK'] = 'An error occurred while restoring the configuration. Please check the validity of your backup file.';
@@ -258,8 +232,6 @@ $lang['UAM_Restoration_OK'] = 'Restoring your configuration completed successful
 
 // --------- Starting below: New or revised $lang ---- from version 2.30.1
 $lang['UAM_submit'] = 'Submit settings';
-$lang['UAM_Generic cannot be pwdreset'] = 'Password renewal can\'t be set for generic accounts!';
-$lang['UAM_Admins cannot be pwdreset'] = 'Password renewal can\'t be set for admins account!';
 $lang['UAM_Bad_version_backup'] = 'The version of the backup file does not match the version of the plugin! The restoration was not performed.';
 // --------- End: New or revised $lang ---- from version 2.30.1
 
@@ -282,31 +254,31 @@ $lang['UAM_Stuffs_Desc'] = 'Adds an information block for unconfirmed users';
 /* Email confirmation page */
 $lang['UAM_%d_Validated_User'] = '%d User confirmed manually';
 $lang['UAM_%d_Validated_Users'] = '%d Users confirmed manually';
-$lang['UAM_No_Confirm_Group'] = 'Group for users who have not confirmed their registration<br>';
-$lang['UAM_Validated_Group'] = 'Group for users who have confirmed their registration<br>';
-$lang['UAM_No_Confirm_Status'] = 'Status for users who have not confirmed their registration<br>';
-$lang['UAM_Validated_Status'] = 'Status for users who have confirmed their registration<br>';
-$lang['UAM_No_Valid_Level'] = 'Privacy level for users who have not confirmed their registration<br>';
-$lang['UAM_Valid_Level'] = 'Privacy level for users who have confirmed their registration<br>';
+$lang['UAM_No_Confirm_Group'] = 'Group for users who have not confirmed their registration<br/>';
+$lang['UAM_Validated_Group'] = 'Group for users who have confirmed their registration<br/>';
+$lang['UAM_No_Confirm_Status'] = 'Status for users who have not confirmed their registration will ever be "------------"<br/>';
+$lang['UAM_Validated_Status'] = 'Status for users who have confirmed their registration<br/>';
+$lang['UAM_No_Valid_Level'] = 'Privacy level for users who have not confirmed their registration<br/>';
+$lang['UAM_Valid_Level'] = 'Privacy level for users who have confirmed their registration<br/>';
 $lang['UAM_Err_UserManager_Settings'] = 'This page is available only if "Confirmation of registration" is active and if a group of visitors not confirmed is configured in "Setting confirmations of registration".';
 $lang['UAM_Tips1'] = 'Information of unconfirmed registration with UAM and PWG_Stuffs';
 $lang['UAM_Tips1_txt'] = '
           <ul>
             <li>
             Goals: Inform the visitor that the registration is awaiting approval by displaying a personal block on the home page of the gallery, and this, as registration is not approved.
-            <br><br>
+            <br/><br/>
             <b>Recall: In standard operation, the "Guest" only sees the public categories, without information message.</b>
-            </li><br><br>
+            </li><br/><br/>
             <li>
-Prerequisite:<br>
-- A gallery with all or some private categories, visible only by registered users<br>
-- At least 2 following Piwigo\'s users groups: "Waiting," without permission on private categories, and "Confirmed" with all the permissions on the private categories<br>
-- UAM plugin<br>
-- PWG Stuffs plugin, for adding a special UAM module<br>
-- Optionally, the plugin Extended Description to support multi-languages<br>
-            </li><br><br>
+Prerequisite:<br/>
+- A gallery with all or some private categories, visible only by registered users<br/>
+- At least 2 following Piwigo\'s users groups: "Waiting," without permission on private categories, and "Confirmed" with all the permissions on the private categories<br/>
+- UAM plugin<br/>
+- PWG Stuffs plugin, for adding a special UAM module<br/>
+- Optionally, the plugin Extended Description to support multi-languages<br/>
+            </li><br/><br/>
             <li>
-Stages:<br><br>
+Stages:<br/><br/>
 A. In plugin UAM:
               <ol>
                 <li>Enable registration confirmation</li>
@@ -316,7 +288,7 @@ A. In plugin UAM:
                 <li>Select the "Confirmed" group under "For users who have confirmed their registration"</li>
                 <li>Save the plugin configuration</li>
               </ol>
-<br>
+<br/>
 B. In plugin PWG Stuffs :
               <ol>
                 <li>Go to tab "Add a new module"</li>
@@ -333,19 +305,19 @@ $lang['UAM_Tips2_txt'] = '
           <ul>
             <li>
             Goals: Inform the visitor that the registration is awaiting confirmation by posting an additional page replacing the standard index page gallery at each of these connections, and this, as registration is not approved.
-            <br><br>
+            <br/><br/>
             Advantages over the method with PWG_Stuffs: Allow formatting information and displaying the information immediately upon registration of visitors.
-            </li><br><br>
+            </li><br/><br/>
             <li>
-Prerequisite:<br>
-- A gallery with all or some private categories, visible only by registered users<br>
-- At least 2 following Piwigo\'s users groups: "Waiting," without permission on private categories, and "Confirmed" with all the permissions on the private categories<br>
-- UAM plugin<br>
-- Additional Pages plugin for adding and managing an additional page to replace the default index page of the gallery<br>
-- Optionally, the plugin Extended Description to support multi-languages<br>
-            </li><br><br>
+Prerequisite:<br/>
+- A gallery with all or some private categories, visible only by registered users<br/>
+- At least 2 following Piwigo\'s users groups: "Waiting," without permission on private categories, and "Confirmed" with all the permissions on the private categories<br/>
+- UAM plugin<br/>
+- Additional Pages plugin for adding and managing an additional page to replace the default index page of the gallery<br/>
+- Optionally, the plugin Extended Description to support multi-languages<br/>
+            </li><br/><br/>
             <li>
-Stages:<br><br>
+Stages:<br/><br/>
 A. In plugin UAM:
               <ol>
                 <li>Enable registration confirmation</li>
@@ -354,10 +326,10 @@ A. In plugin UAM:
                 <li>Select the "Confirmed" group under "For users who have confirmed their registration"</li>
                 <li>Save the plugin configuration</li>
               </ol>
-<br>
-B. In plugin Additional Pages:<br>
+<br/>
+B. In plugin Additional Pages:<br/>
                 <b>NOTE : The management of access rights for groups on Additional Pages must be turned on (see plugin configuration settings).</b>
-                <br>
+                <br/>
               <ol>
                 <li>Add a new page with at least the following parameters:</li>
                 <ul>
@@ -366,7 +338,7 @@ B. In plugin Additional Pages:<br>
                   <li>Groups allowed: Check the box corresponding to the group "Waiting" configured in UAM</li>
                   <li>Content: The text you want to use for visitors.</li>
                 </ul>
-                <br>
+                <br/>
                 <li>And that\'s it! Only visitors registered and whose registration has not been confirmed will see this additional index page.</li>
               </ol>
             </li>
@@ -412,9 +384,9 @@ $lang['UAM_Default_AdminValidationMail_Subject'] = '[username] - Registration va
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.40.4 and 2.30.7
-$lang['UAM_mail_exclusion_error'] = 'The Piwigo\'s option "The email address is mandatory for all users" has been disabled while the UserAdvancedManager\'s (UAM) plugin option "Exclusion of mail domains" remained active. This combination is illogical and not compatible!<br><br>
-Please, Reactivate the Piwigo\'s option "The email address is mandatory for all users" to be able then to disable UAM\'s option "Exclusion of mail domains" if that\'s what you want.<br><br>
-Note: This message will disappear after you have made the necessary correction and reloaded the admin page.<br><br>';
+$lang['UAM_mail_exclusion_error'] = 'The Piwigo\'s option "The email address is mandatory for all users" has been disabled while the UserAdvancedManager\'s (UAM) plugin option "Exclusion of mail domains" remained active. This combination is illogical and not compatible!<br/><br/>
+Please, Reactivate the Piwigo\'s option "The email address is mandatory for all users" to be able then to disable UAM\'s option "Exclusion of mail domains" if that\'s what you want.<br/><br/>
+Note: This message will disappear after you have made the necessary correction and reloaded the admin page.<br/><br/>';
 // --------- End: New or revised $lang ---- from version 2.40.4 and 2.30.7
 
 
@@ -429,4 +401,5 @@ $lang['UAM_group "%s" updated'] = 'For best performance, the group %s was automa
 $lang['personal_content'] = 'Content';
 
 $lang['UAM_AddURL2Mail'] = 'Add the URL of the gallery at the end of emails (like a signature)';
+$lang['UAM_Follow this link to access the gallery'] = 'Please, follow this link to access the gallery';
 ?>

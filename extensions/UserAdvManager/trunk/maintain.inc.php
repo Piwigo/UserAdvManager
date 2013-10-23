@@ -34,8 +34,6 @@ function plugin_install()
     'CONFIRMMAIL_TEXT'            => l10n('UAM_Default_ConfirmMail_Txt'),
     'MAILEXCLUSION'               => 'false',
     'MAILEXCLUSION_LIST'          => '',
-    'PASSWORDENF'                 => 'false',
-    'PASSWORD_SCORE'              => '100',
     'ADMINPASSWENF'               => 'false',
     'GHOSTRACKER'                 => 'false',
     'GHOSTRACKER_DAYLIMIT'        => '10',
@@ -60,7 +58,6 @@ function plugin_install()
     'NO_VALID_LEVEL'              => '-1',
     'VALID_LEVEL'                 => '-1',
     'DOWNGRADE_LEVEL'             => '-1',
-    'PWDRESET'                    => 'false',
     'REJECTCONNECT'               => 'false',
     'REJECTCONNECT_TEXT'          => l10n('UAM_Default_RejectConnexion_Txt'),
     'CONFIRMMAIL_SUBJECT'         => l10n('UAM_Default_ConfirmMail_Subject'),
@@ -197,23 +194,6 @@ PRIMARY KEY (`user_id`)
 ENGINE=MyISAM;';
   pwg_query($q);
 
-  // Piwigo's native tables modifications for password reset function - Add pwdreset column if not already exists
-  // ------------------------------------------------------------------------------------------------------------
-  $query = '
-SHOW COLUMNS FROM '.USERS_TABLE.'
-LIKE "UAM_pwdreset"
-;';
-  
-  $result = pwg_query($query);
-
-  if(!pwg_db_fetch_row($result))
-  {
-    $q = '
-ALTER TABLE '.USERS_TABLE.'
-ADD UAM_pwdreset enum("true","false") 
-;';
-    pwg_query($q);
-  }
 
   // Piwigo's native tables modifications for validation status
   // ----------------------------------------------------------
@@ -419,6 +399,13 @@ WHERE param = "UserAdvManager_Version"
     /* ************************************** */
       upgrade_2500_25011();
     }
+
+    if (version_compare($conf['UserAdvManager_Version'], '2.51.0') < 0)
+    {
+    /* upgrade from version 2.50.x to 2.51.0 */
+    /* *************************************** */
+      upgrade_2500_2510();
+    }
   }
 
   // Update plugin version number in #_config table and check consistency of #_plugins table
@@ -482,12 +469,6 @@ DROP TABLE '.USER_CONFIRM_MAIL_TABLE.'
 DROP TABLE '.USER_LASTVISIT_TABLE.'
 ;';
   pwg_query( $q );
-
-  $q = '
-ALTER TABLE '.USERS_TABLE.'
-DROP UAM_pwdreset 
-;';
-  pwg_query($q);
 
   $q = '
 ALTER TABLE '.USERS_TABLE.'

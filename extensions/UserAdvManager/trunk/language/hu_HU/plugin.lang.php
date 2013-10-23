@@ -44,8 +44,6 @@ $lang['UAM_Mail_with_key'] = 'Emlékeztető kulccsal';
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.12.0 and 2.12.1
-/* Global Configuration Tab */
-$lang['UAM_PasswordTest'] = 'Jelszó ellenőrzése: ';
 /* Ghost Tracker Tab */
 $lang['UAM_Tab_GhostTracker'] = 'Szellem követő';
 $lang['UAM_Reminder'] = 'E-mail emlékeztető';
@@ -53,12 +51,6 @@ $lang['UAM_Reminder_Sent_OK'] = 'IGEN';
 $lang['UAM_Reminder_Sent_NOK'] = 'NEM';
 /* Errors and Warnings */
 $lang['UAM_save_config'] = 'Konfiguráció mentve.';
-$lang['UAM_reg_err_login3'] = 'Biztonság : Jelszó kötelező!';
-$lang['UAM_reg_err_login4_%s'] = 'Biztonság : Egy ellenőrző rendszer kiszámítja a jelszó hatékonyságát. A te jelszavad hatékonysága túlságosan alacsony (hatékonyság = %s). Kérlek, válassz új jelszót az alábbi javaslatok szerint:<br>
-- Használj betűket és számokat<br>
-- Használj kis és nagy betűket<br>
-- Növeld a jelszavad hosszát (a jelek számát)<br>
-Az admin által megkövetelt minimális hatékonyság: ';
 $lang['UAM_No_reminder_for_Guest'] = 'A "Guest" ("Vendég") azonosító nem kap emlékeztetőt a Szellem-Követőtől';
 $lang['UAM_No_reminder_for_default_user'] = 'Az alapértelmezett azonosító nem kap emlékeztetőt a Szellem-Követőtől';
 $lang['UAM_No_reminder_for_Webmaster'] = 'A "Webmaster" ("Web-Mester") azonosító nem kap emlékeztetőt a Szellem-Követőtől';
@@ -96,11 +88,6 @@ $lang['UAM_No_Casse'] = 'Felhasználónév: kis-és nagybetűkre érzékeny';
 $lang['UAM_Username_Char'] = 'Felhasználónév: Kizárandó karakterek';
 $lang['UAM_Username_Char_true'] = ' Kizárandó karakterek:<br>(vesszővel elválasztva)<br><br>';
 $lang['UAM_Username_Char_false'] = ' Összes engedélyezve (alapértelmezett)';
-$lang['UAM_Password_Enforced'] = 'A jelszó biztonságosságának növelése';
-$lang['UAM_Password_Enforced_true'] = ' Bekapcsolva. Minimális érték: ';
-$lang['UAM_AdminPassword_Enforced'] = 'Adminokra érvényesítés';
-$lang['UAM_PasswordTest'] = 'Password test: ';
-$lang['UAM_ScoreTest'] = 'Eredmény: ';
 $lang['UAM_MailExclusion'] = 'E-mail domainek kizárása';
 $lang['UAM_MailExclusion_true'] = ' Zárd ki a következő domaineket:<br>(Vesszővel elválasztva)';
 

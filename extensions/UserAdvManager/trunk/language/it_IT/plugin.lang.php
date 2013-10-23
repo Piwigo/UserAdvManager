@@ -44,8 +44,6 @@ $lang['UAM_Mail_with_key'] = 'Promemoria con chiave';
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.12.0 and 2.12.1
-/* Global Configuration Tab */
-$lang['UAM_PasswordTest'] = 'Prova la password : ';
 /* Ghost Tracker Tab */
 $lang['UAM_Tab_GhostTracker'] = 'Ghost Tracker';
 $lang['UAM_Reminder'] = 'E-mail promemoria';
@@ -53,12 +51,6 @@ $lang['UAM_Reminder_Sent_OK'] = 'SI';
 $lang['UAM_Reminder_Sent_NOK'] = 'NO';
 /* Errors and Warnings */
 $lang['UAM_save_config'] = 'Configurazione salvata.';
-$lang['UAM_reg_err_login3'] = 'Sicurezza: la password è obbligatoria!';
-$lang['UAM_reg_err_login4_%s'] = 'Sicurezza: Un sistema di controllo calcola un punteggio sulla complessità della password scelta. La complessità della vostra password è troppo bassa (punteggio = %s). Per favore, scegli una nuova password più sicura quanto segue queste regole:<br>
-- Usare lettere e numeri<br>
-- Usare lettere minuscole e maiuscole<br>
-- Aumentare la lunghezza (numero dei caratteri)<br>
-Il punteggio minimo per la password richiesto dall\'amministratore è:';
 $lang['UAM_No_reminder_for_Guest'] = 'Il conto utente "Guest" non è soggetto a ricevere dei promemoria dal GhostTracker';
 $lang['UAM_No_reminder_for_default_user'] = 'L\'account utente predefinito non è soggetto a ricevere dei promemoria dal GhostTracker';
 $lang['UAM_No_reminder_for_Webmaster'] = 'Il conto utente "Webmaster" non è soggetto a ricevere dei promemoria dal GhostTracker';
@@ -96,11 +88,6 @@ $lang['UAM_No_Casse'] = 'Nome utente: distinzione tra maiusc/minusc';
 $lang['UAM_Username_Char'] = 'Nome utente: Esclusione di caratteri';
 $lang['UAM_Username_Char_true'] = 'Vieta i caratteri : <br>(usare una virgola per separare ogni carattere)<br><br>';
 $lang['UAM_Username_Char_false'] = 'Permetti tutto (predefinito)';
-$lang['UAM_Password_Enforced'] = 'Rafforzamento del livello di sicurezza delle password';
-$lang['UAM_Password_Enforced_true'] = 'Attivato. Punteggio minimo:';
-$lang['UAM_AdminPassword_Enforced'] = 'Applica a tutti gli amministratori';
-$lang['UAM_PasswordTest'] = 'Password di prova : ';
-$lang['UAM_ScoreTest'] = 'Risultato:';
 $lang['UAM_MailExclusion'] = 'Esclusione dei domini email';
 $lang['UAM_MailExclusion_true'] = 'Escludi i seguenti domini:<br>(usa la virgola per separare ogni dominio)';
 
@@ -305,12 +292,8 @@ $lang['UAM_RedirToProfile'] = 'Redirect alla pagina di configurazione';
 $lang['UAM_GTAutoGp'] = 'Cambio automatico di gruppi / stato / livello privacy';
 $lang['UAM_GTAutoMail'] = 'Invia automaticamente una mail al cambio di gruppo / stato / livello privacy';
 // --------- End: New or revised $lang ---- from version 2.30.2
-$lang['UAM %d user pwdreseted'] = 'Rinnovo password richiesto per %d utente';
-$lang['UAM %d users pwdreseted'] = 'Rinnovo password richiesto per %d utenti';
-$lang['UAM_Admins cannot be pwdreset'] = 'Il rinnovo della password non può essere impostato per gli account amministratori!';
 $lang['UAM_Bad_version_backup'] = 'La versione del file di backup non corrisponde alla versione del plugin! Il ripristino non verrà effettuato.';
 $lang['UAM_Confirm_Level'] = 'Livello della privacy<br>(lascia ------- per mantenere il predefinito di Piwigo)';
-$lang['UAM_Default user cannot be pwgreset'] = 'Rinnovo della password non può essere impostato per l\'account utente predefinito!';
 $lang['UAM_Default_AdminValidation_Txt'] = 'Ciao [username]! Grazie per esserti registrato a [mygallery].
 Il tuo account è stato attivato manualmente dal webmaster di [mygallery]. Puoi ora eseguire il login a [myurl] e modificare il tuo profilo.';
 $lang['UAM_Default_CfmMail_Custom_Txt1'] = '[username] account convalidato correttamente!';
@@ -337,19 +320,11 @@ $lang['UAM_Default_RejectConnexion_Txt'] = 'Spiacente, la tua registrazione non 
 $lang['UAM_Default_ValidationTimeout_Txt'] = 'Siamo spiacenti, il tuo account è stato eliminato poichè non hai confermato la registrazione nel tempo richiesto ([Kdays] days). Si prega di riprovare la registrazione con un account valido e una email non bloccata.';
 $lang['UAM_Error_Using_illegal_Kdays'] = 'L\'uso del tag [Kdays] è permesso solo se è attivata la scadenza per la conferma della registrazione. Controlla il testo in rosso per correggere il problema.';
 $lang['UAM_Expired_Level'] = '<b>Il livello di privacy</b> per la registrazione degli utenti  è scaduto<br>';
-$lang['UAM_Generic cannot be pwdreset'] = 'Il rinnovo della password non può essere impostato per gli account generici!';
-$lang['UAM_Guest cannot be pwdreset'] = 'Il rinnovo della password non può essere impostato per l\'account ospite!';
 $lang['UAM_MailExclusion_No'] = 'Esclusione domini mail non disponibile in quanto le email non sono obbligatorie per la registrazione';
 $lang['UAM_MiscOptions'] = 'Altre opzioni varie';
 $lang['UAM_NewFeature'] = 'Nuove funzionalità !';
 $lang['UAM_No_Backup_File'] = 'Nessun file di backup disponibile!';
 $lang['UAM_No_Valid_Level'] = 'Livello privacy per gli utenti che non hanno confermato la loro iscrizione <br>';
-$lang['UAM_Password reset selected users'] = 'Richiedi rinnovo password per gli utenti selezionati';
-$lang['UAM_Password_Reset_Msg'] = 'Cambia la tua password!';
-$lang['UAM_PwdReset'] = 'Rinnovo password';
-$lang['UAM_PwdReset_Done'] = 'Password rinnovata';
-$lang['UAM_PwdReset_NA'] = 'Password originale';
-$lang['UAM_PwdReset_Todo'] = 'Password da rinnovare';
 $lang['UAM_RejectConnexion'] = 'Rifiuta connessione dell\'utente finchè non è confermata la registrazione';
 $lang['UAM_RejectConnexion_Custom_Txt'] = 'Personalizza testo di rifiuto';
 $lang['UAM_Restoration_NOK'] = 'E\' avvenuto un errore durante il ripristino della configurazione. Controlla la validità del file di backup.';
@@ -362,9 +337,6 @@ $lang['UAM_Title5'] = 'Opzioni varie';
 $lang['UAM_Tracking confirmations'] = 'Monitora conferme';
 $lang['UAM_Tracking registered users'] = 'Monitora utenti registrati';
 $lang['UAM_Valid_Level'] = 'Livello privacy per gli utenti che hanno confermato la loro registrazione<br>';
-$lang['UAM_Webmaster cannot be pwdreset'] = 'Il rinnovo della password non può essere impostato per l\'account webmaster!';
-$lang['UAM_You cannot pwdreset your account'] = 'Il rinnovo della password non può essere impostato per il tuo stesso account!';
-$lang['UAM_You need to confirm pwdreset'] = 'Devi confermare il rinnovo della password (spunta la casella)!';
 $lang['UAM_AdminValidationMail_Subject'] = 'Personalizzare oggetto della e-mail di convalida manuale';
 $lang['UAM_ConfirmMail_ReMail_Subject'] = 'Personalizza oggetto della mail di promemoria della verifica registrazione';
 $lang['UAM_ConfirmMail_Subject'] = 'Personalizza oggetto della email di registrazione';

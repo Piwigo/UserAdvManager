@@ -11,14 +11,6 @@ $lang['UAM_carexcTitle_d'] = 'Varētu būt saistoši aizliegt izmantot lietotāj
 NB: Šī iespēja ļauj izslēgt arī veselus vārdus.
 <br><br>
 <b style=&quot;color: red;&quot;>Uzmanību: Šī opcija neatstāj iespaidu uz lietotājvārdiem, kas izveidoti pirms to aktivēšanas.</b>';
-$lang['UAM_passwTitle_d'] = 'Šīs opcijas iespējošana padara par obligātu paroles ietveršanu reģistrējoties, un pieprasa, lai apmeklētāju izvēlētā parole atbilstu minimālajam komplicētības prasībām. Ja šis līmenis nav sasniegts, tiem parādīts sasniegtais komplicētības rādītājs, minimāli pieļaujamais slieksnis, kā arī ieteikumi, kas jādara, lai sasniegtu labāku rezultātu.<br><br>
-Pastāv paroles lauka tests, kas mēra paroles komplicētības pakāpi, un var sniegt padomu, kā uzlabot un padarīt šo rezultātu labāku.<br><br>
-Note: Komplicētības rādītājs tiek aprēķināts izmantojot vairākus parametrus:
-garumu, izmantoto rakstzīmju tipu (burti, cipari, lielie burti, mazie burti, speciālās rakstzīmes). Rezultāts zem100 tiek atzīts par nepietiekami zemu (low), no 100 līdz 500, kā vidēji sarežģīts; virs 500, drošības līmenis ir lielisks.';
-$lang['UAM_passwtestTitle'] = 'Paroles komplicētības testēšana';
-$lang['UAM_passwtestTitle_d'] = 'Ievadiet testēšanao paredzēto paroli un klikšķiniet uz&quot;Score calculation&quot; lai redzētu rezultātu.';
-$lang['UAM_passwadmTitle_d'] = 'Administrators var izveidot lietotāja kontu ar vai bez paroles komplicētības pārbaudes aplikāciju.<br><br>
-Note: Ja lietotājs, kura konts jau izveidots, grib nomainīt savu paroli un ir aktīva paroles stingrības uzlabišanas aplikācija, būs jāievēro visi stingrības uzlabošanas noteikumi.';
 $lang['UAM_confirmgrpTitle'] = 'Pārbaudāmās Grupas';
 $lang['UAM_confirmgrpTitle_d'] = '<b style=&quot;color:
 red;&quot;>UZMANĪBU : Pārbaudāmo grupu lietošana pieprasa, ka esat izveidojis vismaz vienu lietotājgrupu un, ka tā ir definēta &quot; pēc noklusējuma &quot; Piwigo grupu lietotāju pārvaldītājā.</b><br><br>
@@ -300,12 +292,6 @@ Tālāk pielāgojiet saturu ar speciālo tagu-iezīmju palīdzību:<br>
 - <b style=&quot;color: red;&quot;>[Kdays]</b> lai ievietotu dienu skaitu, kurā jāveic reģistrācijas apstiprināšana (&quot;Reģistrācijas apstiprināšanas termiņš ierobežots;&quot; jābūt iespējotam).
 <br><br>
 Lai lietotu daudzvalodu variantu, ja tas aktīvs, varat izmantot Paplašinātā apraksta spraudņa tagus.';
-$lang['UAM_PwdResetTitle_d'] = 'Iespējojot šo opciju Piwigo lietotāju pārvaldības panelim tiks pievienota jauna iezīme (Users> Manage), ko var izmantot, lai atlasītiem lietotājiem atjaunotu paroli. Turklāt ir pievienota jaunā kolonna, lai parādītu paroles statusu katram no viņiem ar šādām vērtībām:<br>
-- Parole būtu jāatjauno: Plānots paroles atjaunošanas pieprasījums.<br>
-- Parole atjaunota: Parole atjaunota pēc saņemtā pieprasījuma.<br>
-- Sākotnējā parole: Sākotnējā parole izvēlēta pie konta izveidošanas un nav bijis pieprasījuma to atjaunot.<br>
-Webmaster, vispārējie un viesu konti ir izslēgti no šīs funcijas.<br>
-Šie lietotāji tiks automātiski novirzīti uz to pielāgošanas lapām katrā no to savienojumiem līdz tie nomainīs savu paroli un nepārprotama ziņa par to tiks parādīta šajā lapā.';
 $lang['UAM_remailTitle_d'] = 'Šī opcija ļauj nosūtīt atgādinājuma e-pastu reģistrētiem, bet laikā neapstiprinājušiem savu reģistrāciju, lietotājiem. Tas tādējādi strādā kopā ar &quot;Reģistrācijas apstiprināšanu&quot;
 <br><br>
 Var tikt izsūtīti divu veidu e-pasti: Ar vai bez apstiprinājuma atslēgas ģenerēšanu. Ja nepieciešams, e-pastu saturu var pielāgot.
