@@ -45,7 +45,6 @@ $lang['UAM_Mail_with_key'] = 'Aviso con clave';
 
 // --------- Starting below: New or revised $lang ---- from version 2.12.0 and 2.12.1
 /* Global Configuration Tab */
-$lang['UAM_PasswordTest'] = 'Cálculo de la puntuación';
 /* Ghost Tracker Tab */
 $lang['UAM_Tab_GhostTracker'] = 'Ghost Tracker';
 $lang['UAM_Reminder'] = 'Recordatorio por email';
@@ -53,12 +52,6 @@ $lang['UAM_Reminder_Sent_OK'] = 'SI';
 $lang['UAM_Reminder_Sent_NOK'] = 'NO';
 /* Errors and Warnings */
 $lang['UAM_save_config'] ='Configuración guardada.';
-$lang['UAM_reg_err_login3'] = '¡Seguridad: Contraseña obligatoria!';
-$lang['UAM_reg_err_login4_%s'] = 'Seguridad: Un sistema de control calcula la puntuación de la complejidad de la contraseñas. La complejidad de la contraseña es demasiado baja (puntuación = %s). Por favor, elija una nueva contraseña más segura siguiendo estas reglas:<br>
-- Usar letras y números<br>
-- Utilice minúsculas y mayúsculas<br>
-- Aumentar su longitud (número de caracteres)<br>
-La puntuación mínima de las contraseñas   exigida por el administrador es la siguiente: ';
 $lang['UAM_No_reminder_for_Guest'] = 'La cuenta "Invitado" no está sujeta a recibir recordatorios de Ghost Tracker';
 $lang['UAM_No_reminder_for_default_user'] = 'La cuenta predeterminada no está sujeto a recibir recordatorios de Ghost Tracker';
 $lang['UAM_No_reminder_for_Webmaster'] = 'La cuenta "webmaster" no está sujeta a recibir recordatorios de Ghost Tracker';
@@ -96,11 +89,6 @@ $lang['UAM_No_Casse'] = 'Nombres de usuarios: mayúsculas y minúsculas';
 $lang['UAM_Username_Char'] = 'Nombres de usuarios: Excluyendo los caracteres';
 $lang['UAM_Username_Char_true'] = ' Prohibición de caracteres:<br>(Utilice una coma para separar cada caracteres)<br><br>';
 $lang['UAM_Username_Char_false'] = ' Permiso de todos (por defecto)';
-$lang['UAM_Password_Enforced'] = 'Fortalecimiento del nivel de seguridad de las contraseñas';
-$lang['UAM_Password_Enforced_true'] = ' Activar. Puntuación mínima:';
-$lang['UAM_AdminPassword_Enforced'] = 'Aplicar a los administradores';
-$lang['UAM_PasswordTest'] = 'Test de Contraseña: ';
-$lang['UAM_ScoreTest'] = 'Resultado: ';
 $lang['UAM_MailExclusion'] = 'Exclusión de dominios de correo electrónico';
 $lang['UAM_MailExclusion_true'] = ' Excluir los siguientes dominios: <br>(Utilice una coma para separar cada dominio)';
 
@@ -239,10 +227,7 @@ $lang['UAM_RedirToProfile'] = 'Redirigir a la página de personalización';
 $lang['UAM_GTAutoGp'] = 'Cambio automático de grupo / estado / nivel de confidencialidad';
 $lang['UAM_GTAutoMail'] = 'Automáticamente el envío de un correo electrónico cuando se cambia de grupo / estado / nivel de confidencialidad';
 // --------- End: New or revised $lang ---- from version 2.30.2
-$lang['UAM %d user pwdreseted'] = 'Se pide renovación de contraseña para el usuario %d';
-$lang['UAM %d users pwdreseted'] = 'Se pide renovación de contraseña para los usuarios %d';
 $lang['UAM_AdminValidationMail_Subject'] = 'Personalizar el asunto del correo electrónico de validación manual';
-$lang['UAM_Admins cannot be pwdreset'] = 'La renovación de contraseña no puede ser solicitada para un administrador';
 $lang['UAM_Bad_version_backup'] = 'La versión del fichero de copia de seguridad no corresponde con la versión del plugin ! La restauración no se realizo.';
 $lang['UAM_ConfirmMail_ReMail_Subject'] = 'Personalizar el asunto del correo electrónico de recordatorio de confirmación de inscripción.';
 $lang['UAM_ConfirmMail_Subject'] = 'Personalizar el asunto del correo electrónico de confirmación de inscripción.';
@@ -257,9 +242,6 @@ $lang['UAM_USRAuto'] = 'Gestión automática de los usuarios no confirmados';
 $lang['UAM_USRAutoDel'] = 'Mensaje personalizado de cuenta eliminada';
 $lang['UAM_USRAutoMail'] = 'Recordatorio por correo electrónico automatizado';
 $lang['UAM_Valid_Level'] = 'Nivel de privacidad  para los usuarios que hayan confirmado su inscripción<br>';
-$lang['UAM_Webmaster cannot be pwdreset'] = 'La contraseña de webmaster no puede ser renovada !';
-$lang['UAM_You cannot pwdreset your account'] = 'Renovación de contraseñas no se pueden establecer para su propia cuenta!';
-$lang['UAM_You need to confirm pwdreset'] = 'Debe confirmar la renovación de contraseñas (casilla de verificación)!';
 $lang['UAM_Title5'] = 'Diversas opciones';
 $lang['UAM_Tips2_txt'] = '    <ul>
        <li>
@@ -315,12 +297,6 @@ $lang['UAM_Restoration_OK'] = 'Restauración de la configuración completada con
 $lang['UAM_Restoration_NOK'] = 'Se produjo un error mientras se restaura la configuración. Por favor, compruebe la validez de su archivo de copia de seguridad.';
 $lang['UAM_RejectConnexion_Custom_Txt'] = 'Personalización del texto de rechazo';
 $lang['UAM_RejectConnexion'] = 'Rechazar conexión del usuario hasta que el registro se confirma';
-$lang['UAM_PwdReset_Todo'] = 'Contraseñas a renovar';
-$lang['UAM_PwdReset_NA'] = 'Contraseña original';
-$lang['UAM_PwdReset'] = 'Renovar contraseña';
-$lang['UAM_Password_Reset_Msg'] = 'Por favor cambie su contraseña';
-$lang['UAM_PwdReset_Done'] = 'Contraseña renovada';
-$lang['UAM_Password reset selected users'] = 'Solicitud de renovación de contraseñas para usuarios seleccionados';
 $lang['UAM_No_Valid_Level'] = 'Nivel de privacidad  para los usuarios que no hayan confirmado su inscripción';
 $lang['UAM_No_Usermanager'] = 'Ningún visitante sin confirmar en lista por el momento';
 $lang['UAM_No_Userlist'] = 'Ningún visitante en lista por el momento';
@@ -330,9 +306,7 @@ $lang['UAM_NewFeature'] = 'Nueva característica!';
 $lang['UAM_MailInfo_Subject'] = 'Personalice la información email';
 $lang['UAM_MiscOptions'] = 'Otras varias opciones';
 $lang['UAM_MailExclusion_No'] = 'Dominios de exclusión E-mail - No disponible porque las direcciones de correos electrónicos no son obligatorias para las inscripciones!';
-$lang['UAM_Guest cannot be pwdreset'] = 'Renovación de contraseñas no se pueden establecer para visitantes';
 $lang['UAM_GTReminder_Subject'] = 'Personalización manual del Rastreador de Ghost de recordatorio de asunto del correo electrónico';
-$lang['UAM_Generic cannot be pwdreset'] = 'Renovación de contraseñas no se pueden establecer para cuentas genéricas!';
 $lang['UAM_GTAutomail_Subject'] = 'Personalizar el Rastreador automático Ghost de degradación de asunto de correo electrónico.';
 $lang['UAM_GTAutomail_Text'] = 'Personalización del texto de degradación por correo electrónico';
 $lang['UAM_Expired_Level'] = '<b>Nivel de privacidad</b> para el registro de usuario ha caducado<br>';
@@ -351,7 +325,6 @@ Ha realizado cambios significativos en su perfil en la galería [mygallery]. Por
 $lang['UAM_Default_InfoMail_Subject'] = '[nombre de usuario] - Su información de registro en [mygallery]';
 $lang['UAM_Default_GTReminder_Subject'] = '[nombre de usuario] - Pasó mucho tiempo desde su última visita en [mygallery]';
 $lang['UAM_Default_GTAutoMail_Subject'] = '[nombre de usuario] - Su cuenta ha sido degradada en [mygallery]';
-$lang['UAM_Default user cannot be pwgreset'] = 'Renovación de contraseñas, no se pueden establecer para la cuenta de usuario por defecto!';
 $lang['UAM_Default_GhstDeletion_Txt'] = 'Lo sentimos [nombre de usuario], tu cuenta ha sido borrada por un tiempo demasiado largo pasado desde su última visita en [mygallery]. Haga el favor de registrarse de nuevo.';
 $lang['UAM_Default_GhstDemotion_Txt'] = 'Lo sentimos [nombre de usuario], su cuenta ha quedado obsoleta debido a un tiempo demasiado largo pasado desde su última visita en [mygallery]. Por favor, utilice el siguiente enlace para confirmar tu cuenta:';
 $lang['UAM_Default_GhstReminder_Txt'] = 'Hola [nombre de usuario].

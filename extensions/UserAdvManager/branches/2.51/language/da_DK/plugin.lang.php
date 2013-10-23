@@ -20,7 +20,6 @@
 // | Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, |
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
-$lang['UAM_AdminPassword_Enforced'] = 'Gældende administratorer';
 $lang['UAM_ConfirmMail_Subject'] = 'Tilpas emne på mail vedrørende registreringsbekræftelse';
 $lang['UAM_ConfirmMail_Text'] = ' Tilpasning af bekræftelsesmail:';
 $lang['UAM_ConfirmMail_TimeOut_true'] = ' Aktiver. Antal dage indtil udløb:';
@@ -29,8 +28,6 @@ $lang['UAM_Confirm_Level'] = 'Privatlivsniveau<br>(bevar ------- for at beholde 
 $lang['UAM_Confirm_Mail'] = 'Regisreringsbekræftelse:';
 $lang['UAM_Confirm_Mail_local'] = ' Aktiver - Administratorbekræftelse';
 $lang['UAM_Confirm_Mail_true'] = ' Aktiver - Brugerbekræftelse';
-$lang['UAM %d user pwdreseted'] = 'Fornyelse af adgangskode krævet af brugerne %s';
-$lang['UAM %d users pwdreseted'] = 'Fornyelse af adgangskode krævet af brugerne %s';
 $lang['UAM_%d_Mail_With_Key'] = '%s meddelelse med nøglefornyelse afsendt';
 $lang['UAM_%d_Mails_With_Key'] = '%s meddelelser med nøglefornyelse afsendt';
 $lang['UAM_%d_Reminder_Sent'] = '%s påmindelsesmeddelese afsendt';
@@ -41,7 +38,6 @@ $lang['UAM_Add of %s'] = 'Profil oprettet for %s';
 $lang['UAM_AdminConfMail'] = 'Registreringsbekræftelse af administratorer';
 $lang['UAM_AdminValidationMail_Subject'] = 'Tilpas emnet på mails vedrørende manuel godkendelse';
 $lang['UAM_AdminValidationMail_Text'] = 'Besked om manuel registreringsbekræftelse';
-$lang['UAM_Admins cannot be pwdreset'] = 'Adgangskodefornyelse kan ikke opsættes på administatorkonto!';
 $lang['UAM_Bad_version_backup'] = 'Versionen af sikkerhedskopien svarer ikke til plugin-versionen!
 Gendannelsen blev ikke udført.';
 $lang['UAM_Change'] = 'Ændring af brugeres gruppe-/status-/privatlivsniveau er bekræftet';
@@ -68,7 +64,6 @@ $lang['UAM_Confirm_Status'] = 'Statusser<br>(bevar ------- for at beholde Piwigo
 $lang['UAM_Confirm_grpstat_notice'] = 'Advarsel: Det anbefales at enten benytte grupper eller bekræftelsesstatus, ikke begge på samme tid. Privatlivsniveauet kan benyttes i forbindelse med en gruppe- eller statustildeling.';
 $lang['UAM_CustomPasswRetr'] = 'Tilpas indhold af mail om glemt adgangskode';
 $lang['UAM_Customize_messagesandmails'] = 'Tilpas indhold meddelelserne og mailene';
-$lang['UAM_Default user cannot be pwgreset'] = 'Fornyelse af adgangskode kan ikke opsættes for standardbrugerkontoen!';
 $lang['UAM_Default_AdminValidationMail_Subject'] = '[username] - Registration godkendt i [mygallery]';
 $lang['UAM_Default_AdminValidation_Txt'] = 'Hej [username]! For fordi du registrerede dig og velkommen til [mygallery].
 
@@ -116,12 +111,6 @@ $lang['UAM_empty_pwd'] = '[tom adgangskode]';
 $lang['UAM_infos_mail %s'] = '%s, her er dine loginoplysninger til galleriet:';
 $lang['UAM_no_update_pwd'] = '[profil opdateret uden ændring af adgangskode]';
 $lang['UAM_reg_err_login2'] = 'Brugernavnet må ikke indehold følgende tegn:';
-$lang['UAM_reg_err_login3'] = 'Sikkerhed: En adgangskode er påkrævet!';
-$lang['UAM_reg_err_login4_%s'] = 'Sikkerhed: Et kontrolsystem beregner en værdi for den valgte adgangskodes kompleksitet. Din adgangskodes kompleksitet er for lav (værdi = %s). Vær venlig at vælge en ny og mere sikker adgangskode ved at følge disse regler:<br>
-- Brug bogstaver og tal<br>
-- Brug små og store bogstaver<br>
-- Forøg længden (antal tegn)<br>
-Administratoren kræver følgende minimale adgangskodeværdi:';
 $lang['UAM_reg_err_login5'] = 'En mailleverandør er accepteres ikke af os. Ikke-accepterede mailleverandører er:';
 $lang['UAM_save_config'] = 'Opsætning er gemt.';
 $lang['UAM_submit'] = 'Gem indstillinger';
@@ -139,9 +128,6 @@ $lang['UAM_Validated_Group'] = 'Gruppe til brugere, der har bekræftet deres reg
 $lang['UAM_Validated_Status'] = 'Status til brugere, der har bekræftet deres registrering<br>';
 $lang['UAM_Validation of %s'] = 'Bekræftelse af %s';
 $lang['UAM_ValidationLimit_Info'] = 'Begrænset frist for registreringsbekræftelse';
-$lang['UAM_Webmaster cannot be pwdreset'] = 'Fornyelse af adgangskode kan ikke opsættes på webmasterkontoen!';
-$lang['UAM_You cannot pwdreset your account'] = 'Fornyelse af adgangskode kan ikke opsættes på din egen konto!';
-$lang['UAM_You need to confirm pwdreset'] = 'Du skal bekræfte fornyelse af adgangskode (checkboks)!';
 $lang['UAM_audit'] = 'Auditindstillinger';
 $lang['UAM_audit_ok'] = 'Audit er ok';
 $lang['UAM_Tips2'] = 'Oplysninger om ikke-bekræftede registreringer med UAM og Additional Pages';
@@ -169,9 +155,6 @@ $lang['UAM_Tab_GhostTracker'] = 'Ghost Tracker';
 $lang['UAM_Tab_Global'] = 'Opsætning';
 $lang['UAM_Tips1'] = 'Oplysning om ikke-bekræftede registeringer med UAM og PWG_Stuffs';
 $lang['UAM_Title1'] = 'Begræsninger vedrørende registreringer';
-$lang['UAM_PwdReset_Done'] = 'Adgangskoden er fornyet';
-$lang['UAM_PwdReset_NA'] = 'Oprindelig adgangskode';
-$lang['UAM_PwdReset_Todo'] = 'Adgangskoden fornyes';
 $lang['UAM_RedirToProfile'] = 'Omdiriger til tilpasningsside';
 $lang['UAM_Registration_Date'] = 'Registreringsdato';
 $lang['UAM_RejectConnexion'] = 'Afvis brugerens logins indtil registrering er bekræftet';
@@ -196,13 +179,7 @@ $lang['UAM_No_validation_for_Guest'] = 'Kontoen "Guest" ("Gæst") skal ikke bekr
 $lang['UAM_No_validation_for_Webmaster'] = 'Kontoen "Webmaster" skal ikke bekræftes';
 $lang['UAM_No_validation_for_default_user'] = 'Standardkontoen skal ikke bekræftes';
 $lang['UAM_No_validation_for_your_account'] = 'Din personlige konto skal ikke bekræftes';
-$lang['UAM_Password reset selected users'] = 'Bed om at udvalgte brugere fornyer deres adgangskode';
 $lang['UAM_Password: %s'] = 'Adgangskode: %s';
-$lang['UAM_PasswordTest'] = 'Adgangskodetest:';
-$lang['UAM_Password_Enforced'] = 'Stærkere sikkerhedsniveau på adgangkoder';
-$lang['UAM_Password_Enforced_true'] = ' Aktiver. Minimal score:';
-$lang['UAM_Password_Reset_Msg'] = 'Vær venlig at ændre din adgangskode!';
-$lang['UAM_PwdReset'] = 'Fornyelse af adgangskode';
 $lang['UAM_MailInfo_Text'] = 'Tilpasning af informationsmail:';
 $lang['UAM_Mail_Info'] = 'Informationsmail til bruger:';
 $lang['UAM_Mail_with_key'] = 'Påmindelse med nøgle';
@@ -220,14 +197,12 @@ $lang['UAM_No_Ghosts'] = 'Ingen spøgelsesbesøgende i øjeblikket';
 $lang['UAM_No_Userlist'] = 'Ingen besøgende at vise i øjeblikket';
 $lang['UAM_No_Usermanager'] = 'Ingen ikke-bekræftede registreringer at vise i øjeblikket';
 $lang['UAM_GT_Reset'] = 'Nulstil Ghost Tracker';
-$lang['UAM_Generic cannot be pwdreset'] = 'Fornyelse af adgangskode kan ikke opsættes for generiske konti!';
 $lang['UAM_GhostTracker'] = 'Håndtering af spøgelsesbesøgende (Ghost Tracker)';
 $lang['UAM_GhostTracker_Init_OK'] = 'Ghost Tracker er nulstillet!';
 $lang['UAM_GhostTracker_ReminderText'] = 'Tilpasning af Ghost Trackers påmindelsesmeddelelse';
 $lang['UAM_GhostTracker_Title'] = 'Håndteringer af spøgelsesbesøgende';
 $lang['UAM_GhostTracker_true'] = ' Aktiver. Maksimal tid i dage mellem to besøg:';
 $lang['UAM_Ghost_reminder_of_%s'] = '%s, dette er en påmindelsesmail';
-$lang['UAM_Guest cannot be pwdreset'] = 'Fornyelse af adgangskode kan ikke opsættes for gæstekonto!';
 $lang['UAM_HidePassw'] = 'Adgangskode i klartekst i informationsmail';
 $lang['UAM_LastVisit_Date'] = 'Seneste besøg';
 $lang['UAM_Link: %s'] = 'Klik på linket for at bekræfte registreringen: %s';

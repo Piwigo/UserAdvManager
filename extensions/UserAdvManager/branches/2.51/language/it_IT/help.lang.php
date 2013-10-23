@@ -11,13 +11,6 @@ $lang['UAM_carexcTitle_d'] = 'Può essere interessante vietare certi caratteri p
 NB: L\'opzione può anche escludere parole intere.
 <br><br>
 <b style=&quot;color: red;&quot;>Attenzione: questa opzione non ha alcun effetto sui pseudo creati prima della sua attivazione.</b>';
-$lang['UAM_passwTitle_d'] = 'L\'attivazione di questa opzione rende obbligatorio l\'inserimento di una password al momento dell\'iscrizione, e richiede la password scelta dal visitatore di incontrare un livello minimo di complessità. Se la soglia non viene raggiunta, il punteggio conseguito e il punteggio minimo da raggiungere sono visualizzate, insieme con raccomandazioni per aumentare il valore di questa partitura.<br><br>
-Non vi è prova in campo per misurare la complessità di una password, e può permettersi di avere un\'idea del punteggio per definire personalizzati complessi.<br><br>
-Nota: Il punteggio di una password è calcolato sulla base di diversi parametri: la lunghezza, il tipo di caratteri utilizzati (lettere, numeri, lettere maiuscole, minuscole, caratteri speciali). Un punteggio inferiore a 100 è considerata bassa, da 100 a 500, la complessità è nella media, oltre 500, la sicurezza è eccellente.';
-$lang['UAM_passwtestTitle'] = 'Prova la complessità di una password';
-$lang['UAM_passwtestTitle_d'] = 'Inserisci la password per testarla e quindi fare clic su &quot;Calcolo del punteggio&quot;, per vedere il risultato.';
-$lang['UAM_passwadmTitle_d'] = 'Un amministratore può creare un account utente con o senza l\'applicazione della regola della complessità di calcolo.<br><br>
-Nota: Se l\'account utente creato vuole cambiare la password e il rafforzamento password per gli utenti è attivo, sarà soggetta alla regola.';
 $lang['UAM_infomailTitle_d'] = 'Questa opzione consente di automatizzare l\'invio di una e-mail le informazioni a un utente quando cambia la sua password o indirizzo e-mail nel loro profilo.<br><br>
 Il contenuto del messaggio inviato è composto da una parte personalizzabile di introdurre una piccola nota di benvenuto e una parte fissa che indica il login, password e indirizzo di posta elettronica dell\'utente.';
 
@@ -201,12 +194,6 @@ Personalizzare ulteriormente il contenuto inserendo speciali tags:<br>
 <b style=&quot;color: red;&quot;>[username]</b> non è disponibile qui perché l\'utente in questione è stato cancellato.
 <br><br>
 Testo personalizzato per il reindirizzamento pagina può essere inserito in questo campo che è compatibile con l\'editor FCK e, per il multi-lingue, è possibile utilizzare i tag [lang] del plugin Extended description se ​​è attivo.';
-$lang['UAM_PwdResetTitle_d'] = 'L\'attivazione di questa opzione aggiunge una nuova funzionalità nel pannello di gestione degli utenti Piwigo (Utenti> Gestione) che può essere applicato per rinnovare la password per gli utenti selezionati. Inoltre, una nuova colonna viene aggiunta per mostrare lo stato di password per ciascuno di essi con i seguenti valori:<br>
-Password in attesa di rinnovo: Una richiesta per una nuova password è stata inserita.<br>
-- Password rinnovata: La password è stata cambiata dopo una richiesta.<br>
-- Password originale: La password originale scelta al momento della creazione dell\'account non è mai stata cambiata.<br>
-Webmaster, account generici e gli ospiti sono esclusi da questa funzione.<br>
-Questi utenti saranno automaticamente reindirizzati alla loro pagina di personalizzazione per ciascuna delle loro connessioni fino a quando hanno cambiato la propria password e un messaggio esplicito verrà visualizzato in questa pagina.';
 $lang['UAM_remailTitle_d'] = 'Questa opzione consente di inviare un promemoria via email agli utenti registrati ma che non hanno confermato la loro registrazione in tempo. Essa si avvale della collaborazione con la &quot;Conferma della registrazione&quot;
 <br><br>
 2 tipi di email possono essere inviate: con o senza rigenerazione della chiave di conferma. Se lo si desidera, il contenuto delle email può essere personalizzato.

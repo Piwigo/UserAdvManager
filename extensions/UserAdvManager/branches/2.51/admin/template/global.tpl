@@ -185,41 +185,7 @@ function uam_blockToggleDisplay( headerId, contentId )
             </div>
             </label>
           </li>
-          <li>
-            <label class="cluetip" title="{'UAM_Password_Enforced'|translate}|{'UAM_passwTitle_d'|translate}">
-              {'UAM_Password_Enforced'|@translate}
-            </label>
-          
-            <label for="UAM_Password_Enforced_false"><input id="UAM_Password_Enforced_false" type="radio" value="false" {$UAM_PASSWORDENF_FALSE} name="UAM_Password_Enforced"/>
-              {'UAM_Disable'|@translate}
-            </label>
-            <label for="UAM_Password_Enforced_true"><input id="UAM_Password_Enforced_true" type="radio" value="true" {$UAM_PASSWORDENF_TRUE} name="UAM_Password_Enforced"/>
-              {'UAM_Password_Enforced_true'|@translate}&nbsp;
-            <input type="text" name="UAM_Password_Score" value="{$UAM_PASSWORD_SCORE}" size="5" style="text-align: center;"/>
-            </label>
-            {'UAM_PasswordTest'|@translate}
-              <input class="cluetip" title="{'UAM_passwtestTitle'|translate}|{'UAM_passwtestTitle_d'|translate}" type="text" name="UAM_Password_Test" value="{$UAM_PASSWORD_TEST}" size="50" style="text-align: left;"/>
-              &nbsp;&nbsp;&nbsp;
-              <input class="submit" type="submit" value="{'UAM_PasswordTest'|@translate}" name="PasswordTest"/>
-              &nbsp;&nbsp;&nbsp;{'UAM_ScoreTest'|@translate}{$UAM_PASSWORD_TEST_SCORE}
-            
-          </li>
-          <ul>
-            <li>
-              <label class="cluetip" title="{'UAM_AdminPassword_Enforced'|translate}|{'UAM_passwadmTitle_d'|translate}">
-                {'UAM_AdminPassword_Enforced'|@translate}
-              </label>
-            
-              <label for="UAM_AdminPassword_Enforced_false"><input id="UAM_AdminPassword_Enforced_false" value="false" {$UAM_ADMINPASSWENF_FALSE} name="UAM_AdminPassword_Enforced" type="radio"/>
-                {'UAM_Disable'|@translate}
-              </label>
-              <label for="UAM_AdminPassword_Enforced_true"><input id="UAM_AdminPassword_Enforced_true" value="true" {$UAM_ADMINPASSWENF_TRUE} name="UAM_AdminPassword_Enforced" type="radio"/>
-                {'UAM_Enable'|@translate}
-              </label>
-            
-            </li>
-          </ul>
-      
+
           <li>
           {if $UAM_EMAIL_MANDATORY}
             <label class="cluetip" title="{'UAM_MailExclusion'|translate}|{'UAM_mailexcTitle_d'|translate}">
@@ -282,11 +248,14 @@ function uam_blockToggleDisplay( headerId, contentId )
               {'UAM_Confirm_Mail'|@translate}
             </label>
             <label for="UAM_Confirm_Mail_false"><input type="radio" id="UAM_Confirm_Mail_false" value="false" {$UAM_CONFIRM_MAIL_FALSE} name="UAM_Confirm_Mail"/>
-              {'UAM_Disable'|@translate}</label>
+              {'UAM_Disable'|@translate}
+            </label>
             <label for="UAM_Confirm_Mail_true"><input type="radio" id="UAM_Confirm_Mail_true" value="true" {$UAM_CONFIRM_MAIL_TRUE} name="UAM_Confirm_Mail"/>
-              {'UAM_Confirm_Mail_true'|@translate}</label>
+              {'UAM_Confirm_Mail_true'|@translate}
+            </label>
             <label for="UAM_Confirm_Mail_local"><input type="radio" id="UAM_Confirm_Mail_local" value="local" {$UAM_CONFIRM_MAIL_LOCAL} name="UAM_Confirm_Mail"/>
-              {'UAM_Confirm_Mail_local'|@translate}</label>
+              {'UAM_Confirm_Mail_local'|@translate}
+            </label>
           </li>
         </ul>
           <div id="UAM_CONFIRM_MAIL__" {if $UAM_CONFIRM_MAIL_FALSE}style="display:none"{/if}>
@@ -398,7 +367,7 @@ function uam_blockToggleDisplay( headerId, contentId )
                   {'UAM_Disable'|@translate}
                 </label>
                 <label for="UAM_RejectConnexion_true"><input id="UAM_RejectConnexion_true" type="radio" value="true" {$UAM_REJECTCONNECT_TRUE} name="UAM_RejectConnexion"/>
-                  {'UAM_Enable'|@translate}</label>
+                  {'UAM_Enable'|@translate}
                 </label>
               </li>
               <li id="UAM_REJECTLOGIN" {if $UAM_REJECTCONNECT_FALSE}style="display: none"{/if}>
@@ -498,7 +467,8 @@ function uam_blockToggleDisplay( headerId, contentId )
                   {'UAM_ValidationLimit_Info'|@translate}
                 </label>
                 <label for="UAM_ConfirmMail_TimeOut_false" ><input id="UAM_ConfirmMail_TimeOut_false" type="radio" value="false" {$UAM_CONFIRMMAIL_TIMEOUT_FALSE} name="UAM_ConfirmMail_TimeOut"/>
-                  {'UAM_Disable'|@translate}</label>
+                  {'UAM_Disable'|@translate}
+                </label>
                 <label for="UAM_ConfirmMail_TimeOut_true" ><input id="UAM_ConfirmMail_TimeOut_true" type="radio" value="true" {$UAM_CONFIRMMAIL_TIMEOUT_TRUE} name="UAM_ConfirmMail_TimeOut"/>
                   {'UAM_ConfirmMail_TimeOut_true'|@translate}
                 <input type="text" name="UAM_ConfirmMail_Delay" value="{$UAM_CONFIRMMAIL_DELAY}" size="5" style="text-align: center;"/>
@@ -509,9 +479,11 @@ function uam_blockToggleDisplay( headerId, contentId )
                   {'UAM_ConfirmMail_Remail'|@translate}
                 </label>
                 <label for="UAM_ConfirmMail_Remail_false" ><input id="UAM_ConfirmMail_Remail_false" type="radio" value="false" {$UAM_CONFIRMMAIL_REMAIL_FALSE} name="UAM_ConfirmMail_Remail"/>
-                  {'UAM_Disable'|@translate}</label>
+                  {'UAM_Disable'|@translate}
+                </label>
                 <label for="UAM_ConfirmMail_Remail_true" ><input id="UAM_ConfirmMail_Remail_true" type="radio" value="true" {$UAM_CONFIRMMAIL_REMAIL_TRUE} name="UAM_ConfirmMail_Remail"/>
-                  {'UAM_Enable'|@translate}</label>
+                  {'UAM_Enable'|@translate}
+                </label>
               </li>
             <a id="show_UAM_ConfirmMail" >{'UAM_Customize_messagesandmails'|translate}</a>
             <a id="hide_UAM_ConfirmMail" style="display: none">{'hide details'|translate}</a>
@@ -672,6 +644,7 @@ function uam_blockToggleDisplay( headerId, contentId )
             
               <label for="UAM_GTAuto_false"><input id="UAM_GTAuto_false" type="radio" value="false" {$UAM_GTAUTO_FALSE} name="UAM_GTAuto"/>
                 {'UAM_Disable'|@translate}
+              </label>
               
               <label for="UAM_GTAuto_true"><input id="UAM_GTAuto_true" type="radio" value="true" {$UAM_GTAUTO_TRUE} name="UAM_GTAuto"/>
                 {'UAM_Enable'|@translate}
@@ -793,19 +766,6 @@ function uam_blockToggleDisplay( headerId, contentId )
               {'UAM_Enable'|@translate}
             </label>
           </li>
-
-            <li>
-              <label class="cluetip" title="{'UAM_AddURL2Mail'|translate}|{'UAM_AddURL2Mail_d'|translate}">
-                {'UAM_AddURL2Mail'|@translate}
-              </label>
-              <label for="UAM_AddURL2Mail_false"><input id="UAM_AddURL2Mail_false" value="false" {$UAM_ADDURL2MAIL_FALSE} name="UAM_AddURL2Mail" type="radio"/>
-                {'UAM_Disable'|@translate}
-              </label>
-              <label for="UAM_AddURL2Mail_true"><input id="UAM_AddURL2Mail_true" value="true" {$UAM_ADDURL2MAIL_TRUE} name="UAM_AddURL2Mail" type="radio"/>
-                {'UAM_Enable'|@translate}
-              </label>
-            </li>
-
         </ul>
         <fieldset id="UAM_MAIL_INFO" {if $UAM_MAIL_INFO_FALSE} style="display:none"{/if}>
           <ul>
@@ -848,7 +808,19 @@ function uam_blockToggleDisplay( headerId, contentId )
 -->
           </ul>
         </fieldset>
+
         <ul>
+            <li>
+              <label class="cluetip" title="{'UAM_AddURL2Mail'|translate}|{'UAM_AddURL2Mail_d'|translate}">
+                {'UAM_AddURL2Mail'|@translate}
+              </label>
+              <label for="UAM_AddURL2Mail_false"><input id="UAM_AddURL2Mail_false" value="false" {$UAM_ADDURL2MAIL_FALSE} name="UAM_AddURL2Mail" type="radio"/>
+                {'UAM_Disable'|@translate}
+              </label>
+              <label for="UAM_AddURL2Mail_true"><input id="UAM_AddURL2Mail_true" value="true" {$UAM_ADDURL2MAIL_TRUE} name="UAM_AddURL2Mail" type="radio"/>
+                {'UAM_Enable'|@translate}
+              </label>
+            </li>
           <li>
             <label class="cluetip" title="{'UAM_Tracking registered users'|translate}|{'UAM_Tracking registered users_d'|translate}">
               {'UAM_Tracking registered users'|@translate}
@@ -873,20 +845,6 @@ function uam_blockToggleDisplay( headerId, contentId )
               {'UAM_Enable'|@translate}
             </label>
           </li>
-
-          <li>
-            <label class="cluetip" title="{'UAM_PwdReset'|translate}|{'UAM_PwdResetTitle_d'|translate}">
-              {'UAM_PwdReset'|@translate}
-            </label>
-          
-            <label for="UAM_PwdReset_false"><input id="UAM_PwdReset_false" value="false" {$UAM_PWDRESET_FALSE} name="UAM_PwdReset" type="radio"/>
-              {'UAM_Disable'|@translate}
-            </label>
-            <label for="UAM_PwdReset_true"><input id="UAM_PwdReset_true" value="true" {$UAM_PWDRESET_TRUE} name="UAM_PwdReset" type="radio"/>
-              {'UAM_Enable'|@translate}
-            </label>
-          
-          </li>
         </ul>
         <ul>
           <li>
@@ -896,10 +854,10 @@ function uam_blockToggleDisplay( headerId, contentId )
           
             <label for="UAM_CustomPasswRetr_false"><input id="UAM_CustomPasswRetr_false" value="false" {$UAM_CUSTOMPASSWRETR_FALSE} name="UAM_CustomPasswRetr" type="radio"/>
               {'UAM_Disable'|@translate}
-</label>
+            </label>
             <label for="UAM_CustomPasswRetr_true"><input id="UAM_CustomPasswRetr_true" value="true" {$UAM_CUSTOMPASSWRETR_TRUE} name="UAM_CustomPasswRetr" type="radio"/>
               {'UAM_Enable'|@translate}
-</label>
+            </label>
             <fieldset id="UAM_CustomPasswRetr" {if $UAM_CUSTOMPASSWRETR_FALSE}style="display:none"{/if}>
               <textarea class="uam_textfields" name="UAM_CustomPasswRetr_Text" id="UAM_CustomPasswRetr_Text" rows="10" {$TAG_INPUT_ENABLED}>{$UAM_CUSTOMPASSWRETR_TEXT}</textarea>
             </fieldset>
