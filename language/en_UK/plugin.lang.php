@@ -144,7 +144,7 @@ $lang['UAM_Confirm_Mail_local'] = ' Enable - Confirmation by admin';
 
 // --------- Starting below: New or revised $lang ---- from version 2.16.0
 $lang['UAM_Expired_Group'] = '<b>Group</b> for user\'s registration has expired<br/>';
-$lang['UAM_Expired_Status'] = '<b>Status</b> for user\'s registration has expired will ever be "--------"<br/><b style="color: red;">Note : Because useless, this feature could be removed in the future versions</b><br/>';
+$lang['UAM_Expired_Status'] = '<b>Status</b> for user\'s registration has expired<br/><b style="color: red;">Warning : Do not user "Guest" status. Because useless, this feature could be removed in the future versions</b><br/>';
 $lang['UAM_GTAuto'] = 'Automatic management of ghosts users';
 $lang['UAM_GTAutoDel'] = 'Automatic deletion of accounts';
 $lang['UAM_Error_GTAutoMail_cannot_be_set_without_ConfirmMail'] = 'Consistency error in the chosen configuration:
@@ -193,7 +193,7 @@ $lang['UAM_Error_Using_illegal_flag'] = 'Syntax error ! The [Kdays] AutoText fla
 // --------- Starting below: New or revised $lang ---- from version 2.30.0
 $lang['UAM_Confirm_grpstat_notice'] = 'Caution: It is advisable to use either the group or the statutes confirmation and not both simultaneously. The privacy level can be used in conjunction with a group or status assignment.';
 $lang['UAM_Confirm_Group'] = 'Groups<br/>(leave ------- to not affect group)';
-$lang['UAM_Confirm_Status'] = 'Statutes <b style="color: red;">Note : Because useless, this feature could be removed in the future versions</b><br/>(leave ------- to keep the Piwigo\'s default)';
+$lang['UAM_Confirm_Status'] = 'Statutes <b style="color: red;">Warning : Do not use "Guest" status. Because useless, this feature could be removed in the future versions</b><br/>(leave ------- to keep the Piwigo\'s default)';
 $lang['UAM_Confirm_Level'] = 'Privacy level<br/>(leave ------- to keep the Piwigo\'s default)';
 $lang['UAM_GTAutoGp'] = 'Automatic change of group / status / privacy level';
 $lang['UAM_Expired_Level'] = '<b>Privacy level</b> for user\'s registration has expired<br/>';
@@ -256,7 +256,7 @@ $lang['UAM_%d_Validated_User'] = '%d User confirmed manually';
 $lang['UAM_%d_Validated_Users'] = '%d Users confirmed manually';
 $lang['UAM_No_Confirm_Group'] = 'Group for users who have not confirmed their registration<br/>';
 $lang['UAM_Validated_Group'] = 'Group for users who have confirmed their registration<br/>';
-$lang['UAM_No_Confirm_Status'] = 'Status for users who have not confirmed their registration will ever be "------------"<br/>';
+$lang['UAM_No_Confirm_Status'] = 'Status for users who have not confirmed their registration<br/>';
 $lang['UAM_Validated_Status'] = 'Status for users who have confirmed their registration<br/>';
 $lang['UAM_No_Valid_Level'] = 'Privacy level for users who have not confirmed their registration<br/>';
 $lang['UAM_Valid_Level'] = 'Privacy level for users who have confirmed their registration<br/>';
