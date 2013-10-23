@@ -432,37 +432,37 @@ ORDER BY name ASC
   $Downgrade_Status = -1;
 
   // Bug fix - We can not use "Guest" status and other are not suitable so we fix NO_CONFIRM_STATUS to "------------"
-  $conf_UAM['NO_CONFIRM_STATUS'] == $status_options[-1];
-
-  $template->assign(
-    'No_Confirm_Status',
-      array(
-        'Status_options' => $status_options[-1],
-        'Status_selected' => $status_options[-1]
-      )
-    );
+//  $conf_UAM['NO_CONFIRM_STATUS'] == $status_options[-1];
+//
+//  $template->assign(
+//    'No_Confirm_Status',
+//      array(
+//        'Status_options' => $status_options[-1],
+//        'Status_selected' => $status_options[-1]
+//      )
+//    );
 
   // Get unvalidate status values
   // ----------------------------
-//  foreach (get_enums(USER_INFOS_TABLE, 'status') as $status)
-//  {
-//	  $status_options[$status] = l10n('user_status_'.$status);
-//	  if (isset($conf_UAM['NO_CONFIRM_STATUS']) and $conf_UAM['NO_CONFIRM_STATUS'] == $status)
-//	  {
-//	    $No_Valid_Status = $status;
-//	  }
-//	  
-//    // Template initialization for unvalidated users status
-//    // ----------------------------------------------------
-//    $template->assign(
-//      'No_Confirm_Status',
-//        array(
-//          'Status_options' => $status_options,
-//          'Status_selected' => $No_Valid_Status
-//        )
-//      );
-//  }
-
+  foreach (get_enums(USER_INFOS_TABLE, 'status') as $status)
+  {
+	  $status_options[$status] = l10n('user_status_'.$status);
+	  if (isset($conf_UAM['NO_CONFIRM_STATUS']) and $conf_UAM['NO_CONFIRM_STATUS'] == $status)
+	  {
+	    $No_Valid_Status = $status;
+	  }
+	  
+    // Template initialization for unvalidated users status
+    // ----------------------------------------------------
+    $template->assign(
+      'No_Confirm_Status',
+        array(
+          'Status_options' => $status_options,
+          'Status_selected' => $No_Valid_Status
+        )
+      );
+  }
+  
   // Get validate status values
   // --------------------------
   foreach (get_enums(USER_INFOS_TABLE, 'status') as $status)
@@ -486,36 +486,36 @@ ORDER BY name ASC
 
 
   // Bug fix - We can not use "Guest" status and other are not suitable so we fix DOWNGRADE_STATUS to "------------"
-  $conf_UAM['DOWNGRADE_STATUS'] == $status_options[-1];
-
-  $template->assign(
-    'Downgrade_Status',
-      array(
-        'Status_options' => $status_options[-1],
-        'Status_selected' => $status_options[-1]
-      )
-    );
+//  $conf_UAM['DOWNGRADE_STATUS'] == $status_options[-1];
+//
+//  $template->assign(
+//    'Downgrade_Status',
+//      array(
+//        'Status_options' => $status_options[-1],
+//        'Status_selected' => $status_options[-1]
+//      )
+//    );
 
   // Get downgrade status values
   // ---------------------------
-//  foreach (get_enums(USER_INFOS_TABLE, 'status') as $status)
-//  {
-//    $status_options[$status] = l10n('user_status_'.$status);
-//    if (isset($conf_UAM['DOWNGRADE_STATUS']) and $conf_UAM['DOWNGRADE_STATUS'] == $status)
-//    {
-//      $Downgrade_Status = $status;
-//    }
-//		
-//    // Template initialization for validated users status
-//    // --------------------------------------------------
-//    $template->assign(
-//      'Downgrade_Status',
-//        array(
-//          'Status_options' => $status_options,
-//          'Status_selected' => $Downgrade_Status
-//        )
-//      );
-//  }
+  foreach (get_enums(USER_INFOS_TABLE, 'status') as $status)
+  {
+    $status_options[$status] = l10n('user_status_'.$status);
+    if (isset($conf_UAM['DOWNGRADE_STATUS']) and $conf_UAM['DOWNGRADE_STATUS'] == $status)
+    {
+      $Downgrade_Status = $status;
+    }
+		
+    // Template initialization for validated users status
+    // --------------------------------------------------
+    $template->assign(
+      'Downgrade_Status',
+        array(
+          'Status_options' => $status_options,
+          'Status_selected' => $Downgrade_Status
+        )
+      );
+  }
 
 
   // Level setting for unvalidated, validated users and downgrade level
