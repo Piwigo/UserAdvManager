@@ -833,4 +833,33 @@ WHERE param = "UserAdvManager"
 
   conf_update_param('UserAdvManager', pwg_db_real_escape_string($update_conf));
 }
+
+
+/* upgrade from 2.50.x to 2.51.0 */
+/* ***************************** */
+function upgrade_2500_2510()
+{
+  global $conf;
+  
+  load_language('plugin.lang', UAM_PATH);
+
+  // Upgrade $conf_UAM options
+  $conf_UAM = unserialize($conf['UserAdvManager']);
+
+  unset ($conf_UAM['PASSWORDENF']);
+  unset ($conf_UAM['PASSWORD_SCORE']);
+  unset ($conf_UAM['ADMINPASSWENF']);
+  unset ($conf_UAM['PWDRESET']);
+
+  $update_conf = serialize($conf_UAM);
+
+  conf_update_param('UserAdvManager', pwg_db_real_escape_string($update_conf));
+
+  // Cleanup obsolete database modification
+  $q = '
+ALTER TABLE '.USERS_TABLE.'
+DROP UAM_pwdreset 
+;';
+  pwg_query($q);
+}
 ?>

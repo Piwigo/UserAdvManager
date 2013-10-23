@@ -222,37 +222,7 @@ function UAM_RegistrationCheck($errors, $user)
   {
     load_language('plugin.lang', UAM_PATH);
 
-    $PasswordCheck = 0;
-
     $conf_UAM = unserialize($conf['UserAdvManager']);
-
-    // Password enforcement control
-    // ----------------------------
-    if (isset($conf_UAM['PASSWORDENF']) and $conf_UAM['PASSWORDENF'] == 'true' and !empty($conf_UAM['PASSWORD_SCORE']))
-    {
-      if (!empty($user['password']) and !is_admin())
-      {
-        $PasswordCheck = testpassword($user['password']);
-  
-        if ($PasswordCheck < $conf_UAM['PASSWORD_SCORE'])
-        {
-          $message = get_l10n_args('UAM_reg_err_login4_%s', $PasswordCheck);
-          $lang['reg_err_pass'] = l10n_args($message).$conf_UAM['PASSWORD_SCORE'];
-          array_push($errors, $lang['reg_err_pass']);
-        }
-      }
-      else if (!empty($user['password']) and is_admin() and isset($conf_UAM['ADMINPASSWENF']) and $conf_UAM['ADMINPASSWENF'] == 'true')
-      {
-        $PasswordCheck = testpassword($user['password']);
-  
-        if ($PasswordCheck < $conf_UAM['PASSWORD_SCORE'])
-        {
-          $message = get_l10n_args('UAM_reg_err_login4_%s', $PasswordCheck);
-          $lang['reg_err_pass'] = l10n_args($message).$conf_UAM['PASSWORD_SCORE'];
-          array_push($errors, $lang['reg_err_pass']);
-        }
-      }
-    }
 
     // Username without forbidden keys
     // -------------------------------
@@ -301,16 +271,6 @@ WHERE param = "UserAdvManager_Redir";';
     }
   }
 
-  // Special message display for password reset
-  // ------------------------------------------
-  if ((isset($conf_UAM['PWDRESET']) and $conf_UAM['PWDRESET'] == 'true'))
-  {
-    if (UAM_check_pwgreset($user['id']))
-    {
-      $template->append('errors', l10n('UAM_Password_Reset_Msg'));
-    }
-  }
-
   // Controls on profile page submission
   // -----------------------------------
   if (isset($_POST['validate']) and !is_admin())
@@ -326,44 +286,11 @@ WHERE param = "UserAdvManager_Redir";';
       }
     }
 
-    // Password reset control
-    // ----------------------
-    if (isset($conf_UAM['PWDRESET']) and $conf_UAM['PWDRESET'] == 'true' and UAM_check_pwgreset($user['id']))
-    {
-      // if password not changed then pwdreset field = true else pwdreset field = false
-      // ------------------------------------------------------------------------------
-      if (!empty($_POST['use_new_pwd']))
-      {
-        $query = '
-UPDATE '.USERS_TABLE.'
-SET UAM_pwdreset = "false"
-WHERE id = '.$user['id'].'
-LIMIT 1
-;';
-        pwg_query($query);
-      }
-    }
-
     $typemail = 3; // Only information email send to user on user profile update if checked
 
     if (!empty($_POST['use_new_pwd']))
     {
       $typemail = 2; // Confirmation email on user profile update - With information email
-
-      // Password enforcement control
-      // ----------------------------
-      if (isset($conf_UAM['PASSWORDENF']) and $conf_UAM['PASSWORDENF'] == 'true' and !empty($conf_UAM['PASSWORD_SCORE']))
-      {
-        $PasswordCheck = testpassword($_POST['use_new_pwd']);
-
-        if ($PasswordCheck < $conf_UAM['PASSWORD_SCORE'])
-        {
-          $message = get_l10n_args('UAM_reg_err_login4_%s', $PasswordCheck);
-          $template->append('errors', l10n_args($message).$conf_UAM['PASSWORD_SCORE']);
-          unset($_POST['use_new_pwd']);
-          unset($_POST['validate']);
-        }
-      }
     }
 
     // Sending registration confirmation by email
@@ -452,6 +379,7 @@ function UAM_LoginTasks()
         or ((isset($conf_UAM['REJECTCONNECT']) and $conf_UAM['REJECTCONNECT'] == 'true') and UAM_UsrReg_Verif($user['id']))
         or (!is_admin() and !is_webmaster()))
   {
+
     // Performing redirection to profile page on first login
     // -----------------------------------------------------
     if ((isset($conf_UAM['REDIRTOPROFILE']) and $conf_UAM['REDIRTOPROFILE'] == 'true'))
@@ -468,26 +396,6 @@ WHERE user_id = '.$user['id'].'
         $user_idsOK = array();
         if (!UAM_check_profile($user['id'], $user_idsOK))
           redirect(PHPWG_ROOT_PATH.'profile.php');
-      }
-    }
-
-    // Performing redirection to profile page for password reset
-    // ---------------------------------------------------------
-    if ((isset($conf_UAM['PWDRESET']) and $conf_UAM['PWDRESET'] == 'true'))
-    {
-      $query ='
-SELECT user_id, status
-FROM '.USER_INFOS_TABLE.'
-WHERE user_id = '.$user['id'].'
-;';
-      $data = pwg_db_fetch_assoc(pwg_query($query));
-
-      if ($data['status'] <> "webmaster" and $data['status'] <> "generic") // Exclusion of specific accounts
-      {
-        if (UAM_check_pwgreset($user['id']))
-        {
-          redirect(PHPWG_ROOT_PATH.'profile.php');
-        }
       }
     }
   }
@@ -1061,7 +969,8 @@ WHERE '.USER_INFOS_TABLE.'.user_id ='.$userid.'
 
         if (function_exists('get_user_language_desc'))
         {
-          $custom_text = get_user_language_desc(preg_replace($patterns, $replacements, $conf_UAM_ConfirmMail['CONFIRMMAIL_CUSTOM_TXT1']));
+          $login_link = '<a href="'.get_gallery_home_url().'" style="font-weight: bold;text-align: center;color: #FF0000;text-transform: uppercase;">'.l10n('UAM_Follow this link to access the gallery').'</a>';
+          $custom_text = get_user_language_desc(preg_replace($patterns, $replacements, $conf_UAM_ConfirmMail['CONFIRMMAIL_CUSTOM_TXT1']))."<br/><br/>".$login_link;
         }
         else
         {
@@ -1069,7 +978,7 @@ WHERE '.USER_INFOS_TABLE.'.user_id ='.$userid.'
         }
         $page['infos'][]=$custom_text;
       }
-    }  
+    }
     else
     {
       if (isset($conf_UAM_ConfirmMail['CONFIRMMAIL_CUSTOM_TXT2']) and !empty($conf_UAM_ConfirmMail['CONFIRMMAIL_CUSTOM_TXT2']))
@@ -2139,13 +2048,21 @@ VALUES
   if ($conf_UAM['NO_VALID_LEVEL'] <> -1) // Set privacy level
   {
     $query = '
-INSERT INTO '.USER_INFOS_TABLE.'
-  (user_id, level)
-VALUES
-  ('.$user_id.', "'.$conf_UAM['NO_VALID_LEVEL'].'")
+UPDATE '.USER_INFOS_TABLE.'
+SET level = "'.$conf_UAM['NO_VALID_LEVEL'].'"
+WHERE user_id = '.$user_id.'
 ;';
 
     pwg_query($query);
+
+//    $query = '
+//INSERT INTO '.USER_INFOS_TABLE.'
+//  (user_id, level)
+//VALUES
+//  ('.$user_id.', "'.$conf_UAM['NO_VALID_LEVEL'].'")
+//;';
+//
+//    pwg_query($query);
   }
 }
 
@@ -3015,100 +2932,6 @@ WHERE user_id = '.$id.'
 
 
 /**
- * Returns a password's score for password complexity check
- *
- * @param : password filled by user
- * 
- * @return : Score calculation
- * 
- * Thanx to MathieuGut from http://m-gut.developpez.com
- */
-function testpassword($password) // $password given by user
-{
-
-  // Variables initiation
-  // --------------------
-  $points = 0;
-  $point_lowercase = 0;
-  $point_uppercase = 0;
-  $point_numbers = 0;
-  $point_characters = 0;
-
-  // Getting password lengh
-  // ----------------------
-  $length = strlen($password);
-
-  // Loop to read password characters
-  for($i = 0; $i < $length; $i++)
-  {
-    // Select each letters
-    // $i is 0 at first turn
-    // ---------------------
-    $letters = $password[$i];
-
-    if ($letters>='a' && $letters<='z')
-    {
-      // Adding 1 point to score for a lowercase
-      // ---------------------------------------
-		  		$points = $points + 1;
-
-      // Adding bonus points for lowercase
-      // ---------------------------------
-		  $point_lowercase = 1;
-    }
-    else if ($letters>='A' && $letters <='Z')
-    {
-      // Adding 2 points to score for uppercase
-      // --------------------------------------
-      $points = $points + 2;
-
-      // Adding bonus points for uppercase
-      // ---------------------------------
-      $point_uppercase = 2;
-    }
-    else if ($letters>='0' && $letters<='9')
-    {
-      // Adding 3 points to score for numbers
-      // ------------------------------------
-      $points = $points + 3;
-
-      // Adding bonus points for numbers
-      // -------------------------------
-      $point_numbers = 3;
-    }
-    else
-    {
-      // Adding 5 points to score for special characters
-      // -----------------------------------------------
-      $points = $points + 5;
-		
-      // Adding bonus points for special characters
-      // ------------------------------------------
-      $point_characters = 5;
-    }
-  }
-
-  // Calculating the coefficient points/length
-  // -----------------------------------------
-  $step1 = $points / $length;
-
-  // Calculation of the diversity of character types...
-  // --------------------------------------------------
-  $step2 = $point_lowercase + $point_uppercase + $point_numbers + $point_characters;
-
-  // Multiplying the coefficient of diversity with that of the length
-  // ----------------------------------------------------------------
-  $score = $step1 * $step2;
-
-  // Multiplying the result by the length of the string
-  // --------------------------------------------------
-  $finalscore = $score * $length;
-
-  return $finalscore;
-}
-
-
-/**
  * UAM_check_profile - Thx to LucMorizur
  * checks if a user id is registered as having already
  * visited his profile page.
@@ -3139,34 +2962,6 @@ WHERE param = "UserAdvManager_Redir"
     $v = (in_array($uid, $user_idsOK));
   }
   return $v;
-}
-
-
-/**
- * UAM_check_pwdreset
- * checks if a user id is registered as having already
- * changed his password.
- * 
- * @uid        : the user id
- * 
- * @returns    : true or false whether the users has already changed his password
- * 
- */
-function UAM_check_pwgreset($uid)
-{
-  $query = '
-SELECT UAM_pwdreset
-FROM '.USERS_TABLE.'
-WHERE id='.$uid.'
-;';
-
-  $result = pwg_db_fetch_assoc(pwg_query($query));
-
-  if($result['UAM_pwdreset'] == 'true')
-  {
-    return true;
-  }
-  else return false; 
 }
 
 
@@ -3229,73 +3024,6 @@ LIMIT 1
 ;';
 
   pwg_query($query);
-}
-
-
-/**
- * UAM_Set_PwdReset
- * Action in user_list to set a password reset for a user
- */
-function UAM_Set_PwdReset($uid)
-{
-  $query ='
-UPDATE '.USERS_TABLE.'
-SET UAM_pwdreset = "true"
-WHERE id = '.$uid.'
-LIMIT 1
-;';
-
-  pwg_query($query);
-}
-
-
-/**
- * UAM_loc_visible_user_list
- * Adds a new feature in user_list to allow password reset for selected users by admin
- * 
- */
-function UAM_loc_visible_user_list($visible_user_list)
-{
-  global $template;
-
-  $template->append('plugin_user_list_column_titles', l10n('UAM_PwdReset'));
-
-  $user_ids = array();
-
-  foreach ($visible_user_list as $i => $user)
-  {
-    $user_ids[$i] = $user['id'];
-  }
-
-  $user_nums = array_flip($user_ids);
-
-  // Query to get information in database
-  // ------------------------------------
-  if (!empty($user_ids))
-  {
-    $query = '
-SELECT DISTINCT id, UAM_pwdreset
-  FROM '.USERS_TABLE.'
-  WHERE id IN ('.implode(',', $user_ids).')
-;';
-    $result = pwg_query($query);
-
-    while ($row = pwg_db_fetch_assoc($result))
-    {
-      if ($row['UAM_pwdreset'] == 'false')
-      {
-        $pwdreset = l10n('UAM_PwdReset_Done');
-      }
-      else if ($row['UAM_pwdreset'] == 'true')
-      {
-        $pwdreset = l10n('UAM_PwdReset_Todo');
-      }
-      else $pwdreset = l10n('UAM_PwdReset_NA');
-
-		  $visible_user_list[$user_nums[$row['id']]]['plugin_columns'][] = $pwdreset; // Shows users password state in user_list
-    }
-  }
-  return $visible_user_list;
 }
 
 

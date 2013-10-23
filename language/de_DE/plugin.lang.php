@@ -44,8 +44,6 @@ $lang['UAM_Mail_with_key'] = 'Erinnerung mit Schlüssel';
 
 
 // --------- Starting below: New or revised $lang ---- from version 2.12.0 and 2.12.1
-/* Global Configuration Tab */
-$lang['UAM_PasswordTest'] = 'Ergebnis Berechnung';
 /* Ghost Tracker Tab */
 $lang['UAM_Tab_GhostTracker'] = 'Geist Tracker';
 $lang['UAM_Reminder'] = 'E-Mail-Erinnerung';
@@ -53,12 +51,6 @@ $lang['UAM_Reminder_Sent_OK'] = 'JA';
 $lang['UAM_Reminder_Sent_NOK'] = 'NEIN';
 /* Errors and Warnings */
 $lang['UAM_save_config'] ='Konfiguration gespeichert.';
-$lang['UAM_reg_err_login3'] = 'Sicherheit: Das Passwort ist obligatorisch !';
-$lang['UAM_reg_err_login4_%s'] = 'Sicherheit: Ein Steuer-System berechnet eine Partitur von der gewählten Passwörter Komplexität. Die Komplexität des Passworts zu niedrig ist (score = %s). Bitte wählen Sie ein neues Passwort zu mehr Sicherheit, indem Sie folgende Regeln:<br>
-- Verwenden Sie Buchstaben und Zahlen<br>
-- Verwenden Sie Groß-und Kleinschreibung<br>
-- Erhöhung ihrer Länge (Anzahl Zeichen)<br>
-Die minimale Passwörter der Gäste ist: ';
 $lang['UAM_No_reminder_for_Guest'] = 'Der &quot;Gast&quot;-Konto ist nicht zu empfangen Mahnungen Geist Tracker';
 $lang['UAM_No_reminder_for_default_user'] = 'Der Standard-Account ist nicht zu empfangen Mahnungen Geist Tracker';
 $lang['UAM_No_reminder_for_Webmaster'] = 'Der &quot;Webmaster&quot;-Konto ist nicht zu empfangen Mahnungen Geist Tracker';
@@ -102,10 +94,6 @@ $lang['UAM_No_Casse'] = 'Benutzernamen: Groß-und Kleinschreibung';
 $lang['UAM_Username_Char'] = 'Benutzernamen: Ausschluss von Zeichen';
 $lang['UAM_Username_Char_true'] = ' Zeichen Verboten:<br>(Verwenden Sie ein Komma, um ein Zeichen getrennt)<br><br>';
 $lang['UAM_Username_Char_false'] = ' Erlauben Sie alle (Standard)';
-$lang['UAM_Password_Enforced'] = 'Stärkung des Sicherheitsniveaus von Passwortern';
-$lang['UAM_AdminPassword_Enforced'] = 'Trifft auch für Administratoren zu.';
-$lang['UAM_PasswordTest'] = 'Passwort testen : ';
-$lang['UAM_ScoreTest'] = 'Ergebnis : ';
 $lang['UAM_MailExclusion'] = 'E-Mail-Domänen Ausgrenzung';
 $lang['UAM_MailExclusion_true'] = ' Schließen Sie die folgenden E-Mail-Domänen:<br>(Verwenden Sie ein Komma zu trennen jede Domain)';
 
@@ -295,12 +283,8 @@ B. Im plugin Additional Pages:<br>
               </ol>
             </li>
           </ul>';
-$lang['UAM %d user pwdreseted'] = 'Passwortänderung für %d Benutzer erforderlich.';
-$lang['UAM %d users pwdreseted'] = 'Passwortänderungen für %d Benutzer erforderlich.';
-$lang['UAM_Admins cannot be pwdreset'] = 'Passwortänderung kann nicht für Administratorenkonten gesetzt werden.';
 $lang['UAM_Bad_version_backup'] = 'Die Version der Backup-Datei entspricht nicht der Version des Plugins! Die Wiederherstellung wurde nicht durchgeführt.';
 $lang['UAM_Confirm_Level'] = 'Datenschutz Niveau<br>(------- unverändert lassen, um Piwigo-Standard zu erhalten)';
-$lang['UAM_Default user cannot be pwgreset'] = 'Passwort-Änderung kann nicht für den Standard-Benutzer eingestellt werden!';
 $lang['UAM_Default_AdminValidation_Txt'] = 'Hallo [username]! 
 
 Danke für die Registrierung und willkommen bei [mygallery].
@@ -369,8 +353,6 @@ $lang['UAM_Default_ValidationTimeout_Txt'] = 'Entschuldigung, Ihr Konto wurde ge
 $lang['UAM_Error_Using_illegal_flag'] = 'Syntax-Fehler! Die [Kdays] AutoText Flagge wird als "Anmeldeschluss Bestätigung begrenzt"-Option verwendet wurde nicht aktiviert. Bitte aktivieren Sie die Option, oder korrigieren Sie die Text-Feld rot eingefärbt.';
 $lang['UAM_Error_Using_illegal_Kdays'] = 'Mit dem [Kdays]-Tag ist nur zulässig, wenn die Frist für die Anmeldebestätigung begrenzt aktiv ist. Lesen Sie das Textfeld in rot, um das Problem zu beheben.';
 $lang['UAM_Expired_Level'] = '<b>Datenschutz Niveau</b> für Benutzer-Registrierung abgelaufen<br>';
-$lang['UAM_Generic cannot be pwdreset'] = 'Passwort erneuern kann nicht f';
-$lang['UAM_Guest cannot be pwdreset'] = 'Passwort erneuern kann nicht für die Gäste gestellt werden!';
 $lang['UAM_MailExclusion_No'] = 'E-Mail-Domänen Ausgrenzung - Nicht verfügbar, da E-Mails nicht zwingend notwendig sind für die Registrierung!';
 $lang['UAM_MiscOptions'] = 'Andere Verschiedene Optionen';
 $lang['UAM_NewFeature'] = 'Neue Funktion!';
@@ -379,12 +361,6 @@ $lang['UAM_No_Ghosts'] = 'Keine Geister Besucher im Moment';
 $lang['UAM_No_Userlist'] = 'Keine Besucher Liste im Moment';
 $lang['UAM_No_Usermanager'] = 'Keine unbestätigten registriert sich vor Liste';
 $lang['UAM_No_Valid_Level'] = 'Datenschutz Niveau für Benutzer, die nicht ihre Registrierung bestätigt haben<br>';
-$lang['UAM_Password reset selected users'] = 'Passwort anfordern Erneuerung für ausgewählte Benutzer';
-$lang['UAM_Password_Reset_Msg'] = 'Bitte, ändern Sie Ihr Passwort!';
-$lang['UAM_PwdReset'] = 'Passwort erneuern';
-$lang['UAM_PwdReset_Done'] = 'Passwort erneuert';
-$lang['UAM_PwdReset_NA'] = 'Original-Passwort';
-$lang['UAM_PwdReset_Todo'] = 'Passwort erneuert werden';
 $lang['UAM_RejectConnexion'] = 'Ablehnen Benutzer-Verbindung, bis die Registrierung bestätigt wird,';
 $lang['UAM_RejectConnexion_Custom_Txt'] = 'Passen Ablehnung Text';
 $lang['UAM_Restoration_NOK'] = 'Fehler beim Wiederherstellen der Konfiguration. Bitte pr';
@@ -396,11 +372,7 @@ $lang['UAM_Tips2'] = 'Informationen von unbestätigten Registrierung mit UAM und
 $lang['UAM_Title5'] = 'Verschiedene Optionen';
 $lang['UAM_USRAuto'] = 'Automatische Verwaltung von Benutzern unbestätigte';
 $lang['UAM_Valid_Level'] = 'Datenschutz Niveau für Anwender, die ihre Anmeldung bestätigt haben<br>';
-$lang['UAM_Webmaster cannot be pwdreset'] = 'Passwort erneuern können nicht für den Webmaster eingestellt werden!';
-$lang['UAM_You cannot pwdreset your account'] = 'Passwort erneuern können nicht auf eigene Rechnung eingestellt werden!';
-$lang['UAM_You need to confirm pwdreset'] = 'Sie müssen bestätigen, Passwort erneuern (check box)!';
 $lang['UAM_CustomPasswRetr'] = 'Anpassen des E-Mail-Inhalts der Passwort-Vergessen-E-Mail.';
-$lang['UAM_Password_Enforced_true'] = 'Aktivieren. Mindestpunktzahl:';
 $lang['UAM_Restore'] = 'Um die Backup-Datei von Ihrer Konfiguration wiederherzustellen. Lediglich die gespeicherte Datei auf dem Server berücksichtigt wird.
 <br><br>
 <b style="color: red;">Hütet euch vor dem Backup-Version!<br>Ein Backup von einer Version des Plugins gemacht kann nur auf der gleichen Version wiederhergestellt werden.</b>';

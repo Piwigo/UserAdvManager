@@ -30,7 +30,6 @@ $error = array();
 $pattern = '/;/';
 $replacement = '.';
 
-$UAM_Password_Test_Score = 0;
 $UAM_Exclusionlist_Error = false;
 $UAM_Illegal_Flag_Error1 = false;
 $UAM_Illegal_Flag_Error2 = false;
@@ -109,7 +108,7 @@ switch ($page['tab'])
 // *************************************************************************
   case 'global':
 
-  if (isset($_POST['submit']) and isset($_POST['UAM_Mail_Info']) and isset($_POST['UAM_Username_Char']) and isset($_POST['UAM_Confirm_Mail']) and isset($_POST['UAM_Password_Enforced']) and isset($_POST['UAM_AdminPassword_Enforced']) and isset($_POST['UAM_GhostUser_Tracker']) and isset($_POST['UAM_Admin_ConfMail']) and isset($_POST['UAM_RedirToProfile']) and isset($_POST['UAM_GTAuto']) and isset($_POST['UAM_GTAutoMail']) and isset($_POST['UAM_CustomPasswRetr']) and isset($_POST['UAM_USRAuto']) and isset($_POST['UAM_USRAutoMail']) and isset($_POST['UAM_Stuffs']) and isset($_POST['UAM_HidePassw']) and isset($_POST['UAM_PwdReset']) and isset($_POST['UAM_RejectConnexion']) and isset($_POST['UAM_AddURL2Mail']))
+  if (isset($_POST['submit']) and isset($_POST['UAM_Mail_Info']) and isset($_POST['UAM_Username_Char']) and isset($_POST['UAM_Confirm_Mail']) and isset($_POST['UAM_GhostUser_Tracker']) and isset($_POST['UAM_Admin_ConfMail']) and isset($_POST['UAM_RedirToProfile']) and isset($_POST['UAM_GTAuto']) and isset($_POST['UAM_GTAutoMail']) and isset($_POST['UAM_CustomPasswRetr']) and isset($_POST['UAM_USRAuto']) and isset($_POST['UAM_USRAutoMail']) and isset($_POST['UAM_Stuffs']) and isset($_POST['UAM_HidePassw']) and isset($_POST['UAM_RejectConnexion']) and isset($_POST['UAM_AddURL2Mail']))
   {
 
   // Render email contents fields
@@ -233,9 +232,6 @@ WHERE id = '.$_POST['UAM_Validated_Group'].'
     $newconf_UAM['CONFIRMMAIL_TEXT'] = (isset($_POST['UAM_ConfirmMail_Text']) ? $_POST['UAM_ConfirmMail_Text'] : l10n('UAM_Default_ConfirmMail_Txt'));
     $newconf_UAM['MAILEXCLUSION'] = (isset($_POST['UAM_MailExclusion']) ? $_POST['UAM_MailExclusion'] : 'false');
     $newconf_UAM['MAILEXCLUSION_LIST'] = (isset($_POST['UAM_MailExclusion_List']) ? $_POST['UAM_MailExclusion_List'] : '');
-    $newconf_UAM['PASSWORDENF'] = (isset($_POST['UAM_Password_Enforced']) ? $_POST['UAM_Password_Enforced'] : 'false');
-    $newconf_UAM['PASSWORD_SCORE'] = (isset($_POST['UAM_Password_Score']) ? $_POST['UAM_Password_Score'] : '100');
-    $newconf_UAM['ADMINPASSWENF'] = (isset($_POST['UAM_AdminPassword_Enforced']) ? $_POST['UAM_AdminPassword_Enforced'] : 'false');
     $newconf_UAM['GHOSTRACKER'] = (isset($_POST['UAM_GhostUser_Tracker']) ? $_POST['UAM_GhostUser_Tracker'] : 'false');
     $newconf_UAM['GHOSTRACKER_DAYLIMIT'] = (isset($_POST['UAM_GhostTracker_DayLimit']) ? $_POST['UAM_GhostTracker_DayLimit'] : '10');
     $newconf_UAM['GHOSTRACKER_REMINDERTEXT'] = (isset($_POST['UAM_GhostTracker_ReminderText']) ? $_POST['UAM_GhostTracker_ReminderText'] : l10n('UAM_Default_GhstReminder_Txt'));
@@ -259,7 +255,6 @@ WHERE id = '.$_POST['UAM_Validated_Group'].'
     $newconf_UAM['NO_VALID_LEVEL'] = (isset($_POST['UAM_No_Valid_Level']) ? $_POST['UAM_No_Valid_Level'] : '');
     $newconf_UAM['VALID_LEVEL'] = (isset($_POST['UAM_Valid_Level']) ? $_POST['UAM_Valid_Level'] : '');
     $newconf_UAM['DOWNGRADE_LEVEL'] = (isset($_POST['UAM_Downgrade_Level']) ? $_POST['UAM_Downgrade_Level'] : '');
-    $newconf_UAM['PWDRESET'] = (isset($_POST['UAM_PwdReset']) ? $_POST['UAM_PwdReset'] : 'false');
     $newconf_UAM['REJECTCONNECT'] = (isset($_POST['UAM_RejectConnexion']) ? $_POST['UAM_RejectConnexion'] : 'false');
     $newconf_UAM['REJECTCONNECT_TEXT'] = (isset($_POST['UAM_CustomRejectConnexion_Text']) ? $_POST['UAM_CustomRejectConnexion_Text'] : l10n('UAM_Default_RejectConnexion_Txt'));
     $newconf_UAM['CONFIRMMAIL_SUBJECT'] = (isset($_POST['UAM_ConfirmMail_Subject']) ? $_POST['UAM_ConfirmMail_Subject'] : l10n('UAM_Default_ConfirmMail_Subject'));
@@ -360,17 +355,6 @@ WHERE id = '.$_POST['UAM_Validated_Group'].'
     }
   }
 
-  // Testing password enforcement
-  // ----------------------------
-  if (isset($_POST['PasswordTest']) and isset($_POST['UAM_Password_Test']) and !empty($_POST['UAM_Password_Test']))
-  {
-    $UAM_Password_Test_Score = testpassword($_POST['UAM_Password_Test']);
-  }
-  else if (isset($_POST['PasswordTest']) and empty($_POST['UAM_Password_Test']))
-  {
-    array_push($page['errors'], l10n('UAM_reg_err_login3'));
-  }
-
   $conf_UAM = unserialize($conf['UserAdvManager']);
 
   // Group setting for unvalidated, validated users and downgrade group
@@ -446,28 +430,39 @@ ORDER BY name ASC
   $No_Valid_Status = -1;
   $Valid_Status = -1;
   $Downgrade_Status = -1;
-	
+
+  // Bug fix - We can not use "Guest" status and other are not suitable so we fix NO_CONFIRM_STATUS to "------------"
+  $conf_UAM['NO_CONFIRM_STATUS'] == $status_options[-1];
+
+  $template->assign(
+    'No_Confirm_Status',
+      array(
+        'Status_options' => $status_options[-1],
+        'Status_selected' => $status_options[-1]
+      )
+    );
+
   // Get unvalidate status values
   // ----------------------------
-  foreach (get_enums(USER_INFOS_TABLE, 'status') as $status)
-  {
-	  $status_options[$status] = l10n('user_status_'.$status);
-	  if (isset($conf_UAM['NO_CONFIRM_STATUS']) and $conf_UAM['NO_CONFIRM_STATUS'] == $status)
-	  {
-	    $No_Valid_Status = $status;
-	  }
-	  
-    // Template initialization for unvalidated users status
-    // ----------------------------------------------------
-    $template->assign(
-      'No_Confirm_Status',
-        array(
-          'Status_options' => $status_options,
-          'Status_selected' => $No_Valid_Status
-        )
-      );
-  }
-  
+//  foreach (get_enums(USER_INFOS_TABLE, 'status') as $status)
+//  {
+//	  $status_options[$status] = l10n('user_status_'.$status);
+//	  if (isset($conf_UAM['NO_CONFIRM_STATUS']) and $conf_UAM['NO_CONFIRM_STATUS'] == $status)
+//	  {
+//	    $No_Valid_Status = $status;
+//	  }
+//	  
+//    // Template initialization for unvalidated users status
+//    // ----------------------------------------------------
+//    $template->assign(
+//      'No_Confirm_Status',
+//        array(
+//          'Status_options' => $status_options,
+//          'Status_selected' => $No_Valid_Status
+//        )
+//      );
+//  }
+
   // Get validate status values
   // --------------------------
   foreach (get_enums(USER_INFOS_TABLE, 'status') as $status)
@@ -489,26 +484,38 @@ ORDER BY name ASC
       );
   }
 
+
+  // Bug fix - We can not use "Guest" status and other are not suitable so we fix DOWNGRADE_STATUS to "------------"
+  $conf_UAM['DOWNGRADE_STATUS'] == $status_options[-1];
+
+  $template->assign(
+    'Downgrade_Status',
+      array(
+        'Status_options' => $status_options[-1],
+        'Status_selected' => $status_options[-1]
+      )
+    );
+
   // Get downgrade status values
   // ---------------------------
-  foreach (get_enums(USER_INFOS_TABLE, 'status') as $status)
-  {
-    $status_options[$status] = l10n('user_status_'.$status);
-    if (isset($conf_UAM['DOWNGRADE_STATUS']) and $conf_UAM['DOWNGRADE_STATUS'] == $status)
-    {
-      $Downgrade_Status = $status;
-    }
-		
-    // Template initialization for validated users status
-    // --------------------------------------------------
-    $template->assign(
-      'Downgrade_Status',
-        array(
-          'Status_options' => $status_options,
-          'Status_selected' => $Downgrade_Status
-        )
-      );
-  }
+//  foreach (get_enums(USER_INFOS_TABLE, 'status') as $status)
+//  {
+//    $status_options[$status] = l10n('user_status_'.$status);
+//    if (isset($conf_UAM['DOWNGRADE_STATUS']) and $conf_UAM['DOWNGRADE_STATUS'] == $status)
+//    {
+//      $Downgrade_Status = $status;
+//    }
+//		
+//    // Template initialization for validated users status
+//    // --------------------------------------------------
+//    $template->assign(
+//      'Downgrade_Status',
+//        array(
+//          'Status_options' => $status_options,
+//          'Status_selected' => $Downgrade_Status
+//        )
+//      );
+//  }
 
 
   // Level setting for unvalidated, validated users and downgrade level
@@ -626,11 +633,6 @@ ORDER BY name ASC
 						'UAM_MAILEXCLUSION_TRUE'            => $conf_UAM['MAILEXCLUSION']=='true' ? 'checked="checked"' : '' ,
 						'UAM_MAILEXCLUSION_FALSE'           => $conf_UAM['MAILEXCLUSION']=='false' ? 'checked="checked"' : '' ,
 						'UAM_MAILEXCLUSION_LIST'            => $conf_UAM['MAILEXCLUSION_LIST'],
-						'UAM_PASSWORDENF_TRUE'              => $conf_UAM['PASSWORDENF']=='true' ? 'checked="checked"' : '' ,
-						'UAM_PASSWORDENF_FALSE'             => $conf_UAM['PASSWORDENF']=='false' ? 'checked="checked"' : '' ,
-						'UAM_PASSWORD_SCORE'                => $conf_UAM['PASSWORD_SCORE'],
-            'UAM_ADMINPASSWENF_TRUE'            => $conf_UAM['ADMINPASSWENF']=='true' ? 'checked="checked"' : '' ,
-						'UAM_ADMINPASSWENF_FALSE'           => $conf_UAM['ADMINPASSWENF']=='false' ? 'checked="checked"' : '' ,
             'UAM_GHOSTRACKER_TRUE'              => $conf_UAM['GHOSTRACKER']=='true' ? 'checked="checked"' : '' ,
 						'UAM_GHOSTRACKER_FALSE'             => $conf_UAM['GHOSTRACKER']=='false' ? 'checked="checked"' : '' ,
             'UAM_GHOSTRACKER_DAYLIMIT'          => $conf_UAM['GHOSTRACKER_DAYLIMIT'],
@@ -665,8 +667,6 @@ ORDER BY name ASC
 						'UAM_NO_VALID_LEVEL'                => $conf_UAM['NO_VALID_LEVEL'],
 						'UAM_VALID_LEVEL'                   => $conf_UAM['VALID_LEVEL'],
             'UAM_DOWNGRADE_LEVEL'               => $conf_UAM['DOWNGRADE_LEVEL'],
-            'UAM_PWDRESET_TRUE'                 => $conf_UAM['PWDRESET']=='true' ? 'checked="checked"' : '' ,
-            'UAM_PWDRESET_FALSE'                => $conf_UAM['PWDRESET']=='false' ? 'checked="checked"' : '' ,
             'UAM_REJECTCONNECT_TRUE'            => $conf_UAM['REJECTCONNECT']=='true' ? 'checked="checked"' : '' ,
             'UAM_REJECTCONNECT_FALSE'           => $conf_UAM['REJECTCONNECT']=='false' ? 'checked="checked"' : '' ,
             'UAM_REJECTCONNECT_TEXT'            => $conf_UAM['REJECTCONNECT_TEXT'],
@@ -678,7 +678,6 @@ ORDER BY name ASC
             'UAM_ADMINVALIDATIONMAIL_SUBJECT'   => $conf_UAM['ADMINVALIDATIONMAIL_SUBJECT'],
             'UAM_ADDURL2MAIL_TRUE'              => $conf_UAM['ADD_GALLERY_URL_TO_EMAILS']=='true' ? 'checked="checked"' : '' ,
             'UAM_ADDURL2MAIL_FALSE'             => $conf_UAM['ADD_GALLERY_URL_TO_EMAILS']=='false' ? 'checked="checked"' : '' ,
-						'UAM_PASSWORD_TEST_SCORE'           => $UAM_Password_Test_Score,
             'UAM_ERROR_REPORTS1'                => $UAM_Exclusionlist_Error,
             'UAM_ERROR_REPORTS2'                => $UAM_Illegal_Flag_Error1,
             'UAM_ERROR_REPORTS3'                => $UAM_Illegal_Flag_Error2,
