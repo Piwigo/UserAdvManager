@@ -61,7 +61,6 @@ $lang['UAM_Support_txt'] = 'Официальная поддрежка этого
 $lang['UAM_SubTitle1'] = 'Конфигурация плагина';
 $lang['UAM_Stuffs_Title'] = 'Блок плагина UAM';
 $lang['UAM_Stuffs'] = 'Блок плагина PWG Stuff';
-$lang['UAM_ScoreTest'] = 'Результат:';
 $lang['UAM_No_validation_for_Guest'] = 'Аккаунт гостя не нуждается в подтверждении';
 $lang['UAM_No_validation_for_Webmaster'] = 'Аккаунт вебмастера не нуждается в подтверждении';
 $lang['UAM_Manual_Validation'] = 'Подтверждение вручную';
@@ -311,4 +310,5 @@ $lang['UAM_Confirm_grpstat_notice'] = 'Будьте внимательны: же
 $lang['UAM_GTReminder_Subject'] = 'Ручная настройка темы письма с напоминанием';
 $lang['UAM_Err_audit_advise'] = '<b>Чтобы новые правила начали действовать, Вы должны внести изменения.<br> Используйте утилиту управления базами данных для внесения изменений в аккаунты пользователей в таблице ###_USERS';
 $lang['UAM_AddURL2Mail'] = 'Добавить URL галереи в конец электронного письма (в качестве подписи)';
+$lang['UAM_Follow this link to access the gallery'] = 'Пожалуйста, перейдите по этой ссылке для входа в галерею';
 ?>
