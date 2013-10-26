@@ -364,4 +364,5 @@ $lang['UAM_Customize_messagesandmails'] = 'Personalizar los mensajes y correos';
 $lang['UAM_group "%s" updated'] = 'Para un mejor rendimiento, el grupo %s se configura automáticamente como el grupo predeterminado.';
 $lang['personal_content'] = 'Contenido';
 $lang['UAM_AddURL2Mail'] = 'Añade la dirección de la galería al final del email (como una firma)';
+$lang['UAM_Follow this link to access the gallery'] = 'Por favor, sigue este enlace para acceder a la galería';
 ?>
