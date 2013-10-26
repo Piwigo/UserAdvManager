@@ -371,4 +371,5 @@ $lang['UAM_Default_GhstDeletion_Txt'] = 'Mi dispiace [username], il tuo account 
 $lang['UAM_group "%s" updated'] = 'Per la migliore perfrormance,il gruppo %s è stato automaticamente impostato quale gruppo di default';
 $lang['personal_content'] = 'Contenuto';
 $lang['UAM_AddURL2Mail'] = 'Aggiungi l\'URL della galleria alla fine delle e-mail (come una firma)';
+$lang['UAM_Follow this link to access the gallery'] = 'Prego, segui questo link per accedere alla galleria';
 ?>
