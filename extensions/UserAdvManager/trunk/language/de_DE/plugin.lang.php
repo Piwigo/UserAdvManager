@@ -404,4 +404,5 @@ $lang['UAM_Customize_messagesandmails'] = 'Anpassen der Nachrichten und E-Mails.
 $lang['UAM_group "%s" updated'] = 'Für die beste Geschwindigkeit, wurde die Gruppe %s als Standardgruppe eingestellt.';
 $lang['personal_content'] = 'Inhalt';
 $lang['UAM_AddURL2Mail'] = 'Hinzufügen der Galerie URL am Ende von E-Mails (wie eine Unterschrift)';
+$lang['UAM_Follow this link to access the gallery'] = 'Bitte folge diesem Link, um auf die Galerie zuzugreifen';
 ?>
