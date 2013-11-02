@@ -28,7 +28,6 @@ $lang['UAM_save_config'] = 'Configuração salva';
 $lang['UAM_submit'] = 'Submeter definições';
 $lang['personal_content'] = 'Conteúdo';
 $lang['UAM_Save'] = 'Executar o backup';
-$lang['UAM_ScoreTest'] = 'Resultado:';
 $lang['UAM_Stuffs_Title'] = 'Bloco UAM';
 $lang['UAM_SubTitle1'] = 'Configuração da extensão';
 $lang['UAM_Tab_Global'] = 'Configuração';
@@ -314,4 +313,6 @@ $lang['UAM_Stuffs_Desc'] = 'Adicionar um bloco informativo para utilizadores nã
 $lang['UAM_RejectConnexion'] = 'Rejeitar ligação a utilizadores até confirmação de registo';
 $lang['UAM_Subject admin validation for %s'] = 'Registo de %s a aguardar confirmação';
 $lang['UAM_Validated_Group'] = 'Grupo para utilizadores que confirmaram o seu registo<br>';
+$lang['UAM_Follow this link to access the gallery'] = 'Por favor, siga este link para acessar a galeria';
+$lang['UAM_empty_pwd'] = '[Senha vazia]';
 ?>
