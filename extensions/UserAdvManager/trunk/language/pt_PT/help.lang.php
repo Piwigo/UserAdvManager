@@ -80,4 +80,72 @@ Para usar vários idiomas, pode usar as etiquetas da descrição alargada da ext
 
 
 ';
+$lang['UAM_confirmmailTitle_d'] = 'Esta opção permite um utilizador confirmar o registo, clicando  num link recebido por e-mail que lhe é enviado depois do registo ou administradores a ativar manualmente o registo.
+<br/><br/>
+No primeiro caso, o e-mail é composto por uma parte personalizável para introduzir uma pequena nota de boas-vindas e uma parte fixa que contém o link de ativação que é gerado a partir de uma chave aleatória que pode ser eventualmente  regenerada através da aba  &quot;Tracking confirmations&quot;.
+<br/>
+No segundo caso, o link de validação é enviado para os administradores da galeria. Os visitantes têm de esperar até que um administrador lhes confirme, ele próprio, usando o link de validação ou na guia &quot;confirmation tracking&quot; .
+<br/>
+<b style=&quot;color: red;&quot;>NB: Opções &quot;Limite para confirmação de registo limited&quot; and &quot;Lembrar utilizadores não confirmados &quot; tem de ser definido para off quando a confirmação manual dos administradores está ativada.</b>
+<br/><br/>
+Esta opção é geralmente usada com a atribuição automática de grupo e/ou estatutos. Por exemplo, um utilizador que ainda não confirmou o seu registo será enviado para um grupo específico de utilizadores (com ou sem restrições na galeria ), enquanto um utilizador que confirmou o seu registo será enviado para um grupo &quot;normal&quot; ';
+$lang['UAM_USRAutoDelTitle_d'] = 'Isto só é válido quando o utilizador cuja conta expirou aciona o mecanismo de exclusão (raro, mas possível). ele é de seguida desligado da galeria e redirecionado para uma página que mostra a exclusão da sua conta e, possivelmente, as razões para essa exclusão.
+<br/><br/>
+Personalize mais o conteúdo com etiquetas especiais inseridas: <br/>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> para inserir o titulo da sua galeria.<br/>
+- <b style=&quot;color: red;&quot;>[myurl]</b> para inserir a URL se definido nas opções de configuração do piwigo.<br/>
+<b style=&quot;color: red;&quot;>[username]</b> não existe aqui pois o utilizador em questão foi apagado.
+<br/><br/>
+Texto personalizado para a página de redirecionamento pode ser inserido neste campo que é compatível com o editor FCK e, para multi-idiomas, você pode usar as etiquetas [lang] da Extensão Descrição alargada seestiver ativa.';
+$lang['UAM_GTReminder_Subject_d'] = 'Digite aqui manualmente o assunto do email informação personalizado do Rastreador fantasma. <br/>
+Por defeito, o campo tem um texto genérico em Inglês, mas você pode alterá-lo e usar as etiquetas de tradução [lang =?] Da extensão Descrição Alargada se instalada.
+<br/>
+As seguintes personalizações adicionais estão disponíveis sem o uso da extensão Descrição alargada:<br/>
+- <b style=&quot;color: red;&quot;>[username]</b> para automaticamente inserir o nome do utilizador destinatário do email.<br/>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> para inserir o titulo da galeria.<br/>
+';
+$lang['UAM_GTAutomail_Text_d'] = 'Digite o texto personalizado que também explica as razões para o rebaixamento, para acompanhar o link de confirmação. O texto personalizado não é obrigatório, mas fortemente recomendado. Na verdade, os visitantes não apreciam receber um e-mail contendo apenas um link, sem mais explicações. ;-)
+<br/><br/>
+Personalize mais o conteúdo com inserção de etiquetas especiais: <br/>
+- <b style=&quot;color: red;&quot;>[username]</b> para automaticamente inserir o nome do utilizador destinatário do email.<br/>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> para inserir o título da galeria.<br/>
+- <b style=&quot;color: red;&quot;>[myurl]</b> para inserir a URL da galeria se definido nas opções de configuração do Piwigo.
+<br/><br/>
+Para usar vários idiomas, você pode usar as etiquetas da extensão Descrição Alargada desde que ativa.';
+$lang['UAM_GTAutomail_Subject_d'] = 'Digite aqui o assunto do seu email automático personalizado.<br/>
+Por defeito, o campo tem um texto genérico em Inglês, mas você pode alterá-lo e usar as etiquetas de tradução [lang =?] Da extensão  Descrição Alargada se instalada.
+<br/><br/>
+As seguintes etiquetas de personalização estão disponíveis sem o uso da extensão Descrição alargada:<br/>
+- <b style=&quot;color: red;&quot;>[username]</b> para auomaticamente inserir o nome do utilizador destinatário do email.<br/>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> para inserir o titulo da sua galeria.<br/>
+';
+$lang['UAM_GT_MainTitle_d'] = '- Gerênciamento Automatico ou manual de utilizadores<br/>
+- E-mailing<br/>
+...';
+$lang['UAM_HidePasswTitle_d'] = 'Defina aqui se deseja exibir a senha escolhida pelo visitante no e-mail informação. Se  ativar a opção, a senha irá aparecer em texto claro. Se desativar a senha não vai aparecer.';
+$lang['UAM_confirmlevelTitle'] = 'Nível de privacidade';
+$lang['UAM_GTAutoTitle_d'] = 'Esta opção permite aplicar regras para a gestão automatizada de utilizadores fantasmas.
+<br/><br/>Princípio Básico: Um utilizador que atinge o máximo de tempo entre visitas <b><u>e</u></b> já foi notificado por e-mail é considerado como expirado. Em seguida, você pode aplicar as regras de processamento automatizadas tais como a exclusão automática de contas expiradas ou rebaixamento, restringindo o acesso à galeria (mudar automaticamente para um grupo restrito e/ou estado).
+<br/><br/>O desencadeamento desta automatização é alcançado quando ligar os utilizadores (qualquer utilizador!) à galeria.';
+$lang['UAM_GTAutoMailTitle_d'] = 'Quando uma conta está expirada (mudança de nível de grupo / status / nível de privacidade, rebaixando o visitante), um email informativo pode ser enviado para esclarecer as razões desta alteração e os meios para recuperar o acesso inicial à galeria.
+<br/> Para fazer isso, um link para reconfirmação do registo é anexado ao e-mail (geração automática de uma nova chave de confirmação).).<b style=&quot;color: red;&quot;> Se o utilizador já haja sido notificado, a sua conta é automaticamente destruída. <br/><br/>
+<b style=&quot;color: red;&quot;>Aviso: O uso desta função está intimamente associado com a confirmação da registo por parte do utilizador (confirmação por e-mail) e não pode ser ativada sem esta opção</b>.';
+$lang['UAM_confirmTitle_d'] = '- Informação geração de email<br/>
+- Registar confirmação geração de email<br/>
+- Grupos, estado ou nível de privacidade auto aderir<br/>
+- Prazo para a confirmação de registo<br/>
+- <br/>Lembrança da Geração de email<br/>
+';
+$lang['UAM_confirmgrpTitle'] = 'Grupos';
+$lang['UAM_GTAutoGpTitle_d'] = 'A mudança automática do grupo, estado ou nível de privacidade é como um rebaixamento das contas envolvidas e que trabalham com o mesmo princípio do grupo, status ou nível de privacidade de confirmação (ver &quot;Setting confirmations of registration&quot;). Portanto, para ser definido um grupo, estado e / ou nível de rebaixar o acesso à galeria. Se isto já foi definido com o uso da função confirmação de inscrição, você pode usar o mesmo grupo/status/nivel. <br/>
+<b style=&quot;color: red;&quot;>Nota importante: </b> Se um utilizador fantasma não ouviu falar em fora de prazo e da notificação automática por e-mail (se ativada), ele é automaticamente apagado da base de dados.';
+$lang['UAM_GTAutoDelTitle'] = 'Mensagem personalizada na conta eliminada';
+$lang['UAM_GTAutoDelTitle_d'] = 'Isto só é válido quando o utilizador, de cuja conta expirou, aciona o mecanismo eliminar, (raro, mas possível). Então,é desligado da galeria e redirecionado para uma página que mostra a eliminação da sua conta e, possivelmente, as razões para esta eliminação.
+<br/><br/>
+Personalize mais o conteúdo com inserção de etiquetas especiais: <br/>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> para inserir o título da sua galeria.<br/>
+- <b style=&quot;color: red;&quot;>[myurl]</b> Para inserir a URL da galeria desde que definido nas opções de configuração da galeria.<br/>
+<b style=&quot;color: red;&quot;>[username]</b> não é existente aqui porque o utilizador respetivo foi apagado.
+<br/><br/>
+Texto personalizado para a página de redirecionamento pode ser inserido neste campo que é compatível com o editor FCK e, para multi-idiomas, pode usar as etiquetas [lang] da extensão descrição alargada se ativa.';
 ?>
