@@ -47,4 +47,33 @@ $lang['UAM_AddURL2Mail_d'] = 'Ativando essa opção, a URL de sua galeria será 
 $lang['UAM_RejectConnexion_Custom_Txt_d'] = 'Personalize aqui seu texto explicativo que informa usuários não confirmados que eles não poderão conectar à galeria até que confirmem seu registro.
 <br><br>
 Este campo é compatível com o editor FCK e, para múltiplos idiomas, pode-se usar a tag [lang] do plugin de descrição estendida, se este estiver ativo.';
+$lang['UAM_GTAutoGpTitle_d'] = 'A mudança automática do grupo, estado ou nível de privacidade é como um rebaixamento das contas envolvidas e que trabalham com o mesmo princípio que o grupo, status ou nível de privacidade de confirmação (consulte "Configurar as confirmações de inscrição"). Portanto,  para definir um grupo, estado e/ou nível de rebaixar do acesso à galeria. Se isso já foi definido com o uso da função de confirmação de inscrição, você pode usar o mesmo grupo / status / nível. <br/>
+<b style="color: red;"> Nota importante: </ b> Se um usuário fantasma ainda não ouviu falar de fora do prazo e, apesar da notificação automática por e-mail (se habilitado), ele é automaticamente excluído do base de dados.';
+$lang['UAM_RejectConnexion_d'] = 'Se ativado, os novos usuários registrados que não confirmarem sua inscrição não serão capazes de conectar-se à galeria. Eles será redirecionado para uma página especial para informá-los deste estado. <br/><br/>
+<b style="color: red;"> Aviso - Este recurso funciona apenas em conjunto com grupos de confirmação! Veja abaixo para definir os grupos, conforme necessário. </b>';
+$lang['UAM_RedirTitle_d'] = 'Esta opção redireciona automaticamente um usuário registrado para sua personalização de página somente em sua primeira conexão com a galeria. <br/><br/>
+Atenção: Esse recurso não se aplica a todos os usuários registrados. Aqueles com "admin", "webmaster" ou status "genérico" são excluídos.';
+$lang['UAM_restricTitle_d'] = '- Exclusão de caracteres<br/>
+- Exclusão de domínios de email<br/>
+...';
+$lang['UAM_usermanTitle_d'] = 'Quando o limite de prazo para inscrição é habilitado, você encontrará abaixo a lista de usuários cuja confirmação da inscrição é esperada, <b style="text-decoration: underline;"> ou não </b> que estão no tempo para confirmar. <br/>
+A data de registro é exibida em verde enquanto o tempo for inferior ao limite de tempo para confirmar sua inscrição. Neste caso, a tecla de confirmação ainda é válida e podemos enviar um e-mail com ou sem uma nova chave de confirmação. <br/>
+Quando a data de registro aparece em vermelho , o período de confirmação expirou. Neste caso , você deve enviar um e-mail com a regeneração de chave de confirmação , se você quiser permitir que o usuário ainda confirme a sua inscrição. <br/>
+Em todos os casos , é possível forçar manualmente a confirmação . <br/>
+Neste ponto, você pode:
+<br/>
+- Manualmente apagar as contas <b> (dreno manual) </b>
+<br/>
+- Gerar e-mail lembrete <b> sem </b> geração de uma nova chave. Aviso: Enviar um e-mail para lembrete de visitantes alvejados. Esta função não redefinir a data de registo de visitantes alvejados e o tempo limite ainda é válido.
+<br/>
+- Gerar lembrete email <b> com </b> geração de uma nova chave. Aviso: Enviar um e-mail para lembrete de visitantes alvejados. Esta função também redefine a data de registo de visitantes alvejados que equivale a prorrogar o prazo para confirmação.
+<br/>
+- Enviar um registro aguardando a confirmação manualmente , mesmo que o prazo de validade tenha ultrapassado <b> (forçando confirmação ) </b>.
+<br/>
+<b> Função tabela de classificação </b>: Você pode classificar os dados exibidos , clicando nos cabeçalhos das colunas. Segure a tecla SHIFT para classificar até 4 colunas simultâneas .';
+$lang['UAM_validationlimitTitle_d'] = 'Esta opção permite limitar a validade da chave de confirmação de e-mail  enviada para novos inscritos. Os visitantes que se inscreverem terão x dias de tempo para confirmar sua inscrição. Após este período, o link de confirmação irá expirar.
+<br/><br/>
+Esta opção é utilizada em conjunto com a "Confirmação de registo"
+<br/><br/>
+Se esta opção e a opção "Lembrar os usuários não confirmados" são ativadas, novas opções aparecem em baixo nesta seção para permitir a automação de gestão de usuários não confirmados.';
 ?>
