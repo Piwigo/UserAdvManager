@@ -148,4 +148,109 @@ Personalize mais o conteúdo com inserção de etiquetas especiais: <br/>
 <b style=&quot;color: red;&quot;>[username]</b> não é existente aqui porque o utilizador respetivo foi apagado.
 <br/><br/>
 Texto personalizado para a página de redirecionamento pode ser inserido neste campo que é compatível com o editor FCK e, para multi-idiomas, pode usar as etiquetas [lang] da extensão descrição alargada se ativa.';
+$lang['UAM_remailtxt1Title'] = 'Email lembrete com nova chave gerada';
+$lang['UAM_validationlimitTitle_d'] = 'Esta opção permite limitar a validade da chave  confirmação enviada por e-mail para novos inscritos. Os visitantes que se inscreverem terão x dias para confirmar sua inscrição. Após este período, o link de confirmação expirará.
+<br/><br/>
+Esta opção é utilizada em conjunto com a &quot;Confirmação de registo&quot;
+<br/><br/>
+Se esta opção e a opção &quot;Lembrar utilizadores não confirmados&quot; estiverem ativadas, novas opções aparecerão em baixo, nesta seção, para permitir a automatização de gestão de utilizadores não confirmados.';
+$lang['UAM_remailtxt2Title_d'] = 'Digite o texto introdutório que deseja apareça no e-mail lembrete sem uma chave de confirmação regenerada.
+<br/><br/>
+Se deixado em branco , o email lembrete ficará vazio. É, portanto, fortemente aconselhado a colocar um pequeno texto explicativo. ( NB: O texto pré-preenchido com a instalação da extensão é fornecido como um exemplo).
+<br/><br/>
+Personalize o conteúdo com inserção de etiquetas especiais: <br/>
+- <b style=&quot;color: red;&quot;>[username]</b> para inserir automaticamente o nome do utilizador destinatário do e-mail<br/>.
+- <b style=&quot;color: red;&quot;>[mygallery]</b> para inserir o título da sua galeria<br/>
+- <b style=&quot;color: red;&quot;>[myurl]</b> para inserir a URL da galeria se configurado nas opções de configuração do Piwigo<br/>
+- <b style=&quot;color: red;&quot;>[Kdays]</b>para inserir o número de limite de dias para confirmar a inscrição (&quot;Limite para confirmação do registo; deve estar ativado).
+<br/><br/>
+Para usar vários idiomas, você pode usar as etiquetas da extensão Descrição Alargada se estiver ativada.';
+$lang['UAM_userlistTitle_d'] = 'Esta página é para informação ao administrador. Exibe uma lista de todos os utilizadores registados na galeria mostrando a data e o número de dias desde sua última visita. A lista é ordenada em ordem crescente de número de dias.
+<br/><br/>
+<b><u> Apenas quando o Detetor de Fantasmas estiver ativo </u></b> , o número de dias sem uma visita aparece como o seguinte código de cor, de acordo com o máximo definido nas opções do Detetor de Fantasmas:
+<br/>
+- <b style=&quot;color: lime;&quot;>Verde</b> : Quando o utilizador visitou a galeria <b style=&quot;color: lime;&quot;><u>menas de 50%</u></b> do montante máximo referido no Detetor de fantasmas.<br/>
+- <b style=&quot;color: orange;&quot;>Laranja</b> : Quando o utilizador visitou a galeria <b style=&quot;color: orange;&quot;><u> entre 50% e 99% </u></b> do máximo indicado no Detetor de Fantasmas .<br/>
+- <b style=&quot;color: red;&quot;>vermelho</b> : Quando o utilizador visitou a galeria <b style=&quot;color: red;&quot;><u>para mais de 100%</u></b> do máximo indicado no Detetor de Fantasmas . <b><u>Neste caso, o utilizador também deve aparecer na tabela do Detetor de fantasmas.</u></b><br/>
+<br/>
+exemplo :
+<br/>
+O período máximo do Detetor de Fantasmas é configurado para 100 dias.
+<br/>
+Um utilizador aparecerá a verde, se ele visitou a galeria há menos de 50 dias , em laranja , se sua última visita ocorreu entre 50 e 99 dias e a vermelho há 100 dias ou mais.
+<br/><br/>
+<b>NOTA</b>: A lista não exibe quem não confirmou a sua inscrição (se a opção de confirmação de registo está ativada). Esses utilizadores são então geridos de uma forma especial no separador &quot;Tracking confirmations&quot; .
+<br/><br/>
+Função <b> tabela de classificação </ b>: Você pode classificar os dados exibidos, clicando nos cabeçalhos das colunas. Segure a tecla SHIFT para classificar até 4 colunas simultâneas.
+<br/>
+<b>Função tabela de classificação </b>: Você pode classificar os dados exibidos, clicando nos cabeçalhos das colunas. Prima a tecla SHIFT para classificar até 4 colunas simultâneas.';
+$lang['UAM_remailtxt2Title'] = 'Email lembrete sem geração de nova chave';
+$lang['UAM_restricTitle_d'] = '- Exclusão de caratéres<br/>
+- Exclusão de domínios de email<br/>';
+$lang['UAM_tipsTitle_d'] = 'Dicas e vários exemplos de uso';
+$lang['UAM_usermanTitle_d'] = 'Ao ativar o limite de prazo para inscrição, encontrará abaixo uma lista de utilizadores cuja confirmação de inscrição é aguardado, <b style=&quot;text-decoration: underline;&quot;> ou não </ b> estão no prazo para confirmar.<br/><br/>
+A data de registo é exibida a verde quando o utilizador em causa está abaixo do limite de tempo para confirmar sua inscrição. Neste caso, a tecla de confirmação ainda é válida e podemos enviar um e-mail com ou sem uma nova chave de confirmação.<br/>
+Quando a data de registo aparece a vermelho , o período de confirmação expirou. Neste caso , deve enviar um e-mail com a regeneração da chave de confirmação , se desejar permitir ao utilizador que confirme a sua inscrição.<br/><br/>
+Em todos os casos , é possível forçar manualmente a confirmação . <br/><br/>
+Neste ponto de vista , você pode:
+<br/><br/>
+- Apagar manualmente Contas <b>(dreno manual)</ b>
+<br/>
+- Gerar e-mail lembrete <b>sem</b> gerar uma nova chave. Aviso: Enviar um e-mail lembrete para visitantes alvo. Esta função não redefine a data de registo de visitantes alvo e o tempo limite permanece válido.
+<br/>
+- Gerar email lembrete <b>com</b> geração de uma nova chave. Aviso: Enviar um e-mail lembrete para visitantes alvo. Esta função também redefine a data de registo de visitantes alvo o que equivale a prorrogar o prazo para confirmação.
+<br/>
+- Enviar um registo aguardando a confirmação manualmente , mesmo que com o prazo de validade caducado <b>(forçando confirmação)</b>.
+<br/><br/>
+<b>Função  tabela de classificação </b>: Você pode classificar os dados exibidos , clicando nos cabeçalhos das colunas. Prima a tecla SHIFT para classificar até 4 colunas simultâneas .';
+$lang['UAM_mailexcTitle_d'] = 'Por defeito, Piwigo aceita todas as direções de email no formato xxx@yyy.zz. Ativando esta opção permite-lhe excluir certos domínios no formato: @[domain_name].[domain_extension].<br/><br/>
+Exemplos:<br/>
+@hotmail.com -> excluindo direções *@hotmail.com<br/>
+@hotmail -> excluindo todas as direções *@hotmail*<br/><br/>
+<b style=&quot;color: red;&quot;>Atenção - Esta opção apenas atua se os emails forem os de registo! Por favor verifique as opções de configuração Piwigo.</b>
+	 ';
+$lang['UAM_miscTitle_d'] = '- Monotorização de utilizadores registados<br/>
+- Nome de utilizador obrigatório para comentários de visitantes<br/>';
+$lang['UAM_confirmmail_custom1_d'] = 'Quando a opção &quot;Confirmação de registo&quot; está ativa, este campo permite-lhe personalizar o <b><u>texto rejeição</u></b> na página confirmação de registo mostrada quando um utilizador clica no link confirmação que recebeu por email.
+<br/><br/>
+Depois de instalar a extensão, um texto standard é mostrado como um exemplo.
+<br/><br/>
+Personalizar o conteúdo com inserção de etiquetas especiais:<br/>
+- <b style=&quot;color: red;&quot;>[username]</b> para inserir o nome do utilizador em causa.<br/>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> para inserir o nome da galeria.<br/>
+- <b style=&quot;color: red;&quot;>[myurl]</b> para inserir a URL se definido nas opções de configuração Piwigo.
+<br/><br/>
+Este campo é compatível com o editor FCK e, para idiomas multiplos, pode utilizar as etiquetas [lang] da extensão Descrição Alargada se estiver ativada.';
+$lang['UAM_confirmmail_custom2_d'] = 'Quando a opção &quot;Confirmação de registo&quot; está ativa, este campo permite-lhe personalizar o <b><u>texto rejeição</u></b> na página confirmação de registo mostrada quando um utilizador clica no link confirmação que recebeu por email.
+<br/><br/>
+Depois de instalar a extensão, um texto standard é mostrado como um exemplo.
+<br/><br/>
+Personalizar o conteúdo com inserção de etiquetas especiais:<br/>
+- <b style=&quot;color: red;&quot;>[username]</b> para inserir o nome do utilizador em causa.<br/>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> para inserir o nome da galeria.<br/>
+- <b style=&quot;color: red;&quot;>[myurl]</b> para inserir a URL se definido nas opções de configuração Piwigo.
+<br/><br/>
+Este campo é compatível com o editor FCK e, para idiomas multiplos, pode utilizar as etiquetas [lang] da extensão Descrição Alargada se estiver ativada.';
+$lang['UAM_confirmtxtTitle_d'] = 'Digite o texto introdutório que deseja apareça no e-mail de confirmação da inscrição.
+<br/><br/>
+Personalize mais o conteúdo com inserção de etiquetas especiais: <br/>
+- <b style=&quot;color: red;&quot;>[username]</b> para automáticamente inserir o nome do utilizador destinatário do email.<br/>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> para inserir o titulo da galeria.<br/>
+- <b style=&quot;color: red;&quot;>[myurl]</b> para inserir a URL se nas opções de configuração Piwigo.<br/>
+- <b style=&quot;color: red;&quot;>[Kdays]</b> Para inserir o número de dias limite para confirmação da inscrição (&quot;limite da data limite para confirmação do registo;&quot; deve ser ativada).
+<br/><br/>
+Para usar vários idiomas, você pode usar as etiquetas da extensão descrição alargada se ativa.';
+$lang['UAM_gtTitle_d'] = 'Quando o Ghost Tracker é ativado e inicializado, você encontrará abaixo a lista de visitantes registados que não voltaram desde x dias. &quot;x&quot; é o número de dias configurados na guia Configuração geral. Além disso, vai encontrar uma coluna que indica se um lembrete de e-mail foi enviado para os visitantes direcionados. Assim, você pode ver de relance e tratar os visitantes que não tiveram em atenção o lembrete <br/><br/> Neste ponto de vista, você pode.:
+<br/><br/>
+- Manualmente apagar contas<b>(dreno manual)</b>
+<br/>
+- Gerar e-mail lembrete <b>com redefinição da data da última visita </b>. Isto permite mostrar cartão aos visitantes alvejados. Se o visitante já recebeu um lembrete, nada impede do envio de um novo e-mail que irá repor novamente, na realidade, a data da última visita.
+<br/><br/>
+<b> Função tabela de classificação</b>: Você pode classificar os dados exibidos, clicando nos cabeçalhos das colunas. Segure a tecla SHIFT para classificar até 4 colunas simultâneas.';
+$lang['UAM_MailInfo_Subject_d'] = 'Digite aqui a informação do assunto personalizado. <br/>
+Por defeito, o campo tem um texto genérico em Inglês, mas você pode alterá-lo e usar as etiquetas de tradução [lang=?] Da extensão Descrição Alargada se instalada.
+<br/>
+As seguintes etiquetas adicionais personalizadas estão disponíveis sem o uso da extensão Descrição alargada: <br/>
+- <b style=&quot;color: red;&quot;>[username]</b> para automáticamente inserir o nome do destinatário do email.<br/>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> para inserir o título da sua galeria.<br/>';
 ?>
