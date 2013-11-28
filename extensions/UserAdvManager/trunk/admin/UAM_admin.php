@@ -863,7 +863,7 @@ FROM '.USERS_TABLE.'
       				array(
        					'ID'          => $local_user['id'],
                 'USERNAME'    => stripslashes($local_user['username']),
-                'EMAIL'       => get_email_address_as_display_text($local_user['email']),
+                'EMAIL'       => $local_user['email'],
                 'LASTVISIT'   => $local_user['lastvisit'],
                 'DAYS'        => $deltadays,
                 'DISPLAY'     => $display,
@@ -1368,7 +1368,7 @@ WHERE user_id = '.$local_user['id'].'
                                 ? '<BR>['.l10n('default values').']' : ''),
                                 'STATUS' => l10n('user_status_'
                                 .$local_user['status']),
-          'EMAIL'            => get_email_address_as_display_text($local_user['email']),
+          'EMAIL'            => $local_user['email'],
           'GROUPS'           => $groups_string,
           'REGISTRATION'     => $local_user['registration_date'],
           'REMINDER'         => $reminder,   
@@ -1733,7 +1733,7 @@ VALUES ('.$row['id'].',"'.$dbnow.'","false")
           'ID'          => $local_user['id'],
          	'CHECKED'     => $checked,
          	'USERNAME'    => stripslashes($local_user['username']),
-          'EMAIL'       => get_email_address_as_display_text($local_user['email']),
+          'EMAIL'       => $local_user['email'],
           'LASTVISIT'   => $local_user['lastvisit'],
           'REMINDER'    => $reminder,
         )
