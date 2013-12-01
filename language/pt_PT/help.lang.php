@@ -253,4 +253,52 @@ Por defeito, o campo tem um texto genérico em Inglês, mas você pode alterá-l
 As seguintes etiquetas adicionais personalizadas estão disponíveis sem o uso da extensão Descrição alargada: <br/>
 - <b style=&quot;color: red;&quot;>[username]</b> para automáticamente inserir o nome do destinatário do email.<br/>
 - <b style=&quot;color: red;&quot;>[mygallery]</b> para inserir o título da sua galeria.<br/>';
+$lang['UAM_gttextTitle_d'] = 'Digite o texto que deseja apareça no lembrete de e-mail para solicitar ao utilizador para visitar sua galeria de imediato. (NB: O texto pré-preenchido com a instalação da extensão é fornecido como exemplo).
+<br/><br/
+Personalize mais o conteúdo com inserção de etiquetas especiais: <br/>
+- <b style=&quot;color: red;&quot;>[username]</b> para automáticamente inserir o nome do utilizador destinatário do email.<br/>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> para inserir o titulo da galeria.<br/>
+- <b style=&quot;color: red;&quot;>[myurl]</b> para inserir a URL da galeria se ativado nas opções configuração do Piwigo.<br/>
+- <b style=&quot;color: red;&quot;>[days]</b> para inserir o número máximo de dias entre duas visitas.
+<br/><br/>
+Para multiplos idiomas, poderá usar as etiquetas da extensão Descrição alargada se estiver ativada.';
+$lang['UAM_RejectConnexion_d'] = 'Se ativado, os novos utilizadores registrados que não confirmar sua inscrição não poderão ligar-se à galeria. Serão redirecionados para uma página especial onde serão informados deste seu estado.<br/>
+<b style="color: red;"> Aviso - Este recurso funciona apenas em conjunto com confirmação de grupos! Veja abaixo para definir os grupos como requerido.</b>';
+$lang['UAM_infotxtTitle_d'] = 'Introduza o texto introdutório que deseja apareça no email informação.
+<br/><br/>
+Depois personalize o conteúdo com inserção de etiquetas especiais:<br/>
+- <b style=&quot;color: red;&quot;>[username]</b> para automáticamente introduzir o nome do utilizador destinatário do email.<br/>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> para inserir o título da galeria.<br/>
+- <b style=&quot;color: red;&quot;>[myurl]</b> para inserir a URL da galeria se definido nas opções configuração do.
+<br/><br/>
+Para múltiplos idiomas, pode usar a extensão Descrição alargada se estiver ativada.';
+$lang['UAM_StuffsTitle_d'] = 'Isto ativa um bloco UAM adicional na extensão PWG Stuffs (se instalada) para informar, acerca da sua condição, os visitantes que não confirmaram a sua inscrição.
+<br/><br/>
+Para mais detalhes, consulte as <b>Dicas e exemplos de uso </b> na parte inferior desta página.';
+$lang['UAM_Tracking registered users_d'] = 'Isso ativa uma tabela na aba &quot;Rastrear utilizadores registrados&quot;, onde constam os utilizadores registados na galeria com a data de sua última visita e tempo gasto (em dias) desde a sua última visita. O monitoramento é puramente informativo para o administrador da Galeria.';
+$lang['UAM_USRAutoMailTitle_d'] = 'Quando ativada, esta função enviará automaticamente conteúdo personalizado no &quot;Email lembrete com uma nova chave gerada&quot; aos visitantes que correspondem aos critérios.';
+$lang['UAM_confirmstatTitle'] = 'Estatutos';
+$lang['UAM_RejectConnexion_Custom_Txt_d'] = 'Personalize aqui a sua explanação para informar os utilizadores não confirmados de que eles não autorizados a ligar-se à galeria enquanto não confirmarem a sua inscrição.
+<br/><br/>
+Este campo é compatível com o editor FCK e, para multi-idiomas, você pode usar a etiqueta [lang] se a extensão Descrição Alargada estiver ativa.';
+$lang['UAM_remailTitle_d'] = 'Esta opção permite-lhe enviar um e-mail lembrete aos utilizadores registados mas que ainda não confirmaram a sua inscrição em tempo normal. Por isso, age em conjunto com a  &quot;Confirmação de registo&quot;
+<br/><br/>
+Podem ser enviados dois tipos de emails: Com ou sem regeneração da chave de confirmação. Conforme o caso, o conteúdo dos e-mails pode ser personalizado.
+<br/><br/>
+Consulte a aba &quot;confirmações de rastreamento&quot;
+<br/><br/>
+Se esta opção e a opção &quot;Prazo para confirmação de inscrição limitado&quot; são ativados, novas opções aparecem abaixo desta secção para ativar a gestão automática de utilizadores não confirmados.';
+$lang['UAM_RedirTitle_d'] = 'Esta opção automaticamente redireciona um utilizador registado para a sua página personalizada apenas na sua sua primeira ligação à galeria.<br/><br/>
+Atenção: Esse recurso não se aplica a todos os utilizadores registados. Aqueles com estatus &quot;admin&quot;, &quot;webmaster&quot; ou &quot;generic&quot; são excluídos';
+$lang['UAM_remailtxt1Title_d'] = 'Digite o texto introdutório que deseja apareça no e-mail lembrete em adição à confirmação da chave regenerada.
+<br/><br/>
+Se deixado em branco, o  mail lembrete incluirá apenas o link de confirmação . É, portanto, fortemente aconselhado seja escrito um pequeno texto explanatório. (NB: O texto pré-preenchido com a instalação da extensão é fornecido apenas como exemplo).
+<br/><br/>
+Personalize mais o conteúdo com inserção de etiquetas especiais: <br/>
+- <b style=&quot;color: red;&quot;>[username]</b> para inserir automaticamente o nome do utilizador destinatário do e-mail <br/>.
+- <b style=&quot;color: red;&quot;>[mygallery]</b> para inserir o título da sua galeria <br/>
+- <b style=&quot;color: red;&quot;>[myurl]</b>  para inserir a URL da galeria se configurado nas opções de configuração do Piwigo <br/>
+- <b style=&quot;color: red;&quot;>[Kdays]</b> para inserir o número de dias limite para confirmar a inscrição  (&quot;Deadline for registration confirmation limited;&quot; tem de estar ativado).
+<br/><br/>
+Para usar vários idiomas, pode usar a extensão Descrição Alargada se estiver ativada.';
 ?>
