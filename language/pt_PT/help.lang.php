@@ -301,4 +301,19 @@ Personalize mais o conteúdo com inserção de etiquetas especiais: <br/>
 - <b style=&quot;color: red;&quot;>[Kdays]</b> para inserir o número de dias limite para confirmar a inscrição  (&quot;Deadline for registration confirmation limited;&quot; tem de estar ativado).
 <br/><br/>
 Para usar vários idiomas, pode usar a extensão Descrição Alargada se estiver ativada.';
+$lang['UAM_adminconfmailTitle_d'] = 'Você pode desativar essa confirmação apenas para contas de utilizador criadas pelo administrador através da interface de gerenciamento de utilizadores do Piwigo.<br/><br/>
+Ao ativar essa opção, e-mail de confirmação de inscrição será enviada para cada utilizador criado por admin.<br/><br/>
+Ao desativar esta opção (padrão), apenas são enviadas as informações de e-mail  (se &quot;e-mail Informação ao utilizador&quot; estiver ativado). Além disso, por defeito, o utilizador criado será <b>considerado validado. </b> ';
+$lang['UAM_USRAutoTitle_d'] = 'Manipulação automática de visitantes não confirmados é acionada cada vez que se ligar à galeria e funciona da seguinte forma:
+<br/><br/>
+- A exclusão automática de contas não confirmadas no tempo permitido sem o envio automático de e-mail lembrete -> &quot;Prazo para confirmação de inscrição limitado&quot; <b><u> habilitado </u></b> e &quot;Lembrar os utilizadores não confirmados" <b><u> desativado </u><br/><br/>
+- Enviando automaticamente uma mensagem de lembrete com nova geração de chave de confirmação e exclusão automática de contas não confirmadas no praso após o envio do lembrete -> &quot;Prazo para confirmação de inscrição limitada &quot;<b><u> ativado </ u></b> e  &quot;Lembrar os usuários não confirmados &quot; <b><u> habilitado</u></b>.
+';
+$lang['UAM_ghosttrackerTitle_d'] = 'Também chamado de &quot;Rastreador de Fantasmas&quot;, quando esta função está ativada, você pode gerenciar seus visitantes, dependendo da freqüência de suas visitas. Estão disponíveis 2 modos de funcionamento: <br/><br/>
+- Gestão manual: Quando o tempo entre duas visitas é atingido, o visitante aparece na tabela &quot;Rastreador de Fantasmas&quot;, onde, através de email poderá lembra-lo ou apaga-lo <br/><br/>.
+- Gestão Automatizada: Quando o período entre duas visitas sucessivas for atingido, o visitante é excluído ou movido automaticamente para um grupo no  estado de espera. Neste segundo caso, um e-mail informação pode ser-lhe enviado. <br/><br/>
+<b style=&quot;color: red;&quot;>Nota importante: Se ativar este recurso pela primeira vez ou o reativar após um longo período, durante o qual os novos visitantes foram registados, deve inicializar ou reinicializar o &quot;Rastreador de Fantasmas&quot;,  (veja as instruções correspondentes no separador &quot;Rastreador de Fantasmas&quot;).<br/>
+';
+$lang['UAM_infomailTitle_d'] = 'Esta opção permite automatizar o envio de um e-mail informação para um utilizador quando ele altera a senha ou endereço de e-mail no seu perfil. <br/>
+O conteúdo da mensagem a enviar é composto por uma parte personalizável para introduzir uma pequena nota de boas-vindas e uma parte fixa, indicando o nome de login, senha e endereço de e-mail do utilizador.';
 ?>
