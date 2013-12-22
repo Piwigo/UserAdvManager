@@ -1280,104 +1280,66 @@ WHERE user_id = '.$id.'
      get_l10n_args('UAM_Link: %s', AddConfirmMail($id, $email)),
     );
 
-    UAM_mail_notification_admins($subject, $content);
+    //UAM_mail_notification_admins($subject, $content);
+    pwg_mail_notification_admins($subject, $content, true);
   }
 	elseif ((isset($conf_UAM['CONFIRM_MAIL']) and $conf_UAM['CONFIRM_MAIL'] == 'true') and $confirm)
 	{
 	  // Adding gallery URL at the end of the email
     if (isset($conf_UAM['ADD_GALLERY_URL_TO_EMAILS']) and $conf_UAM['ADD_GALLERY_URL_TO_EMAILS'] == 'true')
     {
-      pwg_mail($email, array(
-        'subject' => $subject,
-    	 'content' => (isset($infos1) ? $infos1_perso.l10n_args($infos1)."\n\n" : "").(isset($infos2) ? $infos2_perso.l10n_args($infos2)."\n\n" : "").get_absolute_root_url(),
-      ));
+      $content = (isset($infos1) ? $infos1_perso.l10n_args($infos1)."\n\n" : "").(isset($infos2) ? $infos2_perso.l10n_args($infos2)."\n\n" : "").get_absolute_root_url();
+
+      pwg_mail(
+        array(
+          'name' => stripslashes($username),
+          'email' => $email,
+          ),
+        array(
+          'content' => $content,
+          'content_format' => 'text/plain',
+          'subject' => $subject,
+          )
+        );
     }
     // Do not add gallery URL at the end of the email
     elseif (isset($conf_UAM['ADD_GALLERY_URL_TO_EMAILS']) and $conf_UAM['ADD_GALLERY_URL_TO_EMAILS'] == 'false')
     {
-      pwg_mail($email, array(
-        'subject' => $subject,
-    	 'content' => (isset($infos1) ? $infos1_perso.l10n_args($infos1)."\n\n" : "").(isset($infos2) ? $infos2_perso.l10n_args($infos2)."\n\n" : ""),
-      ));
+      $content = (isset($infos1) ? $infos1_perso.l10n_args($infos1)."\n\n" : "").(isset($infos2) ? $infos2_perso.l10n_args($infos2)."\n\n" : "");
+
+      pwg_mail(
+        array(
+          'name' => stripslashes($username),
+          'email' => $email,
+          ),
+        array(
+          'content' => $content,
+          'content_format' => 'text/plain',
+          'subject' => $subject,
+          )
+        );
     }
     // By default do not add gallery URL at the end of the email
     else
     {
-      pwg_mail($email, array(
-        'subject' => $subject,
-    	 'content' => (isset($infos1) ? $infos1_perso.l10n_args($infos1)."\n\n" : "").(isset($infos2) ? $infos2_perso.l10n_args($infos2)."\n\n" : ""),
-      ));
+      $content = (isset($infos1) ? $infos1_perso.l10n_args($infos1)."\n\n" : "").(isset($infos2) ? $infos2_perso.l10n_args($infos2)."\n\n" : "");
+
+      pwg_mail(
+        array(
+          'name' => stripslashes($username),
+          'email' => $email,
+          ),
+        array(
+          'content' => $content,
+          'content_format' => 'text/plain',
+          'subject' => $subject,
+          )
+        );
     }
 	}
 // Switching back to default language
 // ----------------------------------
 switch_lang_back();
-}
-
-
-/**
- * Function called from SendMail2User in functions.inc.php to notify admins on user registration validation with validation key
- *
- * @param:
- *   - keyargs_subject: mail subject on l10n_args format
- *   - keyargs_content: mail content on l10n_args format
- *
- * @return boolean (Ok or not)
- */
-function UAM_mail_notification_admins($keyargs_subject, $keyargs_content)
-{
-  global $conf, $user;
-
-  // Check arguments
-  if (empty($keyargs_subject) or empty($keyargs_content))
-  {
-    return false;
-  }
-
-  $return = true;
-
-  $admins = array();
-
-  $query = '
-SELECT
-    u.username AS username,
-    u.mail_address AS mail_address
-  FROM '.USERS_TABLE.' AS u
-    JOIN '.USER_INFOS_TABLE.' AS i ON i.user_id = id
-  WHERE i.status in (\'webmaster\',  \'admin\')
-    AND mail_address IS NOT NULL
-    AND i.user_id = id
-  ORDER BY username
-;';
-
-  $datas = pwg_query($query);
-  if (!empty($datas))
-  {
-    while ($admin = pwg_db_fetch_assoc($datas))
-    {
-      if (!empty($admin['mail_address']))
-      {
-        array_push($admins, format_email($admin['username'], $admin['mail_address']));
-      }
-    }
-  }
-
-  if (count($admins) > 0)
-  {
-    $content = l10n_args($keyargs_content)."\n";
-
-    $return = pwg_mail(
-      implode(', ', $admins),
-      array(
-        'subject' => '['.$conf['gallery_title'].'] '.l10n_args($keyargs_subject),
-        'content' => $content,
-        'content_format' => 'text/plain',
-        'email_format' => 'text/plain',
-        )
-      );
-  }
-
-  return $return;
 }
 
 
@@ -1531,26 +1493,53 @@ WHERE user_id = '.$user_id.'
   // Adding gallery URL at the end of the email
   if (isset($conf_UAM['ADD_GALLERY_URL_TO_EMAILS']) and $conf_UAM['ADD_GALLERY_URL_TO_EMAILS'] == 'true')
   {
-    pwg_mail($email, array(
-      'subject' => $subject,
-      'content' => ($infos1."\n\n").(isset($infos2) ? l10n_args($infos2)."\n\n" : "").get_absolute_root_url(),
-    ));
+    $content = ($infos1."\n\n").(isset($infos2) ? l10n_args($infos2)."\n\n" : "").get_absolute_root_url();
+
+    pwg_mail(
+      array(
+        'name' => stripslashes($username),
+        'email' => $email,
+        ),
+      array(
+        'content' => $content,
+        'content_format' => 'text/plain',
+        'subject' => $subject,
+        )
+      );
   }
   // Do not add gallery URL at the end of the email
   elseif (isset($conf_UAM['ADD_GALLERY_URL_TO_EMAILS']) and $conf_UAM['ADD_GALLERY_URL_TO_EMAILS'] == 'false')
   {
-    pwg_mail($email, array(
-      'subject' => $subject,
-      'content' => ($infos1."\n\n").(isset($infos2) ? l10n_args($infos2)."\n\n" : ""),
-    ));
+    $content = ($infos1."\n\n").(isset($infos2) ? l10n_args($infos2)."\n\n" : "");
+
+    pwg_mail(
+      array(
+        'name' => stripslashes($username),
+        'email' => $email,
+        ),
+      array(
+        'content' => $content,
+        'content_format' => 'text/plain',
+        'subject' => $subject,
+        )
+      );
   }
   // By default do not add gallery URL at the end of the email
   else
   {
-    pwg_mail($email, array(
-      'subject' => $subject,
-      'content' => ($infos1."\n\n").(isset($infos2) ? l10n_args($infos2)."\n\n" : ""),
-    ));
+    $content = ($infos1."\n\n").(isset($infos2) ? l10n_args($infos2)."\n\n" : "");
+
+    pwg_mail(
+      array(
+        'name' => stripslashes($username),
+        'email' => $email,
+        ),
+      array(
+        'content' => $content,
+        'content_format' => 'text/plain',
+        'subject' => $subject,
+        )
+      );
   }
 
   // Switching back to default language
@@ -1634,26 +1623,53 @@ WHERE user_id = '.$user_id.'
   // Adding gallery URL at the end of the email
   if (isset($conf_UAM['ADD_GALLERY_URL_TO_EMAILS']) and $conf_UAM['ADD_GALLERY_URL_TO_EMAILS'] == 'true')
   {
-    pwg_mail($email, array(
-      'subject' => $subject,
-      'content' => $infos1.get_absolute_root_url(),
-    ));
+    $content = $infos1.get_absolute_root_url();
+
+    pwg_mail(
+      array(
+        'name' => stripslashes($username),
+        'email' => $email,
+        ),
+      array(
+        'content' => $content,
+        'content_format' => 'text/plain',
+        'subject' => $subject,
+        )
+      );
   }
   // Do not add gallery URL at the end of the email
   elseif (isset($conf_UAM['ADD_GALLERY_URL_TO_EMAILS']) and $conf_UAM['ADD_GALLERY_URL_TO_EMAILS'] == 'false')
   {
-    pwg_mail($email, array(
-      'subject' => $subject,
-      'content' => $infos1,
-    ));
+    $content = $infos1;
+
+    pwg_mail(
+      array(
+        'name' => stripslashes($username),
+        'email' => $email,
+        ),
+      array(
+        'content' => $content,
+        'content_format' => 'text/plain',
+        'subject' => $subject,
+        )
+      );
   }
   // By default do not add gallery URL at the end of the email
   else
   {
-    pwg_mail($email, array(
-      'subject' => $subject,
-      'content' => $infos1,
-    ));
+    $content = $infos1;
+
+    pwg_mail(
+      array(
+        'name' => stripslashes($username),
+        'email' => $email,
+        ),
+      array(
+        'content' => $content,
+        'content_format' => 'text/plain',
+        'subject' => $subject,
+        )
+      );
   }
 
   // Switching back to default language
@@ -1760,26 +1776,53 @@ WHERE user_id = '.$id.'
   // Adding gallery URL at the end of the email
   if (isset($conf_UAM['ADD_GALLERY_URL_TO_EMAILS']) and $conf_UAM['ADD_GALLERY_URL_TO_EMAILS'] == 'true')
   {
-    pwg_mail($email, array(
-      'subject' => $subject,
-      'content' => ($custom_txt.l10n_args($infos1)."\n\n".l10n_args($infos2)."\n\n").get_absolute_root_url(),
-    ));
+    $content = ($custom_txt.l10n_args($infos1)."\n\n".l10n_args($infos2)."\n\n").get_absolute_root_url();
+
+    pwg_mail(
+      array(
+        'name' => stripslashes($username),
+        'email' => $email,
+        ),
+      array(
+        'content' => $content,
+        'content_format' => 'text/plain',
+        'subject' => $subject,
+        )
+      );
   }
   // Do not add gallery URL at the end of the email
   elseif (isset($conf_UAM['ADD_GALLERY_URL_TO_EMAILS']) and $conf_UAM['ADD_GALLERY_URL_TO_EMAILS'] == 'false')
   {
-    pwg_mail($email, array(
-      'subject' => $subject,
-      'content' => ($custom_txt.l10n_args($infos1)."\n\n".l10n_args($infos2)."\n\n"),
-    ));
+    $content = ($custom_txt.l10n_args($infos1)."\n\n".l10n_args($infos2)."\n\n");
+
+    pwg_mail(
+      array(
+        'name' => stripslashes($username),
+        'email' => $email,
+        ),
+      array(
+        'content' => $content,
+        'content_format' => 'text/plain',
+        'subject' => $subject,
+        )
+      );
   }
   // By default do not add gallery URL at the end of the email
   else
   {
-    pwg_mail($email, array(
-      'subject' => $subject,
-      'content' => ($custom_txt.l10n_args($infos1)."\n\n".l10n_args($infos2)."\n\n"),
-    ));
+    $content = ($custom_txt.l10n_args($infos1)."\n\n".l10n_args($infos2)."\n\n");
+
+    pwg_mail(
+      array(
+        'name' => stripslashes($username),
+        'email' => $email,
+        ),
+      array(
+        'content' => $content,
+        'content_format' => 'text/plain',
+        'subject' => $subject,
+        )
+      );
   }
 
 		// Switching back to default language
@@ -1848,7 +1891,7 @@ WHERE id = '.$id.'
     // Management of Extension flags ([username], [mygallery])
     // -------------------------------------------------------
     $patterns[] = '#\[username\]#i';
-    $replacements[] = $result['username'];
+    $replacements[] = stripslashes($result['username']);
     $patterns[] = '#\[mygallery\]#i';
     $replacements[] = $conf['gallery_title'];
 
@@ -1864,7 +1907,7 @@ WHERE id = '.$id.'
     // Management of Extension flags ([username], [mygallery], [myurl])
     // ----------------------------------------------------------------
     $patterns[] = '#\[username\]#i';
-    $replacements[] = $result['username'];
+    $replacements[] = stripslashes($result['username']);
     $patterns[] = '#\[mygallery\]#i';
     $replacements[] = $conf['gallery_title'];
     $patterns[] = '#\[myurl\]#i';
@@ -1887,26 +1930,53 @@ WHERE id = '.$id.'
   // Adding gallery URL at the end of the email
   if (isset($conf_UAM['ADD_GALLERY_URL_TO_EMAILS']) and $conf_UAM['ADD_GALLERY_URL_TO_EMAILS'] == 'true')
   {
-    pwg_mail($result['mail_address'], array(
-      'subject' => $subject,
-      'content' => (l10n_args($infos)."\n\n".$custom_txt).get_absolute_root_url(),
-    ));
+    $content = (l10n_args($infos)."\n\n".$custom_txt).get_absolute_root_url();
+
+    pwg_mail(
+      array(
+        'name' => stripslashes($result['username']),
+        'email' => $result['mail_address'],
+        ),
+      array(
+        'content' => $content,
+        'content_format' => 'text/plain',
+        'subject' => $subject,
+        )
+      );
   }
   // Do not add gallery URL at the end of the email
   elseif (isset($conf_UAM['ADD_GALLERY_URL_TO_EMAILS']) and $conf_UAM['ADD_GALLERY_URL_TO_EMAILS'] == 'false')
   {
-    pwg_mail($result['mail_address'], array(
-      'subject' => $subject,
-      'content' => (l10n_args($infos)."\n\n".$custom_txt),
-    ));
+    $content = (l10n_args($infos)."\n\n".$custom_txt);
+
+    pwg_mail(
+      array(
+        'name' => stripslashes($result['username']),
+        'email' => $result['mail_address'],
+        ),
+      array(
+        'content' => $content,
+        'content_format' => 'text/plain',
+        'subject' => $subject,
+        )
+      );
   }
   // By defaukt do not add gallery URL at the end of the email
   else
   {
-    pwg_mail($result['mail_address'], array(
-      'subject' => $subject,
-      'content' => (l10n_args($infos)."\n\n".$custom_txt),
-    ));
+    $content = (l10n_args($infos)."\n\n".$custom_txt);
+
+    pwg_mail(
+      array(
+        'name' => stripslashes($result['username']),
+        'email' => $result['mail_address'],
+        ),
+      array(
+        'content' => $content,
+        'content_format' => 'text/plain',
+        'subject' => $subject,
+        )
+      );
   }
 
   // Switching back to default language
@@ -2054,15 +2124,6 @@ WHERE user_id = '.$user_id.'
 ;';
 
     pwg_query($query);
-
-//    $query = '
-//INSERT INTO '.USER_INFOS_TABLE.'
-//  (user_id, level)
-//VALUES
-//  ('.$user_id.', "'.$conf_UAM['NO_VALID_LEVEL'].'")
-//;';
-//
-//    pwg_query($query);
   }
 }
 
