@@ -168,7 +168,6 @@ $lang['UAM_Reminder'] = 'Email de lembrete';
 $lang['UAM_Reminder_without_key_of_%s'] = '%s, sua chave de confirmação vai expirar';
 $lang['UAM_Tab_Global'] = 'Configuração';
 $lang['UAM_SubTitle1'] = 'Configuração de plugin';
-$lang['UAM_ScoreTest'] = 'Resultado:';
 $lang['UAM_Save'] = 'Rode o backup';
 $lang['UAM_Restore_File'] = 'Restaura configuração';
 $lang['UAM_Reminder_with_key_of_%s'] = '%s, sua chave de confirmação foi renovada';
@@ -307,4 +306,5 @@ $lang['UAM_No_reminder_for_Webmaster'] = 'A conta "Webmaster" não está sujeito
 $lang['UAM_No_reminder_for_default_user'] = 'A conta padrão não está sujeito a receber lembretes de GhostTracker';
 $lang['UAM_No_reminder_for_your_account'] = 'Sua conta de administrador pessoal não está sujeito a receber lembretes de GhostTracker';
 $lang['UAM_No_validation_for_your_account'] = 'Sua conta de administrador pessoal não está sujeito a confirmação';
+$lang['UAM_Follow this link to access the gallery'] = 'Por favor, siga este link para ter acesso a galeria';
 ?>

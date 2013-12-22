@@ -31,7 +31,6 @@ $lang['UAM_Reminder_Sent_NOK'] = 'HAYIR';
 $lang['UAM_Reminder_Sent_OK'] = 'EVET';
 $lang['UAM_Tab_Global'] = 'Yapılandırma';
 $lang['UAM_SubTitle1'] = 'Plugin yapılandırma';
-$lang['UAM_ScoreTest'] = 'Sonuç: ';
 $lang['UAM_Save'] = 'Backup çalıştır';
 $lang['UAM_User: %s'] = 'Kullanıcı : %s';
 $lang['UAM_Update of %s'] = 'Profil %s güncellendi';
@@ -190,4 +189,8 @@ $lang['UAM_No_Confirm_Group'] = 'Kayıtları onaylanmış kullanıcı grubu<br>'
 $lang['UAM_SubTitle4'] = 'Hayalet İzleyici';
 $lang['UAM_MailExclusion_true'] = 'Takip eden domainleri hariç tut:<br>(her domaini aralarına virgül koyarak ayırınız)';
 $lang['UAM_Err_audit_advise'] = '<b>etkinleştirdiğiniz yeni kuralların uygun hale gelmesi için değişiklikler yapmalısınız.<br>Herhangi bir veri tabanı yönetim yardımcısı kullanarak ###_USERS tablosundaki kullanıcı hesaplarını düzeltin.';
+$lang['UAM_No_validation_for_Guest'] = '"Misafir" hesabı için onaya gerek yoktur. ';
+$lang['UAM_Err_GhostTracker_Settings'] = '"Ghost Tracker" \'ı sadece bu sayfa kullanabilir. Aktif etmek için ayarlar bölümünden aktifleştirin. ';
+$lang['UAM_Default_GhstDemotion_Txt'] = 'Sayın [username], son girişinizen buz amana çok uzun bir zaman geçti bu yüzden [mygallery] Lütfen aktif etmek için linki kullanın.';
+$lang['UAM_AddURL2Mail'] = 'Sayfaların sonuna galeri adresini imza olarak ekleyin(İmza gibi)';
 ?>

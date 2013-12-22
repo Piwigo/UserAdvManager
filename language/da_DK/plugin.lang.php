@@ -144,7 +144,6 @@ $lang['UAM_USRAutoMail'] = 'Automatisk mailpåmindelse';
 $lang['UAM_Update of %s'] = 'Profilen %s er opdateret';
 $lang['UAM_User: %s'] = 'Bruger: %s';
 $lang['UAM_Save'] = 'Foretag sikkerhedskopiering';
-$lang['UAM_ScoreTest'] = 'Resultat:';
 $lang['UAM_Stuffs'] = 'PWG Stuffs-blok';
 $lang['UAM_Stuffs_Desc'] = 'Tilføjer en informationsblok ved ikke-bekræftede brugere';
 $lang['UAM_Stuffs_Title'] = 'UAM-blok';
@@ -312,4 +311,5 @@ $lang['UAM_Tips1_txt'] = '          <ul>
 $lang['UAM_group "%s" updated'] = 'For at opnå den bedste ydeevne, er gruppen %s automatisk blevet opsat som standardgruppen. ';
 $lang['personal_content'] = 'Indhold';
 $lang['UAM_AddURL2Mail'] = 'Tilføj galleriets URL i slutningen af mails (som en signatur)';
+$lang['UAM_Follow this link to access the gallery'] = 'Følg dette link for at tilgå galleriet';
 ?>
