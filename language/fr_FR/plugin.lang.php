@@ -264,8 +264,8 @@ $lang['UAM_Tips2_txt'] = '
             </li><br/><br/>
             <li>
 Pré-requis:<br/>
-- Une galerie avec tout ou partie des catégories privées, visibles par les seuls utilisateurs inscrits<br/>
-- Au moins les 2 groupes d\'utilisateurs Piwigo suivants : "Attente", sans aucune permission sur les catégories privées, et "Confirmés", avec toutes les permissions sur les catégories privées<br/>
+- Une galerie avec tout ou partie des albums privées, visibles par les seuls utilisateurs inscrits<br/>
+- Au moins les 2 groupes d\'utilisateurs Piwigo suivants : "Attente", sans aucune permission sur les albums privées, et "Confirmés", avec toutes les permissions sur les albums privées<br/>
 - Le plugin UAM<br/>
 - Le plugin Additional Pages, pour l\'ajout et la gestion d\'une page additionnelle remplaçant la page d\'index par défaut de la galerie<br/>
 - En option, le plugin Extended Description, pour le support multi-langues<br/>
@@ -311,12 +311,12 @@ $lang['UAM_Tips1_txt'] = '
           <ul>
             <li>
             Objectifs : Informer le visiteur que son inscription est en attente de confirmation en affichant un bloc personnel sur la page d\'accueil de la galerie; et ce, tant que l\'inscription n\'est pas confirmée.<br/><br/>
-            <b>Rappel: En fonctionnement standard, le "Guest" ne voit que les catégories publiques, sans message d\'information.</b>
+            <b>Rappel: En fonctionnement standard, le "Guest" ne voit que les albums publics, sans message d\'information.</b>
             </li><br/><br/>
             <li>
 Pré-requis:<br/>
-- Une galerie avec tout ou partie des catégories privées, visibles par les seuls utilisateurs inscrits<br/>
-- Au moins les 2 groupes d\'utilisateurs Piwigo suivants : "Attente", sans aucune permission sur les catégories privées, et "Confirmés", avec toutes les permissions sur les catégories privées<br/>
+- Une galerie avec tout ou partie des albums privées, visibles par les seuls utilisateurs inscrits<br/>
+- Au moins les 2 groupes d\'utilisateurs Piwigo suivants : "Attente", sans aucune permission sur les albums privées, et "Confirmés", avec toutes les permissions sur les albums privées<br/>
 - Le plugin UAM<br/>
 - Le plugin PWG Stuffs, pour l\'ajout d\'un module spécial UAM<br/>
 - En option, le plugin Extended Description, pour le support multi-langues<br/>
