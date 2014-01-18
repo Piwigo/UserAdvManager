@@ -592,11 +592,11 @@ function uam_blockToggleDisplay( headerId, contentId )
             <label class="cluetip" title="{'UAM_GhostTracker'|translate}|{'UAM_ghosttrackerTitle_d'|translate}">
               {'UAM_GhostTracker'|@translate}
             </label>
-            <label for"UAM_GhostUser_Tracker_false">
+            <label for="UAM_GhostUser_Tracker_false">
               <input id="UAM_GhostUser_Tracker_false" type="radio" value="false" {$UAM_GHOSTRACKER_FALSE} name="UAM_GhostUser_Tracker"/>
               {'UAM_Disable'|@translate}
             </label>
-            <label for"UAM_GhostUser_Tracker_true">
+            <label for="UAM_GhostUser_Tracker_true">
               <input id="UAM_GhostUser_Tracker_true" type="radio" value="true" {$UAM_GHOSTRACKER_TRUE} name="UAM_GhostUser_Tracker"/>
               {'UAM_GhostTracker_true'|@translate}
             <input type="text" name="UAM_GhostTracker_DayLimit" value="{$UAM_GHOSTRACKER_DAYLIMIT}" size="5" style="text-align: center;"/>
@@ -635,7 +635,7 @@ function uam_blockToggleDisplay( headerId, contentId )
   
           </ul>
           </fieldset>
-          <br><hr><br>
+          <br/><hr/><br/>
           <ul>
             <li>
               <label class="cluetip" title="{'UAM_GTAuto'|translate}|{'UAM_GTAutoTitle_d'|translate}">
@@ -867,7 +867,7 @@ function uam_blockToggleDisplay( headerId, contentId )
   </div>
 
   <p>
-    <input class="submit" type="submit" value="{'UAM_submit'|@translate}" name="submit" {$TAG_INPUT_ENABLED} >&nbsp;<input class="submit" type="submit" value="{'UAM_audit'|@translate}" name="audit"/>
+    <input class="submit" type="submit" value="{'UAM_submit'|@translate}" name="submit" {$TAG_INPUT_ENABLED} />&nbsp;<input class="submit" type="submit" value="{'UAM_audit'|@translate}" name="audit"/>
   </p>
 </form>
 
