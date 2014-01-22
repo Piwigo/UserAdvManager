@@ -168,7 +168,7 @@ switch ($page['tab'])
     $conf_UAM = unserialize($conf['UserAdvManager']);
     $conf_UAM_ConfirmMail = unserialize($conf['UserAdvManager_ConfirmMail']);
     
-    if (((isset($conf_UAM['1']) and ($conf_UAM['1'] == 'false' or $conf_UAM['1'] == 'local')) or ($_POST['UAM_Confirm_Mail'] == 'false' or $_POST['UAM_Confirm_Mail'] == 'local')) and $_POST['UAM_GTAutoMail'] == 'true')
+    if (((isset($conf_UAM['CONFIRM_MAIL']) and ($conf_UAM['CONFIRM_MAIL'] == 'false' or $conf_UAM['CONFIRM_MAIL'] == 'local')) or ($_POST['UAM_Confirm_Mail'] == 'false' or $_POST['UAM_Confirm_Mail'] == 'local')) and $_POST['UAM_GTAutoMail'] == 'true')
     {
       $newvalue = 'false';
       $_POST['UAM_GTAutoMail'] = $newvalue;
