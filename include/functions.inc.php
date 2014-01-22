@@ -286,13 +286,6 @@ WHERE param = "UserAdvManager_Redir";';
       }
     }
 
-    $typemail = 3; // Only information email send to user on user profile update if checked
-
-    if (!empty($_POST['use_new_pwd']))
-    {
-      $typemail = 2; // Confirmation email on user profile update - With information email
-    }
-
     // Sending registration confirmation by email
     // ------------------------------------------
     if ((isset($conf_UAM['CONFIRM_MAIL']) and $conf_UAM['CONFIRM_MAIL'] == 'true') or (isset($conf_UAM['CONFIRM_MAIL']) and $conf_UAM['CONFIRM_MAIL'] == 'local'))
@@ -309,26 +302,24 @@ WHERE '.$conf['user_fields']['id'].' = \''.$user['id'].'\'
 
         list($current_email) = pwg_db_fetch_row(pwg_query($query));
 
-        // This is to send a new validation key
-        // ------------------------------------
-        if ($_POST['mail_address'] != $current_email and (isset($conf_UAM['CONFIRM_MAIL']) and $conf_UAM['CONFIRM_MAIL'] == 'true'))
+        // This is to set the user to "waiting" group or status until validation
+        // ---------------------------------------------------------------------
+        if ($_POST['mail_address'] != $current_email and (isset($conf_UAM['CONFIRM_MAIL']) and ($conf_UAM['CONFIRM_MAIL'] == 'true' or $conf_UAM['CONFIRM_MAIL'] == 'local')))
         {
           SetPermission($user['id']);// Set to "waiting" group or status until user validation
           SetUnvalidated($user['id']); // Set UAM_validated field to false in #_users table
           $confirm_mail_need = true;
         }
-
-        // This is to set the user to "waiting" group or status until admin validation
-        // ---------------------------------------------------------------------------
-        elseif ($_POST['mail_address'] != $current_email and (isset($conf_UAM['CONFIRM_MAIL']) and $conf_UAM['CONFIRM_MAIL'] == 'local'))
+        else
         {
-          SetPermission($user['id']);// Set to "waiting" group or status until admin validation
-          SetUnvalidated($user['id']); // Set UAM_validated field to false in #_users table
           $confirm_mail_need = false;
-        }       
+        }
       }
 
-      if (((!empty($_POST['use_new_pwd']) and (isset($conf_UAM['MAIL_INFO']) and $conf_UAM['MAIL_INFO'] == 'true')) or $confirm_mail_need))
+      $typemail = 2;
+
+      // Send email
+      if ((isset($conf_UAM['MAIL_INFO']) and $conf_UAM['MAIL_INFO'] == 'true') or $confirm_mail_need)
       {
         $query = '
 SELECT '.$conf['user_fields']['username'].'
@@ -337,6 +328,7 @@ WHERE '.$conf['user_fields']['id'].' = \''.$user['id'].'\'
 ;';
 
         list($username) = pwg_db_fetch_row(pwg_query($query));
+
         SendMail2User($typemail, $user['id'], $username, $_POST['use_new_pwd'], $_POST['mail_address'], $confirm_mail_need);
       }
     }
@@ -1108,69 +1100,7 @@ WHERE user_id = '.$id.'
 
       break;
 
-    case 2: // Confirmation email on user profile update - With information email if modification done in user profile
-      if (isset($conf_UAM['CONFIRMMAIL_SUBJECT']) and !empty($conf_UAM['CONFIRMMAIL_SUBJECT']))
-      {
-        // Management of Extension flags ([username], [mygallery])
-        // -------------------------------------------------------
-        $patterns[] = '#\[username\]#i';
-        $replacements[] = $username;
-        $patterns[] = '#\[mygallery\]#i';
-        $replacements[] = $conf['gallery_title'];
-
-        if (function_exists('get_user_language_desc'))
-        {
-          $subject = get_user_language_desc(preg_replace($patterns, $replacements, $conf_UAM['CONFIRMMAIL_SUBJECT']))."\n\n";
-        }
-        else $subject = l10n(preg_replace($patterns, $replacements, $conf_UAM['CONFIRMMAIL_SUBJECT']))."\n\n"; 
-      }
-
-      $password = !empty($password) ? $password : l10n('UAM_empty_pwd');
-
-      if (isset($conf_UAM['MAILINFO_TEXT']) and !empty($conf_UAM['MAILINFO_TEXT']))
-      {
-        // Management of Extension flags ([username], [mygallery], [myurl])
-        // ----------------------------------------------------------------
-        $patterns[] = '#\[username\]#i';
-        $replacements[] = $username;
-        $patterns[] = '#\[mygallery\]#i';
-        $replacements[] = $conf['gallery_title'];
-        $patterns[] = '#\[myurl\]#i';
-        $replacements[] = get_gallery_home_url();
-
-        if (function_exists('get_user_language_desc'))
-        {
-          $infos1_perso = get_user_language_desc(preg_replace($patterns, $replacements, $conf_UAM['MAILINFO_TEXT']))."\n\n";
-        }
-        else $infos1_perso = l10n(preg_replace($patterns, $replacements, $conf_UAM['MAILINFO_TEXT']))."\n\n"; 
-      }
-
-      if (isset($conf_UAM['MAIL_INFO']) and $conf_UAM['MAIL_INFO'] == 'true')
-      {
-        if (isset($conf_UAM['HIDEPASSW']) and $conf_UAM['HIDEPASSW'] == 'true') // Allow display of clear password in email
-        {
-          $infos1 = array(
-            get_l10n_args('UAM_infos_mail %s', stripslashes($username)),
-            get_l10n_args('UAM_User: %s', stripslashes($username)),
-            get_l10n_args('UAM_Password: %s', $password),
-            get_l10n_args('Email: %s', $email),
-            get_l10n_args('', ''),
-          );
-        }
-        else // Do not allow display of clear password in email
-        {
-          $infos1 = array(
-            get_l10n_args('UAM_infos_mail %s', stripslashes($username)),
-            get_l10n_args('UAM_User: %s', stripslashes($username)),
-            get_l10n_args('Email: %s', $email),
-            get_l10n_args('', ''),
-          );
-        }
-      }
-
-      break;
-
-    case 3: // Only information email send to user if checked
+    case 2: // Confirmation email on user profile update - Information email if modification done in user profile
       if (isset($conf_UAM['INFOMAIL_SUBJECT']) and !empty($conf_UAM['INFOMAIL_SUBJECT']))
       {
         // Management of Extension flags ([username], [mygallery])
@@ -1265,30 +1195,33 @@ WHERE user_id = '.$id.'
     }
   }
 
+
 // Sending the email with subject and contents
 // -------------------------------------------
-  if ((isset($conf_UAM['CONFIRM_MAIL']) and $conf_UAM['CONFIRM_MAIL'] == 'local') and $confirm)
-	{
+
+  if ((isset($conf_UAM['CONFIRM_MAIL']) and $conf_UAM['CONFIRM_MAIL'] == 'local') and $confirm) // Confirmation email send to admins
+  {
     switch_lang_to(get_default_language());
 
-  	load_language('plugin.lang', UAM_PATH);
-  	$subject = get_l10n_args('UAM_Subject admin validation for %s',$username);
+    load_language('plugin.lang', UAM_PATH);
+    $subject_admin = get_l10n_args('UAM_Subject admin validation for %s',$username);
 
-		$content = array(
-  	 get_l10n_args('UAM_Manual_validation_needed_for %s', stripslashes($username)),
-     get_l10n_args('', ''),
-     get_l10n_args('UAM_Link: %s', AddConfirmMail($id, $email)),
+    $content_admin = array(
+      get_l10n_args('UAM_Manual_validation_needed_for %s', stripslashes($username)),
+      get_l10n_args('', ''),
+      get_l10n_args('UAM_Link: %s', AddConfirmMail($id, $email)),
     );
 
-    //UAM_mail_notification_admins($subject, $content);
-    pwg_mail_notification_admins($subject, $content, true);
+    pwg_mail_notification_admins($subject_admin, $content_admin, true);
   }
-	elseif ((isset($conf_UAM['CONFIRM_MAIL']) and $conf_UAM['CONFIRM_MAIL'] == 'true') and $confirm)
+
+
+	if (isset($conf_UAM['CONFIRM_MAIL']) and $conf_UAM['CONFIRM_MAIL'] == 'true' and $confirm) // Confirmation email send to users
 	{
 	  // Adding gallery URL at the end of the email
     if (isset($conf_UAM['ADD_GALLERY_URL_TO_EMAILS']) and $conf_UAM['ADD_GALLERY_URL_TO_EMAILS'] == 'true')
     {
-      $content = (isset($infos1) ? $infos1_perso.l10n_args($infos1)."\n\n" : "").(isset($infos2) ? $infos2_perso.l10n_args($infos2)."\n\n" : "").get_absolute_root_url();
+      $content_confirmation = (isset($infos1) ? $infos1_perso.l10n_args($infos1)."\n\n" : "").(isset($infos2) ? $infos2_perso.l10n_args($infos2)."\n\n" : "").get_absolute_root_url();
 
       pwg_mail(
         array(
@@ -1296,7 +1229,7 @@ WHERE user_id = '.$id.'
           'email' => $email,
           ),
         array(
-          'content' => $content,
+          'content' => $content_confirmation,
           'content_format' => 'text/plain',
           'subject' => $subject,
           )
@@ -1305,7 +1238,7 @@ WHERE user_id = '.$id.'
     // Do not add gallery URL at the end of the email
     elseif (isset($conf_UAM['ADD_GALLERY_URL_TO_EMAILS']) and $conf_UAM['ADD_GALLERY_URL_TO_EMAILS'] == 'false')
     {
-      $content = (isset($infos1) ? $infos1_perso.l10n_args($infos1)."\n\n" : "").(isset($infos2) ? $infos2_perso.l10n_args($infos2)."\n\n" : "");
+      $content_confirmation = (isset($infos1) ? $infos1_perso.l10n_args($infos1)."\n\n" : "").(isset($infos2) ? $infos2_perso.l10n_args($infos2)."\n\n" : "");
 
       pwg_mail(
         array(
@@ -1313,7 +1246,7 @@ WHERE user_id = '.$id.'
           'email' => $email,
           ),
         array(
-          'content' => $content,
+          'content' => $content_confirmation,
           'content_format' => 'text/plain',
           'subject' => $subject,
           )
@@ -1322,7 +1255,7 @@ WHERE user_id = '.$id.'
     // By default do not add gallery URL at the end of the email
     else
     {
-      $content = (isset($infos1) ? $infos1_perso.l10n_args($infos1)."\n\n" : "").(isset($infos2) ? $infos2_perso.l10n_args($infos2)."\n\n" : "");
+      $content_confirmation = (isset($infos1) ? $infos1_perso.l10n_args($infos1)."\n\n" : "").(isset($infos2) ? $infos2_perso.l10n_args($infos2)."\n\n" : "");
 
       pwg_mail(
         array(
@@ -1330,7 +1263,63 @@ WHERE user_id = '.$id.'
           'email' => $email,
           ),
         array(
-          'content' => $content,
+          'content' => $content_confirmation,
+          'content_format' => 'text/plain',
+          'subject' => $subject,
+          )
+        );
+    }
+	}
+
+
+	if (isset($conf_UAM['MAIL_INFO']) and $conf_UAM['MAIL_INFO'] == 'true') // Information email send to users
+	{
+	  // Adding gallery URL at the end of the email
+    if (isset($conf_UAM['ADD_GALLERY_URL_TO_EMAILS']) and $conf_UAM['ADD_GALLERY_URL_TO_EMAILS'] == 'true')
+    {
+      $content_info = (isset($infos1) ? $infos1_perso.l10n_args($infos1)."\n\n" : "").(isset($infos2) ? $infos2_perso.l10n_args($infos2)."\n\n" : "").get_absolute_root_url();
+
+      pwg_mail(
+        array(
+          'name' => stripslashes($username),
+          'email' => $email,
+          ),
+        array(
+          'content' => $content_info,
+          'content_format' => 'text/plain',
+          'subject' => $subject,
+          )
+        );
+    }
+    // Do not add gallery URL at the end of the email
+    elseif (isset($conf_UAM['ADD_GALLERY_URL_TO_EMAILS']) and $conf_UAM['ADD_GALLERY_URL_TO_EMAILS'] == 'false')
+    {
+      $content_info = (isset($infos1) ? $infos1_perso.l10n_args($infos1)."\n\n" : "").(isset($infos2) ? $infos2_perso.l10n_args($infos2)."\n\n" : "");
+
+      pwg_mail(
+        array(
+          'name' => stripslashes($username),
+          'email' => $email,
+          ),
+        array(
+          'content' => $content_info,
+          'content_format' => 'text/plain',
+          'subject' => $subject,
+          )
+        );
+    }
+    // By default do not add gallery URL at the end of the email
+    else
+    {
+      $content_info = (isset($infos1) ? $infos1_perso.l10n_args($infos1)."\n\n" : "").(isset($infos2) ? $infos2_perso.l10n_args($infos2)."\n\n" : "");
+
+      pwg_mail(
+        array(
+          'name' => stripslashes($username),
+          'email' => $email,
+          ),
+        array(
+          'content' => $content_info,
           'content_format' => 'text/plain',
           'subject' => $subject,
           )
