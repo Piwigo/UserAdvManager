@@ -84,13 +84,13 @@ label.cluetip
 }
 
 /* jQuery tablesorter instructions */
-tr.throw
+tr.tablesorter-headerRow, throw
 {
 cursor:pointer;
 text-align:center;
 }
 
-th.header
+th.tablesorter-header
 {
 background-image:url("./icon/bg.png");
 background-position:right center;
@@ -98,14 +98,18 @@ background-repeat:no-repeat;
 cursor:pointer;
 }
 
-th.headerSortDown
+th.tablesorter-headerDesc
 {
 background-image:url("./icon/desc.png");
 }
 
-th.headerSortUp
+th.tablesorter-headerAsc
 {
 background-image:url("./icon/asc.png");
+}
+
+th.sorter-false {
+	background-image: none;
 }
 
 .pager{
@@ -114,4 +118,11 @@ background-image:url("./icon/asc.png");
 
 #pager img {
   margin-bottom: -3px;
+}
+
+table.table2 {
+	border: 1px solid #111;
+	margin: 1em auto;
+	padding: 0;
+  width: 97%;
 }
