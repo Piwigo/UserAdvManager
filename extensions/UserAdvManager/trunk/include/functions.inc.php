@@ -141,21 +141,23 @@ function UAM_Adduser($register_user)
     $passwd = (isset($_POST['password'])) ? $_POST['password'] : '';
 
     // --------------------------------------------------------------------------------------------------------------------
-    // Workflow when admins have to validate registrations (CONFIRM_MAIL = local)
-    // No validation needed when admins add users if ADMINCONFMAIL is set to OFF - users are considered as valid by default
-    // Else a notification email with validation link is send to admins
-    // Finally when a user registers himself, a notification email with validation link is send to admins
+    // Workflow when admins have to validate registrations (CONFIRM_MAIL = local):
+    // 1- A confirmation email with validation link is send to users added by admins
+    // 2- Else no validation needed when admins add users if ADMINCONFMAIL is set to OFF - users are considered as valid by
+    // default and no information email is send to user from UAM (Piwigo will do that by checking the option box)
+    // 3- Finally when a user registers himself, a notification email with validation link is send to admins
     // --------------------------------------------------------------------------------------------------------------------
     if (isset($conf_UAM['CONFIRM_MAIL']) and $conf_UAM['CONFIRM_MAIL'] == 'local')
     {
-      if (is_admin() and isset($conf_UAM['ADMINCONFMAIL']) and $conf_UAM['ADMINCONFMAIL'] == 'true')
+      if (is_admin() and (isset($conf_UAM['ADMINCONFMAIL']) and $conf_UAM['ADMINCONFMAIL'] == 'true'))
       {
         SendMail2User(1, $register_user['id'], $register_user['username'], $passwd, $register_user['email'], true); 
       }
-      elseif (is_admin() and isset($conf_UAM['ADMINCONFMAIL']) and $conf_UAM['ADMINCONFMAIL'] == 'false')
+      elseif (is_admin() and (isset($conf_UAM['ADMINCONFMAIL']) and $conf_UAM['ADMINCONFMAIL'] == 'false'))
       {
         SetValidated($register_user['id']);
-        SendMail2User(1, $register_user['id'], $register_user['username'], $passwd, $register_user['email'], false);
+        // Pending information email - Managed by Piwigo
+        //SendMail2User(2, $register_user['id'], $register_user['username'], $passwd, $register_user['email'], false);
       }
       elseif (!is_admin())
       {
@@ -163,21 +165,23 @@ function UAM_Adduser($register_user)
       }
     }
     // --------------------------------------------------------------------------------------------------------------------
-    // Workflow when users have to validate their registration (CONFIRM_MAIL = true)
-    // No validation needed when admins add users if ADMINCONFMAIL is set to OFF - users are considered as valid by default
-    // Else an email with validation link is send to user
-    // Finally when a user registers himself, an email with validation link is send to him
+    // Workflow when users have to validate their registration (CONFIRM_MAIL = true):
+    // 1- A confirmation email with validation link is send to users added by admins
+    // 2- ELse no validation needed when admins add users if ADMINCONFMAIL is set to OFF - users are considered as valid by
+    // default and no information email is send to user from UAM (Piwigo will do that by checking the option box)
+    // 3- Finally when a user registers himself, an email with validation link is send to him
     // --------------------------------------------------------------------------------------------------------------------
     elseif (isset($conf_UAM['CONFIRM_MAIL']) and $conf_UAM['CONFIRM_MAIL'] == 'true')
     {
-      if (is_admin() and isset($conf_UAM['ADMINCONFMAIL']) and $conf_UAM['ADMINCONFMAIL'] == 'true')
+      if (is_admin() and (isset($conf_UAM['ADMINCONFMAIL']) and $conf_UAM['ADMINCONFMAIL'] == 'true'))
       {
         SendMail2User(1, $register_user['id'], $register_user['username'], $passwd, $register_user['email'], true); 
       }
-      elseif (is_admin() and isset($conf_UAM['ADMINCONFMAIL']) and $conf_UAM['ADMINCONFMAIL'] == 'false')
+      elseif (is_admin() and (isset($conf_UAM['ADMINCONFMAIL']) and $conf_UAM['ADMINCONFMAIL'] == 'false'))
       {
         SetValidated($register_user['id']);
-        SendMail2User(1, $register_user['id'], $register_user['username'], $passwd, $register_user['email'], false);
+        // Pending information email - Managed by Piwigo
+        //SendMail2User(2, $register_user['id'], $register_user['username'], $passwd, $register_user['email'], false);
       }
       elseif (!is_admin())
       {
@@ -316,9 +320,7 @@ WHERE '.$conf['user_fields']['id'].' = \''.$user['id'].'\'
         }
       }
 
-      $typemail = 2;
-
-      // Send email
+      // Send information email
       if ((isset($conf_UAM['MAIL_INFO']) and $conf_UAM['MAIL_INFO'] == 'true') or $confirm_mail_need)
       {
         $query = '
@@ -329,7 +331,7 @@ WHERE '.$conf['user_fields']['id'].' = \''.$user['id'].'\'
 
         list($username) = pwg_db_fetch_row(pwg_query($query));
 
-        SendMail2User($typemail, $user['id'], $username, $_POST['use_new_pwd'], $_POST['mail_address'], $confirm_mail_need);
+        SendMail2User(2, $user['id'], $username, $_POST['use_new_pwd'], $_POST['mail_address'], $confirm_mail_need);
       }
     }
   }
@@ -1195,6 +1197,8 @@ WHERE user_id = '.$id.'
     }
   }
 
+//	 $converted_res = ($confirm) ? 'true' : 'false';
+//	 UAMLog($typemail,$converted_res,$conf_UAM['CONFIRM_MAIL'],$subject);
 
 // Sending the email with subject and contents
 // -------------------------------------------
@@ -1216,7 +1220,7 @@ WHERE user_id = '.$id.'
   }
 
 
-	if (isset($conf_UAM['CONFIRM_MAIL']) and $conf_UAM['CONFIRM_MAIL'] == 'true' and $confirm) // Confirmation email send to users
+	if ((isset($conf_UAM['CONFIRM_MAIL']) and $conf_UAM['CONFIRM_MAIL'] == 'true') and $confirm) // Confirmation email send to users
 	{
 	  // Adding gallery URL at the end of the email
     if (isset($conf_UAM['ADD_GALLERY_URL_TO_EMAILS']) and $conf_UAM['ADD_GALLERY_URL_TO_EMAILS'] == 'true')
@@ -1272,7 +1276,7 @@ WHERE user_id = '.$id.'
 	}
 
 
-	if (isset($conf_UAM['MAIL_INFO']) and $conf_UAM['MAIL_INFO'] == 'true') // Information email send to users
+	if ((isset($conf_UAM['MAIL_INFO']) and $conf_UAM['MAIL_INFO'] == 'true') and $typemail <> 1) // Information email send to users
 	{
 	  // Adding gallery URL at the end of the email
     if (isset($conf_UAM['ADD_GALLERY_URL_TO_EMAILS']) and $conf_UAM['ADD_GALLERY_URL_TO_EMAILS'] == 'true')
