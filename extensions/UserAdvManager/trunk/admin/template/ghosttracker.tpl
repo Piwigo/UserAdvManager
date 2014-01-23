@@ -1,7 +1,7 @@
 {combine_script id='jquery' path='themes/default/js/jquery.min.js'}
 {combine_script id='jquery.cluetip' require='jquery' path='themes/default/js/plugins/jquery.cluetip.js'}
 {combine_script id='jquery.tablesorter' require='jquery' path=$UAM_PATH|@cat:'admin/template/js/jquery.tablesorter.min.js'}
-{combine_script id='jquery.tablesorter.pager' require='jquery' path=$UAM_PATH|@cat:'admin/template/js/jquery.tablesorter.pager.js'}
+{combine_script id='jquery.tablesorter.pager' require='jquery' path=$UAM_PATH|@cat:'admin/template/js/jquery.tablesorter.pager.min.js'}
 
 {combine_css path= $UAM_PATH|@cat:'admin/template/uam.css'}
 
@@ -18,7 +18,7 @@ jQuery().ready(function()
 $(document).ready(function() 
     {ldelim}
       $("#sorting")
-      .tablesorter({ldelim}sortList:[[4,1]], headers: {ldelim} 0: {ldelim} sorter: false {rdelim}{rdelim}{rdelim})
+      .tablesorter({ldelim}sortList:[[4,1]], headers: {ldelim} 0: {ldelim} sorter: false {rdelim},2: {ldelim} sorter: false {rdelim}{rdelim}{rdelim})
       .tablesorterPager({ldelim}container: $("#pager"), positionFixed: false, size: 20, totalPages: 0{rdelim});
     {rdelim});
 </script>

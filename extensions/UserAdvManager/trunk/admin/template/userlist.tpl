@@ -1,9 +1,10 @@
 {combine_script id='jquery' path='themes/default/js/jquery.min.js'}
 {combine_script id='jquery.cluetip' require='jquery' path='themes/default/js/plugins/jquery.cluetip.js'}
 {combine_script id='jquery.tablesorter' require='jquery' path=$UAM_PATH|@cat:'admin/template/js/jquery.tablesorter.min.js'}
-{combine_script id='jquery.tablesorter.pager' require='jquery' path=$UAM_PATH|@cat:'admin/template/js/jquery.tablesorter.pager.js'}
+{combine_script id='jquery.tablesorter.pager' require='jquery' path=$UAM_PATH|@cat:'admin/template/js/jquery.tablesorter.pager.min.js'}
 
 {combine_css path= $UAM_PATH|@cat:'admin/template/uam.css'}
+
 
 <script type="text/javascript">
 jQuery().ready(function()
@@ -23,14 +24,20 @@ $(document).ready(function()
           sortList:[[3,1]],
           // pass the headers argument and assing a object 
           headers:
-          {ldelim} 
-              // assign the fourth column (we start counting zero) 
+          {ldelim}
+              // assign the second column (we start counting zero) 
+              1:
+              {ldelim} 
+                  // disable it by setting the property sorter to false 
+                  sorter: false
+              {rdelim},
+              // assign the fifth column (we start counting zero) 
               4:
               {ldelim} 
                   // disable it by setting the property sorter to false 
-                  sorter: false 
+                  sorter: false
               {rdelim}
-          {rdelim} 
+          {rdelim}
       {rdelim})
       .tablesorterPager({ldelim}container: $("#pager"), positionFixed: false, size: 20, totalPages: 0{rdelim});
     {rdelim} 
@@ -41,11 +48,11 @@ $(document).ready(function()
   <h2>{'UAM_Title_Tab'|@translate} {$UAM_VERSION}<br/>{'UAM_Tracking registered users'|@translate}</h2>
 </div>
 
-<form method="post" action="" class="general">
+<form method="post" class="general">
   <fieldset>
   	<legend class="cluetip" title="{'UAM_Tracking registered users'|translate}|{'UAM_userlistTitle_d'|translate}">{'UAM_Tracking registered users'|@translate}</legend>
     {if count($users) > 0}
-      <table id="sorting" class="table2" width="97%" summary="">
+      <table id="sorting" class="table2">
   			<thead>
     			<tr class="throw">
       			<th>{'Username'|@translate}</th>
