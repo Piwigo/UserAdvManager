@@ -38,3 +38,17 @@
 {
   padding: 0 15px 15px;
 }
+
+
+/* ******************************* */
+/* jQuery tablesorter instructions */
+/* ******************************* */
+
+table.tablesorter tbody tr.normal-row td {
+  background: #111111;  
+  color: #666666;
+}
+table.tablesorter tbody tr.alt-row td {
+  background: #222222;
+  color: #666666;
+}
