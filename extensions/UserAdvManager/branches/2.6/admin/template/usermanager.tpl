@@ -1,7 +1,7 @@
 {combine_script id='jquery' path='themes/default/js/jquery.min.js'}
 {combine_script id='jquery.cluetip' require='jquery' path='themes/default/js/plugins/jquery.cluetip.js'}
 {combine_script id='jquery.tablesorter' require='jquery' path=$UAM_PATH|@cat:'admin/template/js/jquery.tablesorter.min.js'}
-{combine_script id='jquery.tablesorter.pager' require='jquery' path=$UAM_PATH|@cat:'admin/template/js/jquery.tablesorter.pager.js'}
+{combine_script id='jquery.tablesorter.pager' require='jquery' path=$UAM_PATH|@cat:'admin/template/js/jquery.tablesorter.pager.min.js'}
 
 {combine_css path= $UAM_PATH|@cat:'admin/template/uam.css'}
 
@@ -15,11 +15,11 @@ jQuery().ready(function()
   {rdelim});
 {rdelim});
 
-$(document).ready(function() 
+$(document).ready(function()
     {ldelim}
       $("#sorting")
-      .tablesorter({ldelim}sortList:[[6,1]], headers: {ldelim} 0: {ldelim} sorter: false {rdelim}{rdelim}{rdelim})
-      .tablesorterPager({ldelim}container: $("#pager"), positionFixed: false, size: 20, totalPages: 0{rdelim});
+      .tablesorter({ldelim}sortList:[[6,0]], headers: {ldelim} 0: {ldelim} sorter: false {rdelim},2: {ldelim} sorter: false {rdelim}{rdelim}{rdelim})
+      .tablesorterPager({ldelim}container: $("#pager"), page: 0, size: 20, output: '{ldelim}page{rdelim} / {ldelim}totalPages{rdelim}',{rdelim});
     {rdelim} 
 );
 </script>
@@ -28,14 +28,14 @@ $(document).ready(function()
   <h2>{'UAM_Title_Tab'|@translate} {$UAM_VERSION}<br/>{'UAM_Tracking confirmations'|@translate}</h2>
 </div>
 
-<form method="post" action="" class="general">
+<form method="post" class="general">
+    {if count($users) > 0}
   <fieldset>
   	<legend class="cluetip" title="{'UAM_Tracking confirmations'|translate}|{'UAM_usermanTitle_d'|translate}">{'UAM_Tracking confirmations'|@translate}</legend>
-    {if count($users) > 0}
-      <table id="sorting" class="table2" width="97%" summary="">
+      <table id="sorting" class="table2">
   		  <thead>
     			<tr class="throw">
-      			<th>&nbsp;</td>
+      			<th>&nbsp;</th>
       			<th>{'Username'|@translate}&nbsp;&nbsp;</th>
             <th>{'Profile'|@translate}&nbsp;&nbsp;</th>
       			<th>{'User status'|@translate}&nbsp;&nbsp;</th>
@@ -52,7 +52,7 @@ $(document).ready(function()
           <tr class="{if $smarty.foreach.users_loop.index is odd}row1{else}row2{/if}">
             <td><input type="checkbox" name="selection[]" value="{$user.ID}" {$user.CHECKED} id="selection-{$user.ID}"/></td>
             <td><label for="selection-{$user.ID}">{$user.USERNAME}</label></td>
-            <td style="text-align:center;"><a href="./admin.php?page=profile&amp;user_id={$user.ID}" title="{'Profile'|@translate}" onclick="window.open(this.href); return false;"><img src="{$UAM_PATH}admin/template/icon/edit_s.png"/></a></td>
+            <td style="text-align:center;"><a href="./admin.php?page=profile&amp;user_id={$user.ID}" title="{'Profile'|@translate}" onclick="window.open(this.href); return false;"><img src="{$UAM_PATH}admin/template/icon/edit_s.png" alt=""/></a></td>
             <td>{$user.STATUS}</td>
             <td>{$user.EMAIL}</td>
             <td>{$user.GROUPS}</td>
@@ -69,19 +69,18 @@ $(document).ready(function()
       </table>
       {if !empty($users)}
         <div id="pager" class="pager">
-          <form>
-            <img src="{$UAM_PATH}admin/template/icon/first.png" class="first"/>
-            <img src="{$UAM_PATH}admin/template/icon/prev.png" class="prev"/>
+            <img src="{$UAM_PATH}admin/template/icon/first.png" class="first" alt=""/>
+            <img src="{$UAM_PATH}admin/template/icon/prev.png" class="prev" alt=""/>
             <input type="text" class="pagedisplay"/>
-            <img src="{$UAM_PATH}admin/template/icon/next.png" class="next"/>
-            <img src="{$UAM_PATH}admin/template/icon/last.png" class="last"/>
-            <select class="pagesize">
+            <img src="{$UAM_PATH}admin/template/icon/next.png" class="next" alt=""/>
+            <img src="{$UAM_PATH}admin/template/icon/last.png" class="last" alt=""/>
+            <select class="pagesize" title="{'UAM_Select page size'|@translate}">
               <option  value="10">10</option>
               <option selected="selected" value="20">20</option>
               <option value="30">30</option>
               <option value="40">40</option>
             </select>
-          </form>
+            <select class="gotoPage" title="{'UAM_Select page number'|@translate}"></select>
         </div>
       {/if}
     	<br/>
@@ -106,8 +105,11 @@ $(document).ready(function()
       </fieldset>
   </fieldset>
     {else}
+  <fieldset>
+  	<legend class="cluetip" title="{'UAM_Tracking confirmations'|translate}|{'UAM_usermanTitle_d'|translate}">{'UAM_Tracking confirmations'|@translate}</legend>
       <div>
         {'UAM_No_Usermanager'|@translate}
 		  </div>
+  </fieldset>
     {/if}
 </form>

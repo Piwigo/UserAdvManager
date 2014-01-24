@@ -267,18 +267,22 @@ $lang['UAM_Tips1_txt'] = '
             <li>
             Goals: Inform the visitor that the registration is awaiting approval by displaying a personal block on the home page of the gallery, and this, as registration is not approved.
             <br/><br/>
-            <b>Recall: In standard operation, the "Guest" only sees the public categories, without information message.</b>
-            </li><br/><br/>
+            <b>Recall: In standard operation, the "Guest" only sees the public albums, without information message.</b>
+            </li>
+            <li style="list-style-type: none;"><br/></li>
             <li>
-Prerequisite:<br/>
-- A gallery with all or some private categories, visible only by registered users<br/>
-- At least 2 following Piwigo\'s users groups: "Waiting," without permission on private categories, and "Confirmed" with all the permissions on the private categories<br/>
-- UAM plugin<br/>
-- PWG Stuffs plugin, for adding a special UAM module<br/>
-- Optionally, the plugin Extended Description to support multi-languages<br/>
-            </li><br/><br/>
+Prerequisite:
+<li style="list-style-type: none;"></li>
+<li style="list-style-type: none;">- A gallery with all or some private albums, visible only by registered users</li>
+<li style="list-style-type: none;">- At least 2 following Piwigo\'s users groups: "Waiting," without permission on private albums, and "Confirmed" with all the permissions on the private albums</li>
+<li style="list-style-type: none;">- UAM plugin</li>
+<li style="list-style-type: none;">- PWG Stuffs plugin, for adding a special UAM module</li>
+<li style="list-style-type: none;">- Optionally, the plugin Extended Description to support multi-languages</li>
+            </li>
+            <li style="list-style-type: none;"><br/></li>
             <li>
-Stages:<br/><br/>
+Stages:
+<li style="list-style-type: none;"></li>
 A. In plugin UAM:
               <ol>
                 <li>Enable registration confirmation</li>
@@ -288,7 +292,7 @@ A. In plugin UAM:
                 <li>Select the "Confirmed" group under "For users who have confirmed their registration"</li>
                 <li>Save the plugin configuration</li>
               </ol>
-<br/>
+<li style="list-style-type: none;"><br/></li>
 B. In plugin PWG Stuffs :
               <ol>
                 <li>Go to tab "Add a new module"</li>
@@ -305,19 +309,23 @@ $lang['UAM_Tips2_txt'] = '
           <ul>
             <li>
             Goals: Inform the visitor that the registration is awaiting confirmation by posting an additional page replacing the standard index page gallery at each of these connections, and this, as registration is not approved.
-            <br/><br/>
+            <li style="list-style-type: none;"></li>
             Advantages over the method with PWG_Stuffs: Allow formatting information and displaying the information immediately upon registration of visitors.
-            </li><br/><br/>
+            </li>
+            <li style="list-style-type: none;"><br/></li>
             <li>
-Prerequisite:<br/>
-- A gallery with all or some private categories, visible only by registered users<br/>
-- At least 2 following Piwigo\'s users groups: "Waiting," without permission on private categories, and "Confirmed" with all the permissions on the private categories<br/>
-- UAM plugin<br/>
-- Additional Pages plugin for adding and managing an additional page to replace the default index page of the gallery<br/>
-- Optionally, the plugin Extended Description to support multi-languages<br/>
-            </li><br/><br/>
+Prerequisite:
+<li style="list-style-type: none;"></li>
+<li style="list-style-type: none;">- A gallery with all or some private albums, visible only by registered users</li>
+<li style="list-style-type: none;">- At least 2 following Piwigo\'s users groups: "Waiting," without permission on private albums, and "Confirmed" with all the permissions on the private albums</li>
+<li style="list-style-type: none;">- UAM plugin</li>
+<li style="list-style-type: none;">- Additional Pages plugin for adding and managing an additional page to replace the default index page of the gallery</li>
+<li style="list-style-type: none;">- Optionally, the plugin Extended Description to support multi-languages</li>
+            </li>
+            <li style="list-style-type: none;"><br/></li>
             <li>
-Stages:<br/><br/>
+Stages:
+<li style="list-style-type: none;"></li>
 A. In plugin UAM:
               <ol>
                 <li>Enable registration confirmation</li>
@@ -326,10 +334,11 @@ A. In plugin UAM:
                 <li>Select the "Confirmed" group under "For users who have confirmed their registration"</li>
                 <li>Save the plugin configuration</li>
               </ol>
-<br/>
-B. In plugin Additional Pages:<br/>
+<li style="list-style-type: none;"><br/></li>
+B. In plugin Additional Pages:
+<li style="list-style-type: none;"></li>
                 <b>NOTE : The management of access rights for groups on Additional Pages must be turned on (see plugin configuration settings).</b>
-                <br/>
+                <li style="list-style-type: none;"></li>
               <ol>
                 <li>Add a new page with at least the following parameters:</li>
                 <ul>
@@ -402,4 +411,7 @@ $lang['personal_content'] = 'Content';
 
 $lang['UAM_AddURL2Mail'] = 'Add the URL of the gallery at the end of emails (like a signature)';
 $lang['UAM_Follow this link to access the gallery'] = 'Please, follow this link to access the gallery';
+
+$lang['UAM_Select page size'] = 'Select page size';
+$lang['UAM_Select page number'] = 'Select page number';
 ?>
