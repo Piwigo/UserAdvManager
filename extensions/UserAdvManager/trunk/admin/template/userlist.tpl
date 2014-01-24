@@ -21,7 +21,7 @@ $(document).ready(function()
       $("#sorting")
       .tablesorter(
       {ldelim}
-          sortList:[[3,1]],
+          sortList:[[3,0]],
           // pass the headers argument and assing a object 
           headers:
           {ldelim}
@@ -39,7 +39,7 @@ $(document).ready(function()
               {rdelim}
           {rdelim}
       {rdelim})
-      .tablesorterPager({ldelim}container: $("#pager"), positionFixed: false, size: 20, totalPages: 0{rdelim});
+      .tablesorterPager({ldelim}container: $("#pager"), page: 0, size: 20, output: '{ldelim}page{rdelim} / {ldelim}totalPages{rdelim}'{rdelim});
     {rdelim} 
 );
 </script>
@@ -65,8 +65,8 @@ $(document).ready(function()
         <tbody>
         {foreach from=$users item=user name=users_loop}
           <tr class="{if $smarty.foreach.users_loop.index is odd}row1{else}row2{/if}">
-            <td><label for="selection-{$user.ID}">{$user.USERNAME}</label></td>
-            <td style="text-align:center;"><a href="./admin.php?page=profile&amp;user_id={$user.ID}" title="{'Profile'|@translate}" onclick="window.open(this.href); return false;"><img src="{$UAM_PATH}admin/template/icon/edit_s.png"/></a></td>
+            <td><label>{$user.USERNAME}</label></td>
+            <td style="text-align:center;"><a href="./admin.php?page=profile&amp;user_id={$user.ID}" title="{'Profile'|@translate}" onclick="window.open(this.href); return false;"><img src="{$UAM_PATH}admin/template/icon/edit_s.png" alt=""/></a></td>
             <td>{$user.EMAIL}</td>
             <td style="text-align:center;">{$user.LASTVISIT}</td>
 {if $user.DISPLAY == 'green'}
@@ -86,19 +86,18 @@ $(document).ready(function()
         </tbody>
       </table>
 <div id="pager" class="pager">
-	<form>
-		<img src="{$UAM_PATH}admin/template/icon/first.png" class="first"/>
-		<img src="{$UAM_PATH}admin/template/icon/prev.png" class="prev"/>
+		<img src="{$UAM_PATH}admin/template/icon/first.png" class="first" alt=""/>
+		<img src="{$UAM_PATH}admin/template/icon/prev.png" class="prev" alt=""/>
 		<input type="text" class="pagedisplay"/>
-		<img src="{$UAM_PATH}admin/template/icon/next.png" class="next"/>
-		<img src="{$UAM_PATH}admin/template/icon/last.png" class="last"/>
-		<select class="pagesize">
+		<img src="{$UAM_PATH}admin/template/icon/next.png" class="next" alt=""/>
+		<img src="{$UAM_PATH}admin/template/icon/last.png" class="last" alt=""/>
+		<select class="pagesize" title="{'UAM_Select page size'|@translate}">
 			<option  value="10">10</option>
 			<option selected="selected" value="20">20</option>
 			<option value="30">30</option>
 			<option value="40">40</option>
 		</select>
-	</form>
+    <select class="gotoPage" title="{'UAM_Select page number'|@translate}"></select>
 </div>
     	<br/>
   </fieldset>
