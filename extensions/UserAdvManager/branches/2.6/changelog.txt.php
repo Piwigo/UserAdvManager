@@ -464,5 +464,20 @@ Plugin Name: UserAdvManager
             Bug 2987 fixed - New registered users have to follow a link on confirmation page before log in
 
 -- 2.51.1 : Bug 2986 rollback - The fix is not working well. A special notice is added in administration panel
+
+-- 2.6.0 : Compatibility with Piwigo 2.6
+           HTML5 recommandation improvement
+           New tablesorter and tablesorter.pager jquery plugin
+           Add sk_SK, thanks to : JoeKundlak
+           Update pt_PT, thanks to : Bridges and ANO
+           Update pt_BR, thanks to : flaviove
+           Update tr_TR, thanks to : hakanselcuk
+           Update de_DE, thanks to : duke
+           Update da_DK, thanks to : Kaare
+           Update lv_LV, thanks to : agrisans
+           Update es_ES, thanks to : petaqui
+           Update it_IT, thanks to : Ericnet
+           Update ru_RU, thanks to : Konve
+           Update el_GR, thanks to : bas_alba
 */
 ?>
