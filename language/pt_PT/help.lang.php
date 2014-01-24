@@ -316,4 +316,15 @@ $lang['UAM_ghosttrackerTitle_d'] = 'Também chamado de &quot;Rastreador de Fanta
 ';
 $lang['UAM_infomailTitle_d'] = 'Esta opção permite automatizar o envio de um e-mail informação para um utilizador quando ele altera a senha ou endereço de e-mail no seu perfil. <br/>
 O conteúdo da mensagem a enviar é composto por uma parte personalizável para introduzir uma pequena nota de boas-vindas e uma parte fixa, indicando o nome de login, senha e endereço de e-mail do utilizador.';
+$lang['UAM_confirmstatTitle_d'] = '<b style=&quot;color: red;&quot;>AVISO : A utilização de estatutos na confirmação requer que tenha mantido o estatuto &quot;Guest (Visitante)&quot; como o estatuto por defeito (no modelo de utilizador) para os novos registos. Note que também pode definir outro tipo de utilizador como defeito. Por favor reveja a documentação do Piwigo para mais detalhes.</b><br/><br/>
+Os estatutos são validados para utilização conjunta com a &quot;Confirmação de registo&quot;';
+$lang['UAM_confirmlevelTitle_d'] = '<b style=&quot;color: red;&quot;>AVISO : A utilização do nível de privacidade requere que já o tenha utilizado com as suas imagens. Por favor reveja a documentação do Piwigo para mais detalhes.</b><br/><br/>
+O nível de privacidade é validado para utilização conjunta com a &quot;Confirmação de registo&quot;';
+$lang['UAM_confirmgrpTitle_d'] = '<b style=&quot;color: red;&quot;>AVISO : A utilização de grupos na confirmação requer que tenha criado pelo menos um grupo de utilizadores e que este esteja definido como grupo &quot;por defeito&quot; na gestão de grupos de utilizadores do Piwigo.</b><br/><br/>
+os grupos são validados para utilização conjunta com a &quot;Confirmação de registo&quot;
+';
+$lang['UAM_carexcTitle_d'] = 'Pode ser interessante a proibição da utilização de certos caracteres nos nomes de utilizador (exemplo: recusar nomes de login que contenham @). Esta opção permite excluir caracteres ou sequências de caracteres.<br/>
+NB: A opção pode também excluir palavras inteiras
+<br/><br/>
+<b style=&quot;color: red;&quot;>Aviso: esta opção não tem efeito sobre os nomes de utilizador criados à ativação da mesma.</b>';
 ?>

@@ -76,4 +76,22 @@ $lang['UAM_validationlimitTitle_d'] = 'Esta opção permite limitar a validade d
 Esta opção é utilizada em conjunto com a "Confirmação de registo"
 <br/><br/>
 Se esta opção e a opção "Lembrar os usuários não confirmados" são ativadas, novas opções aparecem em baixo nesta seção para permitir a automação de gestão de usuários não confirmados.';
+$lang['UAM_miscTitle_d'] = '- Usuários registrados monitoramento <br/>
+- Apelido obrigatório para comentário de visitantes <br/>
+...';
+$lang['UAM_infomailTitle_d'] = 'Esta opção permite automatizar o envio de um e-mail de informações de um usuário quando ele muda de senha ou endereço de e-mail em sua página de perfil. <br/><bb/>
+O conteúdo da mensagem enviada é composta por uma parte customizável a introduzir uma pequena nota de boas-vindas e uma parte fixa, indicando o nome de login, senha e endereço de e-mail do usuário.';
+$lang['UAM_confirmstatTitle'] = 'Estatutos';
+$lang['UAM_confirmTitle_d'] = '- Informações geração email <br/>
+- Registrar confirmação geração email <br/>
+- Grupos, estado ou nível de privacidade auto registro <br/>
+- Prazo para a confirmação do registro <br/>
+- Geração email Lembrete
+...';
+$lang['UAM_USRAutoMailTitle_d'] = 'Quando ativada, esta função irá enviar automaticamente conteúdo personalizado em "Lembrete de e-mail com uma nova chave gerada" aos visitantes que correspondem aos critérios.';
+$lang['UAM_Tracking registered users_d'] = 'Isso ativa uma tabela na guia "de rastreamento de usuários registrados", onde são listados os utilizadores registados na galeria com a data de sua última visita e tempo gasto (em dias) desde a sua última visita. O monitoramento é puramente informativo para o administrador da galeria.';
+$lang['UAM_StuffsTitle_d'] = 'Isso permite que um bloco UAM adicional no PWG Stuffs plugin (se instalado), informar os visitantes que não confirmaram sua inscrição sobre suas condição.
+<br/><br/>
+Consulte <b>Dicas e Exemplos de Uso</b> na parte inferior desta página para mais detalhes.';
+$lang['UAM_HidePasswTitle_d'] = 'Escolha esta opção se você deseja exibir a senha escolhida pelo visitante no e-mail informações. Se você ativar a opção, a senha irá aparecer em texto claro. Se você desativar a senha não vai aparecer.';
 ?>
