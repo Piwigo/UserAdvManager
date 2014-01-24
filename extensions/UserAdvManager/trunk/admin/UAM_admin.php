@@ -38,6 +38,11 @@ $UAM_Email_Mandatory_Check = false;
 
 $dump_download = '';
 
+// Get admin panel theme
+// ---------------------
+$themeconf=$template->get_template_vars('themeconf');
+$UAM_theme=$themeconf['id'];
+
 // +-----------------------------------------------------------------------+
 // |                            Tabssheet                                  |
 // +-----------------------------------------------------------------------+
@@ -605,9 +610,6 @@ ORDER BY name ASC
   // ------------------------------------------
   // Template initialization for forms and data
   // ------------------------------------------
-  $themeconf=$template->get_template_vars('themeconf');
-  $UAM_theme=$themeconf['id'];
-
   $template->assign(
     array(
 						'nb_para'                           => $nb_para,
@@ -871,12 +873,13 @@ FROM '.USERS_TABLE.'
             );
       }
 
-      // Plugin version inserted
-  		// -----------------------
+      // Plugin version inserted and admin panel theme
+  		// ---------------------------------------------
   		$template->assign(
   				array(
     				'UAM_VERSION'  => $version,
       		  'UAM_PATH'     => UAM_PATH,
+            'UAM_THEME'    => $UAM_theme,
           )
       );
 
@@ -1391,13 +1394,14 @@ WHERE user_id = '.$local_user['id'].'
       $Confirm_Local = "";
     } 
     
-    // Plugin version inserted
-    // -----------------------
+    // Plugin version inserted and admin panel theme
+    // ---------------------------------------------
     $template->assign(
       array(
         'CONFIRM_LOCAL'=> $Confirm_Local,
         'UAM_VERSION'  => $version,
         'UAM_PATH'     => UAM_PATH,
+        'UAM_THEME'    => $UAM_theme,
       )
     );
 
@@ -1740,12 +1744,13 @@ VALUES ('.$row['id'].',"'.$dbnow.'","false")
       );
     }
 
-    // Plugin version inserted
-    // -----------------------
+    // Plugin version inserted and admin panel theme
+    // ---------------------------------------------
     $template->assign(
       array(
         'UAM_VERSION'  => $version,
         'UAM_PATH'     => UAM_PATH,
+        'UAM_THEME'    => $UAM_theme,
       )
     );
 
