@@ -4,6 +4,8 @@
 {combine_script id='jquery.tablesorter.pager' require='jquery' path=$UAM_PATH|@cat:'admin/template/js/jquery.tablesorter.pager.min.js'}
 
 {combine_css path= $UAM_PATH|@cat:'admin/template/uam.css'}
+{if $UAM_THEME=='clear'}{combine_css path= $UAM_PATH|@cat:'admin/template/themes/clear/theme.css'}{/if}
+{if $UAM_THEME=='roma'}{combine_css path= $UAM_PATH|@cat:'admin/template/themes/roma/theme.css'}{/if}
 
 <script type="text/javascript">
 jQuery().ready(function()
@@ -18,7 +20,7 @@ jQuery().ready(function()
 $(document).ready(function() 
     {ldelim}
       $("#sorting")
-      .tablesorter({ldelim}sortList:[[4,1]], headers: {ldelim} 0: {ldelim} sorter: false {rdelim},2: {ldelim} sorter: false {rdelim}{rdelim}{rdelim})
+      .tablesorter({ldelim}widgets: ["zebra"],widgetOptions :{ldelim}zebra : [ "normal-row", "alt-row" ]{rdelim},sortList:[[4,1]], headers: {ldelim} 0: {ldelim} sorter: false {rdelim},2: {ldelim} sorter: false {rdelim}{rdelim}{rdelim})
       .tablesorterPager({ldelim}container: $("#pager"), page: 0, size: 20, output: '{ldelim}page{rdelim} / {ldelim}totalPages{rdelim}',{rdelim});
     {rdelim});
 </script>

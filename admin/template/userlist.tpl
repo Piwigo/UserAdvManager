@@ -4,6 +4,8 @@
 {combine_script id='jquery.tablesorter.pager' require='jquery' path=$UAM_PATH|@cat:'admin/template/js/jquery.tablesorter.pager.min.js'}
 
 {combine_css path= $UAM_PATH|@cat:'admin/template/uam.css'}
+{if $UAM_THEME=='clear'}{combine_css path= $UAM_PATH|@cat:'admin/template/themes/clear/theme.css'}{/if}
+{if $UAM_THEME=='roma'}{combine_css path= $UAM_PATH|@cat:'admin/template/themes/roma/theme.css'}{/if}
 
 
 <script type="text/javascript">
@@ -21,6 +23,11 @@ $(document).ready(function()
       $("#sorting")
       .tablesorter(
       {ldelim}
+          widgets: ["zebra"],
+          widgetOptions :
+          {ldelim}
+              zebra : [ "normal-row", "alt-row" ]
+          {rdelim},
           sortList:[[3,0]],
           // pass the headers argument and assing a object 
           headers:
