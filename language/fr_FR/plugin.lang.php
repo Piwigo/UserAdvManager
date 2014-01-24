@@ -104,7 +104,7 @@ $lang['UAM_GhostTracker_ReminderText'] = 'Texte de rappel personnalisé';
 $lang['UAM_SubTitle4'] = 'Ghost Tracker';
 $lang['UAM_GT_Init'] = 'Initialisation du Ghost Tracker';
 $lang['UAM_GhostTracker_Title'] = 'Gestion des visiteurs fantômes';
-$lang['UAM_GhostTracker_Init'] = 'A première activation de cette fonction, ou à sa réactivation après une longue période pendant laquelle de nouveaux visiteurs se sont inscrits, il convient d\'initialiser ou de réinitialiser le Ghost Tracker. Cette action n\'est à faire qu\'une seule fois après activation ou réactivation de l\'option; à cet effet, cliquez <u>une seule fois</u> sur le bouton d\'initialisation ci-dessous.</b>';
+$lang['UAM_GhostTracker_Init'] = 'A la première activation de cette fonction, ou à sa réactivation après une longue période pendant laquelle de nouveaux visiteurs se sont inscrits, il convient d\'initialiser ou de réinitialiser le Ghost Tracker. Cette action n\'est à faire qu\'une seule fois après activation ou réactivation de l\'option; à cet effet, cliquez <u>une seule fois</u> sur le bouton d\'initialisation ci-dessous.';
 /* Mailing */
 $lang['UAM_Add of %s'] = 'Profil créé pour %s';
 $lang['UAM_Update of %s'] = 'Mise à jour du profil de %s';
@@ -261,18 +261,23 @@ $lang['UAM_Tips2_txt'] = '
             Objectifs : Informer le visiteur que son inscription est en attente de confirmation en affichant une page additionnelle remplaçant la page d\'index standard de la galerie à chacune de ces connexions; et ce, tant que l\'inscription n\'est pas confirmée.
             <br/><br/>
             Avantages par rapport à la méthode avec PWG_Stuffs : Permettre une information mise en forme et moins austère et afficher immédiatement l\'information dès l\'inscription des visiteurs.
-            </li><br/><br/>
+            </li>
+            <li style="list-style-type: none;"><br/></li>
             <li>
-Pré-requis:<br/>
-- Une galerie avec tout ou partie des albums privées, visibles par les seuls utilisateurs inscrits<br/>
-- Au moins les 2 groupes d\'utilisateurs Piwigo suivants : "Attente", sans aucune permission sur les albums privées, et "Confirmés", avec toutes les permissions sur les albums privées<br/>
-- Le plugin UAM<br/>
-- Le plugin Additional Pages, pour l\'ajout et la gestion d\'une page additionnelle remplaçant la page d\'index par défaut de la galerie<br/>
-- En option, le plugin Extended Description, pour le support multi-langues<br/>
-            </li><br/><br/>
+Pré-requis:
+<li style="list-style-type: none;"></li>
+<li style="list-style-type: none;">- Une galerie avec tout ou partie des albums privées, visibles par les seuls utilisateurs inscrits</li>
+<li style="list-style-type: none;">- Au moins les 2 groupes d\'utilisateurs Piwigo suivants : "Attente", sans aucune permission sur les albums privées, et "Confirmés", avec toutes les permissions sur les albums privées</li>
+<li style="list-style-type: none;">- Le plugin UAM</li>
+<li style="list-style-type: none;">- Le plugin Additional Pages, pour l\'ajout et la gestion d\'une page additionnelle remplaçant la page d\'index par défaut de la galerie</li>
+<li style="list-style-type: none;">- En option, le plugin Extended Description, pour le support multi-langues</li>
+            </li>
+            <li style="list-style-type: none;"><br/></li>
             <li>
-Réalisation:<br/><br/>
-A. Dans le plugin UAM:<br/>
+Réalisation:
+<li style="list-style-type: none;"></li>
+A. Dans le plugin UAM:
+<li style="list-style-type: none;"></li>
               <ol>
                 <li>Activer la confirmation d\'inscription</li>
                 <li>Saisir un "texte d\'accueil personnalisé" qui sera joint au mail de confirmation d\'inscription. Si le plugin Extended Description est activé, les balises de langues peuvent être utilisées</li>
@@ -280,8 +285,9 @@ A. Dans le plugin UAM:<br/>
                 <li>Sélectionner le groupe "Confirmés" à la rubrique "Pour les utilisateurs ayant confirmé leur inscription"</li>
                 <li>Enregistrer la configuration du plugin</li>
               </ol>
-<br/>
-B. Dans le plugin Additional Pages:<br/>
+<li style="list-style-type: none;"><br/></li>
+B. Dans le plugin Additional Pages:
+<li style="list-style-type: none;"></li>
                 <b>NOTE : La gestion des droits d\'accès aux pages additionelles pour les groupes doit être activée (voir configuration du plugin Additional Pages).</b>
                 <br/>
               <ol>
@@ -312,18 +318,23 @@ $lang['UAM_Tips1_txt'] = '
             <li>
             Objectifs : Informer le visiteur que son inscription est en attente de confirmation en affichant un bloc personnel sur la page d\'accueil de la galerie; et ce, tant que l\'inscription n\'est pas confirmée.<br/><br/>
             <b>Rappel: En fonctionnement standard, le "Guest" ne voit que les albums publics, sans message d\'information.</b>
-            </li><br/><br/>
+            </li>
+            <li style="list-style-type: none;"><br/></li>
             <li>
-Pré-requis:<br/>
-- Une galerie avec tout ou partie des albums privées, visibles par les seuls utilisateurs inscrits<br/>
-- Au moins les 2 groupes d\'utilisateurs Piwigo suivants : "Attente", sans aucune permission sur les albums privées, et "Confirmés", avec toutes les permissions sur les albums privées<br/>
-- Le plugin UAM<br/>
-- Le plugin PWG Stuffs, pour l\'ajout d\'un module spécial UAM<br/>
-- En option, le plugin Extended Description, pour le support multi-langues<br/>
-            </li><br/><br/>
+Pré-requis:
+<li style="list-style-type: none;"></li>
+<li style="list-style-type: none;">- Une galerie avec tout ou partie des albums privées, visibles par les seuls utilisateurs inscrits</li>
+<li style="list-style-type: none;">- Au moins les 2 groupes d\'utilisateurs Piwigo suivants : "Attente", sans aucune permission sur les albums privées, et "Confirmés", avec toutes les permissions sur les albums privées</li>
+<li style="list-style-type: none;">- Le plugin UAM</li>
+<li style="list-style-type: none;">- Le plugin PWG Stuffs, pour l\'ajout d\'un module spécial UAM</li>
+<li style="list-style-type: none;">- En option, le plugin Extended Description, pour le support multi-langues</li>
+            </li>
+            <li style="list-style-type: none;"><br/></li>
             <li>
-Réalisation:<br/><br/>
-A. Dans le plugin UAM:<br/>
+Réalisation:
+<li style="list-style-type: none;"></li>
+A. Dans le plugin UAM:
+<li style="list-style-type: none;"></li>
               <ol>
                 <li>Activer la confirmation d\'inscription</li>
                 <li>Activer l\'option "Module PWG Stuffs"</li>
@@ -332,8 +343,9 @@ A. Dans le plugin UAM:<br/>
                 <li>Sélectionner le groupe "Confirmés" à la rubrique "Pour les utilisateurs ayant confirmé leur inscription"</li>
                 <li>Enregistrer la configuration du plugin</li>
               </ol>
-<br/>
-B. Dans le plugin PWG Stuffs:<br/>
+<li style="list-style-type: none;"><br/></li>
+B. Dans le plugin PWG Stuffs:
+<li style="list-style-type: none;"></li>
               <ol>
                 <li>Aller dans l\'onglet "Ajouter un nouveau bloc"</li>
                 <li> Sélectionner "Module UAM"</li>
@@ -402,4 +414,7 @@ $lang['personal_content'] = 'Contenu';
 
 $lang['UAM_AddURL2Mail'] = 'Ajouter l\'URL de la galerie à la fin des emails (comme une signature)';
 $lang['UAM_Follow this link to access the gallery'] = 'Veuillez utiliser ce lien pour vous connecter';
+
+$lang['UAM_Select page size'] = 'Choisir la taille des pages';
+$lang['UAM_Select page number'] = 'Sélectionner une page';
 ?>

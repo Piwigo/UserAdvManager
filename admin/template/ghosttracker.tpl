@@ -19,7 +19,7 @@ $(document).ready(function()
     {ldelim}
       $("#sorting")
       .tablesorter({ldelim}sortList:[[4,1]], headers: {ldelim} 0: {ldelim} sorter: false {rdelim},2: {ldelim} sorter: false {rdelim}{rdelim}{rdelim})
-      .tablesorterPager({ldelim}container: $("#pager"), positionFixed: false, size: 20, totalPages: 0{rdelim});
+      .tablesorterPager({ldelim}container: $("#pager"), page: 0, size: 20, output: '{ldelim}page{rdelim} / {ldelim}totalPages{rdelim}',{rdelim});
     {rdelim});
 </script>
 
@@ -27,7 +27,7 @@ $(document).ready(function()
   <h2>{'UAM_Title_Tab'|@translate} {$UAM_VERSION}<br/>{'UAM_SubTitle4'|@translate}</h2>
 </div>
 
-<form method="post" action="" class="general">
+<form method="post" class="general">
   <fieldset>
   	<legend>{'UAM_GT_Init'|@translate}</legend>
     <ul>
@@ -38,10 +38,10 @@ $(document).ready(function()
     <p><input class="submit" type="submit" value="{'UAM_GT_Reset'|@translate}" name="GhostTracker_Init"/></p>
   </fieldset>
   
+    {if count($users) > 0}
   <fieldset>
     <legend class="cluetip" title="{'UAM_GhostTracker_Title'|translate}|{'UAM_gtTitle_d'|translate}">{'UAM_GhostTracker_Title'|@translate}</legend>
-    {if count($users) > 0}
-      <table id="sorting" class="table2" width="97%" summary="">
+      <table id="sorting" class="table2">
         <thead>
           <tr class="throw">
             <th>&nbsp;</th>
@@ -57,7 +57,7 @@ $(document).ready(function()
             <tr class="{if $smarty.foreach.users_loop.index is odd}row1{else}row2{/if}">
               <td><input type="checkbox" name="selection[]" value="{$user.ID}" {$user.CHECKED} id="selection-{$user.ID}"/></td>
               <td><label for="selection-{$user.ID}">{$user.USERNAME}</label></td>
-              <td style="text-align:center;"><a href="./admin.php?page=profile&amp;user_id={$user.ID}" title="{'Profile'|@translate}" onclick="window.open(this.href); return false;"><img src="{$UAM_PATH}admin/template/icon/edit_s.png"/></a></td>
+              <td style="text-align:center;"><a href="./admin.php?page=profile&amp;user_id={$user.ID}" title="{'Profile'|@translate}" onclick="window.open(this.href); return false;"><img src="{$UAM_PATH}admin/template/icon/edit_s.png" alt=""/></a></td>
               <td>{$user.EMAIL}</td>
             {if $user.REMINDER == l10n('UAM_Reminder_Sent_NOK')}
               <td style="color:orange;text-align:center;">{$user.LASTVISIT}</td>
@@ -74,19 +74,18 @@ $(document).ready(function()
         </tbody>
       </table>
       <div id="pager" class="pager">
-      <form>
-        <img src="{$UAM_PATH}admin/template/icon/first.png" class="first"/>
-        <img src="{$UAM_PATH}admin/template/icon/prev.png" class="prev"/>
+        <img src="{$UAM_PATH}admin/template/icon/first.png" class="first" alt=""/>
+        <img src="{$UAM_PATH}admin/template/icon/prev.png" class="prev" alt=""/>
         <input type="text" class="pagedisplay"/>
-        <img src="{$UAM_PATH}admin/template/icon/next.png" class="next"/>
-        <img src="{$UAM_PATH}admin/template/icon/last.png" class="last"/>
-        <select class="pagesize">
+        <img src="{$UAM_PATH}admin/template/icon/next.png" class="next" alt=""/>
+        <img src="{$UAM_PATH}admin/template/icon/last.png" class="last" alt=""/>
+        <select class="pagesize" title="{'UAM_Select page size'|@translate}">
           <option  value="10">10</option>
           <option selected="selected" value="20">20</option>
           <option value="30">30</option>
           <option value="40">40</option>
         </select>
-      </form>
+        <select class="gotoPage" title="{'UAM_Select page number'|@translate}"></select>
       </div>
       <br/>
       <fieldset>
@@ -103,8 +102,11 @@ $(document).ready(function()
       </fieldset>
   </fieldset>
     {else}
+  <fieldset>
+    <legend class="cluetip" title="{'UAM_GhostTracker_Title'|translate}|{'UAM_gtTitle_d'|translate}">{'UAM_GhostTracker_Title'|@translate}</legend>
 		  <div>
 			 {'UAM_No_Ghosts'|@translate}
 		  </div>
+  </fieldset>
 		{/if}
 </form>
