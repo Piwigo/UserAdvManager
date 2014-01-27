@@ -312,4 +312,6 @@ $lang['UAM_group "%s" updated'] = 'Για καλύτερη απόδοση, η ο
 $lang['personal_content'] = 'περιεχόμενο';
 $lang['UAM_AddURL2Mail'] = 'Προσθέστε το URL της γκαλερί στο τέλος του e-mail (σαν μια υπογραφή)';
 $lang['UAM_Follow this link to access the gallery'] = 'Παρακαλώ, ακολουθήστε αυτό το σύνδεσμο για να μεταβείτε στην γκαλερύ';
+$lang['UAM_Select page size'] = 'Επιλέξτε το μέγεθος της σελίδας';
+$lang['UAM_Select page number'] = 'Επιλέξτε αριθμό σελίδας';
 ?>
