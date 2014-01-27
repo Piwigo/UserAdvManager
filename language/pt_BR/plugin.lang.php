@@ -307,4 +307,6 @@ $lang['UAM_No_reminder_for_default_user'] = 'A conta padrão não está sujeito 
 $lang['UAM_No_reminder_for_your_account'] = 'Sua conta de administrador pessoal não está sujeito a receber lembretes de GhostTracker';
 $lang['UAM_No_validation_for_your_account'] = 'Sua conta de administrador pessoal não está sujeito a confirmação';
 $lang['UAM_Follow this link to access the gallery'] = 'Por favor, siga este link para ter acesso a galeria';
+$lang['UAM_Select page number'] = 'Selecione o número da página';
+$lang['UAM_Select page size'] = 'Selecione o tamanho da página';
 ?>
