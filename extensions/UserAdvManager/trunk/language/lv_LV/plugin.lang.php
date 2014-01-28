@@ -360,4 +360,6 @@ $lang['UAM_group "%s" updated'] = 'Labākam sniegumam, grupa %s automātiski tik
 $lang['personal_content'] = 'Saturs';
 $lang['UAM_AddURL2Mail'] = 'Pievienojiet galerijas URL e-pasta beigās kā parakstu.';
 $lang['UAM_Follow this link to access the gallery'] = 'Lūdzu izmantojiet šo saiti, lai piekļūtu galerijai';
+$lang['UAM_Select page size'] = 'Izvēlēties lapas izmēru';
+$lang['UAM_Select page number'] = 'Izvēlēties lapas numuru';
 ?>
