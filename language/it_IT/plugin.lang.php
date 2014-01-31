@@ -372,4 +372,6 @@ $lang['UAM_group "%s" updated'] = 'Per la migliore perfrormance,il gruppo %s è 
 $lang['personal_content'] = 'Contenuto';
 $lang['UAM_AddURL2Mail'] = 'Aggiungi l\'URL della galleria alla fine delle e-mail (come una firma)';
 $lang['UAM_Follow this link to access the gallery'] = 'Prego, segui questo link per accedere alla galleria';
+$lang['UAM_Select page number'] = 'Seleziona numero di pagina';
+$lang['UAM_Select page size'] = 'Seleziona dimensione della pagina';
 ?>
