@@ -18,7 +18,6 @@ $lang['UAM_Err_audit_email_forbidden'] = '<b>Dieses Konto verwendet einen nicht 
 $lang['UAM_Err_audit_advise'] = '<b>Sie müssen Korrekturen an mit neuen Regeln die Sie aktiviert haben, nachzukommen durchzuführen.<br>Verwenden Sie ein Datenbank-Management-Dienstprogramm, um Benutzer-Accounts direkt in der Tabelle richtig ###_USERS';
 $lang['UAM_reg_err_login2'] = 'Benutzername muss nicht die folgenden Zeichen übereinstimmen: ';
 $lang['UAM_reg_err_login5'] = 'Ihre E-Mail-Anbieter für die Registrierung ist verboten. Gebannten E-Mail-Anbieter sind: ';
-$lang['UAM_empty_pwd'] = '[leeren Passwort]';
 $lang['UAM_no_update_pwd'] = '[Profil aktualisiert ohne Passwort geändert]';
 $lang['UAM_No_validation_for_Guest'] = 'Der &quot;Gast&quot;-Konto ist nicht Gegenstand der Validierung';
 $lang['UAM_No_validation_for_default_user'] = 'Der Standard-Konto ist nicht Gegenstand der Validierung';
@@ -90,7 +89,6 @@ $lang['UAM_Title1'] = 'Einstellen Einschränkungen für Registrierungen';
 $lang['UAM_Title2'] = 'Einstellen Bestätigungen und Validierungen der Registrierung';
 $lang['UAM_Title3'] = 'Einstellen der Registrierung durchgeführt und andere Optionen';
 $lang['UAM_Title4'] = 'Tipps und Beispiele für die Benutzung';
-$lang['UAM_No_Casse'] = 'Benutzernamen: Groß-und Kleinschreibung';
 $lang['UAM_Username_Char'] = 'Benutzernamen: Ausschluss von Zeichen';
 $lang['UAM_Username_Char_true'] = ' Zeichen Verboten:<br>(Verwenden Sie ein Komma, um ein Zeichen getrennt)<br><br>';
 $lang['UAM_Username_Char_false'] = ' Erlauben Sie alle (Standard)';
@@ -123,14 +121,6 @@ $lang['UAM_SubTitle4'] = 'Geist Tracker';
 $lang['UAM_GT_Init'] = 'Initialisieren Inaktiven-Nutzer-Verfolgung';
 $lang['UAM_GhostTracker_Title'] = 'Geist Besucher-Management';
 $lang['UAM_GhostTracker_Init'] = 'Wenn Sie diese Funktion zum ersten Mal oder haben Sie nach einem langen Zeitraum aus, in dem neue Besucher registriert sind, müssen Sie initialisieren, oder setzen Sie den Geist Tracker reaktiviert. Dieser Vorgang ist nur nach Aktivierung oder Reaktivierung von der Möglichkeit gemacht. Bitte klicken Sie <u>einmal</u> die Reset-Taste unten.';
-/* Mailing */
-$lang['UAM_Add of %s'] = 'Profil für %s wurde erstellt.';
-$lang['UAM_Update of %s'] = 'Profil aktualisieren %s';
-/* Email confirmation page */
-/* Mailing */
-$lang['UAM_Ghost_reminder_of_%s'] = '%s, Dies ist eine Erinnerung per E-Mail';
-$lang['UAM_Reminder_with_key_of_%s'] = '%s, Ihre Validierungs-Zahl wurde erneuert';
-$lang['UAM_Reminder_without_key_of_%s'] = '%s, Ihre Validierung Schlüssel abläuft';
 /* Errors and Warnings */
 $lang['UAM_Err_GhostTracker_Settings'] = 'Diese Seite ist nur verfügbar, wenn &quot;Inaktive-Nutzer-Verfolgung&quot; aktiv ist &quot;Einstellungen der Registrierung durchgeführt und andere Optionen gesetzt sind&quot;.';
 $lang['UAM_Err_Userlist_Settings'] = 'Diese Seite ist nur verfügbar, wenn &quot;Überwache registrierte Benutzer&quot; aktiv ist in der &quot;Einstellung der Registrierung durchgeführt und andere Optionen&quot;';
@@ -173,9 +163,7 @@ $lang['UAM_GTAutoDel'] = 'Automatisches Löschen von Konten';
 $lang['UAM_Error_GTAutoMail_cannot_be_set_without_ConfirmMail'] = 'Konsistenz-Fehler in der Konfiguration gewählt:<br><br>
 "Einstellen der Registrierung durchgeführt und andere Optionen > Geist Besucher-Management (Geist Tracker) > Automatische Verwaltung von Geist Benutzern > Automatisches Versenden einer E-Mail beim Wechsel Gruppe / Status" kann nicht aktiviert werden, wenn "Einstellen Bestätigungen und Validierungen der Registrierung > Bestätigung der Anmeldung - Validation von Benutzer" ist zunächst nicht aktiviert.<br><br>
 Um die Kohärenz, die Option "Automatisches Versenden einer E-Mail beim Wechsel Gruppe / Status" wurde automatisch "deaktiviert" neu positioniert.<br><br>';
-$lang['UAM_Demotion of %s'] = 'Herabstufung von %s';
 $lang['UAM_AdminValidationMail_Text'] = 'Mitteilung über manuelle Bestätigung der Registrierung.';
-$lang['UAM_Validation of %s'] = 'Validierung von %s';
 // --------- End: New or revised $lang ---- from version 2.16.0
 
 // --------- Starting below: New or revised $lang ---- from version 2.20.0
@@ -354,8 +342,6 @@ $lang['UAM_Error_Using_illegal_flag'] = 'Syntax-Fehler! Die [Kdays] AutoText Fla
 $lang['UAM_Error_Using_illegal_Kdays'] = 'Mit dem [Kdays]-Tag ist nur zulässig, wenn die Frist für die Anmeldebestätigung begrenzt aktiv ist. Lesen Sie das Textfeld in rot, um das Problem zu beheben.';
 $lang['UAM_Expired_Level'] = '<b>Datenschutz Niveau</b> für Benutzer-Registrierung abgelaufen<br>';
 $lang['UAM_MailExclusion_No'] = 'E-Mail-Domänen Ausgrenzung - Nicht verfügbar, da E-Mails nicht zwingend notwendig sind für die Registrierung!';
-$lang['UAM_MiscOptions'] = 'Andere Verschiedene Optionen';
-$lang['UAM_NewFeature'] = 'Neue Funktion!';
 $lang['UAM_No_Backup_File'] = 'Kein Backup-Datei verf';
 $lang['UAM_No_Ghosts'] = 'Keine Geister Besucher im Moment';
 $lang['UAM_No_Userlist'] = 'Keine Besucher Liste im Moment';
@@ -401,7 +387,7 @@ $lang['UAM_Manual_validation_needed_for %s'] = 'Der Benutzer% s registriert hat 
 $lang['UAM_Subject admin validation for %s'] = 'Registrierung von% s wartet auf Validierung';
 $lang['UAM_Change'] = 'Ändere die Gruppe/den Status/die Privatsphäre des Benutzers der bestätigt wurde.';
 $lang['UAM_Customize_messagesandmails'] = 'Anpassen der Nachrichten und E-Mails.';
-$lang['UAM_group "%s" updated'] = 'Für die beste Geschwindigkeit, wurde die Gruppe %s als Standardgruppe eingestellt.';
+$lang['UAM_group %s updated'] = 'Für die beste Geschwindigkeit, wurde die Gruppe %s als Standardgruppe eingestellt.';
 $lang['personal_content'] = 'Inhalt';
 $lang['UAM_AddURL2Mail'] = 'Hinzufügen der Galerie URL am Ende von E-Mails (wie eine Unterschrift)';
 $lang['UAM_Follow this link to access the gallery'] = 'Bitte folge diesem Link, um auf die Galerie zuzugreifen';
