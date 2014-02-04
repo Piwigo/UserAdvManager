@@ -18,7 +18,6 @@ $lang['UAM_Err_audit_email_forbidden'] = '<b>Ce compte contient des domaines de 
 $lang['UAM_Err_audit_advise'] = '<b>Vous avez des corrections à faire pour respecter les nouvelles règles que vous avez activées.<br/>Utilisez un utilitaire de gestion de base de données pour corriger les comptes utilisateurs directement dans la table ###_USERS si nécessaire.</b><br/><br/>';
 $lang['UAM_reg_err_login2'] = 'le nom utilisateur ne doit pas contenir les caractères suivants : ';
 $lang['UAM_reg_err_login5'] = 'L\'adresse email est issue d\'un prestataire interdit. Les prestataires d\'adresses email interdits à l\'inscription sont : ';
-$lang['UAM_empty_pwd'] = '[mot de passe vide]';
 $lang['UAM_no_update_pwd'] = '[mise à jour du profil sans changement du mot de passe]';
 $lang['UAM_No_validation_for_Guest'] = 'Le compte Guest n\'est pas soumis à confirmation';
 $lang['UAM_No_validation_for_default_user'] = 'Le compte par défaut n\'est pas soumis à confirmation';
@@ -80,7 +79,6 @@ $lang['UAM_Tab_Global'] = 'Configuration';
 $lang['UAM_Title1'] = 'Paramétrage des restrictions d\'inscriptions';
 $lang['UAM_Title2'] = 'Paramétrage des confirmations d\'inscriptions';
 $lang['UAM_Title4'] = 'Astuces et exemples d\'utilisation';
-$lang['UAM_No_Casse'] = 'Noms d\'utilisateurs : Sensibilité à la casse';
 $lang['UAM_Username_Char'] = 'Noms d\'utilisateurs : Exclusion de certains caractères';
 $lang['UAM_Username_Char_true'] = ' Interdire les caractères:<br/>(utiliser une virgule pour séparer chaque caractère du suivant)<br/><br/>';
 $lang['UAM_Username_Char_false'] = ' Tout autoriser (valeur par défaut)';
@@ -105,13 +103,6 @@ $lang['UAM_SubTitle4'] = 'Ghost Tracker';
 $lang['UAM_GT_Init'] = 'Initialisation du Ghost Tracker';
 $lang['UAM_GhostTracker_Title'] = 'Gestion des visiteurs fantômes';
 $lang['UAM_GhostTracker_Init'] = 'A la première activation de cette fonction, ou à sa réactivation après une longue période pendant laquelle de nouveaux visiteurs se sont inscrits, il convient d\'initialiser ou de réinitialiser le Ghost Tracker. Cette action n\'est à faire qu\'une seule fois après activation ou réactivation de l\'option; à cet effet, cliquez <u>une seule fois</u> sur le bouton d\'initialisation ci-dessous.';
-/* Mailing */
-$lang['UAM_Add of %s'] = 'Profil créé pour %s';
-$lang['UAM_Update of %s'] = 'Mise à jour du profil de %s';
-/* Mailing */
-$lang['UAM_Ghost_reminder_of_%s'] = '%s, ceci est un email de rappel.';
-$lang['UAM_Reminder_with_key_of_%s'] = '%s, votre clef de confirmation a expiré';
-$lang['UAM_Reminder_without_key_of_%s'] = '%s, votre clef de confirmation va expirer';
 /* Errors and Warnings */
 $lang['UAM_Err_GhostTracker_Settings'] = 'Cette page n\'est accessible que si "Gestion des visiteurs fantômes" est actif dans "Paramétrage des suivis des inscrits et autres options".';
 $lang['UAM_Err_Userlist_Settings'] = 'Cette page n\'est accessible que si le "Suivi des utilisateurs inscrits" est actif dans "Paramétrage des suivis des inscrits et autres options".';
@@ -159,9 +150,7 @@ $lang['UAM_Error_GTAutoMail_cannot_be_set_without_ConfirmMail'] = 'Erreur de coh
 <br/><br/>
 Pour garantir la cohérence, l\'option "Email automatique sur changement de groupe / statut" a été automatiquement repositionnée en "désactivé".
 <br/><br/>';
-$lang['UAM_Demotion of %s'] = 'Rétrogradation de %s';
 $lang['UAM_AdminValidationMail_Text'] = 'Notification de confirmation d\'inscription manuelle';
-$lang['UAM_Validation of %s'] = 'Confirmation de %s';
 // --------- End: New or revised $lang ---- from version 2.16.0
 
 
@@ -204,7 +193,6 @@ $lang['UAM_Confirm_Status'] = 'Statuts <b style="color: red;">Important : N\'uti
 $lang['UAM_Confirm_Level'] = 'Niveau de confidentialité<br/>(------- pour conserver la valeur par défaut de Piwigo)';
 $lang['UAM_GTAutoGp'] = 'Changement automatique de groupe / statut / niveau de confidentialité';
 $lang['UAM_Expired_Level'] = '<b>Niveau de confidentialité</b> pour les utilisateurs dont l\'inscription aura expirée<br/>';
-$lang['UAM_MiscOptions'] = 'Autres options';
 $lang['UAM_Title3'] = 'Gestion des utilisateurs fantômes';
 $lang['UAM_Title5'] = 'Autres options';
 $lang['UAM_Error_Using_illegal_Kdays'] = 'L\'utilisation de la balise [Kdays] n\'est autorisée que si la limitation du délai de confirmation d\'inscription est active. Reportez vous au champ de texte en rouge pour corriger le problème.';
@@ -243,7 +231,6 @@ $lang['UAM_Bad_version_backup'] = 'La version du fichier de sauvegarde ne corres
 // --------- Starting below: New or revised $lang ---- from version 2.30.2
 $lang['UAM_RedirToProfile'] = 'Redirection vers la page de personnalisation';
 $lang['UAM_GTAutoMail'] = 'Email automatique sur changement de groupe / statut / Niveau de confidentialité';
-$lang['UAM_NewFeature'] = 'Nouvelle option !';
 $lang['UAM_RejectConnexion_Custom_Txt'] = 'Personnaliser le texte de la page de rejet de la connexion';
 // --------- End: New or revised $lang ---- from version 2.30.2
 
@@ -409,7 +396,7 @@ $lang['UAM_Customize_messagesandmails'] = 'Personnaliser les messages et mails';
 $lang['UAM_Change'] = 'Changer l\'utilisateur confirmé de Groupe/Statut/Niveau de confidentialité';
 // --------- End: New or revised $lang ---- from version 2.41.0
 
-$lang['UAM_group "%s" updated'] = 'Pour un meilleur fonctionnement, le groupe %s a été automatiquement positionné comme groupe par défault.';
+$lang['UAM_group %s updated'] = 'Pour un meilleur fonctionnement, le groupe %s a été automatiquement positionné comme groupe par défault.';
 $lang['personal_content'] = 'Contenu';
 
 $lang['UAM_AddURL2Mail'] = 'Ajouter l\'URL de la galerie à la fin des emails (comme une signature)';
