@@ -479,5 +479,14 @@ Plugin Name: UserAdvManager
            Update it_IT, thanks to : Ericnet
            Update ru_RU, thanks to : Konve
            Update el_GR, thanks to : bas_alba
+
+-- 2.6.1 : Fix bug with UAM module in PWG_Stuff (thx to Gabeek for reporting)
+           Obsolete translation keys cleanup
+           Update el_GR, thanks to : bas_alba
+           Update pt_BR, thanks to : flaviove
+           Update lv_LV, thanks to : agrisans
+           Update it_IT, thanks to : Ericnet
+           Update de_DE, thanks to : Joergen
+           Update es_ES, thanks to : jpr928
 */
 ?>
