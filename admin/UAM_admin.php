@@ -219,7 +219,7 @@ WHERE id = '.$_POST['UAM_Validated_Group'].'
 
       array_push(
         $page['infos'],
-        sprintf(l10n('UAM_group "%s" updated'), $UAM_group['name'])
+        sprintf(l10n('UAM_group %s updated'), $UAM_group['name'])
       );
     }
 
@@ -786,9 +786,9 @@ FROM '.USERS_TABLE.'
 // +-----------------------------------------------------------------------+
 // *************************************************************************
   case 'userlist':
-  
+
   $conf_UAM = unserialize($conf['UserAdvManager']);
-  
+
   if (isset($conf_UAM['ADDLASTVISIT']) and $conf_UAM['ADDLASTVISIT']=='true')
   {
 // +-----------------------------------------------------------------------+
@@ -799,7 +799,7 @@ FROM '.USERS_TABLE.'
     {
       die('Hacking attempt!');
     }
-          
+
     include_once(PHPWG_ROOT_PATH.'admin/include/functions.php');
 
 // +-----------------------------------------------------------------------+
@@ -1369,8 +1369,7 @@ WHERE user_id = '.$local_user['id'].'
                                 ? '<BR>['.l10n('guest').']' : '')
                                 .($local_user['id'] == $conf['default_user_id']
                                 ? '<BR>['.l10n('default values').']' : ''),
-                                'STATUS' => l10n('user_status_'
-                                .$local_user['status']),
+          'STATUS'           => l10n('user_status_'.$local_user['status']),
           'EMAIL'            => $local_user['email'],
           'GROUPS'           => $groups_string,
           'REGISTRATION'     => $local_user['registration_date'],
