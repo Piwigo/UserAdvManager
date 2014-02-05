@@ -6,7 +6,7 @@ if (!isset($datas)) $datas = '';
 
 // set configuration
 // -----------------
-if (isset($_POST['submit']) and !is_adviser()) {
+if (isset($_POST['submit'])) {
   $datas = stripslashes($_POST['personal_content']);
 }
 
