@@ -18,7 +18,6 @@ $lang['UAM_Err_audit_email_forbidden'] = '<b>Questo account utente usa un domini
 $lang['UAM_Err_audit_advise'] = '<b>Dovete eseguire delle correzioni per rispettare le nuove impostazioni che avete attivato.<br> Usare un programma per la gestione del database per correggere gli account utente direttamente nella tabella ###_USERS';
 $lang['UAM_reg_err_login2'] = 'Il nome utente non deve contenere i caratteri seguenti: ';
 $lang['UAM_reg_err_login5'] = 'Il vostro provider di posta usa un dominio email vietato. I domini vietati sono i seguenti : ';
-$lang['UAM_empty_pwd'] = '[password vuota]';
 $lang['UAM_no_update_pwd'] = '[profilo aggiornato senza cambiamento della password]';
 $lang['UAM_No_validation_for_Guest'] = 'L\'account Guest non è soggetto a conferma';
 $lang['UAM_No_validation_for_default_user'] = 'L\'account predefinito non è soggetto a conferma';
@@ -84,7 +83,6 @@ $lang['UAM_Title1'] = 'Restrizioni per le registrazioni';
 $lang['UAM_Title2'] = 'Conferme delle registrazioni';
 $lang['UAM_Title3'] = 'Impostazioni utenti ghost';
 $lang['UAM_Title4'] = 'Suggerimenti e esempi d\'uso';
-$lang['UAM_No_Casse'] = 'Nome utente: distinzione tra maiusc/minusc';
 $lang['UAM_Username_Char'] = 'Nome utente: Esclusione di caratteri';
 $lang['UAM_Username_Char_true'] = 'Vieta i caratteri : <br>(usare una virgola per separare ogni carattere)<br><br>';
 $lang['UAM_Username_Char_false'] = 'Permetti tutto (predefinito)';
@@ -117,13 +115,6 @@ $lang['UAM_SubTitle4'] = 'Ghost Tracker';
 $lang['UAM_GT_Init'] = 'Inizializza Ghost Tracker';
 $lang['UAM_GhostTracker_Title'] = 'Gestione dei visitatori ghost';
 $lang['UAM_GhostTracker_Init'] = 'Se si attiva questa funzione per la prima volta o se viene riattivata dopo un lungo periodo durante il quale dei nuovi visitatori si sono iscritti, è necessario inizializzare o azzerare il Ghost Tracker. Questa azione è da effettuarsi solo dopo l\'attivazione o la riattivazione dell\'opzione; Cliccare dunque <u>una sola volta</u> sul pulsante di reset sottostante.';
-/* Mailing */
-$lang['UAM_Add of %s'] = 'Profilo creato per %s';
-$lang['UAM_Update of %s'] = 'Profilo %s aggiornato';
-/* Mailing */
-$lang['UAM_Ghost_reminder_of_%s'] = '%s, questa è un\'email di promemoria';
-$lang['UAM_Reminder_with_key_of_%s'] = '%s, la tua chiave di conferma è stata rinnovata';
-$lang['UAM_Reminder_without_key_of_%s'] = '%s, la tua chiave di conferma sta per scadere';
 /* Errors and Warnings */
 $lang['UAM_Err_GhostTracker_Settings'] = 'Questa pagina è disponibile solo se "Ghost Tracker" è attivo in "impostazioni di registrazione e altre opzioni"';
 $lang['UAM_Err_Userlist_Settings'] = 'Questa pagina è disponibile solo se "Monitora utenti registrati" è attivo in "impostazioni di registrazione e altre opzioni"';
@@ -168,9 +159,7 @@ $lang['UAM_Error_GTAutoMail_cannot_be_set_without_ConfirmMail'] = 'Errore di coe
 <br><br>
 Per garantire la coerenza, l\'opzione "Email automatica su cambiamento del gruppo / stato" è stata automaticamente riposizionata a "disattivato"
 <br><br>';
-$lang['UAM_Demotion of %s'] = 'Retrocessione a %s';
 $lang['UAM_AdminValidationMail_Text'] = 'Notifica di conferma manuale di registrazione';
-$lang['UAM_Validation of %s'] = 'Conferma di %s';
 // --------- End: New or revised $lang ---- from version 2.16.0
 
 
@@ -321,8 +310,6 @@ $lang['UAM_Default_ValidationTimeout_Txt'] = 'Siamo spiacenti, il tuo account è
 $lang['UAM_Error_Using_illegal_Kdays'] = 'L\'uso del tag [Kdays] è permesso solo se è attivata la scadenza per la conferma della registrazione. Controlla il testo in rosso per correggere il problema.';
 $lang['UAM_Expired_Level'] = '<b>Il livello di privacy</b> per la registrazione degli utenti  è scaduto<br>';
 $lang['UAM_MailExclusion_No'] = 'Esclusione domini mail non disponibile in quanto le email non sono obbligatorie per la registrazione';
-$lang['UAM_MiscOptions'] = 'Altre opzioni varie';
-$lang['UAM_NewFeature'] = 'Nuove funzionalità !';
 $lang['UAM_No_Backup_File'] = 'Nessun file di backup disponibile!';
 $lang['UAM_No_Valid_Level'] = 'Livello privacy per gli utenti che non hanno confermato la loro iscrizione <br>';
 $lang['UAM_RejectConnexion'] = 'Rifiuta connessione dell\'utente finchè non è confermata la registrazione';
@@ -368,8 +355,10 @@ Migliori saluti
 L\'amministratore della galleria [mygallery]-[myurl]';
 $lang['UAM_Default_GhstDemotion_Txt'] = 'Mi dispiace [username], il tuo account è stato deprecato a causa di un troppo lungo tempo passato dalla tua ultima visita a [mygallery]. Per favore, utilizzare il seguente link per confermare il tuo account:';
 $lang['UAM_Default_GhstDeletion_Txt'] = 'Mi dispiace [username], il tuo account è stato eliminato a causa di un troppo lungo tempo passato dalla tua ultima visita a [mygallery]. Si prega di registrarsi nuovamente.';
-$lang['UAM_group "%s" updated'] = 'Per la migliore perfrormance,il gruppo %s è stato automaticamente impostato quale gruppo di default';
+$lang['UAM_group %s updated'] = 'Per la migliore perfrormance,il gruppo %s è stato automaticamente impostato quale gruppo di default';
 $lang['personal_content'] = 'Contenuto';
 $lang['UAM_AddURL2Mail'] = 'Aggiungi l\'URL della galleria alla fine delle e-mail (come una firma)';
 $lang['UAM_Follow this link to access the gallery'] = 'Prego, segui questo link per accedere alla galleria';
+$lang['UAM_Select page number'] = 'Seleziona numero di pagina';
+$lang['UAM_Select page size'] = 'Seleziona dimensione della pagina';
 ?>

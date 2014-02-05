@@ -18,7 +18,6 @@ $lang['UAM_Err_audit_email_forbidden'] = '<b>Letiltott e-mail szolgáltatót tar
 $lang['UAM_Err_audit_advise'] = '<b>új szabályokat állítottál be, amik módosításokat kívánnak.<br>Használj egy adatbázis-kezelő programot és javítsd ki a felhasználói adatokat ebben a táblázatban: ###_USERS';
 $lang['UAM_reg_err_login2'] = 'A felhasználónév nem egyezhet meg a következőkkel: ';
 $lang['UAM_reg_err_login5'] = 'Az e-mail szolgáltatód itt le van tiltva. A letiltott szolgáltatók listája: ';
-$lang['UAM_empty_pwd'] = '[üres jelszó]';
 $lang['UAM_no_update_pwd'] = '[profil módosítás jelszó változtatás nélkül]';
 $lang['UAM_No_validation_for_Guest'] = 'A "Guest" ("Vendég") azonosítót nem kell érvényesíteni';
 $lang['UAM_No_validation_for_default_user'] = 'Az alapértelmezett azonosítót nem kell érvényesíteni';
@@ -84,7 +83,6 @@ $lang['UAM_Title1'] = 'A regisztráció korlátozásainak beállításai';
 $lang['UAM_Title2'] = 'A regisztráció megerősítésének és érvényesítésének beállításai';
 $lang['UAM_Title3'] = 'Regisztrált felhasználók követése és más paraméterek beállítása ';
 $lang['UAM_Title4'] = 'Felhasználási ötletek és példák ';
-$lang['UAM_No_Casse'] = 'Felhasználónév: kis-és nagybetűkre érzékeny';
 $lang['UAM_Username_Char'] = 'Felhasználónév: Kizárandó karakterek';
 $lang['UAM_Username_Char_true'] = ' Kizárandó karakterek:<br>(vesszővel elválasztva)<br><br>';
 $lang['UAM_Username_Char_false'] = ' Összes engedélyezve (alapértelmezett)';
@@ -117,14 +115,6 @@ $lang['UAM_SubTitle4'] = 'Szellem-Követő';
 $lang['UAM_GT_Init'] = 'Szellem-Követő inicializálása';
 $lang['UAM_GhostTracker_Title'] = 'Szellem-látogatók kezelése';
 $lang['UAM_GhostTracker_Init'] = 'Ha ezt a funkciót most először kapcsolod be, vagy hosszú idő után (ami alatt új felhasználók regisztráltak) újra aktiválod, akkor a Szellem-Követőt inicializálnod vagy visszaállítanod kell. Ezt csak az opció bekapcsolása vagy újraindítása esetén kell megtenni.Kérlek, klikkelj <u>egyszer</u> az alábbi visszaállítás gombra.';
-/* Mailing */
-$lang['UAM_Add of %s'] = 'Profil elkészítve %s számára';
-$lang['UAM_Update of %s'] = '%s profilja frissítve';
-
-/* Mailing */
-$lang['UAM_Ghost_reminder_of_%s'] = '%s, ez egy emlékeztető e-mail';
-$lang['UAM_Reminder_with_key_of_%s'] = '%s, az érvényesítő kulcsod frissítve';
-$lang['UAM_Reminder_without_key_of_%s'] = '%s, az érvényesítő kulcsod le fog járni';
 /* Errors and Warnings */
 $lang['UAM_Err_GhostTracker_Settings'] = 'Ez az oldal csak akkor él, ha a Szellem-Követő be van kapcsolva a "Feliratkozottak követése és egyéb opciók beállítása" alatt.';
 $lang['UAM_Err_Userlist_Settings'] = 'Ez az oldal csak akkor él, ha a "Regisztrált felhasználók követése" be van kapcsolva "Feliratkozottak követése és egyéb opciók beállítása" alatt.';
@@ -169,9 +159,7 @@ $lang['UAM_Error_GTAutoMail_cannot_be_set_without_ConfirmMail'] = 'Következetle
 <br><br>
 A következetesség biztosítása érdekében, az "E-mail automatikus küldése csoport / állapot változáskor" lehetőséget automatikusan "kikapcsoltra" állítottuk vissza.
 <br><br>';
-$lang['UAM_Demotion of %s'] = 'Lefokozás of %s';
 $lang['UAM_AdminValidationMail_Text'] = 'Értesítés manuális regisztráció-érvényesítésről';
-$lang['UAM_Validation of %s'] = '%s érvényesítése';
 // --------- End: New or revised $lang ---- from version 2.16.0
 
 

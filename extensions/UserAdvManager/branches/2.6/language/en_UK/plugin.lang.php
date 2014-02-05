@@ -18,7 +18,6 @@ $lang['UAM_Err_audit_email_forbidden'] = '<b>This account uses a forbidden email
 $lang['UAM_Err_audit_advise'] = '<b>you have to perform corrections to comply with new rules that you have activated.<br/>Use a database management utility to correct user accounts directly in the table ###_USERS';
 $lang['UAM_reg_err_login2'] = 'Username does not have to match the following characters: ';
 $lang['UAM_reg_err_login5'] = 'Your email provider is banned for registration. Banned email providers are: ';
-$lang['UAM_empty_pwd'] = '[empty password]';
 $lang['UAM_no_update_pwd'] = '[profile updated without password changed]';
 $lang['UAM_No_validation_for_Guest'] = 'The "Guest" account is not subject to confirmation';
 $lang['UAM_No_validation_for_default_user'] = 'The default account is not subject to confirmation';
@@ -78,7 +77,6 @@ $lang['UAM_Title_Tab'] = 'UserAdvManager - Version : ';
 $lang['UAM_SubTitle1'] = 'Plugin configuration';
 $lang['UAM_Tab_Global'] = 'Configuration';
 $lang['UAM_Title4'] = 'Tips and examples of use';
-$lang['UAM_No_Casse'] = 'Usernames: Case sensitivity';
 $lang['UAM_Username_Char'] = 'Usernames: Exclusion of characters';
 $lang['UAM_Username_Char_true'] = ' Banning characters:<br/>(Use a comma to separate each character)<br/><br/>';
 $lang['UAM_Username_Char_false'] = ' Permit all (default)';
@@ -103,12 +101,6 @@ $lang['UAM_SubTitle4'] = 'Ghost Tracker';
 $lang['UAM_GT_Init'] = 'Initializing Ghost Tracker';
 $lang['UAM_GhostTracker_Title'] = 'Ghost visitors management';
 $lang['UAM_GhostTracker_Init'] = 'If you enable this feature for the first time or you have reactivated after a long period off during which new visitors are registered, you must initialize or reset the Ghost Tracker. This action is done only after activation or reactivation of the option. Please click <u>once</u> the reset button below.';
-/* Mailing */
-$lang['UAM_Add of %s'] = 'Profile created for %s';
-$lang['UAM_Update of %s'] = 'Profile %s updated';
-$lang['UAM_Ghost_reminder_of_%s'] = '%s, this is a reminder email';
-$lang['UAM_Reminder_with_key_of_%s'] = '%s, your confirmation key has been renewed';
-$lang['UAM_Reminder_without_key_of_%s'] = '%s, your confirmation key will expire';
 /* Errors and Warnings */
 $lang['UAM_Err_GhostTracker_Settings'] = 'This page is available only if "Ghost Tracker" is active in "Setting the registrations followed and other options".';
 $lang['UAM_Err_Userlist_Settings'] = 'This page is available only if "Monitoring registered users" is active in the "Setting the registrations followed and other options".';
@@ -153,9 +145,7 @@ $lang['UAM_Error_GTAutoMail_cannot_be_set_without_ConfirmMail'] = 'Consistency e
 <br/><br/>
 To ensure consistency, the option "Automatically sending an email when changing group / status" was automatically repositioned "disabled".
 <br/><br/>';
-$lang['UAM_Demotion of %s'] = 'Demotion of %s';
 $lang['UAM_AdminValidationMail_Text'] = 'Notification of manual confirmation of registration';
-$lang['UAM_Validation of %s'] = 'Confirmation of %s';
 // --------- End: New or revised $lang ---- from version 2.16.0
 
 
@@ -197,7 +187,6 @@ $lang['UAM_Confirm_Status'] = 'Statutes <b style="color: red;">Warning : Do not 
 $lang['UAM_Confirm_Level'] = 'Privacy level<br/>(leave ------- to keep the Piwigo\'s default)';
 $lang['UAM_GTAutoGp'] = 'Automatic change of group / status / privacy level';
 $lang['UAM_Expired_Level'] = '<b>Privacy level</b> for user\'s registration has expired<br/>';
-$lang['UAM_MiscOptions'] = 'Other miscellaneous options';
 $lang['UAM_Title3'] = 'Ghost users management';
 $lang['UAM_Title5'] = 'Miscellaneous options';
 $lang['UAM_Error_Using_illegal_Kdays'] = 'Using the [Kdays] tag is allowed only if the deadline for registration confirmation limited is active. Refer to the text field in red to correct the problem.';
@@ -240,7 +229,6 @@ $lang['UAM_RedirToProfile'] = 'Redirect to Customization page';
 $lang['UAM_Title1'] = 'Restrictions for registrations';
 $lang['UAM_Title2'] = 'Confirmations of registration';
 $lang['UAM_GTAutoMail'] = 'Automatically sending an email when changing group / status / privacy level';
-$lang['UAM_NewFeature'] = 'New feature !';
 $lang['UAM_RejectConnexion_Custom_Txt'] = 'Customize rejection text';
 // --------- End: New or revised $lang ---- from version 2.30.2
 
@@ -406,7 +394,7 @@ $lang['UAM_Customize_messagesandmails'] = 'Customize the messages and mails';
 $lang['UAM_Change'] = 'Change the Group/Status/Privacy Level of the users who have been confirmed';
 // --------- End: New or revised $lang ---- from version 2.41.0
 
-$lang['UAM_group "%s" updated'] = 'For best performance, the group %s was automatically set as the default group.';
+$lang['UAM_group %s updated'] = 'For best performance, the group %s was automatically set as the default group.';
 $lang['personal_content'] = 'Content';
 
 $lang['UAM_AddURL2Mail'] = 'Add the URL of the gallery at the end of emails (like a signature)';

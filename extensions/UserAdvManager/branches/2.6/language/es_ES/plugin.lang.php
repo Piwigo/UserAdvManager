@@ -18,7 +18,6 @@ $lang['UAM_Err_audit_email_forbidden'] = '<b>Esta cuenta utiliza un proveedor de
 $lang['UAM_Err_audit_advise'] = '<b>Usted tiene que realizar correcciones para cumplir con las nuevas normas que ha activado.<br>Use una herramienta de gestión de base de datos para corregir las cuentas de usuario directamente en la tabla ###_USERS';
 $lang['UAM_reg_err_login2'] = 'El nombre de usuario no puede coincidir con los siguientes caracteres: ';
 $lang['UAM_reg_err_login5'] = 'Su proveedor de correo electrónico está prohibido para el registro. Proveedores de correo electrónico en veda son: ';
-$lang['UAM_empty_pwd'] = '[contraseña vacía]';
 $lang['UAM_no_update_pwd'] = '[Perfil actualizado sin cambiar contraseña]';
 $lang['UAM_No_validation_for_Guest'] = 'La cuenta "Invitado"  no está sujeta a la validación';
 $lang['UAM_No_validation_for_default_user'] = 'La cuenta predeterminada no está sujeta a la validación';
@@ -85,7 +84,6 @@ $lang['UAM_Title1'] = 'Configuración de las restricciones de registro';
 $lang['UAM_Title2'] = 'Configuración de las confirmaciones y validaciones de registro';
 $lang['UAM_Title3'] = 'Configuración de los registros seguidos y otras opciones';
 $lang['UAM_Title4'] = 'Consejos y ejemplos de uso';
-$lang['UAM_No_Casse'] = 'Nombres de usuarios: mayúsculas y minúsculas';
 $lang['UAM_Username_Char'] = 'Nombres de usuarios: Excluyendo los caracteres';
 $lang['UAM_Username_Char_true'] = ' Prohibición de caracteres:<br>(Utilice una coma para separar cada caracteres)<br><br>';
 $lang['UAM_Username_Char_false'] = ' Permiso de todos (por defecto)';
@@ -118,14 +116,6 @@ $lang['UAM_SubTitle4'] = 'Ghost Tracker';
 $lang['UAM_GT_Init'] = 'Inicialización de Ghost Tracker';
 $lang['UAM_GhostTracker_Title'] = 'Gestión de los espíritu visitantes';
 $lang['UAM_GhostTracker_Init'] = 'Si habilita esta función por primera vez o ha reactivado después de un largo período durante el cual los visitantes se han registrado de nuevo, usted debe inicializar o restablecer el Rastreador de Ghost. Esta acción se realiza sólo después de la activación o reactivación de la opción. Por favor, haga clic <u>una vez</u>en el botón de reset de abajo.';
-/* Mailing */
-$lang['UAM_Add of %s'] = 'Perfil creado para %s';
-$lang['UAM_Update of %s'] = '%s Perfil actualizado';
-/* Email confirmation page */
-/* Mailing */
-$lang['UAM_Ghost_reminder_of_%s'] = '%s, este es un recordatorio por correo electrónico';
-$lang['UAM_Reminder_with_key_of_%s'] = '%s, su clave de validación se ha renovado';
-$lang['UAM_Reminder_without_key_of_%s'] = '%s, su clave de validación expirará';
 /* Errors and Warnings */
 $lang['UAM_Err_GhostTracker_Settings'] = 'Esta página está disponible sólo si "Ghost Tracker" está activo en "Configuración de los registros seguido y otras opciones".';
 $lang['UAM_Err_Userlist_Settings'] = 'Esta página está disponible sólo si "Seguimiento de los usuarios registrados" está activo en la "Configuración de los registros seguidos y otras opciones".';
@@ -206,9 +196,7 @@ $lang['UAM_GTAutoDel'] = 'Borrado automático de las cuentas';
 $lang['UAM_Error_GTAutoMail_cannot_be_set_without_ConfirmMail'] = 'Error de coherencia en la configuración elegida:<br><br>
 "Configuración de los registros seguidos y otras opciones > Gestión de Espíritu visitantes (Tracker Ghost) > Gestión automática de los Espíritus usuarios > Automáticamente el envío de un correo electrónico cuando se cambia de grupo / estado" no se puede activar si "Configuración de las confirmaciones y validaciones de registro > Confirmación de registro - La validación por el usuario" no está habilitada en un principio.<br><br>
 Para garantizar la coherencia, la opción "Automáticamente el envío de un correo electrónico cuando se cambia de grupo / estado" fue colocado de nuevo de forma automática "Desactivar".<br><br>';
-$lang['UAM_Demotion of %s'] = 'Degradación de %s';
 $lang['UAM_AdminValidationMail_Text'] = 'Notificación de la validación manual de registro';
-$lang['UAM_Validation of %s'] = 'Validación de %s';
 // --------- End: New or revised $lang ---- from version 2.16.0
 
 $lang['UAM_Disable'] = ' Desactivar (por defecto)';
@@ -302,9 +290,7 @@ $lang['UAM_No_Usermanager'] = 'Ningún visitante sin confirmar en lista por el m
 $lang['UAM_No_Userlist'] = 'Ningún visitante en lista por el momento';
 $lang['UAM_No_Ghosts'] = 'Ningún visitante por ahora';
 $lang['UAM_No_Backup_File'] = 'Copia de seguridad de archivos no disponibles!';
-$lang['UAM_NewFeature'] = 'Nueva característica!';
 $lang['UAM_MailInfo_Subject'] = 'Personalice la información email';
-$lang['UAM_MiscOptions'] = 'Otras varias opciones';
 $lang['UAM_MailExclusion_No'] = 'Dominios de exclusión E-mail - No disponible porque las direcciones de correos electrónicos no son obligatorias para las inscripciones!';
 $lang['UAM_GTReminder_Subject'] = 'Personalización manual del Rastreador de Ghost de recordatorio de asunto del correo electrónico';
 $lang['UAM_GTAutomail_Subject'] = 'Personalizar el Rastreador automático Ghost de degradación de asunto de correo electrónico.';
@@ -361,8 +347,10 @@ $lang['UAM_Manual_validation_needed_for %s'] = 'El usuario %s se ha registrado y
 $lang['UAM_Subject admin validation for %s'] = 'El registro de %s espera para la validación';
 $lang['UAM_Change'] = 'Change the Group/Status/Privacy Level of the users who have been confirmed';
 $lang['UAM_Customize_messagesandmails'] = 'Personalizar los mensajes y correos';
-$lang['UAM_group "%s" updated'] = 'Para un mejor rendimiento, el grupo %s se configura automáticamente como el grupo predeterminado.';
+$lang['UAM_group %s updated'] = 'Para un mejor rendimiento, el grupo %s se configura automáticamente como el grupo predeterminado.';
 $lang['personal_content'] = 'Contenido';
 $lang['UAM_AddURL2Mail'] = 'Añade la dirección de la galería al final del email (como una firma)';
 $lang['UAM_Follow this link to access the gallery'] = 'Por favor, sigue este enlace para acceder a la galería';
+$lang['UAM_Select page number'] = 'Seleccionar el numero de pagina';
+$lang['UAM_Select page size'] = 'Seleccionar el tamaño de la pagina';
 ?>
