@@ -301,4 +301,6 @@ $lang['UAM_group %s updated'] = 'For at opnå den bedste ydeevne, er gruppen %s 
 $lang['personal_content'] = 'Indhold';
 $lang['UAM_AddURL2Mail'] = 'Tilføj galleriets URL i slutningen af mails (som en signatur)';
 $lang['UAM_Follow this link to access the gallery'] = 'Følg dette link for at tilgå galleriet';
+$lang['UAM_Select page number'] = 'Vælg sidenummer';
+$lang['UAM_Select page size'] = 'Vælg sidestørrelse';
 ?>
