@@ -157,4 +157,5 @@ $lang['UAM_ConfirmMail_Subject'] = 'Upraviť hlavičku emailu o potvrdení regis
 $lang['UAM_ConfirmMail_Text'] = 'Úprava potvrdzovacieho emailu:';
 $lang['UAM_Confirm_Group'] = 'Skupiny<br/>(ponechajte ------- pre neovplyvnenie skupiny)';
 $lang['UAM_ConfirmMail_TimeOut_true'] = 'Aktivovať. Počet dní do vypršania:';
+$lang['UAM_Error_Using_illegal_Kdays'] = 'Použitie tagu [Kdays] je povolené, iba ak je aktívny obmedzený konečný termín pre potvrdenie registrácie. Pre opravu problému konzultujte textové pole v červenom.';
 ?>
