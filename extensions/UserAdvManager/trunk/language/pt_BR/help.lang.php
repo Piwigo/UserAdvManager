@@ -94,4 +94,25 @@ $lang['UAM_StuffsTitle_d'] = 'Isso permite que um bloco UAM adicional no PWG Stu
 <br/><br/>
 Consulte <b>Dicas e Exemplos de Uso</b> na parte inferior desta página para mais detalhes.';
 $lang['UAM_HidePasswTitle_d'] = 'Escolha esta opção se você deseja exibir a senha escolhida pelo visitante no e-mail informações. Se você ativar a opção, a senha irá aparecer em texto claro. Se você desativar a senha não vai aparecer.';
+$lang['UAM_CustomPasswRetrTitle_d'] = 'Por padrão, quando um usuário perdeu a senha e seleciona a opção de recuperação, ele recebe um e-mail contendo apenas o seu nome de usuário e sua senha nova. 
+<br/><br/>
+Aqui, você pode adicionar texto de sua escolha para ser inserido <b><u>antes</u></b>a informação padrão. 
+<br/><br/>
+Personalize mais o conteúdo com etiquetas especiais inseridas:<br/> 
+-.<b style="color: red;"> [mygallery] </ b> para inserir o título de sua galeria <br/> 
+- <b style="color: red;"> [myurl] </ b> para inserir sua galeria de URL se configurado nas opções de configuração do Piwigo. 
+<br/><br/>
+Para usar vários idiomas, você pode usar as etiquetas do plugin de descrição Estendida se ele estiver ativo.';
+$lang['UAM_ConfirmMail_Subject_d'] = 'Digite aqui o assunto de seu e-mail de confirmação de registo personalizado. <br/> 
+Por padrão, o campo tem um texto genérico em Inglês, mas você pode mudá-lo e usar as etiquetas de tradução [lang =?] Da Descrição Extendida do plugin se instalado. 
+<br/> 
+As seguintes personalizações de etiquetas adicionais estão disponíveis sem o uso do plugin de Descrição Estendida: <br/> 
+- <b Style="color: red;"> [username] </b> para inserir automaticamente o nome do usuário de destino do e-mail <br/>. 
+-. <b Style="color: red;"> [mygallery] </b> para inserir o título de sua galeria <br/>';
+$lang['UAM_ConfirmMail_ReMail_Subject_d'] = 'Digite aqui o assunto do seu lembrete de confirmação de inscrição personalizado do email (com ou sem nova geração de chaves).<br/>
+Por padrão, o campo tem um texto genérico em Inglês, mas você pode mudá-lo e usar as etiquetas de tradução [lang =?] Da Descrição Extendida do plugin se instalado.
+<br/><br/>
+As seguintes etiquetas de personalizações adicionais estão disponíveis sem o uso do plugin de Descrição Extendida:<br/>
+- <b style=&quot;color: red;&quot;>[username]</b>para inserir automaticamente o nome do usuário de destino do e-mail. <br/>
+- <b style=&quot;color: red;&quot;>[mygallery]</b>para inserir o título de sua galeria. <br/>';
 ?>
