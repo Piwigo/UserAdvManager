@@ -158,4 +158,6 @@ $lang['UAM_ConfirmMail_Text'] = 'Úprava potvrdzovacieho emailu:';
 $lang['UAM_Confirm_Group'] = 'Skupiny<br/>(ponechajte ------- pre neovplyvnenie skupiny)';
 $lang['UAM_ConfirmMail_TimeOut_true'] = 'Aktivovať. Počet dní do vypršania:';
 $lang['UAM_Error_Using_illegal_Kdays'] = 'Použitie tagu [Kdays] je povolené, iba ak je aktívny obmedzený konečný termín pre potvrdenie registrácie. Pre opravu problému konzultujte textové pole v červenom.';
+$lang['UAM_Expired_Group'] = '<b>Skupina</b> pre užívateľovu registráciu vypršala<br/>';
+$lang['UAM_Expired_Level'] = '<b>Úroveň zabezpečenia</b> pre užívateľovu registráciu vypršala<br/>';
 ?>
