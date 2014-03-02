@@ -1,0 +1,201 @@
+/* ********************* */
+/* UAM core instructions */
+/* ********************* */
+li {
+  margin-bottom: 15px;
+}
+
+label {
+    cursor: pointer;
+    display: list-item;
+    list-style: none outside none;
+}
+.uam_leftmargin
+{
+  margin-left: 2em
+}
+
+#uam_notice
+{
+  text-align:center;
+  text-decoration: underline;
+  font-weight:bold;
+}
+
+div.uam_hide
+{
+  display: none;
+}
+
+div.uam_new
+{
+  background-color: #8EBF44;
+}
+
+p.new_in_version
+{
+  text-align: center;
+  text-transform: capitalize;
+  text-decoration: underline;
+  font-weight: bold;
+  color: yellow;
+}
+
+table.table2 {
+	border: 1px solid #111;
+	margin: 1em auto;
+	padding: 0;
+  width: 97%;
+}
+
+textarea.uam_textfields
+{
+  width: 70%;
+}
+
+
+
+/* **************************** */
+/* jQuery cluetip instructions */
+/* **************************** */
+
+label.cluetip
+{
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Bloc expand-collapse instructions */
+.instructionBlock
+{
+  border: 1px solid #666;
+  margin: 5px;
+  overflow: hidden;
+}
+
+.instructionBlockHeaderCollapsed, .instructionBlockHeaderExpanded
+{
+  background-color: #111;
+  background-position: 15px center;
+  background-repeat: no-repeat;
+  color: #ff3363;
+  cursor: pointer;
+  font-size: 110%;
+  overflow: hidden;
+  padding: 8px 41px;
+  text-align: left;
+}
+
+.instructionBlockHeaderCollapsed span, .instructionBlockHeaderExpanded span
+{
+  border-bottom: none;
+}
+
+.instructionBlockContent
+{
+  padding: 0 15px 15px;
+}
+
+
+
+/* ******************************* */
+/* jQuery tablesorter instructions */
+/* ******************************* */
+/* ******************************* */
+/* jQuery tablesorter instructions */
+/* ******************************* */
+
+/*table.tablesorter tbody tr.normal-row td {
+  background: #111111;  
+  color: #666666;
+}
+table.tablesorter tbody tr.alt-row td {
+  background: #222222;
+  color: #666666;
+}*/
+
+tr.tablesorter-headerRow, throw
+{
+cursor:pointer;
+text-align:center;
+}
+
+th.tablesorter-header
+{
+background-image:url("./icon/bg.png");
+background-position:right center;
+background-repeat:no-repeat;
+cursor:pointer;
+}
+
+th.tablesorter-headerDesc
+{
+background-image:url("./icon/desc.png");
+}
+
+th.tablesorter-headerAsc
+{
+background-image:url("./icon/asc.png");
+}
+
+th.sorter-false {
+	background-image: none;
+}
+
+
+
+/* ************************************* */
+/* jQuery tablesorter pager instructions */
+/* ************************************* */
+
+.pager{
+  text-align:center;
+}
+
+/* pager wrapper, div */
+.tablesorter-pager {
+  padding: 5px;
+}
+/* pager wrapper, in thead/tfoot */
+td.tablesorter-pager {
+  background-color: #e6eeee;
+  margin: 0; /* needed for bootstrap .pager gets a 18px bottom margin */
+}
+/* pager navigation arrows */
+.tablesorter-pager img {
+  vertical-align: middle;
+  margin-right: 2px;
+  cursor: pointer;
+}
+
+#pager img {
+  margin-bottom: -3px;
+}
+
+/* pager output text */
+.tablesorter-pager .pagedisplay {
+  padding: 0 5px 0 5px;
+  width: 50px;
+  text-align: center;
+}
+
+
+/* pager element reset (needed for bootstrap) */
+.tablesorter-pager select {
+  margin: 0;
+  padding: 0;
+}
+
+/*** css used when "updateArrows" option is true ***/
+/* the pager itself gets a disabled class when the number of rows is less than the size */
+.tablesorter-pager.disabled {
+  display: none;
+}
+/* hide or fade out pager arrows when the first or last row is visible */
+.tablesorter-pager .disabled {
+  /* visibility: hidden */
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  cursor: default;
+}
