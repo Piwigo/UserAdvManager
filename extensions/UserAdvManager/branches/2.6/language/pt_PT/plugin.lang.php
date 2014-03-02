@@ -304,4 +304,6 @@ $lang['UAM_RejectConnexion'] = 'Rejeitar ligação a utilizadores até confirma�
 $lang['UAM_Subject admin validation for %s'] = 'Registo de %s a aguardar confirmação';
 $lang['UAM_Validated_Group'] = 'Grupo para utilizadores que confirmaram o seu registo<br>';
 $lang['UAM_Follow this link to access the gallery'] = 'Por favor, siga este link para acessar a galeria';
+$lang['UAM_Select page number'] = 'Selecionar o número da página';
+$lang['UAM_Select page size'] = 'Selecionar o tamanho da página';
 ?>
