@@ -488,5 +488,12 @@ Plugin Name: UserAdvManager
            Update it_IT, thanks to : Ericnet
            Update de_DE, thanks to : Joergen
            Update es_ES, thanks to : jpr928
+
+-- 2.6.2 : Update da_DK, thanks to : Kaare
+           Update ru_RU, thanks to : Konve
+           Update sk_SK, thanks to : JoeKundlak
+           Update pt_PT, thanks to : ANO
+           Update pt_BR, thanks to : flaviove
+
 */
 ?>
