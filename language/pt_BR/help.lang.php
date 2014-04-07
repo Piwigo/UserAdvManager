@@ -156,3 +156,19 @@ Personalize mais o conteúdo com etiquetas especiais inseridas: <br/>
 <b style=&quot;color: red;&quot;>[username]</b> não está disponível aqui, porque o usuário foi excluído. 
 <<br/><br/>
 Texto feito sob encomenda para a página de redirecionamento podem ser inseridos neste campo, que é compatível com o editor FCK e, para multi-idiomas, você pode usar as etiquetas [lang] do plugin Descrição Extendida se estiver ativo.';
+$lang['UAM_GTAutomail_Text_d'] = 'Entre com o texto personalizado que também explica as razões  para o rebaixamento, que acompanham o link de confirmação. O texto personalizado não é obrigatório, mas é fortemente recomendado. Na verdade, os visitantes não vão apreciar  receber um e-mail contendo apenas um único link, sem maiores explicações. ;-)
+<br/><br/>
+Mais personalizações de conteúdo com iserção de etiquetas especiais:<br/>
+- <b style=&quot;color: red;&quot;>[username]</b> para automaticamente inserir o nome do usuário de destino do email.<br/>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> para inserir o título do seu álbum<br/>
+- <b style=&quot;color: red;&quot;>[myurl]</b> para inserir a URL do álbum se configurado nas opções do Piwigo.
+<br/><br/>
+Para usar múltiplos idiomas você pode usar as etiquetas do plugin de descrição extendido se ele estiver ativado.
+';
+$lang['UAM_GTAutomail_Subject_d'] = 'Entre aqui com seu assunto de e-mail para o rastreador automatizado.</br>
+
+Por padrão, o campo tem um texto genérico em Inglês que você pode mudar e usar uma etiqueta traduzida [lang = ?] do plugin de descrição extendida se estiver instalado.
+<br/><br/>
+As seguintes etiquetas personalizadas adicionais estão disponíveis sem uso do plugin de descrição extendida:</br>
+- <b style=&quot;color: red;&quot;>[username]</b> para automticamente inserir o  nome ao destino de usuário do email<br/>
+- <b style=&quot;color: red;&quot;>[mygallery]</b>para inserir o título do seu álbum<br/>.';
