@@ -124,4 +124,35 @@ $lang['UAM_DumpTitle_d'] = 'Isso permite que você salve toda a configuração d
 A recuperação a partir desta interface está disponível apenas para o arquivo de backup local ( .. / Plugins / UserAdvManager / include / backup / UAM_dbbackup.sql ) . Arquivo de backup baixado não pode ser restaurado por este caminho. Para fazer isso, por favor, use a ferramenta de gerenciamento de banco de dados dedicado (como o phpMyAdmin para banco de dados MySql ) .
 <br/><br/>
 <b style="color: red;"> Atenção : Após a restauração , é necessário recarregar a página de administração do plugin para ver as configurações restauradas </b>';
-?>
+$lang['UAM_userlistTitle_d'] = 'Esta página é para dar informações ao administrador. Ela exibe uma lista de todos os usuários registrados na galeria mostrando a data e o número de dias desde sua última visita. A lista é ordenada em ordem crescente de número de dias.
+<br/><br/>
+<b><u> Somente quando o Rastreador de Fantasmas estiver ativo </u></b> , o número de dias sem uma visita aparece como o seguinte código de cores , de acordo com o máximo definido nas opções do Rastreador de Fantasmas :
+<br/>
+- <b style=&quot;color: lime;&quot;>Verde</b> : Quando o usuário visitou a galeria <b style=&quot;color: lime;&quot;><u>menor que 50%</u></b> do montante máximo referido no Rastreador de Fantasmas. <br/>
+- <b style=&quot;color: orange;&quot;>Laranja</b> : Quando o usuário visitou a galeria <b style=&quot;color: orange;&quot;><u> entre 50% e 99% </u></b> do montante máximo referido no Rastreador de Fantasmas. <br/>
+- <b style=&quot;color: red;&quot;>Vermelho</b> : Quando o usuário visitou a galeria <b style=&quot;color: red;&quot;><u>por mais de 100%</u></b> do montante máximo referido no Rastreador de Fantasmas. <b><u> Neste caso , o usuário também deve aparecer na tabela de Rastreador de Fantasmas. </u> </b > <br/>
+<br/>
+Exemplo :
+<br/>
+O período máximo de Seguidor de Fantasmas é configurado para 100 dias.
+<br/>
+Um usuário aparecerá em verde, se ele visitou a galeria em menos de 50 dias , em laranja , se sua última visita ocorreu entre 50 e 99 dias e vermelho  100 dias ou mais.
+<br/>
+<b> NOTA </ b>: A lista não exibe quem não confirmou sua inscrição (se a opção de confirmar o registro é ativado). Esses usuários são então geridos de uma forma especial na guia "confirmações de rastreamento".
+<br/>
+Função <b> tabela de classificação </b>: Você pode classificar os dados exibidos , clicando nos cabeçalhos das colunas. Segure a tecla SHIFT para classificar até 4 colunas simultâneas .';
+$lang['UAM_GTAutoTitle_d'] = 'Esta opção permite aplicar regras para a gestão automatizada de usuários fantasmas. 
+<br/><br/>  Princípio Básico: Um usuário que atinge o máximo de tempo entre as visitas <b> <u> e </u> </b> já foi notificado por e-mail é considerado como expirado. Em seguida, você pode aplicar as regras de processamento automatizadas tais como a exclusão automática de contas expirados ou rebaixamento, restringindo o acesso à galeria (mudar automaticamente para um grupo e/ou estado restrito). 
+<br/> O desencadeamento destes automação é alcançado quando conectar os usuários (qualquer usuário!) para a galeria.';
+$lang['UAM_GTAutoMailTitle_d'] = 'Quando uma conta está expirada (mudança de nível de grupo / status / privacidade rebaixando o visitante), um email pode ser enviado para esclarecer as razões para esta mudança e os meios para recuperar o acesso inicial para a galeria. 
+<br/> Para fazer isso, um link para reconfirmação do registo é anexado ao e-mail (geração automática de uma nova chave de confirmação).<b style=&quot;color: red;&quot;> Se o usuário já tenha sido notificado, sua conta é automaticamente destruída. </b> 
+<br/> <br/>
+<b style=&quot;color: red;&quot;> Aviso: O uso desta função está intimamente associada com a confirmação da inscrição por parte do utilizador (confirmação por e-mail) e não pode ser ativado sem essa opção </b>.';
+$lang['UAM_GTAutoDelTitle_d'] = 'Isso só é válido quando o usuário cuja conta expirou-se aciona o mecanismo de exclusão (raro, mas possível). ele, em seguida, é desligado da galeria e redirecionado para uma página que mostra a exclusão de sua conta e, possivelmente, as razões para essa exclusão. 
+<br/><br/> 
+Personalize mais o conteúdo com etiquetas especiais inseridas: <br/> 
+- <b style=&quot;color: red;&quot;>[mygallery]</b> para inserir o título de sua galeria<br/> 
+- <b style=&quot;color: red;&quot;>[myurl]</b> para inserir a URL de sua galeria se configurado nas opções de configuração do Piwigo <br/> 
+<b style=&quot;color: red;&quot;>[username]</b> não está disponível aqui, porque o usuário foi excluído. 
+<<br/><br/>
+Texto feito sob encomenda para a página de redirecionamento podem ser inseridos neste campo, que é compatível com o editor FCK e, para multi-idiomas, você pode usar as etiquetas [lang] do plugin Descrição Extendida se estiver ativo.';
