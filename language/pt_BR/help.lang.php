@@ -206,3 +206,13 @@ Personalize mais o conteúdo inserindo etiquetas especiais: <br/>
 - <b style=&quot;color: red;&quot;>[Kdays]</b> para inserir o número limite de dias para confirmar a inscrição ( " Prazo para confirmação de inscrição limitada, tem que ser ativado).
 <br/><br/>
 Para usar vários idiomas, você pode usar as etiquetas do plugin Descrição Extendida  se ele estiver ativo.';
+$lang['UAM_mailexcTitle_d'] = 'Por padrão, Piwigo aceita todos os endereços de e-mail no formato xxx@yyy.zz. Habilitar esta opção permite que você exclua determinados domínios no formato:.. @ [Domain_name] [Domain_Extension] <br/> 
+Exemplos: <br/> 
+@ hotmail.com -> excluindo endereços *@hotmail.com<br/> 
+@ hotmail ->excluindo todos os endereços *@hotmail* <br/> 
+<b style=&quot;color: red;&quot;> Aviso - Este recurso só funciona se e-mails são obrigatórios para inscrições! Por favor, veja as opções de configuração do Piwigo. </b>';
+$lang['UAM_USRAutoTitle_d'] = 'Manipulação automática de visitantes não confirmadas é acionado cada vez que você se conectar à galeria e funciona da seguinte forma: 
+<br/><br/>
+- A exclusão automática de contas não confirmadas no tempo permitido sem o envio de lembrete e-mail automático -> "Prazo para confirmação de inscrição limitada" <b> <u> habilitado </u></b> e "Lembrar os usuários não confirmados" <b><u> desativado </u></b>. 
+<br/><br/>
+- Enviando automaticamente uma mensagem de lembrete com uma nova geração de chave de confirmação e exclusão automática de contas não confirmadas no tempo após o envio do aviso -> "Prazo para confirmação de inscrição limitada" <b><u> habilitado </u></b> e "Lembrar os usuários não confirmados" <b><u> habilitado </u></b>.';
