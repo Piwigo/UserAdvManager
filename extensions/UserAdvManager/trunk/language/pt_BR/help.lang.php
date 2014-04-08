@@ -172,3 +172,37 @@ Por padrão, o campo tem um texto genérico em Inglês que você pode mudar e us
 As seguintes etiquetas personalizadas adicionais estão disponíveis sem uso do plugin de descrição extendida:</br>
 - <b style=&quot;color: red;&quot;>[username]</b> para automticamente inserir o  nome ao destino de usuário do email<br/>
 - <b style=&quot;color: red;&quot;>[mygallery]</b>para inserir o título do seu álbum<br/>.';
+$lang['UAM_MailInfo_Subject_d'] = 'Digite aqui informações do assunto de seu e-mail personalizado. <br/> 
+Por padrão, o campo tem um texto genérico em Inglês, mas você pode mudá-lo e usar as tags de tradução [lang =?] Do plugin  Descrição Extendida se instalado. 
+<br/><br/>
+As seguintes adicionais personalizações  estão disponíveis sem o uso do plugin Descrição Extendida: <br/> 
+- <b style=&quot;color: red;&quot;>[username]</b> para inserir automaticamente o nome do usuário de destino do e-mail. <br/> 
+- <b style=&quot;color: red;&quot;>[mygallery]</b> para inserir o título de sua galeria. <br/>';
+$lang['UAM_confirmgrpTitle_d'] = '<b style=&quot;color: red;&quot;> AVISO: O uso de grupos na confirmação requer que você tenha criado pelo menos um grupo de usuários e tenha definido &quot;por padrão&quot; na gestão de grupos de usuários do Piwigo. </b><br/><br/>
+Os grupos são validados para uso em conjunto com a &quot;Confirmação de matrícula&quot;';
+$lang['UAM_confirmlevelTitle_d'] = '<b style=&quot;color: red;&quot;> AVISO: O uso de nível de privacidade requer que você tenha utilizado com as suas imagens. Por favor, consulte a documentação do Piwigo para mais detalhes.</b><br/><br/>
+O nível de privacidade é validado para uso em conjunto com a "Confirmação de registro"';
+$lang['UAM_carexcTitle_d'] = 'Pode ser interessante proibir determinados caracteres em nomes de usuário (exemplo: recusar nomes de login contendo @). Esta opção permite excluir caracteres ou seqüência de caracteres, eventos. <br/> 
+NB: A opção também pode excluir palavras inteiras. 
+<br/><br/> 
+<b style=&quot;color: red;&quot;> Aviso: Esta opção não tem efeito sobre os nomes de usuário criados antes de sua ativação </b>.';
+$lang['UAM_adminconfmailTitle_d'] = 'Você pode desativar essa confirmação apenas para contas de usuário criadas pelo administrador através da interface de gerenciamento de usuários do Piwigo. <br/><br/>
+Ao ativar essa opção, um e-mail de confirmação de inscrição será enviado para cada usuário criado pelo admin. <br/><br/> 
+Ao desativar esta opção (padrão), apenas as informações de e-mail serão enviadas (se "e-mail de Informações para o usuário" estiver ativada). Além disso, o usuário criado será <b> considerado validado </b> por padrão.';
+$lang['UAM_GTReminder_Subject_d'] = 'Digite aqui manualmente o assunto do lembrete personalizado do email  Rastreador de Fantasmas. <br/> 
+Por padrão, o campo tem um texto genérico em Inglês, mas você pode mudá-lo e usar as tags de tradução [lang =?] do plugin de Descrição Extendida se instalado. 
+<br/><br/> 
+As seguintes personalizações tags adicionais estão disponíveis sem o uso do plugin Descrição Extendida: <br/> 
+- <b style=&quot;color: red;&quot;>[username]</b> para inserir automaticamente o nome do usuário de destino do e-mail <br/> 
+- <b style=&quot;color: red;&quot;>[mygallery]</b> para inserir o título de sua galeria <br/>';
+$lang['UAM_remailtxt2Title_d'] = 'Digite o texto introdutório que você quer que apareça no e-mail lembrete sem uma chave de confirmação regenerado.
+<br/><br/>
+Se deixado em branco , a mensagem lembrete estará vazia. É , portanto, fortemente recomendado um pequeno texto explicativo. ( NB: O texto pré-preenchido com a instalação do plug-in é fornecido como um exemplo).
+<br/><br/>
+Personalize mais o conteúdo inserindo etiquetas especiais: <br/>
+- <b style=&quot;color: red;&quot;>[username]</b> para inserir automaticamente o nome do usuário de destino do e-mail <br/> .
+- <b style=&quot;color: red;&quot;>[mygallery]</b> para inserir o título de sua galeria <br/>
+- <b style=&quot;color: red;&quot;>[myurl]</b> para inserir a URL de sua galeria se configurado nas opções de configuração do Piwigo <br/>
+- <b style=&quot;color: red;&quot;>[Kdays]</b> para inserir o número limite de dias para confirmar a inscrição ( " Prazo para confirmação de inscrição limitada, tem que ser ativado).
+<br/><br/>
+Para usar vários idiomas, você pode usar as etiquetas do plugin Descrição Extendida  se ele estiver ativo.';
