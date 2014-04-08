@@ -216,3 +216,29 @@ $lang['UAM_USRAutoTitle_d'] = 'Manipulação automática de visitantes não conf
 - A exclusão automática de contas não confirmadas no tempo permitido sem o envio de lembrete e-mail automático -> "Prazo para confirmação de inscrição limitada" <b> <u> habilitado </u></b> e "Lembrar os usuários não confirmados" <b><u> desativado </u></b>. 
 <br/><br/>
 - Enviando automaticamente uma mensagem de lembrete com uma nova geração de chave de confirmação e exclusão automática de contas não confirmadas no tempo após o envio do aviso -> "Prazo para confirmação de inscrição limitada" <b><u> habilitado </u></b> e "Lembrar os usuários não confirmados" <b><u> habilitado </u></b>.';
+$lang['UAM_confirmmail_custom1_d'] = 'Quando a opção  &quot;Confirmação do registro&quot; estiver ativa, este campo permitirá personalizar o <b><u>texto de aceitação</u></b> na página de confirmação de registro que é exibida quando o usuário clicar no link enviado por email.
+<br/><br/>
+Ao instalar o plugin, um texto padrão é colocado como exemplo.
+<br/><br/>
+Personalize o conteúdo inserindo tags especiais:<br />
+- <b style=&quot;color: red;&quot;>[username]</b> para automaticamente inserir o nome do usuário relacionado.<br/>
+- <b style=&quot;color: red;&quot;>[minha_galeria]</b> para inserir o título da sua galeria.<br/>
+- <b style=&quot;color: red;&quot;>[minha_url]</b> para inserir a URl da sua galeria se estiver setado nas opções de configuração do Piwigo.
+<br/><br/>
+Esate campo é compatível com o editor FCK e, para multi-idiomas, você pode usar as tags [lang] do plugin "Extended description" se estiver ativado.';
+$lang['UAM_confirmmailTitle_d'] = 'Esta opção permite ao usuário confirmar o registro clicando em um link enviado por email durante o registro ou permite ao administrador ativar manualmente o registro.
+<br/><br/>
+No primeiro caso, o email é formado por uma parte personalizável para introduzir uma nota de boas vindas e uma parte fixa contendo o link de ativação o qual é gerado de uma chave aleatória que pode ser regerado por meio da aba &quot;Rastreio e confirmações&quot;.
+<br/><br/>
+No segundo caso, o link de validação é enviado aos administradores da galeria. Visitantes têm de aguardar até que um administrador o confirme por meio do link de ativação ou por meio da aba &quot;rastreio de confirmação&quot;.
+<br/>
+<b style=&quot;color: red;&quot;>NB: Opções &quot;Último prazo para confirmação do registro limitado&quot; e &quot;Lemrar usuários não confirmados&quot; tem de estar off quando a confirmação manual do administrador estiver habilitado.</b>
+<br/><br/>
+Esta opção é geralmente usado com a associação automática de grupo e/ou estatutos. Por exemplo, um usuário que não confirmou seu registro é associado à um grupo específico de usuários (com ou sem restrição na galeria) enquanto um usuário que confirmou seu registro será associado a um grupo &quot;normal&quot; .';
+$lang['UAM_USRAutoDelTitle_d'] = 'Isso é válido somente quando o usuário cuja conta expirou disparar o mecanismo de apagamento (raro mas possível). Ele é então desconectado da galeria e redirecionado para uma página mostrando o apagamento da conta e, possivelmente, os motivos para isso.<br /><br />
+Personalize o conteúdo com tags especiais:<br/>
+- <b style=&quot;color: red;&quot;>[minha_galeria]</b> para inserir o título da sua galeria.<br/>
+- <b style=&quot;color: red;&quot;>[minha_url]</b> para inserir a URL da sua galeria se selecionado nas opções de configuração do Piwigo.<br/>
+<b style=&quot;color: red;&quot;>[username]</b> não está disponível aqui pois o usu´[ario em questão foi apagado.
+<br/><br/>
+O texto personalizado para a página direcionada pode ser inserido nesse campo que é compatível com o editor FCK e, para multi-idiomas, é possível usar as tags [lang] do plugin "Extended descriptions" se estiver ativo.';
