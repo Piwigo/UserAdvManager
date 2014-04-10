@@ -242,3 +242,75 @@ Personalize o conteúdo com tags especiais:<br/>
 <b style=&quot;color: red;&quot;>[username]</b> não está disponível aqui pois o usu´[ario em questão foi apagado.
 <br/><br/>
 O texto personalizado para a página direcionada pode ser inserido nesse campo que é compatível com o editor FCK e, para multi-idiomas, é possível usar as tags [lang] do plugin "Extended descriptions" se estiver ativo.';
+$lang['UAM_remailtxt1Title_d'] = 'Digite o texto introdutório que você quer que apareça no e-mail lembrete, além da tecla de confirmação regenerada.
+<br/><br/>
+Se deixado em branco, o e-mail de lembrete irá incluir apenas o link de confirmação. É, portanto, fortemente aconselhado um pequeno texto explicativo. (NB: O texto pré-preenchido com a instalação do plug-in é fornecido como um exemplo).
+<br/><br/>
+Personalize mais o conteúdo com tags especiais inseridas: <br/>
+- <b style=&quot;color: red;&quot;>[username]</b> para inserir automaticamente o nome do usuário no e-mail de destino<br/>.
+- <b style=&quot;color: red;&quot;>[mygallery]</b> para inserir o título de sua galeria <br/>
+- <b style=&quot;color: red;&quot;>[myurl]</b> para inserir a URL de sua galeria se configurado nas opções de configuração do Piwigo <br/>
+- <b style=&quot;color: red;&quot;>[days]</b> para inserir o número máximo de dias entre duas visitas.
+<br/><br/>
+Para usar vários idiomas, você pode usar as tags a descrição do plugin estendida se ele estiver ativo.';
+$lang['UAM_remailTitle_d'] = '
+Esta opção permite que você envie um e-mail lembrete aos usuários cadastrados, mas ainda não confirmaram a sua inscrição em tempo. Isso, trabalha em conjunto com a &quot;Confirmação de Registro&quot;
+<br/><br/>
+2 tipos de e-mails podem ser enviados: Com ou sem regeneração da chave de confirmação. Conforme o caso, o conteúdo de e-mails pode ser personalizado.
+<br/><br/>
+Consulte a aba &quot;confirmações de rastreamento&quot;.
+<br/><br/>
+Se esta opção e a opção &quot;Prazo para confirmação de inscrição limitado&quot; são ativados, novas opções aparecem em baixo nesta seção para permitir a automação de gestão usuários não confirmados.';
+$lang['UAM_infotxtTitle_d'] = 'Digite o texto introdutório que você quer que apareça no e-mail informações.
+<br/><br/>
+Personalize mais o conteúdo com tags especiais inseridas: <br/>
+- <b style=&quot;color: red;&quot;>[username]</b> para inserir automaticamente o nome do usuário no e-mail de destino<br/>.
+- <b style=&quot;color: red;&quot;>[mygallery]</b> para inserir o título de sua galeria <br/>
+- <b style=&quot;color: red;&quot;>[myurl]</b> para inserir a URL de sua galeria se configurado nas opções de configuração do Piwigo <br/>
+<br/><br/>
+Para usar vários idiomas, você pode usar as tags a descrição do plugin estendida se ele estiver ativo.';
+$lang['UAM_gttextTitle_d'] = 'Digite o texto que deseja que apareça no lembrete de e-mail para solicitar que o usuário retorne a visitar sua galeria (NB: O texto pré-preenchido com a instalação do plug-in é fornecido como um exemplo).
+
+Personalize mais o conteúdo com tags especiais inseridas: <br/>
+- <b style=&quot;color: red;&quot;>[username]</b> para inserir automaticamente o nome do usuário no e-mail de destino<br/>.
+- <b style=&quot;color: red;&quot;>[mygallery]</b> para inserir o título de sua galeria <br/>
+- <b style=&quot;color: red;&quot;>[myurl]</b> para inserir a URL de sua galeria se configurado nas opções de configuração do Piwigo <br/>
+- <b style=&quot;color: red;&quot;>[days]</b> para inserir o número máximo de dias entre duas visitas.
+<br/><br/>
+Para usar vários idiomas, você pode usar as tags a descrição do plugin estendida se ele estiver ativo.';
+$lang['UAM_gtTitle_d'] = 'Quando o Rastreador de Fantasma é habilitado e inicializado, você encontrará abaixo a lista de visitantes registrados que não voltaram desde x dias. &quot;x&quot; é o número de dias configurados na guia Configuração geral. Além disso, você vai encontrar uma coluna que indica se um lembrete de e-mail foi enviado para os visitantes direcionados. Assim, você pode ver de relance e tratar os visitantes que não tenham tomado conhecimento do lembrete 
+<br/><br/>
+Neste ponto, você pode.:
+<br/><br/>
+- Contas <b> Eliminar manualmente (dreno manual) </b>
+<br/>
+- Gerar e-mail lembrete <b> redefinindo a data da última visita </b>. Isto permite dar um curinga para visitantes alvejados. Se o visitante já recebeu uma lembrança, nada impede o reenvio de um novo e-mail que irá reinicializar novamente, na verdade, é a data da última visita.
+<br/><br/>
+<b>Função Tabela de Classificação </b>: Você pode classificar os dados exibidos, clicando nos cabeçalhos das colunas. Segure a tecla SHIFT para classificar até 4 colunas simultâneas.
+';
+$lang['UAM_ghosttrackerTitle_d'] = 'Também chamado de &quot;Rastreador de Fantasma&quot;, quando esta função estiver ativada, você pode gerenciar seus visitantes, dependendo da freqüência de suas visitas. 2 modos de funcionamento estão disponíveis: <br/><br/>
+- Gestão manual: Quando o tempo entre duas visitas é atingido, o visitante aparece na tabela &quot;Rastreador de Fantasma&quot;  onde você será capaz de lembrar os visitantes através do email ou exclui-los. <br/><br/>
+- Gestão Automatizada: Quando o período entre duas visitas sucessivas for atingido, o visitante é excluído ou movido para um grupo e/ou estado de espera automaticamente. Neste segundo caso, um e-mail de informação pode ser enviada para ele. <br/><br/>
+<b style=&quot;color: red;&quot;> Nota importante: Se você ativar esse recurso pela primeira vez ou se você tiver reativado após um longo período desativado, durante o qual os novos visitantes são registradas, você deve inicializar ou reinicializar o Rastreador de Fantasma (veja as instruções correspondentes na aba &quot;Rastreador de Fantasma&quot; tab).</b>
+';
+$lang['UAM_confirmtxtTitle_d'] = 'Digite o texto introdutório que você quer que apareça no e-mail de confirmação da inscrição.
+<br/><br/>
+Personalize mais o conteúdo com tags especiais inseridas: <br/>
+- <b style=&quot;color: red;&quot;>[username]</b> para inserir automaticamente o nome do usuário de destino do e-mail <br/>.
+- <b style=&quot;color: red;&quot;>[mygallery]</b> para inserir o título de sua galeria <br/>
+- <b style=&quot;color: red;&quot;>[myurl]</b> para inserir a URL de sua galeria se configurado nas opções de configuração do Piwigo <br/>
+- <b style=&quot;color: red;&quot;>[Kdays]</b> para inserir o número de limite de dias para confirmar a inscrição (&quot;Prazo para confirmação de inscrição limitada,&quot; tem que ser ativado).
+<br/><br/>
+Para usar vários idiomas, você pode usar as tags a descrição do plugin estendida se ele estiver ativo.';
+$lang['UAM_confirmstatTitle_d'] = '<b style=&quot;color: red;&quot;> AVISO: O uso de status na confirmação requer que você tem mantido o usuário &quot;convidado&quot; com configuração padrão (como modelo de usuário) para novo registro. Note que você pode definir qualquer outro usuário como um modelo para novo registro. Por favor, consulte a documentação do Piwigo para mais detalhes. </b><br/><br/>
+Os Estatus são validados para uso em conjunto com a &quot;Confirmação de matrícula&quot;';
+$lang['UAM_confirmmail_custom2_d'] = 'Quando a opção &quot;Confirmação de matrícula&quot; está ativa, este campo permite que você personalize o <u>rejectance texto<b></u> </b> na página de confirmação de inscrição exibida quando o usuário clica no link de confirmação que foi recebido por e-mail.
+<br/><br/>
+Depois de instalar o plugin, um texto padrão é definido como um exemplo.
+<br/><br/>
+Personalize mais o conteúdo com tags especiais inseridas: <br/>
+- <b style=&quot;color: red;&quot;>[username]</b> para inserir automaticamente o nome do usuário relacionado <br/>.
+- <b style=&quot;color: red;&quot;>[mygallery]</b> para inserir o título de sua galeria <br/>
+- <b style=&quot;color: red;&quot;>[myurl]</b> para inserir a URL de sua galeria configurada nas opções de configuração do Piwigo.
+<br/>
+Este campo é compatível com o editor FCK e, para multi-idiomas, você pode usar as tags [lang] do plugin descrição estendida se estiver ativa.';
