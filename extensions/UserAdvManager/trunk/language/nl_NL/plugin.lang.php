@@ -72,3 +72,157 @@ $lang['UAM_%d_Reminders_Sent'] = '%d herinneringsberichten zijn verzonden';
 $lang['UAM_%d_Reminder_Sent'] = '%d herinneringsbericht is verzonden';
 $lang['UAM_%d_Mails_With_Key'] = '%d berichten met vernieuwing van de sleutel zijn verzonden';
 $lang['UAM_%d_Mail_With_Key'] = '%d bericht met vernieuwing van de sleutel is verzonden';
+$lang['UAM_Tips1_txt'] = '<ul>
+            <li>
+            Doelen: Laat de bezoeker weten dat zijn registratie wacht op toestemming door middel van een persoonlijk blokje op de thuispagina van de galerie. En dit, wanneer de registratie niet is goed gekeurd.
+            <br/><br/>
+            <b>Herinnering: In de standaard uitvoering ziet de "Gast" alleen de openbare albums, zonder  een bericht.</b>
+            </li>
+            <li style="list-style-type: none;"><br/></li>
+            <li>
+Voorwaarde:
+<li style="list-style-type: none;"></li>
+<li style="list-style-type: none;">- Een galerie met alle of enkele privé albums, alleen zichtbaar voor geregistreerde gebruikers</li>
+<li style="list-style-type: none;">- Bij minstens 2 Piwigo gebruikersgroepen: "In de Wacht," zonder toestemming voor privé albums, and "Bevestigd" met complete toestemming voor de privé albums</li>
+<li style="list-style-type: none;">- UAM plugin</li>
+<li style="list-style-type: none;">- PWG Stuffs plugin, voor de toevoeging van een speciale UAM module</li>
+<li style="list-style-type: none;">- Optioneel, the plugin Extended Description ter ondersteuning van meerdere talen</li>
+            </li>
+            <li style="list-style-type: none;"><br/></li>
+            <li>
+Podia:
+<li style="list-style-type: none;"></li>
+A. In de plugin UAM:
+              <ol>
+                <li>Activeer registratie bevestiging</li>
+                <li>Activeer de optie PWG Stuffs module </li>
+                <li>Voer tekst in voor extra uitleg als bijlage bij de email registratie bevestiging. Als de plugin Extended Description is geactiveerd, kunnen de taal tags worden gebruikt</li>
+                <li>Selecteer de groep "In de Wacht" onder "Voor gebruikers die hun registratie niet hebben bevestigd"</li>
+                <li>Selecteer de groep "Bevestigd" onder "Voor gebruikers die hun registratie hebben bevestigd"</li>
+                <li>Bewaar the plugin instelling</li>
+              </ol>
+<li style="list-style-type: none;"><br/></li>
+B. In de plugin PWG Stuffs :
+              <ol>
+                <li>Ga naar tabblad "Voeg een nieuwe module toe"</li>
+                <li>Kies "UAM Module"</li>
+                <li>Configureer de module, wijs een titel toe (bv. "Registratie bevestiging in behandeling") en een beschrijving, en controleer alleen "In de Wacht" in de lijst van toegestane groepen</li>
+                <li>Voltooi de inhoud van de module met een zichtbaar bericht voor onbevestigde gebruikers. Net als bij UAM, kan de taal-opmaak gebruikt worden als de plugin Extended Description is geactiveerd</li>
+                <li>Controleer "Toon de module op de thuispagina van de site"</li>
+                <li>Valideer de configuratie van de module </li>
+              </ol>
+            </li>
+          </ul>';
+$lang['UAM_Tips1'] = 'Informatie over onbevestigde registratie met UAM en PWG_Stuffs';
+$lang['UAM_Tab_GhostTracker'] = 'Ghost Tracker (Spook Zoeker)';
+$lang['UAM_Support_txt'] = 'De officiële ondersteuning van deze plugin kan je alleen op dit Piwigo forum-onderwerp vinden:<br/>
+<a href="http://piwigo.org/forum/viewtopic.php?id=15015" onclick="window.open(this.href);return false;">English forum - http://piwigo.org/forum/viewtopic.php?id=15015</a><br/><br/>
+Ook is hier de foutzoeker (bugtracker) beschikbaar: <a href="http://piwigo.org/bugs/" onclick="window.open(this.href);return false;">http://piwigo.org/bugs/</a>';
+$lang['UAM_Subject admin validation for %s'] = 'De registratie van %s wacht op validatie';
+$lang['UAM_SubTitle4'] = 'Ghost Tracker';
+$lang['UAM_SubTitle1'] = 'Plugin instelling';
+$lang['UAM_Stuffs_Title'] = 'UAM blok';
+$lang['UAM_Stuffs_Desc'] = 'Voegt een informatieblok toe voor onbevestigde gebruikers';
+$lang['UAM_Stuffs'] = 'PWG Stuffs blok';
+$lang['UAM_Save'] = 'Maak de Backup';
+$lang['UAM_Restore_File'] = 'Herstel de Instellingen';
+$lang['UAM_Restore'] = 'Het herstellen van het backup-bestand van je instellingen. Dit betreft alleen het bewaarde bestand op de server.
+<br/><br/>
+<b style="color: red;">Let op de versie van de backup!<br/>Een backup van een pluginversie kan alleen hersteld worden met de zelfde versie.</b>';
+$lang['UAM_Restoration_OK'] = 'Herstel van je instelling is succesvol voltooid. Laadt UAM\'s beheerpagina opnieuw om de herstelde instellingen te bekijken.';
+$lang['UAM_Restoration_NOK'] = 'Er is een fout opgetreden in het herstellen van de instelling. Controleer de geldigheid van je backup-bestand.';
+$lang['UAM_Reminder_Sent_OK'] = 'JA';
+$lang['UAM_Reminder_Sent_NOK'] = 'NEEN';
+$lang['UAM_Reminder'] = 'Emailherinnering';
+$lang['UAM_RejectConnexion_Custom_Txt'] = 'Aanpassen van de afwijzingstekst';
+$lang['UAM_RejectConnexion'] = 'Verbinding afwijzen van een gebruiker tot de registratie is bevestigd';
+$lang['UAM_RedirToProfile'] = 'Doorsturen naar de Aanpassingspagina';
+$lang['UAM_No_validation_for_your_account'] = 'Je persoonlijke account ontvangt geen bevestiging';
+$lang['UAM_No_validation_for_default_user'] = 'Het standaard account ontvangt geen bevestiging';
+$lang['UAM_No_validation_for_Webmaster'] = 'Het "Webbeheerder"-account ontvangt geen bevestiging';
+$lang['UAM_No_validation_for_Guest'] = 'Het "Gast"-account ontvangt geen bevestiging';
+$lang['UAM_No_reminder_for_your_account'] = 'Je persoonlijke account ontvangt geen herinneringen van Ghost Tracker';
+$lang['UAM_No_reminder_for_default_user'] = 'Het standaard account ontvangt geen herinneringen van Ghost Tracker';
+$lang['UAM_No_reminder_for_Webmaster'] = 'Het "Webbeheerder"-account ontvangt geen herinneringen van Ghost Tracker';
+$lang['UAM_No_reminder_for_Guest'] = 'Het "Gast"-account ontvangt geen herinneringen van Ghost Tracker';
+$lang['UAM_No_Valid_Level'] = 'Privacy niveau voor gebruikers die hun registratie niet hebben bevestigd<br/>';
+$lang['UAM_No_Usermanager'] = 'Op dit moment geen onbevestigd geregistreerden vast te leggen';
+$lang['UAM_No_Userlist'] = 'Op dit moment geen bezoekers vast te leggen';
+$lang['UAM_No_Ghosts'] = 'Op dit moment geen spook bezoekers';
+$lang['UAM_No_Confirm_Status'] = 'Status van gebruikers die hun registratie niet hebben bevestigd<br/>';
+$lang['UAM_No_Confirm_Group'] = 'Groep van gebruikers die hun registratie niet hebben bevestigd<br/>';
+$lang['UAM_No_Backup_File'] = 'Er is geen backup-bestand beschikbaar!';
+$lang['UAM_Nb_Days'] = 'Verschil in dagen';
+$lang['UAM_Manual_validation_needed_for %s'] = 'Gebruiker %s heeft zich geregistreerd en wacht op handmatige validatie door een beheerder.';
+$lang['UAM_Manual_Validation'] = 'Handmatige bevestiging';
+$lang['UAM_Mail_without_key'] = 'Herinnering zonder sleutel';
+$lang['UAM_Mail_with_key'] = 'Herinnering met sleutel';
+$lang['UAM_Mail_Info'] = 'Informatie-email naar de gebruiker:';
+$lang['UAM_MailInfo_Text'] = 'Aanpassen van de informatie-email:';
+$lang['UAM_MailInfo_Subject'] = 'Aanpassen van informatie-email mbt onderwerp';
+$lang['UAM_MailExclusion_true'] = 'Sluit de volgende domeinen iot: </br>(Gebruik een komma om meerdere domeinen van elkaar te scheiden)';
+$lang['UAM_GTReminder_Subject'] = 'Aanpassen van handmatige emailherinnering mbt Ghost Tracker';
+$lang['UAM_GTAutomail_Text'] = 'Aanpassen van email tekst mbt degradatie';
+$lang['UAM_GTAutomail_Subject'] = 'Aanpassen van automatisch email onderwerp mbt Ghost Tracker degradatie';
+$lang['UAM_Error_GTAutoMail_cannot_be_set_without_ConfirmMail'] = 'Fout in de samenhang binnen de gekozen configuratie:
+<br/><br/>
+Instelling "Toezicht op geregistreerde gebruikers en andere opties > Spook bezoekers beheer (Ghost Tracker) > Automatisch beheer van spook bezoekers > Automatische emailverzending bij wijziging van groep/status" kan niet worden geactiveerd als de instelling "registratie bevestigingen > registratie bevestiging - bevestiging door gebruiker"> niet eerst is geactiveerd.
+<br/><br/>
+Om samenhang zeker te stellen was de optie "Automatische emailverzending bij wijziging van groep/status op "non actief" gezet.
+<br/><br/>';
+$lang['UAM_Err_audit_advise'] = '<b>je moet correcties aanbrengen om in overeenstemming te zijn met de nieuwe regels die je hebt geactiveerd.</br>Maak gebruik van een database beheervoorziening om gebruikers accounts rechtstreeks in de tabel ###_USERS te corrigeren';
+$lang['UAM_Err_Userlist_Settings'] = 'Deze pagina is alleen beschikbaar als "Toezicht op geregistreerde gebruikers" is geactiveerd in "Registratie instellingen en andere opties".';
+$lang['UAM_Err_UserManager_Settings'] = 'Deze pagina is alleen beschikbaar als "Registratie Bevestiging" is geactiveerd en als een onbevestigde bezoekersgroep is ingesteld in "Registratie instellingen en andere opties".';
+$lang['UAM_Err_GhostTracker_Settings'] = 'Deze pagina is alleen beschikbaar als "Ghost Traker" geactiveerd is in "Registratie instellingen en andere opties".';
+$lang['UAM_MailExclusion_No'] = 'Uitsluiting van email domeinen - Niet beschikbaar omdat emails niet verplicht zijn voor registratie!';
+$lang['UAM_MailExclusion'] = 'Uitsluiting van email domeinen';
+$lang['UAM_HidePassw'] = 'Wachtwoord in normale tekst in de informatie email';
+$lang['UAM_GhostTracker_true'] = 'Activeer. De maximum periode in dagen tussen twee bezoeken:';
+$lang['UAM_GhostTracker_Title'] = 'Spook bezoekers beheer';
+$lang['UAM_GhostTracker_ReminderText'] = 'Aanpassen van Ghost Tracker\'s herinneringsbericht';
+$lang['UAM_GhostTracker_Init_OK'] = 'Ghost Tracker is opnieuw ingesteld!';
+$lang['UAM_GhostTracker_Init'] = 'Als je deze optie voor het eerst activeert of je activeert hem opnieuw na er lang geen gebruik van te hebben gemaakt, moet je Ghost Tracker initialiseren of opnieuw instellen. Deze actie is alleen nodig na activatie of re-activatie van deze optie. Klik<u>eenmaal</u>op de reset knop hieronder.';
+$lang['UAM_GhostTracker'] = 'Beheer van spook bezoekers (Ghost Tracker)';
+$lang['UAM_GT_Reset'] = 'Ghost Tracker opnieuw instellen';
+$lang['UAM_GT_Init'] = 'Ghost Tracker initialiseren';
+$lang['UAM_GTAutoMail'] = 'Automatische emailverzending bij het wijzigen van groep / status / privacy niveau';
+$lang['UAM_GTAutoGp'] = 'Automatische wijziging van groep / status / privacy niveau';
+$lang['UAM_GTAutoDel'] = 'Automatische verwijdering van accounts';
+$lang['UAM_GTAuto'] = 'Automatisch beheer van spook gebruikers';
+$lang['UAM_Follow this link to access the gallery'] = 'Volg deze link om in de galerie te komen';
+$lang['UAM_Expired_Status'] = '<b>Status</b> voor de gebruikers registratie is verlopen<br/><b style="color: red;">Waarschuwing: Maak geen gebruik van de "Gast" status. Dit is zinloos, deze optie zal worden verwijderd in toekomstige versies</b><br/>';
+$lang['UAM_Expired_Level'] = '<b>Privacy niveau</b> voor de gebruikers registratie is verlopen<br/>';
+$lang['UAM_Expired_Group'] = '<b>Groep</b> voor de gebruikers registratie is verlopen<br/>';
+$lang['UAM_Error_Using_illegal_Kdays'] = 'Het gebruik van de [Kdays]tag is alleen toegestaan binnen de beperkte toegestane tijd voor registratie bevestiging. Raadpleeg het tekstveld, wat in het rood staat, om het probleem te corrigeren.';
+$lang['UAM_Err_audit_username_char'] = '<b>Dit account gebruikt een of meerdere niet toegestane lettertekens:</b>';
+$lang['UAM_Err_audit_email_forbidden'] = '<b>Dit account maakt gebruik van een verboden email provider:</b>';
+$lang['personal_content'] = 'Inhoud';
+$lang['UAM_User: %s'] = 'Gebruiker: %s';
+$lang['UAM_Tab_Global'] = 'Configuratie';
+$lang['UAM_Select page number'] = 'Selecteer een paginanummer';
+$lang['UAM_Select page size'] = 'Selecteer de paginagrootte';
+$lang['UAM_Registration_Date'] = 'Registratie datum';
+$lang['UAM_Password: %s'] = 'Paswoord: %s';
+$lang['UAM_Link: %s'] = 'Gelieve op deze link te klikken om uw registratie te bevestigen: %s';
+$lang['UAM_LastVisit_Date'] = 'Laatste bezoek';
+$lang['UAM_Enable'] = 'Inschakelen';
+$lang['UAM_Dump_OK'] = 'Het backup-bestand is succesvol gemaakt.';
+$lang['UAM_Dump_NOK'] = 'Fout: Het is niet gelukt om een backup-bestand te maken!';
+$lang['UAM_Dump_Download'] = 'Controleer dit blok om het backup-bestand te downloaden:';
+$lang['UAM_DumpTxt'] = 'Backup en herstel je instellingen';
+$lang['UAM_Delete_selected'] = 'Verwijderen';
+$lang['UAM_Disable'] = 'Uitschakelen (standaard)';
+$lang['UAM_Default_ValidationTimeout_Txt'] = 'Sorry, maar je account is verwijderd, omdat je niet binnen de gevraagde periode je registratie hebt bevestigd ([Kdays] dagen). Je kunt je opnieuwe registreren met een geldig en niet geblokkeerd email account.';
+$lang['UAM_Default_GhstReminder_Txt'] = 'Hallo [gebruikersnaam], je laatste bezoek aan onze galerie [mygallery] dateert van heel erg lang geleden. Als je je toegangsaccount niet meer wilt gebruiken, laat dit ons dan weten via beantwoording van deze email. Je account zal dan worden verwijderd.
+
+We zullen zijn genoodzaakt je account automatisch te verwijderen wanneer je na ontvangst van dit bericht ons niet meer bezoekt binnen [days] dagen.
+
+Met vriendelijke groet,
+
+Beheerder van de galerie [mygallery] - [myurl]';
+$lang['UAM_Default_RejectConnexion_Txt'] = 'Sorry, maar je registratie is nog niet gevalideerd. Je kunt dus nog niet verbinden met de galerie.';
+$lang['UAM_Default_PwdRequest_Txt'] = 'Je hebt een een nieuwe instelling van je wachtwoord op onze galerie aangevraagd. Hieronder vind je je nieuwe verbindings-instellingen.';
+$lang['UAM_Default_InfoMail_Txt'] = 'Hallo [gebruikersnaam]!
+
+Je hebt belangrijke veranderingen aangebracht in je profiel op de galerie [mygallery]. Hieronder vind je je nieuwe instellingen.';
+$lang['UAM_Default_InfoMail_Subject'] = '[gebruikersnaam] - Je registratie informatie op [mygallery]';
