@@ -226,3 +226,68 @@ $lang['UAM_Default_InfoMail_Txt'] = 'Hallo [gebruikersnaam]!
 
 Je hebt belangrijke veranderingen aangebracht in je profiel op de galerie [mygallery]. Hieronder vind je je nieuwe instellingen.';
 $lang['UAM_Default_InfoMail_Subject'] = '[gebruikersnaam] - Je registratie informatie op [mygallery]';
+$lang['UAM_Tips2_txt'] = ' <ul>
+  <li>
+Doelen: Bericht de bezoeker dat de registratie wacht op bevestiging door een extra pagina te plaatsen die de standaard thuispagina van de galerie vervangt bij iedere verbinding, en deze, als de registratie niet is goedgekeurd.
+  <li style="list-style-type: none;"></li>
+Voordelen t.o.v. de methode met PWG_Stuffs: Staat het formatteren van informatie toe en toont de informatie direct bij registratie van bezoekers.
+  </li>
+  <li style="list-style-type: none;"><br/></li>
+  <li>
+Voorwaarde:
+<li style="list-style-type: none;"></li>
+<li style="list-style-type: none;">- A galerie met alle of enkele privé albums, alleen zichtbaar voor geregistreerde gebruikers</li>
+<li style="list-style-type: none;">- Tenminste 2 opvolgende Piwigo\'s gebruikersgroepen: "In de Wacht," zonder toestemming voor de privé albums, en "Bevestigd" met complete toestemming voor de privé albums</li>
+<li style="list-style-type: none;">- UAM plugin</li>
+<li style="list-style-type: none;">- Additional Pages plugin om een extra pagina toe te voegen en te beheren die de standaard index pagina van de galerie vervangt</li>
+<li style="list-style-type: none;">- Optioneel, de plugin Extended Description voor ondersteuning van meerdere talen</li>
+  </li>
+  <li style="list-style-type: none;"><br/></li>
+  <li>
+Fasering:
+<li style="list-style-type: none;"></li>
+A. In plugin UAM:
+   <ol>
+    <li>Activeer registratie bevestiging</li>
+    <li>Geef tekst in voor extra uitleg voor de bijlage in de email registratie bevestiging. Als de plugin Extended Description is geactiveerd, kunnen de taal tags worden gebruikt.</li>
+    <li>Zet de groep "In de Wacht" onder "Voor gebruikers die hun registratie niet hebben bevestigd"</li>
+    <li>Zet de groep "Bevestigd" onder "Voor gebruikers die hun registratie hebben bevestigd"</li>
+    <li>Bewaar de plugin instellingen</li>
+   </ol> 
+<li style="list-style-type: none;"><br/></li>   
+          ';
+$lang['UAM_mail_exclusion_error'] = 'Piwigo\'s optie "Het email-adres is verplicht voor alle gebruikers" is uitgeschakeld, terwijl de plugin optie van UserAdvancedManager (UAM) "Uitsluiting van email-domeinen" ingeschakeld staat. Deze combinatie is niet logisch en ook niet compatibel!
+<br/><br/>
+Activeer Piwigo\'s optie "Het email-adres is verplicht voor alle gebruikers" opnieuw en schakel vervolgens UAM\'s optie "Uitsluiting van email-domeinen" uit. Als je dit tenminste wilt.<br/><br/>
+NB: Dit bericht zal verdwijnen nadat je de noodzakelijke correcties hebt aangebracht en de beheerderspagina opnieuw geladen hebt.<br/><br/>';
+$lang['UAM_mail_exclusionlist_error'] = 'Waarschuwing! Je hebt een nieuwe regel (CR-LF)ingevoerd aan het begin van de email uitsluitingslijst (zie hieronder in het rood). Deze regel is weliswaar niet zichtbaar, maar hij is wel aanwezig en kan het functioneren van de plugin ontregelen. Typ opnieuw in je uitsluitingslijst zonder een nieuwe regel aan het begin.';
+$lang['UAM_submit'] = 'Geef de instellingen op';
+$lang['UAM_save_config'] = 'De instelling is opgeslagen';
+$lang['UAM_reg_err_login5'] = 'Je email provider is verboden voor registratie. Verboden email providers zijn:';
+$lang['UAM_reg_err_login2'] = 'De gebruikersnaam hoeft niet overeen te komen met de volgende lettertekens:';
+$lang['UAM_no_update_pwd'] = '[profiel is geactualiseerd zonder wijziging van het wachtwoord]';
+$lang['UAM_infos_mail %s'] = '%s, hier zijn je inloggegevens voor de galerie:';
+$lang['UAM_group %s updated'] = 'Groep %s is automatisch als standaard groep ingesteld vanwege de beste uitvoering';
+$lang['UAM_confirmmail_custom_Txt2'] = 'Tekst van de bevestiging pagina - Bevestiging afgewezen';
+$lang['UAM_confirmmail_custom_Txt1'] = 'Tekst van de bevestiging pagina - Bevestiging geaccepteerd';
+$lang['UAM_audit_ok'] = 'Controle OK';
+$lang['UAM_audit'] = 'Controle instellingen';
+$lang['UAM_ValidationLimit_Info'] = 'Beperkte termijn voor registratie bevestiging';
+$lang['UAM_Tips2'] = 'Informatie over onbevestigde registratie met UAM en Additional Pages';
+$lang['UAM_Validated_Status'] = 'Status voor gebruikers die hun registratie hebben bevestigd<br/>';
+$lang['UAM_Validated_Group'] = 'Groep voor gebruikers die hun registratie hebben bevestigd<br/>';
+$lang['UAM_Valid_Level'] = 'Privacy niveau voor gebruikers die hun registratie hebben bevestigd<br/>';
+$lang['UAM_Username_Char_true'] = 'Verboden lettertekens:<br/>(Gebruik een komma om de lettertekens van elkaar te scheiden)<br/><br/>';
+$lang['UAM_Username_Char_false'] = 'Laat iedereen toe (standaard)';
+$lang['UAM_Username_Char'] = 'Gebruikersnamen: Uitsluiting van lettertekens';
+$lang['UAM_USRAutoMail'] = 'Automatische email herinnering';
+$lang['UAM_USRAutoDel'] = 'Aangepast bericht bij verwijderd account';
+$lang['UAM_USRAuto'] = 'Automatisch beheer van onbevestigde gebruikers';
+$lang['UAM_Tracking registered users'] = 'Het volgen van geregistreerde gebruikers';
+$lang['UAM_Tracking confirmations'] = 'Het volgen van bevestigingen';
+$lang['UAM_Title_Tab'] = 'UserAdvManager - Versie : ';
+$lang['UAM_Title5'] = 'Overige opties';
+$lang['UAM_Title4'] = 'Tips en voorbeelden in het gebruik';
+$lang['UAM_Title3'] = 'Beheer van spook bezoekers';
+$lang['UAM_Title2'] = 'Registratie bevestigingen';
+$lang['UAM_Title1'] = 'Registratie beperkingen';
