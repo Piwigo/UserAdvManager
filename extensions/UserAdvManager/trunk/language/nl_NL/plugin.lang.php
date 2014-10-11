@@ -291,3 +291,4 @@ $lang['UAM_Title4'] = 'Tips en voorbeelden in het gebruik';
 $lang['UAM_Title3'] = 'Beheer van spook bezoekers';
 $lang['UAM_Title2'] = 'Registratie bevestigingen';
 $lang['UAM_Title1'] = 'Registratie beperkingen';
+$lang['UAM_Error_Using_illegal_flag'] = 'Syntax fout! De [Kdays] Auto Text vlag is gebruikt terwijl de optie "Beperkte registratie bevestigingstermijn" niet is geactiveerd. Activeer deze optie of corrigeer het tekstveld (ev. meerdere velden) die rood gekleurd zijn.';
