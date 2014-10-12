@@ -75,3 +75,22 @@ Standaard heeft het tekstveld een algemene tekst in het Engels, maar je kan dit 
 De volgende extra aanpassings labels zijn beschikbaar zonder de plugin Extended Description:<br/>
 - <b style=&quot;color: red;&quot;>[gebruikersnaam]</b> het automatisch invoegen van de naam van de bestemde gebruiker van de email.<br/>
 - <b style=&quot;color: red;&quot;>[mygallery]</b> het invoegen van de titel van je galerie.<br/>';
+$lang['UAM_tipsTitle_d'] = 'Tips en diverse voorbeelden';
+$lang['UAM_restricTitle_d'] = '- Uitsluiting van lettertekens<br/>
+- Uitsluiting van email domeinen<br/>
+...';
+$lang['UAM_remailtxt1Title'] = 'Herinneringsemail met een nieuw gegenereerde sleutel';
+$lang['UAM_remailtxt2Title'] = 'Herinneringsemail zonder een nieuw gegenereerde sleutel';
+$lang['UAM_confirmstatTitle'] = 'Statuten';
+$lang['UAM_confirmlevelTitle'] = 'Privacy niveau';
+$lang['UAM_confirmgrpTitle'] = 'Groepen';
+$lang['UAM_GTAutoGpTitle_d'] = 'De automatische wijziging van een groep, status of privacy niveau is te vergelijken met een degradatie (terugzetting) van de betrokken accounts. Het werkt volgens hetzelfde principe als de bevestiging van het groeps, status of privacy niveau (zie &quot;Instellingen van registratiebevestiging&quot;). Definieer daarom een groep, status en/of niveau voor degradatie in de toegang tot de galerie. Als dit al is gedefinieerd tjidens de registratiebevestiging, dan kan je dezelfde groep, status of niveau gebruiken.<br/><br/>
+<b style=&quot;color: red;&quot;>Nota Bene:</b> Als een spook bezoeker nog steeds niets heeft vernomen vanaf de tijdslimiet, en ondanks het automatische email bericht (als deze tenminste is geactiveerd), wordt hij automatisch verwijderd uit de database.';
+$lang['UAM_GTAutoDelTitle_d'] = 'Dit geldt alleen als de gebruiker, van wie de account is verlopen, het verwijderingsmechanisme start (het is zeldzaam, maar wel mogelijk). Dan wordt zijn verbinding met de galerie verbroken en wordt hij doorgestuurd naar een pagina die de verwijdering van zijn account toont met, waarschijnlijk, ook de reden van verwijdering.
+<br/><br/>
+Aanpassen van de inhoud met speciaal ingevoegde labels:<br/>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> het invoegen van de titel van je galerie.<br/>
+- <b style=&quot;color: red;&quot;>[myurl]</b> het invoegen van je galerie URL als dit tenminste is ingesteld in de Piwigo intellingen.<br/>
+<b style=&quot;color: red;&quot;>[gebruikersnaam]</b> is hier niet beschikbaar, omdat de betrokken gebruiker is verwijderd.
+<br/><br/>
+Aangepaste tekst voor de doorstuurpagina kan in dit tekstveld (is compatibel met de FCK Tekstverwerker) worden getypt. Voor meerdere talen kan je de labels van de plugin Extended Description gebruiken - [lang=][/lang]-, als deze geactiveerd is.';
