@@ -94,3 +94,56 @@ Aanpassen van de inhoud met speciaal ingevoegde labels:<br/>
 <b style=&quot;color: red;&quot;>[gebruikersnaam]</b> is hier niet beschikbaar, omdat de betrokken gebruiker is verwijderd.
 <br/><br/>
 Aangepaste tekst voor de doorstuurpagina kan in dit tekstveld (is compatibel met de FCK Tekstverwerker) worden getypt. Voor meerdere talen kan je de labels van de plugin Extended Description gebruiken - [lang=][/lang]-, als deze geactiveerd is.';
+$lang['UAM_USRAutoTitle_d'] = 'De automatische verwerking van onbevestigde bezoekers wordt, elke keer wanneer je verbinding maakt met de galerie, ingeschakeld en werkt als volgt:
+<br/><br/>
+- Automatische verwijdering van accounts die niet binnen de toegestane periode zijn bevestigd zonder het verzenden van een automatische emailherinnering -> &quot;Beperkte vervaldatum voor registratie bevestiging&quot; <b><u>ingeschakeld</u></b> en &quot;Herinner onbevestigde gebruikers&quot; <b><u>uitgeschakeld</u></b>.
+<br/><br/>
+- Automatische verzending van een emailherinnering met een nieuwe sleutel en automatische verwijdering van accounts die niet zijn bevestigd na het verzenden van de emailherinnering -> &quot;Beperkte vervaldatum voor registratiebevestiging&quot; <b><u>ingeschakeld</u></b> en &quot;Herinnering aan onbevestigde gebruikers&quot; <b><u>ingeschakeld</u></b>.';
+$lang['UAM_USRAutoMailTitle_d'] = 'Als deze functie geactiveerd is zal er automatisch een  &quot;Herinneringsemail met persoonlijke inhoud worden verzonden, tezamen met een nieuw gegenereerde sleutel&quot; naar bezoekers die aan de voorwaarden voldoen.';
+$lang['UAM_USRAutoDelTitle_d'] = 'Dit is alleen geldig wanneer de gebruiker van wie het account is verlopen het verwijderingsmechanisme inschakelt (zeldzaam maar desondanks mogelijk). Zijn verbinding met de galerie is dan verbroken en hij wordt doorverwezen naar een pagina die de verwijdering van zijn account laat zien. En, mogelijk ook de redenen van deze verwijdering.
+<br/><br/>
+Pas vervolgens de inhoud aan met speciaal ingevoegde labels:<br/>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> het invoegen van de titel van je galerie.<br/>
+- <b style=&quot;color: red;&quot;>[myurl]</b> het invoegen van je galerie URL mits dit is ingesteld in de Piwigo instellingen.
+<b style=&quot;color: red;&quot;>[gebruikersnaam]</b> is niet beschikbaar hier, omdat de betrokken gebruiker is verwijderd.
+<br/><br/>
+Aangepaste tekst voor de doorverwijzingspagina kan in dit tekstveld (is compatibel met de FCK tekstverwerker) worden ingevoegd. Voor meerdere talen kan je de labels [lang=?][/lang] van de plugin Extended Description gebruiken als deze geactiveerd is.';
+$lang['UAM_Tracking registered users_d'] = 'Dit activeert een tabel in het &quot;Opsporing van geregistreerde gebruikers&quot; tabblad waar een lijst is te vinden van geregistreerde galerie-gebruikers met de datum van hun laatste bezoek en de tijd die verstreken is sinds hun laatste bezoek (in dagen). De controle heeft alleen informatiewaarde voor de beheerder van de galerie.';
+$lang['UAM_StuffsTitle_d'] = 'Dit activeert een extra UAM blok in de plugin PWG Stuffs (mits geïnstalleerd) om je bezoekers, die niet hebben bevestigd, te informeren over hun status.
+<br/><br/>
+Kijk voor details naar de <b>Tips en Voorbeelden</b> onderaan deze pagina.';
+$lang['UAM_RejectConnexion_d'] = 'Als je deze optie hebt geactiveerd, kunnen nieuwe geregistreerde, maar nog niet bevestigde gebruikers geen verbinding met de galerie maken. Ze worden doorverwezen naar een specials pagina die hen informeert over hun status.<br/><br/>
+<b style=&quot;color: red;&quot;>Waarschuwing - Deze mogelijkheid werkt alleen in samenhang met bevestigingsgroepen! Zie hieronder hoe je groepen instelt.</b>';
+$lang['UAM_MailInfo_Subject_d'] = 'Voeg hier je aangepaste informatie email onderwerp in.<br/>
+Standaard heeft het tekstveld een algemene tekst in het Engels, maar dit kan je veranderen en je kan gebruikmaken van de vertalingslabels [lang=?][/lang] van de plugin Extended Description, mits je deze hebt geïnstalleerd.
+<br/><br/>
+De volgende extra aanpassingslabels zijn beschikbaar zonder de plugin Extended Description:<br/>
+- <b style=&quot;color: red;&quot;>[gebruikersnaam]</b> het automatisch invoegen van de naam van de bestemmingsgebruiker van de email.<br/>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> het invoegen van de titel van je galerie.<br/>';
+$lang['UAM_GTReminder_Subject_d'] = 'Voeg hier je aangepaste handmatige Ghost Tracker herinneringsemail onderwerp in.<br/>
+Standaard heeft het tekstveld een algemene tekst in het Engels, maar dit kan je veranderen en je kan gebruikmaken van de vertalingslabels [lang=?][/lang] van de plugin Extended Description, mits je deze hebt geïnstalleerd.
+<br/><br/>
+De volgende extra aanpassingslabels zijn beschikbaar zonder de plugin Extended Description:<br/>
+- <b style=&quot;color: red;&quot;>[gebruikersnaam]</b> het automatisch invoegen van de naam van de bestemmingsgebruiker van de email.<br/>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> het invoegen van de titel van je galerie.<br/>';
+$lang['UAM_GTAutomail_Text_d'] = 'Voeg de aangepaste tekst in die ook toelicht waarom een degradatie heeft plaatsgevonden. Dit zal bij de link ter bevestiging komen. De aangepaste tekst is niet verplicht maar wordt wel sterk aanbevolen. Je bezoekers zullen het niet op prijs stellen om een email te krijgen waarin alleen een link staat zonder verdere toelichting.;-)
+<br/><br/>
+Pas vervolgens de inhoud aan met speciaal ingevoegde labels:<br/>
+- <b style=&quot;color: red;&quot;>[gebruikersnaam]</b> het automatisch invoegen van de naam van de bestemmingsgebruiker van de email.<br/>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> het invoegen van de titel van je galerie.<br/>
+- <b style=&quot;color: red;&quot;>[myurl]</b> het invoegen van je galerie URL mits dit is ingesteld in de Piwigo instellingen.
+<br/><br/>
+Voor meerdere talen kan je de labels van de plugin Extended Description gebruiken als deze geactiveerd is.
+';
+$lang['UAM_GTAutomail_Subject_d'] = 'Voeg hier je aangepaste automatische Ghost Tracker degradatie email onderwerp in.<br/>
+Standaard heeft het tekstveld een algemene tekst in het Engels, maar dit kan je veranderen en je kan gebruikmaken van de vertalingslabels [lang=?][/lang] van de plugin Extended Description, mits je deze hebt geïnstalleerd.
+<br/><br/>
+De volgende extra aanpassingslabels zijn beschikbaar zonder de plugin Extended Description:<br/>
+- <b style=&quot;color: red;&quot;>[gebruikersnaam]</b> het automatisch invoegen van de naam van de bestemmingsgebruiker van de email.<br/>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> het invoegen van de titel van je galerie.<br/>';
+$lang['UAM_GTAutoTitle_d'] = 'Deze optie maakt het mogelijk om regels toe te passen voor automatisch beheer van spook gebruikers.<br/><br/>Basis Principe: Een gebruiker heeft de maximale periode tussen zijn bezoeken bereikt <b><u>en</u></b>is al op de hoogte gesteld via email dat hij wordt beschouwd als verlopen. Dan kan je automatische regels in werking stellen zoals automatische verwijdering van verlopen accounts of degradatie d.m.v. beperkte toegang tot de galerie (automatische verschuiving naar een groep en/of status met beperkingen).
+<br/><br/>Het inschakelen van deze automatisering wordt bereikt wanneer gebruikers (dus elke gebruiker!) wordt verbonden aan de galerie.';
+$lang['UAM_GTAutoMailTitle_d'] = 'Als een account is verlopen (groep/status/privacy niveau veranderen door de degradatie van de bezoeker), kan er een email verstuurd worden met uitleg over de redenen voor deze verandering en een manier om de oorspronkelijke toegang tot de galerie te herstellen.
+<br/>Dit kan je doen middels een bijlage met een link naar herbevestiging van registratie in de email (automatische aanmaak van een nieuwe bevestigingssleutel). <b style=&quot;color: red;&quot;>Als de gebruiker al is geïnformeerd, zal zijn account automatisch worden verwijderd.</b> 
+<br/><br/>
+<b style=&quot;color: red;&quot;>Waarschuwing: Het gebruik van deze functie is nauw verbonden met de registratiebevestiging van de gebruiker (bevestiging per email) en kan niet worden geactiveerd zonder deze optie.</b>';
