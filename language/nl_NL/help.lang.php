@@ -147,3 +147,75 @@ $lang['UAM_GTAutoMailTitle_d'] = 'Als een account is verlopen (groep/status/priv
 <br/>Dit kan je doen middels een bijlage met een link naar herbevestiging van registratie in de email (automatische aanmaak van een nieuwe bevestigingssleutel). <b style=&quot;color: red;&quot;>Als de gebruiker al is geïnformeerd, zal zijn account automatisch worden verwijderd.</b> 
 <br/><br/>
 <b style=&quot;color: red;&quot;>Waarschuwing: Het gebruik van deze functie is nauw verbonden met de registratiebevestiging van de gebruiker (bevestiging per email) en kan niet worden geactiveerd zonder deze optie.</b>';
+$lang['UAM_confirmmail_custom1_d'] = 'Als de optie &quot;Bevestiging van Registratie&quot; is geactiveerd, dan heb je met dit tekstveld de mogelijkheid om je <b><u>acceptatie tekst</u></b> op de registratie bevestigingspagina aan te passen. Deze verschijnt als de gebruiker klikt op de bevestigingslink in de email.
+<br/><br/>
+Nadat je de plugin hebt geïnstalleerd is er een standaard tekst als voorbeeld.
+<br/><br/>
+Vervolgens kan je inhoud verder aanpassen met speciaal ingevoegde labels:<br/>
+- <b style=&quot;color: red;&quot;>[gebruikersnaam]</b> het automatisch invoegen van de betrokken gebruikersnaam.<br/>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> het invoegen van de titel van je galerie.<br/>
+- <b style=&quot;color: red;&quot;>[myurl]</b> het invoegen van de galerie URL mits je dit hebt ingesteld in de Piwigo instellingen.
+<br/><br/>
+Dit tekstveld is compatibel met de FCK Tekstverwerker. Voor meerdere talen kan je de labels [lang=?] [/lang] van de plugin Extended Description gebruiken als je deze hebt geactiveerd.
+';
+$lang['UAM_mailexcTitle_d'] = 'Standaard accepteert Piwigo alle email-adressen in het formaat xxx@yyy.zz. Het inschakelen van deze optie geeft je de mogelijkheid bepaalde domeinen met het formaat @ [domein_naam].[domein_extensie] uit te sluiten.<br/><br/>
+Voorbeelden:<br/>
+@hotmail.com -> uitsluiting van de adressen *@hotmail.com<br/>
+@hotmail -> uitsluiting van de adressen *@hotmail*<br/><br/>
+<b style=&quot;color: red;&quot;>Waarschuwing - Deze mogelijkheid werkt alleen als emails verplicht zijn voor registratie! Zie hiervoor de instellingsopties van Piwigo.</b>';
+$lang['UAM_ghosttrackerTitle_d'] = 'Wordt ook &quot;Ghost Tracker&quot; genoemd. Als deze functie is geactiveerd kan je je bezoekers beheren, afhankelijk van de frequentie waarmee ze je galerie bezoeken. Er zijn 2 bewerkingsmodi beschikbaar:<br/><br/>
+- Handmatig beheer: Als de periode tussen 2 bezoeken is bereikt, verschijnt de bezoeker in de &quot;Ghost Tracker&quot;-lijst. Hiervandaan kan je de bezoekers een herinnering via email sturen of hem verwijderen.<br/><br/>
+- Automatisch beheer: Als de periode tussen 2 bezoeken is bereikt, wordt de bezoeker automatisch verwijderd of verplaatst naar een wachtende groep en/of status. In het tweede geval kan er een informatie per email naar hem verstuurd worden.<br/><br/>
+<b style=&quot;color: red;&quot;>Belangrijk: Als je deze mogelijkheid de eerste keer inschakelt of re-activeert, na \'m een lange tijd niet gebruikt te hebben, maar waarin wel nieuwe bezoekers zich hebben geregistreerd, moet je de Ghost Tracker initialiseren of resetten (zie de bijbehorende instructies op het tabblad &quot;Ghost Tracker&quot;).</b>';
+$lang['UAM_confirmtxtTitle_d'] = 'Voeg de tekst ter introductie in die je in de emailbevestiging van registratie wilt laten zien.
+<br/><br/>
+Vervolgens kan je inhoud verder aanpassen met speciaal ingevoegde labels:<br/>
+- <b style=&quot;color: red;&quot;>[gebruikersnaam]</b> het automatisch invoegen van de betrokken gebruikersnaam.<br/>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> het invoegen van de titel van je galerie.<br/>
+- <b style=&quot;color: red;&quot;>[myurl]</b> het invoegen van de galerie URL mits je dit hebt ingesteld in de Piwigo instellingen.<br/>
+- <b style=&quot;color: red;&quot;>[Kdays]</b> het invoegen van het aantal dagen waarbinnen de registratie moet worden bevestigd (&quot;Beperking van de verloopdatum voor registratie bevestiging;&quot; moet ingeschakeld zijn).
+<br/><br/>
+Voor meerdere talen kan je de labels [lang=?] [/lang] van de plugin Extended Description gebruiken als je deze hebt geactiveerd.';
+$lang['UAM_confirmmail_custom2_d'] = 'Als de optie &quot;Bevestiging van Registratie&quot; is geactiveerd, dan heb je met dit tekstveld de mogelijkheid om je <b><u>afwijzings tekst</u></b> op de registratie bevestigingspagina aan te passen. Deze verschijnt als de gebruiker klikt op de bevestigingslink in de email.
+<br/><br/>
+Nadat je de plugin hebt geïnstalleerd is er een standaard tekst als voorbeeld.
+<br/><br/>
+Vervolgens kan je inhoud verder aanpassen met speciaal ingevoegde labels:<br/>
+- <b style=&quot;color: red;&quot;>[gebruikersnaam]</b> het automatisch invoegen van de betrokken gebruikersnaam.<br/>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> het invoegen van de titel van je galerie.<br/>
+- <b style=&quot;color: red;&quot;>[myurl]</b> het invoegen van de galerie URL mits je dit hebt ingesteld in de Piwigo instellingen.
+<br/><br/>
+Dit tekstveld is compatibel met de FCK Tekstverwerker. Voor meerdere talen kan je de labels [lang=?] [/lang] van de plugin Extended Description gebruiken als je deze hebt geactiveerd.';
+$lang['UAM_miscTitle_d'] = '- Controle van geregistreerde gebruikers<br/>
+- Opmerkingen bij bijnamen verplicht voor gasten<br/>
+...';
+$lang['UAM_infomailTitle_d'] = 'Deze optie maakt het mogelijk dat er automatisch een email met informatie wordt verzonden naar een gebruiker als deze zijn wachtwoord of zijn email-adres verandert op zijn profielpagina.<br/><br/>
+De inhoud van het verzonden bericht bestaat uit een aanpasbaar gedeelte (voor een welkomst boodschap) en een vaststaand gedeelte met de inlognaam, het wachtwoord en email-adres van de gebruiker.';
+$lang['UAM_confirmstatTitle_d'] = '<b style=&quot;color: red;&quot;>WAARSCHUWING: Het gebruik van statussen bij de bevestiging vereist dat je de &quot;Gast&quot; gebruiker in de standaard instelling voor nieuw geregistreerden hebt staan (als gebruikers sjabloon). NB Je kan elke gebruiker instellen als een sjabloon voor nieuw geregistreerden. Raadpleeg de documentatie van Piwigo voor meer informatie.
+</b><br/><br/>
+Statussen worden gevalideerd in samenhang met de &quot;Registratie Bevestiging&quot;';
+$lang['UAM_confirmmailTitle_d'] = 'Deze optie maakt het mogelijk voor een gebruiker om zijn registratie te bevestigen via een link in de email die is verzonden na zijn registratie. Of voor beheerders om de registratie handmatig te activeren.
+<br/><br/>
+In het eerste geval is de email opgesteld met een aanpasbaar gedeelte voor een welkomstgroet aan het begin. Dan is er een vaststaand gedeelte dat de activeringslink bevat, gegenereerd door een willekeurige sleutel, die bovendien opnieuw geproduceerd kan worden via het tabblad &quot;Bevestigingen Volgen&quot;.
+<br/><br/>
+In het tweede geval wordt de validatielink gezonden naar de beheerders. Bezoekers moeten wachten tot de beheerder zelf de bevestiging verricht met de validatielink of in het tabblad &quot;Bevestigingen Volgen&quot;.
+<br/>
+<b style=&quot;color: red;&quot;>NB: De opties &quot;Beperkte verloopdatum voor registratiebevestiging&quot; en &quot;Herinnering onbevestigde gebruikers&quot; moeten uitgeschakeld zijn als de handmatige bevestiging door de beheerder is ingeschakeld.</b>
+<br/><br/>
+Deze optie wordt meestal gebruikt met de automatische toewijzing van groepen en/of statussen. Bij voorbeeld: een gebruiker die zijn registratie niet heeft bevestigd, wordt in een speciale gebruikersgroep geplaatst (met of zonder beperkingen in de galerie). Terwijl een gebruiker die zijn registratie heeft bevestigd, in een &quot;normale&quot; groep zal worden geplaatst. ';
+$lang['UAM_confirmlevelTitle_d'] = '<b style=&quot;color: red;&quot;>WAARSCHUWING: Wanneer je een privacy niveau gebruikt moet je dit bij je foto\'s hebben aangegeven. Raadpleeg de documentatie van Piwigo voor meer informatie.</b><br/><br/>
+Het privacy niveau is geldig in samenhang met de &quot;Registratiebevestiging&quot;';
+$lang['UAM_confirmgrpTitle_d'] = '<b style=&quot;color: red;&quot;>WAARSCHUWING: Wanneer je een bevestiging van een groep doet, moet je tenminste een gebruikersgroep hebben aangemaakt en gedefinieerd &quot;als standaardinstelling&quot; in Piwigo\'s gebruikersgroep beheer.</b><br/><br/>';
+$lang['UAM_confirmTitle_d'] = '- Genereren van email ter informatie<br/>
+- Genereren van email ter bevestiging van een registratie<br/>
+- Automatische samenvoeging van groepen, status of privacy niveau<br/>
+- Verloopdatum voor de bevestiging van een registratie<br/>
+- Genereren van email ter herinnering<br/>
+...';
+$lang['UAM_carexcTitle_d'] = 'Het kan nodig zijn om bepaalde lettertekens te verbieden in gebruikersnamen (bv. het weigeren van inlognamen waarin @ voorkomt). Deze optie maakt het mogelijk om lettertekens of een volgorde van lettertekens uit te sluiten.<br/>
+NB: Deze optie kan ook complete woorden uitsluiten.
+<br/><br/>
+<b style=&quot;color: red;&quot;>Waarschuwing: Deze optie werkt niet voor gebruikers die hun naam hebben aangemaakt voordat je deze hebt ingeschakeld.</b>';
+$lang['UAM_adminconfmailTitle_d'] = 'Je kunt deze bevestiging alleen uitschakelen voor gebruikersaccounts die zijn aangemaakt via Piwigo\'s gebruikersbeheer.<br/><br/>
+Met de activering van deze optie wordt er een email registratiebevestiging verzonden naar elke gebruiker die is aangemaakt door de beheerder.<br/><br/>
+Met de uitschakeling van deze optie (is de standaard instelling) wordt er alleen een email met informatie verzonden (mits &quot;Informatie email naar de gebruiker&quot; is ingeschakeld). Bovendien wordt de aangemaakte gebruiker standaard <b>beschouwd als gevalideerd</b>.';
