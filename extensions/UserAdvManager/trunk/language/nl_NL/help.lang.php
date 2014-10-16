@@ -219,3 +219,34 @@ NB: Deze optie kan ook complete woorden uitsluiten.
 $lang['UAM_adminconfmailTitle_d'] = 'Je kunt deze bevestiging alleen uitschakelen voor gebruikersaccounts die zijn aangemaakt via Piwigo\'s gebruikersbeheer.<br/><br/>
 Met de activering van deze optie wordt er een email registratiebevestiging verzonden naar elke gebruiker die is aangemaakt door de beheerder.<br/><br/>
 Met de uitschakeling van deze optie (is de standaard instelling) wordt er alleen een email met informatie verzonden (mits &quot;Informatie email naar de gebruiker&quot; is ingeschakeld). Bovendien wordt de aangemaakte gebruiker standaard <b>beschouwd als gevalideerd</b>.';
+$lang['UAM_remailTitle_d'] = 'Met deze optie kan je een herinneringsemail versturen naar geregistreerde gebruikers die niet op tijd hun registratie hebben bevestigd. Deze optie werkt nauw samen met &quot;Registratie Bevestiging&quot;
+<br/><br/>
+Er kunnen 2 soorten email verstuurd worden: Met of zonder herstel van de bevestigingssleutel. Verder kan de inhoud van de email worden aangepast.
+<br/><br/>
+Raadpleeg het tabblad &quot;Bevestigingscontrole &quot;
+<br/><br/>
+Als deze optie en ook de optie &quot;Beperkte verloopdatum van de registratie bevestiging&quot; zijn geactiveerd, zullen er nieuwe opties verschijnen in dit deel waarmee je de automatisering van onbevestigde gebruikers kunt beheren.';
+$lang['UAM_infotxtTitle_d'] = 'Voeg de introductietekst in de informatie-email.
+<br/><br/>
+Vervolgens kan je de inhoud aanpassen met speciaal ingevoegde labels:<br/>
+- <b style=&quot;color: red;&quot;>[gebruikersnaam]</b> het automatisch invoegen van de naam van de gebruiker voor wie de email bestemd is.<br/>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> het invoegen van de titel van je galerie.<br/>
+- <b style=&quot;color: red;&quot;>[myurl]</b> het invoegen van de URL van je galerie, mits je deze hebt ingesteld in Piwigo\'s instellingen.<br/>
+<br/><br/>
+Voor meerdere tal kan je de labels van de plugin Extended Description gebruiken als deze is geactiveerd.';
+$lang['UAM_gttextTitle_d'] = 'Voeg je eigen tekst in de herinneringsemail om de gebruiker aan te sporen de galerie weer te bezoeken (NB. De vooraf ingevulde tekst is een voorbeeld).
+<br/><br/>
+Vervolgens kan je de inhoud aanpassen met speciaal ingevoegde labels:<br/>
+- <b style=&quot;color: red;&quot;>[gebruikersnaam]</b> het automatisch invoegen van de naam van de gebruiker voor wie de email bestemd is.<br/>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> het invoegen van de titel van je galerie.<br/>
+- <b style=&quot;color: red;&quot;>[myurl]</b> het invoegen van de URL van je galerie, mits je deze hebt ingesteld in Piwigo\'s instellingen.<br/>
+- <b style=&quot;color: red;&quot;>[dagen]</b> het invoegen van het maximaal aantal dagen tussen 2 bezoeken.
+<br/><br/>
+Voor meerdere tal kan je de labels van de plugin Extended Description gebruiken als deze is geactiveerd.';
+$lang['UAM_gtTitle_d'] = 'Als Ghost Tracker is ingeschakeld en geïnitialiseerd, dan vind je hier een lijst met geregistreerde bezoekers die sinds x dagen niet zijn terug geweest. &quot;x&quot; is het aantal dagen dat is ingesteld in het tabblad Algemene Instellingen. Bovendien zie je een kolom waarin staat of er een herinneringsemail is verzonden naar deze bezoekers. Je ziet dus direct de bezoekers die geen aandacht hebben gegeven aan de herinnering.<br/><br/>In dit scherm kan je:
+<br/><br/>
+- Handmatig accounts verwijderen<b>(handmatige verwijdering)</b>
+<br/>
+- Een herinneringsemail genereren<b>met een reset van de laatste bezoekdatum</b>. Hiermee geef je een \'joker\' aan de beoogde bezoeker. Als de bezoeker al een herinneringsemail heeft gehad kan je toch een nieuwe email sturen waarin de datum van het laatste bezoek opnieuw wordt ingesteld.
+<br/><br/>
+<b>Tabel Sorteerfunctie</b>:Je kan de data sorteren door op de kolom-kop te klikken. Houdt de SHIFT-toets vast om tot 4 gelijktijdige kolommen te sorteren. ';
