@@ -23,15 +23,17 @@
 $lang['UAM_Default_GhstDemotion_Txt'] = 'Sorry [gebruikersnaam], je account is afgeschaft, omdat je laatste bezoek aan [mygallery] te lang geleden is. We verzoeken je om de onderstaande link te gebruiken om je account te herbevestigen.';
 $lang['UAM_Default_GhstDeletion_Txt'] = 'Sorry [gebruikersnaam], je account is verwijderd omdat je laatste bezoek aan [mygallery] te lang geleden is. We verzoeken je om opnieuw te registreren.';
 $lang['UAM_Default_GTReminder_Subject'] = '[gebruikersnaam] - Het is lang geleden dat je [mygallery] hebt bezocht';
-$lang['UAM_Default_GTAutoMail_Subject'] = '[gebruikersnaam] - Je account is teruggezet naar een lager nuiveau op [mygallery]';
+$lang['UAM_Default_GTAutoMail_Subject'] = '[gebruikersnaam] - Je account is teruggezet naar een lager niveau op [mygallery]';
 $lang['UAM_Default_ConfirmMail_Txt'] = 'Hallo [gebruikersnaam]! Bedankt voor je registratie op [mygallery].
 
-Met een klik op de link in dit bericht maak je je registratie compleet en kan je door de afbeeldingen bladeren.';
+Met een klik op de link in dit bericht rond je je registratie af en kan je door de afbeeldingen bladeren.';
 $lang['UAM_Default_ConfirmMail_Subject'] = '[gebruikersnaam] registratie bevestiging ingeschakeld op [mygallery]';
 $lang['UAM_Default_ConfirmMail_Remail_Subject'] = 'Herinnering - [gebruikersnaam]registratie bevestiging ingeschakeld op [mygallery]';
 $lang['UAM_Default_CfmMail_Remail_Txt2'] = 'Hallo [gebruikersnaam].
 
-Dit is een bericht ter herinnering: je hebt je geregistreerd op onze galerie [mygallery], maar je hebt je registratie niet bevestigd en je bevestigingssleutel gaat verlopen. Om toegang te hebben tot onze galerie heb je x dagen om je registratie te bevestigen door op de link te klikken in het bericht dat je hebt ontvangen toen je je registreerde.
+Dit is een bericht ter herinnering: je hebt je geregistreerd op onze galerie [mygallery], maar je hebt je registratie niet bevestigd en je bevestigingssleutel gaat verlopen. Om toegang te hebben tot onze galerie heb je x dagen om je registratie te bevestigen door op de link te klikken in het bericht dat je hebt ontvangen na je registratie.
+
+NB: Na deze periode zal je account blijvend worden verwijderd.';
 
 NB: Na deze periode zal je account blijvend worden verwijderd.';
 $lang['UAM_Default_CfmMail_Remail_Txt1'] = 'Hallo [gebruikersnaam].
@@ -43,15 +45,15 @@ NB: Na deze periode zal je account blijvend worden verwijderd.';
 $lang['UAM_Default_CfmMail_Custom_Txt2'] = 'Onjuiste / verlopen activatiesleutel of het account is reeds gevalideerd.';
 $lang['UAM_Default_CfmMail_Custom_Txt1'] = '[gebruikersnaam] account is succesvol gevalideerd!';
 $lang['UAM_Default_AdminValidation_Txt'] = 'Hallo [gebruikersnaam]! Bedankt voor je registratie en welkom op [mygallery].';
-$lang['UAM_Default_AdminValidationMail_Subject'] = '[gebruikersnaam] - Registratie gevalideerd ingeschakeld [mygallery]';
+$lang['UAM_Default_AdminValidationMail_Subject'] = '[gebruikersnaam] - Registratie is gevalideerd in [mygallery]';
 $lang['UAM_Customize_messagesandmails'] = 'Aanpassing van berichten en emails';
-$lang['UAM_CustomPasswRetr'] = 'Aanpassing van de email tbv een verloren gegaan wachtwoord';
-$lang['UAM_Confirm_grpstat_notice'] = 'Let op: Het wordt aangeraden om ofwel de groep ofwel de status bevestiging te gebruiken. Gebruik ze niet tegelijkertijd. Het privacy niveau kan in combinatie met een groep of status toewijzing worden gebruikt.';
-$lang['UAM_Confirm_Status'] = 'Status <b style="color: red;">Waarschuwing: Maak geen gebruik van de "Gast" status. Dit is zinloos en wordt in toekomstige versies verwijderd</b><br/>(verlaat ------- en behoud de standaard van Piwigo)';
+$lang['UAM_CustomPasswRetr'] = 'Aanpassing van de email t.b.v. een verloren gegaan wachtwoord';
+$lang['UAM_Confirm_grpstat_notice'] = 'Let op: Het wordt aangeraden om ofwel de groep ofwel de status bevestiging te gebruiken. Gebruik ze niet gelijktijdig. Het privacy niveau kan in combinatie met een groep of status toewijzing worden gebruikt.';
+$lang['UAM_Confirm_Status'] = 'Status <b style="color: red;">Waarschuwing: Maak geen gebruik van de "Gast" status. Dit is zinloos en wordt in toekomstige versies verwijderd</b><br/>(verlaat ------- om de standaard van Piwigo te behouden)';
 $lang['UAM_Confirm_Mail_true'] = 'Activeer - Bevestiging door de gebruiker';
 $lang['UAM_Confirm_Mail_local'] = 'Activeer - Bevestiging door de beheerder';
-$lang['UAM_Confirm_Group'] = 'Groepen<br/>(verlaat ------- brengt geen veranderingen aan de groep)';
-$lang['UAM_Confirm_Level'] = 'Privacy niveau<br/>(verlaat ------- behoud Piwigo\'s standaard)';
+$lang['UAM_Confirm_Group'] = 'Groepen<br/>(verlaat ------- om geen veranderingen in de groep aan te brengen)';
+$lang['UAM_Confirm_Level'] = 'Privacy niveau<br/>(verlaat ------- om Piwigo\'s standaard te behouden)';
 $lang['UAM_Confirm_Mail'] = 'Registratie bevestiging:';
 $lang['UAM_ConfirmMail_TimeOut_true'] = 'Activeer.Het aantal dagen tot vervaldatum: ';
 $lang['UAM_ConfirmMail_Text'] = 'Aanpassing van de bevestigings-email:';
@@ -162,18 +164,18 @@ $lang['UAM_MailInfo_Text'] = 'Aanpassen van de informatie-email:';
 $lang['UAM_MailInfo_Subject'] = 'Aanpassen van informatie-email mbt onderwerp';
 $lang['UAM_MailExclusion_true'] = 'Sluit de volgende domeinen iot: </br>(Gebruik een komma om meerdere domeinen van elkaar te scheiden)';
 $lang['UAM_GTReminder_Subject'] = 'Aanpassen van handmatige emailherinnering mbt Ghost Tracker';
-$lang['UAM_GTAutomail_Text'] = 'Aanpassen van email tekst mbt degradatie';
+$lang['UAM_GTAutomail_Text'] = 'Aanpassen van email tekst m.b.t. degradatie';
 $lang['UAM_GTAutomail_Subject'] = 'Aanpassen van automatisch email onderwerp mbt Ghost Tracker degradatie';
 $lang['UAM_Error_GTAutoMail_cannot_be_set_without_ConfirmMail'] = 'Fout in de samenhang binnen de gekozen configuratie:
 <br/><br/>
-Instelling "Toezicht op geregistreerde gebruikers en andere opties > Spook bezoekers beheer (Ghost Tracker) > Automatisch beheer van spook bezoekers > Automatische emailverzending bij wijziging van groep/status" kan niet worden geactiveerd als de instelling "registratie bevestigingen > registratie bevestiging - bevestiging door gebruiker"> niet eerst is geactiveerd.
+Instelling m.b.t. "het volgen van geregistreerde gebruikers en andere opties > Spook bezoekers beheer (Ghost Tracker) > Automatisch beheer van spook bezoekers > Automatische emailverzending bij wijziging van groep/status" kan niet worden geactiveerd als de instelling "Bevestiging van registratie > registratie bevestiging - bevestiging door gebruiker"> niet eerst is geactiveerd.
 <br/><br/>
-Om samenhang zeker te stellen was de optie "Automatische emailverzending bij wijziging van groep/status op "non actief" gezet.
+Om de samenhang zeker te stellen was de optie "Automatische emailverzending bij wijziging van groep/status op "non actief" gezet.
 <br/><br/>';
 $lang['UAM_Err_audit_advise'] = '<b>je moet correcties aanbrengen om in overeenstemming te zijn met de nieuwe regels die je hebt geactiveerd.</br>Maak gebruik van een database beheervoorziening om gebruikers accounts rechtstreeks in de tabel ###_USERS te corrigeren';
-$lang['UAM_Err_Userlist_Settings'] = 'Deze pagina is alleen beschikbaar als "Toezicht op geregistreerde gebruikers" is geactiveerd in "Registratie instellingen en andere opties".';
-$lang['UAM_Err_UserManager_Settings'] = 'Deze pagina is alleen beschikbaar als "Registratie Bevestiging" is geactiveerd en als een onbevestigde bezoekersgroep is ingesteld in "Registratie instellingen en andere opties".';
-$lang['UAM_Err_GhostTracker_Settings'] = 'Deze pagina is alleen beschikbaar als "Ghost Traker" geactiveerd is in "Registratie instellingen en andere opties".';
+$lang['UAM_Err_Userlist_Settings'] = 'Deze pagina is alleen beschikbaar als "Toezicht op geregistreerde gebruikers" is geactiveerd in "Instellingen voor Registratie en andere opties".';
+$lang['UAM_Err_UserManager_Settings'] = 'Deze pagina is alleen beschikbaar als "Bevestiging van Registratie" is geactiveerd en als een onbevestigde bezoekersgroep is ingesteld in "Registratie instellingen en andere opties".';
+$lang['UAM_Err_GhostTracker_Settings'] = 'Deze pagina is alleen beschikbaar als "Ghost Tracker" geactiveerd is in "Registratie instellingen en andere opties".';
 $lang['UAM_MailExclusion_No'] = 'Uitsluiting van email domeinen - Niet beschikbaar omdat emails niet verplicht zijn voor registratie!';
 $lang['UAM_MailExclusion'] = 'Uitsluiting van email domeinen';
 $lang['UAM_HidePassw'] = 'Wachtwoord in normale tekst in de informatie email';
@@ -209,10 +211,10 @@ $lang['UAM_Enable'] = 'Inschakelen';
 $lang['UAM_Dump_OK'] = 'Het backup-bestand is succesvol gemaakt.';
 $lang['UAM_Dump_NOK'] = 'Fout: Het is niet gelukt om een backup-bestand te maken!';
 $lang['UAM_Dump_Download'] = 'Controleer dit blok om het backup-bestand te downloaden:';
-$lang['UAM_DumpTxt'] = 'Backup en herstel je instellingen';
+$lang['UAM_DumpTxt'] = 'Backup en herstel van je instellingen';
 $lang['UAM_Delete_selected'] = 'Verwijderen';
 $lang['UAM_Disable'] = 'Uitschakelen (standaard)';
-$lang['UAM_Default_ValidationTimeout_Txt'] = 'Sorry, maar je account is verwijderd, omdat je niet binnen de gevraagde periode je registratie hebt bevestigd ([Kdays] dagen). Je kunt je opnieuwe registreren met een geldig en niet geblokkeerd email account.';
+$lang['UAM_Default_ValidationTimeout_Txt'] = 'Sorry, maar je account is verwijderd, omdat je niet binnen de gevraagde periode je registratie hebt bevestigd ([Kdays] dagen). Je kunt je opnieuw registreren met een geldig en niet geblokkeerd email account.';
 $lang['UAM_Default_GhstReminder_Txt'] = 'Hallo [gebruikersnaam], je laatste bezoek aan onze galerie [mygallery] dateert van heel erg lang geleden. Als je je toegangsaccount niet meer wilt gebruiken, laat dit ons dan weten via beantwoording van deze email. Je account zal dan worden verwijderd.
 
 We zullen zijn genoodzaakt je account automatisch te verwijderen wanneer je na ontvangst van dit bericht ons niet meer bezoekt binnen [days] dagen.
@@ -220,8 +222,8 @@ We zullen zijn genoodzaakt je account automatisch te verwijderen wanneer je na o
 Met vriendelijke groet,
 
 Beheerder van de galerie [mygallery] - [myurl]';
-$lang['UAM_Default_RejectConnexion_Txt'] = 'Sorry, maar je registratie is nog niet gevalideerd. Je kunt dus nog niet verbinden met de galerie.';
-$lang['UAM_Default_PwdRequest_Txt'] = 'Je hebt een een nieuwe instelling van je wachtwoord op onze galerie aangevraagd. Hieronder vind je je nieuwe verbindings-instellingen.';
+$lang['UAM_Default_RejectConnexion_Txt'] = 'Sorry, maar je registratie is nog niet gevalideerd. Je kunt dus nog geen verbinding met de galerie maken.';
+$lang['UAM_Default_PwdRequest_Txt'] = 'Je hebt een opnieuw instellen van je wachtwoord op onze galerie aangevraagd. Hieronder vind je je nieuwe verbindings-instellingen.';
 $lang['UAM_Default_InfoMail_Txt'] = 'Hallo [gebruikersnaam]!
 
 Je hebt belangrijke veranderingen aangebracht in je profiel op de galerie [mygallery]. Hieronder vind je je nieuwe instellingen.';
