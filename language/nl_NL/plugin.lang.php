@@ -35,7 +35,6 @@ Dit is een bericht ter herinnering: je hebt je geregistreerd op onze galerie [my
 
 NB: Na deze periode zal je account blijvend worden verwijderd.';
 
-NB: Na deze periode zal je account blijvend worden verwijderd.';
 $lang['UAM_Default_CfmMail_Remail_Txt1'] = 'Hallo [gebruikersnaam].
 
 Dit is een bericht ter herinnering: je hebt je geregistreerd op onze galerie [mygallery], maar je hebt je registratie niet bevestigd en je bevestigingssleutel is verlopen. Om je toch toegang te geven in onze galerie is je bevestigingsperiode opnieuw ingesteld.
