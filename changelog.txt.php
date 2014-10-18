@@ -465,7 +465,7 @@ Plugin Name: UserAdvManager
 
 -- 2.51.1 : Bug 2986 rollback - The fix is not working well. A special notice is added in administration panel
 
--- 2.6.0 : Compatibility with Piwigo 2.6
+-- 2.60.0 : Compatibility with Piwigo 2.6
            HTML5 recommandation improvement
            New tablesorter and tablesorter.pager jquery plugin
            Add sk_SK, thanks to : JoeKundlak
@@ -480,7 +480,7 @@ Plugin Name: UserAdvManager
            Update ru_RU, thanks to : Konve
            Update el_GR, thanks to : bas_alba
 
--- 2.6.1 : Fix bug with UAM module in PWG_Stuff (thx to Gabeek for reporting)
+-- 2.60.1 : Fix bug with UAM module in PWG_Stuff (thx to Gabeek for reporting)
            Obsolete translation keys cleanup
            Update el_GR, thanks to : bas_alba
            Update pt_BR, thanks to : flaviove
@@ -489,11 +489,14 @@ Plugin Name: UserAdvManager
            Update de_DE, thanks to : Joergen
            Update es_ES, thanks to : jpr928
 
--- 2.6.2 : Update da_DK, thanks to : Kaare
+-- 2.60.2 : Update da_DK, thanks to : Kaare
            Update ru_RU, thanks to : Konve
            Update sk_SK, thanks to : JoeKundlak
            Update pt_PT, thanks to : ANO
            Update pt_BR, thanks to : flaviove
 
+-- 2.60.3 : fix preg_replace(): The /e modifier is deprecated (thx to mistic100)
+            Update pt_BR, thanks to : flaviove, oigreslima and msakik
+            Add nl_NL, thanks to : Ellin-E
 */
 ?>
