@@ -11,7 +11,7 @@ include_once (UAM_PATH.'include/functions.inc.php');
 load_language('plugin.lang', UAM_PATH);
 
 
-function plugin_install($id, $version, &$errors)
+function plugin_install()
 {
 	global $conf;
 
@@ -219,7 +219,7 @@ ADD UAM_validated enum("true","false")
 }
 
 
-function plugin_activate($id, $version, &$errors)
+function plugin_activate()
 {
   global $conf;
 

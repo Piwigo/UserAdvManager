@@ -495,10 +495,8 @@ Plugin Name: UserAdvManager
            Update pt_PT, thanks to : ANO
            Update pt_BR, thanks to : flaviove
 
--- 2.70.0 : Compatibility with Piwigo 2.7
-            fix preg_replace(): The /e modifier is deprecated (thx to mistic100)
+-- 2.60.3 : fix preg_replace(): The /e modifier is deprecated (thx to mistic100)
             Update pt_BR, thanks to : flaviove, oigreslima and msakik
-
--- 2.70.1 : Add nl_NL, thanks to : Ellin-E
+            Add nl_NL, thanks to : Ellin-E
 */
 ?>
