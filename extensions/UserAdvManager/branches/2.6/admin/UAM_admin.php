@@ -1274,8 +1274,8 @@ WHERE id = '.$user_id.'
 // +-----------------------------------------------------------------------+
 // |                              groups list                              |
 // +-----------------------------------------------------------------------+
-
-    $groups[-1] = '------------';
+    global $uam_groups; // used in callback
+    $uam_groups[-1] = '------------';
 
     $query = '
 SELECT id, name
@@ -1287,7 +1287,7 @@ ORDER BY name ASC
       
     while ($row = pwg_db_fetch_assoc($result))
     {
-      $groups[$row['id']] = $row['name'];
+      $uam_groups[$row['id']] = $row['name'];
     }
 
 // +-----------------------------------------------------------------------+
@@ -1302,12 +1302,14 @@ ORDER BY name ASC
     {
       $visible_user_list[] = $local_user;
     }
+    
+    $callback = create_function('$m', 'global $uam_groups; return $uam_groups[$m[1]];');
 
     foreach ($visible_user_list as $local_user)
     {
-      $groups_string = preg_replace(
-        '/(\d+)/e',
-        "\$groups['$1']",
+      $groups_string = preg_replace_callback(
+        '/(\d+)/',
+        $callback,
         implode(
           ', ',
           $local_user['groups']
@@ -1377,7 +1379,9 @@ WHERE user_id = '.$local_user['id'].'
           'EXPIRATION'       => $expiration,
         )
       );
-    }   
+    }
+    
+    unset($uam_groups); // remove from global scope
 
     // Check if validation of register is made by admin or visitor 
     // If visitor, $Confirm_Local is used to mask useless buttons
