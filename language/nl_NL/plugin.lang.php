@@ -119,8 +119,6 @@ $lang['UAM_Tab_GhostTracker'] = 'Ghost Tracker (Spook Zoeker)';
 $lang['UAM_Support_txt'] = 'De officiële ondersteuning van deze plugin kan je alleen op dit Piwigo forum-onderwerp vinden:<br/>
 <a href="http://piwigo.org/forum/viewtopic.php?id=15015" onclick="window.open(this.href);return false;">Engels forum - http://piwigo.org/forum/viewtopic.php?id=15015</a><br/><br/>
 Ook is hier de foutzoeker (bugtracker) beschikbaar: <a href="http://piwigo.org/bugs/" onclick="window.open(this.href);return false;">http://piwigo.org/bugs/</a>';
-<a href="http://piwigo.org/forum/viewtopic.php?id=15015" onclick="window.open(this.href);return false;">English forum - http://piwigo.org/forum/viewtopic.php?id=15015</a><br/><br/>
-Ook is hier de foutzoeker (bugtracker) beschikbaar: <a href="http://piwigo.org/bugs/" onclick="window.open(this.href);return false;">http://piwigo.org/bugs/</a>';
 $lang['UAM_Subject admin validation for %s'] = 'De registratie van %s wacht op validatie';
 $lang['UAM_SubTitle4'] = 'Ghost Tracker';
 $lang['UAM_SubTitle1'] = 'Plugin instelling';

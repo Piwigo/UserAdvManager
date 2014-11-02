@@ -498,5 +498,7 @@ Plugin Name: UserAdvManager
 -- 2.60.3 : fix preg_replace(): The /e modifier is deprecated (thx to mistic100)
             Update pt_BR, thanks to : flaviove, oigreslima and msakik
             Add nl_NL, thanks to : Ellin-E
+
+-- 2.60.4 : Update and fix nl_NL, thanks to : ddtddt
 */
 ?>
