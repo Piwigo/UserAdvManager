@@ -500,5 +500,7 @@ Plugin Name: UserAdvManager
             Update pt_BR, thanks to : flaviove, oigreslima and msakik
 
 -- 2.70.1 : Add nl_NL, thanks to : Ellin-E
+
+-- 2.70.2 : Update and fix nl_NL, thanks to : ddtddt
 */
 ?>
