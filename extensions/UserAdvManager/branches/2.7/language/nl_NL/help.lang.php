@@ -35,7 +35,6 @@ $lang['UAM_RejectConnexion_Custom_Txt_d'] = 'Pas hier je tekst aan om onbevestig
 Dit veld is compatibel met de FCK Tekstbewerker. Als je meerdere talen nodig hebt, kan je de [lang] labels gebruiken van de plugin Extended Description, als je deze hebt geactiveerd.';
 $lang['UAM_RedirTitle_d'] = 'Deze optie schakelt een geregistreerde gebruiker direct door naar zijn aanpassingspagina, maar alleen bij zijn eerste verbinding met de galerie.<br/><br/>
 Let op: Deze functie is niet van toepassing op alle gebruikers. Degenen met de &quot;beheerder&quot;, &quot;webmaster&quot; or &quot;algemene&quot; status worden uitgesloten.';
-Let op: Deze functie is niet van toepassing op alle gebruikers. Degenen met de &quot;admin&quot;, &quot;webmaster&quot; or &quot;generic&quot; status worden uitgesloten.';
 $lang['UAM_HidePasswTitle_d'] = 'Kies dit als je het wachtwoord, gekozen door de bezoeker in het emailbericht, te zien wilt krijgen. Als je deze optie inschakelt zal het wachtwoord in normale tekst verschijnen. Bij uitschakeling verschijnt het wachtwoord helemaal niet.';
 $lang['UAM_GTAutoDelTitle'] = 'Aangepast bericht bij een verwijderd account';
 $lang['UAM_DumpTitle_d'] = 'Hiermee is het mogelijk de totale instellingen van de plugin te bewaren in een bestand, zodat je het kan herstellen als er iets mis gaat (bv. na een verkeerde handeling of voordat je een update verricht). Standaard wordt het backup-bestand opgeslagen in deze map ../plugins/UserAdvManager/include/backup/ en hij wordt genoemd &quot;UAM_dbbackup.sql&quot;.
@@ -47,8 +46,6 @@ Het kan soms handig zijn het backup-bestand op je computer over te zetten. Bv. O
 Het herstel middels deze koppeling is alleen beschikbaar voor een lokaal backup-bestand (../plugins/UserAdvManager/include/backup/UAM_dbbackup.sql). Een gedownload backup-bestand kan niet langs deze weg worden hersteld. Om dit voor elkaar te krijgen moet je een hiertoe aangewezen gereedschap voor databasebeheer gebruiken(zoals PhpMyAdmin voor MySql database).
 <br/><br/>  
 <b style=&quot;color: red;&quot;>Waarschuwing: Na het herstel moet je de beheerpagina van de plugin opnieuw inladen om de herstelde instellingen te kunnen zien!</b>';
-<br/><br/>  
-<b style=&quot;color: red;&quot;>Waarschuwing: Na het herstel moet je de beheerpagina van de plugin opnieuw inladen om de herstelde instellingen te kunnen zien!</b>';
 $lang['UAM_CustomPasswRetrTitle_d'] = 'Standaard ontvangt een gebruiker een email met alleen zijn gebruikersnaam en een nieuw wachtwoord wanneer hij zijn wachtwoord kwijt is en de hersteloptie heeft gekozen.
 <br/><br/>
 Hier kan je tekst naar keuze toevoegen om ingevoegd te worden<b><u>voorafgaand</u></b>aan de standaard informatie.
@@ -58,14 +55,7 @@ Je kunt de inhoud verder aanpassen met speciaal ingevoegde labels:<br/>
 - <b style=&quot;color: red;&quot;>[myurl]</b>invoegen van je galerie URL als het tenminste is ingesteld in Piwigo\'s instellingen.
 <br/><br/>
 Om meerdere talen te gebruiken kan je de labels van de plugin Extended Description gebruiken. Als deze plugin tenminste geactiveerd is.';
-<br/><br/>
-Hier kan je tekst naar keuze toevoegen om ingevoegd te worden<b><u>voor</u></b>de standaard informatie.
-<br/><br/>
-Je kunt verder de inhoud verder aanpassen met speciaal ingevoegde labels:<br/>
-- <b style=&quot;color: red;&quot;>[mygallery]</b> het invoegen van de titel van je galerie.<br/>
-- <b style=&quot;color: red;&quot;>[myurl]</b> het invoegen van je galerie URL als het tenminste is ingesteld in Piwigo\'s intellingen.
-<br/><br/>
-Om meerdere talen te gebruiken kan je de labels van de Extended Description plugin gebruiken. Als deze plugin tenminste geactiveerd is.';
+
 $lang['UAM_AdminValidationMail_d'] = 'Als een beheerder of webmaster van de galerie handmatig bevestigt dat een registratie in behandeling is, wordt er automatisch een emailbericht naar de gebruiker verzonden. Voeg hier de tekst in voor de email.
 <br/><br/>
 Je kunt de inhoud verder aanpassen met speciaal ingevoegde labels:
@@ -74,32 +64,12 @@ Je kunt de inhoud verder aanpassen met speciaal ingevoegde labels:
 - <b style=&quot;color: red;&quot;>[myurl]</b> invoegen van de galerie-URL mits dit is ingesteld in Piwigo\'s instellingen.
 <br/><br/>
 Om meerdere talen te gebruiken kan je de labels van de plugin Extended Description gebruiken. Als deze plugin tenminste geactiveerd is.';
-<br/><br/>
-Je kunt de inhoud verder aanpassen met speciaal ingevoegde labels:
-- <br/><b style=&quot;color: red;&quot;>[username]</b> het automatisch invoegen van de naam van de bestemde gebruiker van de email.<br/>
-- <b style=&quot;color: red;&quot;>[mygallery]</b> het invoegen van de titel van je galerie.<br/>
-- <b style=&quot;color: red;&quot;>[myurl]</b> het invoegen van de galerie-URL als dit is ingesteld in Piwigo\'s instellingen.
-<br/><br/>
-Om meerdere talen te gebruiken kan je de labels van de Extended Description plugin gebruiken. Als deze plugin tenminste geactiveerd is.';
 $lang['UAM_ConfirmMail_Subject_d'] = 'Voeg hier het onderwerp in van je aangepaste registratie emailbevestiging.<br/>
 Standaard heeft het tekstveld een algemene tekst in het Engels, maar je kan dit veranderen en de taal-labels [lang=?][/lang]gebruiken van de plugin Extended Description. Als je deze tenminste hebt geïnstalleerd.
 <br/><br/>
 De volgende extra aanpassings-labels zijn beschikbaar zonder de plugin Extended Description:<br/>
 - <b style=&quot;color: red;&quot;>[gebruikersnaam]</b> automatisch invoegen van de naam van de bestemde gebruiker van de email.<br/>
 - <b style=&quot;color: red;&quot;>[mygallery]</b>invoegen van je galerietitel.<br/>';
-- <b style=&quot;color: red;&quot;>[gebruikersnaam]</b> het automatisch invoegen van de naam van de bestemde gebruiker van de email.<br/>
-- <b style=&quot;color: red;&quot;>[mygallery]</b> het invoegen van de titel van je galerie.<br/>';
-$lang['UAM_ConfirmMail_ReMail_Subject_d'] = 'Voeg hier het onderwerp in van je aangepaste registratie bevestiging emailherinnering (met of zonder nieuwe sleutel aanmaak).<br/>
-Standaard heeft het tekstveld een algemene tekst in het Engels, maar je kan dit veranderen en de taal-labels [lang=?][/lang]gebruiken van de plugin Extended Description. Als je deze tenminste hebt geïnstalleerd.
-<br/><br/>
-De volgende extra aanpassings-labels zijn beschikbaar zonder de plugin Extended Description:<br/>
-- <b style=&quot;color: red;&quot;>[gebruikersnaam]</b> automatisch invoegen van de naam van de bestemde gebruiker van de email.<br/>
-- <b style=&quot;color: red;&quot;>[mygallery]</b> invoegen van je galerietitel.<br/>';
-Standaard heeft het tekstveld een algemene tekst in het Engels, maar je kan dit veranderen en de vertalings labels [lang=?][/lang]gebruiken van de plugin Extended Description. Als je deze tenminste hebt geïnstalleerd.
-<br/><br/>
-De volgende extra aanpassings labels zijn beschikbaar zonder de plugin Extended Description:<br/>
-- <b style=&quot;color: red;&quot;>[gebruikersnaam]</b> het automatisch invoegen van de naam van de bestemde gebruiker van de email.<br/>
-- <b style=&quot;color: red;&quot;>[mygallery]</b> het invoegen van de titel van je galerie.<br/>';
 $lang['UAM_tipsTitle_d'] = 'Tips en diverse voorbeelden';
 $lang['UAM_restricTitle_d'] = '- Uitsluiting van lettertekens<br/>
 - Uitsluiting van email domeinen<br/>
@@ -111,111 +81,24 @@ $lang['UAM_confirmlevelTitle'] = 'Privacy niveau';
 $lang['UAM_confirmgrpTitle'] = 'Groepen';
 $lang['UAM_GTAutoGpTitle_d'] = 'De automatische wijziging van een groep, status of privacy niveau is te vergelijken met een degradatie (terugzetting) van de betrokken accounts. Het werkt volgens hetzelfde principe als de bevestiging van het groeps, status of privacy niveau (zie &quot;Instellingen van registratie bevestiging&quot;). Definieer daarom een groep, status en/of niveau voor degradatie in de toegang tot de galerie. Als dit al is gedefinieerd tijdens de registratie bevestiging, dan kan je dezelfde groep, status of niveau gebruiken.<br/><br/>
 <b style=&quot;color: red;&quot;>Nota Bene:</b> Als een spook bezoeker nog steeds niets heeft vernomen vanaf de tijdslimiet, en ondanks het automatische emailbericht (als deze tenminste is geactiveerd), wordt hij automatisch verwijderd uit de database.';
-<br/><br/>
-Aangepaste tekst voor de doorstuurpagina kan in dit tekstveld (is compatibel met de FCK Tekstverwerker) worden getypt. Voor meerdere talen kan je de labels van de plugin Extended Description gebruiken - [lang=][/lang]-, als deze geactiveerd is.';
-$lang['UAM_USRAutoTitle_d'] = 'De automatische verwerking van onbevestigde bezoekers wordt, elke keer wanneer je verbinding maakt met de galerie, ingeschakeld en werkt als volgt:
-<br/><br/>
-- Automatische verwijdering van accounts die niet binnen de toegestane periode zijn bevestigd zonder het verzenden van een automatische emailherinnering -> &quot;Beperkte termijn voor registratie bevestiging&quot; <b><u>ingeschakeld</u></b> en &quot;Herinner onbevestigde gebruikers&quot; <b><u>uitgeschakeld</u></b>.
-<br/><br/>
-- Automatische verzending van een emailherinnering met een nieuwe sleutel en automatische verwijdering van accounts die niet zijn bevestigd na het verzenden van de emailherinnering -> &quot;Beperkte termijn voor registratiebevestiging&quot; <b><u>ingeschakeld</u></b> en &quot;Herinnering aan onbevestigde gebruikers&quot; <b><u>ingeschakeld</u></b>.';
-$lang['UAM_USRAutoMailTitle_d'] = 'Als deze functie geactiveerd is zal er automatisch een  &quot;emailherinnering met persoonlijke inhoud worden verzonden, tezamen met een nieuw gegenereerde sleutel&quot; naar bezoekers die aan de voorwaarden voldoen.';
-$lang['UAM_USRAutoDelTitle_d'] = 'Dit is alleen geldig wanneer de gebruiker van wie het account is verlopen het verwijderingsmechanisme inschakelt (zeldzaam maar desondanks mogelijk). Zijn verbinding met de galerie is dan verbroken en hij wordt doorverwezen naar een pagina die de verwijdering van zijn account laat zien. En, mogelijk ook de redenen van deze verwijdering.
-<br/><br/>
-Pas vervolgens de inhoud aan met speciaal ingevoegde labels:<br/>
-- <b style=&quot;color: red;&quot;>[mygallery]</b>invoegen van je galerietitel.<br/>
-- <b style=&quot;color: red;&quot;>[myurl]</b>invoegen van je galerie URL mits dit is ingesteld in de Piwigo instellingen.
-<b style=&quot;color: red;&quot;>[gebruikersnaam]</b> is niet beschikbaar hier, omdat de betrokken gebruiker is verwijderd.
-<br/><br/>
-Aangepaste tekst voor de doorverwijzingspagina kan in dit tekstveld (is compatibel met de FCK tekstverwerker) worden ingevoegd. Voor meerdere talen kan je de labels [lang=?][/lang] van de plugin Extended Description gebruiken als deze geactiveerd is.';
-- <b style=&quot;color: red;&quot;>[myurl]</b> het invoegen van je galerie URL mits dit is ingesteld in de Piwigo instellingen.
-<b style=&quot;color: red;&quot;>[gebruikersnaam]</b> is niet beschikbaar hier, omdat de betrokken gebruiker is verwijderd.
-<br/><br/>
-Aangepaste tekst voor de doorverwijzingspagina kan in dit tekstveld (is compatibel met de FCK tekstverwerker) worden ingevoegd. Voor meerdere talen kan je de labels [lang=?][/lang] van de plugin Extended Description gebruiken als deze geactiveerd is.';
 $lang['UAM_Tracking registered users_d'] = 'Dit activeert een tabel in het tabblad &quot;Volgen van geregistreerde gebruikers&quot; waar een lijst is te vinden van geregistreerde galerie-gebruikers met de datum van hun laatste bezoek en de tijd die verstreken is sinds hun laatste bezoek (in dagen). De controle heeft alleen informatiewaarde voor de beheerder van de galerie.';
 $lang['UAM_StuffsTitle_d'] = 'Dit activeert een extra UAM blok in de plugin PWG Stuffs (mits geïnstalleerd) om je bezoekers, die niet hebben bevestigd, te informeren over hun status.
 <br/><br/>
 Kijk voor details naar de <b>Tips en Voorbeelden</b> onderaan deze pagina.';
 $lang['UAM_RejectConnexion_d'] = 'Als je deze optie hebt geactiveerd, kunnen nieuwe geregistreerde, maar nog niet bevestigde gebruikers geen verbinding met de galerie maken. Ze worden doorverwezen naar een speciale pagina die hen informeert over hun status.<br/><br/>
 <b style=&quot;color: red;&quot;>Waarschuwing - Deze mogelijkheid werkt alleen in samenhang met bevestigingsgroepen! Zie hieronder hoe je groepen instelt.</b>';
-<b style=&quot;color: red;&quot;>Waarschuwing - Deze mogelijkheid werkt alleen in samenhang met bevestigingsgroepen! Zie hieronder hoe je groepen instelt.</b>';
-$lang['UAM_MailInfo_Subject_d'] = 'Voeg hier je aangepaste emailonderwerp ter informatie in.<br/>
-Standaard heeft het tekstveld een algemene tekst in het Engels, maar dit kan je veranderen en je kan gebruikmaken van de vertalingslabels [lang=?][/lang] van de plugin Extended Description, mits je deze hebt geïnstalleerd.
-<br/><br/>
-De volgende extra aanpassingslabels zijn beschikbaar zonder de plugin Extended Description:<br/>
-- <b style=&quot;color: red;&quot;>[gebruikersnaam]</b> automatisch invoegen van de naam van de bestemde gebruiker.<br/>
-- <b style=&quot;color: red;&quot;>[mygallery]</b> invoegen van je galerietitel.<br/>';
-De volgende extra aanpassingslabels zijn beschikbaar zonder de plugin Extended Description:<br/>
-- <b style=&quot;color: red;&quot;>[gebruikersnaam]</b> het automatisch invoegen van de naam van de bestemmingsgebruiker van de email.<br/>
-- <b style=&quot;color: red;&quot;>[mygallery]</b> het invoegen van de titel van je galerie.<br/>';
 $lang['UAM_GTReminder_Subject_d'] = 'Voeg hier je aangepaste handmatige emailonderwerp van Ghost Tracker ter herinnering in.<br/>
 Standaard heeft het tekstveld een algemene tekst in het Engels, maar dit kan je veranderen en je kan gebruikmaken van de vertalingslabels [lang=?][/lang] van de plugin Extended Description, mits je deze hebt geïnstalleerd.
 <br/><br/>
 De volgende extra aanpassingslabels zijn beschikbaar zonder de plugin Extended Description:<br/>
 - <b style=&quot;color: red;&quot;>[gebruikersnaam]</b> automatisch invoegen van de naam van de bestemde gebruiker.<br/>
 - <b style=&quot;color: red;&quot;>[mygallery]</b>invoegen van je galerietitel.<br/>';
-- <b style=&quot;color: red;&quot;>[gebruikersnaam]</b> het automatisch invoegen van de naam van de bestemmingsgebruiker van de email.<br/>
-- <b style=&quot;color: red;&quot;>[mygallery]</b> het invoegen van de titel van je galerie.<br/>';
-$lang['UAM_GTAutomail_Text_d'] = 'Voeg de aangepaste tekst in die ook toelicht waarom een degradatie heeft plaatsgevonden. Dit zal bij de link ter bevestiging komen. De aangepaste tekst is niet verplicht, maar wordt wel sterk aanbevolen. Je bezoekers zullen het niet op prijs stellen om een email te krijgen waarin alleen een link staat zonder verdere toelichting.;-)
-<br/><br/>
-Pas vervolgens de inhoud aan met speciaal ingevoegde labels:<br/>
-- <b style=&quot;color: red;&quot;>[gebruikersnaam]</b> automatisch invoegen van de naam van de bestemmingsgebruiker van de email.<br/>
-- <b style=&quot;color: red;&quot;>[mygallery]</b>invoegen van je galerietitel.<br/>
-- <b style=&quot;color: red;&quot;>[myurl]</b>invoegen van je galerie URL mits dit is ingesteld in de Piwigo instellingen.
-<br/><br/>
-Voor meerdere talen kan je de labels van de plugin Extended Description gebruiken als deze geactiveerd is.
-';
-<br/><br/>
-Pas vervolgens de inhoud aan met speciaal ingevoegde labels:<br/>
-- <b style=&quot;color: red;&quot;>[gebruikersnaam]</b> het automatisch invoegen van de naam van de bestemmingsgebruiker van de email.<br/>
-- <b style=&quot;color: red;&quot;>[mygallery]</b> het invoegen van de titel van je galerie.<br/>
-- <b style=&quot;color: red;&quot;>[myurl]</b> het invoegen van je galerie URL mits dit is ingesteld in de Piwigo instellingen.
-<br/><br/>
-Voor meerdere talen kan je de labels van de plugin Extended Description gebruiken als deze geactiveerd is.
-';
 $lang['UAM_GTAutomail_Subject_d'] = 'Voeg hier je aangepaste automatische emailonderwerp van Ghost Tracker m.b.t. degradatie in.<br/>
 Standaard heeft het tekstveld een algemene tekst in het Engels, maar dit kan je veranderen en je kan gebruikmaken van de vertalingslabels [lang=?][/lang] van de plugin Extended Description, mits je deze hebt geïnstalleerd.
 <br/><br/>
 De volgende extra aanpassingslabels zijn beschikbaar zonder de plugin Extended Description:<br/>
 - <b style=&quot;color: red;&quot;>[gebruikersnaam]</b> automatisch invoegen van de naam van de bestemde gebruiker.<br/>
 - <b style=&quot;color: red;&quot;>[mygallery]</b>invoegen van je galerietitel.<br/>';
-Standaard heeft het tekstveld een algemene tekst in het Engels, maar dit kan je veranderen en je kan gebruikmaken van de vertalingslabels [lang=?][/lang] van de plugin Extended Description, mits je deze hebt geïnstalleerd.
-<br/><br/>
-De volgende extra aanpassingslabels zijn beschikbaar zonder de plugin Extended Description:<br/>
-- <b style=&quot;color: red;&quot;>[gebruikersnaam]</b> het automatisch invoegen van de naam van de bestemmingsgebruiker van de email.<br/>
-- <b style=&quot;color: red;&quot;>[mygallery]</b> het invoegen van de titel van je galerie.<br/>';
-$lang['UAM_GTAutoTitle_d'] = 'Deze optie maakt het mogelijk om regels toe te passen voor automatisch beheer van spook gebruikers.<br/><br/>Basis Principe: Een gebruiker heeft de maximale periode tussen zijn bezoeken bereikt <b><u>en</u></b>is al op de hoogte gesteld via email dat hij wordt beschouwd als verlopen. Dan kan je automatische regels in werking stellen zoals automatische verwijdering van verlopen accounts of degradatie d.m.v. beperkte toegang tot de galerie (automatische verschuiving naar een groep en/of status met beperkingen).
-<br/><br/>Het inschakelen van deze automatisering wordt bereikt wanneer gebruikers (dus elke gebruiker!) verbinding maken met de galerie.';
-$lang['UAM_mailexcTitle_d'] = 'Standaard accepteert Piwigo alle email-adressen in het formaat xxx@yyy.zz. Het inschakelen van deze optie geeft je de mogelijkheid bepaalde domeinen met het formaat @ [domein_naam].[domein_extensie] uit te sluiten.<br/><br/>
-Voorbeelden:<br/>
-@hotmail.com -> uitsluiting van de adressen *@hotmail.com<br/>
-@hotmail -> uitsluiting van de adressen *@hotmail*<br/><br/>
-<b style=&quot;color: red;&quot;>Waarschuwing - Deze mogelijkheid werkt alleen als emails verplicht zijn voor de registratie! Zie hiervoor de instellingsopties van Piwigo.</b>';
-$lang['UAM_ghosttrackerTitle_d'] = 'Wordt ook &quot;Ghost Tracker&quot; genoemd. Als deze functie is geactiveerd kan je je bezoekers beheren, afhankelijk van de frequentie waarmee ze je galerie bezoeken. Er zijn 2 bewerkingsmodi beschikbaar:<br/><br/>
-- Handmatig beheer: Als de periode tussen 2 bezoeken is bereikt, verschijnt de bezoeker in de &quot;Ghost Tracker&quot;-lijst. Hiervandaan kan je de bezoekers een emailherinnering  sturen of hem verwijderen.<br/><br/>
-- Automatisch beheer: Als de periode tussen 2 bezoeken is bereikt, wordt de bezoeker automatisch verwijderd of verplaatst naar een wachtende groep en/of status. In het tweede geval kan er een informatie-email naar hem verstuurd worden.<br/><br/>
-<b style=&quot;color: red;&quot;>Belangrijk: Als je deze mogelijkheid de eerste keer inschakelt of re-activeert, na \'m een lange tijd niet gebruikt te hebben, maar waarin wel nieuwe bezoekers zich hebben geregistreerd, moet je de Ghost Tracker initialiseren of resetten (zie de bijbehorende instructies op het tabblad &quot;Ghost Tracker&quot;).</b>';
-- <b style=&quot;color: red;&quot;>[myurl]</b> het invoegen van de galerie URL mits je dit hebt ingesteld in de Piwigo instellingen.<br/>
-- <b style=&quot;color: red;&quot;>[Kdays]</b> het invoegen van het aantal dagen waarbinnen de registratie moet worden bevestigd (&quot;Beperking van de verloopdatum voor registratie bevestiging;&quot; moet ingeschakeld zijn).
-<br/><br/>
-Voor meerdere talen kan je de labels [lang=?] [/lang] van de plugin Extended Description gebruiken als je deze hebt geactiveerd.';
-$lang['UAM_confirmmail_custom2_d'] = 'Als de optie &quot;Bevestiging van Registratie&quot; is geactiveerd, dan heb je met dit tekstveld de mogelijkheid om je <b><u>afwijzingstekst</u></b> op de registratie bevestigingspagina aan te passen. Deze verschijnt als de gebruiker klikt op de bevestigingslink in de email.
-<br/><br/>
-Nadat je de plugin hebt geïnstalleerd is er een standaard tekst als voorbeeld.
-<br/><br/>
-Vervolgens kan je inhoud verder aanpassen met speciaal ingevoegde labels:<br/>
-- <b style=&quot;color: red;&quot;>[gebruikersnaam]</b> automatisch invoegen van de betrokken gebruikersnaam.<br/>
-- <b style=&quot;color: red;&quot;>[mygallery]</b>invoegen van je galerietitel.<br/>het invoegen van de galerie URL mits je dit hebt ingesteld in de Piwigo instellingen.
-<br/><br/>
-Dit tekstveld is compatibel met de FCK Tekstverwerker. Voor meerdere talen kan je de labels [lang=?][/lang] van de plugin Extended Description gebruiken als je deze hebt geactiveerd.';
-<br/><br/>
-Nadat je de plugin hebt geïnstalleerd is er een standaard tekst als voorbeeld.
-<br/><br/>
-Vervolgens kan je inhoud verder aanpassen met speciaal ingevoegde labels:<br/>
-- <b style=&quot;color: red;&quot;>[gebruikersnaam]</b> het automatisch invoegen van de betrokken gebruikersnaam.<br/>
-- <b style=&quot;color: red;&quot;>[mygallery]</b> het invoegen van de titel van je galerie.<br/>
-- <b style=&quot;color: red;&quot;>[myurl]</b> het invoegen van de galerie URL mits je dit hebt ingesteld in de Piwigo instellingen.
-<br/><br/>
-Dit tekstveld is compatibel met de FCK Tekstverwerker. Voor meerdere talen kan je de labels [lang=?] [/lang] van de plugin Extended Description gebruiken als je deze hebt geactiveerd.';
 $lang['UAM_miscTitle_d'] = '- Controle van geregistreerde gebruikers<br/>
 - Verplichte bijnaam voor gasten die commentaar geven<br/>
 ...';
@@ -224,45 +107,8 @@ De inhoud van het verzonden bericht bestaat uit een aanpasbaar gedeelte (voor ee
 $lang['UAM_confirmstatTitle_d'] = '<b style=&quot;color: red;&quot;>WAARSCHUWING: Het gebruik van statussen bij de bevestiging vereist dat je de &quot;Gast&quot; gebruiker in de standaard instelling voor nieuw geregistreerden hebt staan (als gebruikers sjabloon). NB. Je kan elke gebruiker instellen als een sjabloon voor nieuw geregistreerden. Raadpleeg de documentatie van Piwigo voor meer informatie.
 </b><br/><br/>
 Statussen worden gevalideerd in samenhang met de &quot;Bevestiging van Registratie&quot;';
-</b><br/><br/>
-Statussen worden gevalideerd in samenhang met de &quot;Registratie Bevestiging&quot;';
-$lang['UAM_confirmmailTitle_d'] = 'Deze optie maakt het mogelijk voor een gebruiker om zijn registratie te bevestigen via een link in de email die is verzonden na zijn registratie. Of voor beheerders om de registratie handmatig te activeren.
-<br/><br/>
-In het eerste geval is de email opgesteld met een aanpasbaar gedeelte voor een welkomstgroet aan het begin. Dan is er een vaststaand gedeelte dat de activeringslink bevat, gegenereerd door een willekeurige sleutel, die bovendien opnieuw geproduceerd kan worden via het tabblad &quot;Volgen van Bevestigingen&quot;.
-<br/><br/>
-In het tweede geval wordt de validatielink gezonden naar de beheerders. Bezoekers moeten wachten tot de beheerder zelf de bevestiging verricht met de validatielink of in het tabblad &quot;Volgen van Bevestigingen&quot;.
-<br/>
-<b style=&quot;color: red;&quot;>NB: De opties &quot;Beperkte termijn voor registratiebevestiging&quot; en &quot;Herinnering aan onbevestigde gebruikers&quot; moeten uitgeschakeld zijn als de handmatige bevestiging door de beheerder is ingeschakeld.</b>
-<br/><br/>
-Deze optie wordt meestal gebruikt met de automatische toewijzing van groepen en/of statussen. Bij voorbeeld: een gebruiker die zijn registratie niet heeft bevestigd, wordt in een speciale gebruikersgroep geplaatst (met of zonder beperkingen in de galerie). Terwijl een gebruiker die zijn registratie heeft bevestigd, in een &quot;normale&quot; groep zal worden geplaatst. ';
-<br/><br/>
-In het eerste geval is de email opgesteld met een aanpasbaar gedeelte voor een welkomstgroet aan het begin. Dan is er een vaststaand gedeelte dat de activeringslink bevat, gegenereerd door een willekeurige sleutel, die bovendien opnieuw geproduceerd kan worden via het tabblad &quot;Bevestigingen Volgen&quot;.
-<br/><br/>
-In het tweede geval wordt de validatielink gezonden naar de beheerders. Bezoekers moeten wachten tot de beheerder zelf de bevestiging verricht met de validatielink of in het tabblad &quot;Bevestigingen Volgen&quot;.
-<br/>
-<b style=&quot;color: red;&quot;>NB: De opties &quot;Beperkte verloopdatum voor registratiebevestiging&quot; en &quot;Herinnering onbevestigde gebruikers&quot; moeten uitgeschakeld zijn als de handmatige bevestiging door de beheerder is ingeschakeld.</b>
-<br/><br/>
-Deze optie wordt meestal gebruikt met de automatische toewijzing van groepen en/of statussen. Bij voorbeeld: een gebruiker die zijn registratie niet heeft bevestigd, wordt in een speciale gebruikersgroep geplaatst (met of zonder beperkingen in de galerie). Terwijl een gebruiker die zijn registratie heeft bevestigd, in een &quot;normale&quot; groep zal worden geplaatst. ';
 $lang['UAM_confirmlevelTitle_d'] = '<b style=&quot;color: red;&quot;>WAARSCHUWING: Wanneer je een privacy niveau gebruikt moet je dit bij je foto\'s hebben aangegeven. Raadpleeg de documentatie van Piwigo voor meer informatie.</b><br/><br/>
 Het privacy niveau is geldig in samenhang met de &quot;Bevestiging van Registratie&quot;';
-- Verloopdatum voor de bevestiging van een registratie<br/>
-- Genereren van email ter herinnering<br/>
-...';
-$lang['UAM_carexcTitle_d'] = 'Het kan nodig zijn om bepaalde lettertekens te verbieden in gebruikersnamen (bv. het weigeren van inlognamen waarin @ voorkomt). Deze optie maakt het mogelijk om lettertekens of een volgorde van lettertekens uit te sluiten.<br/>
-NB: Deze optie kan ook complete woorden uitsluiten.
-<br/><br/>
-<b style=&quot;color: red;&quot;>Waarschuwing: Deze optie werkt niet voor gebruikers die hun naam hebben aangemaakt voordat je deze hebt ingeschakeld.</b>';
-$lang['UAM_adminconfmailTitle_d'] = 'Je kunt deze bevestiging alleen uitschakelen voor gebruikersaccounts die zijn aangemaakt via Piwigo\'s gebruikersbeheer.<br/><br/>
-Met de activering van deze optie wordt er een email bevestiging van registratie verzonden naar elke gebruiker die is aangemaakt door de beheerder.<br/><br/>
-Met de uitschakeling van deze optie (is de standaard instelling) wordt er alleen een email met informatie verzonden (mits &quot;Informatie email naar de gebruiker&quot; is ingeschakeld). Bovendien wordt de aangemaakte gebruiker standaard <b>beschouwd als gevalideerd</b>.';
-Met de uitschakeling van deze optie (is de standaard instelling) wordt er alleen een email met informatie verzonden (mits &quot;Informatie email naar de gebruiker&quot; is ingeschakeld). Bovendien wordt de aangemaakte gebruiker standaard <b>beschouwd als gevalideerd</b>.';
-$lang['UAM_remailTitle_d'] = 'Met deze optie kan je een emailherinnering versturen naar geregistreerde gebruikers die niet op tijd hun registratie hebben bevestigd. Deze optie werkt nauw samen met &quot;Bevestiging van Registratie&quot;
-<br/><br/>
-Er kunnen 2 soorten email verstuurd worden: Met of zonder herstel van de bevestigingssleutel. Verder kan de inhoud van de email worden aangepast.
-<br/><br/>
-Raadpleeg het tabblad &quot;Controle van Bevestiging &quot;
-<br/><br/>
-Als deze optie en ook de optie &quot;Beperkte termijn van de registratie bevestiging&quot; is geactiveerd, zullen er nieuwe opties verschijnen in dit deel waarmee je de automatisering van onbevestigde gebruikers kunt beheren.';
 $lang['UAM_infotxtTitle_d'] = 'Voeg de introductietekst in de email ter informatie.
 <br/><br/>
 Vervolgens kan je de inhoud aanpassen met speciaal ingevoegde labels:<br/>
@@ -271,23 +117,12 @@ Vervolgens kan je de inhoud aanpassen met speciaal ingevoegde labels:<br/>
 - <b style=&quot;color: red;&quot;>[myurl]</b>invoegen van de URL van je galerie, mits je deze hebt ingesteld in Piwigo\'s instellingen.<br/>
 <br/><br/>
 Voor meerdere talen kan je de labels van de plugin Extended Description gebruiken als deze is geactiveerd.';
-- <b style=&quot;color: red;&quot;>[myurl]</b> het invoegen van de URL van je galerie, mits je deze hebt ingesteld in Piwigo\'s instellingen.<br/>
-<br/><br/>
-Voor meerdere talen kan je de labels van de plugin Extended Description gebruiken als deze is geactiveerd.';
 $lang['UAM_gttextTitle_d'] = 'Voeg je eigen tekst in de emailherinnering om de gebruiker aan te sporen de galerie weer te bezoeken (NB. De vooraf ingevulde tekst is een voorbeeld).
 <br/><br/>
 Vervolgens kan je de inhoud aanpassen met speciaal ingevoegde labels:<br/>
 - <b style=&quot;color: red;&quot;>[gebruikersnaam]</b> automatisch invoegen van de naam van de bestemde gebruiker.<br/>
 - <b style=&quot;color: red;&quot;>[mygallery]</b>invoegen van je galerietitel.<br/>
 - <b style=&quot;color: red;&quot;>[myurl]</b>invoegen van de URL van je galerie, mits je deze hebt ingesteld in Piwigo\'s instellingen.<br/>
-- <b style=&quot;color: red;&quot;>[dagen]</b> het invoegen van het maximaal aantal dagen tussen 2 bezoeken.
-<br/><br/>
-Voor meerdere talen kan je de labels van de plugin Extended Description gebruiken als deze is geactiveerd.';
-<br/><br/>
-Vervolgens kan je de inhoud aanpassen met speciaal ingevoegde labels:<br/>
-- <b style=&quot;color: red;&quot;>[gebruikersnaam]</b> het automatisch invoegen van de naam van de gebruiker voor wie de email bestemd is.<br/>
-- <b style=&quot;color: red;&quot;>[mygallery]</b> het invoegen van de titel van je galerie.<br/>
-- <b style=&quot;color: red;&quot;>[myurl]</b> het invoegen van de URL van je galerie, mits je deze hebt ingesteld in Piwigo\'s instellingen.<br/>
 - <b style=&quot;color: red;&quot;>[dagen]</b> het invoegen van het maximaal aantal dagen tussen 2 bezoeken.
 <br/><br/>
 Voor meerdere talen kan je de labels van de plugin Extended Description gebruiken als deze is geactiveerd.';
@@ -315,12 +150,6 @@ Een gebruiker verschijnt in het groen als hij de galerie minder dan 50 dagen hee
 <b>NOTA BENE</b>: In de lijst staan niet de degenen die hun registratie niet hebben bevestigd (mits de optie voor registratiebevestiging is ingeschakeld). Deze gebruikers worden beheerd op een aparte manier in het tabblad &quot;Controle van Bevestigingen&quot;
 <br/><br/>
 <b>Tabel Sortering</b>: Je kan de data sorteren door op de kolom-koppen te klikken. Als je de SHIFT-toets ingedrukt houdt kan je tot 4 kolommen tegelijk sorteren.';
-<br/>
-Een gebruiker verschijnt in het groen als hij de galerie minder dan 50 dagen heeft bezocht, in het oranje als zijn laatste bezoek tussen 50 en 99 dagen plaatsvond en in het rood als hij hier 100 of meer dagen was.
-<br/><br/>
-<b>NOTA BENE</b>: In de lijst staan niet de degenen die hun registratie niet hebben bevestigd (mits de optie voor registratiebevestiging is ingeschakeld). Deze gebruikers worden beheerd op een aparte manier in het tabblad &quot;Controle van Bevestigingen&quot;
-<br/><br/>
-<b>Tabel Sortering</b>: Je kan de data sorteren door op de kolom-koppen te klikken. Als je de SHIFT-toets ingedrukt houdt kan je tot 4 kolommen tegelijk sorteren.';
 $lang['UAM_remailtxt2Title_d'] = 'Voeg je eigen introductietekst in de emailherinnering zonder de opnieuw gegenereerde bevestigingssleutel.
 <br/><br/>
 Als je dit veld leeg laat zal de emailherinnering geen inhoud bevatten. Het wordt sterk aanbevolen om een kleine tekstuitleg in te voegen. (NB. De vooraf ingevulde tekst is bedoeld als voorbeeld)
@@ -332,11 +161,6 @@ Vervolgens kan je de inhoud aanpassen met speciaal ingevoegde labels:<br/>
 - <b style=&quot;color: red;&quot;>[Kdays]</b>invoegen van het aantal dagen om de registratie te bevestigen. (&quot;Beperkte Termijn voor registratiebevestiging;&quot; moet zijn ingeschakeld).
 <br/><br/>
 Voor meerdere talen kan je de labels van de plugin Extended Description gebruiken als deze is geactiveerd.';
-- <b style=&quot;color: red;&quot;>[mygallery]</b> het invoegen van de titel van je galerie.<br/>
-- <b style=&quot;color: red;&quot;>[myurl]</b> het invoegen van de URL van je galerie, mits je deze hebt ingesteld in Piwigo\'s instellingen.<br/>
-- <b style=&quot;color: red;&quot;>[Kdays]</b> het invoegen van het aantal dagen om de registratie te bevestigen. (&quot;Beperkte Verloopdatum voor registratiebevestiging;&quot; moet zijn ingeschakeld).
-<br/><br/>
-Voor meerdere talen kan je de labels van de plugin Extended Description gebruiken als deze is geactiveerd.';
 $lang['UAM_remailtxt1Title_d'] = 'Voeg je eigen introductietekst in de emailherinnering met de opnieuw gegenereerde bevestigingssleutel.
 <br/><br/>
 Als je dit veld leeg laat zal de emailherinnering alleen de bevestigingslink bevatten. Het wordt sterk aanbevolen om een kleine tekstuitleg in te voegen. (NB. De vooraf ingevulde tekst is bedoeld als voorbeeld)
@@ -346,16 +170,6 @@ Vervolgens kan je de inhoud aanpassen met speciaal ingevoegde labels:<br/>
 - <b style=&quot;color: red;&quot;>[mygallery]</b>invoegen van je galerietitel.<br/>
 - <b style=&quot;color: red;&quot;>[myurl]</b>invoegen van de URL van je galerie, mits je deze hebt ingesteld in Piwigo\'s instellingen.<br/>
 - <b style=&quot;color: red;&quot;>[Kdays]</b>invoegen van het aantal dagen om de registratie te bevestigen. (&quot;Beperkte Termijn voor registratiebevestiging;&quot; moet zijn ingeschakeld).
-<br/><br/>
-Voor meerdere talen kan je de labels van de plugin Extended Description gebruiken als deze is geactiveerd.';
-<br/><br/>
-Als je dit veld leeg laat zal de herinneringsemail alleen de bevestigingslink bevatten. Het wordt sterk aanbevolen om een kleine tekstuitleg in te voegen. (NB. De vooraf ingevulde tekst is bedoeld als voorbeeld)
-<br/><br/>
-Vervolgens kan je de inhoud aanpassen met speciaal ingevoegde labels:<br/>
-- <b style=&quot;color: red;&quot;>[gebruikersnaam]</b> het automatisch invoegen van de naam van de gebruiker voor wie de email bestemd is.<br/>
-- <b style=&quot;color: red;&quot;>[mygallery]</b> het invoegen van de titel van je galerie.<br/>
-- <b style=&quot;color: red;&quot;>[myurl]</b> het invoegen van de URL van je galerie, mits je deze hebt ingesteld in Piwigo\'s instellingen.<br/>
-- <b style=&quot;color: red;&quot;>[Kdays]</b> het invoegen van het aantal dagen om de registratie te bevestigen. (&quot;Beperkte Verloopdatum voor registratiebevestiging;&quot; moet zijn ingeschakeld).
 <br/><br/>
 Voor meerdere talen kan je de labels van de plugin Extended Description gebruiken als deze is geactiveerd.';
 $lang['UAM_validationlimitTitle_d'] = 'Deze optie maakt het mogelijk om de geldigheid van de bevestigingssleutel in de email voor nieuw geregistreerden te beperken. Bezoekers die zich registreren hebben x dagen de tijd om hun registratie te bevestigen. Na deze periode zal de bevestigingslink verlopen.

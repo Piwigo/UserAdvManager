@@ -490,15 +490,17 @@ Plugin Name: UserAdvManager
            Update es_ES, thanks to : jpr928
 
 -- 2.60.2 : Update da_DK, thanks to : Kaare
-           Update ru_RU, thanks to : Konve
-           Update sk_SK, thanks to : JoeKundlak
-           Update pt_PT, thanks to : ANO
-           Update pt_BR, thanks to : flaviove
+            Update ru_RU, thanks to : Konve
+            Update sk_SK, thanks to : JoeKundlak
+            Update pt_PT, thanks to : ANO
+            Update pt_BR, thanks to : flaviove
 
 -- 2.70.0 : Compatibility with Piwigo 2.7
             fix preg_replace(): The /e modifier is deprecated (thx to mistic100)
             Update pt_BR, thanks to : flaviove, oigreslima and msakik
 
 -- 2.70.1 : Add nl_NL, thanks to : Ellin-E
+
+-- 2.70.2 : Update and fix nl_NL, thanks to : ddtddt
 */
 ?>
