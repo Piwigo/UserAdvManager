@@ -34,7 +34,7 @@ $lang['UAM_RejectConnexion_Custom_Txt_d'] = 'Pas hier je tekst aan om onbevestig
 <br/><br/>
 Dit veld is compatibel met de FCK Tekstbewerker. Als je meerdere talen nodig hebt, kan je de [lang] labels gebruiken van de plugin Extended Description, als je deze hebt geactiveerd.';
 $lang['UAM_RedirTitle_d'] = 'Deze optie schakelt een geregistreerde gebruiker direct door naar zijn aanpassingspagina, maar alleen bij zijn eerste verbinding met de galerie.<br/><br/>
-Let op: Deze functie is niet van toepassing op alle gebruikers. Degenen met de &quot;beheerder&quot;, &quot;webmaster&quot; or &quot;algemene&quot; status worden uitgesloten.';
+Let op: Deze functie is niet van toepassing op alle gebruikers. Degenen met de &quot;admin&quot;, &quot;webmaster&quot; or &quot;generic&quot; status worden uitgesloten.';
 $lang['UAM_HidePasswTitle_d'] = 'Kies dit als je het wachtwoord, gekozen door de bezoeker in het emailbericht, te zien wilt krijgen. Als je deze optie inschakelt zal het wachtwoord in normale tekst verschijnen. Bij uitschakeling verschijnt het wachtwoord helemaal niet.';
 $lang['UAM_GTAutoDelTitle'] = 'Aangepast bericht bij een verwijderd account';
 $lang['UAM_DumpTitle_d'] = 'Hiermee is het mogelijk de totale instellingen van de plugin te bewaren in een bestand, zodat je het kan herstellen als er iets mis gaat (bv. na een verkeerde handeling of voordat je een update verricht). Standaard wordt het backup-bestand opgeslagen in deze map ../plugins/UserAdvManager/include/backup/ en hij wordt genoemd &quot;UAM_dbbackup.sql&quot;.
@@ -44,6 +44,8 @@ $lang['UAM_DumpTitle_d'] = 'Hiermee is het mogelijk de totale instellingen van d
 Het kan soms handig zijn het backup-bestand op je computer over te zetten. Bv. Om het in een andere database te kunnen herstellen of om meerdere bestanden op te slaan. Om dit te doen, vink je het blokje aan om het bestand te downloaden.
 <br/><br/>
 Het herstel middels deze koppeling is alleen beschikbaar voor een lokaal backup-bestand (../plugins/UserAdvManager/include/backup/UAM_dbbackup.sql). Een gedownload backup-bestand kan niet langs deze weg worden hersteld. Om dit voor elkaar te krijgen moet je een hiertoe aangewezen gereedschap voor databasebeheer gebruiken(zoals PhpMyAdmin voor MySql database).
+<br/><br/>  
+<b style=&quot;color: red;&quot;>Waarschuwing: Na het herstel moet je de beheerpagina van de plugin opnieuw inladen om de herstelde instellingen te kunnen zien!</b>
 <br/><br/>  
 <b style=&quot;color: red;&quot;>Waarschuwing: Na het herstel moet je de beheerpagina van de plugin opnieuw inladen om de herstelde instellingen te kunnen zien!</b>';
 $lang['UAM_CustomPasswRetrTitle_d'] = 'Standaard ontvangt een gebruiker een email met alleen zijn gebruikersnaam en een nieuw wachtwoord wanneer hij zijn wachtwoord kwijt is en de hersteloptie heeft gekozen.
@@ -107,9 +109,9 @@ $lang['UAM_confirmstatTitle'] = 'Statuten';
 $lang['UAM_confirmlevelTitle'] = 'Privacy niveau';
 $lang['UAM_confirmgrpTitle'] = 'Groepen';
 $lang['UAM_GTAutoGpTitle_d'] = 'De automatische wijziging van een groep, status of privacy niveau is te vergelijken met een degradatie (terugzetting) van de betrokken accounts. Het werkt volgens hetzelfde principe als de bevestiging van het groeps, status of privacy niveau (zie &quot;Instellingen van registratie bevestiging&quot;). Definieer daarom een groep, status en/of niveau voor degradatie in de toegang tot de galerie. Als dit al is gedefinieerd tijdens de registratie bevestiging, dan kan je dezelfde groep, status of niveau gebruiken.<br/><br/>
-<b style=&quot;color: red;&quot;>Nota Bene:</b> Als een spook bezoeker nog steeds niets heeft vernomen vanaf de tijdslimiet, en ondanks het automatische emailbericht (als deze tenminste is geactiveerd), wordt hij automatisch verwijderd uit de database.';
+<b style=&quot;color: red;&quot;>Nota Bene:</b> Als een spook bezoeker nog steeds niets heeft vernomen vanaf de tijdslimiet, en ondanks het automatische emailbericht (als deze tenminste is geactiveerd), wordt hij automatisch verwijderd uit de database.
 <br/><br/>
-Aangepaste tekst voor de doorstuurpagina kan in dit tekstveld (is compatibel met de FCK Tekstverwerker) worden getypt. Voor meerdere talen kan je de labels van de plugin Extended Description gebruiken - [lang=][/lang]-, als deze geactiveerd is.
+Aangepaste tekst voor de doorstuurpagina kan in dit tekstveld (is compatibel met de FCK Tekstverwerker) worden getypt. Voor meerdere talen kan je de labels van de plugin Extended Description gebruiken - [lang=][/lang]-, als deze geactiveerd is.';
 $lang['UAM_USRAutoTitle_d'] = 'De automatische verwerking van onbevestigde bezoekers wordt, elke keer wanneer je verbinding maakt met de galerie, ingeschakeld en werkt als volgt:
 <br/><br/>
 - Automatische verwijdering van accounts die niet binnen de toegestane periode zijn bevestigd zonder het verzenden van een automatische emailherinnering -> &quot;Beperkte termijn voor registratie bevestiging&quot; <b><u>ingeschakeld</u></b> en &quot;Herinner onbevestigde gebruikers&quot; <b><u>uitgeschakeld</u></b>.
@@ -133,7 +135,6 @@ $lang['UAM_StuffsTitle_d'] = 'Dit activeert een extra UAM blok in de plugin PWG 
 <br/><br/>
 Kijk voor details naar de <b>Tips en Voorbeelden</b> onderaan deze pagina.';
 $lang['UAM_RejectConnexion_d'] = 'Als je deze optie hebt geactiveerd, kunnen nieuwe geregistreerde, maar nog niet bevestigde gebruikers geen verbinding met de galerie maken. Ze worden doorverwezen naar een speciale pagina die hen informeert over hun status.<br/><br/>
-<b style=&quot;color: red;&quot;>Waarschuwing - Deze mogelijkheid werkt alleen in samenhang met bevestigingsgroepen! Zie hieronder hoe je groepen instelt.</b>
 <b style=&quot;color: red;&quot;>Waarschuwing - Deze mogelijkheid werkt alleen in samenhang met bevestigingsgroepen! Zie hieronder hoe je groepen instelt.</b>';
 $lang['UAM_MailInfo_Subject_d'] = 'Voeg hier je aangepaste emailonderwerp ter informatie in.<br/>
 Standaard heeft het tekstveld een algemene tekst in het Engels, maar dit kan je veranderen en je kan gebruikmaken van de vertalingslabels [lang=?][/lang] van de plugin Extended Description, mits je deze hebt geïnstalleerd.
@@ -160,7 +161,6 @@ Pas vervolgens de inhoud aan met speciaal ingevoegde labels:<br/>
 - <b style=&quot;color: red;&quot;>[myurl]</b>invoegen van je galerie URL mits dit is ingesteld in de Piwigo instellingen.
 <br/><br/>
 Voor meerdere talen kan je de labels van de plugin Extended Description gebruiken als deze geactiveerd is.
-
 <br/><br/>
 Pas vervolgens de inhoud aan met speciaal ingevoegde labels:<br/>
 - <b style=&quot;color: red;&quot;>[gebruikersnaam]</b> het automatisch invoegen van de naam van de bestemmingsgebruiker van de email.<br/>
