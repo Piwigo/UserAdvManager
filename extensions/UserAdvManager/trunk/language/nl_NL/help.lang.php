@@ -398,3 +398,30 @@ Aanpassen van de inhoud met speciaal ingevoegde labels:<br/>
 <b style=&quot;color: red;&quot;>[gebruikersnaam]</b> is hier niet beschikbaar, omdat de betrokken gebruiker is verwijderd.
 <br/><br/>
 Aangepaste tekst voor de doorstuurpagina kan in dit tekstveld (is compatibel met de FCK Tekstverwerker) worden getypt. Voor meerdere talen kan je de labels van de plugin Extended Description gebruiken - [lang=][/lang]-, als deze geactiveerd is.';
+$lang['UAM_GTAutoMailTitle_d'] = 'Als een account is verlopen (groep/status/privacy niveau veranderen door de degradatie van de bezoeker), kan er een email verstuurd worden met uitleg over de redenen voor deze verandering en een manier om de oorspronkelijke toegang tot de galerie te herstellen.
+<br/>Dit kan je doen middels een bijlage met een link naar herbevestiging van registratie in de email (automatische aanmaak van een nieuwe bevestigingssleutel). <b style=&quot;color: red;&quot;>Als de gebruiker al is geïnformeerd, zal zijn account automatisch worden verwijderd.</b> 
+<br/><br/>
+<b style=&quot;color: red;&quot;>Waarschuwing: Het gebruik van deze functie is nauw verbonden met de registratiebevestiging van de gebruiker (bevestiging per email) en kan niet worden geactiveerd zonder deze optie.</b>';
+$lang['UAM_confirmmail_custom1_d'] = 'Als de optie &quot;Bevestiging van Registratie&quot; is geactiveerd, dan heb je met dit tekstveld de mogelijkheid om je <b><u>acceptatie tekst</u></b> op de registratie bevestigingspagina aan te passen. Deze verschijnt als de gebruiker klikt op de bevestigingslink in de email.
+<br/><br/>
+Nadat je de plugin hebt geïnstalleerd is er een standaard tekst als voorbeeld.
+<br/><br/>
+Vervolgens kan je inhoud verder aanpassen met speciaal ingevoegde labels:<br/>
+- <b style=&quot;color: red;&quot;>[gebruikersnaam]</b> het automatisch invoegen van de betrokken gebruikersnaam.<br/>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> het invoegen van de titel van je galerie.<br/>
+- <b style=&quot;color: red;&quot;>[myurl]</b> het invoegen van de galerie URL mits je dit hebt ingesteld in de Piwigo instellingen.
+<br/><br/>
+Dit tekstveld is compatibel met de FCK Tekstverwerker. Voor meerdere talen kan je de labels [lang=?] [/lang] van de plugin Extended Description gebruiken als je deze hebt geactiveerd.
+';
+$lang['UAM_confirmgrpTitle_d'] = '<b style=&quot;color: red;&quot;>WAARSCHUWING: Wanneer je een bevestiging van een groep doet, moet je tenminste een gebruikersgroep hebben aangemaakt en gedefinieerd &quot;als standaardinstelling&quot; in Piwigo\'s gebruikersgroep beheer.</b><br/><br/>';
+$lang['UAM_confirmmail_custom1_d'] = 'Als de optie &quot;Bevestiging van Registratie&quot; is geactiveerd, dan heb je met dit tekstveld de mogelijkheid om je <b><u>acceptatie tekst</u></b> op de registratie bevestigingspagina aan te passen. Deze verschijnt als de gebruiker klikt op de bevestigingslink in de email.
+<br/><br/>
+Nadat je de plugin hebt geïnstalleerd is er een standaard tekst als voorbeeld.
+<br/><br/>
+Vervolgens kan je inhoud verder aanpassen met speciaal ingevoegde labels:<br/>
+- <b style=&quot;color: red;&quot;>[gebruikersnaam]</b> het automatisch invoegen van de betrokken gebruikersnaam.<br/>
+- <b style=&quot;color: red;&quot;>[mygallery]</b> het invoegen van de titel van je galerie.<br/>
+- <b style=&quot;color: red;&quot;>[myurl]</b> het invoegen van de galerie URL mits je dit hebt ingesteld in de Piwigo instellingen.
+<br/><br/>
+Dit tekstveld is compatibel met de FCK Tekstverwerker. Voor meerdere talen kan je de labels [lang=?] [/lang] van de plugin Extended Description gebruiken als je deze hebt geactiveerd.
+';
