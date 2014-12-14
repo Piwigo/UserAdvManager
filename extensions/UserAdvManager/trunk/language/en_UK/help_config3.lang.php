@@ -57,5 +57,4 @@ Further customize the content with special inserted tags:<br/>
 - <b style=&quot;color: red;&quot;>[myurl]</b> to insert your gallery URL if set in Piwigo\'s configuration options.
 <br/><br/>
 To use multiple languages, you can use the Extended description plugin\'s tags if it is active.';
-$lang['UAM_GTAutoDelTitle'] = 'Custom message on deleted account';
 ?>

@@ -102,6 +102,7 @@ $lang['UAM_remailtxt2Title'] = 'Message de rappel sans regénération de clé';
 $lang['UAM_confirmgrpTitle'] = 'Groupes';
 $lang['UAM_confirmstatTitle'] = 'Statuts';
 $lang['UAM_confirmlevelTitle'] = 'Niveau de confidentialité';
+$lang['UAM_GTAutoDelTitle'] = 'Message personnalisé de suppression de compte';
 
 
 /* Ghost Tracker Tab */

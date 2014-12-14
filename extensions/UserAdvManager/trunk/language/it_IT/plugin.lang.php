@@ -110,6 +110,13 @@ $lang['UAM_GhostTracker'] = 'Gestione dei visitatori ghost (GhostTracker)';
 $lang['UAM_GhostTracker_true'] = ' Attivare. Durata massima tra due visite in giorni: ';
 $lang['UAM_GhostTracker_ReminderText'] = 'Personalizzare il messaggio di promemoria del Ghost Tracker';
 
+$lang['UAM_GTAutoDelTitle'] = 'Messaggio personalizzato all\'eliminazione di un account';
+$lang['UAM_confirmgrpTitle'] = 'Gruppi';
+$lang['UAM_confirmlevelTitle'] = 'Livello privacy';
+$lang['UAM_confirmstatTitle'] = 'Statuti';
+$lang['UAM_remailtxt1Title'] = 'Promemoria email con generata nuova chiave';
+$lang['UAM_remailtxt2Title'] = 'Promemoria email senza generare nuova chiave';
+
 /* Ghost Tracker Tab */
 $lang['UAM_SubTitle4'] = 'Ghost Tracker';
 $lang['UAM_GT_Init'] = 'Inizializza Ghost Tracker';

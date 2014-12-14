@@ -1,13 +1,13 @@
 <?php
 // Backup and tips Options section
-$lang['UAM_DumpTitle_d'] = 'Gør det muligt for dig at gemme hele plugin-opsætningen i en fil, så du kan genskabe den hvis noget går galt (eksepelvis fejlopsætning eller før en opdatering).  Som standard gemmes filen i mappen ../plugins/UserAdvManager/include/backup/ og hedder &quot;UAM_dbbackup.sql&quot;.
+$lang['UAM_DumpTitle_d'] = 'GÃ¸r det muligt for dig at gemme hele plugin-opsÃ¦tningen i en fil, sÃ¥ du kan genskabe den hvis noget gÃ¥r galt (eksepelvis fejlopsÃ¦tning eller fÃ¸r en opdatering).  Som standard gemmes filen i mappen ../plugins/UserAdvManager/include/backup/ og hedder &quot;UAM_dbbackup.sql&quot;.
 <br><br>
 <b style=&quot;color: red;&quot;>Advarsel: Filen overskrives hver gang der tages en sikkerhedskopi!</b>
 <br><br>
-Nogle gange kan det være nyttigt at placere sikkerhedskopifilen på din computer.  For eksempel hvis en anden database skal indlæses, hvis webstedet flyttes eller for at gemme flere forskellige udgaver. For at gøre dette, skal du bare sætte flueben i boksen, for at kunne downloade filen.
+Nogle gange kan det vÃ¦re nyttigt at placere sikkerhedskopifilen pÃ¥ din computer.  For eksempel hvis en anden database skal indlÃ¦ses, hvis webstedet flyttes eller for at gemme flere forskellige udgaver. For at gÃ¸re dette, skal du bare sÃ¦tte flueben i boksen, for at kunne downloade filen.
 <br><br>
-Denne grænseflade understøtter kun genskabeles fra den lokale sikkerhedskopifil (../plugins/UserAdvManager/include/backup/UAM_dbbackup.sql).  Sikkerhedskopifiler man har downloadet kan ikke genskabe opsætningen på denne måde.  I stedet skal man benytte et dedikeret databaseværktøj (så som PhpMyAdmin til MySQL-databaser).
+Denne grÃ¦nseflade understÃ¸tter kun genskabeles fra den lokale sikkerhedskopifil (../plugins/UserAdvManager/include/backup/UAM_dbbackup.sql).  Sikkerhedskopifiler man har downloadet kan ikke genskabe opsÃ¦tningen pÃ¥ denne mÃ¥de.  I stedet skal man benytte et dedikeret databasevÃ¦rktÃ¸j (sÃ¥ som PhpMyAdmin til MySQL-databaser).
 <br><br>
-<b style=&quot;color: red;&quot;>Advarsel: Efter en genskabelse er det nødvendigt at genindlæse plugin\'ens administrationsside for at se de genskabte indstillinger!</b>';
-$lang['UAM_tipsTitle_d'] = 'Tips og forskellige eksempler på brug';
+<b style=&quot;color: red;&quot;>Advarsel: Efter en genskabelse er det nÃ¸dvendigt at genindlÃ¦se plugin\'ens administrationsside for at se de genskabte indstillinger!</b>';
+$lang['UAM_tipsTitle_d'] = 'Tips og forskellige eksempler pÃ¥ brug';
 ?>

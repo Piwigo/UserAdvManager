@@ -303,6 +303,7 @@ $lang['UAM_AddURL2Mail'] = 'Προσθέστε το URL της γκαλερί σ
 $lang['UAM_Follow this link to access the gallery'] = 'Παρακαλώ, ακολουθήστε αυτό το σύνδεσμο για να μεταβείτε στην γκαλερύ';
 $lang['UAM_Select page size'] = 'Επιλέξτε το μέγεθος της σελίδας';
 $lang['UAM_Select page number'] = 'Επιλέξτε αριθμό σελίδας';
+$lang['UAM_GTAutoDelTitle'] = 'Προσαρμοσμένο μήνυμα για διαγραμμένο λογαριασμού';
 $lang['UAM_confirmlevelTitle'] = 'Επίπεδο Προστασίας ';
 $lang['UAM_confirmgrpTitle'] = 'Ομάδες';
 $lang['UAM_confirmstatTitle'] = 'Κανονισμοί';

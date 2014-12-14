@@ -57,5 +57,4 @@ Personnalisez encore plus le contenu avec les balises d\'insertion spéciales :<
 - <b style=&quot;color: red;&quot;>[myurl]</b> pour insérer l\'URL de votre galerie si renseigné dans les options de configuration de Piwigo.
 <br/><br/>
 Pour une utilisation multi-langues, vous pouvez utiliser les balises [lang] du plugin Extended Description si celui-ci est actif.';
-$lang['UAM_GTAutoDelTitle'] = 'Message personnalisé de suppression de compte';
 ?>

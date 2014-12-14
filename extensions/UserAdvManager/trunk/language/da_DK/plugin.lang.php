@@ -308,4 +308,5 @@ $lang['UAM_remailtxt2Title'] = 'Påmindelsesmail uden nygenereret nøgle';
 $lang['UAM_confirmgrpTitle'] = 'Grupper';
 $lang['UAM_confirmlevelTitle'] = 'Privatlivsniveau';
 $lang['UAM_confirmstatTitle'] = 'Statusser';
+$lang['UAM_GTAutoDelTitle'] = 'Tilpasset meddelelse ved slettet konto';
 ?>
