@@ -293,3 +293,10 @@ $lang['UAM_Title3'] = 'Beheer van spook bezoekers';
 $lang['UAM_Title2'] = 'Registratie bevestigingen';
 $lang['UAM_Title1'] = 'Registratie beperkingen';
 $lang['UAM_Error_Using_illegal_flag'] = 'Syntax fout! De [Kdays] Auto Text vlag is gebruikt terwijl de optie "Beperkte registratie bevestigingstermijn" niet is geactiveerd. Activeer deze optie of corrigeer het tekstveld (ev. meerdere velden) die rood gekleurd zijn.';
+$lang['UAM_GTAutoDelTitle'] = 'Aangepast bericht bij een verwijderd account';
+$lang['UAM_remailtxt1Title'] = 'EmailHerinnering met een nieuw gegenereerde sleutel';
+$lang['UAM_remailtxt2Title'] = 'Emailherinnering zonder een nieuw gegenereerde sleutel';
+$lang['UAM_confirmstatTitle'] = 'Statuten';
+$lang['UAM_confirmlevelTitle'] = 'Privacy niveau';
+$lang['UAM_confirmgrpTitle'] = 'Groepen';
+?>

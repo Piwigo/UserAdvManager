@@ -303,4 +303,10 @@ $lang['UAM_AddURL2Mail'] = 'Tilføj galleriets URL i slutningen af mails (som en
 $lang['UAM_Follow this link to access the gallery'] = 'Følg dette link for at tilgå galleriet';
 $lang['UAM_Select page number'] = 'Vælg sidenummer';
 $lang['UAM_Select page size'] = 'Vælg sidestørrelse';
+$lang['UAM_remailtxt1Title'] = 'Påmindelsesmail med nygenereret nøgle';
+$lang['UAM_remailtxt2Title'] = 'Påmindelsesmail uden nygenereret nøgle';
+$lang['UAM_confirmgrpTitle'] = 'Grupper';
+$lang['UAM_confirmlevelTitle'] = 'Privatlivsniveau';
+$lang['UAM_confirmstatTitle'] = 'Statusser';
+$lang['UAM_GTAutoDelTitle'] = 'Tilpasset meddelelse ved slettet konto';
 ?>
