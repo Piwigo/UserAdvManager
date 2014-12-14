@@ -1,48 +1,48 @@
 <?php
 // GhostTracker Tab
-$lang['UAM_gtTitle_d'] = 'Når Ghost Tracker er aktiveret og initialiseret, er der en liste over registrerede besøgende, der ikke er vendt tilbage i x antal dage. &quot;x&quot; er antallet af dage opsat i fanen Generel opsætning. Desuden er der en kolonne som angiver hvorvidt der er sendt en påmindelsesmail til de pågældende besøgende. Dermed kan man få et hurtigt overblik og håndtere besøgende, der ikke har reageret på påmindelsen.<br><br>Her kan man:
+$lang['UAM_gtTitle_d'] = 'NÃ¥r Ghost Tracker er aktiveret og initialiseret, er der en liste over registrerede besÃ¸gende, der ikke er vendt tilbage i x antal dage. &quot;x&quot; er antallet af dage opsat i fanen Generel opsÃ¦tning. Desuden er der en kolonne som angiver hvorvidt der er sendt en pÃ¥mindelsesmail til de pÃ¥gÃ¦ldende besÃ¸gende. Dermed kan man fÃ¥ et hurtigt overblik og hÃ¥ndtere besÃ¸gende, der ikke har reageret pÃ¥ pÃ¥mindelsen.<br><br>Her kan man:
 <br><br>
-- Manuelt slette konti <b>(manuel tømning)</b>
+- Manuelt slette konti <b>(manuel tÃ¸mning)</b>
 <br>
-- Generere mailpåmindelse <b>med nulstilling af den seneste besøgsdato</b>. Dermed kan de pågældende besøgende få et wildcard. Hvis den besøgende allerede har modtaget en påmindelse, er der intet i vejen for at sende en ny mail, som igen vil nulstille den seneste besøgsdato.
+- Generere mailpÃ¥mindelse <b>med nulstilling af den seneste besÃ¸gsdato</b>. Dermed kan de pÃ¥gÃ¦ldende besÃ¸gende fÃ¥ et wildcard. Hvis den besÃ¸gende allerede har modtaget en pÃ¥mindelse, er der intet i vejen for at sende en ny mail, som igen vil nulstille den seneste besÃ¸gsdato.
 <br><br>
-<b>Tabelsorteringsfunktion</b>: Du kan sortere de viste data ved at klikke på kolonneoverskifterne. Hold Shift-tasten ned for at sortere op til fire kolonner på samme tid.';
+<b>Tabelsorteringsfunktion</b>: Du kan sortere de viste data ved at klikke pÃ¥ kolonneoverskifterne. Hold Shift-tasten ned for at sortere op til fire kolonner pÃ¥ samme tid.';
 
 
 // Userlist tab
-$lang['UAM_userlistTitle_d'] = 'Denne side er til administratorens information.  Den viser en liste over alle galleriets registrerede brugere, med datoen og antal dage siden det seneste besøg. Listen er sorteret i stigende orden efter antal dage.
+$lang['UAM_userlistTitle_d'] = 'Denne side er til administratorens information.  Den viser en liste over alle galleriets registrerede brugere, med datoen og antal dage siden det seneste besÃ¸g. Listen er sorteret i stigende orden efter antal dage.
 <br><br>
-<b><u>Kun når Ghost Tracker er aktiv</u></b>, antal dage uden et besøg vises med følgende farvekode, jævnfør maksimummet opsat i Ghost Tracker valgmuligheder:
+<b><u>Kun nÃ¥r Ghost Tracker er aktiv</u></b>, antal dage uden et besÃ¸g vises med fÃ¸lgende farvekode, jÃ¦vnfÃ¸r maksimummet opsat i Ghost Tracker valgmuligheder:
 <br>
-- <b style=&quot;color: lime;&quot;>Grøn</b>: Når en bruger har besøgt galleriet <b style=&quot;color: lime;&quot;><u>mindre end 50 procent</u></b> af det i Ghost Tracker opsatte maksimum.<br>
-- <b style=&quot;color: orange;&quot;>Orange</b>: Når en bruger sidst har besøgt galleriet <b style=&quot;color: orange;&quot;><u>mellem 50 og 99 procent</u></b> af det i Ghost Tracker opsatte maksimum.<br>
-- <b style=&quot;color: red;&quot;>Rød</b>: Når en bruger har besøgt galleriet <b style=&quot;color: red;&quot;><u>mere end 100 procent</u></b> af det i Ghost Tracker opsatte maksimum. <b><u>I dette tilfælde skal brugerens også optræde i Ghost Tracker-tabellen.</u></b><br>
+- <b style=&quot;color: lime;&quot;>GrÃ¸n</b>: NÃ¥r en bruger har besÃ¸gt galleriet <b style=&quot;color: lime;&quot;><u>mindre end 50 procent</u></b> af det i Ghost Tracker opsatte maksimum.<br>
+- <b style=&quot;color: orange;&quot;>Orange</b>: NÃ¥r en bruger sidst har besÃ¸gt galleriet <b style=&quot;color: orange;&quot;><u>mellem 50 og 99 procent</u></b> af det i Ghost Tracker opsatte maksimum.<br>
+- <b style=&quot;color: red;&quot;>RÃ¸d</b>: NÃ¥r en bruger har besÃ¸gt galleriet <b style=&quot;color: red;&quot;><u>mere end 100 procent</u></b> af det i Ghost Tracker opsatte maksimum. <b><u>I dette tilfÃ¦lde skal brugerens ogsÃ¥ optrÃ¦de i Ghost Tracker-tabellen.</u></b><br>
 <br>
 Eksempel:
 <br>
 Den maksimale tid er i Ghost Tracker opsat til 100 dage.
 <br>
-En bruger vil optræde som grøn, hvis vedkommende besøgte galleriet for mindre end 50 dage siden, i orange hvis det sidste besøg fandt sted mellem 50 og 99 dage siden, og i rød hvis det er 100 dage eller derover.
+En bruger vil optrÃ¦de som grÃ¸n, hvis vedkommende besÃ¸gte galleriet for mindre end 50 dage siden, i orange hvis det sidste besÃ¸g fandt sted mellem 50 og 99 dage siden, og i rÃ¸d hvis det er 100 dage eller derover.
 <br><br>
-<b>BEMÆRK</b>: Listen viser ikke hvem der har bekræftet sin registrering (hvis valgmuligheden vedrørende registreringsbekræftelse er aktiveret). Disse brugere håndteres da på en særlig måde på fanen &quot;Sporing af bekræftelser&quot;.
+<b>BEMÃ†RK</b>: Listen viser ikke hvem der har bekrÃ¦ftet sin registrering (hvis valgmuligheden vedrÃ¸rende registreringsbekrÃ¦ftelse er aktiveret). Disse brugere hÃ¥ndteres da pÃ¥ en sÃ¦rlig mÃ¥de pÃ¥ fanen &quot;Sporing af bekrÃ¦ftelser&quot;.
 <br><br>
-<b>Tabelsorteringsfunktion</b>: Du kan sortere de viste data ved at klikke på kolonneoverskifterne. Hold Shift-tasten ned for at sortere op til fire kolonner på samme tid.';
+<b>Tabelsorteringsfunktion</b>: Du kan sortere de viste data ved at klikke pÃ¥ kolonneoverskifterne. Hold Shift-tasten ned for at sortere op til fire kolonner pÃ¥ samme tid.';
 
 
 // UserManagement tab
-$lang['UAM_usermanTitle_d'] = 'Når begrænset deadline for registering er aktiveret, er der derunder en liste over brugere, hvis registreringsbekræftelse afventes, <b style=&quot;text-decoration: underline;&quot;>uanset</b> om de stadig har tid til at bekræfte eller ej.<br><br>
-Registreringsdatoen vises i grønt når den pågældende bruger er under tidsgrænsen for registreringsbekræftelse. I dette tilfælde er bekræftelsesnøglen stadig gyldig og vi kan sende en mail med eller uden en ny bekræftelsesnøgle.<br><br>
-Når en registreringsdato vises med rødt, er bekræftelsesperioden udløbet. I dette tilfælde kan du sende en mail med en ny bekræftelsesnøgle, hvis du ønsker at gøre det muligt for brugeren at bekræfte sin registrering.<br><br>
-I alle tilfælde er det muligt, manuelt at gennemtvinge bekræftelsen.<br><br>
+$lang['UAM_usermanTitle_d'] = 'NÃ¥r begrÃ¦nset deadline for registering er aktiveret, er der derunder en liste over brugere, hvis registreringsbekrÃ¦ftelse afventes, <b style=&quot;text-decoration: underline;&quot;>uanset</b> om de stadig har tid til at bekrÃ¦fte eller ej.<br><br>
+Registreringsdatoen vises i grÃ¸nt nÃ¥r den pÃ¥gÃ¦ldende bruger er under tidsgrÃ¦nsen for registreringsbekrÃ¦ftelse. I dette tilfÃ¦lde er bekrÃ¦ftelsesnÃ¸glen stadig gyldig og vi kan sende en mail med eller uden en ny bekrÃ¦ftelsesnÃ¸gle.<br><br>
+NÃ¥r en registreringsdato vises med rÃ¸dt, er bekrÃ¦ftelsesperioden udlÃ¸bet. I dette tilfÃ¦lde kan du sende en mail med en ny bekrÃ¦ftelsesnÃ¸gle, hvis du Ã¸nsker at gÃ¸re det muligt for brugeren at bekrÃ¦fte sin registrering.<br><br>
+I alle tilfÃ¦lde er det muligt, manuelt at gennemtvinge bekrÃ¦ftelsen.<br><br>
 Her kan du:
 <br><br>
-- Manuelt slette konti <b>(manuel tømning)</b>
+- Manuelt slette konti <b>(manuel tÃ¸mning)</b>
 <br>
-- Generere mailpåmindelse <b>uden</b> at generere en ny nøgle. Advarsel: Sender en påmindelsesmail til de pågældende besøgende. Funktionen nulstiller ikke de pågældende besøgendes registreringsdato og timeout\'en er stadig gyldig.
+- Generere mailpÃ¥mindelse <b>uden</b> at generere en ny nÃ¸gle. Advarsel: Sender en pÃ¥mindelsesmail til de pÃ¥gÃ¦ldende besÃ¸gende. Funktionen nulstiller ikke de pÃ¥gÃ¦ldende besÃ¸gendes registreringsdato og timeout\'en er stadig gyldig.
 <br>
-- Generere mailpåmindelse <b>med</b> generering af ny nøgle. Advarsel: Sender en påmindelsesmail til de pågældende besøgende. Funktionen nulstiller også de pågældende besøgendes registreringsdato, hvilket svarer til at udvide bekræftelsesdeadline.
+- Generere mailpÃ¥mindelse <b>med</b> generering af ny nÃ¸gle. Advarsel: Sender en pÃ¥mindelsesmail til de pÃ¥gÃ¦ldende besÃ¸gende. Funktionen nulstiller ogsÃ¥ de pÃ¥gÃ¦ldende besÃ¸gendes registreringsdato, hvilket svarer til at udvide bekrÃ¦ftelsesdeadline.
 <br>
-- Manuelt godkende en registrering som venter på bekræftelse, selv hvis udløbesdatoen er passeret <b>(tvunget bekræftelse)</b>.
+- Manuelt godkende en registrering som venter pÃ¥ bekrÃ¦ftelse, selv hvis udlÃ¸besdatoen er passeret <b>(tvunget bekrÃ¦ftelse)</b>.
 <br><br>
-<b>Tabelsorteringsfunktion</b>: Du kan sortere de viste data ved at klikke på kolonneoverskifterne. Hold Shift-tasten ned for at sortere op til fire kolonner på samme tid.';
+<b>Tabelsorteringsfunktion</b>: Du kan sortere de viste data ved at klikke pÃ¥ kolonneoverskifterne. Hold Shift-tasten ned for at sortere op til fire kolonner pÃ¥ samme tid.';
 ?>

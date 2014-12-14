@@ -121,6 +121,7 @@ $lang['UAM_confirmstatTitle'] = 'Validation Satzung';
 $lang['UAM_remailtxt1Title'] = 'Reminder per E-Mail mit den neuen Schlüssel generiert';
 $lang['UAM_remailtxt2Title'] = 'Reminder per E-Mail ohne dass neue Schlüssel generiert';
 $lang['UAM_confirmlevelTitle'] = 'Datenschutzstufe';
+$lang['UAM_GTAutoDelTitle'] = 'Benutzerdefinierte Meldung auf gelöschtes Konto';
 
 /* Ghost Tracker Tab */
 $lang['UAM_SubTitle4'] = 'Geist Tracker';

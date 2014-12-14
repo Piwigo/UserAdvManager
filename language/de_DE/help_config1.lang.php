@@ -2,14 +2,14 @@
 // Registration options section
 $lang['UAM_restricTitle_d'] = '- Charaktere Ausgrenzung<br>
 - Passwort Durchsetzung<br>
-- E-Mail-Dom‰nen Ausgrenzung<br>
+- E-Mail-Dom√§nen Ausgrenzung<br>
 ...
 ';
 $lang['UAM_carexcTitle_d'] = 'Es mag interessant sein, bestimmte Zeichen in Benutzernamen verbieten (Beispiel: verweigern Logins mit @). Diese Option erm&ouml;glicht es, Zeichen oder Zeichenfolge, Veranstaltungen auszuschlie&szlig;en.<br>
-NB: Die Option kann auch ausschlieﬂen, ganze Wˆrter.
+NB: Die Option kann auch ausschlie√üen, ganze W√∂rter.
 <br><br>
 <b style=&quot;color: red;&quot;>Warnung: Diese Option hat keine Auswirkungen auf den Benutzernamen erstellt vor ihrer Aktivierung.</b>';
-$lang['UAM_mailexcTitle_d'] = 'Standardm‰ﬂig akzeptiert Piwigo alle E-Mail-Adressen im Format xxx@yyy.zz. Durch die Aktivierung dieser Option kˆnnen Sie auf bestimmte Domains im Format ausschlieﬂen: @[Dom‰nenname].[Domain Extension].<br><br>
+$lang['UAM_mailexcTitle_d'] = 'Standardm√§√üig akzeptiert Piwigo alle E-Mail-Adressen im Format xxx@yyy.zz. Durch die Aktivierung dieser Option k√∂nnen Sie auf bestimmte Domains im Format ausschlie√üen: @[Dom√§nenname].[Domain Extension].<br><br>
 Beispiele:<br>
 @hotmail.com -> Ausnahme-Adressen *@hotmail.com<br>
 @hotmail -> ohne alle Adressen *@hotmail *';

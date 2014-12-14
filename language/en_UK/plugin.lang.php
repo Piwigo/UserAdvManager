@@ -101,6 +101,7 @@ $lang['UAM_remailtxt2Title'] = 'Reminder email without new key generated';
 $lang['UAM_confirmgrpTitle'] = 'Groups';
 $lang['UAM_confirmstatTitle'] = 'Statutes';
 $lang['UAM_confirmlevelTitle'] = 'Privacy level';
+$lang['UAM_GTAutoDelTitle'] = 'Custom message on deleted account';
 
 /* Ghost Tracker Tab */
 $lang['UAM_SubTitle4'] = 'Ghost Tracker';

@@ -111,6 +111,13 @@ $lang['UAM_GhostTracker'] = 'Gestión de Espíritu visitantes (Tracker Ghost)';
 $lang['UAM_GhostTracker_true'] = ' Activar. Período máximo de días entre dos visitas: ';
 $lang['UAM_GhostTracker_ReminderText'] = 'Personalización del mensaje recordatorio de Ghost Tracker';
 
+$lang['UAM_confirmgrpTitle'] = 'Grupos de validación';
+$lang['UAM_confirmstatTitle'] = 'Estatutos de validación';
+$lang['UAM_remailtxt1Title'] = 'Recordatorio por correo electrónico con la llave generada';
+$lang['UAM_remailtxt2Title'] = 'Recordatorio por correo electrónico sin la llave generada';
+$lang['UAM_confirmlevelTitle'] = 'Nivel de confidencialidad';
+$lang['UAM_GTAutoDelTitle'] = 'Mensaje personalizado en cuenta eliminada';
+
 /* Ghost Tracker Tab */
 $lang['UAM_SubTitle4'] = 'Ghost Tracker';
 $lang['UAM_GT_Init'] = 'Inicialización de Ghost Tracker';
