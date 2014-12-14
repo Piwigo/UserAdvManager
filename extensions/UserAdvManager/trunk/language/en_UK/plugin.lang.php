@@ -96,6 +96,12 @@ $lang['UAM_GhostTracker'] = 'Ghost visitors management (Ghost Tracker)';
 $lang['UAM_GhostTracker_true'] = ' Enable. Maximum period in days between two visits: ';
 $lang['UAM_GhostTracker_ReminderText'] = 'Customizing Ghost Tracker\'s reminder message';
 
+$lang['UAM_remailtxt1Title'] = 'Reminder email with new key generated';
+$lang['UAM_remailtxt2Title'] = 'Reminder email without new key generated';
+$lang['UAM_confirmgrpTitle'] = 'Groups';
+$lang['UAM_confirmstatTitle'] = 'Statutes';
+$lang['UAM_confirmlevelTitle'] = 'Privacy level';
+
 /* Ghost Tracker Tab */
 $lang['UAM_SubTitle4'] = 'Ghost Tracker';
 $lang['UAM_GT_Init'] = 'Initializing Ghost Tracker';
