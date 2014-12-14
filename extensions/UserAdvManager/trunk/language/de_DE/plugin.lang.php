@@ -116,6 +116,12 @@ $lang['UAM_GhostTracker'] = 'Geist Besucher-Management (Geist Tracker)';
 $lang['UAM_GhostTracker_true'] = ' Aktivieren. Maximale Zeit in Tagen zwischen zwei Besuche: ';
 $lang['UAM_GhostTracker_ReminderText'] = 'Anpassen der Geist Tracker Erinnerungs-Nachricht';
 
+$lang['UAM_confirmgrpTitle'] = 'Validation Gruppen';
+$lang['UAM_confirmstatTitle'] = 'Validation Satzung';
+$lang['UAM_remailtxt1Title'] = 'Reminder per E-Mail mit den neuen Schlüssel generiert';
+$lang['UAM_remailtxt2Title'] = 'Reminder per E-Mail ohne dass neue Schlüssel generiert';
+$lang['UAM_confirmlevelTitle'] = 'Datenschutzstufe';
+
 /* Ghost Tracker Tab */
 $lang['UAM_SubTitle4'] = 'Geist Tracker';
 $lang['UAM_GT_Init'] = 'Initialisieren Inaktiven-Nutzer-Verfolgung';
