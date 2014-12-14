@@ -182,4 +182,5 @@ $lang['UAM_No_validation_for_Guest'] = '"Misafir" hesabı için onaya gerek yokt
 $lang['UAM_Err_GhostTracker_Settings'] = '"Ghost Tracker" \'ı sadece bu sayfa kullanabilir. Aktif etmek için ayarlar bölümünden aktifleştirin. ';
 $lang['UAM_Default_GhstDemotion_Txt'] = 'Sayın [username], son girişinizen buz amana çok uzun bir zaman geçti bu yüzden [mygallery] Lütfen aktif etmek için linki kullanın.';
 $lang['UAM_AddURL2Mail'] = 'Sayfaların sonuna galeri adresini imza olarak ekleyin(İmza gibi)';
+$lang['UAM_GTAutoDelTitle'] = 'Silinen hesaplar için mesaj ayarları';
 ?>

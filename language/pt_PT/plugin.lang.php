@@ -306,4 +306,10 @@ $lang['UAM_Validated_Group'] = 'Grupo para utilizadores que confirmaram o seu re
 $lang['UAM_Follow this link to access the gallery'] = 'Por favor, siga este link para acessar a galeria';
 $lang['UAM_Select page number'] = 'Selecionar o número da página';
 $lang['UAM_Select page size'] = 'Selecionar o tamanho da página';
+$lang['UAM_confirmlevelTitle'] = 'Nível de privacidade';
+$lang['UAM_confirmgrpTitle'] = 'Grupos';
+$lang['UAM_GTAutoDelTitle'] = 'Mensagem personalizada na conta eliminada';
+$lang['UAM_remailtxt1Title'] = 'Email lembrete com nova chave gerada';
+$lang['UAM_remailtxt2Title'] = 'Email lembrete sem geração de nova chave';
+$lang['UAM_confirmstatTitle'] = 'Estatutos';
 ?>
