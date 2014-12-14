@@ -17,8 +17,12 @@ include_once(PHPWG_ROOT_PATH.'admin/include/tabsheet.class.php');
 include_once (PHPWG_ROOT_PATH.'/include/constants.php');
 
 load_language('plugin.lang', UAM_PATH);
-load_language('help.lang', UAM_PATH);
-
+load_language('help_config1.lang', UAM_PATH);
+load_language('help_config2.lang', UAM_PATH);
+load_language('help_config3.lang', UAM_PATH);
+load_language('help_config4.lang', UAM_PATH);
+load_language('help_tabs.lang', UAM_PATH);
+load_language('help_bkp.lang', UAM_PATH);
 
 // +-----------------------------------------------------------------------+
 // |                   Variables initialization                            |

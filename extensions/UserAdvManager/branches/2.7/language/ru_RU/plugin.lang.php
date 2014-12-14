@@ -302,4 +302,10 @@ $lang['UAM_AddURL2Mail'] = 'Добавить URL галереи в конец э
 $lang['UAM_Follow this link to access the gallery'] = 'Пожалуйста, перейдите по этой ссылке для входа в галерею';
 $lang['UAM_Select page size'] = 'Выбор размера страницы';
 $lang['UAM_Select page number'] = 'Выбор номера страницы';
+$lang['UAM_remailtxt2Title'] = 'Напоминающий e-mail без нового сгенерированного ключа';
+$lang['UAM_remailtxt1Title'] = 'Напоминающий e-mail с новым сгенерированным ключом';
+$lang['UAM_confirmstatTitle'] = 'Статусы';
+$lang['UAM_confirmlevelTitle'] = 'Уровень доступа';
+$lang['UAM_confirmgrpTitle'] = 'Группы';
+$lang['UAM_GTAutoDelTitle'] = 'Настройка сообщения удаленному аккаунту';
 ?>

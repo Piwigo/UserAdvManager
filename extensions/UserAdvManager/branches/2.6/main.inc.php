@@ -24,7 +24,12 @@ include_once (UAM_PATH.'include/constants.php');
 include_once (UAM_PATH.'include/functions.inc.php');
 
 load_language('plugin.lang', UAM_PATH);
-load_language('help.lang', UAM_PATH);
+load_language('help_config1.lang', UAM_PATH);
+load_language('help_config2.lang', UAM_PATH);
+load_language('help_config3.lang', UAM_PATH);
+load_language('help_config4.lang', UAM_PATH);
+load_language('help_tabs.lang', UAM_PATH);
+load_language('help_bkp.lang', UAM_PATH);
 $conf_UAM = unserialize($conf['UserAdvManager']);
 
 

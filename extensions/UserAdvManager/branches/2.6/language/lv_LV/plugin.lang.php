@@ -110,6 +110,12 @@ $lang['UAM_GhostTracker'] = 'Ghost (slēpto) apmeklētāju pārvaldība (Ghost T
 $lang['UAM_GhostTracker_true'] = ' Iespējot. Maksimālais periods dienās starp divām vizītēm: ';
 $lang['UAM_GhostTracker_ReminderText'] = 'Ghost Tracker atgadinājuma ziņojuma pielāgošana';
 
+$lang['UAM_confirmgrpTitle'] = 'Pārbaudāmās Grupas';
+$lang['UAM_confirmstatTitle'] = 'Validācijas statūti';
+$lang['UAM_remailtxt1Title'] = 'Atgādinājuma e-vēstule ar jauni uzģenerēto atslēgu';
+$lang['UAM_remailtxt2Title'] = 'Atgādinājuma e-vēstule bez jauni uzģenerētās atslēgas';
+$lang['UAM_confirmlevelTitle'] = 'Privātuma līmenis';
+$lang['UAM_GTAutoDelTitle'] = 'Pielāgots ziņojums par dzēstu kontu';
 
 /* Ghost Tracker Tab */
 $lang['UAM_SubTitle4'] = 'Ghost Tracker';

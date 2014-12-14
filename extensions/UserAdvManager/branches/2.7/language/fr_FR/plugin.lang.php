@@ -97,6 +97,13 @@ $lang['UAM_GhostTracker'] = 'Gestion des visiteurs fantômes (Ghost Tracker)';
 $lang['UAM_GhostTracker_true'] = ' Activer. Nombre de jours maximum entre deux visites: ';
 $lang['UAM_GhostTracker_ReminderText'] = 'Texte de rappel personnalisé';
 
+$lang['UAM_remailtxt1Title'] = 'Message de rappel avec regénération de clé';
+$lang['UAM_remailtxt2Title'] = 'Message de rappel sans regénération de clé';
+$lang['UAM_confirmgrpTitle'] = 'Groupes';
+$lang['UAM_confirmstatTitle'] = 'Statuts';
+$lang['UAM_confirmlevelTitle'] = 'Niveau de confidentialité';
+$lang['UAM_GTAutoDelTitle'] = 'Message personnalisé de suppression de compte';
+
 
 /* Ghost Tracker Tab */
 $lang['UAM_SubTitle4'] = 'Ghost Tracker';
