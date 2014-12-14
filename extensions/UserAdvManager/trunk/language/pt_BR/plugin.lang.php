@@ -298,4 +298,10 @@ $lang['UAM_No_validation_for_your_account'] = 'Sua conta de administrador pessoa
 $lang['UAM_Follow this link to access the gallery'] = 'Por favor, siga este link para ter acesso a galeria';
 $lang['UAM_Select page number'] = 'Selecione o número da página';
 $lang['UAM_Select page size'] = 'Selecione o tamanho da página';
+$lang['UAM_remailtxt2Title'] = 'Email de lembrete sem uma nova chave';
+$lang['UAM_remailtxt1Title'] = 'Email de lembrete com uma nova chave gerada';
+$lang['UAM_confirmgrpTitle'] = 'Grupos';
+$lang['UAM_confirmlevelTitle'] = 'Nível de privacidade';
+$lang['UAM_GTAutoDelTitle'] = 'Mensagem personalizada para remover uma conta';
+$lang['UAM_confirmstatTitle'] = 'Estatutos';
 ?>
