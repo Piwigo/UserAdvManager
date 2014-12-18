@@ -92,6 +92,7 @@ $lang['UAM_ValidationLimit_Info'] = 'Limitation du délai de confirmation d\'ins
 $lang['UAM_ConfirmMail_TimeOut_true'] = ' Activer. Nombre de jours de délai: ';
 $lang['UAM_ConfirmMail_ReMail_Txt1'] = 'Texte du message de rappel <b><u>avec</u></b> génération d\'une nouvelle clé de confirmation.';
 $lang['UAM_ConfirmMail_ReMail_Txt2'] = 'Texte du message de rappel <b><u>sans</u></b> génération d\'une nouvelle clé de confirmation.';
+$lang['UAM_Admins_Copy'] = 'Administrateurs en copie des emails envoyés :';
 
 $lang['UAM_GhostTracker'] = 'Gestion des visiteurs fantômes (Ghost Tracker)';
 $lang['UAM_GhostTracker_true'] = ' Activer. Nombre de jours maximum entre deux visites: ';
@@ -411,4 +412,6 @@ $lang['UAM_Follow this link to access the gallery'] = 'Veuillez utiliser ce lien
 
 $lang['UAM_Select page size'] = 'Choisir la taille des pages';
 $lang['UAM_Select page number'] = 'Sélectionner une page';
+
+$lang['UAM_NewFeature'] = 'Nouvelle fonctionnalité';
 ?>

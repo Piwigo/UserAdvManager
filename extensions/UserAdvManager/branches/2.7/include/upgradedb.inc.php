@@ -862,4 +862,34 @@ DROP UAM_pwdreset
 ;';
   pwg_query($q);
 }
+
+
+/* upgrade from 2.51.x to 2.70.3 */
+/* ***************************** */
+function upgrade_2510_2703()
+{
+  global $conf;
+  
+  load_language('plugin.lang', UAM_PATH);
+
+  // Upgrading options
+  // -----------------
+  $query = '
+SELECT value
+  FROM '.CONFIG_TABLE.'
+WHERE param = "UserAdvManager"
+;';
+
+  $result = pwg_query($query);
+  $conf_UAM = pwg_db_fetch_assoc($result);
+    
+  $Newconf_UAM = unserialize($conf_UAM['value']);
+
+  // Add "send a copy of all emails to admins" new option
+  $Newconf_UAM['EMAILS_COPY_TO_ADMINS'] = 'false';
+
+  $update_conf = serialize($Newconf_UAM);
+
+  conf_update_param('UserAdvManager', pwg_db_real_escape_string($update_conf));
+}
 ?>

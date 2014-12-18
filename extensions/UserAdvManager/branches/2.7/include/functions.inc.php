@@ -1238,6 +1238,12 @@ WHERE user_id = '.$id.'
           'subject' => $subject,
           )
         );
+
+      // Send a copy to admins
+      if ((isset($conf_UAM['EMAILS_COPY_TO_ADMINS']) and $conf_UAM['EMAILS_COPY_TO_ADMINS'] == 'true'))
+      {
+        UAM_Copy2Admins($subject,$content_confirmation);
+      }
     }
     // Do not add gallery URL at the end of the email
     elseif (isset($conf_UAM['ADD_GALLERY_URL_TO_EMAILS']) and $conf_UAM['ADD_GALLERY_URL_TO_EMAILS'] == 'false')
@@ -1255,6 +1261,12 @@ WHERE user_id = '.$id.'
           'subject' => $subject,
           )
         );
+
+      // Send a copy to admins
+      if ((isset($conf_UAM['EMAILS_COPY_TO_ADMINS']) and $conf_UAM['EMAILS_COPY_TO_ADMINS'] == 'true'))
+      {
+        UAM_Copy2Admins($subject,$content_confirmation);
+      }
     }
     // By default do not add gallery URL at the end of the email
     else
@@ -1272,6 +1284,12 @@ WHERE user_id = '.$id.'
           'subject' => $subject,
           )
         );
+
+      // Send a copy to admins
+      if ((isset($conf_UAM['EMAILS_COPY_TO_ADMINS']) and $conf_UAM['EMAILS_COPY_TO_ADMINS'] == 'true'))
+      {
+        UAM_Copy2Admins($subject,$content_confirmation);
+      }
     }
 	}
 
@@ -1294,6 +1312,12 @@ WHERE user_id = '.$id.'
           'subject' => $subject,
           )
         );
+
+      // Send a copy to admins
+      if ((isset($conf_UAM['EMAILS_COPY_TO_ADMINS']) and $conf_UAM['EMAILS_COPY_TO_ADMINS'] == 'true'))
+      {
+        UAM_Copy2Admins($subject,$content_info);
+      }
     }
     // Do not add gallery URL at the end of the email
     elseif (isset($conf_UAM['ADD_GALLERY_URL_TO_EMAILS']) and $conf_UAM['ADD_GALLERY_URL_TO_EMAILS'] == 'false')
@@ -1311,6 +1335,12 @@ WHERE user_id = '.$id.'
           'subject' => $subject,
           )
         );
+
+      // Send a copy to admins
+      if ((isset($conf_UAM['EMAILS_COPY_TO_ADMINS']) and $conf_UAM['EMAILS_COPY_TO_ADMINS'] == 'true'))
+      {
+        UAM_Copy2Admins($subject,$content_info);
+      }
     }
     // By default do not add gallery URL at the end of the email
     else
@@ -1328,6 +1358,12 @@ WHERE user_id = '.$id.'
           'subject' => $subject,
           )
         );
+
+      // Send a copy to admins
+      if ((isset($conf_UAM['EMAILS_COPY_TO_ADMINS']) and $conf_UAM['EMAILS_COPY_TO_ADMINS'] == 'true'))
+      {
+        UAM_Copy2Admins($subject,$content_info);
+      }
     }
 	}
 // Switching back to default language
@@ -1499,6 +1535,12 @@ WHERE user_id = '.$user_id.'
         'subject' => $subject,
         )
       );
+
+    // Send a copy to admins
+    if ((isset($conf_UAM['EMAILS_COPY_TO_ADMINS']) and $conf_UAM['EMAILS_COPY_TO_ADMINS'] == 'true'))
+    {
+      UAM_Copy2Admins($subject,$content);
+    }
   }
   // Do not add gallery URL at the end of the email
   elseif (isset($conf_UAM['ADD_GALLERY_URL_TO_EMAILS']) and $conf_UAM['ADD_GALLERY_URL_TO_EMAILS'] == 'false')
@@ -1516,6 +1558,12 @@ WHERE user_id = '.$user_id.'
         'subject' => $subject,
         )
       );
+
+    // Send a copy to admins
+    if ((isset($conf_UAM['EMAILS_COPY_TO_ADMINS']) and $conf_UAM['EMAILS_COPY_TO_ADMINS'] == 'true'))
+    {
+      UAM_Copy2Admins($subject,$content);
+    }
   }
   // By default do not add gallery URL at the end of the email
   else
@@ -1533,6 +1581,12 @@ WHERE user_id = '.$user_id.'
         'subject' => $subject,
         )
       );
+
+    // Send a copy to admins
+    if ((isset($conf_UAM['EMAILS_COPY_TO_ADMINS']) and $conf_UAM['EMAILS_COPY_TO_ADMINS'] == 'true'))
+    {
+      UAM_Copy2Admins($subject,$content);
+    }
   }
 
   // Switching back to default language
@@ -1629,6 +1683,12 @@ WHERE user_id = '.$user_id.'
         'subject' => $subject,
         )
       );
+
+    // Send a copy to admins
+    if ((isset($conf_UAM['EMAILS_COPY_TO_ADMINS']) and $conf_UAM['EMAILS_COPY_TO_ADMINS'] == 'true'))
+    {
+      UAM_Copy2Admins($subject,$content);
+    }
   }
   // Do not add gallery URL at the end of the email
   elseif (isset($conf_UAM['ADD_GALLERY_URL_TO_EMAILS']) and $conf_UAM['ADD_GALLERY_URL_TO_EMAILS'] == 'false')
@@ -1646,6 +1706,12 @@ WHERE user_id = '.$user_id.'
         'subject' => $subject,
         )
       );
+
+    // Send a copy to admins
+    if ((isset($conf_UAM['EMAILS_COPY_TO_ADMINS']) and $conf_UAM['EMAILS_COPY_TO_ADMINS'] == 'true'))
+    {
+      UAM_Copy2Admins($subject,$content);
+    }
   }
   // By default do not add gallery URL at the end of the email
   else
@@ -1663,6 +1729,12 @@ WHERE user_id = '.$user_id.'
         'subject' => $subject,
         )
       );
+
+    // Send a copy to admins
+    if ((isset($conf_UAM['EMAILS_COPY_TO_ADMINS']) and $conf_UAM['EMAILS_COPY_TO_ADMINS'] == 'true'))
+    {
+      UAM_Copy2Admins($subject,$content);
+    }
   }
 
   // Switching back to default language
@@ -1782,6 +1854,12 @@ WHERE user_id = '.$id.'
         'subject' => $subject,
         )
       );
+
+    // Send a copy to admins
+    if ((isset($conf_UAM['EMAILS_COPY_TO_ADMINS']) and $conf_UAM['EMAILS_COPY_TO_ADMINS'] == 'true'))
+    {
+      UAM_Copy2Admins($subject,$content);
+    }
   }
   // Do not add gallery URL at the end of the email
   elseif (isset($conf_UAM['ADD_GALLERY_URL_TO_EMAILS']) and $conf_UAM['ADD_GALLERY_URL_TO_EMAILS'] == 'false')
@@ -1799,6 +1877,12 @@ WHERE user_id = '.$id.'
         'subject' => $subject,
         )
       );
+
+    // Send a copy to admins
+    if ((isset($conf_UAM['EMAILS_COPY_TO_ADMINS']) and $conf_UAM['EMAILS_COPY_TO_ADMINS'] == 'true'))
+    {
+      UAM_Copy2Admins($subject,$content);
+    }
   }
   // By default do not add gallery URL at the end of the email
   else
@@ -1816,6 +1900,12 @@ WHERE user_id = '.$id.'
         'subject' => $subject,
         )
       );
+
+    // Send a copy to admins
+    if ((isset($conf_UAM['EMAILS_COPY_TO_ADMINS']) and $conf_UAM['EMAILS_COPY_TO_ADMINS'] == 'true'))
+    {
+      UAM_Copy2Admins($subject,$content);
+    }
   }
 
 		// Switching back to default language
@@ -1936,6 +2026,12 @@ WHERE id = '.$id.'
         'subject' => $subject,
         )
       );
+
+    // Send a copy to admins
+    if ((isset($conf_UAM['EMAILS_COPY_TO_ADMINS']) and $conf_UAM['EMAILS_COPY_TO_ADMINS'] == 'true'))
+    {
+      UAM_Copy2Admins($subject,$content);
+    }
   }
   // Do not add gallery URL at the end of the email
   elseif (isset($conf_UAM['ADD_GALLERY_URL_TO_EMAILS']) and $conf_UAM['ADD_GALLERY_URL_TO_EMAILS'] == 'false')
@@ -1953,6 +2049,12 @@ WHERE id = '.$id.'
         'subject' => $subject,
         )
       );
+
+    // Send a copy to admins
+    if ((isset($conf_UAM['EMAILS_COPY_TO_ADMINS']) and $conf_UAM['EMAILS_COPY_TO_ADMINS'] == 'true'))
+    {
+      UAM_Copy2Admins($subject,$content);
+    }
   }
   // By defaukt do not add gallery URL at the end of the email
   else
@@ -1970,6 +2072,12 @@ WHERE id = '.$id.'
         'subject' => $subject,
         )
       );
+
+    // Send a copy to admins
+    if ((isset($conf_UAM['EMAILS_COPY_TO_ADMINS']) and $conf_UAM['EMAILS_COPY_TO_ADMINS'] == 'true'))
+    {
+      UAM_Copy2Admins($subject,$content);
+    }
   }
 
   // Switching back to default language
@@ -3062,6 +3170,25 @@ LIMIT 1
   pwg_query($query);
 }
 
+
+/**
+ * UAM_Copy2Admins
+ * Send a copy of user's email to admins
+ * 
+ * Param : email subject and content
+ */
+function UAM_Copy2Admins($subject,$content)
+{
+  $adminsubject = "[Admins Copy] - ".$subject;
+
+  pwg_mail_admins(
+    array(
+      'content' => $content,
+      'content_format' => 'text/plain',
+      'subject' => $adminsubject,
+    )
+  );
+}
 
 /**
  * SetValidated

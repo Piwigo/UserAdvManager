@@ -66,7 +66,8 @@ function plugin_install($id, $version, &$errors)
     'GTAUTOMAIL_SUBJECT'          => l10n('UAM_Default_GTAutoMail_Subject'),
     'GTREMINDER_SUBJECT'          => l10n('UAM_Default_GTReminder_Subject'),
     'ADMINVALIDATIONMAIL_SUBJECT' => l10n('UAM_Default_AdminValidationMail_Subject'),
-    'ADD_GALLERY_URL_TO_EMAILS'   => 'false'
+    'ADD_GALLERY_URL_TO_EMAILS'   => 'false',
+    'EMAILS_COPY_TO_ADMINS'       => 'false'
   );
   
   // Default specific parameters for UserAdvManager ConfirmMail conf
@@ -403,8 +404,15 @@ WHERE param = "UserAdvManager_Version"
     if (version_compare($conf['UserAdvManager_Version'], '2.51.0') < 0)
     {
     /* upgrade from version 2.50.x to 2.51.0 */
-    /* *************************************** */
+    /* ************************************* */
       upgrade_2500_2510();
+    }
+
+    if (version_compare($conf['UserAdvManager_Version'], '2.70.3') < 0)
+    {
+    /* upgrade from version 2.51.0 to 2.70.3 */
+    /* ************************************* */
+      upgrade_2510_2703();
     }
   }
 
