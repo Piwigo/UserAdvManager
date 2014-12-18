@@ -5,6 +5,7 @@ $lang['UAM_miscTitle_d'] = '
 - Nickname mandatory for guests comments<br/>
 ...
 ';
+$lang['UAM_Admins_Copy_d'] = 'By enabling this option, all administrators of the gallery will receive a copy of <b style=&quot;color: red;&quot;>all emails</b> sent by the plugin. This can be usefull to check if emails are really sent and to keep a copy in case of dispute. For example, during a registration validation or renewal.<br/><br/>Subjects of copied emails are prefixed with <b style=&quot;color: green;&quot;>&quot;[Admins Copy] - &quot;</b>';
 $lang['UAM_infomailTitle_d'] = 'This option allows to automate sending an information email to a user when he changes his password or email address in his profile page.<br/><br/>
 The content of the message sent is composed of a customizable part to introduce a little welcome note and a fixed part indicating the login name, password and email address of the user.';
 $lang['UAM_HidePasswTitle_d'] = 'Choose here if you want to display the password chosen by the visitor in the information email. If you enable the option, the password will then appear in clear text. If you disable the password will not appear at all.';

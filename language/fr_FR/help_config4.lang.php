@@ -5,6 +5,7 @@ $lang['UAM_miscTitle_d'] = '
 - Pseudo obligatoire sur commentaire pour les visiteurs<br/>
 ...
 ';
+$lang['UAM_Admins_Copy_d'] = 'En activant cette option, tous les administrateurs de la galerie seront en copie de <b style=&quot;color: red;&quot;>tous les emails</b> envoyés par le plugin. Permet de vérifier que les emails sont bien envoyés et de conserver une copie en cas de litige. Par exemple, lors d\'une validation d\'inscription ou de relance.<br/><br/>Les sujets de emails en copie sont préfixés par <b style=&quot;color: green;&quot;>&quot;[Admins Copy] - &quot;</b>';
 $lang['UAM_infomailTitle_d'] = 'Cette option permet d\'automatiser l\'envoi d\'un email d\'information à un utilisateur lorsqu\'il modifie son mot de passe ou son adresse de messagerie dans son profil.<br/><br/>
 Le message envoyé comprend une partie fixe (login, mot de passe et adresse email de l\'utilisateur) et une partie personnalisable par un texte d\'accueil.';
 $lang['UAM_HidePasswTitle_d'] = 'Choisissez ici si vous souhaitez faire afficher le mot de passe choisi par le visiteur dans le mail d\'information. Si vous activez l\'option, le mot de passe apparaitra alors en clair. Si vous la désactivez, le mot de passe n\'apparaitra pas du tout.';

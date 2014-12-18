@@ -117,7 +117,7 @@ switch ($page['tab'])
 // *************************************************************************
   case 'global':
 
-  if (isset($_POST['submit']) and isset($_POST['UAM_Mail_Info']) and isset($_POST['UAM_Username_Char']) and isset($_POST['UAM_Confirm_Mail']) and isset($_POST['UAM_GhostUser_Tracker']) and isset($_POST['UAM_Admin_ConfMail']) and isset($_POST['UAM_RedirToProfile']) and isset($_POST['UAM_GTAuto']) and isset($_POST['UAM_GTAutoMail']) and isset($_POST['UAM_CustomPasswRetr']) and isset($_POST['UAM_USRAuto']) and isset($_POST['UAM_USRAutoMail']) and isset($_POST['UAM_Stuffs']) and isset($_POST['UAM_HidePassw']) and isset($_POST['UAM_RejectConnexion']) and isset($_POST['UAM_AddURL2Mail']))
+  if (isset($_POST['submit']) and isset($_POST['UAM_Mail_Info']) and isset($_POST['UAM_Username_Char']) and isset($_POST['UAM_Confirm_Mail']) and isset($_POST['UAM_GhostUser_Tracker']) and isset($_POST['UAM_Admin_ConfMail']) and isset($_POST['UAM_RedirToProfile']) and isset($_POST['UAM_GTAuto']) and isset($_POST['UAM_GTAutoMail']) and isset($_POST['UAM_CustomPasswRetr']) and isset($_POST['UAM_USRAuto']) and isset($_POST['UAM_USRAutoMail']) and isset($_POST['UAM_Stuffs']) and isset($_POST['UAM_HidePassw']) and isset($_POST['UAM_RejectConnexion']) and isset($_POST['UAM_AddURL2Mail']) and isset($_POST['UAM_Emails_Copy2Admins']))
   {
 
   // Render email contents fields
@@ -273,6 +273,7 @@ WHERE id = '.$_POST['UAM_Validated_Group'].'
     $newconf_UAM['GTREMINDER_SUBJECT'] = (isset($_POST['UAM_GTReminder_Subject']) ? $_POST['UAM_GTReminder_Subject'] : l10n('UAM_Default_GTReminder_Subject'));
     $newconf_UAM['ADMINVALIDATIONMAIL_SUBJECT'] = (isset($_POST['UAM_AdminValidationMail_Subject']) ? $_POST['UAM_AdminValidationMail_Subject'] : l10n('UAM_Default_AdminValidationMail_Subject'));
     $newconf_UAM['ADD_GALLERY_URL_TO_EMAILS'] = (isset($_POST['UAM_AddURL2Mail']) ? $_POST['UAM_AddURL2Mail'] : 'false');
+    $newconf_UAM['EMAILS_COPY_TO_ADMINS'] = (isset($_POST['UAM_Emails_Copy2Admins']) ? $_POST['UAM_Emails_Copy2Admins'] : 'false');
 
     $conf['UserAdvManager'] = serialize($newconf_UAM);
 
@@ -684,6 +685,8 @@ ORDER BY name ASC
             'UAM_ADMINVALIDATIONMAIL_SUBJECT'   => $conf_UAM['ADMINVALIDATIONMAIL_SUBJECT'],
             'UAM_ADDURL2MAIL_TRUE'              => $conf_UAM['ADD_GALLERY_URL_TO_EMAILS']=='true' ? 'checked="checked"' : '' ,
             'UAM_ADDURL2MAIL_FALSE'             => $conf_UAM['ADD_GALLERY_URL_TO_EMAILS']=='false' ? 'checked="checked"' : '' ,
+						'UAM_ADMINS_COPY_TRUE'              => $conf_UAM['EMAILS_COPY_TO_ADMINS']=='true' ? 'checked="checked"' : '' ,
+						'UAM_ADMINS_COPY_FALSE'             => $conf_UAM['EMAILS_COPY_TO_ADMINS']=='false' ? 'checked="checked"' : '' ,
             'UAM_ERROR_REPORTS1'                => $UAM_Exclusionlist_Error,
             'UAM_ERROR_REPORTS2'                => $UAM_Illegal_Flag_Error1,
             'UAM_ERROR_REPORTS3'                => $UAM_Illegal_Flag_Error2,

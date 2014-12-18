@@ -91,6 +91,7 @@ $lang['UAM_ValidationLimit_Info'] = 'Deadline for registration confirmation limi
 $lang['UAM_ConfirmMail_TimeOut_true'] = ' Enable. Number of days until expiration: ';
 $lang['UAM_ConfirmMail_ReMail_Txt1'] = 'Customizing the reminder message <b><u>with</u></b> new regeneration of confirmation key.';
 $lang['UAM_ConfirmMail_ReMail_Txt2'] = 'Customizing the reminder message <b><u>without</u></b> regeneration of confirmation key.';
+$lang['UAM_Admins_Copy'] = 'Copy of all emails to admins:';
 
 $lang['UAM_GhostTracker'] = 'Ghost visitors management (Ghost Tracker)';
 $lang['UAM_GhostTracker_true'] = ' Enable. Maximum period in days between two visits: ';
@@ -409,4 +410,6 @@ $lang['UAM_Follow this link to access the gallery'] = 'Please, follow this link 
 
 $lang['UAM_Select page size'] = 'Select page size';
 $lang['UAM_Select page number'] = 'Select page number';
+
+$lang['UAM_NewFeature'] = 'New Feature';
 ?>
