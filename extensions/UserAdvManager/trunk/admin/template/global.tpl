@@ -773,6 +773,23 @@ function uam_blockToggleDisplay( headerId, contentId )
     </div>
   
     <div id="Config5" class="instructionBlockContent" style="display:none">
+      <p class="new_in_version">{'UAM_NewFeature'|@translate}</p>
+      <div class="uam_new">
+        <ul>
+          <li>
+            <label class="cluetip" title="{'UAM_Admins_Copy'|translate}|{'UAM_Admins_Copy_d'|translate}">
+              {'UAM_Admins_Copy'|@translate}
+            </label>
+          
+            <label for="UAM_Admins_Copy_false"><input id="UAM_Admins_Copy_false" type="radio" value="false" {$UAM_ADMINS_COPY_FALSE} name="UAM_Emails_Copy2Admins"/>
+              {'UAM_Disable'|@translate}
+            </label>
+            <label for="UAM_Admins_Copy_true"><input id="UAM_Admins_Copy_true" type="radio" value="true" {$UAM_ADMINS_COPY_TRUE} name="UAM_Emails_Copy2Admins"/>
+              {'UAM_Enable'|@translate}
+            </label>
+          </li>
+        </ul>
+      </div>
         <ul>
           <li>
             <label class="cluetip" title="{'UAM_Mail_Info'|translate}|{'UAM_infomailTitle_d'|translate}">
