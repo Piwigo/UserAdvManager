@@ -308,4 +308,5 @@ $lang['UAM_confirmstatTitle'] = 'Статусы';
 $lang['UAM_confirmlevelTitle'] = 'Уровень доступа';
 $lang['UAM_confirmgrpTitle'] = 'Группы';
 $lang['UAM_GTAutoDelTitle'] = 'Настройка сообщения удаленному аккаунту';
-?>
+$lang['UAM_Admins_Copy'] = 'Копии всех писем для администраторов:';
+$lang['UAM_NewFeature'] = 'Новая функция';
