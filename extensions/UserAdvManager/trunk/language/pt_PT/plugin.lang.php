@@ -312,4 +312,5 @@ $lang['UAM_GTAutoDelTitle'] = 'Mensagem personalizada na conta eliminada';
 $lang['UAM_remailtxt1Title'] = 'Email lembrete com nova chave gerada';
 $lang['UAM_remailtxt2Title'] = 'Email lembrete sem geração de nova chave';
 $lang['UAM_confirmstatTitle'] = 'Estatutos';
-?>
+$lang['UAM_Admins_Copy'] = 'Cópia de todos os e-mails para os administradores:';
+$lang['UAM_NewFeature'] = 'Novo recurso';
