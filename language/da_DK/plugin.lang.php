@@ -309,4 +309,5 @@ $lang['UAM_confirmgrpTitle'] = 'Grupper';
 $lang['UAM_confirmlevelTitle'] = 'Privatlivsniveau';
 $lang['UAM_confirmstatTitle'] = 'Statusser';
 $lang['UAM_GTAutoDelTitle'] = 'Tilpasset meddelelse ved slettet konto';
-?>
+$lang['UAM_Admins_Copy'] = 'Kopi af alle mails til administratorerne:';
+$lang['UAM_NewFeature'] = 'Ny funktionalitet';
