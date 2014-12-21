@@ -304,4 +304,5 @@ $lang['UAM_confirmgrpTitle'] = 'Grupos';
 $lang['UAM_confirmlevelTitle'] = 'Nível de privacidade';
 $lang['UAM_GTAutoDelTitle'] = 'Mensagem personalizada para remover uma conta';
 $lang['UAM_confirmstatTitle'] = 'Estatutos';
-?>
+$lang['UAM_NewFeature'] = 'Novo Recurso';
+$lang['UAM_Admins_Copy'] = 'Cópia de todos os e-mails para os administradores:';
