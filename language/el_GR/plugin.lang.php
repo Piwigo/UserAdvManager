@@ -309,4 +309,5 @@ $lang['UAM_confirmgrpTitle'] = 'Ομάδες';
 $lang['UAM_confirmstatTitle'] = 'Κανονισμοί';
 $lang['UAM_remailtxt2Title'] = 'e-mail υπενθύμισης χωρίς να δημιουργούνται νέα κλειδιά';
 $lang['UAM_remailtxt1Title'] = 'e-mail υπενθύμισης με νέα αναγέννηση κλειδιού';
-?>
+$lang['UAM_NewFeature'] = 'Νέα δυνατότητα';
+$lang['UAM_Admins_Copy'] = 'Αντιγραφή όλων των e-mail προς τους διαχειριστές ';
