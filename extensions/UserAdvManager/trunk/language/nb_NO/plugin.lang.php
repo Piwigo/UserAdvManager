@@ -72,3 +72,28 @@ $lang['UAM_ConfirmMail_Remail'] = 'Påmindelse av ubekreftede brukere';
 $lang['UAM_ConfirmMail_Subject'] = 'Tilpass registreringsbekreftelsens e-postemne';
 $lang['UAM_ConfirmMail_Text'] = 'Tilpasse bekreftelses e-post:';
 $lang['UAM_ConfirmMail_TimeOut_true'] = 'Aktiver. Antall dager før utløp:';
+$lang['UAM_Enable'] = 'Aktivert';
+$lang['UAM_Dump_OK'] = 'Sikkerhetskopi-fil opprettet';
+$lang['UAM_Dump_NOK'] = 'Feil: Kan ikke lage sikkerhetskopi-fil!';
+$lang['UAM_Dump_Download'] = 'For å laste ned sikkerhetskopi-fil, kryss av i denne boksen:';
+$lang['UAM_DumpTxt'] = 'Sikkerhetskopiering og gjenoppretting av dine innstillinger';
+$lang['UAM_Disable'] = 'Deaktiver (standard)';
+$lang['UAM_Delete_selected'] = 'Slett';
+$lang['UAM_Default_ValidationTimeout_Txt'] = 'Beklager, kontoen din er slettet fordi du ikke har bekreftet din påmelding innen tidsfristen ([Kdager] dager). Vennligst, prøv å registrer på nytt med en gyldig og ikke blokkert e-postkonto.';
+$lang['UAM_Default_RejectConnexion_Txt'] = 'Beklager, din registrering er ikke godkjent ennå, så du kan ikke koble til galleriet nå.';
+$lang['UAM_Default_PwdRequest_Txt'] = 'Du har bedt om en tilbakestilling av passord på vårt galleri. Vennligst, se dine nye tilkoblingsinnstillingene nedenfor.';
+$lang['UAM_Default_InfoMail_Txt'] = 'Hei [brukernavn]!
+
+Du har gjort betydelige forandringer i din bruker profil på ditt galleri [mittgalleri]. Vennligst, se dine nye endringer nedenfor:';
+$lang['UAM_Default_InfoMail_Subject'] = '[brukernavn] - Din registrerings innformasjon på [mittgalleri]';
+$lang['UAM_Default_GhstDeletion_Txt'] = 'Beklager [brukernavn], din konto har blitt slettet p.g.a. det har gått for lang tid siden sist besøk på [mittgalleri]. Vennligst registrer på nytt.';
+$lang['UAM_Default_GhstReminder_Txt'] = 'Hei [brukernavn].
+
+Dette er en påmindelse fordi det har gått veldig lang tid siden du sist besøkte vårt galleri [mittgalleri]. Hvis du ikke lenger ønsker å bruke gallerie kontoen din lenger, svar på denne E-posten og vi vil slette din konto.
+
+Fra og med mottakelse av denne e-psten og ingen nye besøk innen [dager]dager, vi vil bli nøtt til å automatisk slette din konto.
+
+Med vennlig hilsen
+
+Administrator av galleriet [mittgalleri] - [minurl]';
+$lang['UAM_Default_GhstDemotion_Txt'] = 'Beklager [brukernavn], din konto har blitt opprettet på nytt p.g.a. det har gått for lang tid siden sist du besøkte [mittgalleri]. Vennligst. bruk vedlagte link til å bekrefte din konto:';
