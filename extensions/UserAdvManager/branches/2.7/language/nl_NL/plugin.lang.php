@@ -299,4 +299,5 @@ $lang['UAM_remailtxt2Title'] = 'Emailherinnering zonder een nieuw gegenereerde s
 $lang['UAM_confirmstatTitle'] = 'Statuten';
 $lang['UAM_confirmlevelTitle'] = 'Privacy niveau';
 $lang['UAM_confirmgrpTitle'] = 'Groepen';
-?>
+$lang['UAM_Admins_Copy'] = 'Kopie van alle e-mails naar admins:';
+$lang['UAM_NewFeature'] = 'Nieuwe functie';

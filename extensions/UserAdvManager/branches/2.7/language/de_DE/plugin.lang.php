@@ -400,4 +400,5 @@ $lang['UAM_AddURL2Mail'] = 'Hinzufügen der Galerie URL am Ende von E-Mails (wie
 $lang['UAM_Follow this link to access the gallery'] = 'Bitte folge diesem Link, um auf die Galerie zuzugreifen';
 $lang['UAM_Select page number'] = 'Wähle Seiten Nummer';
 $lang['UAM_Select page size'] = 'Wähle Seiten Größe';
-?>
+$lang['UAM_Admins_Copy'] = 'Kopie aller Emails an den Admin:';
+$lang['UAM_NewFeature'] = 'Neue Funktion';

@@ -360,4 +360,5 @@ $lang['UAM_AddURL2Mail'] = 'Añade la dirección de la galería al final del ema
 $lang['UAM_Follow this link to access the gallery'] = 'Por favor, sigue este enlace para acceder a la galería';
 $lang['UAM_Select page number'] = 'Seleccionar el numero de pagina';
 $lang['UAM_Select page size'] = 'Seleccionar el tamaño de la pagina';
-?>
+$lang['UAM_Admins_Copy'] = 'Copia de todos los emails a los administradores:';
+$lang['UAM_NewFeature'] = 'Nueva función';
