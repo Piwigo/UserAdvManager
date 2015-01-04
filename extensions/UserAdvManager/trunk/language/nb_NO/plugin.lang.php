@@ -97,3 +97,9 @@ Med vennlig hilsen
 
 Administrator av galleriet [mittgalleri] - [minurl]';
 $lang['UAM_Default_GhstDemotion_Txt'] = 'Beklager [brukernavn], din konto har blitt opprettet på nytt p.g.a. det har gått for lang tid siden sist du besøkte [mittgalleri]. Vennligst. bruk vedlagte link til å bekrefte din konto:';
+$lang['UAM_Err_audit_username_char'] = '<b>Denne kontoen bruker en eller flere forbudte tegn:</b>';
+$lang['UAM_Err_audit_email_forbidden'] = '<b> Denne kontoen bruker en forbudt e-postleverandør:</b>';
+$lang['UAM_Err_audit_advise'] = '<b>du må utføre korreksjoner for å overholde nye regler som du har aktivert. <br/> Bruk database innstillings verktøy for å korrigere brukerkontoer direkte i tabellen ### _ BRUKERE';
+$lang['UAM_Err_Userlist_Settings'] = 'Denne siden er bare tilgjengelig hvis "Overvåke registrerte brukere" er aktiv i "Registrerings innstillinger fulgt og andre alternativer".';
+$lang['UAM_Err_UserManager_Settings'] = 'Denne siden er bare tilgjengelig hvis "Bekreftelse på registrering" er aktiv og om en gruppe av besøkende ikke bekreftet er konfigurert i  "Innstillinger av bekreftelser av registrering".';
+$lang['UAM_Err_GhostTracker_Settings'] = 'Denne siden er bare tilgjengelig hvis "Ghost Tracker" er aktiv i "Registrerings innstillinger fulgt og andre alternativer".';
