@@ -356,4 +356,5 @@ $lang['UAM_AddURL2Mail'] = 'Pievienojiet galerijas URL e-pasta beigās kā parak
 $lang['UAM_Follow this link to access the gallery'] = 'Lūdzu izmantojiet šo saiti, lai piekļūtu galerijai';
 $lang['UAM_Select page size'] = 'Izvēlēties lapas izmēru';
 $lang['UAM_Select page number'] = 'Izvēlēties lapas numuru';
-?>
+$lang['UAM_Admins_Copy'] = 'Visu adminiem adresēto e-pastu kopijas:';
+$lang['UAM_NewFeature'] = 'Jauna Funkcija';

@@ -368,4 +368,5 @@ $lang['UAM_AddURL2Mail'] = 'Aggiungi l\'URL della galleria alla fine delle e-mai
 $lang['UAM_Follow this link to access the gallery'] = 'Prego, segui questo link per accedere alla galleria';
 $lang['UAM_Select page number'] = 'Seleziona numero di pagina';
 $lang['UAM_Select page size'] = 'Seleziona dimensione della pagina';
-?>
+$lang['UAM_Admins_Copy'] = 'Amministratori in copia delle email inviate:';
+$lang['UAM_NewFeature'] = 'Nuova Funzione';

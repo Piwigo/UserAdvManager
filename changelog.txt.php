@@ -502,5 +502,18 @@ Plugin Name: UserAdvManager
 -- 2.70.1 : Add nl_NL, thanks to : Ellin-E
 
 -- 2.70.2 : Update and fix nl_NL, thanks to : ddtddt
+
+-- 2.70.3 : New feature : Allow admins to receive a copy of all emails sent by the plugin
+            Add nb_NO, thanks to paulen
+            Update pt_PT, thanks to ANO
+            Update ru_RU, thanks to Konve
+            Update pt_BR, thanks to flaviove
+            Update da_DK, thanks to Kaare
+            Update nl_NL, thanks to Kees Hessels
+            Update de_DE, thanks to Yogie
+            Update lv_LV, thanks to agrisans
+            Update es_ES, thanks to petaqui
+            Update el_GR, thanks to bas_alba
+            Update it_IT, thanks to Ericnet
 */
 ?>
