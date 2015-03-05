@@ -103,3 +103,36 @@ $lang['UAM_Err_audit_advise'] = '<b>du må utføre korreksjoner for å overholde
 $lang['UAM_Err_Userlist_Settings'] = 'Denne siden er bare tilgjengelig hvis "Overvåke registrerte brukere" er aktiv i "Registrerings innstillinger fulgt og andre alternativer".';
 $lang['UAM_Err_UserManager_Settings'] = 'Denne siden er bare tilgjengelig hvis "Bekreftelse på registrering" er aktiv og om en gruppe av besøkende ikke bekreftet er konfigurert i  "Innstillinger av bekreftelser av registrering".';
 $lang['UAM_Err_GhostTracker_Settings'] = 'Denne siden er bare tilgjengelig hvis "Ghost Tracker" er aktiv i "Registrerings innstillinger fulgt og andre alternativer".';
+$lang['UAM_GhostTracker_ReminderText'] = 'Tilpasse Ghost Tracker sin påminnelse melding';
+$lang['UAM_MailExclusion'] = 'Utelukkelse av e-post domener ';
+$lang['UAM_MailExclusion_No'] = 'Utelukkelse av e-post domener - Ikke tilgjengelig fordi e-postene ikke er godkjent for registrering!';
+$lang['UAM_Link: %s'] = 'Vennligst, klikk på denne linken for å bekrefte registreringen:%s';
+$lang['UAM_LastVisit_Date'] = 'Siste besøk';
+$lang['UAM_HidePassw'] = 'Passord i klar tekst i informasjons e-posten';
+$lang['UAM_GhostTracker_true'] = 'Aktiver. Maksimum antall dager mellom to besøk:';
+$lang['UAM_GhostTracker_Title'] = 'Behandling av uønskede besøkende';
+$lang['UAM_GhostTracker_Init'] = 'Hvis du aktiverer denne funksjonen for første gang eller du har reaktivert etter en lang periode uten aktivitet etter at nye besøkende er registrert, må du initialisere eller tilbakestille Ghost Tracker. Denne handlingen er nødvendig først etter aktivering eller reaktivering av opsjonen. Vennligst klikk<u>en gang</u> reset-knappen nedenfor.';
+$lang['UAM_GhostTracker_Init_OK'] = 'Ghost Tracker reset er ferdig!';
+$lang['UAM_GhostTracker'] = 'Behandling av uønskede besøkende (Ghost Tracker)';
+$lang['UAM_GT_Reset'] = 'Resett Ghost Tracker';
+$lang['UAM_GT_Init'] = 'Innstalering av Ghost Tracker';
+$lang['UAM_GTReminder_Subject'] = 'Tilpass manuell Ghost Tracker påminnelse av e-postemne';
+$lang['UAM_GTAutomail_Text'] = 'Tilpass nedgradering  av e-post tekst';
+$lang['UAM_GTAutomail_Subject'] = 'Automatisk tilpassning av Ghost Tracker, nedgradering av e-postemne';
+$lang['UAM_GTAutoMail'] = 'Automatisk sending av e-post når endring av gruppe/status/privat nivå';
+$lang['UAM_GTAutoGp'] = 'Automatisk endring av gruppe/staus/privat nivå';
+$lang['UAM_GTAutoDelTitle'] = 'Tilpasset melding på slettede konto';
+$lang['UAM_GTAutoDel'] = 'Automatisk sletting av konto';
+$lang['UAM_GTAuto'] = 'Automatisk behandling av uønskede brukere';
+$lang['UAM_Follow this link to access the gallery'] = 'Vennligst, følg denne linken for å få tilgang til galleriet';
+$lang['UAM_Expired_Status'] = '<b>Status</b> for brukerens registrering er utløpt<br/><b style = "farge: rød;"> Advarsel: Ikke bruk "Gjest" status. Fordi ubrukelig, kan denne funksjonen bli fjernet i fremtidige versjoner</b><br/>';
+$lang['UAM_Expired_Level'] = '<b>Privat nivå</b> for brukerens registrering er utløpt<br/>';
+$lang['UAM_Expired_Group'] = '<b>Gruppe</b> for brukerens registrering er utløpt<br/>';
+$lang['UAM_Error_Using_illegal_flag'] = 'Syntax feilmelding! [Kdays] Auto tekst flagget brukes som "Begrenset frist for påmeldings bekreftelse" alternativet ble ikke aktivert. Vennligst aktiver alternativ eller korriger tekstfeltet(s) farget i rødt.';
+$lang['UAM_Error_Using_illegal_Kdays'] = 'Bruk av [Kdays] tag er kun tillatt dersom fristen for påmeldings bekreftelse er aktiv. Se i det røde tekstfeltet for å løse problemet.';
+$lang['UAM_Error_GTAutoMail_cannot_be_set_without_ConfirmMail'] = 'Vedvarende feil i den valgte konfigurasjonen:
+<br/><br/>
+"Innstillinger av registrerte brukeres overvåking og andre alternativer> Administrering av uønskede besøkende(Ghost Tracker)> Automatisk håndtering av uønskede brukere> en e-post bli automatisk sendt når du endrer gruppe/status" kan ikke aktiveres om"Innstilling av bekreftelser for registrering> Bekreftelse på registrering - Bekreftelse av bruker "er ikke  aktivert i begynnelsen.
+<br/><br/>
+For vevarende sikring, ble alternativet "å sende en e-post automatisk når du endrer gruppe/status" automatisk omgjort til "deaktivert".
+<br/><br/>';
