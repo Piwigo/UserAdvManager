@@ -183,4 +183,6 @@ $lang['UAM_Err_GhostTracker_Settings'] = '"Ghost Tracker" \'ı sadece bu sayfa k
 $lang['UAM_Default_GhstDemotion_Txt'] = 'Sayın [username], son girişinizen buz amana çok uzun bir zaman geçti bu yüzden [mygallery] Lütfen aktif etmek için linki kullanın.';
 $lang['UAM_AddURL2Mail'] = 'Sayfaların sonuna galeri adresini imza olarak ekleyin(İmza gibi)';
 $lang['UAM_GTAutoDelTitle'] = 'Silinen hesaplar için mesaj ayarları';
-?>
+$lang['UAM_NewFeature'] = 'Yeni Özellik';
+$lang['UAM_Select page number'] = 'Sayfa numarası seç';
+$lang['UAM_Select page size'] = 'Sayfanın boyutu seç';
