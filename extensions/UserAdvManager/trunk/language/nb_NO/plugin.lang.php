@@ -136,3 +136,34 @@ $lang['UAM_Error_GTAutoMail_cannot_be_set_without_ConfirmMail'] = 'Vedvarende fe
 <br/><br/>
 For vevarende sikring, ble alternativet "å sende en e-post automatisk når du endrer gruppe/status" automatisk omgjort til "deaktivert".
 <br/><br/>';
+$lang['UAM_Save'] = 'Kjør backup';
+$lang['UAM_Select page number'] = 'Velg side';
+$lang['UAM_Select page size'] = 'Velg side størrelse';
+$lang['UAM_Stuffs'] = 'PWG ting stopper';
+$lang['UAM_Stuffs_Desc'] = 'Legger til informasjon for ubekreftede brukere';
+$lang['UAM_Stuffs_Title'] = 'UAM sperring';
+$lang['UAM_SubTitle1'] = 'Plugin oppsett';
+$lang['UAM_No_validation_for_Guest'] = '"Gjest" konto må ikke bekreftes';
+$lang['UAM_No_validation_for_Webmaster'] = '"Webmaster" konto må ikke bekreftes';
+$lang['UAM_No_validation_for_default_user'] = 'Standard konto må ikke bekreftes';
+$lang['UAM_No_validation_for_your_account'] = 'Din personlige admin konto må ikke bekreftes';
+$lang['UAM_RedirToProfile'] = 'Henvis til tilpasset side';
+$lang['UAM_RejectConnexion'] = 'Forby brukers tilkobling inntil registreringen er bekreftet';
+$lang['UAM_Restore_File'] = 'Tilbakestill oppsett';
+$lang['UAM_Reminder_Sent_NOK'] = 'NEI';
+$lang['UAM_Reminder_Sent_OK'] = 'JA';
+$lang['UAM_Password: %s'] = 'Passord: %s';
+$lang['UAM_Registration_Date'] = 'Registreringsdato';
+$lang['UAM_RejectConnexion_Custom_Txt'] = 'Tilpass avslagstekst';
+$lang['UAM_Reminder'] = 'Email påminnelse';
+$lang['UAM_MailExclusion_true'] = 'Fjern følgende domener: <br/> (Bruk komma for å skille flere)';
+$lang['UAM_MailInfo_Subject'] = 'Tipass informasjons mail tittel';
+$lang['UAM_MailInfo_Text'] = 'Tilpass informasjons mailen:';
+$lang['UAM_Mail_Info'] = 'Informasjons mail til bruker:';
+$lang['UAM_Mail_with_key'] = 'Påminnelse med nøkkel';
+$lang['UAM_Mail_without_key'] = 'Påminnelse uten nøkkel';
+$lang['UAM_Manual_Validation'] = 'Manuell bekreftelse';
+$lang['UAM_Manual_validation_needed_for %s'] = 'Bruker %s har registert seg, og venter på manuell bekreftelse fra en administrator.';
+$lang['UAM_Nb_Days'] = 'Ending i dager';
+$lang['UAM_NewFeature'] = 'Ny funksjonalitet';
+$lang['UAM_No_Backup_File'] = 'Ingen sikkerhetskopi tilgjengelig!';
