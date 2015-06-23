@@ -172,3 +172,149 @@ $lang['UAM_No_Confirm_Status'] = 'Gruppe fro brukere som ikke har bekreftet sine
 $lang['UAM_No_Ghosts'] = 'Ingen gamle besøkende for øyeblikket';
 $lang['UAM_No_Userlist'] = 'Ingen besøkende for øyeblikket';
 $lang['UAM_No_Usermanager'] = 'Ingen ubekreftede bruker å vise for øyeblikket';
+$lang['UAM_Tips2_txt'] = '   <ul>
+   <li>
+   Mål: Informer besøkende at registreringen avventer bekreftelse ved å legge ut en ekstra side som erstatte standard indeks sidens galleri på hver av disse tilkoblingene, og dette, på grunn av registrering ikke er godkjent.
+    <li style = "list-style-type: none;"></li>
+    Fordeler i forhold til metoden med PWG_Stoff: Tillat formatering av informasjon og visning av informasjon umiddelbart ved registrering av besøkende.
+    </Li>
+    <Li style = "list-style-type: none;"><br/></li>
+    <Li>
+Forutsetning:
+<Li style = "list-style-type: none;"> </ li>
+<Li style = "list-style-type: none;"> - Et galleri med alle eller noen private album, kun synlig for registrerte brukere </ li>
+<Li style = "list-style-type: none;"> - Minst to følgende Piwigo bruker grupper: "venter" uten tillatelse på private albumer, og "bekreftelse" med alle tillatelser på de private albumer </ li>
+<Li style = "list-style-type: none;"> - UAM programtillegget </ li>
+<Li style = "list-style-type: none;"> - Programtillegget Additional Pages for å legge til og administrere en ekstra side for å erstatte standard indeksen siden til galleriet </ li>
+<Li style = "list-style-type: none;"> - Eventuelt programtillegget Utvidet Beskrivelse for å støtte flere språk </ li>
+     </li>
+     <li style = "list-style-type: none;"> <br/> </ li>
+     <li>
+Stadier:
+<li style = "list-style-type: none;"></li>
+A. I programtillegget UAM:
+      <ol>
+      <li> Aktiver registreringsbekreftelsen </ li>
+      <li> Skriv inn tekst for ytterligere forklaring som vil være knyttet til postregistreringsbekreftelse. Hvis programtillegget utvidet beskrivelse er aktivert, kan språk kodene brukes </li>
+       <li> Velg "venter" gruppe under "For brukere som ikke har fått bekreftet sin påmelding" </li>
+       <li> Velg "Bekreftet" gruppe under "For brukere som har fått bekreftet sin påmelding" </li>
+       <i> Lagre programtilleggets konfigurasjonen </ li>
+       </ol>
+<li style = "list-style-type: none;"><br/></li>
+B. I programtillegget Andre sider:
+<li style = "list-style-type: none;"></li>
+       <b>. MERK: Styring av tilgangsrettigheter for grupper på flere sider må være slått på (se programtilleggets konfigurasjonsinnstillinger)</b>
+       <li style = "list-style-type: none;"></li>
+       <ol>
+       <li>Legg til en ny side med minst følgende parametre:</li>
+       <ul>
+       <li> Sidenavn: Navnet du ønsker å gi til den ekstra siden (dvs: Registrering ikke bekreftet)</li>
+       <li> Sett som startside avkrysset</li>
+       <li> Grupper tillatt: Kryss av i boksen som tilsvarer den gruppen "Venter" konfigurert i UAM</li>
+       <li>Innhold: Teksten du ønsker å bruke for besøkende.</li>
+       </ul>
+       <br/>
+       <li> Og det er det! Kun registrerte besøkende og hvis deres registrering ikke er blitt bekreftet vil se denne ekstra indeks siden.</Li>
+           </ol>
+          </li>
+         </ul>';
+$lang['UAM_mail_exclusion_error'] = 'Piwigo\'s opsjon "E-postadresse er obligatorisk for alle brukere" har blitt deaktivert mens UserAdvancedManager (UAM) programtillegget alternativ "Utelukkelse av postdomener" forble aktiv. Denne kombinasjonen er ulogisk og ikke kompatibel!<br/><br/>
+Vennligst, Gjenaktiver Piwigo\'s opsjon "E-postadressen er obligatorisk for alle brukere" for deretter å kunne deaktivere UAM\'s opsjon "Utelukkelse av postdomener" hvis det er det du ønsker.<br/><br/>
+Merk: Denne meldingen vil forsvinne etter at du har gjort de nødvendige korreksjon og lastes administrasjonssiden på nytt.<br/><br/>';
+$lang['UAM_confirmstatTitle'] = 'Vedtekter';
+$lang['UAM_mail_exclusionlist_error'] = 'Advarsel! Du har lagt inn en ny linje (CR-LF) i begynnelsen av epost ekskludering listen (vist i rødt nedenfor). Selv om denne nye linjen ikke er synlig, er den fortsatt til stede, og kan forårsake funksjonsfeil i programtillegget. Vennligst skriv en ny utelukkelse liste uten å begynner med et linjeskift.';
+$lang['UAM_no_update_pwd'] = '[profilen oppdatert uten passord er endret]';
+$lang['UAM_reg_err_login2'] = 'Brukernavn trenger ikke å stemme med disse tegnene:';
+$lang['UAM_reg_err_login5'] = 'Din e-postleverandør er utestengt for registrering. Utestengte e-postleverandører er:';
+$lang['UAM_remailtxt1Title'] = 'Påminnelse e-post med ny nøkkel er generert';
+$lang['UAM_remailtxt2Title'] = 'Påminnelse e-post uten ny nøkkel er generert';
+$lang['UAM_save_config'] = 'Konfigurasjon lagret.';
+$lang['UAM_submit'] = 'Send inn innstillinger';
+$lang['personal_content'] = 'Innhold';
+$lang['UAM_infos_mail %s'] = '%s, her finner du informasjonen for å logge på galleriet:';
+$lang['UAM_group %s updated'] = 'For best ytelse, ble gruppen%s automatisk satt som standardgruppen.';
+$lang['UAM_confirmmail_custom_Txt2'] = 'Teksten på bekreftelsessiden - Bekreftelse avvist';
+$lang['UAM_confirmmail_custom_Txt1'] = 'Teksten på bekreftelsessiden - Bekreftelse akseptert';
+$lang['UAM_confirmlevelTitle'] = 'Personvernnivå';
+$lang['UAM_confirmgrpTitle'] = 'Grupper';
+$lang['UAM_audit_ok'] = 'Revisjon OK';
+$lang['UAM_audit'] = 'Revisjons innstillinger';
+$lang['UAM_ValidationLimit_Info'] = 'Frist for påmelding bekreftelse begrenset';
+$lang['UAM_Validated_Status'] = 'Status for brukere som har fått bekreftet sin påmelding';
+$lang['UAM_Validated_Group'] = 'Gruppe for brukere som har fått bekreftet sin påmelding<br/>';
+$lang['UAM_Valid_Level'] = 'Personvernnivået for brukere som har fått bekreftet sin påmelding <br/>';
+$lang['UAM_Username_Char_true'] = 'Forbutte tegn:<br/>(Bruk komma for å skille hvert tegn)<br/><br/>';
+$lang['UAM_Username_Char_false'] = 'Tillate alle (standard)';
+$lang['UAM_Username_Char'] = 'Brukernavn: Utelukkelse av tegn';
+$lang['UAM_User: %s'] = 'Bruker: %s';
+$lang['UAM_USRAutoDel'] = 'Personelig melding på slettede konto';
+$lang['UAM_USRAutoMail'] = 'Automatisert e-post påminnelse';
+$lang['UAM_USRAuto'] = 'Automatisk administrering av ubekreftede brukere';
+$lang['UAM_Tracking registered users'] = 'Sporing av registrerte brukere';
+$lang['UAM_Tracking confirmations'] = 'Sporings bekreftelse';
+$lang['UAM_Title_Tab'] = 'UserAdvManager - Versjon:';
+$lang['UAM_Title5'] = 'Diverse muligheter';
+$lang['UAM_Title4'] = 'Tips og eksempler på bruk';
+$lang['UAM_Title3'] = 'Ghost brukeres administrasjon';
+$lang['UAM_Title2'] = 'Bekreftelser av registrering';
+$lang['UAM_Title1'] = 'Restriksjoner for registreringer';
+$lang['UAM_Restoration_OK'] = 'Gjenoppretting av konfigurasjonen fullført! Vennligst oppdater UAM`s administrasjons siden for å vise de gjenopprettede innstillinger.';
+$lang['UAM_Tips2'] = 'Innformasjon om ubekreftet registrering av UAM og Tilleggs Sider';
+$lang['UAM_Tips1_txt'] = '   <Ul>
+   <Li>
+    Mål: Informer besøkende at registreringen venter på godkjennelse ved å vise en personlig blokkering på hjemmesiden for galleriet, og, at registrering ikke er godkjent.
+    <br/>
+    <B>Tilbakekall:. I standard drift, "Gjest" ser bare de offentlige albumer, uten informasjonsmelding.</b>
+    </Li>
+    <Li style = "list-style-type: none;"> <br/> </ li>
+    <Li>
+Forutsetning:
+<Li style = "list-style-type: none;"> </ li>
+<Li style = "list-style-type: none;"> - Et galleri med bare eller noen private album, er kun synlig for registrerte brukere </li>
+<Li style = "list-style-type: none;"> - Minst to følgende Piwigo brukere grupper: "venter" uten tillatelse til private albumer, og "bekreftet" med alle tillatelser på de private albumer </li>
+<Li style = "list-style-type: none;"> - UAM programtillegg</li>
+<Li style = "list-style-type: none;"> - PWG Stoff programtillegget, for å legge til en spesiell UAM modul </li>
+<Li style = "list-style-type: none;"> - Eventuelt, programtillegget Utvidet Beskrivelse for å støtte flere språk </ li>
+    </Li>
+    <Li style = "list-style-type: none;"> <br/></li>
+    <Li>
+Stadier:
+<Li style = "list-style-type: none;"></li>
+A. I programtillegget UAM:
+     <Ol>
+     <Li> Aktiver registreringsbekreftelse </li>
+     <Li> Aktiver PWG Stuffs modul valg </ li>
+     <Li> Skriv inn tekst for ytterligere forklaring som vil være knyttet til epost registreringsbekreftelsen. Hvis programtillegget Utvidet Beskrivelse er aktivert, kan språk kodene brukes</li>
+      <Li> Velg "vente" gruppe under "For brukere som ikke har fått bekreftet sin påmelding"</li>
+      <Li> Velg "Bekreftet" gruppe under "For brukere som har fått bekreftet sin påmelding"</li>
+      <Li> Lagre programtilleggets konfigurasjon</li>
+      </Ol>
+<li style = "list-style-type: none;"><br/></li>
+B. I programtillegget PWG Stoff:
+       <ol>
+       <li> Gå til fanen "Legg til en ny modul"</li>
+       <li> Velg "UAM Module" </li>
+       <li> Konfigurer modulen, noe som indikerer tittelen (som for eksempel "Registrering påvente bekreftelse") og dens beskrivelse, og bare sjekk "venter" i listen over tillatte grupper</li>
+       <li> Komplett innholdet i modulen med meldings informasjon som skal vises til brukere som ikke er bekreftet. Som UAM, kan språk velger brukes hvis programtillegget Utvidet Beskrivelse er aktivert</li>
+        <li> Se "Vise modulen på hjemmesiden til nettstedet"</li>
+        <li> Bekreft konfigurasjonen til modulen</li>
+       </ol>
+      </li>
+     </ul>';
+$lang['UAM_Tab_Global'] = 'Konfigurasjon';
+$lang['UAM_Tips1'] = 'Informasjon om ubekreftet registrering med UAM og PWG_Stoff';
+$lang['UAM_Tab_GhostTracker'] = 'Ghost Tracker';
+$lang['UAM_Support_txt'] = 'Den offisielle støtten til dette programtillegget er kun å finne i disse forumemne på Piwigo.: <br/>
+<a href="http://piwigo.org/forum/viewtopic.php?id=15015" onclick="window.open(this.href);return false;"> engelsk forum - http://piwigo.org /forum/viewtopic.php?id=15015</a><br/>
+Også tilgjengelig, er prosjektets bugtracker: <a href="http://piwigo.org/bugs/" onclick="window.open(this.href);return false;"> http://piwigo.org/bugs/</a>';
+$lang['UAM_Subject admin validation for %s'] = 'Registrering av %s venter på godkjenning';
+$lang['UAM_SubTitle4'] = 'Ghost Tracker';
+$lang['UAM_No_Valid_Level'] = 'Personvernnivået for brukere som ikke har bekreftet sin påmelding <br/>';
+$lang['UAM_No_reminder_for_Guest'] = '"Gjeste" kontoen er ikke underlagt mottakelse av påminnelser fra GhostTracker';
+$lang['UAM_No_reminder_for_Webmaster'] = '"Webmaster" kontoen er ikke underlagt mottakelse av påminnelser fra GhostTracker';
+$lang['UAM_No_reminder_for_default_user'] = 'Standardkontoen er ikke underlagt mottakelse av påminnelser fra GhostTracker';
+$lang['UAM_No_reminder_for_your_account'] = 'Din peraonlige admin konto er ikke underlagt mottakelse av påminnelser fra GhostTracker';
+$lang['UAM_Restoration_NOK'] = 'Det oppstod en feil under gjenoppretting av konfigurasjon. Vennligst sjekke gyldigheten av sikkerhetskopifilen.';
+$lang['UAM_Restore'] = 'For å gjenopprette sikkerhetskopien av konfigurasjonen. Kun den lagrede filen på serveren er tatt i bruk.
+<br/>
+<b style="farge: rød;">Vokt dere for sikkerhetskopiversjonen <br/> En sikkerhetskopi laget fra én versjon av programtillegget kan bare gjenopprettes på samme versjon. </b>';
