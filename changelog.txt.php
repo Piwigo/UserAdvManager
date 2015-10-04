@@ -515,5 +515,8 @@ Plugin Name: UserAdvManager
             Update es_ES, thanks to petaqui
             Update el_GR, thanks to bas_alba
             Update it_IT, thanks to Ericnet
+
+-- 2.70.4 : Update nb_NO, thanks to paulen and trident
+            Update tr_TR, thanks to katpatuka
 */
 ?>
