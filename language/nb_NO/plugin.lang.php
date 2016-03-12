@@ -103,6 +103,7 @@ $lang['UAM_Err_audit_advise'] = '<b>du må utføre korreksjoner for å overholde
 $lang['UAM_Err_Userlist_Settings'] = 'Denne siden er bare tilgjengelig hvis "Overvåke registrerte brukere" er aktiv i "Registrerings innstillinger fulgt og andre alternativer".';
 $lang['UAM_Err_UserManager_Settings'] = 'Denne siden er bare tilgjengelig hvis "Bekreftelse på registrering" er aktiv og om en gruppe av besøkende ikke bekreftet er konfigurert i  "Innstillinger av bekreftelser av registrering".';
 $lang['UAM_Err_GhostTracker_Settings'] = 'Denne siden er bare tilgjengelig hvis "Ghost Tracker" er aktiv i "Registrerings innstillinger fulgt og andre alternativer".';
+$lang['UAM_Err_GhostTracker_Settings'] = 'Denne siden er bare tilgjengelig hvis "Ghost Tracker" er aktiv i "Registrerings innstillinger fulgt og andre alternativer".';
 $lang['UAM_GhostTracker_ReminderText'] = 'Tilpasse Ghost Tracker sin påminnelse melding';
 $lang['UAM_MailExclusion'] = 'Utelukkelse av e-post domener ';
 $lang['UAM_MailExclusion_No'] = 'Utelukkelse av e-post domener - Ikke tilgjengelig fordi e-postene ikke er godkjent for registrering!';
@@ -318,3 +319,4 @@ $lang['UAM_Restoration_NOK'] = 'Det oppstod en feil under gjenoppretting av konf
 $lang['UAM_Restore'] = 'For å gjenopprette sikkerhetskopien av konfigurasjonen. Kun den lagrede filen på serveren er tatt i bruk.
 <br/>
 <b style="farge: rød;">Vokt dere for sikkerhetskopiversjonen <br/> En sikkerhetskopi laget fra én versjon av programtillegget kan bare gjenopprettes på samme versjon. </b>';
+?>

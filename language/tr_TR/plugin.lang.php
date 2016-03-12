@@ -186,3 +186,4 @@ $lang['UAM_GTAutoDelTitle'] = 'Silinen hesaplar için mesaj ayarları';
 $lang['UAM_NewFeature'] = 'Yeni Özellik';
 $lang['UAM_Select page number'] = 'Sayfa numarası seç';
 $lang['UAM_Select page size'] = 'Sayfanın boyutu seç';
+?>
