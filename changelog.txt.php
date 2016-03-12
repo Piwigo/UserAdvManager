@@ -518,5 +518,8 @@ Plugin Name: UserAdvManager
 
 -- 2.70.4 : Update nb_NO, thanks to paulen and trident
             Update tr_TR, thanks to katpatuka
+
+-- 2.80.0 : Compatibility check with Piwigo 2.8
+			Known issues : Shortcut to user's profile does not work anymore
 */
 ?>
